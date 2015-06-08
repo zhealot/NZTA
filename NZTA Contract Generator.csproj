@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>NZTA_Contract_Generator</RootNamespace>
+    <AssemblyName>NZTA Contract Generator</AssemblyName>
+    <VSTO_HostDocumentName>NZTA Contract.dotx</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Word</OfficeApplication>
+    <ProjectGuid>{882C4A27-53AA-4A85-AF03-685B41A71CBF}</ProjectGuid>
+    <SolutionID>7420bde0-e586-4807-bd98-499c5e4706f7</SolutionID>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>C:\Users\Tao\Downloads\Publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>en</TargetCulture>
+    <ApplicationVersion>1.0.0.41</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateInterval>0</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>NZTA Contract Generator</ProductName>
+    <PublisherName>Allfields</PublisherName>
+    <SupportUrl />
+    <FriendlyName>NZTA Contract Generator</FriendlyName>
+    <OfficeApplicationDescription />
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionPaneControls\ContractSetup\ContractDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\ContractDetails.Designer.cs">
+      <DependentUpon>ContractDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\InteractiveTenderProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\InteractiveTenderProcess.Designer.cs">
+      <DependentUpon>InteractiveTenderProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\LiabilityandInsurance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\LiabilityandInsurance.Designer.cs">
+      <DependentUpon>LiabilityandInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\PricingOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\PricingOptions.Designer.cs">
+      <DependentUpon>PricingOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderEvaluationProcedure.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderEvaluationProcedure.Designer.cs">
+      <DependentUpon>TenderEvaluationProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderFormat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderFormat.Designer.cs">
+      <DependentUpon>TenderFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderSubmissionProgramme.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\ContractSetup\TenderSubmissionProgramme.Designer.cs">
+      <DependentUpon>TenderSubmissionProgramme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\NavTreeAPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\NavTreeAPC.Designer.cs">
+      <DependentUpon>NavTreeAPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\Personnel\Personnel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\Personnel\Personnel.Designer.cs">
+      <DependentUpon>Personnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\PaymentSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\PaymentSchedule.Designer.cs">
+      <DependentUpon>PaymentSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\PersonnelSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\PersonnelSchedule.Designer.cs">
+      <DependentUpon>PersonnelSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\ContractPricing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\ContractPricing.Designer.cs">
+      <DependentUpon>ContractPricing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.Designer.cs">
+      <DependentUpon>GeotechnicalTestingSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.Designer.cs">
+      <DependentUpon>AdditionalServicesSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\Specifications\Specifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\Specifications\Specifications.Designer.cs">
+      <DependentUpon>Specifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SupplierSelectionMethod\NonPriceAttributes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SupplierSelectionMethod\NonPriceAttributes.Designer.cs">
+      <DependentUpon>NonPriceAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionPaneControls\SupplierSelectionMethod\SupplierSelectionMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionPaneControls\SupplierSelectionMethod\SupplierSelectionMethod.Designer.cs">
+      <DependentUpon>SupplierSelectionMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\Location.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="Util\Address.cs" />
+    <Compile Include="Util\ContentControls.cs" />
+    <Compile Include="Util\Help.cs" />
+    <Compile Include="Util\SavedState.cs" />
+    <Compile Include="Util\XML.cs" />
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\ContractDetails.resx">
+      <DependentUpon>ContractDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\InteractiveTenderProcess.resx">
+      <DependentUpon>InteractiveTenderProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\LiabilityandInsurance.resx">
+      <DependentUpon>LiabilityandInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\PricingOptions.resx">
+      <DependentUpon>PricingOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\TenderEvaluationProcedure.resx">
+      <DependentUpon>TenderEvaluationProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\TenderFormat.resx">
+      <DependentUpon>TenderFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\ContractSetup\TenderSubmissionProgramme.resx">
+      <DependentUpon>TenderSubmissionProgramme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\NavTreeAPC.resx">
+      <DependentUpon>NavTreeAPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\Personnel\Personnel.resx">
+      <DependentUpon>Personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SectionC\PaymentSchedule.resx">
+      <DependentUpon>PaymentSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SectionC\PersonnelSchedule.resx">
+      <DependentUpon>PersonnelSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.resx">
+      <DependentUpon>AdditionalServicesSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SectionC\ContractPricing.resx">
+      <DependentUpon>ContractPricing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.resx">
+      <DependentUpon>GeotechnicalTestingSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\Specifications\Specifications.resx">
+      <DependentUpon>Specifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SupplierSelectionMethod\NonPriceAttributes.resx">
+      <DependentUpon>NonPriceAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActionPaneControls\SupplierSelectionMethod\SupplierSelectionMethod.resx">
+      <DependentUpon>SupplierSelectionMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ribbon1.resx">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisDocument.resx">
+      <DependentUpon>ThisDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="NZTA Contract.dotx" />
+    <Compile Include="Ribbon1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon1.Designer.cs">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThisDocument.cs">
+      <DependentUpon>NZTA Contract.dotx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\ThisDocument.datasource" />
+    <None Include="ThisDocument.Designer.xml">
+      <DependentUpon>ThisDocument.cs</DependentUpon>
+    </None>
+    <Compile Include="ThisDocument.Designer.cs">
+      <DependentUpon>ThisDocument.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NZTA Contract Generator_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>16947A66ED0BDD8D995E066F153E4657BEBF1B53</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="NZTA Contract.dotx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]NZTA Contract.dotx&quot;" />
+        <Host Name="Word Document" Path=".\NZTA Contract.dotx" GeneratedCodeNamespace="NZTA_Contract_Generator" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="70EB6D6F0B13FC771741B648D78C34E156C3FAA1" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
