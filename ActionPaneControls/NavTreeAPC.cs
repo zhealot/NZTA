@@ -24,7 +24,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls
                 NZTA_Contract_Generator.Globals.ThisDocument.ActionsPane.Controls.Add(NZTA_Contract_Generator.Globals.ThisDocument.apc);
                 
                 //select the bookmark by nodes
-                if (e.Node.Tag!=null && NZTA_Contract_Generator.Globals.ThisDocument.Bookmarks.Exists(e.Node.Tag.ToString()))
+                if (e.Node.Tag != null && NZTA_Contract_Generator.Globals.ThisDocument.Bookmarks.Exists(e.Node.Tag.ToString()))
                 {
                     NZTA_Contract_Generator.Globals.ThisDocument.Bookmarks[e.Node.Tag].Select();
                 }
