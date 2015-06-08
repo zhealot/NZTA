@@ -23,7 +23,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls
                 NZTA_Contract_Generator.Globals.ThisDocument.apc = (Control)Activator.CreateInstance(toCreate);
                 NZTA_Contract_Generator.Globals.ThisDocument.ActionsPane.Controls.Add(NZTA_Contract_Generator.Globals.ThisDocument.apc);
                 
-                //select the bookmark by nodes
+                //select the bookmark by node tag
                 if (e.Node.Tag != null && NZTA_Contract_Generator.Globals.ThisDocument.Bookmarks.Exists(e.Node.Tag.ToString()))
                 {
                     NZTA_Contract_Generator.Globals.ThisDocument.Bookmarks[e.Node.Tag].Select();
