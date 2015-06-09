@@ -105,6 +105,7 @@
             this.ExportDraftButton.Label = "Export as Draft PDF";
             this.ExportDraftButton.Name = "ExportDraftButton";
             this.ExportDraftButton.ShowImage = true;
+            this.ExportDraftButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportDraftButton_Click);
             // 
             // ExportFinalButton
             // 
