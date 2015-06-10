@@ -32,7 +32,7 @@ namespace NZTA_Contract_Generator
             //oArgs[0] = (object)@"test.doc";
             //ODlg.GetType().InvokeMember("Name", System.Reflection.BindingFlags.SetProperty, null, ODlg, oArgs);
             //dlg.Show();
-            
+
             //System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
             //sd.FileName = sd.InitialDirectory + NZTA_Contract_Generator.Globals.ThisDocument.contract.Contract_Name + "_" + NZTA_Contract_Generator.Globals.ThisDocument.contract.Contract_Number;
             //sd.DefaultExt = ".dotx";
@@ -55,12 +55,22 @@ namespace NZTA_Contract_Generator
             //    object LineEnding = Microsoft.Office.Interop.Word.WdLineEndingType.wdCRLF;
             //    object AddBiDiMarks = false;
             //    object compatibilityMode = Microsoft.Office.Interop.Word.WdCompatibilityMode.wdCurrent;
-            //    NZTA_Contract_Generator.Globals.ThisDocument.SaveAs2(ref Filename, ref Fileformat, ref LockComment, ref password, ref addToRecentFile, ref writePassword,
-            //                                                        ref readOnlyRecommended, ref embedTrueTypeFonts, ref saveNativePictureFormat, ref saveFormsData,
-            //                                                        ref saveAsAOCELetter, ref encoding, ref InsertLineBreaks, ref AllowSubstitutions, ref LineEnding,
-            //                                                        ref AddBiDiMarks, ref compatibilityMode);
+            //    //NZTA_Contract_Generator.Globals.ThisDocument.SaveAs2(ref Filename, ref Fileformat, ref LockComment, ref password, ref addToRecentFile, ref writePassword,
+            //    //                                                    ref readOnlyRecommended, ref embedTrueTypeFonts, ref saveNativePictureFormat, ref saveFormsData,
+            //    //                                                    ref saveAsAOCELetter, ref encoding, ref InsertLineBreaks, ref AllowSubstitutions, ref LineEnding,
+            //    //                                                    ref AddBiDiMarks, ref compatibilityMode);
+            //    NZTA_Contract_Generator.Globals.ThisDocument.Base.Saved = true;
             //}
-            NZTA_Contract_Generator.Globals.ThisDocument.Save();
+            try
+            {
+                NZTA_Contract_Generator.Globals.ThisDocument.Save();
+                NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             //NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
            
         }
@@ -72,11 +82,18 @@ namespace NZTA_Contract_Generator
             if (sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 object missing = System.Type.Missing;
-                NZTA_Contract_Generator.Globals.ThisDocument.ExportAsFixedFormat(sd.FileName, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF,
+                try
+                {
+                    NZTA_Contract_Generator.Globals.ThisDocument.ExportAsFixedFormat(sd.FileName, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF,
                                                                                 true, Microsoft.Office.Interop.Word.WdExportOptimizeFor.wdExportOptimizeForPrint,
                                                                                 Microsoft.Office.Interop.Word.WdExportRange.wdExportAllDocument, 0, 0, Microsoft.Office.Interop.Word.WdExportItem.wdExportDocumentContent,
                                                                                 true, true, Microsoft.Office.Interop.Word.WdExportCreateBookmarks.wdExportCreateNoBookmarks, true,
                                                                                 true, false, ref missing);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }
