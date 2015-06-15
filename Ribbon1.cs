@@ -70,9 +70,6 @@ namespace NZTA_Contract_Generator
             {
                 Console.WriteLine(ex.Message);
             }
-            
-            //NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
-           
         }
 
         private void ExportDraftButton_Click(object sender, RibbonControlEventArgs e)
