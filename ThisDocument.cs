@@ -62,10 +62,10 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            this.richTextContentControl43.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl43_Entering);
-            this.richTextContentControl47.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl47_Entering);
-            this.richTextContentControl104.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl104_Entering);
-            this.richTextContentControl118.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl118_Entering);
+            //this.richTextContentControl43.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl43_Entering);
+            //this.richTextContentControl47.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl47_Entering);
+            //this.richTextContentControl104.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl104_Entering);
+            //this.richTextContentControl118.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl118_Entering);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 

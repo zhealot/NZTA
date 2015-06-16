@@ -19,277 +19,281 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.ActionsPane ActionsPane;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl2;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl144;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl3;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl145;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl4;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl5;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl6;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl7;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl8;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl9;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl10;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl11;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl12;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl13;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl14;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl15;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl16;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl17;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl18;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl19;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl20;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl21;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl22;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl1;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl23;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl24;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl25;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl26;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl27;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl28;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl29;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl30;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl31;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl32;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl33;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl34;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl35;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl36;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl37;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl38;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl39;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl40;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl41;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl43;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl44;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl45;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl46;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl47;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl48;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl49;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl50;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl51;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl52;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl53;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl54;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl55;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl56;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl57;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl58;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl59;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl60;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl61;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl62;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl63;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl64;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl65;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl66;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl67;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl68;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl69;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl70;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl71;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl72;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl73;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl74;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl75;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl76;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl77;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl78;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl79;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl80;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl81;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl82;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl83;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl84;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl85;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl86;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl87;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl88;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl89;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl90;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl91;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl92;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl93;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl94;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl95;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl96;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl97;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl98;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl99;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl100;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl101;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl102;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl103;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl104;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl105;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl106;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl107;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl108;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl109;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl110;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl111;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl112;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl113;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl114;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl115;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl116;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl117;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl118;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl119;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl120;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl121;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl122;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl123;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl124;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl125;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Interactive_Tender_Process;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Non_Price_Attributes;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Pricing_Options;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Submission_Programme;
+        internal Microsoft.Office.Tools.Word.Bookmark Additional_Services_Schedule;
         
         internal Microsoft.Office.Tools.Word.Bookmark Contract_Details;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Format;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Evaluation_Procedure;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Supplier_Selection_Method;
         
         internal Microsoft.Office.Tools.Word.Bookmark Contract_Pricing;
         
         internal Microsoft.Office.Tools.Word.Bookmark Geotechnical_Testing_Schedule;
         
-        internal Microsoft.Office.Tools.Word.Bookmark Additional_Services_Schedule;
+        internal Microsoft.Office.Tools.Word.Bookmark Interactive_Tender_Process;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Non_Price_Attributes;
         
         internal Microsoft.Office.Tools.Word.Bookmark Personnel_Schedule;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Pricing_Options;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Supplier_Selection_Method;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Evaluation_Procedure;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Format;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Submission_Programme;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl1;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl146;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl147;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl148;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl149;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl150;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl151;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl152;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl153;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl154;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl155;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl156;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl157;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl158;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl159;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl160;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl161;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl162;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl163;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl164;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl165;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl166;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl167;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl168;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl169;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl170;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl171;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl172;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl173;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl174;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl175;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl176;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl177;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl178;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl179;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl180;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl181;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl182;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl183;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl184;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl185;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl186;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl187;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl188;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl189;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl190;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl191;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl192;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl193;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl194;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl195;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl196;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl197;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl198;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl199;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl200;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl201;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl202;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl203;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl204;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl205;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl206;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl207;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl208;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl209;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl210;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl211;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl212;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl213;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl214;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl215;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl216;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl217;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl218;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl219;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl220;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl221;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl222;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl223;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl224;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl225;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl226;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl227;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl228;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl229;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl230;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl231;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl232;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl233;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl234;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl235;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl236;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl237;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl238;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl239;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl240;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl241;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl242;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl243;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl244;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl245;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl246;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl247;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl248;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl249;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl250;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl251;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl252;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl253;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl254;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl255;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl256;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl257;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl258;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl259;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl260;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl261;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl262;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl263;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl264;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl265;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl266;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl267;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl268;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -394,142 +398,144 @@ namespace NZTA_Contract_Generator {
         private void BeginInitialization() {
             this.BeginInit();
             this.ActionsPane.BeginInit();
-            this.richTextContentControl2.BeginInit();
-            this.richTextContentControl3.BeginInit();
-            this.richTextContentControl4.BeginInit();
-            this.richTextContentControl5.BeginInit();
-            this.richTextContentControl6.BeginInit();
-            this.richTextContentControl7.BeginInit();
-            this.richTextContentControl8.BeginInit();
-            this.richTextContentControl9.BeginInit();
-            this.richTextContentControl10.BeginInit();
-            this.richTextContentControl11.BeginInit();
-            this.richTextContentControl12.BeginInit();
-            this.richTextContentControl13.BeginInit();
-            this.richTextContentControl14.BeginInit();
-            this.richTextContentControl15.BeginInit();
-            this.richTextContentControl16.BeginInit();
-            this.richTextContentControl17.BeginInit();
-            this.richTextContentControl18.BeginInit();
-            this.richTextContentControl19.BeginInit();
-            this.richTextContentControl20.BeginInit();
-            this.richTextContentControl21.BeginInit();
-            this.richTextContentControl22.BeginInit();
-            this.richTextContentControl1.BeginInit();
-            this.richTextContentControl23.BeginInit();
-            this.richTextContentControl24.BeginInit();
-            this.richTextContentControl25.BeginInit();
-            this.richTextContentControl26.BeginInit();
-            this.richTextContentControl27.BeginInit();
-            this.richTextContentControl28.BeginInit();
-            this.richTextContentControl29.BeginInit();
-            this.richTextContentControl30.BeginInit();
-            this.richTextContentControl31.BeginInit();
-            this.richTextContentControl32.BeginInit();
-            this.richTextContentControl33.BeginInit();
-            this.richTextContentControl34.BeginInit();
-            this.richTextContentControl35.BeginInit();
-            this.richTextContentControl36.BeginInit();
-            this.richTextContentControl37.BeginInit();
-            this.richTextContentControl38.BeginInit();
-            this.richTextContentControl39.BeginInit();
-            this.richTextContentControl40.BeginInit();
-            this.richTextContentControl41.BeginInit();
-            this.richTextContentControl43.BeginInit();
-            this.richTextContentControl44.BeginInit();
-            this.richTextContentControl45.BeginInit();
-            this.richTextContentControl46.BeginInit();
-            this.richTextContentControl47.BeginInit();
-            this.richTextContentControl48.BeginInit();
-            this.richTextContentControl49.BeginInit();
-            this.richTextContentControl50.BeginInit();
-            this.richTextContentControl51.BeginInit();
-            this.richTextContentControl52.BeginInit();
-            this.richTextContentControl53.BeginInit();
-            this.richTextContentControl54.BeginInit();
-            this.richTextContentControl55.BeginInit();
-            this.richTextContentControl56.BeginInit();
-            this.richTextContentControl57.BeginInit();
-            this.richTextContentControl58.BeginInit();
-            this.richTextContentControl59.BeginInit();
-            this.richTextContentControl60.BeginInit();
-            this.richTextContentControl61.BeginInit();
-            this.richTextContentControl62.BeginInit();
-            this.richTextContentControl63.BeginInit();
-            this.richTextContentControl64.BeginInit();
-            this.richTextContentControl65.BeginInit();
-            this.richTextContentControl66.BeginInit();
-            this.richTextContentControl67.BeginInit();
-            this.richTextContentControl68.BeginInit();
-            this.richTextContentControl69.BeginInit();
-            this.richTextContentControl70.BeginInit();
-            this.richTextContentControl71.BeginInit();
-            this.richTextContentControl72.BeginInit();
-            this.richTextContentControl73.BeginInit();
-            this.richTextContentControl74.BeginInit();
-            this.richTextContentControl75.BeginInit();
-            this.richTextContentControl76.BeginInit();
-            this.richTextContentControl77.BeginInit();
-            this.richTextContentControl78.BeginInit();
-            this.richTextContentControl79.BeginInit();
-            this.richTextContentControl80.BeginInit();
-            this.richTextContentControl81.BeginInit();
-            this.richTextContentControl82.BeginInit();
-            this.richTextContentControl83.BeginInit();
-            this.richTextContentControl84.BeginInit();
-            this.richTextContentControl85.BeginInit();
-            this.richTextContentControl86.BeginInit();
-            this.richTextContentControl87.BeginInit();
-            this.richTextContentControl88.BeginInit();
-            this.richTextContentControl89.BeginInit();
-            this.richTextContentControl90.BeginInit();
-            this.richTextContentControl91.BeginInit();
-            this.richTextContentControl92.BeginInit();
-            this.richTextContentControl93.BeginInit();
-            this.richTextContentControl94.BeginInit();
-            this.richTextContentControl95.BeginInit();
-            this.richTextContentControl96.BeginInit();
-            this.richTextContentControl97.BeginInit();
-            this.richTextContentControl98.BeginInit();
-            this.richTextContentControl99.BeginInit();
-            this.richTextContentControl100.BeginInit();
-            this.richTextContentControl101.BeginInit();
-            this.richTextContentControl102.BeginInit();
-            this.richTextContentControl103.BeginInit();
-            this.richTextContentControl104.BeginInit();
-            this.richTextContentControl105.BeginInit();
-            this.richTextContentControl106.BeginInit();
-            this.richTextContentControl107.BeginInit();
-            this.richTextContentControl108.BeginInit();
-            this.richTextContentControl109.BeginInit();
-            this.richTextContentControl110.BeginInit();
-            this.richTextContentControl111.BeginInit();
-            this.richTextContentControl112.BeginInit();
-            this.richTextContentControl113.BeginInit();
-            this.richTextContentControl114.BeginInit();
-            this.richTextContentControl115.BeginInit();
-            this.richTextContentControl116.BeginInit();
-            this.richTextContentControl117.BeginInit();
-            this.richTextContentControl118.BeginInit();
-            this.richTextContentControl119.BeginInit();
-            this.richTextContentControl120.BeginInit();
-            this.richTextContentControl121.BeginInit();
-            this.richTextContentControl122.BeginInit();
-            this.richTextContentControl123.BeginInit();
-            this.richTextContentControl124.BeginInit();
-            this.richTextContentControl125.BeginInit();
-            this.Interactive_Tender_Process.BeginInit();
-            this.Non_Price_Attributes.BeginInit();
-            this.Pricing_Options.BeginInit();
-            this.Tender_Submission_Programme.BeginInit();
+            this.richTextContentControl144.BeginInit();
+            this.richTextContentControl145.BeginInit();
+            this.Additional_Services_Schedule.BeginInit();
             this.Contract_Details.BeginInit();
-            this.Tender_Format.BeginInit();
-            this.Tender_Evaluation_Procedure.BeginInit();
-            this.Supplier_Selection_Method.BeginInit();
             this.Contract_Pricing.BeginInit();
             this.Geotechnical_Testing_Schedule.BeginInit();
-            this.Additional_Services_Schedule.BeginInit();
+            this.Interactive_Tender_Process.BeginInit();
+            this.Non_Price_Attributes.BeginInit();
             this.Personnel_Schedule.BeginInit();
+            this.Pricing_Options.BeginInit();
+            this.Supplier_Selection_Method.BeginInit();
+            this.Tender_Evaluation_Procedure.BeginInit();
+            this.Tender_Format.BeginInit();
+            this.Tender_Submission_Programme.BeginInit();
+            this.richTextContentControl1.BeginInit();
+            this.richTextContentControl146.BeginInit();
+            this.richTextContentControl147.BeginInit();
+            this.richTextContentControl148.BeginInit();
+            this.richTextContentControl149.BeginInit();
+            this.richTextContentControl150.BeginInit();
+            this.richTextContentControl151.BeginInit();
+            this.richTextContentControl152.BeginInit();
+            this.richTextContentControl153.BeginInit();
+            this.richTextContentControl154.BeginInit();
+            this.richTextContentControl155.BeginInit();
+            this.richTextContentControl156.BeginInit();
+            this.richTextContentControl157.BeginInit();
+            this.richTextContentControl158.BeginInit();
+            this.richTextContentControl159.BeginInit();
+            this.richTextContentControl160.BeginInit();
+            this.richTextContentControl161.BeginInit();
+            this.richTextContentControl162.BeginInit();
+            this.richTextContentControl163.BeginInit();
+            this.richTextContentControl164.BeginInit();
+            this.richTextContentControl165.BeginInit();
+            this.richTextContentControl166.BeginInit();
+            this.richTextContentControl167.BeginInit();
+            this.richTextContentControl168.BeginInit();
+            this.richTextContentControl169.BeginInit();
+            this.richTextContentControl170.BeginInit();
+            this.richTextContentControl171.BeginInit();
+            this.richTextContentControl172.BeginInit();
+            this.richTextContentControl173.BeginInit();
+            this.richTextContentControl174.BeginInit();
+            this.richTextContentControl175.BeginInit();
+            this.richTextContentControl176.BeginInit();
+            this.richTextContentControl177.BeginInit();
+            this.richTextContentControl178.BeginInit();
+            this.richTextContentControl179.BeginInit();
+            this.richTextContentControl180.BeginInit();
+            this.richTextContentControl181.BeginInit();
+            this.richTextContentControl182.BeginInit();
+            this.richTextContentControl183.BeginInit();
+            this.richTextContentControl184.BeginInit();
+            this.richTextContentControl185.BeginInit();
+            this.richTextContentControl186.BeginInit();
+            this.richTextContentControl187.BeginInit();
+            this.richTextContentControl188.BeginInit();
+            this.richTextContentControl189.BeginInit();
+            this.richTextContentControl190.BeginInit();
+            this.richTextContentControl191.BeginInit();
+            this.richTextContentControl192.BeginInit();
+            this.richTextContentControl193.BeginInit();
+            this.richTextContentControl194.BeginInit();
+            this.richTextContentControl195.BeginInit();
+            this.richTextContentControl196.BeginInit();
+            this.richTextContentControl197.BeginInit();
+            this.richTextContentControl198.BeginInit();
+            this.richTextContentControl199.BeginInit();
+            this.richTextContentControl200.BeginInit();
+            this.richTextContentControl201.BeginInit();
+            this.richTextContentControl202.BeginInit();
+            this.richTextContentControl203.BeginInit();
+            this.richTextContentControl204.BeginInit();
+            this.richTextContentControl205.BeginInit();
+            this.richTextContentControl206.BeginInit();
+            this.richTextContentControl207.BeginInit();
+            this.richTextContentControl208.BeginInit();
+            this.richTextContentControl209.BeginInit();
+            this.richTextContentControl210.BeginInit();
+            this.richTextContentControl211.BeginInit();
+            this.richTextContentControl212.BeginInit();
+            this.richTextContentControl213.BeginInit();
+            this.richTextContentControl214.BeginInit();
+            this.richTextContentControl215.BeginInit();
+            this.richTextContentControl216.BeginInit();
+            this.richTextContentControl217.BeginInit();
+            this.richTextContentControl218.BeginInit();
+            this.richTextContentControl219.BeginInit();
+            this.richTextContentControl220.BeginInit();
+            this.richTextContentControl221.BeginInit();
+            this.richTextContentControl222.BeginInit();
+            this.richTextContentControl223.BeginInit();
+            this.richTextContentControl224.BeginInit();
+            this.richTextContentControl225.BeginInit();
+            this.richTextContentControl226.BeginInit();
+            this.richTextContentControl227.BeginInit();
+            this.richTextContentControl228.BeginInit();
+            this.richTextContentControl229.BeginInit();
+            this.richTextContentControl230.BeginInit();
+            this.richTextContentControl231.BeginInit();
+            this.richTextContentControl232.BeginInit();
+            this.richTextContentControl233.BeginInit();
+            this.richTextContentControl234.BeginInit();
+            this.richTextContentControl235.BeginInit();
+            this.richTextContentControl236.BeginInit();
+            this.richTextContentControl237.BeginInit();
+            this.richTextContentControl238.BeginInit();
+            this.richTextContentControl239.BeginInit();
+            this.richTextContentControl240.BeginInit();
+            this.richTextContentControl241.BeginInit();
+            this.richTextContentControl242.BeginInit();
+            this.richTextContentControl243.BeginInit();
+            this.richTextContentControl244.BeginInit();
+            this.richTextContentControl245.BeginInit();
+            this.richTextContentControl246.BeginInit();
+            this.richTextContentControl247.BeginInit();
+            this.richTextContentControl248.BeginInit();
+            this.richTextContentControl249.BeginInit();
+            this.richTextContentControl250.BeginInit();
+            this.richTextContentControl251.BeginInit();
+            this.richTextContentControl252.BeginInit();
+            this.richTextContentControl253.BeginInit();
+            this.richTextContentControl254.BeginInit();
+            this.richTextContentControl255.BeginInit();
+            this.richTextContentControl256.BeginInit();
+            this.richTextContentControl257.BeginInit();
+            this.richTextContentControl258.BeginInit();
+            this.richTextContentControl259.BeginInit();
+            this.richTextContentControl260.BeginInit();
+            this.richTextContentControl261.BeginInit();
+            this.richTextContentControl262.BeginInit();
+            this.richTextContentControl263.BeginInit();
+            this.richTextContentControl264.BeginInit();
+            this.richTextContentControl265.BeginInit();
+            this.richTextContentControl266.BeginInit();
+            this.richTextContentControl267.BeginInit();
+            this.richTextContentControl268.BeginInit();
         }
         
         /// 
@@ -537,142 +543,144 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
-            this.Personnel_Schedule.EndInit();
-            this.Additional_Services_Schedule.EndInit();
-            this.Geotechnical_Testing_Schedule.EndInit();
-            this.Contract_Pricing.EndInit();
-            this.Supplier_Selection_Method.EndInit();
-            this.Tender_Evaluation_Procedure.EndInit();
-            this.Tender_Format.EndInit();
-            this.Contract_Details.EndInit();
+            this.richTextContentControl268.EndInit();
+            this.richTextContentControl267.EndInit();
+            this.richTextContentControl266.EndInit();
+            this.richTextContentControl265.EndInit();
+            this.richTextContentControl264.EndInit();
+            this.richTextContentControl263.EndInit();
+            this.richTextContentControl262.EndInit();
+            this.richTextContentControl261.EndInit();
+            this.richTextContentControl260.EndInit();
+            this.richTextContentControl259.EndInit();
+            this.richTextContentControl258.EndInit();
+            this.richTextContentControl257.EndInit();
+            this.richTextContentControl256.EndInit();
+            this.richTextContentControl255.EndInit();
+            this.richTextContentControl254.EndInit();
+            this.richTextContentControl253.EndInit();
+            this.richTextContentControl252.EndInit();
+            this.richTextContentControl251.EndInit();
+            this.richTextContentControl250.EndInit();
+            this.richTextContentControl249.EndInit();
+            this.richTextContentControl248.EndInit();
+            this.richTextContentControl247.EndInit();
+            this.richTextContentControl246.EndInit();
+            this.richTextContentControl245.EndInit();
+            this.richTextContentControl244.EndInit();
+            this.richTextContentControl243.EndInit();
+            this.richTextContentControl242.EndInit();
+            this.richTextContentControl241.EndInit();
+            this.richTextContentControl240.EndInit();
+            this.richTextContentControl239.EndInit();
+            this.richTextContentControl238.EndInit();
+            this.richTextContentControl237.EndInit();
+            this.richTextContentControl236.EndInit();
+            this.richTextContentControl235.EndInit();
+            this.richTextContentControl234.EndInit();
+            this.richTextContentControl233.EndInit();
+            this.richTextContentControl232.EndInit();
+            this.richTextContentControl231.EndInit();
+            this.richTextContentControl230.EndInit();
+            this.richTextContentControl229.EndInit();
+            this.richTextContentControl228.EndInit();
+            this.richTextContentControl227.EndInit();
+            this.richTextContentControl226.EndInit();
+            this.richTextContentControl225.EndInit();
+            this.richTextContentControl224.EndInit();
+            this.richTextContentControl223.EndInit();
+            this.richTextContentControl222.EndInit();
+            this.richTextContentControl221.EndInit();
+            this.richTextContentControl220.EndInit();
+            this.richTextContentControl219.EndInit();
+            this.richTextContentControl218.EndInit();
+            this.richTextContentControl217.EndInit();
+            this.richTextContentControl216.EndInit();
+            this.richTextContentControl215.EndInit();
+            this.richTextContentControl214.EndInit();
+            this.richTextContentControl213.EndInit();
+            this.richTextContentControl212.EndInit();
+            this.richTextContentControl211.EndInit();
+            this.richTextContentControl210.EndInit();
+            this.richTextContentControl209.EndInit();
+            this.richTextContentControl208.EndInit();
+            this.richTextContentControl207.EndInit();
+            this.richTextContentControl206.EndInit();
+            this.richTextContentControl205.EndInit();
+            this.richTextContentControl204.EndInit();
+            this.richTextContentControl203.EndInit();
+            this.richTextContentControl202.EndInit();
+            this.richTextContentControl201.EndInit();
+            this.richTextContentControl200.EndInit();
+            this.richTextContentControl199.EndInit();
+            this.richTextContentControl198.EndInit();
+            this.richTextContentControl197.EndInit();
+            this.richTextContentControl196.EndInit();
+            this.richTextContentControl195.EndInit();
+            this.richTextContentControl194.EndInit();
+            this.richTextContentControl193.EndInit();
+            this.richTextContentControl192.EndInit();
+            this.richTextContentControl191.EndInit();
+            this.richTextContentControl190.EndInit();
+            this.richTextContentControl189.EndInit();
+            this.richTextContentControl188.EndInit();
+            this.richTextContentControl187.EndInit();
+            this.richTextContentControl186.EndInit();
+            this.richTextContentControl185.EndInit();
+            this.richTextContentControl184.EndInit();
+            this.richTextContentControl183.EndInit();
+            this.richTextContentControl182.EndInit();
+            this.richTextContentControl181.EndInit();
+            this.richTextContentControl180.EndInit();
+            this.richTextContentControl179.EndInit();
+            this.richTextContentControl178.EndInit();
+            this.richTextContentControl177.EndInit();
+            this.richTextContentControl176.EndInit();
+            this.richTextContentControl175.EndInit();
+            this.richTextContentControl174.EndInit();
+            this.richTextContentControl173.EndInit();
+            this.richTextContentControl172.EndInit();
+            this.richTextContentControl171.EndInit();
+            this.richTextContentControl170.EndInit();
+            this.richTextContentControl169.EndInit();
+            this.richTextContentControl168.EndInit();
+            this.richTextContentControl167.EndInit();
+            this.richTextContentControl166.EndInit();
+            this.richTextContentControl165.EndInit();
+            this.richTextContentControl164.EndInit();
+            this.richTextContentControl163.EndInit();
+            this.richTextContentControl162.EndInit();
+            this.richTextContentControl161.EndInit();
+            this.richTextContentControl160.EndInit();
+            this.richTextContentControl159.EndInit();
+            this.richTextContentControl158.EndInit();
+            this.richTextContentControl157.EndInit();
+            this.richTextContentControl156.EndInit();
+            this.richTextContentControl155.EndInit();
+            this.richTextContentControl154.EndInit();
+            this.richTextContentControl153.EndInit();
+            this.richTextContentControl152.EndInit();
+            this.richTextContentControl151.EndInit();
+            this.richTextContentControl150.EndInit();
+            this.richTextContentControl149.EndInit();
+            this.richTextContentControl148.EndInit();
+            this.richTextContentControl147.EndInit();
+            this.richTextContentControl146.EndInit();
+            this.richTextContentControl1.EndInit();
             this.Tender_Submission_Programme.EndInit();
+            this.Tender_Format.EndInit();
+            this.Tender_Evaluation_Procedure.EndInit();
+            this.Supplier_Selection_Method.EndInit();
             this.Pricing_Options.EndInit();
+            this.Personnel_Schedule.EndInit();
             this.Non_Price_Attributes.EndInit();
             this.Interactive_Tender_Process.EndInit();
-            this.richTextContentControl125.EndInit();
-            this.richTextContentControl124.EndInit();
-            this.richTextContentControl123.EndInit();
-            this.richTextContentControl122.EndInit();
-            this.richTextContentControl121.EndInit();
-            this.richTextContentControl120.EndInit();
-            this.richTextContentControl119.EndInit();
-            this.richTextContentControl118.EndInit();
-            this.richTextContentControl117.EndInit();
-            this.richTextContentControl116.EndInit();
-            this.richTextContentControl115.EndInit();
-            this.richTextContentControl114.EndInit();
-            this.richTextContentControl113.EndInit();
-            this.richTextContentControl112.EndInit();
-            this.richTextContentControl111.EndInit();
-            this.richTextContentControl110.EndInit();
-            this.richTextContentControl109.EndInit();
-            this.richTextContentControl108.EndInit();
-            this.richTextContentControl107.EndInit();
-            this.richTextContentControl106.EndInit();
-            this.richTextContentControl105.EndInit();
-            this.richTextContentControl104.EndInit();
-            this.richTextContentControl103.EndInit();
-            this.richTextContentControl102.EndInit();
-            this.richTextContentControl101.EndInit();
-            this.richTextContentControl100.EndInit();
-            this.richTextContentControl99.EndInit();
-            this.richTextContentControl98.EndInit();
-            this.richTextContentControl97.EndInit();
-            this.richTextContentControl96.EndInit();
-            this.richTextContentControl95.EndInit();
-            this.richTextContentControl94.EndInit();
-            this.richTextContentControl93.EndInit();
-            this.richTextContentControl92.EndInit();
-            this.richTextContentControl91.EndInit();
-            this.richTextContentControl90.EndInit();
-            this.richTextContentControl89.EndInit();
-            this.richTextContentControl88.EndInit();
-            this.richTextContentControl87.EndInit();
-            this.richTextContentControl86.EndInit();
-            this.richTextContentControl85.EndInit();
-            this.richTextContentControl84.EndInit();
-            this.richTextContentControl83.EndInit();
-            this.richTextContentControl82.EndInit();
-            this.richTextContentControl81.EndInit();
-            this.richTextContentControl80.EndInit();
-            this.richTextContentControl79.EndInit();
-            this.richTextContentControl78.EndInit();
-            this.richTextContentControl77.EndInit();
-            this.richTextContentControl76.EndInit();
-            this.richTextContentControl75.EndInit();
-            this.richTextContentControl74.EndInit();
-            this.richTextContentControl73.EndInit();
-            this.richTextContentControl72.EndInit();
-            this.richTextContentControl71.EndInit();
-            this.richTextContentControl70.EndInit();
-            this.richTextContentControl69.EndInit();
-            this.richTextContentControl68.EndInit();
-            this.richTextContentControl67.EndInit();
-            this.richTextContentControl66.EndInit();
-            this.richTextContentControl65.EndInit();
-            this.richTextContentControl64.EndInit();
-            this.richTextContentControl63.EndInit();
-            this.richTextContentControl62.EndInit();
-            this.richTextContentControl61.EndInit();
-            this.richTextContentControl60.EndInit();
-            this.richTextContentControl59.EndInit();
-            this.richTextContentControl58.EndInit();
-            this.richTextContentControl57.EndInit();
-            this.richTextContentControl56.EndInit();
-            this.richTextContentControl55.EndInit();
-            this.richTextContentControl54.EndInit();
-            this.richTextContentControl53.EndInit();
-            this.richTextContentControl52.EndInit();
-            this.richTextContentControl51.EndInit();
-            this.richTextContentControl50.EndInit();
-            this.richTextContentControl49.EndInit();
-            this.richTextContentControl48.EndInit();
-            this.richTextContentControl47.EndInit();
-            this.richTextContentControl46.EndInit();
-            this.richTextContentControl45.EndInit();
-            this.richTextContentControl44.EndInit();
-            this.richTextContentControl43.EndInit();
-            this.richTextContentControl41.EndInit();
-            this.richTextContentControl40.EndInit();
-            this.richTextContentControl39.EndInit();
-            this.richTextContentControl38.EndInit();
-            this.richTextContentControl37.EndInit();
-            this.richTextContentControl36.EndInit();
-            this.richTextContentControl35.EndInit();
-            this.richTextContentControl34.EndInit();
-            this.richTextContentControl33.EndInit();
-            this.richTextContentControl32.EndInit();
-            this.richTextContentControl31.EndInit();
-            this.richTextContentControl30.EndInit();
-            this.richTextContentControl29.EndInit();
-            this.richTextContentControl28.EndInit();
-            this.richTextContentControl27.EndInit();
-            this.richTextContentControl26.EndInit();
-            this.richTextContentControl25.EndInit();
-            this.richTextContentControl24.EndInit();
-            this.richTextContentControl23.EndInit();
-            this.richTextContentControl1.EndInit();
-            this.richTextContentControl22.EndInit();
-            this.richTextContentControl21.EndInit();
-            this.richTextContentControl20.EndInit();
-            this.richTextContentControl19.EndInit();
-            this.richTextContentControl18.EndInit();
-            this.richTextContentControl17.EndInit();
-            this.richTextContentControl16.EndInit();
-            this.richTextContentControl15.EndInit();
-            this.richTextContentControl14.EndInit();
-            this.richTextContentControl13.EndInit();
-            this.richTextContentControl12.EndInit();
-            this.richTextContentControl11.EndInit();
-            this.richTextContentControl10.EndInit();
-            this.richTextContentControl9.EndInit();
-            this.richTextContentControl8.EndInit();
-            this.richTextContentControl7.EndInit();
-            this.richTextContentControl6.EndInit();
-            this.richTextContentControl5.EndInit();
-            this.richTextContentControl4.EndInit();
-            this.richTextContentControl3.EndInit();
-            this.richTextContentControl2.EndInit();
+            this.Geotechnical_Testing_Schedule.EndInit();
+            this.Contract_Pricing.EndInit();
+            this.Contract_Details.EndInit();
+            this.Additional_Services_Schedule.EndInit();
+            this.richTextContentControl145.EndInit();
+            this.richTextContentControl144.EndInit();
             this.ActionsPane.EndInit();
             this.EndInit();
         }
@@ -683,142 +691,144 @@ namespace NZTA_Contract_Generator {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
             this.ActionsPane = Globals.Factory.CreateActionsPane(null, null, "ActionsPane", "ActionsPane", this);
-            this.richTextContentControl2 = Globals.Factory.CreateRichTextContentControl(null, null, "2995438561", "richTextContentControl2", this);
-            this.richTextContentControl3 = Globals.Factory.CreateRichTextContentControl(null, null, "3011478966", "richTextContentControl3", this);
-            this.richTextContentControl4 = Globals.Factory.CreateRichTextContentControl(null, null, "3964212976", "richTextContentControl4", this);
-            this.richTextContentControl5 = Globals.Factory.CreateRichTextContentControl(null, null, "1492531140", "richTextContentControl5", this);
-            this.richTextContentControl6 = Globals.Factory.CreateRichTextContentControl(null, null, "48886945", "richTextContentControl6", this);
-            this.richTextContentControl7 = Globals.Factory.CreateRichTextContentControl(null, null, "872501667", "richTextContentControl7", this);
-            this.richTextContentControl8 = Globals.Factory.CreateRichTextContentControl(null, null, "2438016426", "richTextContentControl8", this);
-            this.richTextContentControl9 = Globals.Factory.CreateRichTextContentControl(null, null, "321312835", "richTextContentControl9", this);
-            this.richTextContentControl10 = Globals.Factory.CreateRichTextContentControl(null, null, "2628732258", "richTextContentControl10", this);
-            this.richTextContentControl11 = Globals.Factory.CreateRichTextContentControl(null, null, "725884906", "richTextContentControl11", this);
-            this.richTextContentControl12 = Globals.Factory.CreateRichTextContentControl(null, null, "4137966592", "richTextContentControl12", this);
-            this.richTextContentControl13 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl13", this);
-            this.richTextContentControl14 = Globals.Factory.CreateRichTextContentControl(null, null, "3806717593", "richTextContentControl14", this);
-            this.richTextContentControl15 = Globals.Factory.CreateRichTextContentControl(null, null, "4203496865", "richTextContentControl15", this);
-            this.richTextContentControl16 = Globals.Factory.CreateRichTextContentControl(null, null, "2950499455", "richTextContentControl16", this);
-            this.richTextContentControl17 = Globals.Factory.CreateRichTextContentControl(null, null, "4117237585", "richTextContentControl17", this);
-            this.richTextContentControl18 = Globals.Factory.CreateRichTextContentControl(null, null, "3173909173", "richTextContentControl18", this);
-            this.richTextContentControl19 = Globals.Factory.CreateRichTextContentControl(null, null, "860010837", "richTextContentControl19", this);
-            this.richTextContentControl20 = Globals.Factory.CreateRichTextContentControl(null, null, "1275054114", "richTextContentControl20", this);
-            this.richTextContentControl21 = Globals.Factory.CreateRichTextContentControl(null, null, "1152408033", "richTextContentControl21", this);
-            this.richTextContentControl22 = Globals.Factory.CreateRichTextContentControl(null, null, "2809499199", "richTextContentControl22", this);
-            this.richTextContentControl1 = Globals.Factory.CreateRichTextContentControl(null, null, "1603068122", "richTextContentControl1", this);
-            this.richTextContentControl23 = Globals.Factory.CreateRichTextContentControl(null, null, "1668204497", "richTextContentControl23", this);
-            this.richTextContentControl24 = Globals.Factory.CreateRichTextContentControl(null, null, "2246138551", "richTextContentControl24", this);
-            this.richTextContentControl25 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl25", this);
-            this.richTextContentControl26 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl26", this);
-            this.richTextContentControl27 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl27", this);
-            this.richTextContentControl28 = Globals.Factory.CreateRichTextContentControl(null, null, "941338972", "richTextContentControl28", this);
-            this.richTextContentControl29 = Globals.Factory.CreateRichTextContentControl(null, null, "1839502725", "richTextContentControl29", this);
-            this.richTextContentControl30 = Globals.Factory.CreateRichTextContentControl(null, null, "1673536519", "richTextContentControl30", this);
-            this.richTextContentControl31 = Globals.Factory.CreateRichTextContentControl(null, null, "1556360508", "richTextContentControl31", this);
-            this.richTextContentControl32 = Globals.Factory.CreateRichTextContentControl(null, null, "2759396735", "richTextContentControl32", this);
-            this.richTextContentControl33 = Globals.Factory.CreateRichTextContentControl(null, null, "393324230", "richTextContentControl33", this);
-            this.richTextContentControl34 = Globals.Factory.CreateRichTextContentControl(null, null, "1695653966", "richTextContentControl34", this);
-            this.richTextContentControl35 = Globals.Factory.CreateRichTextContentControl(null, null, "662434785", "richTextContentControl35", this);
-            this.richTextContentControl36 = Globals.Factory.CreateRichTextContentControl(null, null, "1792243549", "richTextContentControl36", this);
-            this.richTextContentControl37 = Globals.Factory.CreateRichTextContentControl(null, null, "2271507081", "richTextContentControl37", this);
-            this.richTextContentControl38 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl38", this);
-            this.richTextContentControl39 = Globals.Factory.CreateRichTextContentControl(null, null, "869421511", "richTextContentControl39", this);
-            this.richTextContentControl40 = Globals.Factory.CreateRichTextContentControl(null, null, "460859104", "richTextContentControl40", this);
-            this.richTextContentControl41 = Globals.Factory.CreateRichTextContentControl(null, null, "74411214", "richTextContentControl41", this);
-            this.richTextContentControl43 = Globals.Factory.CreateRichTextContentControl(null, null, "4135955664", "richTextContentControl43", this);
-            this.richTextContentControl44 = Globals.Factory.CreateRichTextContentControl(null, null, "3899370984", "richTextContentControl44", this);
-            this.richTextContentControl45 = Globals.Factory.CreateRichTextContentControl(null, null, "312373938", "richTextContentControl45", this);
-            this.richTextContentControl46 = Globals.Factory.CreateRichTextContentControl(null, null, "1661040138", "richTextContentControl46", this);
-            this.richTextContentControl47 = Globals.Factory.CreateRichTextContentControl(null, null, "3172821666", "richTextContentControl47", this);
-            this.richTextContentControl48 = Globals.Factory.CreateRichTextContentControl(null, null, "46739209", "richTextContentControl48", this);
-            this.richTextContentControl49 = Globals.Factory.CreateRichTextContentControl(null, null, "799043528", "richTextContentControl49", this);
-            this.richTextContentControl50 = Globals.Factory.CreateRichTextContentControl(null, null, "1227035432", "richTextContentControl50", this);
-            this.richTextContentControl51 = Globals.Factory.CreateRichTextContentControl(null, null, "795332043", "richTextContentControl51", this);
-            this.richTextContentControl52 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl52", this);
-            this.richTextContentControl53 = Globals.Factory.CreateRichTextContentControl(null, null, "131995785", "richTextContentControl53", this);
-            this.richTextContentControl54 = Globals.Factory.CreateRichTextContentControl(null, null, "2451507104", "richTextContentControl54", this);
-            this.richTextContentControl55 = Globals.Factory.CreateRichTextContentControl(null, null, "3877098858", "richTextContentControl55", this);
-            this.richTextContentControl56 = Globals.Factory.CreateRichTextContentControl(null, null, "1560362615", "richTextContentControl56", this);
-            this.richTextContentControl57 = Globals.Factory.CreateRichTextContentControl(null, null, "272366006", "richTextContentControl57", this);
-            this.richTextContentControl58 = Globals.Factory.CreateRichTextContentControl(null, null, "4159626105", "richTextContentControl58", this);
-            this.richTextContentControl59 = Globals.Factory.CreateRichTextContentControl(null, null, "341986538", "richTextContentControl59", this);
-            this.richTextContentControl60 = Globals.Factory.CreateRichTextContentControl(null, null, "69089062", "richTextContentControl60", this);
-            this.richTextContentControl61 = Globals.Factory.CreateRichTextContentControl(null, null, "109629875", "richTextContentControl61", this);
-            this.richTextContentControl62 = Globals.Factory.CreateRichTextContentControl(null, null, "657958454", "richTextContentControl62", this);
-            this.richTextContentControl63 = Globals.Factory.CreateRichTextContentControl(null, null, "3563351903", "richTextContentControl63", this);
-            this.richTextContentControl64 = Globals.Factory.CreateRichTextContentControl(null, null, "3909930918", "richTextContentControl64", this);
-            this.richTextContentControl65 = Globals.Factory.CreateRichTextContentControl(null, null, "2141539433", "richTextContentControl65", this);
-            this.richTextContentControl66 = Globals.Factory.CreateRichTextContentControl(null, null, "1853837190", "richTextContentControl66", this);
-            this.richTextContentControl67 = Globals.Factory.CreateRichTextContentControl(null, null, "1823993579", "richTextContentControl67", this);
-            this.richTextContentControl68 = Globals.Factory.CreateRichTextContentControl(null, null, "418218952", "richTextContentControl68", this);
-            this.richTextContentControl69 = Globals.Factory.CreateRichTextContentControl(null, null, "3906922201", "richTextContentControl69", this);
-            this.richTextContentControl70 = Globals.Factory.CreateRichTextContentControl(null, null, "1328790965", "richTextContentControl70", this);
-            this.richTextContentControl71 = Globals.Factory.CreateRichTextContentControl(null, null, "850064440", "richTextContentControl71", this);
-            this.richTextContentControl72 = Globals.Factory.CreateRichTextContentControl(null, null, "136778827", "richTextContentControl72", this);
-            this.richTextContentControl73 = Globals.Factory.CreateRichTextContentControl(null, null, "3287983803", "richTextContentControl73", this);
-            this.richTextContentControl74 = Globals.Factory.CreateRichTextContentControl(null, null, "3822673428", "richTextContentControl74", this);
-            this.richTextContentControl75 = Globals.Factory.CreateRichTextContentControl(null, null, "3385651841", "richTextContentControl75", this);
-            this.richTextContentControl76 = Globals.Factory.CreateRichTextContentControl(null, null, "3670354976", "richTextContentControl76", this);
-            this.richTextContentControl77 = Globals.Factory.CreateRichTextContentControl(null, null, "516509744", "richTextContentControl77", this);
-            this.richTextContentControl78 = Globals.Factory.CreateRichTextContentControl(null, null, "2764631749", "richTextContentControl78", this);
-            this.richTextContentControl79 = Globals.Factory.CreateRichTextContentControl(null, null, "1383983299", "richTextContentControl79", this);
-            this.richTextContentControl80 = Globals.Factory.CreateRichTextContentControl(null, null, "4059557857", "richTextContentControl80", this);
-            this.richTextContentControl81 = Globals.Factory.CreateRichTextContentControl(null, null, "4097488767", "richTextContentControl81", this);
-            this.richTextContentControl82 = Globals.Factory.CreateRichTextContentControl(null, null, "1366956474", "richTextContentControl82", this);
-            this.richTextContentControl83 = Globals.Factory.CreateRichTextContentControl(null, null, "840744964", "richTextContentControl83", this);
-            this.richTextContentControl84 = Globals.Factory.CreateRichTextContentControl(null, null, "2173434664", "richTextContentControl84", this);
-            this.richTextContentControl85 = Globals.Factory.CreateRichTextContentControl(null, null, "1312837409", "richTextContentControl85", this);
-            this.richTextContentControl86 = Globals.Factory.CreateRichTextContentControl(null, null, "1401248721", "richTextContentControl86", this);
-            this.richTextContentControl87 = Globals.Factory.CreateRichTextContentControl(null, null, "3945868115", "richTextContentControl87", this);
-            this.richTextContentControl88 = Globals.Factory.CreateRichTextContentControl(null, null, "251789873", "richTextContentControl88", this);
-            this.richTextContentControl89 = Globals.Factory.CreateRichTextContentControl(null, null, "3480546701", "richTextContentControl89", this);
-            this.richTextContentControl90 = Globals.Factory.CreateRichTextContentControl(null, null, "3054182277", "richTextContentControl90", this);
-            this.richTextContentControl91 = Globals.Factory.CreateRichTextContentControl(null, null, "2622796836", "richTextContentControl91", this);
-            this.richTextContentControl92 = Globals.Factory.CreateRichTextContentControl(null, null, "632604631", "richTextContentControl92", this);
-            this.richTextContentControl93 = Globals.Factory.CreateRichTextContentControl(null, null, "4213202597", "richTextContentControl93", this);
-            this.richTextContentControl94 = Globals.Factory.CreateRichTextContentControl(null, null, "699198431", "richTextContentControl94", this);
-            this.richTextContentControl95 = Globals.Factory.CreateRichTextContentControl(null, null, "1055048864", "richTextContentControl95", this);
-            this.richTextContentControl96 = Globals.Factory.CreateRichTextContentControl(null, null, "3649845009", "richTextContentControl96", this);
-            this.richTextContentControl97 = Globals.Factory.CreateRichTextContentControl(null, null, "3777121332", "richTextContentControl97", this);
-            this.richTextContentControl98 = Globals.Factory.CreateRichTextContentControl(null, null, "2892361494", "richTextContentControl98", this);
-            this.richTextContentControl99 = Globals.Factory.CreateRichTextContentControl(null, null, "2356379687", "richTextContentControl99", this);
-            this.richTextContentControl100 = Globals.Factory.CreateRichTextContentControl(null, null, "2456515144", "richTextContentControl100", this);
-            this.richTextContentControl101 = Globals.Factory.CreateRichTextContentControl(null, null, "2083798432", "richTextContentControl101", this);
-            this.richTextContentControl102 = Globals.Factory.CreateRichTextContentControl(null, null, "1699817685", "richTextContentControl102", this);
-            this.richTextContentControl103 = Globals.Factory.CreateRichTextContentControl(null, null, "3426907381", "richTextContentControl103", this);
-            this.richTextContentControl104 = Globals.Factory.CreateRichTextContentControl(null, null, "1162504390", "richTextContentControl104", this);
-            this.richTextContentControl105 = Globals.Factory.CreateRichTextContentControl(null, null, "1672835320", "richTextContentControl105", this);
-            this.richTextContentControl106 = Globals.Factory.CreateRichTextContentControl(null, null, "946731594", "richTextContentControl106", this);
-            this.richTextContentControl107 = Globals.Factory.CreateRichTextContentControl(null, null, "1442416395", "richTextContentControl107", this);
-            this.richTextContentControl108 = Globals.Factory.CreateRichTextContentControl(null, null, "47584081", "richTextContentControl108", this);
-            this.richTextContentControl109 = Globals.Factory.CreateRichTextContentControl(null, null, "1338034255", "richTextContentControl109", this);
-            this.richTextContentControl110 = Globals.Factory.CreateRichTextContentControl(null, null, "4137893328", "richTextContentControl110", this);
-            this.richTextContentControl111 = Globals.Factory.CreateRichTextContentControl(null, null, "2940018876", "richTextContentControl111", this);
-            this.richTextContentControl112 = Globals.Factory.CreateRichTextContentControl(null, null, "307831456", "richTextContentControl112", this);
-            this.richTextContentControl113 = Globals.Factory.CreateRichTextContentControl(null, null, "2922898581", "richTextContentControl113", this);
-            this.richTextContentControl114 = Globals.Factory.CreateRichTextContentControl(null, null, "2223713893", "richTextContentControl114", this);
-            this.richTextContentControl115 = Globals.Factory.CreateRichTextContentControl(null, null, "900637968", "richTextContentControl115", this);
-            this.richTextContentControl116 = Globals.Factory.CreateRichTextContentControl(null, null, "3322219477", "richTextContentControl116", this);
-            this.richTextContentControl117 = Globals.Factory.CreateRichTextContentControl(null, null, "773056331", "richTextContentControl117", this);
-            this.richTextContentControl118 = Globals.Factory.CreateRichTextContentControl(null, null, "4248128866", "richTextContentControl118", this);
-            this.richTextContentControl119 = Globals.Factory.CreateRichTextContentControl(null, null, "1632279992", "richTextContentControl119", this);
-            this.richTextContentControl120 = Globals.Factory.CreateRichTextContentControl(null, null, "1181942687", "richTextContentControl120", this);
-            this.richTextContentControl121 = Globals.Factory.CreateRichTextContentControl(null, null, "750698887", "richTextContentControl121", this);
-            this.richTextContentControl122 = Globals.Factory.CreateRichTextContentControl(null, null, "2929223368", "richTextContentControl122", this);
-            this.richTextContentControl123 = Globals.Factory.CreateRichTextContentControl(null, null, "1585649752", "richTextContentControl123", this);
-            this.richTextContentControl124 = Globals.Factory.CreateRichTextContentControl(null, null, "379295691", "richTextContentControl124", this);
-            this.richTextContentControl125 = Globals.Factory.CreateRichTextContentControl(null, null, "2476395455", "richTextContentControl125", this);
-            this.Interactive_Tender_Process = Globals.Factory.CreateBookmark(null, null, "Interactive_Tender_Process", "Interactive_Tender_Process", this);
-            this.Non_Price_Attributes = Globals.Factory.CreateBookmark(null, null, "Non_Price_Attributes", "Non_Price_Attributes", this);
-            this.Pricing_Options = Globals.Factory.CreateBookmark(null, null, "Pricing_Options", "Pricing_Options", this);
-            this.Tender_Submission_Programme = Globals.Factory.CreateBookmark(null, null, "Tender_Submission_Programme", "Tender_Submission_Programme", this);
+            this.richTextContentControl144 = Globals.Factory.CreateRichTextContentControl(null, null, "1152408033", "richTextContentControl144", this);
+            this.richTextContentControl145 = Globals.Factory.CreateRichTextContentControl(null, null, "2809499199", "richTextContentControl145", this);
+            this.Additional_Services_Schedule = Globals.Factory.CreateBookmark(null, null, "Additional_Services_Schedule", "Additional_Services_Schedule", this);
             this.Contract_Details = Globals.Factory.CreateBookmark(null, null, "Contract_Details", "Contract_Details", this);
-            this.Tender_Format = Globals.Factory.CreateBookmark(null, null, "Tender_Format", "Tender_Format", this);
-            this.Tender_Evaluation_Procedure = Globals.Factory.CreateBookmark(null, null, "Tender_Evaluation_Procedure", "Tender_Evaluation_Procedure", this);
-            this.Supplier_Selection_Method = Globals.Factory.CreateBookmark(null, null, "Supplier_Selection_Method", "Supplier_Selection_Method", this);
             this.Contract_Pricing = Globals.Factory.CreateBookmark(null, null, "Contract_Pricing", "Contract_Pricing", this);
             this.Geotechnical_Testing_Schedule = Globals.Factory.CreateBookmark(null, null, "Geotechnical_Testing_Schedule", "Geotechnical_Testing_Schedule", this);
-            this.Additional_Services_Schedule = Globals.Factory.CreateBookmark(null, null, "Additional_Services_Schedule", "Additional_Services_Schedule", this);
+            this.Interactive_Tender_Process = Globals.Factory.CreateBookmark(null, null, "Interactive_Tender_Process", "Interactive_Tender_Process", this);
+            this.Non_Price_Attributes = Globals.Factory.CreateBookmark(null, null, "Non_Price_Attributes", "Non_Price_Attributes", this);
             this.Personnel_Schedule = Globals.Factory.CreateBookmark(null, null, "Personnel_Schedule", "Personnel_Schedule", this);
+            this.Pricing_Options = Globals.Factory.CreateBookmark(null, null, "Pricing_Options", "Pricing_Options", this);
+            this.Supplier_Selection_Method = Globals.Factory.CreateBookmark(null, null, "Supplier_Selection_Method", "Supplier_Selection_Method", this);
+            this.Tender_Evaluation_Procedure = Globals.Factory.CreateBookmark(null, null, "Tender_Evaluation_Procedure", "Tender_Evaluation_Procedure", this);
+            this.Tender_Format = Globals.Factory.CreateBookmark(null, null, "Tender_Format", "Tender_Format", this);
+            this.Tender_Submission_Programme = Globals.Factory.CreateBookmark(null, null, "Tender_Submission_Programme", "Tender_Submission_Programme", this);
+            this.richTextContentControl1 = Globals.Factory.CreateRichTextContentControl(null, null, "2995438561", "richTextContentControl1", this);
+            this.richTextContentControl146 = Globals.Factory.CreateRichTextContentControl(null, null, "3011478966", "richTextContentControl146", this);
+            this.richTextContentControl147 = Globals.Factory.CreateRichTextContentControl(null, null, "1839502725", "richTextContentControl147", this);
+            this.richTextContentControl148 = Globals.Factory.CreateRichTextContentControl(null, null, "3964212976", "richTextContentControl148", this);
+            this.richTextContentControl149 = Globals.Factory.CreateRichTextContentControl(null, null, "1492531140", "richTextContentControl149", this);
+            this.richTextContentControl150 = Globals.Factory.CreateRichTextContentControl(null, null, "1673536519", "richTextContentControl150", this);
+            this.richTextContentControl151 = Globals.Factory.CreateRichTextContentControl(null, null, "1556360508", "richTextContentControl151", this);
+            this.richTextContentControl152 = Globals.Factory.CreateRichTextContentControl(null, null, "2759396735", "richTextContentControl152", this);
+            this.richTextContentControl153 = Globals.Factory.CreateRichTextContentControl(null, null, "48886945", "richTextContentControl153", this);
+            this.richTextContentControl154 = Globals.Factory.CreateRichTextContentControl(null, null, "872501667", "richTextContentControl154", this);
+            this.richTextContentControl155 = Globals.Factory.CreateRichTextContentControl(null, null, "393324230", "richTextContentControl155", this);
+            this.richTextContentControl156 = Globals.Factory.CreateRichTextContentControl(null, null, "1695653966", "richTextContentControl156", this);
+            this.richTextContentControl157 = Globals.Factory.CreateRichTextContentControl(null, null, "662434785", "richTextContentControl157", this);
+            this.richTextContentControl158 = Globals.Factory.CreateRichTextContentControl(null, null, "1792243549", "richTextContentControl158", this);
+            this.richTextContentControl159 = Globals.Factory.CreateRichTextContentControl(null, null, "2271507081", "richTextContentControl159", this);
+            this.richTextContentControl160 = Globals.Factory.CreateRichTextContentControl(null, null, "74411214", "richTextContentControl160", this);
+            this.richTextContentControl161 = Globals.Factory.CreateRichTextContentControl(null, null, "460859104", "richTextContentControl161", this);
+            this.richTextContentControl162 = Globals.Factory.CreateRichTextContentControl(null, null, "2438016426", "richTextContentControl162", this);
+            this.richTextContentControl163 = Globals.Factory.CreateRichTextContentControl(null, null, "4135955664", "richTextContentControl163", this);
+            this.richTextContentControl164 = Globals.Factory.CreateRichTextContentControl(null, null, "2476395455", "richTextContentControl164", this);
+            this.richTextContentControl165 = Globals.Factory.CreateRichTextContentControl(null, null, "2929223368", "richTextContentControl165", this);
+            this.richTextContentControl166 = Globals.Factory.CreateRichTextContentControl(null, null, "1585649752", "richTextContentControl166", this);
+            this.richTextContentControl167 = Globals.Factory.CreateRichTextContentControl(null, null, "321312835", "richTextContentControl167", this);
+            this.richTextContentControl168 = Globals.Factory.CreateRichTextContentControl(null, null, "2628732258", "richTextContentControl168", this);
+            this.richTextContentControl169 = Globals.Factory.CreateRichTextContentControl(null, null, "725884906", "richTextContentControl169", this);
+            this.richTextContentControl170 = Globals.Factory.CreateRichTextContentControl(null, null, "4137966592", "richTextContentControl170", this);
+            this.richTextContentControl171 = Globals.Factory.CreateRichTextContentControl(null, null, "1603068122", "richTextContentControl171", this);
+            this.richTextContentControl172 = Globals.Factory.CreateRichTextContentControl(null, null, "1668204497", "richTextContentControl172", this);
+            this.richTextContentControl173 = Globals.Factory.CreateRichTextContentControl(null, null, "3899370984", "richTextContentControl173", this);
+            this.richTextContentControl174 = Globals.Factory.CreateRichTextContentControl(null, null, "312373938", "richTextContentControl174", this);
+            this.richTextContentControl175 = Globals.Factory.CreateRichTextContentControl(null, null, "1661040138", "richTextContentControl175", this);
+            this.richTextContentControl176 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl176", this);
+            this.richTextContentControl177 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl177", this);
+            this.richTextContentControl178 = Globals.Factory.CreateRichTextContentControl(null, null, "869421511", "richTextContentControl178", this);
+            this.richTextContentControl179 = Globals.Factory.CreateRichTextContentControl(null, null, "3172821666", "richTextContentControl179", this);
+            this.richTextContentControl180 = Globals.Factory.CreateRichTextContentControl(null, null, "46739209", "richTextContentControl180", this);
+            this.richTextContentControl181 = Globals.Factory.CreateRichTextContentControl(null, null, "1227035432", "richTextContentControl181", this);
+            this.richTextContentControl182 = Globals.Factory.CreateRichTextContentControl(null, null, "795332043", "richTextContentControl182", this);
+            this.richTextContentControl183 = Globals.Factory.CreateRichTextContentControl(null, null, "799043528", "richTextContentControl183", this);
+            this.richTextContentControl184 = Globals.Factory.CreateRichTextContentControl(null, null, "3806717593", "richTextContentControl184", this);
+            this.richTextContentControl185 = Globals.Factory.CreateRichTextContentControl(null, null, "4203496865", "richTextContentControl185", this);
+            this.richTextContentControl186 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl186", this);
+            this.richTextContentControl187 = Globals.Factory.CreateRichTextContentControl(null, null, "2246138551", "richTextContentControl187", this);
+            this.richTextContentControl188 = Globals.Factory.CreateRichTextContentControl(null, null, "4159626105", "richTextContentControl188", this);
+            this.richTextContentControl189 = Globals.Factory.CreateRichTextContentControl(null, null, "131995785", "richTextContentControl189", this);
+            this.richTextContentControl190 = Globals.Factory.CreateRichTextContentControl(null, null, "2451507104", "richTextContentControl190", this);
+            this.richTextContentControl191 = Globals.Factory.CreateRichTextContentControl(null, null, "3877098858", "richTextContentControl191", this);
+            this.richTextContentControl192 = Globals.Factory.CreateRichTextContentControl(null, null, "1560362615", "richTextContentControl192", this);
+            this.richTextContentControl193 = Globals.Factory.CreateRichTextContentControl(null, null, "272366006", "richTextContentControl193", this);
+            this.richTextContentControl194 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl194", this);
+            this.richTextContentControl195 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl195", this);
+            this.richTextContentControl196 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl196", this);
+            this.richTextContentControl197 = Globals.Factory.CreateRichTextContentControl(null, null, "941338972", "richTextContentControl197", this);
+            this.richTextContentControl198 = Globals.Factory.CreateRichTextContentControl(null, null, "341986538", "richTextContentControl198", this);
+            this.richTextContentControl199 = Globals.Factory.CreateRichTextContentControl(null, null, "69089062", "richTextContentControl199", this);
+            this.richTextContentControl200 = Globals.Factory.CreateRichTextContentControl(null, null, "109629875", "richTextContentControl200", this);
+            this.richTextContentControl201 = Globals.Factory.CreateRichTextContentControl(null, null, "657958454", "richTextContentControl201", this);
+            this.richTextContentControl202 = Globals.Factory.CreateRichTextContentControl(null, null, "3563351903", "richTextContentControl202", this);
+            this.richTextContentControl203 = Globals.Factory.CreateRichTextContentControl(null, null, "3909930918", "richTextContentControl203", this);
+            this.richTextContentControl204 = Globals.Factory.CreateRichTextContentControl(null, null, "2141539433", "richTextContentControl204", this);
+            this.richTextContentControl205 = Globals.Factory.CreateRichTextContentControl(null, null, "1853837190", "richTextContentControl205", this);
+            this.richTextContentControl206 = Globals.Factory.CreateRichTextContentControl(null, null, "1366956474", "richTextContentControl206", this);
+            this.richTextContentControl207 = Globals.Factory.CreateRichTextContentControl(null, null, "840744964", "richTextContentControl207", this);
+            this.richTextContentControl208 = Globals.Factory.CreateRichTextContentControl(null, null, "1312837409", "richTextContentControl208", this);
+            this.richTextContentControl209 = Globals.Factory.CreateRichTextContentControl(null, null, "2173434664", "richTextContentControl209", this);
+            this.richTextContentControl210 = Globals.Factory.CreateRichTextContentControl(null, null, "1401248721", "richTextContentControl210", this);
+            this.richTextContentControl211 = Globals.Factory.CreateRichTextContentControl(null, null, "1823993579", "richTextContentControl211", this);
+            this.richTextContentControl212 = Globals.Factory.CreateRichTextContentControl(null, null, "418218952", "richTextContentControl212", this);
+            this.richTextContentControl213 = Globals.Factory.CreateRichTextContentControl(null, null, "3906922201", "richTextContentControl213", this);
+            this.richTextContentControl214 = Globals.Factory.CreateRichTextContentControl(null, null, "1328790965", "richTextContentControl214", this);
+            this.richTextContentControl215 = Globals.Factory.CreateRichTextContentControl(null, null, "850064440", "richTextContentControl215", this);
+            this.richTextContentControl216 = Globals.Factory.CreateRichTextContentControl(null, null, "136778827", "richTextContentControl216", this);
+            this.richTextContentControl217 = Globals.Factory.CreateRichTextContentControl(null, null, "3287983803", "richTextContentControl217", this);
+            this.richTextContentControl218 = Globals.Factory.CreateRichTextContentControl(null, null, "3822673428", "richTextContentControl218", this);
+            this.richTextContentControl219 = Globals.Factory.CreateRichTextContentControl(null, null, "3385651841", "richTextContentControl219", this);
+            this.richTextContentControl220 = Globals.Factory.CreateRichTextContentControl(null, null, "3670354976", "richTextContentControl220", this);
+            this.richTextContentControl221 = Globals.Factory.CreateRichTextContentControl(null, null, "516509744", "richTextContentControl221", this);
+            this.richTextContentControl222 = Globals.Factory.CreateRichTextContentControl(null, null, "2764631749", "richTextContentControl222", this);
+            this.richTextContentControl223 = Globals.Factory.CreateRichTextContentControl(null, null, "1383983299", "richTextContentControl223", this);
+            this.richTextContentControl224 = Globals.Factory.CreateRichTextContentControl(null, null, "4059557857", "richTextContentControl224", this);
+            this.richTextContentControl225 = Globals.Factory.CreateRichTextContentControl(null, null, "4097488767", "richTextContentControl225", this);
+            this.richTextContentControl226 = Globals.Factory.CreateRichTextContentControl(null, null, "379295691", "richTextContentControl226", this);
+            this.richTextContentControl227 = Globals.Factory.CreateRichTextContentControl(null, null, "2950499455", "richTextContentControl227", this);
+            this.richTextContentControl228 = Globals.Factory.CreateRichTextContentControl(null, null, "4117237585", "richTextContentControl228", this);
+            this.richTextContentControl229 = Globals.Factory.CreateRichTextContentControl(null, null, "3945868115", "richTextContentControl229", this);
+            this.richTextContentControl230 = Globals.Factory.CreateRichTextContentControl(null, null, "251789873", "richTextContentControl230", this);
+            this.richTextContentControl231 = Globals.Factory.CreateRichTextContentControl(null, null, "3173909173", "richTextContentControl231", this);
+            this.richTextContentControl232 = Globals.Factory.CreateRichTextContentControl(null, null, "860010837", "richTextContentControl232", this);
+            this.richTextContentControl233 = Globals.Factory.CreateRichTextContentControl(null, null, "3480546701", "richTextContentControl233", this);
+            this.richTextContentControl234 = Globals.Factory.CreateRichTextContentControl(null, null, "3054182277", "richTextContentControl234", this);
+            this.richTextContentControl235 = Globals.Factory.CreateRichTextContentControl(null, null, "1275054114", "richTextContentControl235", this);
+            this.richTextContentControl236 = Globals.Factory.CreateRichTextContentControl(null, null, "632604631", "richTextContentControl236", this);
+            this.richTextContentControl237 = Globals.Factory.CreateRichTextContentControl(null, null, "2456515144", "richTextContentControl237", this);
+            this.richTextContentControl238 = Globals.Factory.CreateRichTextContentControl(null, null, "3649845009", "richTextContentControl238", this);
+            this.richTextContentControl239 = Globals.Factory.CreateRichTextContentControl(null, null, "4213202597", "richTextContentControl239", this);
+            this.richTextContentControl240 = Globals.Factory.CreateRichTextContentControl(null, null, "2083798432", "richTextContentControl240", this);
+            this.richTextContentControl241 = Globals.Factory.CreateRichTextContentControl(null, null, "3777121332", "richTextContentControl241", this);
+            this.richTextContentControl242 = Globals.Factory.CreateRichTextContentControl(null, null, "699198431", "richTextContentControl242", this);
+            this.richTextContentControl243 = Globals.Factory.CreateRichTextContentControl(null, null, "1699817685", "richTextContentControl243", this);
+            this.richTextContentControl244 = Globals.Factory.CreateRichTextContentControl(null, null, "2892361494", "richTextContentControl244", this);
+            this.richTextContentControl245 = Globals.Factory.CreateRichTextContentControl(null, null, "1055048864", "richTextContentControl245", this);
+            this.richTextContentControl246 = Globals.Factory.CreateRichTextContentControl(null, null, "3426907381", "richTextContentControl246", this);
+            this.richTextContentControl247 = Globals.Factory.CreateRichTextContentControl(null, null, "2356379687", "richTextContentControl247", this);
+            this.richTextContentControl248 = Globals.Factory.CreateRichTextContentControl(null, null, "2622796836", "richTextContentControl248", this);
+            this.richTextContentControl249 = Globals.Factory.CreateRichTextContentControl(null, null, "1162504390", "richTextContentControl249", this);
+            this.richTextContentControl250 = Globals.Factory.CreateRichTextContentControl(null, null, "47584081", "richTextContentControl250", this);
+            this.richTextContentControl251 = Globals.Factory.CreateRichTextContentControl(null, null, "307831456", "richTextContentControl251", this);
+            this.richTextContentControl252 = Globals.Factory.CreateRichTextContentControl(null, null, "1672835320", "richTextContentControl252", this);
+            this.richTextContentControl253 = Globals.Factory.CreateRichTextContentControl(null, null, "1338034255", "richTextContentControl253", this);
+            this.richTextContentControl254 = Globals.Factory.CreateRichTextContentControl(null, null, "2922898581", "richTextContentControl254", this);
+            this.richTextContentControl255 = Globals.Factory.CreateRichTextContentControl(null, null, "946731594", "richTextContentControl255", this);
+            this.richTextContentControl256 = Globals.Factory.CreateRichTextContentControl(null, null, "4137893328", "richTextContentControl256", this);
+            this.richTextContentControl257 = Globals.Factory.CreateRichTextContentControl(null, null, "2223713893", "richTextContentControl257", this);
+            this.richTextContentControl258 = Globals.Factory.CreateRichTextContentControl(null, null, "1442416395", "richTextContentControl258", this);
+            this.richTextContentControl259 = Globals.Factory.CreateRichTextContentControl(null, null, "2940018876", "richTextContentControl259", this);
+            this.richTextContentControl260 = Globals.Factory.CreateRichTextContentControl(null, null, "900637968", "richTextContentControl260", this);
+            this.richTextContentControl261 = Globals.Factory.CreateRichTextContentControl(null, null, "3322219477", "richTextContentControl261", this);
+            this.richTextContentControl262 = Globals.Factory.CreateRichTextContentControl(null, null, "773056331", "richTextContentControl262", this);
+            this.richTextContentControl263 = Globals.Factory.CreateRichTextContentControl(null, null, "1632279992", "richTextContentControl263", this);
+            this.richTextContentControl264 = Globals.Factory.CreateRichTextContentControl(null, null, "4248128866", "richTextContentControl264", this);
+            this.richTextContentControl265 = Globals.Factory.CreateRichTextContentControl(null, null, "1181942687", "richTextContentControl265", this);
+            this.richTextContentControl266 = Globals.Factory.CreateRichTextContentControl(null, null, "750698887", "richTextContentControl266", this);
+            this.richTextContentControl267 = Globals.Factory.CreateRichTextContentControl(null, null, "2133434360", "richTextContentControl267", this);
+            this.richTextContentControl268 = Globals.Factory.CreateRichTextContentControl(null, null, "1139070360", "richTextContentControl268", this);
         }
         
         /// 
@@ -832,533 +842,21 @@ namespace NZTA_Contract_Generator {
             this.ActionsPane.AutoSize = false;
             this.ActionsPane.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             // 
-            // richTextContentControl2
+            // richTextContentControl144
             // 
-            this.richTextContentControl2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.richTextContentControl144.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl3
+            // richTextContentControl145
             // 
-            this.richTextContentControl3.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.richTextContentControl145.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl4
+            // Additional_Services_Schedule
             // 
-            this.richTextContentControl4.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl5
-            // 
-            this.richTextContentControl5.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl6
-            // 
-            this.richTextContentControl6.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl7
-            // 
-            this.richTextContentControl7.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl8
-            // 
-            this.richTextContentControl8.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl9
-            // 
-            this.richTextContentControl9.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl10
-            // 
-            this.richTextContentControl10.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl11
-            // 
-            this.richTextContentControl11.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl12
-            // 
-            this.richTextContentControl12.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl13
-            // 
-            this.richTextContentControl13.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl14
-            // 
-            this.richTextContentControl14.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl15
-            // 
-            this.richTextContentControl15.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl16
-            // 
-            this.richTextContentControl16.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl17
-            // 
-            this.richTextContentControl17.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl18
-            // 
-            this.richTextContentControl18.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl19
-            // 
-            this.richTextContentControl19.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl20
-            // 
-            this.richTextContentControl20.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl21
-            // 
-            this.richTextContentControl21.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl22
-            // 
-            this.richTextContentControl22.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl1
-            // 
-            this.richTextContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl23
-            // 
-            this.richTextContentControl23.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl24
-            // 
-            this.richTextContentControl24.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl25
-            // 
-            this.richTextContentControl25.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl26
-            // 
-            this.richTextContentControl26.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl27
-            // 
-            this.richTextContentControl27.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl28
-            // 
-            this.richTextContentControl28.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl29
-            // 
-            this.richTextContentControl29.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl30
-            // 
-            this.richTextContentControl30.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl31
-            // 
-            this.richTextContentControl31.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl32
-            // 
-            this.richTextContentControl32.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl33
-            // 
-            this.richTextContentControl33.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl34
-            // 
-            this.richTextContentControl34.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl35
-            // 
-            this.richTextContentControl35.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl36
-            // 
-            this.richTextContentControl36.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl37
-            // 
-            this.richTextContentControl37.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl38
-            // 
-            this.richTextContentControl38.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl39
-            // 
-            this.richTextContentControl39.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl40
-            // 
-            this.richTextContentControl40.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl41
-            // 
-            this.richTextContentControl41.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl43
-            // 
-            this.richTextContentControl43.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl44
-            // 
-            this.richTextContentControl44.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl45
-            // 
-            this.richTextContentControl45.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl46
-            // 
-            this.richTextContentControl46.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl47
-            // 
-            this.richTextContentControl47.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl48
-            // 
-            this.richTextContentControl48.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl49
-            // 
-            this.richTextContentControl49.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl50
-            // 
-            this.richTextContentControl50.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl51
-            // 
-            this.richTextContentControl51.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl52
-            // 
-            this.richTextContentControl52.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl53
-            // 
-            this.richTextContentControl53.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl54
-            // 
-            this.richTextContentControl54.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl55
-            // 
-            this.richTextContentControl55.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl56
-            // 
-            this.richTextContentControl56.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl57
-            // 
-            this.richTextContentControl57.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl58
-            // 
-            this.richTextContentControl58.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl59
-            // 
-            this.richTextContentControl59.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl60
-            // 
-            this.richTextContentControl60.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl61
-            // 
-            this.richTextContentControl61.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl62
-            // 
-            this.richTextContentControl62.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl63
-            // 
-            this.richTextContentControl63.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl64
-            // 
-            this.richTextContentControl64.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl65
-            // 
-            this.richTextContentControl65.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl66
-            // 
-            this.richTextContentControl66.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl67
-            // 
-            this.richTextContentControl67.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl68
-            // 
-            this.richTextContentControl68.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl69
-            // 
-            this.richTextContentControl69.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl70
-            // 
-            this.richTextContentControl70.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl71
-            // 
-            this.richTextContentControl71.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl72
-            // 
-            this.richTextContentControl72.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl73
-            // 
-            this.richTextContentControl73.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl74
-            // 
-            this.richTextContentControl74.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl75
-            // 
-            this.richTextContentControl75.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl76
-            // 
-            this.richTextContentControl76.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl77
-            // 
-            this.richTextContentControl77.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl78
-            // 
-            this.richTextContentControl78.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl79
-            // 
-            this.richTextContentControl79.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl80
-            // 
-            this.richTextContentControl80.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl81
-            // 
-            this.richTextContentControl81.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl82
-            // 
-            this.richTextContentControl82.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl83
-            // 
-            this.richTextContentControl83.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl84
-            // 
-            this.richTextContentControl84.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl85
-            // 
-            this.richTextContentControl85.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl86
-            // 
-            this.richTextContentControl86.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl87
-            // 
-            this.richTextContentControl87.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl88
-            // 
-            this.richTextContentControl88.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl89
-            // 
-            this.richTextContentControl89.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl90
-            // 
-            this.richTextContentControl90.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl91
-            // 
-            this.richTextContentControl91.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl92
-            // 
-            this.richTextContentControl92.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl93
-            // 
-            this.richTextContentControl93.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl94
-            // 
-            this.richTextContentControl94.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl95
-            // 
-            this.richTextContentControl95.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl96
-            // 
-            this.richTextContentControl96.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl97
-            // 
-            this.richTextContentControl97.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl98
-            // 
-            this.richTextContentControl98.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl99
-            // 
-            this.richTextContentControl99.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl100
-            // 
-            this.richTextContentControl100.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl101
-            // 
-            this.richTextContentControl101.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl102
-            // 
-            this.richTextContentControl102.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl103
-            // 
-            this.richTextContentControl103.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl104
-            // 
-            this.richTextContentControl104.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl105
-            // 
-            this.richTextContentControl105.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl106
-            // 
-            this.richTextContentControl106.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl107
-            // 
-            this.richTextContentControl107.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl108
-            // 
-            this.richTextContentControl108.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl109
-            // 
-            this.richTextContentControl109.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl110
-            // 
-            this.richTextContentControl110.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl111
-            // 
-            this.richTextContentControl111.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl112
-            // 
-            this.richTextContentControl112.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl113
-            // 
-            this.richTextContentControl113.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl114
-            // 
-            this.richTextContentControl114.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl115
-            // 
-            this.richTextContentControl115.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl116
-            // 
-            this.richTextContentControl116.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl117
-            // 
-            this.richTextContentControl117.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl118
-            // 
-            this.richTextContentControl118.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl119
-            // 
-            this.richTextContentControl119.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl120
-            // 
-            this.richTextContentControl120.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl121
-            // 
-            this.richTextContentControl121.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl122
-            // 
-            this.richTextContentControl122.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl123
-            // 
-            this.richTextContentControl123.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl124
-            // 
-            this.richTextContentControl124.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl125
-            // 
-            this.richTextContentControl125.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Interactive_Tender_Process
-            // 
-            this.Interactive_Tender_Process.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Non_Price_Attributes
-            // 
-            this.Non_Price_Attributes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Pricing_Options
-            // 
-            this.Pricing_Options.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Submission_Programme
-            // 
-            this.Tender_Submission_Programme.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.Additional_Services_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // Contract_Details
             // 
             this.Contract_Details.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Format
-            // 
-            this.Tender_Format.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Evaluation_Procedure
-            // 
-            this.Tender_Evaluation_Procedure.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Supplier_Selection_Method
-            // 
-            this.Supplier_Selection_Method.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // Contract_Pricing
             // 
@@ -1368,13 +866,533 @@ namespace NZTA_Contract_Generator {
             // 
             this.Geotechnical_Testing_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // Additional_Services_Schedule
+            // Interactive_Tender_Process
             // 
-            this.Additional_Services_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.Interactive_Tender_Process.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Non_Price_Attributes
+            // 
+            this.Non_Price_Attributes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // Personnel_Schedule
             // 
             this.Personnel_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Pricing_Options
+            // 
+            this.Pricing_Options.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Supplier_Selection_Method
+            // 
+            this.Supplier_Selection_Method.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Evaluation_Procedure
+            // 
+            this.Tender_Evaluation_Procedure.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Format
+            // 
+            this.Tender_Format.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Submission_Programme
+            // 
+            this.Tender_Submission_Programme.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl1
+            // 
+            this.richTextContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl146
+            // 
+            this.richTextContentControl146.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl147
+            // 
+            this.richTextContentControl147.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl148
+            // 
+            this.richTextContentControl148.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl149
+            // 
+            this.richTextContentControl149.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl150
+            // 
+            this.richTextContentControl150.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl151
+            // 
+            this.richTextContentControl151.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl152
+            // 
+            this.richTextContentControl152.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl153
+            // 
+            this.richTextContentControl153.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl154
+            // 
+            this.richTextContentControl154.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl155
+            // 
+            this.richTextContentControl155.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl156
+            // 
+            this.richTextContentControl156.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl157
+            // 
+            this.richTextContentControl157.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl158
+            // 
+            this.richTextContentControl158.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl159
+            // 
+            this.richTextContentControl159.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl160
+            // 
+            this.richTextContentControl160.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl161
+            // 
+            this.richTextContentControl161.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl162
+            // 
+            this.richTextContentControl162.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl163
+            // 
+            this.richTextContentControl163.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl164
+            // 
+            this.richTextContentControl164.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl165
+            // 
+            this.richTextContentControl165.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl166
+            // 
+            this.richTextContentControl166.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl167
+            // 
+            this.richTextContentControl167.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl168
+            // 
+            this.richTextContentControl168.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl169
+            // 
+            this.richTextContentControl169.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl170
+            // 
+            this.richTextContentControl170.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl171
+            // 
+            this.richTextContentControl171.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl172
+            // 
+            this.richTextContentControl172.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl173
+            // 
+            this.richTextContentControl173.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl174
+            // 
+            this.richTextContentControl174.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl175
+            // 
+            this.richTextContentControl175.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl176
+            // 
+            this.richTextContentControl176.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl177
+            // 
+            this.richTextContentControl177.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl178
+            // 
+            this.richTextContentControl178.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl179
+            // 
+            this.richTextContentControl179.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl180
+            // 
+            this.richTextContentControl180.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl181
+            // 
+            this.richTextContentControl181.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl182
+            // 
+            this.richTextContentControl182.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl183
+            // 
+            this.richTextContentControl183.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl184
+            // 
+            this.richTextContentControl184.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl185
+            // 
+            this.richTextContentControl185.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl186
+            // 
+            this.richTextContentControl186.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl187
+            // 
+            this.richTextContentControl187.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl188
+            // 
+            this.richTextContentControl188.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl189
+            // 
+            this.richTextContentControl189.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl190
+            // 
+            this.richTextContentControl190.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl191
+            // 
+            this.richTextContentControl191.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl192
+            // 
+            this.richTextContentControl192.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl193
+            // 
+            this.richTextContentControl193.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl194
+            // 
+            this.richTextContentControl194.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl195
+            // 
+            this.richTextContentControl195.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl196
+            // 
+            this.richTextContentControl196.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl197
+            // 
+            this.richTextContentControl197.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl198
+            // 
+            this.richTextContentControl198.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl199
+            // 
+            this.richTextContentControl199.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl200
+            // 
+            this.richTextContentControl200.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl201
+            // 
+            this.richTextContentControl201.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl202
+            // 
+            this.richTextContentControl202.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl203
+            // 
+            this.richTextContentControl203.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl204
+            // 
+            this.richTextContentControl204.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl205
+            // 
+            this.richTextContentControl205.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl206
+            // 
+            this.richTextContentControl206.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl207
+            // 
+            this.richTextContentControl207.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl208
+            // 
+            this.richTextContentControl208.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl209
+            // 
+            this.richTextContentControl209.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl210
+            // 
+            this.richTextContentControl210.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl211
+            // 
+            this.richTextContentControl211.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl212
+            // 
+            this.richTextContentControl212.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl213
+            // 
+            this.richTextContentControl213.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl214
+            // 
+            this.richTextContentControl214.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl215
+            // 
+            this.richTextContentControl215.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl216
+            // 
+            this.richTextContentControl216.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl217
+            // 
+            this.richTextContentControl217.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl218
+            // 
+            this.richTextContentControl218.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl219
+            // 
+            this.richTextContentControl219.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl220
+            // 
+            this.richTextContentControl220.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl221
+            // 
+            this.richTextContentControl221.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl222
+            // 
+            this.richTextContentControl222.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl223
+            // 
+            this.richTextContentControl223.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl224
+            // 
+            this.richTextContentControl224.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl225
+            // 
+            this.richTextContentControl225.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl226
+            // 
+            this.richTextContentControl226.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl227
+            // 
+            this.richTextContentControl227.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl228
+            // 
+            this.richTextContentControl228.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl229
+            // 
+            this.richTextContentControl229.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl230
+            // 
+            this.richTextContentControl230.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl231
+            // 
+            this.richTextContentControl231.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl232
+            // 
+            this.richTextContentControl232.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl233
+            // 
+            this.richTextContentControl233.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl234
+            // 
+            this.richTextContentControl234.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl235
+            // 
+            this.richTextContentControl235.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl236
+            // 
+            this.richTextContentControl236.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl237
+            // 
+            this.richTextContentControl237.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl238
+            // 
+            this.richTextContentControl238.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl239
+            // 
+            this.richTextContentControl239.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl240
+            // 
+            this.richTextContentControl240.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl241
+            // 
+            this.richTextContentControl241.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl242
+            // 
+            this.richTextContentControl242.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl243
+            // 
+            this.richTextContentControl243.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl244
+            // 
+            this.richTextContentControl244.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl245
+            // 
+            this.richTextContentControl245.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl246
+            // 
+            this.richTextContentControl246.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl247
+            // 
+            this.richTextContentControl247.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl248
+            // 
+            this.richTextContentControl248.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl249
+            // 
+            this.richTextContentControl249.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl250
+            // 
+            this.richTextContentControl250.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl251
+            // 
+            this.richTextContentControl251.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl252
+            // 
+            this.richTextContentControl252.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl253
+            // 
+            this.richTextContentControl253.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl254
+            // 
+            this.richTextContentControl254.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl255
+            // 
+            this.richTextContentControl255.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl256
+            // 
+            this.richTextContentControl256.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl257
+            // 
+            this.richTextContentControl257.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl258
+            // 
+            this.richTextContentControl258.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl259
+            // 
+            this.richTextContentControl259.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl260
+            // 
+            this.richTextContentControl260.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl261
+            // 
+            this.richTextContentControl261.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl262
+            // 
+            this.richTextContentControl262.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl263
+            // 
+            this.richTextContentControl263.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl264
+            // 
+            this.richTextContentControl264.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl265
+            // 
+            this.richTextContentControl265.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl266
+            // 
+            this.richTextContentControl266.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl267
+            // 
+            this.richTextContentControl267.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl268
+            // 
+            this.richTextContentControl268.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
@@ -1392,142 +1410,144 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
-            this.Personnel_Schedule.Dispose();
-            this.Additional_Services_Schedule.Dispose();
-            this.Geotechnical_Testing_Schedule.Dispose();
-            this.Contract_Pricing.Dispose();
-            this.Supplier_Selection_Method.Dispose();
-            this.Tender_Evaluation_Procedure.Dispose();
-            this.Tender_Format.Dispose();
-            this.Contract_Details.Dispose();
+            this.richTextContentControl268.Dispose();
+            this.richTextContentControl267.Dispose();
+            this.richTextContentControl266.Dispose();
+            this.richTextContentControl265.Dispose();
+            this.richTextContentControl264.Dispose();
+            this.richTextContentControl263.Dispose();
+            this.richTextContentControl262.Dispose();
+            this.richTextContentControl261.Dispose();
+            this.richTextContentControl260.Dispose();
+            this.richTextContentControl259.Dispose();
+            this.richTextContentControl258.Dispose();
+            this.richTextContentControl257.Dispose();
+            this.richTextContentControl256.Dispose();
+            this.richTextContentControl255.Dispose();
+            this.richTextContentControl254.Dispose();
+            this.richTextContentControl253.Dispose();
+            this.richTextContentControl252.Dispose();
+            this.richTextContentControl251.Dispose();
+            this.richTextContentControl250.Dispose();
+            this.richTextContentControl249.Dispose();
+            this.richTextContentControl248.Dispose();
+            this.richTextContentControl247.Dispose();
+            this.richTextContentControl246.Dispose();
+            this.richTextContentControl245.Dispose();
+            this.richTextContentControl244.Dispose();
+            this.richTextContentControl243.Dispose();
+            this.richTextContentControl242.Dispose();
+            this.richTextContentControl241.Dispose();
+            this.richTextContentControl240.Dispose();
+            this.richTextContentControl239.Dispose();
+            this.richTextContentControl238.Dispose();
+            this.richTextContentControl237.Dispose();
+            this.richTextContentControl236.Dispose();
+            this.richTextContentControl235.Dispose();
+            this.richTextContentControl234.Dispose();
+            this.richTextContentControl233.Dispose();
+            this.richTextContentControl232.Dispose();
+            this.richTextContentControl231.Dispose();
+            this.richTextContentControl230.Dispose();
+            this.richTextContentControl229.Dispose();
+            this.richTextContentControl228.Dispose();
+            this.richTextContentControl227.Dispose();
+            this.richTextContentControl226.Dispose();
+            this.richTextContentControl225.Dispose();
+            this.richTextContentControl224.Dispose();
+            this.richTextContentControl223.Dispose();
+            this.richTextContentControl222.Dispose();
+            this.richTextContentControl221.Dispose();
+            this.richTextContentControl220.Dispose();
+            this.richTextContentControl219.Dispose();
+            this.richTextContentControl218.Dispose();
+            this.richTextContentControl217.Dispose();
+            this.richTextContentControl216.Dispose();
+            this.richTextContentControl215.Dispose();
+            this.richTextContentControl214.Dispose();
+            this.richTextContentControl213.Dispose();
+            this.richTextContentControl212.Dispose();
+            this.richTextContentControl211.Dispose();
+            this.richTextContentControl210.Dispose();
+            this.richTextContentControl209.Dispose();
+            this.richTextContentControl208.Dispose();
+            this.richTextContentControl207.Dispose();
+            this.richTextContentControl206.Dispose();
+            this.richTextContentControl205.Dispose();
+            this.richTextContentControl204.Dispose();
+            this.richTextContentControl203.Dispose();
+            this.richTextContentControl202.Dispose();
+            this.richTextContentControl201.Dispose();
+            this.richTextContentControl200.Dispose();
+            this.richTextContentControl199.Dispose();
+            this.richTextContentControl198.Dispose();
+            this.richTextContentControl197.Dispose();
+            this.richTextContentControl196.Dispose();
+            this.richTextContentControl195.Dispose();
+            this.richTextContentControl194.Dispose();
+            this.richTextContentControl193.Dispose();
+            this.richTextContentControl192.Dispose();
+            this.richTextContentControl191.Dispose();
+            this.richTextContentControl190.Dispose();
+            this.richTextContentControl189.Dispose();
+            this.richTextContentControl188.Dispose();
+            this.richTextContentControl187.Dispose();
+            this.richTextContentControl186.Dispose();
+            this.richTextContentControl185.Dispose();
+            this.richTextContentControl184.Dispose();
+            this.richTextContentControl183.Dispose();
+            this.richTextContentControl182.Dispose();
+            this.richTextContentControl181.Dispose();
+            this.richTextContentControl180.Dispose();
+            this.richTextContentControl179.Dispose();
+            this.richTextContentControl178.Dispose();
+            this.richTextContentControl177.Dispose();
+            this.richTextContentControl176.Dispose();
+            this.richTextContentControl175.Dispose();
+            this.richTextContentControl174.Dispose();
+            this.richTextContentControl173.Dispose();
+            this.richTextContentControl172.Dispose();
+            this.richTextContentControl171.Dispose();
+            this.richTextContentControl170.Dispose();
+            this.richTextContentControl169.Dispose();
+            this.richTextContentControl168.Dispose();
+            this.richTextContentControl167.Dispose();
+            this.richTextContentControl166.Dispose();
+            this.richTextContentControl165.Dispose();
+            this.richTextContentControl164.Dispose();
+            this.richTextContentControl163.Dispose();
+            this.richTextContentControl162.Dispose();
+            this.richTextContentControl161.Dispose();
+            this.richTextContentControl160.Dispose();
+            this.richTextContentControl159.Dispose();
+            this.richTextContentControl158.Dispose();
+            this.richTextContentControl157.Dispose();
+            this.richTextContentControl156.Dispose();
+            this.richTextContentControl155.Dispose();
+            this.richTextContentControl154.Dispose();
+            this.richTextContentControl153.Dispose();
+            this.richTextContentControl152.Dispose();
+            this.richTextContentControl151.Dispose();
+            this.richTextContentControl150.Dispose();
+            this.richTextContentControl149.Dispose();
+            this.richTextContentControl148.Dispose();
+            this.richTextContentControl147.Dispose();
+            this.richTextContentControl146.Dispose();
+            this.richTextContentControl1.Dispose();
             this.Tender_Submission_Programme.Dispose();
+            this.Tender_Format.Dispose();
+            this.Tender_Evaluation_Procedure.Dispose();
+            this.Supplier_Selection_Method.Dispose();
             this.Pricing_Options.Dispose();
+            this.Personnel_Schedule.Dispose();
             this.Non_Price_Attributes.Dispose();
             this.Interactive_Tender_Process.Dispose();
-            this.richTextContentControl125.Dispose();
-            this.richTextContentControl124.Dispose();
-            this.richTextContentControl123.Dispose();
-            this.richTextContentControl122.Dispose();
-            this.richTextContentControl121.Dispose();
-            this.richTextContentControl120.Dispose();
-            this.richTextContentControl119.Dispose();
-            this.richTextContentControl118.Dispose();
-            this.richTextContentControl117.Dispose();
-            this.richTextContentControl116.Dispose();
-            this.richTextContentControl115.Dispose();
-            this.richTextContentControl114.Dispose();
-            this.richTextContentControl113.Dispose();
-            this.richTextContentControl112.Dispose();
-            this.richTextContentControl111.Dispose();
-            this.richTextContentControl110.Dispose();
-            this.richTextContentControl109.Dispose();
-            this.richTextContentControl108.Dispose();
-            this.richTextContentControl107.Dispose();
-            this.richTextContentControl106.Dispose();
-            this.richTextContentControl105.Dispose();
-            this.richTextContentControl104.Dispose();
-            this.richTextContentControl103.Dispose();
-            this.richTextContentControl102.Dispose();
-            this.richTextContentControl101.Dispose();
-            this.richTextContentControl100.Dispose();
-            this.richTextContentControl99.Dispose();
-            this.richTextContentControl98.Dispose();
-            this.richTextContentControl97.Dispose();
-            this.richTextContentControl96.Dispose();
-            this.richTextContentControl95.Dispose();
-            this.richTextContentControl94.Dispose();
-            this.richTextContentControl93.Dispose();
-            this.richTextContentControl92.Dispose();
-            this.richTextContentControl91.Dispose();
-            this.richTextContentControl90.Dispose();
-            this.richTextContentControl89.Dispose();
-            this.richTextContentControl88.Dispose();
-            this.richTextContentControl87.Dispose();
-            this.richTextContentControl86.Dispose();
-            this.richTextContentControl85.Dispose();
-            this.richTextContentControl84.Dispose();
-            this.richTextContentControl83.Dispose();
-            this.richTextContentControl82.Dispose();
-            this.richTextContentControl81.Dispose();
-            this.richTextContentControl80.Dispose();
-            this.richTextContentControl79.Dispose();
-            this.richTextContentControl78.Dispose();
-            this.richTextContentControl77.Dispose();
-            this.richTextContentControl76.Dispose();
-            this.richTextContentControl75.Dispose();
-            this.richTextContentControl74.Dispose();
-            this.richTextContentControl73.Dispose();
-            this.richTextContentControl72.Dispose();
-            this.richTextContentControl71.Dispose();
-            this.richTextContentControl70.Dispose();
-            this.richTextContentControl69.Dispose();
-            this.richTextContentControl68.Dispose();
-            this.richTextContentControl67.Dispose();
-            this.richTextContentControl66.Dispose();
-            this.richTextContentControl65.Dispose();
-            this.richTextContentControl64.Dispose();
-            this.richTextContentControl63.Dispose();
-            this.richTextContentControl62.Dispose();
-            this.richTextContentControl61.Dispose();
-            this.richTextContentControl60.Dispose();
-            this.richTextContentControl59.Dispose();
-            this.richTextContentControl58.Dispose();
-            this.richTextContentControl57.Dispose();
-            this.richTextContentControl56.Dispose();
-            this.richTextContentControl55.Dispose();
-            this.richTextContentControl54.Dispose();
-            this.richTextContentControl53.Dispose();
-            this.richTextContentControl52.Dispose();
-            this.richTextContentControl51.Dispose();
-            this.richTextContentControl50.Dispose();
-            this.richTextContentControl49.Dispose();
-            this.richTextContentControl48.Dispose();
-            this.richTextContentControl47.Dispose();
-            this.richTextContentControl46.Dispose();
-            this.richTextContentControl45.Dispose();
-            this.richTextContentControl44.Dispose();
-            this.richTextContentControl43.Dispose();
-            this.richTextContentControl41.Dispose();
-            this.richTextContentControl40.Dispose();
-            this.richTextContentControl39.Dispose();
-            this.richTextContentControl38.Dispose();
-            this.richTextContentControl37.Dispose();
-            this.richTextContentControl36.Dispose();
-            this.richTextContentControl35.Dispose();
-            this.richTextContentControl34.Dispose();
-            this.richTextContentControl33.Dispose();
-            this.richTextContentControl32.Dispose();
-            this.richTextContentControl31.Dispose();
-            this.richTextContentControl30.Dispose();
-            this.richTextContentControl29.Dispose();
-            this.richTextContentControl28.Dispose();
-            this.richTextContentControl27.Dispose();
-            this.richTextContentControl26.Dispose();
-            this.richTextContentControl25.Dispose();
-            this.richTextContentControl24.Dispose();
-            this.richTextContentControl23.Dispose();
-            this.richTextContentControl1.Dispose();
-            this.richTextContentControl22.Dispose();
-            this.richTextContentControl21.Dispose();
-            this.richTextContentControl20.Dispose();
-            this.richTextContentControl19.Dispose();
-            this.richTextContentControl18.Dispose();
-            this.richTextContentControl17.Dispose();
-            this.richTextContentControl16.Dispose();
-            this.richTextContentControl15.Dispose();
-            this.richTextContentControl14.Dispose();
-            this.richTextContentControl13.Dispose();
-            this.richTextContentControl12.Dispose();
-            this.richTextContentControl11.Dispose();
-            this.richTextContentControl10.Dispose();
-            this.richTextContentControl9.Dispose();
-            this.richTextContentControl8.Dispose();
-            this.richTextContentControl7.Dispose();
-            this.richTextContentControl6.Dispose();
-            this.richTextContentControl5.Dispose();
-            this.richTextContentControl4.Dispose();
-            this.richTextContentControl3.Dispose();
-            this.richTextContentControl2.Dispose();
+            this.Geotechnical_Testing_Schedule.Dispose();
+            this.Contract_Pricing.Dispose();
+            this.Contract_Details.Dispose();
+            this.Additional_Services_Schedule.Dispose();
+            this.richTextContentControl145.Dispose();
+            this.richTextContentControl144.Dispose();
             this.ActionsPane.Dispose();
             base.OnShutdown();
         }
