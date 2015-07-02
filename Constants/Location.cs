@@ -10,7 +10,7 @@ namespace NZTA_Contract_Generator.Constants
     static class Location
     {
 
-        /* public static Dictionary<String, Address> data = new Dictionary<String, Address>
+         public static Dictionary<String, Address> data = new Dictionary<String, Address>
          {
              {"National Office", new Address {building = "Victoria Arcade", streetAddress = "50 Victoria Street", boxNumber = "Private Bag 6995", 
                  city = "Wellington", postcode = "6141", telephone = "64 4 894 5400", fax="64 4 894 6100"}},
@@ -45,11 +45,11 @@ namespace NZTA_Contract_Generator.Constants
              {"Dunedin", new Address {building = "Airport Business Park, Unit C", streetAddress = "92 Russley Road", boxNumber = "PO Box 1479", 
                  city = "", postcode = "8140", telephone = "64 3 964 2800", fax="64 3 964 2793"}}
       
-         };  */
+         };  
 
 
 
-        public static Dictionary<String, String> data = new Dictionary<String, String>
+        /*public static Dictionary<String, String> data = new Dictionary<String, String>
          {
              {"National Office", "Victoria Arcade"
                 + Environment.NewLine + "50 Victoria Street"
@@ -146,7 +146,7 @@ namespace NZTA_Contract_Generator.Constants
                 + Environment.NewLine + "Telephone: 64 3 951 3009"
                 + Environment.NewLine + "Fax: 64 3 951 3013"}
       
-         };
+         };*/
 
     
     }

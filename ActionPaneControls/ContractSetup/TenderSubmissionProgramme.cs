@@ -37,8 +37,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CloseDate_ValueChanged(object sender, EventArgs e)
         {
-            contract.CloseDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            contract.CloseDate = CloseDate.Value.Day.ToString("dd/MM/yyyy");
+            Util.ContentControls.setText("CloseDate", contract.CloseDate);
         }
 
         private void Evaluation_Start_ValueChanged(object sender, EventArgs e)

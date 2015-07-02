@@ -23,31 +23,35 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Address_1.DataSource = new BindingSource(Constants.Location.data, null);
             Address_1.DisplayMember = "Key";
             Address_1.ValueMember = "Value";
+            Address_1.SelectedIndex = -1;
            
 
             //Region combobox
             Region.DataSource = new BindingSource(Constants.Location.data, null);
             Region.DisplayMember = "Key";
             Region.ValueMember = "Key";
+            Region.SelectedIndex = -1;
 
             //Tender box
             TenderBox.DataSource = new BindingSource(Constants.Location.data, null);
             TenderBox.DisplayMember = "Key";
             TenderBox.ValueMember = "Key";
+            TenderBox.SelectedIndex = -1;
 
             //Address 2 combobox
             Address_2.DataSource = new BindingSource(Constants.Location.data, null);
             Address_2.DisplayMember = "Key";
             Address_2.ValueMember = "Value";
+            Address_2.SelectedIndex = -1;
 
             ignoreChange = false;
 
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
 
-            //add event handler
-            Address_1.SelectedIndexChanged += Address_1_Or_Company_Name_1_Changed;
-            Company_Name_1.TextChanged += Address_1_Or_Company_Name_1_Changed;
+            //###add event handler
+            //Address_2.SelectedIndexChanged += Address_2_Or_Company_Name_2_Changed;
+            //Company_Name_2.TextChanged += Address_2_Or_Company_Name_2_Changed;
         }
         
         private void Contract_Name_TextChanged(object sender, EventArgs e)
@@ -78,7 +82,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         //handles NZTA or company selection changes, set new name and address for Section B 1.6.4
         //### substitute Section B 1.6.4 text with Address_1 or key-ined data
-        private void Address_1_Or_Company_Name_1_Changed(object sender, EventArgs e)
+        private void Address_2_Or_Company_Name_2_Changed(object sender, EventArgs e)
         {
             if (sender.Equals(Address_1) && ((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
@@ -118,7 +122,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Nominated_Email_TextChanged(object sender, EventArgs e)
         {
-
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void PM_Name_TextChanged(object sender, EventArgs e)
@@ -232,35 +236,45 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<String, String> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                //KeyValuePair<String, string> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                KeyValuePair<string, Util.Address> selectedEntry = (KeyValuePair<string, NZTA_Contract_Generator.Util.Address>)Address_2.SelectedItem;
                 contract.Address_2 = selectedEntry.Key;
+                Util.ContentControls.setText("NZTA_Or_Company", "NZTA " + selectedEntry.Key);
+                Util.ContentControls.setText("Address_2", selectedEntry.Value.building + " " + selectedEntry.Value.streetAddress);
+                Util.ContentControls.setText("Box_2", selectedEntry.Value.boxNumber);
+                Util.ContentControls.setText("City_2", selectedEntry.Value.city);
             }
         }
 
         private void Company_Name_2_TextChanged(object sender, EventArgs e)
         {
             contract.Company_Name_2 = ((TextBox)sender).Text;
+            Util.ContentControls.setText("NZTA_Or_Company", Company_Name_2.Text);
         }
 
         private void Level_2_TextChanged(object sender, EventArgs e)
         {
             contract.Level_2 = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Address_2", Level_2.Text + " " + Street_2.Text);
         }
 
         private void Street_2_TextChanged(object sender, EventArgs e)
         {
             contract.Street_2 = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Address_2", Level_2.Text + " " + Street_2.Text);
         }
 
         private void Box_2_TextChanged(object sender, EventArgs e)
         {
             contract.Box_2 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void City_2_TextChanged(object sender, EventArgs e)
         {
             contract.City_2 = ((TextBox)sender).Text;
-        }
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }        
 
         private void numDays_TextChanged(object sender, EventArgs e)
         {
@@ -381,5 +395,30 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         }
 
+        private void label53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MadeDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (MadeDate.Value != null && !ignoreChange)
+            {
+                Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
+                Util.ContentControls.setText("Date_Month", MadeDate.Value.Month.ToString());
+                Util.ContentControls.setText("Date_Year", MadeDate.Value.Year.ToString());
+            }
+            
+        }
+
+        private void Consultant_Name_TextChanged(object sender, EventArgs e)
+        {
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+
+        private void Consultant_Address_TextChanged(object sender, EventArgs e)
+        {
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
     }
 }
