@@ -291,6 +291,10 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl271;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl AlternativeTenders;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl MeetingSchedule;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -530,6 +534,8 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl269.BeginInit();
             this.richTextContentControl270.BeginInit();
             this.richTextContentControl271.BeginInit();
+            this.AlternativeTenders.BeginInit();
+            this.MeetingSchedule.BeginInit();
         }
         
         /// 
@@ -537,6 +543,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.MeetingSchedule.EndInit();
+            this.AlternativeTenders.EndInit();
             this.richTextContentControl271.EndInit();
             this.richTextContentControl270.EndInit();
             this.richTextContentControl269.EndInit();
@@ -819,6 +827,8 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl269 = Globals.Factory.CreateRichTextContentControl(null, null, "1673536519", "richTextContentControl269", this);
             this.richTextContentControl270 = Globals.Factory.CreateRichTextContentControl(null, null, "1556360508", "richTextContentControl270", this);
             this.richTextContentControl271 = Globals.Factory.CreateRichTextContentControl(null, null, "2759396735", "richTextContentControl271", this);
+            this.AlternativeTenders = Globals.Factory.CreateRichTextContentControl(null, null, "2701580115", "AlternativeTenders", this);
+            this.MeetingSchedule = Globals.Factory.CreateRichTextContentControl(null, null, "2769722768", "MeetingSchedule", this);
         }
         
         /// 
@@ -1376,6 +1386,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl271.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // AlternativeTenders
+            // 
+            this.AlternativeTenders.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // MeetingSchedule
+            // 
+            this.MeetingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1392,6 +1410,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.MeetingSchedule.Dispose();
+            this.AlternativeTenders.Dispose();
             this.richTextContentControl271.Dispose();
             this.richTextContentControl270.Dispose();
             this.richTextContentControl269.Dispose();

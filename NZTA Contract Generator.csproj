@@ -223,6 +223,7 @@
       <DependentUpon>SupplierSelectionMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="Constants\Location.cs" />
+    <Compile Include="Constants\Text.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Util\Address.cs" />
     <Compile Include="Util\ContentControls.cs" />

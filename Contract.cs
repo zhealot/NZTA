@@ -30,6 +30,12 @@ namespace NZTA_Contract_Generator
 
         public String Contract_Name { get; set; }
         public String Contract_Number { get; set; }
+        
+        public string Consultant_Name { get; set; }
+        public string Consultant_Address { get; set; }
+        public string Set_No{ get; set; }
+        public string MadeDate{ get; set; }
+
 
         public String PM_Name { get; set; }
         public String PM_Title { get; set; }

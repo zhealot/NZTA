@@ -209,12 +209,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.altTenderNo = true;
             contract.altTenderYes = false;
+            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
         }
 
         private void altTenderYes_CheckedChanged(object sender, EventArgs e)
         {
             contract.altTenderYes = true;
             contract.altTenderNo = false;
+            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -315,7 +317,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.anotherMeansNo = true;
             contract.anotherMeansYes = false;
-            Util.ContentControls.setText("E-Copy", " and Email");
+            Util.ContentControls.setText("E-Copy", " and Email.");
         }
 
         private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
@@ -328,7 +330,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void otherDetails_TextChanged(object sender, EventArgs e)
         {
             contract.otherDetails = ((TextBox)sender).Text;
-            Util.ContentControls.setText("E-Copy", "and accompanied by an electronic copy on " + contract.otherDetails);
+            Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails + ".");
         }
 
         private void isPersonDifferentNo_CheckedChanged(object sender, EventArgs e)

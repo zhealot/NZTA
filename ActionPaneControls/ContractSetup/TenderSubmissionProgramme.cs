@@ -25,10 +25,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
 
-            //add event to controls
-            Evaluation_Start.ValueChanged += Evaluation_Period_ValueChanged;
-            Evaluation_End.ValueChanged += Evaluation_Period_ValueChanged;
-
             ignoreChange = false;
 
             //Load saved state. Defaults set in state...
@@ -44,28 +40,25 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void Evaluation_Start_ValueChanged(object sender, EventArgs e)
         {
             contract.Evaluation_Start = ((DateTimePicker)sender).Value.ToString("O");
+            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
         }
 
         private void Evaluation_End_ValueChanged(object sender, EventArgs e)
         {
             contract.Evaluation_End = ((DateTimePicker)sender).Value.ToString("O");
-        }
-
-        //caculates Evaluation period Section B 1.13.1
-        //### what format? "from xx to xx" or "xx days after tender closed"
-        private void Evaluation_Period_ValueChanged(object sender, EventArgs e)
-        {
-
+            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
         }
 
         private void PrelettingFromDate_ValueChanged(object sender, EventArgs e)
         {
             contract.PrelettingFromDate = ((DateTimePicker)sender).Value.ToString("O");
+            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
         }
 
         private void PrelettingEndDate_ValueChanged(object sender, EventArgs e)
         {
             contract.PrelettingEndDate = ((DateTimePicker)sender).Value.ToString("O");
+            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
         }
 
         //### in format: "from xx to xx"?
@@ -146,11 +139,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void Evaluation_Other_TextChanged(object sender, EventArgs e)
         {
             contract.Evaluation_Other = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Preletting_Period", Evaluation_Other.Text);
         }
 
         private void PrelettingOther_TextChanged(object sender, EventArgs e)
         {
             contract.PrelettingOther = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Preletting_Period", PrelettingOther.Text);
         }
 
         private void help1_Click(object sender, EventArgs e)

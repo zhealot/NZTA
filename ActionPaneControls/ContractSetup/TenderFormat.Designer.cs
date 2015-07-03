@@ -710,7 +710,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "TenderFormat";
-            this.Size = new System.Drawing.Size(208, 944);
+            this.Size = new System.Drawing.Size(225, 927);
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

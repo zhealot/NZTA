@@ -26,7 +26,7 @@ namespace NZTA_Contract_Generator.Util
             }
             catch (System.ArgumentException e)
             {
-
+                Console.WriteLine(e);
             }
             return null;
         }
@@ -50,6 +50,7 @@ namespace NZTA_Contract_Generator.Util
             catch (System.ArgumentException e)
             {
                 properties.Add("xmlId", false, MsoDocProperties.msoPropertyTypeString, xmlPart.Id);
+                Console.WriteLine(e);
             }
             
 
