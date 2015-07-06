@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TenderFormat));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CopyOfEnvelope = new System.Windows.Forms.NumericUpDown();
@@ -38,55 +37,37 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CoverLetter_Page = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.Index_Page = new System.Windows.Forms.TextBox();
+            this.Index_A3_Check = new System.Windows.Forms.CheckBox();
+            this.Index_Double_Check = new System.Windows.Forms.CheckBox();
+            this.NonPrice_Page = new System.Windows.Forms.TextBox();
+            this.Tender_A3_Check = new System.Windows.Forms.CheckBox();
+            this.Tender_Double_Check = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.Outline_Page = new System.Windows.Forms.TextBox();
+            this.Outline_Double_Check = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
+            this.Outline_Check = new System.Windows.Forms.CheckBox();
+            this.Project_Page = new System.Windows.Forms.TextBox();
+            this.Project_A3_Check = new System.Windows.Forms.CheckBox();
+            this.CV_Page = new System.Windows.Forms.TextBox();
+            this.CV_A3_Check = new System.Windows.Forms.CheckBox();
+            this.CV_Check = new System.Windows.Forms.CheckBox();
+            this.TimeResource_Page = new System.Windows.Forms.TextBox();
+            this.TimeResource_A3_Check = new System.Windows.Forms.CheckBox();
+            this.TimeResource_Check = new System.Windows.Forms.CheckBox();
+            this.Docu1_Page = new System.Windows.Forms.TextBox();
+            this.Docu1_A3_Check = new System.Windows.Forms.CheckBox();
+            this.Docu1_Check = new System.Windows.Forms.CheckBox();
+            this.Docu1_Double_Check = new System.Windows.Forms.CheckBox();
+            this.Docu1 = new System.Windows.Forms.TextBox();
+            this.Project_Check = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Personnel_Page = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +149,7 @@
             this.label7.Location = new System.Drawing.Point(182, 179);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 30);
+            this.label7.Size = new System.Drawing.Size(41, 30);
             this.label7.TabIndex = 3;
             this.label7.Text = "Double\r\nsided";
             // 
@@ -181,14 +162,15 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Covering Letter";
             // 
-            // textBox1
+            // CoverLetter_Page
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 216);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(24, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "1";
+            this.CoverLetter_Page.Location = new System.Drawing.Point(137, 216);
+            this.CoverLetter_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CoverLetter_Page.Name = "CoverLetter_Page";
+            this.CoverLetter_Page.Size = new System.Drawing.Size(24, 20);
+            this.CoverLetter_Page.TabIndex = 5;
+            this.CoverLetter_Page.Text = "1";
+            this.CoverLetter_Page.TextChanged += new System.EventHandler(this.CoverLetter_Page_TextChanged);
             // 
             // label9
             // 
@@ -199,63 +181,65 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Index or contents page";
             // 
-            // textBox2
+            // Index_Page
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 243);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(24, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "1";
+            this.Index_Page.Location = new System.Drawing.Point(137, 243);
+            this.Index_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Index_Page.Name = "Index_Page";
+            this.Index_Page.Size = new System.Drawing.Size(24, 20);
+            this.Index_Page.TabIndex = 5;
+            this.Index_Page.Text = "1";
+            this.Index_Page.TextChanged += new System.EventHandler(this.Index_Page_TextChanged);
             // 
-            // checkBox3
+            // Index_A3_Check
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(164, 243);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.Index_A3_Check.AutoSize = true;
+            this.Index_A3_Check.Location = new System.Drawing.Point(164, 243);
+            this.Index_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Index_A3_Check.Name = "Index_A3_Check";
+            this.Index_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.Index_A3_Check.TabIndex = 6;
+            this.Index_A3_Check.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // Index_Double_Check
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(184, 243);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 6;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.Index_Double_Check.AutoSize = true;
+            this.Index_Double_Check.Location = new System.Drawing.Point(184, 243);
+            this.Index_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Index_Double_Check.Name = "Index_Double_Check";
+            this.Index_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.Index_Double_Check.TabIndex = 6;
+            this.Index_Double_Check.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // NonPrice_Page
             // 
-            this.textBox3.Location = new System.Drawing.Point(137, 276);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(24, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "25";
+            this.NonPrice_Page.Location = new System.Drawing.Point(137, 276);
+            this.NonPrice_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NonPrice_Page.Name = "NonPrice_Page";
+            this.NonPrice_Page.Size = new System.Drawing.Size(24, 20);
+            this.NonPrice_Page.TabIndex = 5;
+            this.NonPrice_Page.Text = "25";
+            this.NonPrice_Page.TextChanged += new System.EventHandler(this.NonPrice_Page_TextChanged);
             // 
-            // checkBox1
+            // Tender_A3_Check
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(164, 276);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Tender_A3_Check.AutoSize = true;
+            this.Tender_A3_Check.Location = new System.Drawing.Point(164, 276);
+            this.Tender_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Tender_A3_Check.Name = "Tender_A3_Check";
+            this.Tender_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.Tender_A3_Check.TabIndex = 6;
+            this.Tender_A3_Check.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // Tender_Double_Check
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(184, 276);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Tender_Double_Check.AutoSize = true;
+            this.Tender_Double_Check.Location = new System.Drawing.Point(184, 276);
+            this.Tender_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Tender_Double_Check.Name = "Tender_Double_Check";
+            this.Tender_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.Tender_Double_Check.TabIndex = 6;
+            this.Tender_Double_Check.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -266,439 +250,262 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Tender non-price attribute submission";
             // 
-            // label11
+            // Outline_Page
             // 
-            this.label11.Location = new System.Drawing.Point(8, 307);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 31);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Personnel schedule";
+            this.Outline_Page.Location = new System.Drawing.Point(136, 386);
+            this.Outline_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Outline_Page.Name = "Outline_Page";
+            this.Outline_Page.Size = new System.Drawing.Size(24, 20);
+            this.Outline_Page.TabIndex = 5;
+            this.Outline_Page.Text = "2";
             // 
-            // textBox4
+            // Outline_Double_Check
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 386);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(24, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "2";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(164, 386);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(184, 307);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 6;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.Outline_Double_Check.AutoSize = true;
+            this.Outline_Double_Check.Location = new System.Drawing.Point(164, 386);
+            this.Outline_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Outline_Double_Check.Name = "Outline_Double_Check";
+            this.Outline_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.Outline_Double_Check.TabIndex = 6;
+            this.Outline_Double_Check.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(27, 338);
+            this.label12.Location = new System.Drawing.Point(8, 354);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(170, 29);
+            this.label12.Size = new System.Drawing.Size(216, 17);
             this.label12.TabIndex = 3;
             this.label12.Text = "Select the following items to include";
             // 
-            // checkBox7
-            // 
-            this.checkBox7.Location = new System.Drawing.Point(10, 374);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(94, 44);
-            this.checkBox7.TabIndex = 7;
-            this.checkBox7.Text = "Outline Consultants programme";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(136, 448);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(24, 20);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "1";
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(164, 448);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 6;
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.Location = new System.Drawing.Point(10, 423);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(123, 70);
-            this.checkBox9.TabIndex = 7;
-            this.checkBox9.Text = "Project organisation chart and management structure";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(136, 498);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(24, 20);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "2";
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(164, 498);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 6;
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.Location = new System.Drawing.Point(10, 498);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(94, 22);
-            this.checkBox11.TabIndex = 7;
-            this.checkBox11.Text = "CVs";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(136, 661);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(24, 20);
-            this.textBox7.TabIndex = 5;
-            this.textBox7.Text = "2";
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(164, 664);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 6;
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.Location = new System.Drawing.Point(10, 525);
-            this.checkBox13.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(123, 292);
-            this.checkBox13.TabIndex = 7;
-            this.checkBox13.Text = resources.GetString("checkBox13.Text");
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(136, 823);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(24, 20);
-            this.textBox8.TabIndex = 5;
-            this.textBox8.Text = "1";
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(164, 823);
-            this.checkBox14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 6;
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.Location = new System.Drawing.Point(10, 823);
-            this.checkBox15.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(14, 22);
-            this.checkBox15.TabIndex = 7;
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(184, 823);
-            this.checkBox16.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(15, 14);
-            this.checkBox16.TabIndex = 6;
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(29, 823);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(104, 20);
-            this.textBox9.TabIndex = 5;
-            this.textBox9.Text = "document name";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(136, 850);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(24, 20);
-            this.textBox10.TabIndex = 5;
-            this.textBox10.Text = "1";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(29, 850);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(104, 20);
-            this.textBox11.TabIndex = 5;
-            this.textBox11.Text = "document name";
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(164, 850);
-            this.checkBox17.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(15, 14);
-            this.checkBox17.TabIndex = 6;
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(184, 850);
-            this.checkBox18.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(15, 14);
-            this.checkBox18.TabIndex = 6;
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // checkBox19
-            // 
-            this.checkBox19.Location = new System.Drawing.Point(10, 850);
-            this.checkBox19.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(14, 22);
-            this.checkBox19.TabIndex = 7;
-            this.checkBox19.UseVisualStyleBackColor = true;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(136, 877);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(24, 20);
-            this.textBox12.TabIndex = 5;
-            this.textBox12.Text = "1";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(29, 877);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(104, 20);
-            this.textBox13.TabIndex = 5;
-            this.textBox13.Text = "document name";
-            // 
-            // checkBox20
-            // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(164, 877);
-            this.checkBox20.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(15, 14);
-            this.checkBox20.TabIndex = 6;
-            this.checkBox20.UseVisualStyleBackColor = true;
-            // 
-            // checkBox21
-            // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(184, 877);
-            this.checkBox21.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(15, 14);
-            this.checkBox21.TabIndex = 6;
-            this.checkBox21.UseVisualStyleBackColor = true;
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.Location = new System.Drawing.Point(10, 877);
-            this.checkBox22.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(14, 22);
-            this.checkBox22.TabIndex = 7;
-            this.checkBox22.UseVisualStyleBackColor = true;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(136, 904);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(24, 20);
-            this.textBox14.TabIndex = 5;
-            this.textBox14.Text = "1";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(29, 904);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(104, 20);
-            this.textBox15.TabIndex = 5;
-            this.textBox15.Text = "document name";
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(164, 904);
-            this.checkBox23.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(15, 14);
-            this.checkBox23.TabIndex = 6;
-            this.checkBox23.UseVisualStyleBackColor = true;
-            // 
-            // checkBox24
-            // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(184, 904);
-            this.checkBox24.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(15, 14);
-            this.checkBox24.TabIndex = 6;
-            this.checkBox24.UseVisualStyleBackColor = true;
-            // 
-            // checkBox25
-            // 
-            this.checkBox25.Location = new System.Drawing.Point(10, 904);
-            this.checkBox25.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(14, 22);
-            this.checkBox25.TabIndex = 7;
-            this.checkBox25.UseVisualStyleBackColor = true;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(136, 931);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(24, 20);
-            this.textBox16.TabIndex = 5;
-            this.textBox16.Text = "1";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(29, 931);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(104, 20);
-            this.textBox17.TabIndex = 5;
-            this.textBox17.Text = "document name";
-            // 
-            // checkBox26
-            // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(164, 931);
-            this.checkBox26.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(15, 14);
-            this.checkBox26.TabIndex = 6;
-            this.checkBox26.UseVisualStyleBackColor = true;
-            // 
-            // checkBox27
-            // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(184, 931);
-            this.checkBox27.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(15, 14);
-            this.checkBox27.TabIndex = 6;
-            this.checkBox27.UseVisualStyleBackColor = true;
-            // 
-            // checkBox28
-            // 
-            this.checkBox28.Location = new System.Drawing.Point(10, 931);
-            this.checkBox28.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(14, 22);
-            this.checkBox28.TabIndex = 7;
-            this.checkBox28.UseVisualStyleBackColor = true;
+            // Outline_Check
+            // 
+            this.Outline_Check.Location = new System.Drawing.Point(10, 374);
+            this.Outline_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Outline_Check.Name = "Outline_Check";
+            this.Outline_Check.Size = new System.Drawing.Size(94, 44);
+            this.Outline_Check.TabIndex = 7;
+            this.Outline_Check.Text = "Outline Consultants programme";
+            this.Outline_Check.UseVisualStyleBackColor = true;
+            this.Outline_Check.CheckedChanged += new System.EventHandler(this.Outline_Check_CheckedChanged);
+            // 
+            // Project_Page
+            // 
+            this.Project_Page.Location = new System.Drawing.Point(136, 448);
+            this.Project_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Project_Page.Name = "Project_Page";
+            this.Project_Page.Size = new System.Drawing.Size(24, 20);
+            this.Project_Page.TabIndex = 5;
+            this.Project_Page.Text = "1";
+            this.Project_Page.TextChanged += new System.EventHandler(this.Project_Page_TextChanged);
+            // 
+            // Project_A3_Check
+            // 
+            this.Project_A3_Check.AutoSize = true;
+            this.Project_A3_Check.Location = new System.Drawing.Point(164, 448);
+            this.Project_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Project_A3_Check.Name = "Project_A3_Check";
+            this.Project_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.Project_A3_Check.TabIndex = 6;
+            this.Project_A3_Check.UseVisualStyleBackColor = true;
+            // 
+            // CV_Page
+            // 
+            this.CV_Page.Location = new System.Drawing.Point(136, 498);
+            this.CV_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CV_Page.Name = "CV_Page";
+            this.CV_Page.Size = new System.Drawing.Size(24, 20);
+            this.CV_Page.TabIndex = 5;
+            this.CV_Page.Text = "2";
+            // 
+            // CV_A3_Check
+            // 
+            this.CV_A3_Check.AutoSize = true;
+            this.CV_A3_Check.Location = new System.Drawing.Point(164, 498);
+            this.CV_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CV_A3_Check.Name = "CV_A3_Check";
+            this.CV_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.CV_A3_Check.TabIndex = 6;
+            this.CV_A3_Check.UseVisualStyleBackColor = true;
+            // 
+            // CV_Check
+            // 
+            this.CV_Check.Location = new System.Drawing.Point(10, 498);
+            this.CV_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CV_Check.Name = "CV_Check";
+            this.CV_Check.Size = new System.Drawing.Size(94, 22);
+            this.CV_Check.TabIndex = 7;
+            this.CV_Check.Text = "CVs";
+            this.CV_Check.UseVisualStyleBackColor = true;
+            // 
+            // TimeResource_Page
+            // 
+            this.TimeResource_Page.Location = new System.Drawing.Point(136, 532);
+            this.TimeResource_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TimeResource_Page.Name = "TimeResource_Page";
+            this.TimeResource_Page.Size = new System.Drawing.Size(24, 20);
+            this.TimeResource_Page.TabIndex = 5;
+            this.TimeResource_Page.Text = "2";
+            // 
+            // TimeResource_A3_Check
+            // 
+            this.TimeResource_A3_Check.AutoSize = true;
+            this.TimeResource_A3_Check.Location = new System.Drawing.Point(164, 535);
+            this.TimeResource_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TimeResource_A3_Check.Name = "TimeResource_A3_Check";
+            this.TimeResource_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.TimeResource_A3_Check.TabIndex = 6;
+            this.TimeResource_A3_Check.UseVisualStyleBackColor = true;
+            // 
+            // TimeResource_Check
+            // 
+            this.TimeResource_Check.Location = new System.Drawing.Point(10, 525);
+            this.TimeResource_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TimeResource_Check.Name = "TimeResource_Check";
+            this.TimeResource_Check.Size = new System.Drawing.Size(123, 35);
+            this.TimeResource_Check.TabIndex = 7;
+            this.TimeResource_Check.Text = "A Time and Resource schedule ";
+            this.TimeResource_Check.UseVisualStyleBackColor = true;
+            this.TimeResource_Check.CheckedChanged += new System.EventHandler(this.TimeResource_Check_CheckedChanged);
+            // 
+            // Docu1_Page
+            // 
+            this.Docu1_Page.Location = new System.Drawing.Point(136, 567);
+            this.Docu1_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Docu1_Page.Name = "Docu1_Page";
+            this.Docu1_Page.Size = new System.Drawing.Size(24, 20);
+            this.Docu1_Page.TabIndex = 5;
+            this.Docu1_Page.Text = "1";
+            // 
+            // Docu1_A3_Check
+            // 
+            this.Docu1_A3_Check.AutoSize = true;
+            this.Docu1_A3_Check.Location = new System.Drawing.Point(164, 570);
+            this.Docu1_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Docu1_A3_Check.Name = "Docu1_A3_Check";
+            this.Docu1_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.Docu1_A3_Check.TabIndex = 6;
+            this.Docu1_A3_Check.UseVisualStyleBackColor = true;
+            this.Docu1_A3_Check.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            // 
+            // Docu1_Check
+            // 
+            this.Docu1_Check.Location = new System.Drawing.Point(10, 566);
+            this.Docu1_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Docu1_Check.Name = "Docu1_Check";
+            this.Docu1_Check.Size = new System.Drawing.Size(14, 22);
+            this.Docu1_Check.TabIndex = 7;
+            this.Docu1_Check.UseVisualStyleBackColor = true;
+            // 
+            // Docu1_Double_Check
+            // 
+            this.Docu1_Double_Check.AutoSize = true;
+            this.Docu1_Double_Check.Location = new System.Drawing.Point(184, 570);
+            this.Docu1_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Docu1_Double_Check.Name = "Docu1_Double_Check";
+            this.Docu1_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.Docu1_Double_Check.TabIndex = 6;
+            this.Docu1_Double_Check.UseVisualStyleBackColor = true;
+            // 
+            // Docu1
+            // 
+            this.Docu1.Location = new System.Drawing.Point(29, 567);
+            this.Docu1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Docu1.Name = "Docu1";
+            this.Docu1.Size = new System.Drawing.Size(104, 20);
+            this.Docu1.TabIndex = 5;
+            this.Docu1.Text = "document name";
+            // 
+            // Project_Check
+            // 
+            this.Project_Check.Location = new System.Drawing.Point(10, 423);
+            this.Project_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Project_Check.Name = "Project_Check";
+            this.Project_Check.Size = new System.Drawing.Size(123, 69);
+            this.Project_Check.TabIndex = 7;
+            this.Project_Check.Text = "Project organisation chart and management structure";
+            this.Project_Check.UseVisualStyleBackColor = true;
+            this.Project_Check.CheckedChanged += new System.EventHandler(this.Project_Check_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(7, 317);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 23);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Personnel Schedule";
+            // 
+            // Personnel_Page
+            // 
+            this.Personnel_Page.Location = new System.Drawing.Point(136, 315);
+            this.Personnel_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Personnel_Page.Name = "Personnel_Page";
+            this.Personnel_Page.Size = new System.Drawing.Size(24, 20);
+            this.Personnel_Page.TabIndex = 5;
+            this.Personnel_Page.Text = "1";
+            this.Personnel_Page.TextChanged += new System.EventHandler(this.Personnel_Page_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(211, 532);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdd.Location = new System.Drawing.Point(213, 564);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(23, 23);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // TenderFormat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.checkBox13);
-            this.Controls.Add(this.checkBox28);
-            this.Controls.Add(this.checkBox25);
-            this.Controls.Add(this.checkBox22);
-            this.Controls.Add(this.checkBox19);
-            this.Controls.Add(this.checkBox15);
-            this.Controls.Add(this.checkBox11);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox12);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.checkBox27);
-            this.Controls.Add(this.checkBox24);
-            this.Controls.Add(this.checkBox21);
-            this.Controls.Add(this.checkBox18);
-            this.Controls.Add(this.checkBox16);
-            this.Controls.Add(this.checkBox26);
-            this.Controls.Add(this.checkBox23);
-            this.Controls.Add(this.checkBox20);
-            this.Controls.Add(this.checkBox17);
-            this.Controls.Add(this.checkBox14);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Project_Check);
+            this.Controls.Add(this.TimeResource_Check);
+            this.Controls.Add(this.Docu1_Check);
+            this.Controls.Add(this.CV_Check);
+            this.Controls.Add(this.Outline_Check);
+            this.Controls.Add(this.Tender_Double_Check);
+            this.Controls.Add(this.TimeResource_A3_Check);
+            this.Controls.Add(this.Project_A3_Check);
+            this.Controls.Add(this.Docu1_Double_Check);
+            this.Controls.Add(this.Docu1_A3_Check);
+            this.Controls.Add(this.CV_A3_Check);
+            this.Controls.Add(this.Index_Double_Check);
+            this.Controls.Add(this.Outline_Double_Check);
+            this.Controls.Add(this.Tender_A3_Check);
+            this.Controls.Add(this.TimeResource_Page);
+            this.Controls.Add(this.Project_Page);
+            this.Controls.Add(this.Docu1);
+            this.Controls.Add(this.Docu1_Page);
+            this.Controls.Add(this.CV_Page);
+            this.Controls.Add(this.Index_A3_Check);
+            this.Controls.Add(this.Outline_Page);
+            this.Controls.Add(this.NonPrice_Page);
+            this.Controls.Add(this.Index_Page);
+            this.Controls.Add(this.Personnel_Page);
+            this.Controls.Add(this.CoverLetter_Page);
             this.Controls.Add(this.CopyOfEnvelope);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -710,7 +517,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "TenderFormat";
-            this.Size = new System.Drawing.Size(225, 927);
+            this.Size = new System.Drawing.Size(239, 660);
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -728,55 +535,37 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CoverLetter_Page;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox Index_Page;
+        private System.Windows.Forms.CheckBox Index_A3_Check;
+        private System.Windows.Forms.CheckBox Index_Double_Check;
+        private System.Windows.Forms.TextBox NonPrice_Page;
+        private System.Windows.Forms.CheckBox Tender_A3_Check;
+        private System.Windows.Forms.CheckBox Tender_Double_Check;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.TextBox Outline_Page;
+        private System.Windows.Forms.CheckBox Outline_Double_Check;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.CheckBox checkBox26;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.CheckBox checkBox28;
+        private System.Windows.Forms.CheckBox Outline_Check;
+        private System.Windows.Forms.TextBox Project_Page;
+        private System.Windows.Forms.CheckBox Project_A3_Check;
+        private System.Windows.Forms.TextBox CV_Page;
+        private System.Windows.Forms.CheckBox CV_A3_Check;
+        private System.Windows.Forms.CheckBox CV_Check;
+        private System.Windows.Forms.TextBox TimeResource_Page;
+        private System.Windows.Forms.CheckBox TimeResource_A3_Check;
+        private System.Windows.Forms.CheckBox TimeResource_Check;
+        private System.Windows.Forms.TextBox Docu1_Page;
+        private System.Windows.Forms.CheckBox Docu1_A3_Check;
+        private System.Windows.Forms.CheckBox Docu1_Check;
+        private System.Windows.Forms.CheckBox Docu1_Double_Check;
+        private System.Windows.Forms.TextBox Docu1;
+        private System.Windows.Forms.CheckBox Project_Check;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox Personnel_Page;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
 
     }
 }

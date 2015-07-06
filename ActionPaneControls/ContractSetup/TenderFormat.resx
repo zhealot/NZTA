@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBox13.Text" xml:space="preserve">
-    <value>A Time and Resource schedule (bar chart) detailing for all personnel, hours proposed to be expended and work focus on a personnel summary information by resource type is acceptable. The total proposed hours is to be shown for each of the key personnel or resource(Ref. clause 2.2 Relevant Skills)</value>
-  </data>
 </root>

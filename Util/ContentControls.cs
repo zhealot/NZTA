@@ -117,6 +117,22 @@ namespace NZTA_Contract_Generator.Util
             }
         }
 
+        public static bool Validator(string s, Type t)
+        {
+            if (s == "" || s == null) { return false; }
+            if (t.Name == "Int32" || t.Name=="Int16")
+            {
+                int i;
+                if (int.TryParse(s, out i)) { return true; }
+            }
+            if (t.Name=="Decimal")
+            {
+                decimal d;
+                if (decimal.TryParse(s, out d)) { return true; }
+            }            
+            return false;
+        }
+
     }
 
 }

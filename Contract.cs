@@ -31,10 +31,10 @@ namespace NZTA_Contract_Generator
         public String Contract_Name { get; set; }
         public String Contract_Number { get; set; }
         
-        public string Consultant_Name { get; set; }
-        public string Consultant_Address { get; set; }
-        public string Set_No{ get; set; }
-        public string MadeDate{ get; set; }
+        public String Consultant_Name { get; set; }
+        public String Consultant_Address { get; set; }
+        public String Set_No{ get; set; }
+        public String MadeDate{ get; set; }
 
 
         public String PM_Name { get; set; }
@@ -161,5 +161,35 @@ namespace NZTA_Contract_Generator
 
         //End of tender submission programme
 
+        //Start of Tender Format programme
+        public String CopyOfEnvelope { get; set; }
+        public String CoverLetter_Page { get; set; }
+        public String Index_Page { get; set; }
+        public String NonPrice_Page { get; set; }
+        public String Personnel_Page { get; set; }
+        public String Outline_Page { get; set; }
+        public String Project_Page { get; set; }
+        public String CV_Page { get; set; }
+        public String TimeResource_Page { get; set; }
+        public String Docu1_Page { get; set; }
+        public String Docu1 { get; set; }
+        
+        public Boolean TimeResource_Check { get; set; }
+        public Boolean Outline_Check { get; set; }
+        public Boolean Project_Check { get; set; }
+        public Boolean CV_Check { get; set; }
+        public Boolean Index_A3_Check { get; set; }
+        public Boolean Index_Double_Check { get; set; }
+        public Boolean Tender_A3_Check { get; set; }
+        public Boolean Tender_Double_Check { get; set; }
+        public Boolean Outline_Double_Check { get; set; }
+        public Boolean Project_A3_Check { get; set; }
+        public Boolean CV_A3_Check { get; set; }
+        public Boolean TimeResource_A3_Check { get; set; }
+        public Boolean Docu1_Check { get; set; }
+        public Boolean Docu1_A3_Check { get; set; }
+        public Boolean Docu1_Double_Check { get; set; }
+        
+        //End of Tender Format programme
     }
 }
