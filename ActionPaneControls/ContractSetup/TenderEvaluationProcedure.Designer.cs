@@ -65,9 +65,10 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.City = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.InterView_City = new System.Windows.Forms.TextBox();
+            this.InterView_Notice = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.InterView_Notice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +86,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 15);
+            this.label2.Size = new System.Drawing.Size(169, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name of Evaluation Team Leader:";
             // 
@@ -93,15 +94,16 @@
             // 
             this.EvaluationTeamLeader.Location = new System.Drawing.Point(6, 98);
             this.EvaluationTeamLeader.Name = "EvaluationTeamLeader";
-            this.EvaluationTeamLeader.Size = new System.Drawing.Size(212, 25);
+            this.EvaluationTeamLeader.Size = new System.Drawing.Size(212, 20);
             this.EvaluationTeamLeader.TabIndex = 6;
+            this.EvaluationTeamLeader.TextChanged += new System.EventHandler(this.EvaluationTeamLeader_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Position 1:";
             // 
@@ -109,15 +111,16 @@
             // 
             this.ETL_Position.Location = new System.Drawing.Point(78, 122);
             this.ETL_Position.Name = "ETL_Position";
-            this.ETL_Position.Size = new System.Drawing.Size(140, 25);
+            this.ETL_Position.Size = new System.Drawing.Size(140, 20);
             this.ETL_Position.TabIndex = 8;
+            this.ETL_Position.TextChanged += new System.EventHandler(this.ETL_Position_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 15);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Company 1:";
             // 
@@ -125,22 +128,24 @@
             // 
             this.ETL_Company.Location = new System.Drawing.Point(78, 146);
             this.ETL_Company.Name = "ETL_Company";
-            this.ETL_Company.Size = new System.Drawing.Size(140, 25);
+            this.ETL_Company.Size = new System.Drawing.Size(140, 20);
             this.ETL_Company.TabIndex = 10;
+            this.ETL_Company.TextChanged += new System.EventHandler(this.ETL_Company_TextChanged);
             // 
             // ET2_Company
             // 
             this.ET2_Company.Location = new System.Drawing.Point(78, 236);
             this.ET2_Company.Name = "ET2_Company";
-            this.ET2_Company.Size = new System.Drawing.Size(140, 25);
+            this.ET2_Company.Size = new System.Drawing.Size(140, 20);
             this.ET2_Company.TabIndex = 16;
+            this.ET2_Company.TextChanged += new System.EventHandler(this.ET2_Company_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Company 2:";
             // 
@@ -148,15 +153,16 @@
             // 
             this.ET2_Position.Location = new System.Drawing.Point(78, 212);
             this.ET2_Position.Name = "ET2_Position";
-            this.ET2_Position.Size = new System.Drawing.Size(140, 25);
+            this.ET2_Position.Size = new System.Drawing.Size(140, 20);
             this.ET2_Position.TabIndex = 14;
+            this.ET2_Position.TextChanged += new System.EventHandler(this.ET2_Position_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 215);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 15);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Position 2:";
             // 
@@ -164,15 +170,16 @@
             // 
             this.ET2_Name.Location = new System.Drawing.Point(6, 188);
             this.ET2_Name.Name = "ET2_Name";
-            this.ET2_Name.Size = new System.Drawing.Size(212, 25);
+            this.ET2_Name.Size = new System.Drawing.Size(212, 20);
             this.ET2_Name.TabIndex = 12;
+            this.ET2_Name.TextChanged += new System.EventHandler(this.ET2_Name_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 171);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 15);
+            this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "Name 2:";
             // 
@@ -180,15 +187,16 @@
             // 
             this.ET3_Company.Location = new System.Drawing.Point(78, 327);
             this.ET3_Company.Name = "ET3_Company";
-            this.ET3_Company.Size = new System.Drawing.Size(140, 25);
+            this.ET3_Company.Size = new System.Drawing.Size(140, 20);
             this.ET3_Company.TabIndex = 22;
+            this.ET3_Company.TextChanged += new System.EventHandler(this.ET3_Company_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 330);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 15);
+            this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Company 3:";
             // 
@@ -196,15 +204,16 @@
             // 
             this.ET3_Position.Location = new System.Drawing.Point(78, 303);
             this.ET3_Position.Name = "ET3_Position";
-            this.ET3_Position.Size = new System.Drawing.Size(140, 25);
+            this.ET3_Position.Size = new System.Drawing.Size(140, 20);
             this.ET3_Position.TabIndex = 20;
+            this.ET3_Position.TextChanged += new System.EventHandler(this.ET3_Position_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 306);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 15);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Position 3:";
             // 
@@ -212,15 +221,16 @@
             // 
             this.ET3_Name.Location = new System.Drawing.Point(6, 279);
             this.ET3_Name.Name = "ET3_Name";
-            this.ET3_Name.Size = new System.Drawing.Size(212, 25);
+            this.ET3_Name.Size = new System.Drawing.Size(212, 20);
             this.ET3_Name.TabIndex = 18;
+            this.ET3_Name.TextChanged += new System.EventHandler(this.ET3_Name_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 262);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 17;
             this.label10.Text = "Name 3:";
             // 
@@ -237,15 +247,16 @@
             // 
             this.ET4_Company.Location = new System.Drawing.Point(78, 416);
             this.ET4_Company.Name = "ET4_Company";
-            this.ET4_Company.Size = new System.Drawing.Size(140, 25);
+            this.ET4_Company.Size = new System.Drawing.Size(140, 20);
             this.ET4_Company.TabIndex = 29;
+            this.ET4_Company.TextChanged += new System.EventHandler(this.ET4_Company_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 419);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 15);
+            this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 28;
             this.label11.Text = "Company 4:";
             // 
@@ -253,15 +264,16 @@
             // 
             this.ET4_Position.Location = new System.Drawing.Point(78, 392);
             this.ET4_Position.Name = "ET4_Position";
-            this.ET4_Position.Size = new System.Drawing.Size(140, 25);
+            this.ET4_Position.Size = new System.Drawing.Size(140, 20);
             this.ET4_Position.TabIndex = 27;
+            this.ET4_Position.TextChanged += new System.EventHandler(this.ET4_Position_TextChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 395);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 15);
+            this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 26;
             this.label12.Text = "Position 4:";
             // 
@@ -269,15 +281,16 @@
             // 
             this.ET4_Name.Location = new System.Drawing.Point(6, 368);
             this.ET4_Name.Name = "ET4_Name";
-            this.ET4_Name.Size = new System.Drawing.Size(212, 25);
+            this.ET4_Name.Size = new System.Drawing.Size(212, 20);
             this.ET4_Name.TabIndex = 25;
+            this.ET4_Name.TextChanged += new System.EventHandler(this.ET4_Name_TextChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 351);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 15);
+            this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 24;
             this.label13.Text = "Name 4:";
             // 
@@ -285,15 +298,16 @@
             // 
             this.ET5_Company.Location = new System.Drawing.Point(78, 510);
             this.ET5_Company.Name = "ET5_Company";
-            this.ET5_Company.Size = new System.Drawing.Size(140, 25);
+            this.ET5_Company.Size = new System.Drawing.Size(140, 20);
             this.ET5_Company.TabIndex = 35;
+            this.ET5_Company.TextChanged += new System.EventHandler(this.ET5_Company_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(6, 513);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 15);
+            this.label14.Size = new System.Drawing.Size(63, 13);
             this.label14.TabIndex = 34;
             this.label14.Text = "Company 5:";
             // 
@@ -301,15 +315,16 @@
             // 
             this.ET5_Position.Location = new System.Drawing.Point(78, 486);
             this.ET5_Position.Name = "ET5_Position";
-            this.ET5_Position.Size = new System.Drawing.Size(140, 25);
+            this.ET5_Position.Size = new System.Drawing.Size(140, 20);
             this.ET5_Position.TabIndex = 33;
+            this.ET5_Position.TextChanged += new System.EventHandler(this.ET5_Position_TextChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(6, 489);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 15);
+            this.label15.Size = new System.Drawing.Size(56, 13);
             this.label15.TabIndex = 32;
             this.label15.Text = "Position 5:";
             // 
@@ -317,15 +332,16 @@
             // 
             this.ET5_Name.Location = new System.Drawing.Point(6, 462);
             this.ET5_Name.Name = "ET5_Name";
-            this.ET5_Name.Size = new System.Drawing.Size(212, 25);
+            this.ET5_Name.Size = new System.Drawing.Size(212, 20);
             this.ET5_Name.TabIndex = 31;
+            this.ET5_Name.TextChanged += new System.EventHandler(this.ET5_Name_TextChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(6, 445);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 15);
+            this.label16.Size = new System.Drawing.Size(47, 13);
             this.label16.TabIndex = 30;
             this.label16.Text = "Name 5:";
             // 
@@ -334,7 +350,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(6, 540);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(287, 15);
+            this.label17.Size = new System.Drawing.Size(175, 13);
             this.label17.TabIndex = 36;
             this.label17.Text = "Will you be interviewing Tenderers?";
             // 
@@ -352,7 +368,7 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(135, 556);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(52, 19);
+            this.radioButton7.Size = new System.Drawing.Size(43, 17);
             this.radioButton7.TabIndex = 45;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "Yes";
@@ -363,7 +379,7 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(6, 556);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(44, 19);
+            this.radioButton8.Size = new System.Drawing.Size(39, 17);
             this.radioButton8.TabIndex = 44;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "No";
@@ -374,38 +390,40 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(4, 580);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 15);
+            this.label18.Size = new System.Drawing.Size(113, 13);
             this.label18.TabIndex = 46;
-            this.label18.Text = "Notice period:";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(75, 577);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(143, 25);
-            this.textBox16.TabIndex = 47;
+            this.label18.Text = "Notice period (weeks):";
             // 
             // City
             // 
             this.City.AutoSize = true;
             this.City.Location = new System.Drawing.Point(3, 604);
             this.City.Name = "City";
-            this.City.Size = new System.Drawing.Size(47, 15);
+            this.City.Size = new System.Drawing.Size(27, 13);
             this.City.TabIndex = 48;
             this.City.Text = "City:";
             // 
-            // textBox17
+            // InterView_City
             // 
-            this.textBox17.Location = new System.Drawing.Point(75, 601);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(143, 25);
-            this.textBox17.TabIndex = 49;
+            this.InterView_City.Location = new System.Drawing.Point(134, 601);
+            this.InterView_City.Name = "InterView_City";
+            this.InterView_City.Size = new System.Drawing.Size(143, 20);
+            this.InterView_City.TabIndex = 49;
+            this.InterView_City.TextChanged += new System.EventHandler(this.InterView_City_TextChanged);
+            // 
+            // InterView_Notice
+            // 
+            this.InterView_Notice.Location = new System.Drawing.Point(168, 578);
+            this.InterView_Notice.Name = "InterView_Notice";
+            this.InterView_Notice.Size = new System.Drawing.Size(109, 20);
+            this.InterView_Notice.TabIndex = 50;
+            this.InterView_Notice.ValueChanged += new System.EventHandler(this.InterView_Notice_ValueChanged);
             // 
             // TenderEvaluationProcedure
             // 
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.InterView_Notice);
+            this.Controls.Add(this.InterView_City);
             this.Controls.Add(this.City);
-            this.Controls.Add(this.textBox16);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.radioButton8);
@@ -445,6 +463,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TenderEvaluationProcedure";
             this.Size = new System.Drawing.Size(280, 640);
+            ((System.ComponentModel.ISupportInitialize)(this.InterView_Notice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,8 +508,8 @@
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label City;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox InterView_City;
+        private System.Windows.Forms.NumericUpDown InterView_Notice;
     }
 }

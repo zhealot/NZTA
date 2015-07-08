@@ -43,8 +43,8 @@
             this.Index_A3_Check = new System.Windows.Forms.CheckBox();
             this.Index_Double_Check = new System.Windows.Forms.CheckBox();
             this.NonPrice_Page = new System.Windows.Forms.TextBox();
-            this.Tender_A3_Check = new System.Windows.Forms.CheckBox();
-            this.Tender_Double_Check = new System.Windows.Forms.CheckBox();
+            this.NonPrice_A3_Check = new System.Windows.Forms.CheckBox();
+            this.NonPrice_Double_Check = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Outline_Page = new System.Windows.Forms.TextBox();
             this.Outline_Double_Check = new System.Windows.Forms.CheckBox();
@@ -58,17 +58,16 @@
             this.TimeResource_Page = new System.Windows.Forms.TextBox();
             this.TimeResource_A3_Check = new System.Windows.Forms.CheckBox();
             this.TimeResource_Check = new System.Windows.Forms.CheckBox();
-            this.Docu1_Page = new System.Windows.Forms.TextBox();
-            this.Docu1_A3_Check = new System.Windows.Forms.CheckBox();
-            this.Docu1_Check = new System.Windows.Forms.CheckBox();
-            this.Docu1_Double_Check = new System.Windows.Forms.CheckBox();
-            this.Docu1 = new System.Windows.Forms.TextBox();
             this.Project_Check = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Personnel_Page = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.RowsCount = new System.Windows.Forms.NumericUpDown();
+            this.Outline_A3_Check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RowsCount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -200,6 +199,7 @@
             this.Index_A3_Check.Size = new System.Drawing.Size(15, 14);
             this.Index_A3_Check.TabIndex = 6;
             this.Index_A3_Check.UseVisualStyleBackColor = true;
+            this.Index_A3_Check.CheckedChanged += new System.EventHandler(this.Index_Page_TextChanged);
             // 
             // Index_Double_Check
             // 
@@ -210,6 +210,7 @@
             this.Index_Double_Check.Size = new System.Drawing.Size(15, 14);
             this.Index_Double_Check.TabIndex = 6;
             this.Index_Double_Check.UseVisualStyleBackColor = true;
+            this.Index_Double_Check.CheckedChanged += new System.EventHandler(this.Index_Page_TextChanged);
             // 
             // NonPrice_Page
             // 
@@ -221,25 +222,27 @@
             this.NonPrice_Page.Text = "25";
             this.NonPrice_Page.TextChanged += new System.EventHandler(this.NonPrice_Page_TextChanged);
             // 
-            // Tender_A3_Check
+            // NonPrice_A3_Check
             // 
-            this.Tender_A3_Check.AutoSize = true;
-            this.Tender_A3_Check.Location = new System.Drawing.Point(164, 276);
-            this.Tender_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Tender_A3_Check.Name = "Tender_A3_Check";
-            this.Tender_A3_Check.Size = new System.Drawing.Size(15, 14);
-            this.Tender_A3_Check.TabIndex = 6;
-            this.Tender_A3_Check.UseVisualStyleBackColor = true;
+            this.NonPrice_A3_Check.AutoSize = true;
+            this.NonPrice_A3_Check.Location = new System.Drawing.Point(164, 276);
+            this.NonPrice_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NonPrice_A3_Check.Name = "NonPrice_A3_Check";
+            this.NonPrice_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.NonPrice_A3_Check.TabIndex = 6;
+            this.NonPrice_A3_Check.UseVisualStyleBackColor = true;
+            this.NonPrice_A3_Check.CheckedChanged += new System.EventHandler(this.NonPrice_Page_TextChanged);
             // 
-            // Tender_Double_Check
+            // NonPrice_Double_Check
             // 
-            this.Tender_Double_Check.AutoSize = true;
-            this.Tender_Double_Check.Location = new System.Drawing.Point(184, 276);
-            this.Tender_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Tender_Double_Check.Name = "Tender_Double_Check";
-            this.Tender_Double_Check.Size = new System.Drawing.Size(15, 14);
-            this.Tender_Double_Check.TabIndex = 6;
-            this.Tender_Double_Check.UseVisualStyleBackColor = true;
+            this.NonPrice_Double_Check.AutoSize = true;
+            this.NonPrice_Double_Check.Location = new System.Drawing.Point(184, 276);
+            this.NonPrice_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.NonPrice_Double_Check.Name = "NonPrice_Double_Check";
+            this.NonPrice_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.NonPrice_Double_Check.TabIndex = 6;
+            this.NonPrice_Double_Check.UseVisualStyleBackColor = true;
+            this.NonPrice_Double_Check.CheckedChanged += new System.EventHandler(this.NonPrice_Page_TextChanged);
             // 
             // label10
             // 
@@ -258,16 +261,18 @@
             this.Outline_Page.Size = new System.Drawing.Size(24, 20);
             this.Outline_Page.TabIndex = 5;
             this.Outline_Page.Text = "2";
+            this.Outline_Page.TextChanged += new System.EventHandler(this.Outline_Page_TextChanged);
             // 
             // Outline_Double_Check
             // 
             this.Outline_Double_Check.AutoSize = true;
-            this.Outline_Double_Check.Location = new System.Drawing.Point(164, 386);
+            this.Outline_Double_Check.Location = new System.Drawing.Point(185, 386);
             this.Outline_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Outline_Double_Check.Name = "Outline_Double_Check";
             this.Outline_Double_Check.Size = new System.Drawing.Size(15, 14);
             this.Outline_Double_Check.TabIndex = 6;
             this.Outline_Double_Check.UseVisualStyleBackColor = true;
+            this.Outline_Double_Check.CheckedChanged += new System.EventHandler(this.Outline_Page_TextChanged);
             // 
             // label12
             // 
@@ -287,7 +292,7 @@
             this.Outline_Check.TabIndex = 7;
             this.Outline_Check.Text = "Outline Consultants programme";
             this.Outline_Check.UseVisualStyleBackColor = true;
-            this.Outline_Check.CheckedChanged += new System.EventHandler(this.Outline_Check_CheckedChanged);
+            this.Outline_Check.CheckedChanged += new System.EventHandler(this.Outline_Page_TextChanged);
             // 
             // Project_Page
             // 
@@ -308,6 +313,7 @@
             this.Project_A3_Check.Size = new System.Drawing.Size(15, 14);
             this.Project_A3_Check.TabIndex = 6;
             this.Project_A3_Check.UseVisualStyleBackColor = true;
+            this.Project_A3_Check.CheckedChanged += new System.EventHandler(this.Project_Page_TextChanged);
             // 
             // CV_Page
             // 
@@ -317,6 +323,7 @@
             this.CV_Page.Size = new System.Drawing.Size(24, 20);
             this.CV_Page.TabIndex = 5;
             this.CV_Page.Text = "2";
+            this.CV_Page.TextChanged += new System.EventHandler(this.CV_Page_TextChanged);
             // 
             // CV_A3_Check
             // 
@@ -327,6 +334,7 @@
             this.CV_A3_Check.Size = new System.Drawing.Size(15, 14);
             this.CV_A3_Check.TabIndex = 6;
             this.CV_A3_Check.UseVisualStyleBackColor = true;
+            this.CV_A3_Check.CheckedChanged += new System.EventHandler(this.CV_Page_TextChanged);
             // 
             // CV_Check
             // 
@@ -337,6 +345,7 @@
             this.CV_Check.TabIndex = 7;
             this.CV_Check.Text = "CVs";
             this.CV_Check.UseVisualStyleBackColor = true;
+            this.CV_Check.CheckedChanged += new System.EventHandler(this.CV_Page_TextChanged);
             // 
             // TimeResource_Page
             // 
@@ -368,54 +377,6 @@
             this.TimeResource_Check.UseVisualStyleBackColor = true;
             this.TimeResource_Check.CheckedChanged += new System.EventHandler(this.TimeResource_Check_CheckedChanged);
             // 
-            // Docu1_Page
-            // 
-            this.Docu1_Page.Location = new System.Drawing.Point(136, 567);
-            this.Docu1_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Docu1_Page.Name = "Docu1_Page";
-            this.Docu1_Page.Size = new System.Drawing.Size(24, 20);
-            this.Docu1_Page.TabIndex = 5;
-            this.Docu1_Page.Text = "1";
-            // 
-            // Docu1_A3_Check
-            // 
-            this.Docu1_A3_Check.AutoSize = true;
-            this.Docu1_A3_Check.Location = new System.Drawing.Point(164, 570);
-            this.Docu1_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Docu1_A3_Check.Name = "Docu1_A3_Check";
-            this.Docu1_A3_Check.Size = new System.Drawing.Size(15, 14);
-            this.Docu1_A3_Check.TabIndex = 6;
-            this.Docu1_A3_Check.UseVisualStyleBackColor = true;
-            this.Docu1_A3_Check.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
-            // 
-            // Docu1_Check
-            // 
-            this.Docu1_Check.Location = new System.Drawing.Point(10, 566);
-            this.Docu1_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Docu1_Check.Name = "Docu1_Check";
-            this.Docu1_Check.Size = new System.Drawing.Size(14, 22);
-            this.Docu1_Check.TabIndex = 7;
-            this.Docu1_Check.UseVisualStyleBackColor = true;
-            // 
-            // Docu1_Double_Check
-            // 
-            this.Docu1_Double_Check.AutoSize = true;
-            this.Docu1_Double_Check.Location = new System.Drawing.Point(184, 570);
-            this.Docu1_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Docu1_Double_Check.Name = "Docu1_Double_Check";
-            this.Docu1_Double_Check.Size = new System.Drawing.Size(15, 14);
-            this.Docu1_Double_Check.TabIndex = 6;
-            this.Docu1_Double_Check.UseVisualStyleBackColor = true;
-            // 
-            // Docu1
-            // 
-            this.Docu1.Location = new System.Drawing.Point(29, 567);
-            this.Docu1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Docu1.Name = "Docu1";
-            this.Docu1.Size = new System.Drawing.Size(104, 20);
-            this.Docu1.TabIndex = 5;
-            this.Docu1.Text = "document name";
-            // 
             // Project_Check
             // 
             this.Project_Check.Location = new System.Drawing.Point(10, 423);
@@ -425,7 +386,7 @@
             this.Project_Check.TabIndex = 7;
             this.Project_Check.Text = "Project organisation chart and management structure";
             this.Project_Check.UseVisualStyleBackColor = true;
-            this.Project_Check.CheckedChanged += new System.EventHandler(this.Project_Check_CheckedChanged);
+            this.Project_Check.CheckedChanged += new System.EventHandler(this.Project_Page_TextChanged);
             // 
             // label11
             // 
@@ -459,15 +420,48 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.AutoSize = true;
             this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAdd.Location = new System.Drawing.Point(213, 564);
+            this.btnAdd.Location = new System.Drawing.Point(164, 558);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(23, 23);
+            this.btnAdd.Size = new System.Drawing.Size(49, 23);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(8, 563);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 15);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Add rows:";
+            // 
+            // RowsCount
+            // 
+            this.RowsCount.Location = new System.Drawing.Point(84, 561);
+            this.RowsCount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.RowsCount.Name = "RowsCount";
+            this.RowsCount.Size = new System.Drawing.Size(60, 20);
+            this.RowsCount.TabIndex = 4;
+            this.RowsCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RowsCount.ValueChanged += new System.EventHandler(this.CopyOfEnvelope_ValueChanged);
+            // 
+            // Outline_A3_Check
+            // 
+            this.Outline_A3_Check.AutoSize = true;
+            this.Outline_A3_Check.Location = new System.Drawing.Point(164, 386);
+            this.Outline_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Outline_A3_Check.Name = "Outline_A3_Check";
+            this.Outline_A3_Check.Size = new System.Drawing.Size(15, 14);
+            this.Outline_A3_Check.TabIndex = 6;
+            this.Outline_A3_Check.UseVisualStyleBackColor = true;
+            this.Outline_A3_Check.CheckedChanged += new System.EventHandler(this.Outline_Page_TextChanged);
             // 
             // TenderFormat
             // 
@@ -479,22 +473,18 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Project_Check);
             this.Controls.Add(this.TimeResource_Check);
-            this.Controls.Add(this.Docu1_Check);
             this.Controls.Add(this.CV_Check);
             this.Controls.Add(this.Outline_Check);
-            this.Controls.Add(this.Tender_Double_Check);
+            this.Controls.Add(this.NonPrice_Double_Check);
             this.Controls.Add(this.TimeResource_A3_Check);
             this.Controls.Add(this.Project_A3_Check);
-            this.Controls.Add(this.Docu1_Double_Check);
-            this.Controls.Add(this.Docu1_A3_Check);
             this.Controls.Add(this.CV_A3_Check);
             this.Controls.Add(this.Index_Double_Check);
+            this.Controls.Add(this.Outline_A3_Check);
             this.Controls.Add(this.Outline_Double_Check);
-            this.Controls.Add(this.Tender_A3_Check);
+            this.Controls.Add(this.NonPrice_A3_Check);
             this.Controls.Add(this.TimeResource_Page);
             this.Controls.Add(this.Project_Page);
-            this.Controls.Add(this.Docu1);
-            this.Controls.Add(this.Docu1_Page);
             this.Controls.Add(this.CV_Page);
             this.Controls.Add(this.Index_A3_Check);
             this.Controls.Add(this.Outline_Page);
@@ -502,6 +492,7 @@
             this.Controls.Add(this.Index_Page);
             this.Controls.Add(this.Personnel_Page);
             this.Controls.Add(this.CoverLetter_Page);
+            this.Controls.Add(this.RowsCount);
             this.Controls.Add(this.CopyOfEnvelope);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
@@ -513,12 +504,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "TenderFormat";
-            this.Size = new System.Drawing.Size(239, 660);
+            this.Size = new System.Drawing.Size(239, 605);
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RowsCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,8 +534,8 @@
         private System.Windows.Forms.CheckBox Index_A3_Check;
         private System.Windows.Forms.CheckBox Index_Double_Check;
         private System.Windows.Forms.TextBox NonPrice_Page;
-        private System.Windows.Forms.CheckBox Tender_A3_Check;
-        private System.Windows.Forms.CheckBox Tender_Double_Check;
+        private System.Windows.Forms.CheckBox NonPrice_A3_Check;
+        private System.Windows.Forms.CheckBox NonPrice_Double_Check;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Outline_Page;
         private System.Windows.Forms.CheckBox Outline_Double_Check;
@@ -556,16 +549,14 @@
         private System.Windows.Forms.TextBox TimeResource_Page;
         private System.Windows.Forms.CheckBox TimeResource_A3_Check;
         private System.Windows.Forms.CheckBox TimeResource_Check;
-        private System.Windows.Forms.TextBox Docu1_Page;
-        private System.Windows.Forms.CheckBox Docu1_A3_Check;
-        private System.Windows.Forms.CheckBox Docu1_Check;
-        private System.Windows.Forms.CheckBox Docu1_Double_Check;
-        private System.Windows.Forms.TextBox Docu1;
         private System.Windows.Forms.CheckBox Project_Check;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox Personnel_Page;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown RowsCount;
+        private System.Windows.Forms.CheckBox Outline_A3_Check;
 
     }
 }

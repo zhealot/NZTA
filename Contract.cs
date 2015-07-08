@@ -172,24 +172,59 @@ namespace NZTA_Contract_Generator
         public String CV_Page { get; set; }
         public String TimeResource_Page { get; set; }
         public String Docu1_Page { get; set; }
-        public String Docu1 { get; set; }
-        
+        public String Docu1 { get; set; }        
+
         public Boolean TimeResource_Check { get; set; }
         public Boolean Outline_Check { get; set; }
         public Boolean Project_Check { get; set; }
         public Boolean CV_Check { get; set; }
         public Boolean Index_A3_Check { get; set; }
         public Boolean Index_Double_Check { get; set; }
-        public Boolean Tender_A3_Check { get; set; }
-        public Boolean Tender_Double_Check { get; set; }
+        public Boolean NonPrice_A3_Check { get; set; }
+        public Boolean NonPrice_Double_Check { get; set; }
+        public Boolean Outline_A3_Check { get; set; }
         public Boolean Outline_Double_Check { get; set; }
         public Boolean Project_A3_Check { get; set; }
         public Boolean CV_A3_Check { get; set; }
         public Boolean TimeResource_A3_Check { get; set; }
         public Boolean Docu1_Check { get; set; }
         public Boolean Docu1_A3_Check { get; set; }
-        public Boolean Docu1_Double_Check { get; set; }
-        
+        public Boolean Docu1_Double_Check { get; set; }        
         //End of Tender Format programme
+
+        //Start of Non Price Attributes
+        public String RelevantExperience { get; set; }
+        public String TrackRecord { get; set; }
+        public String ExperienceVSRecord { get; set; }
+        public String GuidanceNote { get; set; }
+
+        public Boolean cbMeth1 { get; set; }
+
+        //End of Non Price Attributes
+
+        //Start of Supplier Selection Methods
+        public Boolean rbPQM { get; set; }
+        public Boolean rbPQMPDA { get; set; }
+        public Boolean rbLPC { get; set; }
+        public Boolean rbTP { get; set; }
+        public Boolean rbBLO { get; set; }
+
+        public Boolean rbRE_P { get; set; }
+        public Boolean rbRE_F { get; set; }
+        public Boolean rbTR_P { get; set; }
+        public Boolean rbTR_F { get; set; }
+        public Boolean rbRS_P { get; set; }
+        public Boolean rbRS_F { get; set; }
+        public Boolean rbM_P { get; set; }
+        public Boolean rbM_F{ get; set; }
+        public Boolean cbTrackRecord { get; set; }
+
+        public String tbRE { get; set; }
+        public String tbTR { get; set; }
+        public String tbRS { get; set; }
+        public String tbM { get; set; }
+        public String tbP { get; set; }
+        //End of Supplier Selection Methods
+
     }
 }

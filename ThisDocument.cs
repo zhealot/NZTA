@@ -39,7 +39,7 @@ namespace NZTA_Contract_Generator
             this.ActionsPane.Controls.Add(apc);
 
             //We want nav tree then edit form
-            this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;
+            this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;            
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)

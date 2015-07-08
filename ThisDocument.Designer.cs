@@ -167,8 +167,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl209;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl210;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl211;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl212;
@@ -294,6 +292,40 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl AlternativeTenders;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl MeetingSchedule;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl TenderFormatAppend;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcMeth01;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark test;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl272;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl273;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcRelevantExperience;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTrackRecord;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcRelevantSkills;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcMethodology;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPrice;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSupplierSelectionMethodStart;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSupplierSelectionMethodEnd;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSupplierSelectoionMethodName;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl274;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl275;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl276;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl277;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -472,7 +504,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl207.BeginInit();
             this.richTextContentControl208.BeginInit();
             this.richTextContentControl209.BeginInit();
-            this.richTextContentControl210.BeginInit();
             this.richTextContentControl211.BeginInit();
             this.richTextContentControl212.BeginInit();
             this.richTextContentControl213.BeginInit();
@@ -536,6 +567,23 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl271.BeginInit();
             this.AlternativeTenders.BeginInit();
             this.MeetingSchedule.BeginInit();
+            this.TenderFormatAppend.BeginInit();
+            this.rtcMeth01.BeginInit();
+            this.test.BeginInit();
+            this.richTextContentControl272.BeginInit();
+            this.richTextContentControl273.BeginInit();
+            this.rtcRelevantExperience.BeginInit();
+            this.rtcTrackRecord.BeginInit();
+            this.rtcRelevantSkills.BeginInit();
+            this.rtcMethodology.BeginInit();
+            this.rtcPrice.BeginInit();
+            this.rtcSupplierSelectionMethodStart.BeginInit();
+            this.rtcSupplierSelectionMethodEnd.BeginInit();
+            this.rtcSupplierSelectoionMethodName.BeginInit();
+            this.richTextContentControl274.BeginInit();
+            this.richTextContentControl275.BeginInit();
+            this.richTextContentControl276.BeginInit();
+            this.richTextContentControl277.BeginInit();
         }
         
         /// 
@@ -543,6 +591,23 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.richTextContentControl277.EndInit();
+            this.richTextContentControl276.EndInit();
+            this.richTextContentControl275.EndInit();
+            this.richTextContentControl274.EndInit();
+            this.rtcSupplierSelectoionMethodName.EndInit();
+            this.rtcSupplierSelectionMethodEnd.EndInit();
+            this.rtcSupplierSelectionMethodStart.EndInit();
+            this.rtcPrice.EndInit();
+            this.rtcMethodology.EndInit();
+            this.rtcRelevantSkills.EndInit();
+            this.rtcTrackRecord.EndInit();
+            this.rtcRelevantExperience.EndInit();
+            this.richTextContentControl273.EndInit();
+            this.richTextContentControl272.EndInit();
+            this.test.EndInit();
+            this.rtcMeth01.EndInit();
+            this.TenderFormatAppend.EndInit();
             this.MeetingSchedule.EndInit();
             this.AlternativeTenders.EndInit();
             this.richTextContentControl271.EndInit();
@@ -606,7 +671,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl213.EndInit();
             this.richTextContentControl212.EndInit();
             this.richTextContentControl211.EndInit();
-            this.richTextContentControl210.EndInit();
             this.richTextContentControl209.EndInit();
             this.richTextContentControl208.EndInit();
             this.richTextContentControl207.EndInit();
@@ -765,7 +829,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl207 = Globals.Factory.CreateRichTextContentControl(null, null, "840744964", "richTextContentControl207", this);
             this.richTextContentControl208 = Globals.Factory.CreateRichTextContentControl(null, null, "1312837409", "richTextContentControl208", this);
             this.richTextContentControl209 = Globals.Factory.CreateRichTextContentControl(null, null, "2173434664", "richTextContentControl209", this);
-            this.richTextContentControl210 = Globals.Factory.CreateRichTextContentControl(null, null, "1401248721", "richTextContentControl210", this);
             this.richTextContentControl211 = Globals.Factory.CreateRichTextContentControl(null, null, "1823993579", "richTextContentControl211", this);
             this.richTextContentControl212 = Globals.Factory.CreateRichTextContentControl(null, null, "418218952", "richTextContentControl212", this);
             this.richTextContentControl213 = Globals.Factory.CreateRichTextContentControl(null, null, "3906922201", "richTextContentControl213", this);
@@ -829,6 +892,23 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl271 = Globals.Factory.CreateRichTextContentControl(null, null, "2759396735", "richTextContentControl271", this);
             this.AlternativeTenders = Globals.Factory.CreateRichTextContentControl(null, null, "2701580115", "AlternativeTenders", this);
             this.MeetingSchedule = Globals.Factory.CreateRichTextContentControl(null, null, "2769722768", "MeetingSchedule", this);
+            this.TenderFormatAppend = Globals.Factory.CreateRichTextContentControl(null, null, "239370087", "TenderFormatAppend", this);
+            this.rtcMeth01 = Globals.Factory.CreateRichTextContentControl(null, null, "3229097034", "rtcMeth01", this);
+            this.test = Globals.Factory.CreateBookmark(null, null, "test", "test", this);
+            this.richTextContentControl272 = Globals.Factory.CreateRichTextContentControl(null, null, "3022496014", "richTextContentControl272", this);
+            this.richTextContentControl273 = Globals.Factory.CreateRichTextContentControl(null, null, "1259563725", "richTextContentControl273", this);
+            this.rtcRelevantExperience = Globals.Factory.CreateRichTextContentControl(null, null, "1640991528", "rtcRelevantExperience", this);
+            this.rtcTrackRecord = Globals.Factory.CreateRichTextContentControl(null, null, "2574537796", "rtcTrackRecord", this);
+            this.rtcRelevantSkills = Globals.Factory.CreateRichTextContentControl(null, null, "3088719279", "rtcRelevantSkills", this);
+            this.rtcMethodology = Globals.Factory.CreateRichTextContentControl(null, null, "3015476706", "rtcMethodology", this);
+            this.rtcPrice = Globals.Factory.CreateRichTextContentControl(null, null, "1963452480", "rtcPrice", this);
+            this.rtcSupplierSelectionMethodStart = Globals.Factory.CreateRichTextContentControl(null, null, "814992124", "rtcSupplierSelectionMethodStart", this);
+            this.rtcSupplierSelectionMethodEnd = Globals.Factory.CreateRichTextContentControl(null, null, "2806491998", "rtcSupplierSelectionMethodEnd", this);
+            this.rtcSupplierSelectoionMethodName = Globals.Factory.CreateRichTextContentControl(null, null, "1298791432", "rtcSupplierSelectoionMethodName", this);
+            this.richTextContentControl274 = Globals.Factory.CreateRichTextContentControl(null, null, "1956823801", "richTextContentControl274", this);
+            this.richTextContentControl275 = Globals.Factory.CreateRichTextContentControl(null, null, "624272652", "richTextContentControl275", this);
+            this.richTextContentControl276 = Globals.Factory.CreateRichTextContentControl(null, null, "3457580441", "richTextContentControl276", this);
+            this.richTextContentControl277 = Globals.Factory.CreateRichTextContentControl(null, null, "657809198", "richTextContentControl277", this);
         }
         
         /// 
@@ -1138,10 +1218,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl209.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl210
-            // 
-            this.richTextContentControl210.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl211
             // 
             this.richTextContentControl211.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1394,6 +1470,74 @@ namespace NZTA_Contract_Generator {
             // 
             this.MeetingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // TenderFormatAppend
+            // 
+            this.TenderFormatAppend.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcMeth01
+            // 
+            this.rtcMeth01.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // test
+            // 
+            this.test.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl272
+            // 
+            this.richTextContentControl272.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl273
+            // 
+            this.richTextContentControl273.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcRelevantExperience
+            // 
+            this.rtcRelevantExperience.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcTrackRecord
+            // 
+            this.rtcTrackRecord.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcRelevantSkills
+            // 
+            this.rtcRelevantSkills.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcMethodology
+            // 
+            this.rtcMethodology.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPrice
+            // 
+            this.rtcPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSupplierSelectionMethodStart
+            // 
+            this.rtcSupplierSelectionMethodStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSupplierSelectionMethodEnd
+            // 
+            this.rtcSupplierSelectionMethodEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSupplierSelectoionMethodName
+            // 
+            this.rtcSupplierSelectoionMethodName.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl274
+            // 
+            this.richTextContentControl274.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl275
+            // 
+            this.richTextContentControl275.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl276
+            // 
+            this.richTextContentControl276.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl277
+            // 
+            this.richTextContentControl277.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1410,6 +1554,23 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.richTextContentControl277.Dispose();
+            this.richTextContentControl276.Dispose();
+            this.richTextContentControl275.Dispose();
+            this.richTextContentControl274.Dispose();
+            this.rtcSupplierSelectoionMethodName.Dispose();
+            this.rtcSupplierSelectionMethodEnd.Dispose();
+            this.rtcSupplierSelectionMethodStart.Dispose();
+            this.rtcPrice.Dispose();
+            this.rtcMethodology.Dispose();
+            this.rtcRelevantSkills.Dispose();
+            this.rtcTrackRecord.Dispose();
+            this.rtcRelevantExperience.Dispose();
+            this.richTextContentControl273.Dispose();
+            this.richTextContentControl272.Dispose();
+            this.test.Dispose();
+            this.rtcMeth01.Dispose();
+            this.TenderFormatAppend.Dispose();
             this.MeetingSchedule.Dispose();
             this.AlternativeTenders.Dispose();
             this.richTextContentControl271.Dispose();
@@ -1473,7 +1634,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl213.Dispose();
             this.richTextContentControl212.Dispose();
             this.richTextContentControl211.Dispose();
-            this.richTextContentControl210.Dispose();
             this.richTextContentControl209.Dispose();
             this.richTextContentControl208.Dispose();
             this.richTextContentControl207.Dispose();
