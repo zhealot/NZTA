@@ -9,6 +9,7 @@ using Microsoft.Office.Tools.Word;
 using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Office = Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
+using NZTA_Contract_Generator.ActionPaneControls.SectionC;
 
 namespace NZTA_Contract_Generator
 {
@@ -62,10 +63,9 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            //this.richTextContentControl43.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl43_Entering);
-            //this.richTextContentControl47.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl47_Entering);
-            //this.richTextContentControl104.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl104_Entering);
-            //this.richTextContentControl118.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl118_Entering);
+            this.richTextContentControl262.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl262_Entering);
+            this.rtcSupplierSelectoionMethodName.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcSupplierSelectoionMethodName_Entering);
+            this.rtcContractPricing.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcContractPricing_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -73,15 +73,6 @@ namespace NZTA_Contract_Generator
 
         #endregion
 
-        private void richTextContentControl104_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void richTextContentControl118_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
 
         private void richTextContentControl43_Entering(object sender, ContentControlEnteringEventArgs e)
         {
@@ -93,5 +84,33 @@ namespace NZTA_Contract_Generator
 
         }
 
+        private void rtcSupplierSelectoionMethodName_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
+
+        private void richTextContentControl262_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
+
+        private void rtcContractPricing_Exiting(object sender, ContentControlExitingEventArgs e)
+        {
+            //###how to access control in another form ("ContractPricing")?
+            
+
+
+            var rg = rtcContractPricing.Range;
+            rg.Find.ClearFormatting();
+            rg.Find.Text = "Sub-total Item";
+            rg.Find.Execute(MatchWholeWord: true);
+            while (rg.Find.Found && rg.Start <= rtcContractPricing.Range.End && rg.End >= rtcContractPricing.Range.Start)
+            {
+                
+                rtcContractPricing.Range.Tables[1].Cell(rg.Cells[1].RowIndex, rg.Cells[1].ColumnIndex + 1);
+                rg.Find.Execute(MatchWholeWord:true);
+
+            }
+        }
     }
 }

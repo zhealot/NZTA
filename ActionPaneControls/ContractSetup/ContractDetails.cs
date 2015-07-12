@@ -18,7 +18,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             //Load any data
 
             ignoreChange = true;
-
+            
             //Address combobox
             Address_1.DataSource = new BindingSource(Constants.Location.data, null);
             Address_1.DisplayMember = "Key";
@@ -48,12 +48,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
-
-            //###add event handler
-            //Address_2.SelectedIndexChanged += Address_2_Or_Company_Name_2_Changed;
-            //Company_Name_2.TextChanged += Address_2_Or_Company_Name_2_Changed;
         }
-        
+        public string ContractName { get { return Contract_Name.Text; } set { Contract_Name.Text = value; } }        
         private void Contract_Name_TextChanged(object sender, EventArgs e)
         {
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
@@ -80,17 +76,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        //handles NZTA or company selection changes, set new name and address for Section B 1.6.4
-        //### substitute Section B 1.6.4 text with Address_1 or key-ined data
-        private void Address_2_Or_Company_Name_2_Changed(object sender, EventArgs e)
-        {
-            if (sender.Equals(Address_1) && ((ComboBox)sender).SelectedItem != null && !ignoreChange)
-            {
-                KeyValuePair<string, string> selectedEntry = (KeyValuePair<string, string>)((ComboBox)sender).SelectedItem;
-                Util.ContentControls.setText("NZTA_Or_Company", selectedEntry.Key);
-            }
-
-        }
         private void geoNo_CheckedChanged(object sender, EventArgs e)
         {
             scheduledItems.Enabled = false;
@@ -122,6 +107,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Nominated_Email_TextChanged(object sender, EventArgs e)
         {
+            contract.Nominated_Email = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
@@ -377,21 +363,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 MessageBox.Show("Invalid Email address");
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ContractDetails_Load(object sender, EventArgs e)
         {
 
@@ -404,6 +375,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void MadeDate_ValueChanged(object sender, EventArgs e)
         {
+            contract.MadeDate = ((DateTimePicker)sender).Value.ToString("O");
             if (MadeDate.Value != null && !ignoreChange)
             {
                 Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
@@ -415,11 +387,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Consultant_Name_TextChanged(object sender, EventArgs e)
         {
+            contract.Consultant_Name = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Consultant_Address_TextChanged(object sender, EventArgs e)
         {
+            contract.Consultant_Address = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+
+        private void Set_No_TextChanged(object sender, EventArgs e)
+        {
+            contract.Set_No = ((TextBox)sender).Text; ;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
     }

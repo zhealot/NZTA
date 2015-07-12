@@ -60,15 +60,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.ET5_Name = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
-            this.City = new System.Windows.Forms.Label();
-            this.InterView_City = new System.Windows.Forms.TextBox();
             this.InterView_Notice = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.InterviewCity = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.InterviewNotice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.InterView_Notice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -345,89 +344,64 @@
             this.label16.TabIndex = 30;
             this.label16.Text = "Name 5:";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 540);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(175, 13);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Will you be interviewing Tenderers?";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(224, 535);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "?";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(135, 556);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(43, 17);
-            this.radioButton7.TabIndex = 45;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Yes";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 556);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(39, 17);
-            this.radioButton8.TabIndex = 44;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "No";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 580);
+            this.label18.Location = new System.Drawing.Point(3, 542);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 13);
+            this.label18.Size = new System.Drawing.Size(104, 13);
             this.label18.TabIndex = 46;
-            this.label18.Text = "Notice period (weeks):";
-            // 
-            // City
-            // 
-            this.City.AutoSize = true;
-            this.City.Location = new System.Drawing.Point(3, 604);
-            this.City.Name = "City";
-            this.City.Size = new System.Drawing.Size(27, 13);
-            this.City.TabIndex = 48;
-            this.City.Text = "City:";
-            // 
-            // InterView_City
-            // 
-            this.InterView_City.Location = new System.Drawing.Point(134, 601);
-            this.InterView_City.Name = "InterView_City";
-            this.InterView_City.Size = new System.Drawing.Size(143, 20);
-            this.InterView_City.TabIndex = 49;
-            this.InterView_City.TextChanged += new System.EventHandler(this.InterView_City_TextChanged);
+            this.label18.Text = "Audit Period (weeks)";
             // 
             // InterView_Notice
             // 
-            this.InterView_Notice.Location = new System.Drawing.Point(168, 578);
+            this.InterView_Notice.Location = new System.Drawing.Point(167, 540);
             this.InterView_Notice.Name = "InterView_Notice";
             this.InterView_Notice.Size = new System.Drawing.Size(109, 20);
             this.InterView_Notice.TabIndex = 50;
-            this.InterView_Notice.ValueChanged += new System.EventHandler(this.InterView_Notice_ValueChanged);
+            this.InterView_Notice.ValueChanged += new System.EventHandler(this.Audit_Period_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 569);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 13);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Interview City";
+            // 
+            // InterviewCity
+            // 
+            this.InterviewCity.Location = new System.Drawing.Point(139, 566);
+            this.InterviewCity.Name = "InterviewCity";
+            this.InterviewCity.Size = new System.Drawing.Size(137, 20);
+            this.InterviewCity.TabIndex = 35;
+            this.InterviewCity.TextChanged += new System.EventHandler(this.InterviewCity_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 594);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(124, 13);
+            this.label19.TabIndex = 46;
+            this.label19.Text = "Interview Notice (weeks)";
+            // 
+            // InterviewNotice
+            // 
+            this.InterviewNotice.Location = new System.Drawing.Point(167, 592);
+            this.InterviewNotice.Name = "InterviewNotice";
+            this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
+            this.InterviewNotice.TabIndex = 50;
+            this.InterviewNotice.ValueChanged += new System.EventHandler(this.InterviewNotice_ValueChanged);
             // 
             // TenderEvaluationProcedure
             // 
+            this.Controls.Add(this.InterviewNotice);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.InterView_Notice);
-            this.Controls.Add(this.InterView_City);
-            this.Controls.Add(this.City);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.radioButton7);
-            this.Controls.Add(this.radioButton8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.InterviewCity);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.ET5_Company);
             this.Controls.Add(this.label14);
@@ -462,8 +436,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TenderEvaluationProcedure";
-            this.Size = new System.Drawing.Size(280, 640);
+            this.Size = new System.Drawing.Size(280, 633);
             ((System.ComponentModel.ISupportInitialize)(this.InterView_Notice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,13 +478,11 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox ET5_Name;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label City;
-        private System.Windows.Forms.TextBox InterView_City;
         private System.Windows.Forms.NumericUpDown InterView_Notice;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox InterviewCity;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown InterviewNotice;
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Microsoft.Office.Interop.Word; 
 
@@ -133,6 +129,26 @@ namespace NZTA_Contract_Generator.Util
             return false;
         }
 
+        public static bool BoldRange(ThisDocument dc, Range rg, string txt, string before)
+        {
+            if (string.IsNullOrEmpty(txt)) return false;            
+            rg.Text = txt;
+            object oStart = rg.Start;
+            object oEnd = rg.Start + (txt.IndexOf(before) != -1 ? txt.IndexOf(before) : 0);
+            var tmp = dc.Range(ref oStart, ref oEnd);
+            tmp.Bold = 1;
+            return true;
+        }
+
+        public static bool IsPercentage(string s)
+        {
+            Decimal d;
+            if (Decimal.TryParse(s, out d) && d >= 0 && d <= 100)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 
 }

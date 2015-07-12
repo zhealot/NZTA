@@ -1,5 +1,7 @@
 ﻿namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
+    [System.ComponentModel.ToolboxItemAttribute(false)]
+    //[System.ComponentModel.ToolboxItem(false)]
     partial class AdditionalServicesSchedule
     {
         /// <summary> 

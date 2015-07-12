@@ -34,6 +34,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (!rbBLO.Checked && !rbLPC.Checked && !rbTP.Checked && !rbPQM.Checked && !rbPQMPDA.Checked)
+            {
+                Util.Help.guidanceNote("Please select a Supplier Selection Method");
+                return;
+            }
             Decimal RE, TR, RS, M, P;
             var Docu = NZTA_Contract_Generator.Globals.ThisDocument;
             //Lowest Price Conforming
@@ -54,167 +59,100 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 Util.ContentControls.setText("RelevantSkillsWeighting", "N/A for LPC");
                 Util.ContentControls.setText("MethodologyWeighting", "N/A for LPC");
             }
+            //PQM, PQM+PDA, TP and BLO
             else
             {
-                //PQM Simple
-                if (rbPQM.Checked)
+                if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M) && Decimal.TryParse(tbP.Text, out P))
                 {
-                    if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M) && Decimal.TryParse(tbP.Text, out P))
+                    if (RE + TR + RS + M + P == 100)
                     {
-                        if (RE + TR + RS + M + P == 100)
+                        if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
                         {
-                            if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10 && P >= 10)
+                            if (rbPQM.Checked || rbPQMPDA.Checked) //PQM and PQM+PDA
                             {
-                                if (P >= 20 && P <= 30)
+                                if (P >= 20 && P <= 30) //check price
                                 {
-                                    Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple";
-                                    Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “PQM Simple Method”, of the Transport Agency’s Contract Procedures Manual (SM021)." +
-                                                                                Environment.NewLine + "Weightings will be given to each of the attributes as follows:";
-                                    Docu.rtcRelevantExperience.Text = RE.ToString() + "%";                                    
-                                    Docu.rtcTrackRecord.Text = (cbTrackRecord.Checked == true) ? TR.ToString() + "%" : "N/A";                                    
-                                    Docu.rtcRelevantSkills.Text = RS.ToString() + "%";                                    
-                                    Docu.rtcMethodology.Text = M.ToString() + "%";                                    
                                     Docu.rtcPrice.Text = P.ToString() + "%";
-                                    Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
+                                    if (rbPQM.Checked)
+                                    {
+                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple";
+                                        Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “PQM Simple Method”, of the Transport Agency’s Contract Procedures Manual (SM021)." +
+                                                                                    Environment.NewLine + "Weightings will be given to each of the attributes as follows:";
+                                        Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
+                                    }
+                                    if (rbPQMPDA.Checked)
+                                    {
+                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple + Price Deviation Adjustment (PDA)";
+                                        Docu.rtcSupplierSelectionMethodStart.Text = "In addition to the PQM Simple evaluation method of the NZTA Contract Procedures Manual (SM021), the submitted tender price will have a Price Deviation Adjustment added.  This adjustment is calculated after all submitted price envelopes have been opened." +
+                                                                                    Environment.NewLine + "If the tendered price is more than 90% of the median tender price, (when only two tenders are received the Base Estimate is included in the median price calculation), no adjustment will be made." +
+                                                                                    Environment.NewLine + "If the tender price is less than 90% of the median tender price, the Price Deviation Adjustment is calculated by multiplying the difference between the tendered price and 90% of the median tender price by 1.5 to give a positive adjustment figure, which is then added to the submitted tendered price. E.g.  If 90% of the median tender price is $100,000.00 and a submitted tender price is $80,000.00 the PDA = ($100,000.00 - $80,000.00) x 1.5 = $30,000.00." +
+                                                                                    Environment.NewLine + "Weightings will be given to each of the attributes as follows:";
+                                        Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
+                                    }
                                 }
-                                else
+                                ////for PQM and PQM+PDA, check Price 
+                                else 
                                 {
                                     tbP.Focus();
-                                    Util.Help.guidanceNote("Price must not be less than 20% and must not exceed 30%");
+                                    Util.Help.guidanceNote("Price must not be less than 20% and must not exceed 30% without specific approval");
+                                    return;
                                 }
-                            }
-                            else
-                            {
-                                Util.Help.guidanceNote("No value less then 10");
-                            }
-                        }
-                        else
-                        {
-                            Util.Help.guidanceNote("The total must add up to 100%");
-                        }
-                    }
-                    else
-                    {
-                        Util.Help.guidanceNote("Please enter number");
-                    }
-                }
-                //PQM Simple + Price Deviation Adjustment (PDA)
-                if (rbPQMPDA.Checked)
-                {
-                    if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M) && Decimal.TryParse(tbP.Text, out P))
-                    {
-                        if (RE + TR + RS + M + P == 100)
-                        {
-                            if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10 && P >= 10)
-                            {
-                                if (P >= 20 && P <= 30)
-                                {
-                                    Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple + Price Deviation Adjustment (PDA)";
-                                    Docu.rtcSupplierSelectionMethodStart.Text = "In addition to the PQM Simple evaluation method of the NZTA Contract Procedures Manual (SM021), the submitted tender price will have a Price Deviation Adjustment added.  This adjustment is calculated after all submitted price envelopes have been opened." +
-                                                                                Environment.NewLine + "If the tendered price is more than 90% of the median tender price, (when only two tenders are received the Base Estimate is included in the median price calculation), no adjustment will be made." +
-                                                                                Environment.NewLine + "If the tender price is less than 90% of the median tender price, the Price Deviation Adjustment is calculated by multiplying the difference between the tendered price and 90% of the median tender price by 1.5 to give a positive adjustment figure, which is then added to the submitted tendered price. E.g.  If 90% of the median tender price is $100,000.00 and a submitted tender price is $80,000.00 the PDA = ($100,000.00 - $80,000.00) x 1.5 = $30,000.00." +
-                                                                                Environment.NewLine + "Weightings will be given to each of the attributes as follows:";
-                                    Docu.rtcRelevantExperience.Text = RE.ToString() + "%";
-                                    Docu.rtcTrackRecord.Text = (cbTrackRecord.Checked == true) ? TR.ToString() + "%" : "N/A";
-                                    Docu.rtcRelevantSkills.Text = RS.ToString() + "%";
-                                    Docu.rtcMethodology.Text = M.ToString() + "%";
-                                    Docu.rtcPrice.Text = P.ToString() + "%";
-                                    Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
-                                }
-                                else
-                                {
-                                    tbP.Focus();
-                                    Util.Help.guidanceNote("Price must not be less than 20% and must not exceed 30%");
-                                }
-                            }
-                            else
-                            {
-                                Util.Help.guidanceNote("No value less then 10");
-                            }
-                        }
-                        else
-                        {
-                            Util.Help.guidanceNote("The total must add up to 100%");
-                        }
-                    }
-                    else
-                    {
-                        Util.Help.guidanceNote("Please enter number");
-                    }
-                }
-                //Target Price
-                if (rbTP.Checked)
-                {
-                    if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M))
-                    {
-                        if (RE + TR + RS + M == 100)
-                        {
-                            if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
+                            }                            
+                            //Target Price
+                            if (rbTP.Checked)   
                             {
                                 Docu.rtcSupplierSelectoionMethodName.Text = "Target Price";
                                 Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “Target Price Method”, of the Transport Agency’s Contract Procedures Manual (SM021)." +
                                                                             Environment.NewLine + "Weightings will be given to each of the non-price attributes as follows:";
-                                Docu.rtcRelevantExperience.Text = RE.ToString() + "%";
-                                Docu.rtcTrackRecord.Text = (cbTrackRecord.Checked == true) ? TR.ToString() + "%" : "N/A";
-                                Docu.rtcRelevantSkills.Text = RS.ToString() + "%";
-                                Docu.rtcMethodology.Text = M.ToString() + "%";
-                                Docu.rtcPrice.Text = "N/A";
                                 Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
+                                Docu.rtcPrice.Text = "N/A";
                             }
-                            else
-                            {
-                                Util.Help.guidanceNote("No value less then 10");
-                            }
-                        }
-                        else
-                        {
-                            Util.Help.guidanceNote("The total must add up to 100%");
-                        }
-                    }
-                    else
-                    {
-                        Util.Help.guidanceNote("Please enter number");
-                    }
-                }
-                //Brook's Law Option
-                if (rbBLO.Checked)
-                {
-                    if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M))
-                    {
-                        if (RE + TR + RS + M == 100)
-                        {
-                            if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
+                            //Brook's Law Opton
+                            if (rbBLO.Checked)  
                             {
                                 Docu.rtcSupplierSelectoionMethodName.Text = "Brook's Law Option";
                                 Docu.rtcSupplierSelectionMethodStart.Text = "1.1.12	Tenders will be evaluated in accordance with this document and the “Brook’s Law Method” of Transport Agency’s Contract Procedures Manual (SM021)." +
                                                                             Environment.NewLine + "Weightings will be given to each of the non-price attributes as follows:";
-                                Docu.rtcRelevantExperience.Text = RE.ToString() + "%";
-                                Docu.rtcTrackRecord.Text = (cbTrackRecord.Checked == true) ? TR.ToString() + "%" : "N/A";
-                                Docu.rtcRelevantSkills.Text = RS.ToString() + "%";
-                                Docu.rtcMethodology.Text = M.ToString() + "%";
-                                Docu.rtcPrice.Text = "N/A";
                                 Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
+                                Docu.rtcPrice.Text = "N/A";
                             }
-                            else
-                            {
-                                Util.Help.guidanceNote("No value less then 10");
-                            }
+                            //update Supplier Selection Method session
+                            Docu.rtcRelevantExperience.Text = RE.ToString() + "%";
+                            Docu.rtcTrackRecord.Text = (cbTrackRecord.Checked == true) ? TR.ToString() + "%" : "N/A";
+                            Docu.rtcRelevantSkills.Text = RS.ToString() + "%";
+                            Docu.rtcMethodology.Text = M.ToString() + "%";                            
+                            //write back
+                            contract.tbM = M.ToString();
+                            contract.tbP = P.ToString();
+                            contract.tbRE = RE.ToString();
+                            contract.tbRS = RS.ToString();
+                            contract.tbTR = TR.ToString();
+                            //set text for "5. Tender Evaluation Forms"
+                            Util.ContentControls.setText("RelevantExperienceWeighting", Docu.rtcRelevantExperience.Text);
+                            Util.ContentControls.setText("TrackRecordWeighting", Docu.rtcTrackRecord.Text);
+                            Util.ContentControls.setText("RelevantSkillsWeighting", Docu.rtcRelevantSkills.Text);
+                            Util.ContentControls.setText("MethodologyWeighting", Docu.rtcMethodology.Text);
                         }
+                        //weighting <10%
                         else
                         {
-                            Util.Help.guidanceNote("The total must add up to 100%");
+                            Util.Help.guidanceNote("Weighting applied must not less then 10%");
+                            return;
                         }
                     }
+                    //add up not 100%
                     else
                     {
-                        Util.Help.guidanceNote("Please enter number");
+                        Util.Help.guidanceNote("The total must add up to 100%");
+                        return;
                     }
                 }
-                //set text for 5. Tender Evaluation Forms
-                Util.ContentControls.setText("RelevantExperienceWeighting", Docu.rtcRelevantExperience.Text);
-                Util.ContentControls.setText("TrackRecordWeighting", Docu.rtcTrackRecord.Text);
-                Util.ContentControls.setText("RelevantSkillsWeighting", Docu.rtcRelevantSkills.Text);
-                Util.ContentControls.setText("MethodologyWeighting", Docu.rtcMethodology.Text);
+                //input not number
+                else 
+                {
+                    Util.Help.guidanceNote("Please enter number");
+                    return;
+                }
             }            
         }
 
@@ -252,7 +190,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void rbBLO_CheckedChanged(object sender, EventArgs e)
         {
-            contract.rbBLO = !rbBLO.Checked;
+            contract.rbBLO = rbBLO.Checked;
             lblP.Enabled = !rbBLO.Checked;
             tbP.Enabled = !rbBLO.Checked;
         }              

@@ -1,5 +1,6 @@
 ﻿namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
+    [System.ComponentModel.ToolboxItemAttribute(false)]
     partial class TenderFormat
     {
         /// <summary> 
@@ -445,11 +446,6 @@
             this.RowsCount.Name = "RowsCount";
             this.RowsCount.Size = new System.Drawing.Size(60, 20);
             this.RowsCount.TabIndex = 4;
-            this.RowsCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.RowsCount.ValueChanged += new System.EventHandler(this.CopyOfEnvelope_ValueChanged);
             // 
             // Outline_A3_Check

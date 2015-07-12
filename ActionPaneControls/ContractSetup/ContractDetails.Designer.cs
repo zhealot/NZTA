@@ -128,23 +128,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label45 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -1144,23 +1132,11 @@
             // 
             this.panel1.Controls.Add(this.label45);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox15);
-            this.panel1.Controls.Add(this.textBox13);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox14);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox10);
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.checkBox11);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.checkBox10);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox9);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.checkBox8);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.checkBox7);
             this.panel1.Controls.Add(this.checkBox6);
@@ -1174,7 +1150,7 @@
             this.panel1.Controls.Add(this.label42);
             this.panel1.Location = new System.Drawing.Point(4, 1733);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 650);
+            this.panel1.Size = new System.Drawing.Size(346, 528);
             this.panel1.TabIndex = 95;
             // 
             // label45
@@ -1194,62 +1170,6 @@
             this.textBox3.TabIndex = 106;
             this.textBox3.Text = "PDF";
             // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(23, 609);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(164, 20);
-            this.textBox15.TabIndex = 104;
-            this.textBox15.Text = "enter document name";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(23, 578);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(164, 20);
-            this.textBox13.TabIndex = 103;
-            this.textBox13.Text = "enter document name";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(23, 547);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(164, 20);
-            this.textBox11.TabIndex = 102;
-            this.textBox11.Text = "enter document name";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(206, 609);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(62, 20);
-            this.textBox14.TabIndex = 101;
-            this.textBox14.Text = "PDF";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(23, 516);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(164, 20);
-            this.textBox9.TabIndex = 100;
-            this.textBox9.Text = "enter document name";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(206, 578);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(62, 20);
-            this.textBox12.TabIndex = 99;
-            this.textBox12.Text = "PDF";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(206, 547);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(62, 20);
-            this.textBox10.TabIndex = 98;
-            this.textBox10.Text = "PDF";
-            // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(23, 485);
@@ -1257,14 +1177,6 @@
             this.textBox7.Size = new System.Drawing.Size(164, 20);
             this.textBox7.TabIndex = 97;
             this.textBox7.Text = "enter document name";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(206, 516);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(62, 20);
-            this.textBox8.TabIndex = 96;
-            this.textBox8.Text = "PDF";
             // 
             // textBox6
             // 
@@ -1274,14 +1186,6 @@
             this.textBox6.TabIndex = 95;
             this.textBox6.Text = "PDF";
             // 
-            // checkBox11
-            // 
-            this.checkBox11.Location = new System.Drawing.Point(2, 603);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(19, 34);
-            this.checkBox11.TabIndex = 89;
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(206, 445);
@@ -1289,14 +1193,6 @@
             this.textBox5.Size = new System.Drawing.Size(62, 20);
             this.textBox5.TabIndex = 105;
             this.textBox5.Text = "PDF";
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.Location = new System.Drawing.Point(2, 572);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(19, 34);
-            this.checkBox10.TabIndex = 90;
-            this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -1306,14 +1202,6 @@
             this.textBox1.TabIndex = 94;
             this.textBox1.Text = "PDF";
             // 
-            // checkBox9
-            // 
-            this.checkBox9.Location = new System.Drawing.Point(2, 541);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(19, 34);
-            this.checkBox9.TabIndex = 91;
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(206, 374);
@@ -1321,14 +1209,6 @@
             this.textBox4.Size = new System.Drawing.Size(62, 20);
             this.textBox4.TabIndex = 93;
             this.textBox4.Text = "PDF";
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.Location = new System.Drawing.Point(2, 510);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(19, 34);
-            this.checkBox8.TabIndex = 88;
-            this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -1464,6 +1344,7 @@
             this.Set_No.Name = "Set_No";
             this.Set_No.Size = new System.Drawing.Size(174, 20);
             this.Set_No.TabIndex = 53;
+            this.Set_No.TextChanged += new System.EventHandler(this.Set_No_TextChanged);
             // 
             // label53
             // 
@@ -1540,7 +1421,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(381, 2053);
+            this.Size = new System.Drawing.Size(326, 2015);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1573,7 +1454,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Contract_Name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -1672,23 +1552,11 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox6;
@@ -1711,6 +1579,7 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.DateTimePicker MadeDate;
         private System.Windows.Forms.Label label47;
+        public System.Windows.Forms.TextBox Contract_Name;
 
     }
 }

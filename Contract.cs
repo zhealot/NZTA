@@ -226,5 +226,32 @@ namespace NZTA_Contract_Generator
         public String tbP { get; set; }
         //End of Supplier Selection Methods
 
+        //Start of Tender Evaluation Procedure
+        public String Audit_Period { get; set; }
+        public String InterviewCity { get; set; }
+        public String InterviewNotice { get; set; }
+        //End of Tender Evaluation Procedure
+
+        //Start of Payment Schedule
+        public String CostIndex { get; set; }
+        public String ConsultantsProjectQualityPlan { get; set; }
+        public String BaselineProgrramme { get; set; }
+        public String HealthSafetyManagementPlan { get; set; }
+        public String CommunityEngagementPlan { get; set; }
+        public String ActivityRisk { get; set; }
+        public String ProgrammeBusinessCase { get; set; }
+        public String TransportTrafficModel { get; set; }
+        public String IndicativeBusinessCase { get; set; }
+        public String TransportTrafficModel2 { get; set; }
+        public String DetailedBusinessCase { get; set; }
+        public String AssessmentReport { get; set; }
+        public String GeotechnicalInterpretiveReport { get; set; }
+        public String General { get; set; }
+        public String AssetOwnersManual { get; set; }
+        public String PropertyRequirements { get; set; }
+        
+
+        //End of Payment Schedule
+
     }
 }
