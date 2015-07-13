@@ -44,10 +44,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cbMeth1 = new System.Windows.Forms.CheckBox();
             this.GuidanceNote = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbMeths = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.RelevantExperience)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackRecord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienceVSRecord)).BeginInit();
@@ -194,57 +192,31 @@
             this.GuidanceNote.Text = "Project Organisational Structure";
             this.GuidanceNote.TextChanged += new System.EventHandler(this.GuidanceNote_TextChanged);
             // 
-            // checkBox1
+            // button1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(8, 510);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.cbMeth1_CheckedChanged);
+            this.button1.Location = new System.Drawing.Point(193, 454);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // lbMeths
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 509);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Consultants Programme";
-            this.textBox1.TextChanged += new System.EventHandler(this.GuidanceNote_TextChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(8, 536);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.cbMeth1_CheckedChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(29, 535);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(301, 20);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "Knowledge of Contract Area and Factors Affecting the Project";
-            this.textBox2.TextChanged += new System.EventHandler(this.GuidanceNote_TextChanged);
+            this.lbMeths.FormattingEnabled = true;
+            this.lbMeths.Location = new System.Drawing.Point(8, 531);
+            this.lbMeths.Name = "lbMeths";
+            this.lbMeths.Size = new System.Drawing.Size(260, 329);
+            this.lbMeths.TabIndex = 13;
             // 
             // NonPriceAttributes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.lbMeths);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.GuidanceNote);
             this.Controls.Add(this.cbMeth1);
             this.Controls.Add(this.ExperienceVSRecord);
@@ -288,9 +260,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox cbMeth1;
         private System.Windows.Forms.TextBox GuidanceNote;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox lbMeths;
     }
 }

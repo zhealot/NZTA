@@ -12,9 +12,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
     public partial class ContractPricing : UserControl
     {
+        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
         public ContractPricing()
         {
             InitializeComponent();
+            //Load saved state. Defaults set in state...
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         private void CP_Total_TextChanged(object sender, EventArgs e)

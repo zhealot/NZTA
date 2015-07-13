@@ -12,9 +12,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
     public partial class AdditionalServicesSchedule : UserControl
     {
+        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
         public AdditionalServicesSchedule()
         {
             InitializeComponent();
+            //Load saved state. Defaults set in state...
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         private void ASS_TLPD_Qty_TextChanged(object sender, EventArgs e)

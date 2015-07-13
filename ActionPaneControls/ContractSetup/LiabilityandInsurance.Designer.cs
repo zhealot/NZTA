@@ -34,11 +34,11 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MaximumLiability = new System.Windows.Forms.TextBox();
+            this.DurationOfLiability = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PublicLiabilityInsurance = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -99,19 +99,21 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "The maximum amount payable for Limitation of Liability shall be:";
             // 
-            // textBox1
+            // MaximumLiability
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 20);
-            this.textBox1.TabIndex = 8;
+            this.MaximumLiability.Location = new System.Drawing.Point(6, 270);
+            this.MaximumLiability.Name = "MaximumLiability";
+            this.MaximumLiability.Size = new System.Drawing.Size(225, 20);
+            this.MaximumLiability.TabIndex = 8;
+            this.MaximumLiability.TextChanged += new System.EventHandler(this.MaximumLiability_TextChanged);
             // 
-            // textBox2
+            // DurationOfLiability
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 328);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 20);
-            this.textBox2.TabIndex = 10;
+            this.DurationOfLiability.Location = new System.Drawing.Point(6, 328);
+            this.DurationOfLiability.Name = "DurationOfLiability";
+            this.DurationOfLiability.Size = new System.Drawing.Size(225, 20);
+            this.DurationOfLiability.TabIndex = 10;
+            this.DurationOfLiability.TextChanged += new System.EventHandler(this.DurationOfLiability_TextChanged);
             // 
             // label4
             // 
@@ -130,12 +132,13 @@
             this.label5.Text = "Guidance Note: As per approval e.g. 6 years from the date on which the Servies we" +
     "re completed OR 6 years from the issue of Defects Liability Certificate";
             // 
-            // textBox3
+            // PublicLiabilityInsurance
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 440);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 20);
-            this.textBox3.TabIndex = 12;
+            this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 440);
+            this.PublicLiabilityInsurance.Name = "PublicLiabilityInsurance";
+            this.PublicLiabilityInsurance.Size = new System.Drawing.Size(225, 20);
+            this.PublicLiabilityInsurance.TabIndex = 12;
+            this.PublicLiabilityInsurance.TextChanged += new System.EventHandler(this.PublicLiabilityInsurance_TextChanged);
             // 
             // label6
             // 
@@ -149,11 +152,11 @@
             // LiabilityandInsurance
             // 
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PublicLiabilityInsurance);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DurationOfLiability);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MaximumLiability);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
@@ -175,11 +178,11 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox MaximumLiability;
+        private System.Windows.Forms.TextBox DurationOfLiability;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PublicLiabilityInsurance;
         private System.Windows.Forms.Label label6;
     }
 }

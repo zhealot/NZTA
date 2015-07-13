@@ -197,7 +197,7 @@ namespace NZTA_Contract_Generator
         public String TrackRecord { get; set; }
         public String ExperienceVSRecord { get; set; }
         public String GuidanceNote { get; set; }
-
+        public String tbShow { get; set; }
         public Boolean cbMeth1 { get; set; }
 
         //End of Non Price Attributes
@@ -227,6 +227,21 @@ namespace NZTA_Contract_Generator
         //End of Supplier Selection Methods
 
         //Start of Tender Evaluation Procedure
+        public String EvaluationTeamLeader { get; set; }
+        public String ETL_Position { get; set; }
+        public String ETL_Company { get; set; }
+        public String ET2_Name { get; set; }
+        public String ET2_Position { get; set; }
+        public String ET2_Company { get; set; }
+        public String ET3_Name { get; set; }
+        public String ET3_Position { get; set; }
+        public String ET3_Company { get; set; }
+        public String ET4_Name { get; set; }
+        public String ET4_Position { get; set; }
+        public String ET4_Company { get; set; }
+        public String ET5_Name { get; set; }
+        public String ET5_Position { get; set; }
+        public String ET5_Company { get; set; }
         public String Audit_Period { get; set; }
         public String InterviewCity { get; set; }
         public String InterviewNotice { get; set; }
@@ -249,9 +264,14 @@ namespace NZTA_Contract_Generator
         public String General { get; set; }
         public String AssetOwnersManual { get; set; }
         public String PropertyRequirements { get; set; }
-        
-
         //End of Payment Schedule
+
+        //Start of PublicLiabilityInsurance
+        public String PublicLiabilityInsurance { get; set; }
+        public String MaximumLiability { get; set; }
+        public String DurationOfLiability { get; set; }
+
+        //End of PublicLiabilityInsurance
 
     }
 }

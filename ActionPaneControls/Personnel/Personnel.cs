@@ -12,10 +12,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
 {
     public partial class Personnel : UserControl
     {
-        Contract contract = new Contract();
+        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
         public Personnel()
         {
             InitializeComponent();
+            //Load saved state. Defaults set in state...
+            Util.SavedState.setControlsToState(contract, Controls);
         }
     }
 }

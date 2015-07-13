@@ -12,7 +12,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     public partial class TenderFormat : UserControl
     {
-        List<Control> ctrls = new List<Control>();
         Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
         bool ignoreChange = false;
         public TenderFormat()
@@ -139,25 +138,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 NZTA_Contract_Generator.Globals.ThisDocument.TenderFormatAppend.Range.Tables[1].Rows.Add();
             }            
             NZTA_Contract_Generator.Globals.ThisDocument.TenderFormatAppend.Range.Select();
-            //CheckBox cb = new CheckBox();
-            //TextBox tbDocu = new TextBox();
-            //TextBox tbPage = new TextBox();
-            //CheckBox cbA3 = new CheckBox();
-            //CheckBox cbDouble = new CheckBox();
-            //Button btnDelete = new Button();
-
-            //cb.Top = TimeResource_Check.Top + TimeResource_Check.Height + iCounter * 15; cb.Left = TimeResource_Check.Left; cb.Width = 20; cb.Height = 20;
-            //tbDocu.Top = cb.Top; tbDocu.Left = cb.Left + cb.Width + 5; tbDocu.Width = 100; tbDocu.Height = 20;
-            //tbPage.Top = cb.Top; tbPage.Left = tbDocu.Left + tbDocu.Width + 5; tbPage.Width = 24; tbPage.Height = 20;
-            //cbA3.Top = cb.Top; cbA3.Left = Tender_A3_Check.Left; cbA3.Width = Tender_A3_Check.Width; cbA3.Height = Tender_A3_Check.Height;
-            //cbDouble.Top = cb.Top; cbDouble.Left = Tender_Double_Check.Left; cbDouble.Width = Tender_Double_Check.Width; cbDouble.Height = Tender_Double_Check.Height;
-            //btnDelete.Top = cb.Top; btnDelete.Left = btnAdd.Left; btnDelete.Height = btnAdd.Height; btnDelete.Width = btnAdd.Width; btnDelete.Text = "-";
-            //iCounter++;
-
-            //ctrls.Add(cb); ctrls.Add(tbDocu); ctrls.Add(tbPage); ctrls.Add(cbA3); ctrls.Add(cbDouble); ctrls.Add(btnDelete);
-            //this.Controls.Add(cb); this.Controls.Add(tbDocu); this.Controls.Add(tbPage); this.Controls.Add(cbA3); this.Controls.Add(cbDouble); this.Controls.Add(btnDelete);
-            //cb.CheckedChanged += new EventHandler(CheckBox_Checked);           
-                        
         }
 
         private void Outline_Page_TextChanged(object sender, EventArgs e)

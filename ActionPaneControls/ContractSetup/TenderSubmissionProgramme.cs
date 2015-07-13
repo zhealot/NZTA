@@ -15,18 +15,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public TenderSubmissionProgramme()
         {
             InitializeComponent();
-
             //Load any data
-
             ignoreChange = true;
-
             //Address combobox
             Presentation_Address.DataSource = new BindingSource(Constants.Location.data, null);
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
-
             ignoreChange = false;
-
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }

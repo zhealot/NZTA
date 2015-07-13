@@ -71,8 +71,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<String, String> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.Address_1 = selectedEntry.Key;
+                Company_Name_1.Text = selectedEntry.Key;
+                Level_1.Text = selectedEntry.Value.building;
+                Street_1.Text = selectedEntry.Value.streetAddress;
+                Box_1.Text = selectedEntry.Value.boxNumber;
+                City_1.Text = selectedEntry.Value.city;
+                Telephone_1.Text = selectedEntry.Value.telephone;
+                Fax_1.Text = selectedEntry.Value.fax;                
             }
         }
 
@@ -126,36 +133,43 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void Company_Name_1_TextChanged(object sender, EventArgs e)
         {
             contract.Company_Name_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Level_1_TextChanged(object sender, EventArgs e)
         {
             contract.Level_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Address_1", Level_1.Text + " " + Street_1.Text);
         }
 
         private void Street_1_TextChanged(object sender, EventArgs e)
         {
             contract.Street_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Address_1", Level_1.Text + " " + Street_1.Text);
         }
 
         private void Box_1_TextChanged(object sender, EventArgs e)
         {
             contract.Box_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void City_1_TextChanged(object sender, EventArgs e)
         {
             contract.City_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Telephone_1_TextChanged(object sender, EventArgs e)
         {
             contract.Telephone_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Fax_1_TextChanged(object sender, EventArgs e)
         {
             contract.Fax_1 = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Email_1_TextChanged(object sender, EventArgs e)

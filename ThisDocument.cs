@@ -63,9 +63,8 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            this.richTextContentControl262.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl262_Entering);
+            this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
             this.rtcSupplierSelectoionMethodName.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcSupplierSelectoionMethodName_Entering);
-            this.rtcContractPricing.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcContractPricing_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -89,28 +88,23 @@ namespace NZTA_Contract_Generator
 
         }
 
-        private void richTextContentControl262_Entering(object sender, ContentControlEnteringEventArgs e)
+        //private void rtcContractPricing_Exiting(object sender, ContentControlExitingEventArgs e)
+        //{
+            //###how to access control in another form ("ContractPricing")?            
+            //var rg = rtcContractPricing.Range;
+            //rg.Find.ClearFormatting();
+            //rg.Find.Text = "Sub-total Item";
+            //rg.Find.Execute(MatchWholeWord: true);
+            //while (rg.Find.Found && rg.Start <= rtcContractPricing.Range.End && rg.End >= rtcContractPricing.Range.Start)
+            //{                
+                //rtcContractPricing.Range.Tables[1].Cell(rg.Cells[1].RowIndex, rg.Cells[1].ColumnIndex + 1);
+               // rg.Find.Execute(MatchWholeWord:true);
+            //}
+        //}
+
+        private void richTextContentControl1_Entering(object sender, ContentControlEnteringEventArgs e)
         {
 
-        }
-
-        private void rtcContractPricing_Exiting(object sender, ContentControlExitingEventArgs e)
-        {
-            //###how to access control in another form ("ContractPricing")?
-            
-
-
-            var rg = rtcContractPricing.Range;
-            rg.Find.ClearFormatting();
-            rg.Find.Text = "Sub-total Item";
-            rg.Find.Execute(MatchWholeWord: true);
-            while (rg.Find.Found && rg.Start <= rtcContractPricing.Range.End && rg.End >= rtcContractPricing.Range.Start)
-            {
-                
-                rtcContractPricing.Range.Tables[1].Cell(rg.Cells[1].RowIndex, rg.Cells[1].ColumnIndex + 1);
-                rg.Find.Execute(MatchWholeWord:true);
-
-            }
         }
     }
 }

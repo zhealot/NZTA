@@ -17,7 +17,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         {
             InitializeComponent();
             //Load saved state. Defaults set in state...
-            //###Util.SavedState.setControlsToState(contract, Controls);
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         private void CostIndex_TextChanged(object sender, EventArgs e)

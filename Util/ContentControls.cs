@@ -149,6 +149,17 @@ namespace NZTA_Contract_Generator.Util
             }
             else return false;
         }
+
+        public static bool IsAmount(string s)
+        {
+            Decimal d;
+            if (Decimal.TryParse(s, out d))
+            {
+                return true;
+            }
+            else return false;
+        }
     }
+
 
 }

@@ -14,7 +14,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
     {
         public Specifications()
         {
+            Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
             InitializeComponent();
+            //Load saved state. Defaults set in state...
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         //### exclusive with another check box

@@ -10,12 +10,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     {
 
         Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
-
         public InteractiveTenderProcess()
         {
             InitializeComponent();
-
-
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }

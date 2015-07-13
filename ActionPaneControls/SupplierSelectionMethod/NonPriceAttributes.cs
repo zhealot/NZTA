@@ -17,7 +17,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             InitializeComponent();
             //Load saved state. Defaults set in state...
-            //###Util.SavedState.setControlsToState(contract, Controls);
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         private void cbMeth1_CheckedChanged(object sender, EventArgs e)
@@ -48,6 +48,28 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             contract.ExperienceVSRecord = ((NumericUpDown)sender).Value.ToString();
             Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            object RgStart = NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Start;
+            object RgEnd = NZTA_Contract_Generator.Globals.ThisDocument.Tender_Evaluation_Procedure.Start;
+            var rg = NZTA_Contract_Generator.Globals.ThisDocument.Range(ref RgStart, ref RgEnd);
+            lbMeths.Items.Clear();
+            rg.Find.ClearFormatting();
+            object stl = "NZTA Tendering: Level 4 (Numbering)";
+            rg.Find.set_Style(ref stl);
+            rg.Find.Execute();
+            //var stl = rg.get_Style().NameLocal;
+            while (rg.Find.Found && rg.Start < (int)RgEnd && rg.End >= (int)RgStart)
+            {
+                if (!string.IsNullOrEmpty(rg.Text) && rg.Text.Contains(":"))
+                {                    
+                    lbMeths.Items.Add(rg.Text.Substring(0,rg.Text.IndexOf(":")));
+                }                
+                rg.Find.Execute();
+            }
+            NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Select();
         }
     }
 }
