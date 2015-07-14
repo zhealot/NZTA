@@ -63,13 +63,73 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             //var stl = rg.get_Style().NameLocal;
             while (rg.Find.Found && rg.Start < (int)RgEnd && rg.End >= (int)RgStart)
             {
-                if (!string.IsNullOrEmpty(rg.Text) && rg.Text.Contains(":"))
+                if (!string.IsNullOrEmpty(rg.Text) && rg.Text.Contains(":") && !rg.Text.Contains("[Other]"))
                 {                    
                     lbMeths.Items.Add(rg.Text.Substring(0,rg.Text.IndexOf(":")));
                 }                
                 rg.Find.Execute();
             }
             NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Select();
+        }
+
+        private void TransferToFormC_Click(object sender, EventArgs e)
+        {
+            decimal[] pst;
+            try
+            {
+                pst = tbPercent.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();                
+            }
+            catch (Exception ex)
+            {
+                Util.Help.guidanceNote("invalid input for percentage");
+                return;
+            }
+            if (pst.Count() != lbMeths.Items.Count)
+            {
+                Util.Help.guidanceNote("Each Methodology needs one percentage number");
+                return;
+            }
+            if (pst.Sum() != 100)
+            {
+                Util.Help.guidanceNote("Percentage must add up to 100");
+                return;
+            }
+
+            var MethStart = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart;
+            var MethEnd = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethEnd;
+            var MethAbove = NZTA_Contract_Generator.Globals.ThisDocument.MethAbove;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.UndoRecord.EndCustomRecord();
+            //var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
+            //MethStart.Tables[1].AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitFixed);
+            //var ViewType = NZTA_Contract_Generator.Globals.ThisDocument.Application.ActiveWindow.View.Type;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Visible = false;
+
+            while (MethEnd.Range.Rows[1].Index - MethAbove.Range.Rows[1].Index > 2)
+            {
+                MethStart.Range.Tables[1].Rows[MethAbove.Range.Rows[1].Index + 1].Delete();
+            }
+            MethStart.Range.Rows[1].Range.Delete();
+            object bf = MethStart.Rows[1];            
+            
+            for (int i = 0; i < lbMeths.Items.Count; i++)
+            {
+                var rw = MethAbove.Rows.Add(ref bf);
+                rw.Cells[1].Range.Text = lbMeths.Items[i].ToString();
+                rw.Cells[2].Range.Text = pst[i].ToString();
+            }
+            MethStart.Select();
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ActiveWindow.View.Type = ViewType;
+            //MethStart.Tables[1].AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitContent);
+            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Visible = true;
+        }
+
+        private void lbMeths_SizeChanged(object sender, EventArgs e)
+        {
+            //tbPercent.Height = lbMeths.Height;
         }
     }
 }
