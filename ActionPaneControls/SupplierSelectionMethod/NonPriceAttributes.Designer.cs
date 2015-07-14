@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NonPriceAttributes));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RelevantExperience = new System.Windows.Forms.NumericUpDown();
@@ -40,12 +39,12 @@
             this.ExperienceVSRecord = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbMeth1 = new System.Windows.Forms.CheckBox();
-            this.GuidanceNote = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lbMeths = new System.Windows.Forms.ListBox();
+            this.tbPercent = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RelevantExperience)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackRecord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienceVSRecord)).BeginInit();
@@ -58,23 +57,13 @@
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 36);
+            this.label1.Size = new System.Drawing.Size(307, 27);
             this.label1.TabIndex = 3;
             this.label1.Text = "Non-Price Attributes";
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(5, 51);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 58);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Guidance note:\r\nAnswer the following questions where Relevant Experience and/or T" +
-    "rack Record have been selected.";
-            // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(5, 124);
+            this.label3.Location = new System.Drawing.Point(5, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 23);
@@ -83,16 +72,16 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(20, 146);
+            this.label4.Location = new System.Drawing.Point(5, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 114);
+            this.label4.Size = new System.Drawing.Size(318, 61);
             this.label4.TabIndex = 4;
             this.label4.Text = resources.GetString("label4.Text");
             // 
             // RelevantExperience
             // 
-            this.RelevantExperience.Location = new System.Drawing.Point(240, 122);
+            this.RelevantExperience.Location = new System.Drawing.Point(240, 52);
             this.RelevantExperience.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RelevantExperience.Name = "RelevantExperience";
             this.RelevantExperience.Size = new System.Drawing.Size(90, 20);
@@ -101,16 +90,16 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(20, 260);
+            this.label5.Location = new System.Drawing.Point(5, 160);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 44);
+            this.label5.Size = new System.Drawing.Size(343, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "Enter the number of project nominations you request for Track Record.";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(5, 237);
+            this.label6.Location = new System.Drawing.Point(5, 137);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 23);
@@ -119,7 +108,7 @@
             // 
             // TrackRecord
             // 
-            this.TrackRecord.Location = new System.Drawing.Point(240, 235);
+            this.TrackRecord.Location = new System.Drawing.Point(240, 135);
             this.TrackRecord.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TrackRecord.Name = "TrackRecord";
             this.TrackRecord.Size = new System.Drawing.Size(90, 20);
@@ -128,7 +117,7 @@
             // 
             // ExperienceVSRecord
             // 
-            this.ExperienceVSRecord.Location = new System.Drawing.Point(240, 306);
+            this.ExperienceVSRecord.Location = new System.Drawing.Point(240, 184);
             this.ExperienceVSRecord.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ExperienceVSRecord.Name = "ExperienceVSRecord";
             this.ExperienceVSRecord.Size = new System.Drawing.Size(90, 20);
@@ -137,7 +126,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(5, 308);
+            this.label7.Location = new System.Drawing.Point(5, 186);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(164, 32);
@@ -146,82 +135,83 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(20, 341);
+            this.label8.Location = new System.Drawing.Point(5, 219);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(191, 120);
+            this.label8.Size = new System.Drawing.Size(354, 59);
             this.label8.TabIndex = 7;
             this.label8.Text = resources.GetString("label8.Text");
             // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(5, 442);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(170, 19);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "3. Methodology";
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(5, 461);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(170, 19);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Tick the box to include this paragraph and edit if required";
-            // 
-            // cbMeth1
-            // 
-            this.cbMeth1.AutoSize = true;
-            this.cbMeth1.Location = new System.Drawing.Point(8, 484);
-            this.cbMeth1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cbMeth1.Name = "cbMeth1";
-            this.cbMeth1.Size = new System.Drawing.Size(15, 14);
-            this.cbMeth1.TabIndex = 9;
-            this.cbMeth1.UseVisualStyleBackColor = true;
-            this.cbMeth1.CheckedChanged += new System.EventHandler(this.cbMeth1_CheckedChanged);
-            // 
-            // GuidanceNote
-            // 
-            this.GuidanceNote.Location = new System.Drawing.Point(29, 483);
-            this.GuidanceNote.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.GuidanceNote.Name = "GuidanceNote";
-            this.GuidanceNote.Size = new System.Drawing.Size(301, 20);
-            this.GuidanceNote.TabIndex = 10;
-            this.GuidanceNote.Text = "Project Organisational Structure";
-            this.GuidanceNote.TextChanged += new System.EventHandler(this.GuidanceNote_TextChanged);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(193, 454);
+            this.button1.Location = new System.Drawing.Point(3, 297);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
+            this.button1.Text = "Get Methodology";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbMeths
             // 
             this.lbMeths.FormattingEnabled = true;
-            this.lbMeths.Location = new System.Drawing.Point(8, 531);
+            this.lbMeths.Location = new System.Drawing.Point(2, 357);
             this.lbMeths.Name = "lbMeths";
             this.lbMeths.Size = new System.Drawing.Size(260, 329);
             this.lbMeths.TabIndex = 13;
+            this.lbMeths.SizeChanged += new System.EventHandler(this.lbMeths_SizeChanged);
+            // 
+            // tbPercent
+            // 
+            this.tbPercent.Location = new System.Drawing.Point(268, 357);
+            this.tbPercent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbPercent.Multiline = true;
+            this.tbPercent.Name = "tbPercent";
+            this.tbPercent.Size = new System.Drawing.Size(80, 329);
+            this.tbPercent.TabIndex = 14;
+            this.tbPercent.Text = "15\r\n0\r\n10\r\n5\r\n10\r\n20\r\n0\r\n30\r\n0\r\n10\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n" +
+    "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(211, 297);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Transfer to Form C";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.TransferToFormC_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(254, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "% for Methodology";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(86, 341);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Methodology";
             // 
             // NonPriceAttributes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.lbMeths);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.GuidanceNote);
-            this.Controls.Add(this.cbMeth1);
-            this.Controls.Add(this.ExperienceVSRecord);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbPercent);
+            this.Controls.Add(this.lbMeths);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExperienceVSRecord);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TrackRecord);
@@ -230,11 +220,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "NonPriceAttributes";
-            this.Size = new System.Drawing.Size(375, 867);
+            this.Size = new System.Drawing.Size(361, 689);
             ((System.ComponentModel.ISupportInitialize)(this.RelevantExperience)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienceVSRecord)).EndInit();
@@ -246,7 +235,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown RelevantExperience;
@@ -256,11 +244,11 @@
         private System.Windows.Forms.NumericUpDown ExperienceVSRecord;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.CheckBox cbMeth1;
-        private System.Windows.Forms.TextBox GuidanceNote;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox lbMeths;
+        private System.Windows.Forms.TextBox tbPercent;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
     }
 }

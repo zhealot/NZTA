@@ -199,6 +199,7 @@ namespace NZTA_Contract_Generator
         public String GuidanceNote { get; set; }
         public String tbShow { get; set; }
         public Boolean cbMeth1 { get; set; }
+        public String tbPercent { get; set; }
 
         //End of Non Price Attributes
 

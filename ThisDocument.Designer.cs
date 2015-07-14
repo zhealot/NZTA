@@ -335,7 +335,11 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark MethStart;
         
-        internal Microsoft.Office.Tools.Word.Bookmark FormC_Meth;
+        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethStart;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark MethAbove;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -598,7 +602,9 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl143.BeginInit();
             this.richTextContentControl144.BeginInit();
             this.MethStart.BeginInit();
-            this.FormC_Meth.BeginInit();
+            this.FormC_MethStart.BeginInit();
+            this.FormC_MethEnd.BeginInit();
+            this.MethAbove.BeginInit();
         }
         
         /// 
@@ -606,7 +612,9 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
-            this.FormC_Meth.EndInit();
+            this.MethAbove.EndInit();
+            this.FormC_MethEnd.EndInit();
+            this.FormC_MethStart.EndInit();
             this.MethStart.EndInit();
             this.richTextContentControl144.EndInit();
             this.richTextContentControl143.EndInit();
@@ -933,7 +941,9 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl143 = Globals.Factory.CreateRichTextContentControl(null, null, "1152408033", "richTextContentControl143", this);
             this.richTextContentControl144 = Globals.Factory.CreateRichTextContentControl(null, null, "2809499199", "richTextContentControl144", this);
             this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
-            this.FormC_Meth = Globals.Factory.CreateBookmark(null, null, "FormC_Meth", "FormC_Meth", this);
+            this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
+            this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
+            this.MethAbove = Globals.Factory.CreateBookmark(null, null, "MethAbove", "MethAbove", this);
         }
         
         /// 
@@ -1579,9 +1589,17 @@ namespace NZTA_Contract_Generator {
             // 
             this.MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // FormC_Meth
+            // FormC_MethStart
             // 
-            this.FormC_Meth.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.FormC_MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // FormC_MethEnd
+            // 
+            this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // MethAbove
+            // 
+            this.MethAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
@@ -1599,7 +1617,9 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
-            this.FormC_Meth.Dispose();
+            this.MethAbove.Dispose();
+            this.FormC_MethEnd.Dispose();
+            this.FormC_MethStart.Dispose();
             this.MethStart.Dispose();
             this.richTextContentControl144.Dispose();
             this.richTextContentControl143.Dispose();
