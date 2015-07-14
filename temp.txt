@@ -1,0 +1,19 @@
+Sub Test()
+    Dim rg As Range
+    Dim tmp As Range
+    Dim cll As Cell
+    Dim iFound As Long
+    iFound = 0
+    Set rg = ThisDocument.ContentControls(1).Range
+    
+    rg.Find.ClearFormatting
+    rg.Find.Forward = True
+    rg.Find.text = "Sub-total Item"
+    rg.Find.Execute MatchWholeWord:=True
+    
+    Do While rg.Find.Found = True And rg.Start < ThisDocument.ContentControls(1).Range.End
+        iFound = iFound + 1
+        rg.Find.Execute
+        MsgBox iFound & rg.Start & "-" & rg.End
+    Loop
+End Sub
