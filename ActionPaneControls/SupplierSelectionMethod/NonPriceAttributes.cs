@@ -20,18 +20,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             Util.SavedState.setControlsToState(contract, Controls);
         }
 
-        private void cbMeth1_CheckedChanged(object sender, EventArgs e)
-        {
-            var rg = NZTA_Contract_Generator.Globals.ThisDocument;
-            
-
-        }
-
-        private void GuidanceNote_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void RelevantExperience_ValueChanged(object sender, EventArgs e)
         {
             contract.RelevantExperience = ((NumericUpDown)sender).Value.ToString();
@@ -82,6 +70,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             catch (Exception ex)
             {
                 Util.Help.guidanceNote("invalid input for percentage");
+                Console.Write(ex.Message);
                 return;
             }
             if (pst.Count() != lbMeths.Items.Count)
@@ -127,9 +116,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             //NZTA_Contract_Generator.Globals.ThisDocument.Application.Visible = true;
         }
 
-        private void lbMeths_SizeChanged(object sender, EventArgs e)
+        private void lbMeths_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //tbPercent.Height = lbMeths.Height;
+            //place cursor to corresponding weighting line 
+            if (tbPercent.Lines.Count() >= lbMeths.SelectedIndex + 1)
+            {
+                tbPercent.Select(tbPercent.GetFirstCharIndexFromLine(lbMeths.SelectedIndex), 0);
+                tbPercent.Focus();
+                tbPercent.ScrollToCaret();
+            }            
         }
     }
 }

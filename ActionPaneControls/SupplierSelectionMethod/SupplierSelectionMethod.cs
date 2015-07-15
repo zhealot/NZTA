@@ -64,7 +64,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             {
                 if (Decimal.TryParse(tbRE.Text, out RE) && Decimal.TryParse(((cbTrackRecord.Checked == true) ? tbTR.Text : "0"), out TR) && Decimal.TryParse(tbRS.Text, out RS) && Decimal.TryParse(tbM.Text, out M) && Decimal.TryParse(tbP.Text, out P))
                 {
-                    if (RE + TR + RS + M + P == 100)
+                    if(RE + TR + RS + M + (((rbTP.Checked) || (rbBLO.Checked) ) ? 0 : P) == 100)  //if (RE + TR + RS + M + P == 100)
                     {
                         if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
                         {
@@ -111,7 +111,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                             if (rbBLO.Checked)  
                             {
                                 Docu.rtcSupplierSelectoionMethodName.Text = "Brook's Law Option";
-                                Docu.rtcSupplierSelectionMethodStart.Text = "1.1.12	Tenders will be evaluated in accordance with this document and the “Brook’s Law Method” of Transport Agency’s Contract Procedures Manual (SM021)." +
+                                Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “Brook’s Law Method” of Transport Agency’s Contract Procedures Manual (SM021)." +
                                                                             Environment.NewLine + "Weightings will be given to each of the non-price attributes as follows:";
                                 Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
                                 Docu.rtcPrice.Text = "N/A";

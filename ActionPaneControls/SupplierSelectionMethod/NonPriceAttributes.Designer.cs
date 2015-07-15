@@ -75,7 +75,7 @@
             this.label4.Location = new System.Drawing.Point(5, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(318, 61);
+            this.label4.Size = new System.Drawing.Size(343, 57);
             this.label4.TabIndex = 4;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -129,13 +129,13 @@
             this.label7.Location = new System.Drawing.Point(5, 186);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 32);
+            this.label7.Size = new System.Drawing.Size(231, 18);
             this.label7.TabIndex = 6;
-            this.label7.Text = "2.3 Revevant Experience vs\r\nTrack Record";
+            this.label7.Text = "2.3 Revevant Experience vs Track Record";
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(5, 219);
+            this.label8.Location = new System.Drawing.Point(7, 207);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(354, 59);
@@ -144,7 +144,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 297);
+            this.button1.Location = new System.Drawing.Point(3, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
             this.button1.TabIndex = 12;
@@ -155,26 +155,26 @@
             // lbMeths
             // 
             this.lbMeths.FormattingEnabled = true;
-            this.lbMeths.Location = new System.Drawing.Point(2, 357);
+            this.lbMeths.Location = new System.Drawing.Point(3, 311);
             this.lbMeths.Name = "lbMeths";
-            this.lbMeths.Size = new System.Drawing.Size(260, 329);
+            this.lbMeths.Size = new System.Drawing.Size(301, 498);
             this.lbMeths.TabIndex = 13;
-            this.lbMeths.SizeChanged += new System.EventHandler(this.lbMeths_SizeChanged);
+            this.lbMeths.SelectedIndexChanged += new System.EventHandler(this.lbMeths_SelectedIndexChanged);
             // 
             // tbPercent
             // 
-            this.tbPercent.Location = new System.Drawing.Point(268, 357);
+            this.tbPercent.Location = new System.Drawing.Point(309, 311);
             this.tbPercent.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbPercent.Multiline = true;
             this.tbPercent.Name = "tbPercent";
-            this.tbPercent.Size = new System.Drawing.Size(80, 329);
+            this.tbPercent.Size = new System.Drawing.Size(40, 497);
             this.tbPercent.TabIndex = 14;
             this.tbPercent.Text = "15\r\n0\r\n10\r\n5\r\n10\r\n20\r\n0\r\n30\r\n0\r\n10\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n" +
     "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(211, 297);
+            this.button2.Location = new System.Drawing.Point(211, 269);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 23);
             this.button2.TabIndex = 12;
@@ -185,7 +185,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(254, 341);
+            this.label2.Location = new System.Drawing.Point(254, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 15;
@@ -194,7 +194,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(86, 341);
+            this.label9.Location = new System.Drawing.Point(86, 295);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 13);
             this.label9.TabIndex = 15;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "NonPriceAttributes";
-            this.Size = new System.Drawing.Size(361, 689);
+            this.Size = new System.Drawing.Size(363, 811);
             ((System.ComponentModel.ISupportInitialize)(this.RelevantExperience)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExperienceVSRecord)).EndInit();

@@ -31,8 +31,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark Liability_Insurance;
         
-        internal Microsoft.Office.Tools.Word.Bookmark meth_middle;
-        
         internal Microsoft.Office.Tools.Word.Bookmark Non_Price_Attributes;
         
         internal Microsoft.Office.Tools.Word.Bookmark Personnel_Schedule;
@@ -46,8 +44,6 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.Bookmark Tender_Format;
         
         internal Microsoft.Office.Tools.Word.Bookmark Tender_Submission_Programme;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark test;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl1;
         
@@ -337,9 +333,9 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark FormC_MethStart;
         
-        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
-        
         internal Microsoft.Office.Tools.Word.Bookmark MethAbove;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -450,7 +446,6 @@ namespace NZTA_Contract_Generator {
             this.Geotechnical_Testing_Schedule.BeginInit();
             this.Interactive_Tender_Process.BeginInit();
             this.Liability_Insurance.BeginInit();
-            this.meth_middle.BeginInit();
             this.Non_Price_Attributes.BeginInit();
             this.Personnel_Schedule.BeginInit();
             this.Pricing_Options.BeginInit();
@@ -458,7 +453,6 @@ namespace NZTA_Contract_Generator {
             this.Tender_Evaluation_Procedure.BeginInit();
             this.Tender_Format.BeginInit();
             this.Tender_Submission_Programme.BeginInit();
-            this.test.BeginInit();
             this.richTextContentControl1.BeginInit();
             this.richTextContentControl2.BeginInit();
             this.richTextContentControl3.BeginInit();
@@ -603,8 +597,8 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl144.BeginInit();
             this.MethStart.BeginInit();
             this.FormC_MethStart.BeginInit();
-            this.FormC_MethEnd.BeginInit();
             this.MethAbove.BeginInit();
+            this.FormC_MethEnd.BeginInit();
         }
         
         /// 
@@ -612,8 +606,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
-            this.MethAbove.EndInit();
             this.FormC_MethEnd.EndInit();
+            this.MethAbove.EndInit();
             this.FormC_MethStart.EndInit();
             this.MethStart.EndInit();
             this.richTextContentControl144.EndInit();
@@ -758,7 +752,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl3.EndInit();
             this.richTextContentControl2.EndInit();
             this.richTextContentControl1.EndInit();
-            this.test.EndInit();
             this.Tender_Submission_Programme.EndInit();
             this.Tender_Format.EndInit();
             this.Tender_Evaluation_Procedure.EndInit();
@@ -766,7 +759,6 @@ namespace NZTA_Contract_Generator {
             this.Pricing_Options.EndInit();
             this.Personnel_Schedule.EndInit();
             this.Non_Price_Attributes.EndInit();
-            this.meth_middle.EndInit();
             this.Liability_Insurance.EndInit();
             this.Interactive_Tender_Process.EndInit();
             this.Geotechnical_Testing_Schedule.EndInit();
@@ -789,7 +781,6 @@ namespace NZTA_Contract_Generator {
             this.Geotechnical_Testing_Schedule = Globals.Factory.CreateBookmark(null, null, "Geotechnical_Testing_Schedule", "Geotechnical_Testing_Schedule", this);
             this.Interactive_Tender_Process = Globals.Factory.CreateBookmark(null, null, "Interactive_Tender_Process", "Interactive_Tender_Process", this);
             this.Liability_Insurance = Globals.Factory.CreateBookmark(null, null, "Liability_Insurance", "Liability_Insurance", this);
-            this.meth_middle = Globals.Factory.CreateBookmark(null, null, "meth_middle", "meth_middle", this);
             this.Non_Price_Attributes = Globals.Factory.CreateBookmark(null, null, "Non_Price_Attributes", "Non_Price_Attributes", this);
             this.Personnel_Schedule = Globals.Factory.CreateBookmark(null, null, "Personnel_Schedule", "Personnel_Schedule", this);
             this.Pricing_Options = Globals.Factory.CreateBookmark(null, null, "Pricing_Options", "Pricing_Options", this);
@@ -797,7 +788,6 @@ namespace NZTA_Contract_Generator {
             this.Tender_Evaluation_Procedure = Globals.Factory.CreateBookmark(null, null, "Tender_Evaluation_Procedure", "Tender_Evaluation_Procedure", this);
             this.Tender_Format = Globals.Factory.CreateBookmark(null, null, "Tender_Format", "Tender_Format", this);
             this.Tender_Submission_Programme = Globals.Factory.CreateBookmark(null, null, "Tender_Submission_Programme", "Tender_Submission_Programme", this);
-            this.test = Globals.Factory.CreateBookmark(null, null, "test", "test", this);
             this.richTextContentControl1 = Globals.Factory.CreateRichTextContentControl(null, null, "2995438561", "richTextContentControl1", this);
             this.richTextContentControl2 = Globals.Factory.CreateRichTextContentControl(null, null, "3011478966", "richTextContentControl2", this);
             this.richTextContentControl3 = Globals.Factory.CreateRichTextContentControl(null, null, "1839502725", "richTextContentControl3", this);
@@ -942,8 +932,8 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl144 = Globals.Factory.CreateRichTextContentControl(null, null, "2809499199", "richTextContentControl144", this);
             this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
             this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
-            this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
             this.MethAbove = Globals.Factory.CreateBookmark(null, null, "MethAbove", "MethAbove", this);
+            this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
         }
         
         /// 
@@ -981,10 +971,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.Liability_Insurance.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // meth_middle
-            // 
-            this.meth_middle.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // Non_Price_Attributes
             // 
             this.Non_Price_Attributes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1012,10 +998,6 @@ namespace NZTA_Contract_Generator {
             // Tender_Submission_Programme
             // 
             this.Tender_Submission_Programme.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // test
-            // 
-            this.test.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl1
             // 
@@ -1593,13 +1575,13 @@ namespace NZTA_Contract_Generator {
             // 
             this.FormC_MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // FormC_MethEnd
-            // 
-            this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // MethAbove
             // 
             this.MethAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // FormC_MethEnd
+            // 
+            this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
@@ -1617,8 +1599,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
-            this.MethAbove.Dispose();
             this.FormC_MethEnd.Dispose();
+            this.MethAbove.Dispose();
             this.FormC_MethStart.Dispose();
             this.MethStart.Dispose();
             this.richTextContentControl144.Dispose();
@@ -1763,7 +1745,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl3.Dispose();
             this.richTextContentControl2.Dispose();
             this.richTextContentControl1.Dispose();
-            this.test.Dispose();
             this.Tender_Submission_Programme.Dispose();
             this.Tender_Format.Dispose();
             this.Tender_Evaluation_Procedure.Dispose();
@@ -1771,7 +1752,6 @@ namespace NZTA_Contract_Generator {
             this.Pricing_Options.Dispose();
             this.Personnel_Schedule.Dispose();
             this.Non_Price_Attributes.Dispose();
-            this.meth_middle.Dispose();
             this.Liability_Insurance.Dispose();
             this.Interactive_Tender_Process.Dispose();
             this.Geotechnical_Testing_Schedule.Dispose();
