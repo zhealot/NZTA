@@ -48,8 +48,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             object stl = "NZTA Tendering: Level 4 (Numbering)";
             rg.Find.set_Style(ref stl);
             rg.Find.Execute();
-            //var stl = rg.get_Style().NameLocal;
-            while (rg.Find.Found && rg.Start < (int)RgEnd && rg.End >= (int)RgStart)
+            //retrieve clauses from 2.3 Methodology and list them in ACP Listbox
+            while (rg.Find.Found && rg.Start <= (int)RgEnd && rg.End >= (int)RgStart)
             {
                 if (!string.IsNullOrEmpty(rg.Text) && rg.Text.Contains(":") && !rg.Text.Contains("[Other]"))
                 {                    
@@ -57,63 +57,75 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 }                
                 rg.Find.Execute();
             }
+            //retireve weighting data from 5 Form C and list them in ACP Textbox
+            tbPercent.Clear();
+            var tb =NZTA_Contract_Generator.Globals.ThisDocument.MethAbove.Tables[1];
+            for (int i = NZTA_Contract_Generator.Globals.ThisDocument.MethAbove.Rows[1].Index + 1; 
+                i <= NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart.Rows[1].Index; i++)
+            {
+                if (tb.Rows[i].Cells.Count >= 2)
+                {
+                    tbPercent.Text += tb.Rows[i].Cells[2].Range.Text.Replace("%", "").Replace("\r\a", "") + Environment.NewLine;
+                }
+            }
+            tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
             NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Select();
         }
 
         private void TransferToFormC_Click(object sender, EventArgs e)
         {
-            decimal[] pst;
-            try
-            {
-                pst = tbPercent.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();                
-            }
-            catch (Exception ex)
-            {
-                Util.Help.guidanceNote("invalid input for percentage");
-                Console.Write(ex.Message);
-                return;
-            }
-            if (pst.Count() != lbMeths.Items.Count)
-            {
-                Util.Help.guidanceNote("Each Methodology needs one percentage number");
-                return;
-            }
-            if (pst.Sum() != 100)
-            {
-                Util.Help.guidanceNote("Percentage must add up to 100");
-                return;
-            }
 
-            var MethStart = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart;
-            var MethEnd = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethEnd;
+            decimal[] pst = new decimal[lbMeths.Items.Count];
+            //no weightings if Supplier Selection Methody is Lowest Price Conforming 
+            if (contract.rbLPC == false)
+            {
+                try
+                {
+                    tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
+                    pst = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray()).Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();
+                }
+                catch (Exception ex)
+                {
+                    Util.Help.guidanceNote("invalid input for percentage");
+                    Console.Write(ex.Message);
+                    return;
+                }
+                if (pst.Count() != lbMeths.Items.Count)
+                {
+                    Util.Help.guidanceNote("Each Methodology needs one percentage number");
+                    return;
+                }
+                if (pst.Sum() != 100)
+                {
+                    Util.Help.guidanceNote("Percentage must add up to 100");
+                    return;
+                }    
+            }
+            
+            var FormC_MethStart = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart;
+            var FormC_MethEnd = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethEnd;
             var MethAbove = NZTA_Contract_Generator.Globals.ThisDocument.MethAbove;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.UndoRecord.EndCustomRecord();
-            //var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
-            //MethStart.Tables[1].AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitFixed);
-            //var ViewType = NZTA_Contract_Generator.Globals.ThisDocument.Application.ActiveWindow.View.Type;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Visible = false;
+            
+            var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
 
-            while (MethEnd.Range.Rows[1].Index - MethAbove.Range.Rows[1].Index > 2)
+            while (FormC_MethEnd.Range.Rows[1].Index - MethAbove.Range.Rows[1].Index > 2)
             {
-                MethStart.Range.Tables[1].Rows[MethAbove.Range.Rows[1].Index + 1].Delete();
+                FormC_MethStart.Range.Tables[1].Rows[MethAbove.Range.Rows[1].Index + 1].Delete();
             }
-            MethStart.Range.Rows[1].Range.Delete();
-            object bf = MethStart.Rows[1];            
+            FormC_MethStart.Range.Rows[1].Range.Delete();
+            object bf = FormC_MethStart.Rows[1];            
             
             for (int i = 0; i < lbMeths.Items.Count; i++)
             {
                 var rw = MethAbove.Rows.Add(ref bf);
                 rw.Cells[1].Range.Text = lbMeths.Items[i].ToString();
-                rw.Cells[2].Range.Text = pst[i].ToString();
+                rw.Cells[2].Range.Text = (contract.rbLPC == true) ? "N/A" : pst[i].ToString() + "%";
             }
-            MethStart.Select();
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.ActiveWindow.View.Type = ViewType;
-            //MethStart.Tables[1].AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitContent);
-            //NZTA_Contract_Generator.Globals.ThisDocument.Application.Visible = true;
+            FormC_MethStart.Select();
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
         }
 
         private void lbMeths_SelectedIndexChanged(object sender, EventArgs e)

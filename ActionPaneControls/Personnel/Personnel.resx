@@ -117,12 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please read all Help Tips and instructions before making selections.
-Below lists personnel that you are able to select which will populate the relevant schedules.
-Choose which personnel you wish to include in:
-1. Relevant Skills Evaluation Form C: Weightings must total 100%.
-2. Personnel Schedule : This may include other nominated personnel in Relevant Skills who you do not wish to evaluate.
-3. Addtional Services Schedule: Select and quantify your hours to ensure rates submitted are robust.</value>
-  </data>
 </root>

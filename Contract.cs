@@ -274,5 +274,9 @@ namespace NZTA_Contract_Generator
 
         //End of PublicLiabilityInsurance
 
+        //Start of Personnel
+        public String tbWeighting { get; set; }
+
+        //End of Personnel
     }
 }

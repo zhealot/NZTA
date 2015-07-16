@@ -299,6 +299,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             anotherMeansNo.Enabled = true;
             anotherMeansYes.Enabled = true;
             otherDetails.Enabled = true;
+            NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
 
         private void elecNo_CheckedChanged(object sender, EventArgs e)

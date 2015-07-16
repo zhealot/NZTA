@@ -40,6 +40,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Evaluation_End_ValueChanged(object sender, EventArgs e)
         {
+            if (Evaluation_End.Value < Evaluation_Start.Value)
+            {
+                Util.Help.guidanceNote("End date should not be earlier than start date");
+                return;
+            }
             contract.Evaluation_End = ((DateTimePicker)sender).Value.ToString("O");
             Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
         }

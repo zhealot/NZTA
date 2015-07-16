@@ -125,25 +125,6 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label45 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
             this.Consultant_Name = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.Consultant_Address = new System.Windows.Forms.TextBox();
@@ -164,13 +145,12 @@
             this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Contract_Name
             // 
-            this.Contract_Name.Location = new System.Drawing.Point(167, 50);
+            this.Contract_Name.Location = new System.Drawing.Point(131, 50);
             this.Contract_Name.Name = "Contract_Name";
             this.Contract_Name.Size = new System.Drawing.Size(174, 20);
             this.Contract_Name.TabIndex = 0;
@@ -207,7 +187,7 @@
             // 
             // Contract_Number
             // 
-            this.Contract_Number.Location = new System.Drawing.Point(167, 76);
+            this.Contract_Number.Location = new System.Drawing.Point(131, 76);
             this.Contract_Number.Name = "Contract_Number";
             this.Contract_Number.Size = new System.Drawing.Size(174, 20);
             this.Contract_Number.TabIndex = 3;
@@ -259,9 +239,9 @@
             // Address_1
             // 
             this.Address_1.FormattingEnabled = true;
-            this.Address_1.Location = new System.Drawing.Point(138, 123);
+            this.Address_1.Location = new System.Drawing.Point(134, 123);
             this.Address_1.Name = "Address_1";
-            this.Address_1.Size = new System.Drawing.Size(193, 21);
+            this.Address_1.Size = new System.Drawing.Size(186, 21);
             this.Address_1.TabIndex = 10;
             this.Address_1.SelectedIndexChanged += new System.EventHandler(this.Address_1_SelectedIndexChanged);
             // 
@@ -295,49 +275,49 @@
             // 
             // Company_Name_1
             // 
-            this.Company_Name_1.Location = new System.Drawing.Point(138, 149);
+            this.Company_Name_1.Location = new System.Drawing.Point(134, 149);
             this.Company_Name_1.Name = "Company_Name_1";
-            this.Company_Name_1.Size = new System.Drawing.Size(193, 20);
+            this.Company_Name_1.Size = new System.Drawing.Size(186, 20);
             this.Company_Name_1.TabIndex = 14;
             this.Company_Name_1.TextChanged += new System.EventHandler(this.Company_Name_1_TextChanged);
             // 
             // Level_1
             // 
-            this.Level_1.Location = new System.Drawing.Point(138, 175);
+            this.Level_1.Location = new System.Drawing.Point(134, 175);
             this.Level_1.Name = "Level_1";
-            this.Level_1.Size = new System.Drawing.Size(193, 20);
+            this.Level_1.Size = new System.Drawing.Size(186, 20);
             this.Level_1.TabIndex = 15;
             this.Level_1.TextChanged += new System.EventHandler(this.Level_1_TextChanged);
             // 
             // Street_1
             // 
-            this.Street_1.Location = new System.Drawing.Point(138, 201);
+            this.Street_1.Location = new System.Drawing.Point(134, 201);
             this.Street_1.Name = "Street_1";
-            this.Street_1.Size = new System.Drawing.Size(193, 20);
+            this.Street_1.Size = new System.Drawing.Size(186, 20);
             this.Street_1.TabIndex = 16;
             this.Street_1.TextChanged += new System.EventHandler(this.Street_1_TextChanged);
             // 
             // Box_1
             // 
-            this.Box_1.Location = new System.Drawing.Point(138, 230);
+            this.Box_1.Location = new System.Drawing.Point(134, 230);
             this.Box_1.Name = "Box_1";
-            this.Box_1.Size = new System.Drawing.Size(193, 20);
+            this.Box_1.Size = new System.Drawing.Size(186, 20);
             this.Box_1.TabIndex = 17;
             this.Box_1.TextChanged += new System.EventHandler(this.Box_1_TextChanged);
             // 
             // City_1
             // 
-            this.City_1.Location = new System.Drawing.Point(138, 253);
+            this.City_1.Location = new System.Drawing.Point(134, 253);
             this.City_1.Name = "City_1";
-            this.City_1.Size = new System.Drawing.Size(193, 20);
+            this.City_1.Size = new System.Drawing.Size(186, 20);
             this.City_1.TabIndex = 18;
             this.City_1.TextChanged += new System.EventHandler(this.City_1_TextChanged);
             // 
             // Telephone_1
             // 
-            this.Telephone_1.Location = new System.Drawing.Point(138, 279);
+            this.Telephone_1.Location = new System.Drawing.Point(134, 279);
             this.Telephone_1.Name = "Telephone_1";
-            this.Telephone_1.Size = new System.Drawing.Size(193, 20);
+            this.Telephone_1.Size = new System.Drawing.Size(186, 20);
             this.Telephone_1.TabIndex = 19;
             this.Telephone_1.TextChanged += new System.EventHandler(this.Telephone_1_TextChanged);
             // 
@@ -388,17 +368,17 @@
             // 
             // Fax_1
             // 
-            this.Fax_1.Location = new System.Drawing.Point(138, 305);
+            this.Fax_1.Location = new System.Drawing.Point(134, 305);
             this.Fax_1.Name = "Fax_1";
-            this.Fax_1.Size = new System.Drawing.Size(193, 20);
+            this.Fax_1.Size = new System.Drawing.Size(186, 20);
             this.Fax_1.TabIndex = 26;
             this.Fax_1.TextChanged += new System.EventHandler(this.Fax_1_TextChanged);
             // 
             // Email_1
             // 
-            this.Email_1.Location = new System.Drawing.Point(138, 331);
+            this.Email_1.Location = new System.Drawing.Point(134, 331);
             this.Email_1.Name = "Email_1";
-            this.Email_1.Size = new System.Drawing.Size(193, 20);
+            this.Email_1.Size = new System.Drawing.Size(186, 20);
             this.Email_1.TabIndex = 27;
             this.Email_1.TextChanged += new System.EventHandler(this.Email_1_TextChanged);
             // 
@@ -570,7 +550,7 @@
             // 
             // help2
             // 
-            this.help2.Location = new System.Drawing.Point(311, 15);
+            this.help2.Location = new System.Drawing.Point(241, 15);
             this.help2.Name = "help2";
             this.help2.Size = new System.Drawing.Size(23, 23);
             this.help2.TabIndex = 44;
@@ -844,7 +824,7 @@
             // anotherMeansYes
             // 
             this.anotherMeansYes.AutoSize = true;
-            this.anotherMeansYes.Location = new System.Drawing.Point(55, 48);
+            this.anotherMeansYes.Location = new System.Drawing.Point(41, 50);
             this.anotherMeansYes.Name = "anotherMeansYes";
             this.anotherMeansYes.Size = new System.Drawing.Size(115, 17);
             this.anotherMeansYes.TabIndex = 77;
@@ -867,7 +847,7 @@
             // 
             // otherDetails
             // 
-            this.otherDetails.Location = new System.Drawing.Point(229, 47);
+            this.otherDetails.Location = new System.Drawing.Point(210, 48);
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(100, 20);
             this.otherDetails.TabIndex = 78;
@@ -876,7 +856,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(186, 52);
+            this.label37.Location = new System.Drawing.Point(167, 52);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(33, 13);
             this.label37.TabIndex = 79;
@@ -978,7 +958,7 @@
             this.groupBox1.Controls.Add(this.PM_Name);
             this.groupBox1.Location = new System.Drawing.Point(3, 262);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 363);
+            this.groupBox1.Size = new System.Drawing.Size(331, 363);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -1000,7 +980,7 @@
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Location = new System.Drawing.Point(3, 675);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(347, 159);
+            this.groupBox2.Size = new System.Drawing.Size(331, 159);
             this.groupBox2.TabIndex = 89;
             this.groupBox2.TabStop = false;
             // 
@@ -1038,7 +1018,7 @@
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(6, 1036);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(344, 303);
+            this.groupBox3.Size = new System.Drawing.Size(328, 303);
             this.groupBox3.TabIndex = 90;
             this.groupBox3.TabStop = false;
             // 
@@ -1060,7 +1040,7 @@
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(3, 1333);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(347, 121);
+            this.groupBox4.Size = new System.Drawing.Size(331, 121);
             this.groupBox4.TabIndex = 91;
             this.groupBox4.TabStop = false;
             // 
@@ -1073,7 +1053,7 @@
             this.groupBox5.Controls.Add(this.label35);
             this.groupBox5.Location = new System.Drawing.Point(4, 1454);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(346, 267);
+            this.groupBox5.Size = new System.Drawing.Size(330, 264);
             this.groupBox5.TabIndex = 92;
             this.groupBox5.TabStop = false;
             // 
@@ -1086,7 +1066,7 @@
             this.groupBox10.Controls.Add(this.label36);
             this.groupBox10.Location = new System.Drawing.Point(5, 46);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(329, 85);
+            this.groupBox10.Size = new System.Drawing.Size(314, 77);
             this.groupBox10.TabIndex = 90;
             this.groupBox10.TabStop = false;
             // 
@@ -1099,9 +1079,9 @@
             this.groupBox9.Controls.Add(this.isPersonDifferentNo);
             this.groupBox9.Controls.Add(this.isPersonDifferentYes);
             this.groupBox9.Controls.Add(this.label38);
-            this.groupBox9.Location = new System.Drawing.Point(4, 136);
+            this.groupBox9.Location = new System.Drawing.Point(3, 129);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(330, 125);
+            this.groupBox9.Size = new System.Drawing.Size(315, 125);
             this.groupBox9.TabIndex = 89;
             this.groupBox9.TabStop = false;
             // 
@@ -1112,7 +1092,7 @@
             this.groupBox6.Controls.Add(this.label19);
             this.groupBox6.Location = new System.Drawing.Point(3, 840);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(347, 64);
+            this.groupBox6.Size = new System.Drawing.Size(331, 64);
             this.groupBox6.TabIndex = 93;
             this.groupBox6.TabStop = false;
             // 
@@ -1124,189 +1104,13 @@
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Location = new System.Drawing.Point(4, 906);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(346, 60);
+            this.groupBox8.Size = new System.Drawing.Size(330, 60);
             this.groupBox8.TabIndex = 94;
             this.groupBox8.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label45);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.checkBox5);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label43);
-            this.panel1.Controls.Add(this.label44);
-            this.panel1.Controls.Add(this.label42);
-            this.panel1.Location = new System.Drawing.Point(4, 1733);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 528);
-            this.panel1.TabIndex = 95;
-            // 
-            // label45
-            // 
-            this.label45.Location = new System.Drawing.Point(4, 10);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(267, 89);
-            this.label45.TabIndex = 107;
-            this.label45.Text = "Which documents and what format will you be providing electronically  - PDF or Wo" +
-    "rd? If you choose to send in Word format, change text entry.";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(209, 306);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(62, 20);
-            this.textBox3.TabIndex = 106;
-            this.textBox3.Text = "PDF";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(23, 485);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(164, 20);
-            this.textBox7.TabIndex = 97;
-            this.textBox7.Text = "enter document name";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(206, 485);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(62, 20);
-            this.textBox6.TabIndex = 95;
-            this.textBox6.Text = "PDF";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(206, 445);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(62, 20);
-            this.textBox5.TabIndex = 105;
-            this.textBox5.Text = "PDF";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(206, 410);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 20);
-            this.textBox1.TabIndex = 94;
-            this.textBox1.Text = "PDF";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(206, 374);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(62, 20);
-            this.textBox4.TabIndex = 93;
-            this.textBox4.Text = "PDF";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(209, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 20);
-            this.textBox2.TabIndex = 92;
-            this.textBox2.Text = "PDF";
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.Location = new System.Drawing.Point(2, 479);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(19, 34);
-            this.checkBox7.TabIndex = 87;
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Location = new System.Drawing.Point(2, 439);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(185, 34);
-            this.checkBox6.TabIndex = 86;
-            this.checkBox6.Text = "Addtional Service Schedule";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Location = new System.Drawing.Point(2, 410);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(185, 23);
-            this.checkBox5.TabIndex = 85;
-            this.checkBox5.Text = "Personnel Schedule";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Location = new System.Drawing.Point(5, 278);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(185, 79);
-            this.checkBox3.TabIndex = 84;
-            this.checkBox3.Text = "Geotechnical Testing Schedule (only choose if creating a Geotechnical RFT)";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Location = new System.Drawing.Point(2, 363);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(185, 45);
-            this.checkBox4.TabIndex = 83;
-            this.checkBox4.Text = "Tender Form";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Location = new System.Drawing.Point(5, 227);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(185, 45);
-            this.checkBox2.TabIndex = 82;
-            this.checkBox2.Text = "Contract Pricing Schedule";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Location = new System.Drawing.Point(7, 158);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(185, 63);
-            this.checkBox1.TabIndex = 81;
-            this.checkBox1.Text = "Request for Tender(full set of Tender Documents)";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label43
-            // 
-            this.label43.Location = new System.Drawing.Point(217, 122);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(59, 17);
-            this.label43.TabIndex = 79;
-            this.label43.Text = "Format";
-            // 
-            // label44
-            // 
-            this.label44.Location = new System.Drawing.Point(198, 167);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(83, 54);
-            this.label44.TabIndex = 80;
-            this.label44.Text = "Only available in PDF";
-            // 
-            // label42
-            // 
-            this.label42.Location = new System.Drawing.Point(20, 122);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(116, 33);
-            this.label42.TabIndex = 78;
-            this.label42.Text = "Include Document Name";
-            // 
             // Consultant_Name
             // 
-            this.Consultant_Name.Location = new System.Drawing.Point(80, 18);
+            this.Consultant_Name.Location = new System.Drawing.Point(142, 18);
             this.Consultant_Name.Name = "Consultant_Name";
             this.Consultant_Name.Size = new System.Drawing.Size(174, 20);
             this.Consultant_Name.TabIndex = 48;
@@ -1315,7 +1119,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(3, 25);
+            this.label55.Location = new System.Drawing.Point(1, 25);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(38, 13);
             this.label55.TabIndex = 49;
@@ -1323,7 +1127,7 @@
             // 
             // Consultant_Address
             // 
-            this.Consultant_Address.Location = new System.Drawing.Point(80, 44);
+            this.Consultant_Address.Location = new System.Drawing.Point(142, 44);
             this.Consultant_Address.Name = "Consultant_Address";
             this.Consultant_Address.Size = new System.Drawing.Size(174, 20);
             this.Consultant_Address.TabIndex = 51;
@@ -1332,7 +1136,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(3, 51);
+            this.label54.Location = new System.Drawing.Point(1, 51);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(45, 13);
             this.label54.TabIndex = 52;
@@ -1340,7 +1144,7 @@
             // 
             // Set_No
             // 
-            this.Set_No.Location = new System.Drawing.Point(80, 70);
+            this.Set_No.Location = new System.Drawing.Point(142, 70);
             this.Set_No.Name = "Set_No";
             this.Set_No.Size = new System.Drawing.Size(174, 20);
             this.Set_No.TabIndex = 53;
@@ -1349,7 +1153,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(3, 77);
+            this.label53.Location = new System.Drawing.Point(1, 77);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(43, 13);
             this.label53.TabIndex = 54;
@@ -1369,12 +1173,12 @@
             this.panel2.Controls.Add(this.Consultant_Address);
             this.panel2.Location = new System.Drawing.Point(3, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(347, 140);
+            this.panel2.Size = new System.Drawing.Size(331, 140);
             this.panel2.TabIndex = 97;
             // 
             // MadeDate
             // 
-            this.MadeDate.Location = new System.Drawing.Point(80, 96);
+            this.MadeDate.Location = new System.Drawing.Point(116, 96);
             this.MadeDate.Name = "MadeDate";
             this.MadeDate.Size = new System.Drawing.Size(200, 20);
             this.MadeDate.TabIndex = 56;
@@ -1392,18 +1196,18 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(3, 103);
+            this.label47.Location = new System.Drawing.Point(1, 100);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(36, 13);
+            this.label47.Size = new System.Drawing.Size(109, 13);
             this.label47.TabIndex = 54;
-            this.label47.Text = "Date: ";
+            this.label47.Text = "Contract Made Date: ";
             this.label47.Click += new System.EventHandler(this.label53_Click);
             // 
             // ContractDetails
             // 
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -1421,7 +1225,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(344, 1998);
+            this.Size = new System.Drawing.Size(347, 1721);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1443,8 +1247,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -1550,25 +1352,6 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox Consultant_Name;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.TextBox Consultant_Address;

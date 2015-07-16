@@ -129,20 +129,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl MeetingSchedule;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl43;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl44;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl45;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl46;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl47;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl48;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl49;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl50;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl51;
@@ -261,8 +247,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl110;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl111;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl112;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl113;
@@ -336,6 +320,16 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.Bookmark MethAbove;
         
         internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalAbove;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalStart;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmASSStart;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -495,13 +489,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl40.BeginInit();
             this.AlternativeTenders.BeginInit();
             this.MeetingSchedule.BeginInit();
-            this.richTextContentControl43.BeginInit();
-            this.richTextContentControl44.BeginInit();
-            this.richTextContentControl45.BeginInit();
-            this.richTextContentControl46.BeginInit();
-            this.richTextContentControl47.BeginInit();
-            this.richTextContentControl48.BeginInit();
-            this.richTextContentControl49.BeginInit();
             this.richTextContentControl50.BeginInit();
             this.richTextContentControl51.BeginInit();
             this.richTextContentControl52.BeginInit();
@@ -561,7 +548,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl108.BeginInit();
             this.richTextContentControl109.BeginInit();
             this.richTextContentControl110.BeginInit();
-            this.richTextContentControl111.BeginInit();
             this.richTextContentControl112.BeginInit();
             this.richTextContentControl113.BeginInit();
             this.richTextContentControl114.BeginInit();
@@ -599,6 +585,11 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethStart.BeginInit();
             this.MethAbove.BeginInit();
             this.FormC_MethEnd.BeginInit();
+            this.DocumentFormatForm.BeginInit();
+            this.bmPersonalAbove.BeginInit();
+            this.bmPersonalStart.BeginInit();
+            this.bmPersonalEnd.BeginInit();
+            this.bmASSStart.BeginInit();
         }
         
         /// 
@@ -606,6 +597,11 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmASSStart.EndInit();
+            this.bmPersonalEnd.EndInit();
+            this.bmPersonalStart.EndInit();
+            this.bmPersonalAbove.EndInit();
+            this.DocumentFormatForm.EndInit();
             this.FormC_MethEnd.EndInit();
             this.MethAbove.EndInit();
             this.FormC_MethStart.EndInit();
@@ -643,7 +639,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl114.EndInit();
             this.richTextContentControl113.EndInit();
             this.richTextContentControl112.EndInit();
-            this.richTextContentControl111.EndInit();
             this.richTextContentControl110.EndInit();
             this.richTextContentControl109.EndInit();
             this.richTextContentControl108.EndInit();
@@ -703,13 +698,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.EndInit();
             this.richTextContentControl51.EndInit();
             this.richTextContentControl50.EndInit();
-            this.richTextContentControl49.EndInit();
-            this.richTextContentControl48.EndInit();
-            this.richTextContentControl47.EndInit();
-            this.richTextContentControl46.EndInit();
-            this.richTextContentControl45.EndInit();
-            this.richTextContentControl44.EndInit();
-            this.richTextContentControl43.EndInit();
             this.MeetingSchedule.EndInit();
             this.AlternativeTenders.EndInit();
             this.richTextContentControl40.EndInit();
@@ -830,13 +818,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl40 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl40", this);
             this.AlternativeTenders = Globals.Factory.CreateRichTextContentControl(null, null, "2701580115", "AlternativeTenders", this);
             this.MeetingSchedule = Globals.Factory.CreateRichTextContentControl(null, null, "2769722768", "MeetingSchedule", this);
-            this.richTextContentControl43 = Globals.Factory.CreateRichTextContentControl(null, null, "2246138551", "richTextContentControl43", this);
-            this.richTextContentControl44 = Globals.Factory.CreateRichTextContentControl(null, null, "4159626105", "richTextContentControl44", this);
-            this.richTextContentControl45 = Globals.Factory.CreateRichTextContentControl(null, null, "131995785", "richTextContentControl45", this);
-            this.richTextContentControl46 = Globals.Factory.CreateRichTextContentControl(null, null, "2451507104", "richTextContentControl46", this);
-            this.richTextContentControl47 = Globals.Factory.CreateRichTextContentControl(null, null, "3877098858", "richTextContentControl47", this);
-            this.richTextContentControl48 = Globals.Factory.CreateRichTextContentControl(null, null, "1560362615", "richTextContentControl48", this);
-            this.richTextContentControl49 = Globals.Factory.CreateRichTextContentControl(null, null, "272366006", "richTextContentControl49", this);
             this.richTextContentControl50 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl50", this);
             this.richTextContentControl51 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl51", this);
             this.richTextContentControl52 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl52", this);
@@ -896,7 +877,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl108 = Globals.Factory.CreateRichTextContentControl(null, null, "2100905435", "richTextContentControl108", this);
             this.richTextContentControl109 = Globals.Factory.CreateRichTextContentControl(null, null, "2622796836", "richTextContentControl109", this);
             this.richTextContentControl110 = Globals.Factory.CreateRichTextContentControl(null, null, "3322219477", "richTextContentControl110", this);
-            this.richTextContentControl111 = Globals.Factory.CreateRichTextContentControl(null, null, "1632279992", "richTextContentControl111", this);
             this.richTextContentControl112 = Globals.Factory.CreateRichTextContentControl(null, null, "4248128866", "richTextContentControl112", this);
             this.richTextContentControl113 = Globals.Factory.CreateRichTextContentControl(null, null, "573939255", "richTextContentControl113", this);
             this.richTextContentControl114 = Globals.Factory.CreateRichTextContentControl(null, null, "622041455", "richTextContentControl114", this);
@@ -934,6 +914,11 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
             this.MethAbove = Globals.Factory.CreateBookmark(null, null, "MethAbove", "MethAbove", this);
             this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
+            this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
+            this.bmPersonalAbove = Globals.Factory.CreateBookmark(null, null, "bmPersonalAbove", "bmPersonalAbove", this);
+            this.bmPersonalStart = Globals.Factory.CreateBookmark(null, null, "bmPersonalStart", "bmPersonalStart", this);
+            this.bmPersonalEnd = Globals.Factory.CreateBookmark(null, null, "bmPersonalEnd", "bmPersonalEnd", this);
+            this.bmASSStart = Globals.Factory.CreateBookmark(null, null, "bmASSStart", "bmASSStart", this);
         }
         
         /// 
@@ -1166,34 +1151,6 @@ namespace NZTA_Contract_Generator {
             // MeetingSchedule
             // 
             this.MeetingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl43
-            // 
-            this.richTextContentControl43.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl44
-            // 
-            this.richTextContentControl44.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl45
-            // 
-            this.richTextContentControl45.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl46
-            // 
-            this.richTextContentControl46.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl47
-            // 
-            this.richTextContentControl47.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl48
-            // 
-            this.richTextContentControl48.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl49
-            // 
-            this.richTextContentControl49.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl50
             // 
@@ -1431,10 +1388,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl110.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl111
-            // 
-            this.richTextContentControl111.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl112
             // 
             this.richTextContentControl112.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1583,6 +1536,26 @@ namespace NZTA_Contract_Generator {
             // 
             this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // DocumentFormatForm
+            // 
+            this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalAbove
+            // 
+            this.bmPersonalAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalStart
+            // 
+            this.bmPersonalStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalEnd
+            // 
+            this.bmPersonalEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmASSStart
+            // 
+            this.bmASSStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1599,6 +1572,11 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmASSStart.Dispose();
+            this.bmPersonalEnd.Dispose();
+            this.bmPersonalStart.Dispose();
+            this.bmPersonalAbove.Dispose();
+            this.DocumentFormatForm.Dispose();
             this.FormC_MethEnd.Dispose();
             this.MethAbove.Dispose();
             this.FormC_MethStart.Dispose();
@@ -1636,7 +1614,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl114.Dispose();
             this.richTextContentControl113.Dispose();
             this.richTextContentControl112.Dispose();
-            this.richTextContentControl111.Dispose();
             this.richTextContentControl110.Dispose();
             this.richTextContentControl109.Dispose();
             this.richTextContentControl108.Dispose();
@@ -1696,13 +1673,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.Dispose();
             this.richTextContentControl51.Dispose();
             this.richTextContentControl50.Dispose();
-            this.richTextContentControl49.Dispose();
-            this.richTextContentControl48.Dispose();
-            this.richTextContentControl47.Dispose();
-            this.richTextContentControl46.Dispose();
-            this.richTextContentControl45.Dispose();
-            this.richTextContentControl44.Dispose();
-            this.richTextContentControl43.Dispose();
             this.MeetingSchedule.Dispose();
             this.AlternativeTenders.Dispose();
             this.richTextContentControl40.Dispose();
