@@ -35,6 +35,7 @@
             this.tbWeighting = new System.Windows.Forms.TextBox();
             this.btnPS = new System.Windows.Forms.Button();
             this.btnASS = new System.Windows.Forms.Button();
+            this.btnGetPersonnel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +57,7 @@
             this.lbPersonnel.Name = "lbPersonnel";
             this.lbPersonnel.Size = new System.Drawing.Size(250, 498);
             this.lbPersonnel.TabIndex = 4;
+            this.lbPersonnel.SelectedIndexChanged += new System.EventHandler(this.lbPersonnel_SelectedIndexChanged);
             // 
             // tbWeighting
             // 
@@ -67,7 +69,7 @@
             // 
             // btnPS
             // 
-            this.btnPS.Location = new System.Drawing.Point(34, 577);
+            this.btnPS.Location = new System.Drawing.Point(116, 577);
             this.btnPS.Name = "btnPS";
             this.btnPS.Size = new System.Drawing.Size(91, 36);
             this.btnPS.TabIndex = 6;
@@ -85,6 +87,16 @@
             this.btnASS.UseVisualStyleBackColor = true;
             this.btnASS.Click += new System.EventHandler(this.btnASS_Click);
             // 
+            // btnGetPersonnel
+            // 
+            this.btnGetPersonnel.Location = new System.Drawing.Point(8, 577);
+            this.btnGetPersonnel.Name = "btnGetPersonnel";
+            this.btnGetPersonnel.Size = new System.Drawing.Size(91, 36);
+            this.btnGetPersonnel.TabIndex = 6;
+            this.btnGetPersonnel.Text = "From Form B";
+            this.btnGetPersonnel.UseVisualStyleBackColor = true;
+            this.btnGetPersonnel.Click += new System.EventHandler(this.btnGetPersonnel_Click);
+            // 
             // Personnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +104,7 @@
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.btnASS);
+            this.Controls.Add(this.btnGetPersonnel);
             this.Controls.Add(this.btnPS);
             this.Controls.Add(this.tbWeighting);
             this.Controls.Add(this.lbPersonnel);
@@ -111,5 +124,6 @@
         private System.Windows.Forms.TextBox tbWeighting;
         private System.Windows.Forms.Button btnPS;
         private System.Windows.Forms.Button btnASS;
+        private System.Windows.Forms.Button btnGetPersonnel;
     }
 }

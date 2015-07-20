@@ -75,14 +75,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         private void TransferToFormC_Click(object sender, EventArgs e)
         {
 
-            decimal[] pst = new decimal[lbMeths.Items.Count];
+            decimal[] pctg = new decimal[lbMeths.Items.Count];
             //no weightings if Supplier Selection Methody is Lowest Price Conforming 
             if (contract.rbLPC == false)
             {
                 try
                 {
                     tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
-                    pst = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray()).Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();
+                    pctg = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray()).Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();
                 }
                 catch (Exception ex)
                 {
@@ -90,12 +90,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                     Console.Write(ex.Message);
                     return;
                 }
-                if (pst.Count() != lbMeths.Items.Count)
+                if (pctg.Count() != lbMeths.Items.Count)
                 {
                     Util.Help.guidanceNote("Each Methodology needs one percentage number");
                     return;
                 }
-                if (pst.Sum() != 100)
+                if (pctg.Sum() != 100)
                 {
                     Util.Help.guidanceNote("Percentage must add up to 100");
                     return;
@@ -121,7 +121,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             {
                 var rw = MethAbove.Rows.Add(ref bf);
                 rw.Cells[1].Range.Text = lbMeths.Items[i].ToString();
-                rw.Cells[2].Range.Text = (contract.rbLPC == true) ? "N/A" : pst[i].ToString() + "%";
+                rw.Cells[2].Range.Text = (contract.rbLPC == true) ? "N/A" : pctg[i].ToString() + "%";
             }
             FormC_MethStart.Select();
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;

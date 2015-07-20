@@ -75,6 +75,9 @@ namespace NZTA_Contract_Generator
         public String Street_2 { get; set; }
         public String Box_2 { get; set; }
         public String City_2 { get; set; }
+        public String Telephone_2 { get; set; }
+        public String Fax_2 { get; set; }
+        public String Email_2 { get; set; }
 
         public String numDays { get; set; }
         public String numHours { get; set; }
@@ -276,7 +279,11 @@ namespace NZTA_Contract_Generator
 
         //Start of Personnel
         public String tbWeighting { get; set; }
-
         //End of Personnel
+
+        //Start of Contract Pricing
+        public String CP_Total { get; set; }
+
+        //End of Contract Pricing
     }
 }

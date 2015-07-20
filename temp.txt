@@ -1,19 +1,23 @@
-Sub Test()
-    Dim rg As Range
-    Dim tmp As Range
-    Dim cll As Cell
-    Dim iFound As Long
-    iFound = 0
-    Set rg = ThisDocument.ContentControls(1).Range
+Electronic form , Yes click, focus to Document Format Form
+
+mrp04feb
+
+Level 3, ANZ Centre, 21 Grantham St, Hamilton 3204
+
+
+Sub test()
+    Dim tmp As Template
+    Dim i As AutoTextEntry
+    Set tmp = ThisDocument.AttachedTemplate
+    For Each i In tmp.AutoTextEntries
+        If i.Name = "Hamilton-GranthamSt" Then
+            Debug.Print "before name: " & i.Name
+            Debug.Print "before value: " & i.Value
+            'i.Value = Replace(i.Value, "21 Grantham Street", "Level 3, ANZ Centre, 21 Grantham St")
+            Debug.Print "after name: " & i.Name
+            Debug.Print "after value: " & i.Value
+        End If
+
+    Next i
     
-    rg.Find.ClearFormatting
-    rg.Find.Forward = True
-    rg.Find.text = "Sub-total Item"
-    rg.Find.Execute MatchWholeWord:=True
-    
-    Do While rg.Find.Found = True And rg.Start < ThisDocument.ContentControls(1).Range.End
-        iFound = iFound + 1
-        rg.Find.Execute
-        MsgBox iFound & rg.Start & "-" & rg.End
-    Loop
 End Sub

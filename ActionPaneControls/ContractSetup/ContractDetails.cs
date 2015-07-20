@@ -73,6 +73,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.Address_1 = selectedEntry.Key;
+                contract.Company_Name_1 = selectedEntry.Key;
+                contract.Level_1 = selectedEntry.Value.building;
+                contract.Street_1 = selectedEntry.Value.streetAddress;
+                contract.Box_1 = selectedEntry.Value.boxNumber;
+                contract.City_1 = selectedEntry.Value.city;
+                contract.Telephone_1 = selectedEntry.Value.telephone;
+                contract.Fax_1 = selectedEntry.Value.fax;
+
                 Company_Name_1.Text = selectedEntry.Key;
                 Level_1.Text = selectedEntry.Value.building;
                 Street_1.Text = selectedEntry.Value.streetAddress;
@@ -238,9 +246,22 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                //KeyValuePair<String, string> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
                 KeyValuePair<string, Util.Address> selectedEntry = (KeyValuePair<string, NZTA_Contract_Generator.Util.Address>)Address_2.SelectedItem;
                 contract.Address_2 = selectedEntry.Key;
+                contract.Company_Name_2 = selectedEntry.Key;
+                contract.Level_2 = selectedEntry.Value.building;
+                contract.Street_2 = selectedEntry.Value.streetAddress;
+                contract.Box_1 = selectedEntry.Value.boxNumber;
+                contract.City_2 = selectedEntry.Value.city;
+                contract.Telephone_2 = selectedEntry.Value.telephone;
+                contract.Fax_2 = selectedEntry.Value.fax;
+
+                Company_Name_2.Text = selectedEntry.Key;
+                Level_2.Text = selectedEntry.Value.building;
+                Street_2.Text = selectedEntry.Value.streetAddress;
+                Box_2.Text = selectedEntry.Value.boxNumber;
+                City_2.Text = selectedEntry.Value.city;
+                
                 Util.ContentControls.setText("NZTA_Or_Company", "NZTA " + selectedEntry.Key);
                 Util.ContentControls.setText("Address_2", selectedEntry.Value.building + " " + selectedEntry.Value.streetAddress);
                 Util.ContentControls.setText("Box_2", selectedEntry.Value.boxNumber);
