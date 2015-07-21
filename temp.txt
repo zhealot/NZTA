@@ -1,9 +1,6 @@
-Electronic form , Yes click, focus to Document Format Form
-
 mrp04feb
 
 Level 3, ANZ Centre, 21 Grantham St, Hamilton 3204
-
 
 Sub test()
     Dim tmp As Template
@@ -13,11 +10,9 @@ Sub test()
         If i.Name = "Hamilton-GranthamSt" Then
             Debug.Print "before name: " & i.Name
             Debug.Print "before value: " & i.Value
-            'i.Value = Replace(i.Value, "21 Grantham Street", "Level 3, ANZ Centre, 21 Grantham St")
+            i.Value = Replace(i.Value, "21 Grantham Street", "Level 3, ANZ Centre, 21 Grantham St")
             Debug.Print "after name: " & i.Name
             Debug.Print "after value: " & i.Value
         End If
-
-    Next i
-    
+    Next i    
 End Sub

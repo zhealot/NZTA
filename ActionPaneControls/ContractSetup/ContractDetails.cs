@@ -29,13 +29,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             //Region combobox
             Region.DataSource = new BindingSource(Constants.Location.data, null);
             Region.DisplayMember = "Key";
-            Region.ValueMember = "Key";
+            Region.ValueMember = "Value";
             Region.SelectedIndex = -1;
 
             //Tender box
             TenderBox.DataSource = new BindingSource(Constants.Location.data, null);
             TenderBox.DisplayMember = "Key";
-            TenderBox.ValueMember = "Key";
+            TenderBox.ValueMember = "Value";
             TenderBox.SelectedIndex = -1;
 
             //Address 2 combobox
@@ -190,7 +190,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<String, String> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.Region = selectedEntry.Key;
             }
         }
@@ -231,7 +231,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<String, String> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.TenderBox = selectedEntry.Key;
             }
         }
@@ -246,7 +246,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<string, Util.Address> selectedEntry = (KeyValuePair<string, NZTA_Contract_Generator.Util.Address>)Address_2.SelectedItem;
+                KeyValuePair<string, Util.Address> selectedEntry = (KeyValuePair<string, Util.Address>)Address_2.SelectedItem;
                 contract.Address_2 = selectedEntry.Key;
                 contract.Company_Name_2 = selectedEntry.Key;
                 contract.Level_2 = selectedEntry.Value.building;
@@ -347,13 +347,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.anotherMeansYes = true;
             contract.anotherMeansNo = false;
             Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+            otherDetails.Focus();
         }
 
-        private void otherDetails_TextChanged(object sender, EventArgs e)
-        {
-            contract.otherDetails = ((TextBox)sender).Text;
-            Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails + ".");
-        }
+
 
         private void isPersonDifferentNo_CheckedChanged(object sender, EventArgs e)
         {
@@ -437,6 +434,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Set_No = ((TextBox)sender).Text; ;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+
+        private void otherDetails_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(otherDetails.Text))
+            {
+                Util.Help.guidanceNote("Please enter content.");
+                otherDetails.Focus();
+                return;
+            }
+            contract.otherDetails = ((TextBox)sender).Text;
+            Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
         }
     }
 }

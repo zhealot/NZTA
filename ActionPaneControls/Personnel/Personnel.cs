@@ -48,7 +48,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
                     }
                 }
             }
-            tbWeighting.Text.TrimEnd(Environment.NewLine.ToArray());
+            tbWeighting.Text = tbWeighting.Text.TrimEnd(Environment.NewLine.ToArray());
             //no weightings for Lowest Price Conforming
             if (!contract.rbLPC)
             {
@@ -118,7 +118,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
 
         private void lbPersonnel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tbWeighting.Lines.Count() >= lbPersonnel.Items.Count + 1)
+            if (tbWeighting.Lines.Count() >= lbPersonnel.Items.Count + 1 && lbPersonnel.SelectedIndex > 0)
             {
                 tbWeighting.Select(tbWeighting.GetFirstCharIndexFromLine(lbPersonnel.SelectedIndex), 0);
                 tbWeighting.Focus();

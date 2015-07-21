@@ -55,20 +55,18 @@
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Contract Pricing");
             System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Geotechnical Testing Schedule");
             System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Additional Services Schedule");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Personnel Schedule");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
             treeNode15,
             treeNode16,
-            treeNode17,
-            treeNode18});
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Signing Set");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Contract front page");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Contents");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Abbreviations");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Contract", new System.Windows.Forms.TreeNode[] {
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Signing Set");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Contract front page");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Contents");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Abbreviations");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Contract", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
             treeNode21,
-            treeNode22,
-            treeNode23});
+            treeNode22});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
@@ -124,29 +122,26 @@
             treeNode17.Name = "SectionC.AdditionalServicesSchedule";
             treeNode17.Tag = "Additional_Services_Schedule";
             treeNode17.Text = "Additional Services Schedule";
-            treeNode18.Name = "SectionC.PersonnelSchedule";
-            treeNode18.Tag = "Personnel_Schedule";
-            treeNode18.Text = "Personnel Schedule";
-            treeNode19.Name = "SectionC";
-            treeNode19.Text = "Section C";
-            treeNode20.Name = "Node4";
-            treeNode20.Text = "Signing Set";
-            treeNode21.Name = "Node6";
-            treeNode21.Text = "Contract front page";
-            treeNode22.Name = "Node8";
-            treeNode22.Text = "Contents";
-            treeNode23.Name = "Node9";
-            treeNode23.Text = "Abbreviations";
-            treeNode24.Name = "Node5";
-            treeNode24.Text = "Contract";
+            treeNode18.Name = "SectionC";
+            treeNode18.Text = "Section C";
+            treeNode19.Name = "Node4";
+            treeNode19.Text = "Signing Set";
+            treeNode20.Name = "Node6";
+            treeNode20.Text = "Contract front page";
+            treeNode21.Name = "Node8";
+            treeNode21.Text = "Contents";
+            treeNode22.Name = "Node9";
+            treeNode22.Text = "Abbreviations";
+            treeNode23.Name = "Node5";
+            treeNode23.Text = "Contract";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode11,
             treeNode12,
             treeNode14,
+            treeNode18,
             treeNode19,
-            treeNode20,
-            treeNode24});
+            treeNode23});
             this.treeView1.Size = new System.Drawing.Size(268, 650);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

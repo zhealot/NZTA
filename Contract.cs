@@ -274,7 +274,9 @@ namespace NZTA_Contract_Generator
         public String PublicLiabilityInsurance { get; set; }
         public String MaximumLiability { get; set; }
         public String DurationOfLiability { get; set; }
-
+        public Boolean rbNotRequired { get; set; }
+        public Boolean rbApprovedDefault { get; set; }
+        public Boolean rbOtherLevels { get; set; }
         //End of PublicLiabilityInsurance
 
         //Start of Personnel

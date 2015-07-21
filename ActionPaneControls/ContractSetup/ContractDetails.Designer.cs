@@ -851,7 +851,7 @@
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(100, 20);
             this.otherDetails.TabIndex = 78;
-            this.otherDetails.TextChanged += new System.EventHandler(this.otherDetails_TextChanged);
+            this.otherDetails.Leave += new System.EventHandler(this.otherDetails_Leave);
             // 
             // label37
             // 

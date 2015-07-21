@@ -13,7 +13,7 @@ namespace NZTA_Contract_Generator.Util
             Microsoft.Office.Interop.Word.ContentControls ccs = doc.SelectContentControlsByTag(tag);
             foreach (ContentControl cc in ccs)
             {
-                cc.Range.Text = text;
+                cc.Range.Text = text.Replace("\r\n", " ");
             }  
         }
 

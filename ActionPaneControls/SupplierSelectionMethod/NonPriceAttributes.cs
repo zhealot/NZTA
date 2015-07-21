@@ -68,7 +68,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                     tbPercent.Text += tb.Rows[i].Cells[2].Range.Text.Replace("%", "").Replace("\r\a", "") + Environment.NewLine;
                 }
             }
-            tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
+            tbPercent.Text = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
             NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Select();
         }
 
@@ -81,7 +81,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             {
                 try
                 {
-                    tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
+                    //tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
                     pctg = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray()).Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Select(decimal.Parse).ToArray();
                 }
                 catch (Exception ex)
@@ -131,7 +131,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         private void lbMeths_SelectedIndexChanged(object sender, EventArgs e)
         {
             //place cursor to corresponding weighting line 
-            if (tbPercent.Lines.Count() >= lbMeths.SelectedIndex + 1)
+            if (tbPercent.Lines.Count() >= lbMeths.SelectedIndex + 1 && lbMeths.SelectedIndex > 0)
             {
                 tbPercent.Select(tbPercent.GetFirstCharIndexFromLine(lbMeths.SelectedIndex), 0);
                 tbPercent.Focus();

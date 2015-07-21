@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbNotRequired = new System.Windows.Forms.RadioButton();
+            this.rbApprovedDefault = new System.Windows.Forms.RadioButton();
+            this.rbOtherLevels = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.MaximumLiability = new System.Windows.Forms.TextBox();
             this.DurationOfLiability = new System.Windows.Forms.TextBox();
@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.PublicLiabilityInsurance = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -61,39 +63,39 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Do Insurance Levels require approval by the Risk/Insurance Sub VAC?";
             // 
-            // radioButton1
+            // rbNotRequired
             // 
-            this.radioButton1.Location = new System.Drawing.Point(6, 91);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(225, 41);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "No. Risk/Insurance Sub VAC approval is not required";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbNotRequired.Location = new System.Drawing.Point(6, 10);
+            this.rbNotRequired.Name = "rbNotRequired";
+            this.rbNotRequired.Size = new System.Drawing.Size(225, 41);
+            this.rbNotRequired.TabIndex = 4;
+            this.rbNotRequired.TabStop = true;
+            this.rbNotRequired.Text = "No. Risk/Insurance Sub VAC approval is not required";
+            this.rbNotRequired.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbApprovedDefault
             // 
-            this.radioButton2.Location = new System.Drawing.Point(6, 138);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(225, 41);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "YES. Levels have been approved at default levels";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbApprovedDefault.Location = new System.Drawing.Point(6, 57);
+            this.rbApprovedDefault.Name = "rbApprovedDefault";
+            this.rbApprovedDefault.Size = new System.Drawing.Size(225, 41);
+            this.rbApprovedDefault.TabIndex = 5;
+            this.rbApprovedDefault.TabStop = true;
+            this.rbApprovedDefault.Text = "YES. Levels have been approved at default levels";
+            this.rbApprovedDefault.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbOtherLevels
             // 
-            this.radioButton3.Location = new System.Drawing.Point(6, 185);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(225, 41);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "YES. Other levels have been approved";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbOtherLevels.Location = new System.Drawing.Point(6, 104);
+            this.rbOtherLevels.Name = "rbOtherLevels";
+            this.rbOtherLevels.Size = new System.Drawing.Size(225, 41);
+            this.rbOtherLevels.TabIndex = 6;
+            this.rbOtherLevels.TabStop = true;
+            this.rbOtherLevels.Text = "YES. Other levels have been approved";
+            this.rbOtherLevels.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 233);
+            this.label3.Location = new System.Drawing.Point(6, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(254, 33);
             this.label3.TabIndex = 7;
@@ -101,7 +103,7 @@
             // 
             // MaximumLiability
             // 
-            this.MaximumLiability.Location = new System.Drawing.Point(6, 270);
+            this.MaximumLiability.Location = new System.Drawing.Point(6, 307);
             this.MaximumLiability.Name = "MaximumLiability";
             this.MaximumLiability.Size = new System.Drawing.Size(225, 20);
             this.MaximumLiability.TabIndex = 8;
@@ -109,7 +111,7 @@
             // 
             // DurationOfLiability
             // 
-            this.DurationOfLiability.Location = new System.Drawing.Point(6, 328);
+            this.DurationOfLiability.Location = new System.Drawing.Point(6, 365);
             this.DurationOfLiability.Name = "DurationOfLiability";
             this.DurationOfLiability.Size = new System.Drawing.Size(225, 20);
             this.DurationOfLiability.TabIndex = 10;
@@ -117,7 +119,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(6, 304);
+            this.label4.Location = new System.Drawing.Point(6, 341);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(254, 21);
             this.label4.TabIndex = 9;
@@ -125,7 +127,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(6, 355);
+            this.label5.Location = new System.Drawing.Point(6, 392);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 63);
             this.label5.TabIndex = 11;
@@ -134,7 +136,7 @@
             // 
             // PublicLiabilityInsurance
             // 
-            this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 440);
+            this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 477);
             this.PublicLiabilityInsurance.Name = "PublicLiabilityInsurance";
             this.PublicLiabilityInsurance.Size = new System.Drawing.Size(225, 20);
             this.PublicLiabilityInsurance.TabIndex = 12;
@@ -143,14 +145,26 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 418);
+            this.label6.Location = new System.Drawing.Point(6, 455);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "The amount of Public Liability Insurance will be: ";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbApprovedDefault);
+            this.groupBox1.Controls.Add(this.rbNotRequired);
+            this.groupBox1.Controls.Add(this.rbOtherLevels);
+            this.groupBox1.Location = new System.Drawing.Point(6, 90);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(251, 160);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            // 
             // LiabilityandInsurance
             // 
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PublicLiabilityInsurance);
             this.Controls.Add(this.label5);
@@ -158,13 +172,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.MaximumLiability);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LiabilityandInsurance";
             this.Size = new System.Drawing.Size(280, 650);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,9 +186,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbNotRequired;
+        private System.Windows.Forms.RadioButton rbApprovedDefault;
+        private System.Windows.Forms.RadioButton rbOtherLevels;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox MaximumLiability;
         private System.Windows.Forms.TextBox DurationOfLiability;
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PublicLiabilityInsurance;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
