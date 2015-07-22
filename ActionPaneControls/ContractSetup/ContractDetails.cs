@@ -14,18 +14,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public ContractDetails()
         {
             InitializeComponent();
-
             //Load any data
-
-            ignoreChange = true;
-            
+            ignoreChange = true;            
             //Address combobox
             Address_1.DataSource = new BindingSource(Constants.Location.data, null);
             Address_1.DisplayMember = "Key";
             Address_1.ValueMember = "Value";
             Address_1.SelectedIndex = -1;
            
-
             //Region combobox
             Region.DataSource = new BindingSource(Constants.Location.data, null);
             Region.DisplayMember = "Key";
@@ -43,8 +39,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Address_2.DisplayMember = "Key";
             Address_2.ValueMember = "Value";
             Address_2.SelectedIndex = -1;
-
-            elecNo.Checked = true;
+            gbElecForm.Enabled = false;
+            anotherMeansNo.Checked = true;
             ignoreChange = false;
 
             //Load saved state. Defaults set in state...
@@ -181,19 +177,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
-        private void Email_1_Leave(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsEmail(Email_1.Text))
-            {
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-                contract.Email_1 = ((TextBox)sender).Text;                
-            }
-            else
-            {
-                Util.Help.guidanceNote("Invalid Email address");
-            }            
-        }
-
         private void Region_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
@@ -247,7 +230,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void Nominated_Phone_TextChanged(object sender, EventArgs e)
         {
             Util.ContentControls.setText(((TextBox)sender).Name, (((TextBox)sender).Text));
-            contract.Nominated_Person = ((TextBox)sender).Text;
+            contract.Nominated_Phone = ((TextBox)sender).Text;
         }
 
         private void Address_2_SelectedIndexChanged(object sender, EventArgs e)
@@ -322,12 +305,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void elecYes_CheckedChanged(object sender, EventArgs e)
         {
             contract.elecYes = elecYes.Checked;
-            contract.elecNo = !elecYes.Checked;
-            label37.Enabled = elecYes.Checked;
-            label36.Enabled = elecYes.Checked;
-            anotherMeansNo.Enabled = elecYes.Checked;
-            anotherMeansYes.Enabled = elecYes.Checked;
-            otherDetails.Enabled = elecYes.Checked;            
+            gbElecForm.Enabled = elecYes.Checked;
             if (anotherMeansYes.Checked)
             {
                 anotherMeansYes_CheckedChanged(anotherMeansYes, null);
@@ -344,29 +322,21 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (!ignoreChange)
             {
                 contract.elecNo = elecNo.Checked;
-                contract.elecYes = !elecNo.Checked;                
                 Util.ContentControls.setText("E-Copy", "");
             }
-            label37.Enabled = !elecNo.Checked;
-            label36.Enabled = !elecNo.Checked;
-            anotherMeansNo.Enabled = !elecNo.Checked;
-            anotherMeansYes.Enabled = !elecNo.Checked;
-            otherDetails.Enabled = !elecNo.Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
 
         private void anotherMeansNo_CheckedChanged(object sender, EventArgs e)
         {
-            contract.anotherMeansNo = true;
-            contract.anotherMeansYes = false;
+            contract.anotherMeansNo = anotherMeansNo.Checked;
             otherDetails.Enabled = !anotherMeansNo.Checked;
             Util.ContentControls.setText("E-Copy", " and Email");
         }
 
         private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.anotherMeansYes = true;
-            contract.anotherMeansNo = false;
+            contract.anotherMeansYes = anotherMeansYes.Checked;
             otherDetails.Enabled = anotherMeansYes.Checked;
             //Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
             //otherDetails.Focus();
@@ -471,34 +441,43 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
         }
 
-        private void Email_1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Email_1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void otherDetails_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void mail_1_TextChanged_1(object sender, EventArgs e)
-        {
-                
-        }
-
-        private void groupBox10_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void otherDetails_TextChanged_1(object sender, EventArgs e)
         {
 
         }
+
+        private void Email_1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!Util.ContentControls.IsEmail(Email_1.Text))
+            {
+                MessageBox.Show("wrong email address");
+                Email_1.Focus();
+            }
+            else
+            {
+                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                contract.Email_1 = ((TextBox)sender).Text;             
+            }
+        }
+
+        private void Different_Email_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!Util.ContentControls.IsEmail(((TextBox)sender).Text))
+            {
+                MessageBox.Show("Invalid email address");
+                Different_Email.Focus();
+            }
+            else
+            {
+                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                contract.Different_Email = ((TextBox)sender).Text;
+            }
+        }
+
     }
 }

@@ -12,46 +12,67 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
 {
     public partial class Specifications : UserControl
     {
+        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
         public Specifications()
         {
-            //Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
             InitializeComponent();
             //Load saved state. Defaults set in state...
-            //Util.SavedState.setControlsToState(contract, Controls);
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
-        //### exclusive with another check box
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void ContractManagemnet_CheckedChanged(object sender, EventArgs e)
         {
+            contract.ContractManagemnet = ((CheckBox)sender).Checked;
+        }
 
+        private void InvestigationReporting_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.InvestigationReporting = ((CheckBox)sender).Checked;
+        }
+
+        private void DesignProject_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.DesignProject = ((CheckBox)sender).Checked;
+        }
+
+        private void DesignConstruct_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.DesignConstruct = ((CheckBox)sender).Checked;
+        }
+
+        private void MSQA_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.MSQA = ((CheckBox)sender).Checked;
+        }
+
+        private void NetworkMangement_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.NetworkMangement = ((CheckBox)sender).Checked;
+        }
+
+        private void HybridContract_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.HybridContract = ((CheckBox)sender).Checked;
+        }
+
+        private void BridgesOther_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.BridgesOther = ((CheckBox)sender).Checked;
         }
 
         private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)
         {
-            label3.Enabled = false;
-            label4.Enabled = false;
-            label5.Enabled = false;
-            label6.Enabled = false;
-            label7.Enabled = false;
-            textBox1.Enabled = false;
-            textBox2.Enabled = false;
-            textBox3.Enabled = false;
-            textBox4.Enabled = false;
-            textBox5.Enabled = false;   
+            contract.MultipleProjects_No = ((RadioButton)sender).Checked;
         }
 
         private void MultipleProjects_Yes_CheckedChanged(object sender, EventArgs e)
         {
-            label3.Enabled = true;
-            label4.Enabled = true;
-            label5.Enabled = true;
-            label6.Enabled = true;
-            label7.Enabled = true;
-            textBox1.Enabled = true;
-            textBox2.Enabled = true;
-            textBox3.Enabled = true;
-            textBox4.Enabled = true;
-            textBox5.Enabled = true;      
+            contract.MultipleProjects_Yes = ((RadioButton)sender).Checked;
+        }
+
+        private void Project1_TextChanged(object sender, EventArgs e)
+        {
+            contract.Project1 = ((TextBox)sender).Text;
         }
     }
 }
