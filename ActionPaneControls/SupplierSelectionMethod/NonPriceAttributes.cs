@@ -22,19 +22,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void RelevantExperience_ValueChanged(object sender, EventArgs e)
         {
-            contract.RelevantExperience = ((NumericUpDown)sender).Value.ToString();
+            contract.RelevantExperience = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
         }
 
         private void TrackRecord_ValueChanged(object sender, EventArgs e)
         {
-            contract.TrackRecord = ((NumericUpDown)sender).Value.ToString();
+            contract.TrackRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
         }
 
         private void ExperienceVSRecord_ValueChanged(object sender, EventArgs e)
         {
-            contract.ExperienceVSRecord = ((NumericUpDown)sender).Value.ToString();
+            contract.ExperienceVSRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
         }
 

@@ -22,18 +22,22 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Meeting_Box.Visible = true;
             contract.Interactive_Yes = true;
             contract.Interactive_No = false;
-            if (Interactive_Yes.Checked)
+            if (Interactive_Yes.Checked && NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables.Count == 0)
             {
+                //for (int i = 1; i <= NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables.Count; i++)
+                //{
+                //    NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[i].Delete();
+                //}
                 var rg = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range;
                 var tbl = rg.Tables.Add(rg, 6, 2);
                 tbl.Borders.Enable = 1;
             }
-            Combined_Check.Checked = false;
-            Individual1_Check.Checked = false;
-            Individual2_Check.Checked = false;
-            Individual3_Check.Checked = false;
-            Individual4_Check.Checked = false;
-            Individual5_Check.Checked = false;
+            Combined_Check_CheckedChanged(Combined_Check, null);
+            Individual1_Check_CheckedChanged(Individual1_Check, null);
+            Individual2_Check_CheckedChanged(Individual2_Check, null);
+            Individual3_Check_CheckedChanged(Individual3_Check, null);
+            Individual4_Check_CheckedChanged(Individual4_Check, null);
+            Individual5_Check_CheckedChanged(Individual5_Check, null);
         }
 
         private void Interactive_No_CheckedChanged(object sender, EventArgs e)
@@ -54,58 +58,58 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Combined_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Combined_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Combined_Date = Combined_Date.Value.ToString("O");
+            Util.ContentControls.setText(Combined_Date.Name, Combined_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[1].Cells[1].Range.Text = contract.Combined_Date +"(DD/MM/YYYY)" + Environment.NewLine + Combined_Time.Value.ToString("HH/mm") +"(HH/mm)";
+            tbl.Rows[1].Cells[1].Range.Text = Combined_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MMM/YYYY)" + Environment.NewLine + Combined_Time.Value.ToString("HH/mm") + "(HH/mm)";
         }
 
         private void Individual1_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Individual1_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Individual1_Date = Individual1_Date.Value.ToString("O");
+            Util.ContentControls.setText(Individual1_Date.Name, Individual1_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[2].Cells[1].Range.Text = contract.Individual1_Date + "(DD/MM/YYYY)";
+            tbl.Rows[2].Cells[1].Range.Text = Individual1_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MM/YYYY)";
         }
 
         private void Combined_Time_ValueChanged(object sender, EventArgs e)
         {
-            contract.Combined_Time = ((DateTimePicker)sender).Value.ToString("HH/mm");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("HH/mm"));
+            contract.Combined_Time = Combined_Time.Value.ToString("O");
+            Util.ContentControls.setText(Combined_Time.Name, Combined_Time.Value.ToString("HH/mm"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[1].Cells[1].Range.Text = Combined_Date.Value.ToString("dd/MM/yyyy") + "(DD/MM/YYYY)" + Environment.NewLine + contract.Combined_Time+"(HH/mm)";
+            tbl.Rows[1].Cells[1].Range.Text = Combined_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MMM/YYYY)" + Environment.NewLine + Combined_Time.Value.ToString("HH/mm") + "(HH/mm)";
         }
 
         private void Individual2_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Individual2_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Individual2_Date = Individual2_Date.Value.ToString("O");
+            Util.ContentControls.setText(Individual2_Date.Name, Individual2_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[3].Cells[1].Range.Text = contract.Individual2_Date + "(DD/MM/YYYY)";
+            tbl.Rows[3].Cells[1].Range.Text = Individual2_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MM/YYYY)";
         }
 
         private void Individual3_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Individual3_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Individual3_Date = Individual3_Date.Value.ToString("O");
+            Util.ContentControls.setText(Individual3_Date.Name, Individual3_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[4].Cells[1].Range.Text = contract.Individual3_Date + "(DD/MM/YYYY)";
+            tbl.Rows[4].Cells[1].Range.Text = Individual3_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MM/YYYY)";
         }
 
         private void Individual4_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Individual4_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Individual4_Date = Individual4_Date.Value.ToString("O");
+            Util.ContentControls.setText(Individual4_Date.Name, Individual4_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[5].Cells[1].Range.Text = contract.Individual5_Date + "(DD/MM/YYYY)";
+            tbl.Rows[5].Cells[1].Range.Text = Individual4_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MM/YYYY)";
         }
 
         private void Individual5_Date_ValueChanged(object sender, EventArgs e)
         {
-            contract.Individual5_Date = ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd/MM/yyyy"));
+            contract.Individual5_Date = Individual5_Date.Value.ToString("O");
+            Util.ContentControls.setText(Individual5_Date.Name, Individual5_Date.Value.ToString("dd/MMM/yyyy"));
             var tbl = NZTA_Contract_Generator.Globals.ThisDocument.MeetingSchedule.Range.Tables[1];
-            tbl.Rows[6].Cells[1].Range.Text = contract.Individual5_Date + "(DD/MM/YYYY)";
+            tbl.Rows[6].Cells[1].Range.Text = Individual5_Date.Value.ToString("dd/MMM/yyyy") + " (DD/MM/YYYY)";
         }
 
         private void Combined_Check_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +122,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {                
                 tbl.Rows[1].Cells[2].Range.Text = "Combined Meeting";
+                Combined_Date_ValueChanged(Combined_Date, null);
+                Combined_Time_ValueChanged(Combined_Time, null);
             }
             else
             {
@@ -135,6 +141,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {                
                 tbl.Rows[2].Cells[2].Range.Text = "Individual Meetings I";
+                Individual1_Date_ValueChanged(Individual1_Date, null);
             }
             else
             {
@@ -151,6 +158,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {
                 tbl.Rows[3].Cells[2].Range.Text = "Individual Meetings II";
+                Individual2_Date_ValueChanged(Individual2_Date, null);
             }
             else
             {
@@ -167,6 +175,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {
                 tbl.Rows[4].Cells[2].Range.Text = "Individual Meetings III";
+                Individual3_Date_ValueChanged(Individual3_Date, null);
             }
             else
             {
@@ -183,6 +192,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {
                 tbl.Rows[5].Cells[2].Range.Text = "Individual Meetings IV";
+                Individual4_Date_ValueChanged(Individual4_Date, null);
             }
             else
             {
@@ -199,6 +209,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (((CheckBox)sender).Checked)
             {
                 tbl.Rows[6].Cells[2].Range.Text = "Individual Meetings V";
+                Individual5_Date_ValueChanged(Individual5_Date, null);
             }
             else
             {

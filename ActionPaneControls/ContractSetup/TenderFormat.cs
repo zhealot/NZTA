@@ -17,14 +17,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public TenderFormat()
         {
             InitializeComponent();
-
             //Load saved state. Defaults set in state...
-            Util.SavedState.setControlsToState(contract, Controls);
-            
+            Util.SavedState.setControlsToState(contract, Controls);            
         }
 
         private void CopyOfEnvelope_ValueChanged(object sender, EventArgs e)
         {
+            contract.CopyOfEnvelope = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText("CopyOfEnvelope", Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
         }
 
@@ -73,9 +72,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Index_Page_TextChanged(object sender, EventArgs e)
         {
+            contract.Index_A3_Check = (sender == Index_A3_Check) ? Index_A3_Check.Checked : contract.Index_A3_Check;
+            contract.Index_Double_Check = (sender == Index_Double_Check) ? Index_Double_Check.Checked : contract.Index_Double_Check;
             if (Util.ContentControls.Validator(Index_Page.Text, typeof(int)))
             {
-                contract.Index_Page = Index_Page.Text;
+                contract.Index_Page = Index_Page.Text;                
                 Util.ContentControls.setText("Index_Page", Index_Page.Text + ((Index_A3_Check.Checked == true) ? " x A3 " : "")+((Index_Double_Check.Checked == true) ? " x Double sided" : ""));
             }
             else
@@ -87,6 +88,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Project_Page_TextChanged(object sender, EventArgs e)
         {
+            contract.Project_Check = (sender == Project_Check) ? Project_Check.Checked : contract.Project_Check;
+            contract.Project_A3_Check = (sender == Project_A3_Check) ? Project_A3_Check.Checked : contract.Project_A3_Check;
             if (Project_Check.Checked)
             {
                 if (Util.ContentControls.Validator(Project_Page.Text, typeof(int)))
@@ -109,6 +112,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void NonPrice_Page_TextChanged(object sender, EventArgs e)
         {
+            contract.NonPrice_A3_Check = (sender == NonPrice_A3_Check) ? NonPrice_A3_Check.Checked : contract.NonPrice_A3_Check;
+            contract.NonPrice_Double_Check = (sender == NonPrice_Double_Check) ? NonPrice_Double_Check.Checked : contract.NonPrice_Double_Check;
             if (Util.ContentControls.Validator(NonPrice_Page.Text, typeof(int)))
             {
                 contract.NonPrice_Page = NonPrice_Page.Text;
@@ -142,6 +147,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Outline_Page_TextChanged(object sender, EventArgs e)
         {
+            contract.Outline_Check = (sender == Outline_Check) ? Outline_Check.Checked : contract.Outline_Check;
+            contract.Outline_A3_Check = (sender == Outline_A3_Check) ? Outline_A3_Check.Checked : contract.Outline_A3_Check;
+            contract.Outline_Double_Check = (sender == Outline_Double_Check) ? Outline_Double_Check.Checked : contract.Outline_Double_Check;
             if (Outline_Check.Checked)
             {                
                 if (Util.ContentControls.Validator(Outline_Page.Text, typeof(int)))
@@ -167,6 +175,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CV_Page_TextChanged(object sender, EventArgs e)
         {
+            contract.CV_Check = (sender == CV_Check) ? CV_Check.Checked : contract.CV_Check;
+            contract.CV_A3_Check = (sender == CV_A3_Check) ? CV_A3_Check.Checked : contract.CV_A3_Check;
             if (CV_Check.Checked)
             {
                 if (Util.ContentControls.Validator(CV_Page.Text, typeof(int)))
@@ -184,6 +194,25 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             else
             {
                 Util.ContentControls.setText("CV_Page", "");
+            }
+        }
+
+        private void TimeResource_Page_TextChanged(object sender, EventArgs e)
+        {
+            contract.TimeResource_Check = (sender == TimeResource_Check) ? TimeResource_Check.Checked : contract.TimeResource_Check;
+            contract.TimeResource_A3_Check = (sender == TimeResource_A3_Check) ? TimeResource_A3_Check.Checked : contract.TimeResource_A3_Check;
+            if (TimeResource_Check.Checked)
+            {
+                if (Util.ContentControls.Validator(TimeResource_Page.Text, typeof(int)))
+                {
+                    contract.TimeResource_Page = TimeResource_Page.Text;
+                    Util.ContentControls.setText("TimeResource", TimeResource_Page.Text + ((TimeResource_A3_Check.Checked == true) ? " x A3" : ""));
+                }
+                else
+                {
+                    TimeResource_Page.Focus();
+                    Util.Help.guidanceNote("Please enter a number");
+                }
             }
         }
     }

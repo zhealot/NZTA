@@ -72,6 +72,7 @@
             this.rbNotRequired.TabStop = true;
             this.rbNotRequired.Text = "No. Risk/Insurance Sub VAC approval is not required";
             this.rbNotRequired.UseVisualStyleBackColor = true;
+            this.rbNotRequired.CheckedChanged += new System.EventHandler(this.rbNotRequired_CheckedChanged);
             // 
             // rbApprovedDefault
             // 
@@ -82,6 +83,7 @@
             this.rbApprovedDefault.TabStop = true;
             this.rbApprovedDefault.Text = "YES. Levels have been approved at default levels";
             this.rbApprovedDefault.UseVisualStyleBackColor = true;
+            this.rbApprovedDefault.CheckedChanged += new System.EventHandler(this.rbApprovedDefault_CheckedChanged);
             // 
             // rbOtherLevels
             // 
@@ -92,6 +94,7 @@
             this.rbOtherLevels.TabStop = true;
             this.rbOtherLevels.Text = "YES. Other levels have been approved";
             this.rbOtherLevels.UseVisualStyleBackColor = true;
+            this.rbOtherLevels.CheckedChanged += new System.EventHandler(this.rbOtherLevels_CheckedChanged);
             // 
             // label3
             // 

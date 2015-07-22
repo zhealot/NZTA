@@ -47,5 +47,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.DurationOfLiability = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
+
+        private void rbNotRequired_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.rbNotRequired = ((RadioButton)sender).Checked;
+        }
+
+        private void rbApprovedDefault_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.rbApprovedDefault = ((RadioButton)sender).Checked;
+        }
+
+        private void rbOtherLevels_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.rbOtherLevels = ((RadioButton)sender).Checked;
+        }
     }
 }

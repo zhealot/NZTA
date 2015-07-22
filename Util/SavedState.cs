@@ -43,6 +43,10 @@ namespace NZTA_Contract_Generator.Util
                 {
                     ((CheckBox)c).Checked = (Boolean)con[c.Name];
                 }
+                else if (c is NumericUpDown)
+                {
+                    ((NumericUpDown)c).Value = (decimal)con[c.Name]; //(con[c.Name] == null) ? 0 : (decimal)con[c.Name];
+                }
             }
         }
     }

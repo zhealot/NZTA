@@ -44,6 +44,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Address_2.ValueMember = "Value";
             Address_2.SelectedIndex = -1;
 
+            elecNo.Checked = true;
             ignoreChange = false;
 
             //Load saved state. Defaults set in state...
@@ -180,10 +181,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
-        private void Email_1_TextChanged(object sender, EventArgs e)
+        private void Email_1_Leave(object sender, EventArgs e)
         {
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            contract.Email_1 = ((TextBox)sender).Text;
+            if (Util.ContentControls.IsEmail(Email_1.Text))
+            {
+                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                contract.Email_1 = ((TextBox)sender).Text;                
+            }
+            else
+            {
+                Util.Help.guidanceNote("Invalid Email address");
+            }            
         }
 
         private void Region_SelectedIndexChanged(object sender, EventArgs e)
@@ -313,41 +321,56 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void elecYes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.elecYes = true;
-            contract.elecNo = false;
-            label37.Enabled = true;
-            label36.Enabled = true;
-            anotherMeansNo.Enabled = true;
-            anotherMeansYes.Enabled = true;
-            otherDetails.Enabled = true;
+            contract.elecYes = elecYes.Checked;
+            contract.elecNo = !elecYes.Checked;
+            label37.Enabled = elecYes.Checked;
+            label36.Enabled = elecYes.Checked;
+            anotherMeansNo.Enabled = elecYes.Checked;
+            anotherMeansYes.Enabled = elecYes.Checked;
+            otherDetails.Enabled = elecYes.Checked;            
+            if (anotherMeansYes.Checked)
+            {
+                anotherMeansYes_CheckedChanged(anotherMeansYes, null);
+            }
+            else
+            {
+                anotherMeansNo_CheckedChanged(anotherMeansNo, null);
+            }
             NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
 
         private void elecNo_CheckedChanged(object sender, EventArgs e)
         {
-            contract.elecNo = true;
-            contract.elecYes = false;
-            label37.Enabled = false;
-            label36.Enabled = false;
-            anotherMeansNo.Enabled = false;
-            anotherMeansYes.Enabled = false;
-            otherDetails.Enabled = false;
-            Util.ContentControls.setText("E-Copy", ".");
+            if (!ignoreChange)
+            {
+                contract.elecNo = elecNo.Checked;
+                contract.elecYes = !elecNo.Checked;                
+                Util.ContentControls.setText("E-Copy", "");
+            }
+            label37.Enabled = !elecNo.Checked;
+            label36.Enabled = !elecNo.Checked;
+            anotherMeansNo.Enabled = !elecNo.Checked;
+            anotherMeansYes.Enabled = !elecNo.Checked;
+            otherDetails.Enabled = !elecNo.Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
 
         private void anotherMeansNo_CheckedChanged(object sender, EventArgs e)
         {
             contract.anotherMeansNo = true;
             contract.anotherMeansYes = false;
-            Util.ContentControls.setText("E-Copy", " and Email.");
+            otherDetails.Enabled = !anotherMeansNo.Checked;
+            Util.ContentControls.setText("E-Copy", " and Email");
         }
 
         private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
         {
             contract.anotherMeansYes = true;
             contract.anotherMeansNo = false;
-            Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
-            otherDetails.Focus();
+            otherDetails.Enabled = anotherMeansYes.Checked;
+            //Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+            //otherDetails.Focus();
+            otherDetails_Leave(otherDetails, null);
         }
 
 
@@ -381,7 +404,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 contract.Different_Email = ((TextBox)sender).Text;
             }
             else
-                MessageBox.Show("Invalid Email address");
+                Util.Help.guidanceNote("Invalid Email address");
             
         }
 
@@ -393,7 +416,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 contract.Nominated_Email = ((TextBox)sender).Text;
             }
             else
-                MessageBox.Show("Invalid Email address");
+                Util.Help.guidanceNote("Invalid Email address");
         }
 
         private void ContractDetails_Load(object sender, EventArgs e)
@@ -412,7 +435,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (MadeDate.Value != null && !ignoreChange)
             {
                 Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
-                Util.ContentControls.setText("Date_Month", MadeDate.Value.Month.ToString());
+                Util.ContentControls.setText("Date_Month", MadeDate.Value.ToString("MMM"));
                 Util.ContentControls.setText("Date_Year", MadeDate.Value.Year.ToString());
             }
             
@@ -438,7 +461,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void otherDetails_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(otherDetails.Text))
+            if ( !anotherMeansNo.Checked && string.IsNullOrEmpty(otherDetails.Text))
             {
                 Util.Help.guidanceNote("Please enter content.");
                 otherDetails.Focus();
@@ -446,6 +469,36 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
             contract.otherDetails = ((TextBox)sender).Text;
             Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
+        }
+
+        private void Email_1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Email_1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void otherDetails_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mail_1_TextChanged_1(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void groupBox10_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void otherDetails_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

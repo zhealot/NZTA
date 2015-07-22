@@ -356,6 +356,7 @@
             this.TimeResource_Page.Size = new System.Drawing.Size(24, 20);
             this.TimeResource_Page.TabIndex = 5;
             this.TimeResource_Page.Text = "2";
+            this.TimeResource_Page.TextChanged += new System.EventHandler(this.TimeResource_Page_TextChanged);
             // 
             // TimeResource_A3_Check
             // 
@@ -366,6 +367,7 @@
             this.TimeResource_A3_Check.Size = new System.Drawing.Size(15, 14);
             this.TimeResource_A3_Check.TabIndex = 6;
             this.TimeResource_A3_Check.UseVisualStyleBackColor = true;
+            this.TimeResource_A3_Check.CheckedChanged += new System.EventHandler(this.TimeResource_Page_TextChanged);
             // 
             // TimeResource_Check
             // 
@@ -376,7 +378,7 @@
             this.TimeResource_Check.TabIndex = 7;
             this.TimeResource_Check.Text = "A Time and Resource schedule ";
             this.TimeResource_Check.UseVisualStyleBackColor = true;
-            this.TimeResource_Check.CheckedChanged += new System.EventHandler(this.TimeResource_Check_CheckedChanged);
+            this.TimeResource_Check.CheckedChanged += new System.EventHandler(this.TimeResource_Page_TextChanged);
             // 
             // Project_Check
             // 
@@ -446,7 +448,6 @@
             this.RowsCount.Name = "RowsCount";
             this.RowsCount.Size = new System.Drawing.Size(60, 20);
             this.RowsCount.TabIndex = 4;
-            this.RowsCount.ValueChanged += new System.EventHandler(this.CopyOfEnvelope_ValueChanged);
             // 
             // Outline_A3_Check
             // 

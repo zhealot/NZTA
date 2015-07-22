@@ -380,7 +380,7 @@
             this.Email_1.Name = "Email_1";
             this.Email_1.Size = new System.Drawing.Size(186, 20);
             this.Email_1.TabIndex = 27;
-            this.Email_1.TextChanged += new System.EventHandler(this.Email_1_TextChanged);
+            this.Email_1.Leave += new System.EventHandler(this.Email_1_Leave);
             // 
             // label14
             // 
@@ -577,9 +577,9 @@
             // 
             // label22
             // 
-            this.label22.Location = new System.Drawing.Point(3, 5);
+            this.label22.Location = new System.Drawing.Point(3, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(341, 25);
+            this.label22.Size = new System.Drawing.Size(265, 30);
             this.label22.TabIndex = 47;
             this.label22.Text = "Communications during the tender period (client\'s nominated person):";
             // 
@@ -1069,6 +1069,7 @@
             this.groupBox10.Size = new System.Drawing.Size(314, 77);
             this.groupBox10.TabIndex = 90;
             this.groupBox10.TabStop = false;
+            this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
             // groupBox9
             // 

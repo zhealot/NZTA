@@ -165,7 +165,7 @@ namespace NZTA_Contract_Generator
         //End of tender submission programme
 
         //Start of Tender Format programme
-        public String CopyOfEnvelope { get; set; }
+        public Decimal CopyOfEnvelope { get; set; }
         public String CoverLetter_Page { get; set; }
         public String Index_Page { get; set; }
         public String NonPrice_Page { get; set; }
@@ -192,13 +192,14 @@ namespace NZTA_Contract_Generator
         public Boolean TimeResource_A3_Check { get; set; }
         public Boolean Docu1_Check { get; set; }
         public Boolean Docu1_A3_Check { get; set; }
-        public Boolean Docu1_Double_Check { get; set; }        
+        public Boolean Docu1_Double_Check { get; set; }
+        public Decimal RowsCount { get; set; }
         //End of Tender Format programme
 
         //Start of Non Price Attributes
-        public String RelevantExperience { get; set; }
-        public String TrackRecord { get; set; }
-        public String ExperienceVSRecord { get; set; }
+        public Decimal RelevantExperience { get; set; }
+        public Decimal TrackRecord { get; set; }
+        public Decimal ExperienceVSRecord { get; set; }
         public String GuidanceNote { get; set; }
         public String tbShow { get; set; }
         public Boolean cbMeth1 { get; set; }
@@ -245,10 +246,10 @@ namespace NZTA_Contract_Generator
         public String ET4_Company { get; set; }
         public String ET5_Name { get; set; }
         public String ET5_Position { get; set; }
-        public String ET5_Company { get; set; }
-        public String Audit_Period { get; set; }
+        public String ET5_Company { get; set; }        
         public String InterviewCity { get; set; }
-        public String InterviewNotice { get; set; }
+        public Decimal InterviewNotice { get; set; }
+        public Decimal AuditPeriod { get; set; }
         //End of Tender Evaluation Procedure
 
         //Start of Payment Schedule
@@ -270,14 +271,14 @@ namespace NZTA_Contract_Generator
         public String PropertyRequirements { get; set; }
         //End of Payment Schedule
 
-        //Start of PublicLiabilityInsurance
+        //Start of Liability and Insurance
         public String PublicLiabilityInsurance { get; set; }
         public String MaximumLiability { get; set; }
         public String DurationOfLiability { get; set; }
         public Boolean rbNotRequired { get; set; }
         public Boolean rbApprovedDefault { get; set; }
         public Boolean rbOtherLevels { get; set; }
-        //End of PublicLiabilityInsurance
+        //End of Liability and Insurance
 
         //Start of Personnel
         public String tbWeighting { get; set; }

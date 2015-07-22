@@ -28,8 +28,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CloseDate_ValueChanged(object sender, EventArgs e)
         {
-            contract.CloseDate = CloseDate.Value.Day.ToString("dd/MM/yyyy");
-            Util.ContentControls.setText("CloseDate", contract.CloseDate);
+            contract.CloseDate = CloseDate.Value.ToString("O");
+            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMM/yyyy"));
         }
 
         private void Evaluation_Start_ValueChanged(object sender, EventArgs e)
