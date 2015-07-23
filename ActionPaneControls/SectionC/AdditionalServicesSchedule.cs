@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Word;
 
 namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
@@ -23,6 +24,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         private void ASS_TLPD_Qty_TextChanged(object sender, EventArgs e)
         {
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

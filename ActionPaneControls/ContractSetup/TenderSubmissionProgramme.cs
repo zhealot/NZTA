@@ -106,34 +106,49 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             if (((ComboBox)sender).SelectedItem != null && !ignoreChange)
             {
-                KeyValuePair<String, String> selectedEntry = (KeyValuePair<String, String>)((ComboBox)sender).SelectedItem;
+                KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.Presentation_Address = selectedEntry.Key;
+                contract.Presentation_Company = selectedEntry.Key;
+                contract.Presentation_Level = selectedEntry.Value.building;
+                contract.Presentation_Street = selectedEntry.Value.streetAddress;
+                contract.Presentation_Box = selectedEntry.Value.boxNumber;
+                contract.Presentation_City = selectedEntry.Value.city;
+                Presentation_Company.Text = selectedEntry.Key;
+                Presentation_Level.Text = selectedEntry.Value.building;
+                Presentation_Street.Text = selectedEntry.Value.streetAddress;
+                Presentation_Box.Text = selectedEntry.Value.boxNumber;
+                Presentation_City.Text = selectedEntry.Value.city;
             }
         }
 
         private void Presentation_Company_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Company = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Presentation_Level_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Building = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Presentation_Street_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Street = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Presentation_Box_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Box = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Presentation_City_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_City = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
         private void Evaluation_Other_TextChanged(object sender, EventArgs e)

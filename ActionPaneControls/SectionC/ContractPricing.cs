@@ -23,7 +23,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
+            
             lbMissing.Items.Clear();
             Microsoft.Office.Interop.Word.Range rg;
             foreach (Microsoft.Office.Interop.Word.Row rw in NZTA_Contract_Generator.Globals.ThisDocument.bmContractPricingSchedule.Tables[1].Rows)
@@ -58,6 +61,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             }
             NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Select();
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
+            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
         }
     }
 }

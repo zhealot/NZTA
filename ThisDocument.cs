@@ -63,8 +63,8 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
-            this.rtcSupplierSelectoionMethodName.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcSupplierSelectoionMethodName_Entering);
+            this.rtcGeoTestingSum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcGeoTestingSum_Exiting);
+            this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -83,14 +83,14 @@ namespace NZTA_Contract_Generator
 
         }
 
-        private void rtcSupplierSelectoionMethodName_Entering(object sender, ContentControlEnteringEventArgs e)
+        private void rtcGeoTestingSum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
-
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_GeoTestingSum.Range.Text = rtcGeoTestingSum.Range.Text;
         }
 
-        private void richTextContentControl1_Entering(object sender, ContentControlEnteringEventArgs e)
+        private void rtcAdditionalServicesSchedule_Sum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
-
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = NZTA_Contract_Generator.Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
         }
     }
 }

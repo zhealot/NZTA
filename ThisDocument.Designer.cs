@@ -337,6 +337,22 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmContractPaymentSchedule;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeoTestingSum;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_GeoTestingSum;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcAdditionalServicesSchedule_Sum;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_ASS_Sum;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmContract_Abbreviations;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmContract_Contents;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmContract_FrontPage;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSigningSet;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -599,6 +615,14 @@ namespace NZTA_Contract_Generator {
             this.bmPS_Consultant.BeginInit();
             this.bmContractPricingSchedule.BeginInit();
             this.bmContractPaymentSchedule.BeginInit();
+            this.rtcGeoTestingSum.BeginInit();
+            this.rtcCPS_GeoTestingSum.BeginInit();
+            this.rtcAdditionalServicesSchedule_Sum.BeginInit();
+            this.rtcCPS_ASS_Sum.BeginInit();
+            this.bmContract_Abbreviations.BeginInit();
+            this.bmContract_Contents.BeginInit();
+            this.bmContract_FrontPage.BeginInit();
+            this.bmSigningSet.BeginInit();
         }
         
         /// 
@@ -606,6 +630,14 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmSigningSet.EndInit();
+            this.bmContract_FrontPage.EndInit();
+            this.bmContract_Contents.EndInit();
+            this.bmContract_Abbreviations.EndInit();
+            this.rtcCPS_ASS_Sum.EndInit();
+            this.rtcAdditionalServicesSchedule_Sum.EndInit();
+            this.rtcCPS_GeoTestingSum.EndInit();
+            this.rtcGeoTestingSum.EndInit();
             this.bmContractPaymentSchedule.EndInit();
             this.bmContractPricingSchedule.EndInit();
             this.bmPS_Consultant.EndInit();
@@ -934,6 +966,14 @@ namespace NZTA_Contract_Generator {
             this.bmPS_Consultant = Globals.Factory.CreateBookmark(null, null, "bmPS_Consultant", "bmPS_Consultant", this);
             this.bmContractPricingSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPricingSchedule", "bmContractPricingSchedule", this);
             this.bmContractPaymentSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPaymentSchedule", "bmContractPaymentSchedule", this);
+            this.rtcGeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "720943843", "rtcGeoTestingSum", this);
+            this.rtcCPS_GeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "3830924054", "rtcCPS_GeoTestingSum", this);
+            this.rtcAdditionalServicesSchedule_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "3756918911", "rtcAdditionalServicesSchedule_Sum", this);
+            this.rtcCPS_ASS_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "1493913556", "rtcCPS_ASS_Sum", this);
+            this.bmContract_Abbreviations = Globals.Factory.CreateBookmark(null, null, "bmContract_Abbreviations", "bmContract_Abbreviations", this);
+            this.bmContract_Contents = Globals.Factory.CreateBookmark(null, null, "bmContract_Contents", "bmContract_Contents", this);
+            this.bmContract_FrontPage = Globals.Factory.CreateBookmark(null, null, "bmContract_FrontPage", "bmContract_FrontPage", this);
+            this.bmSigningSet = Globals.Factory.CreateBookmark(null, null, "bmSigningSet", "bmSigningSet", this);
         }
         
         /// 
@@ -1583,6 +1623,38 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmContractPaymentSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcGeoTestingSum
+            // 
+            this.rtcGeoTestingSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcCPS_GeoTestingSum
+            // 
+            this.rtcCPS_GeoTestingSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcAdditionalServicesSchedule_Sum
+            // 
+            this.rtcAdditionalServicesSchedule_Sum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcCPS_ASS_Sum
+            // 
+            this.rtcCPS_ASS_Sum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmContract_Abbreviations
+            // 
+            this.bmContract_Abbreviations.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmContract_Contents
+            // 
+            this.bmContract_Contents.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmContract_FrontPage
+            // 
+            this.bmContract_FrontPage.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSigningSet
+            // 
+            this.bmSigningSet.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1599,6 +1671,14 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmSigningSet.Dispose();
+            this.bmContract_FrontPage.Dispose();
+            this.bmContract_Contents.Dispose();
+            this.bmContract_Abbreviations.Dispose();
+            this.rtcCPS_ASS_Sum.Dispose();
+            this.rtcAdditionalServicesSchedule_Sum.Dispose();
+            this.rtcCPS_GeoTestingSum.Dispose();
+            this.rtcGeoTestingSum.Dispose();
             this.bmContractPaymentSchedule.Dispose();
             this.bmContractPricingSchedule.Dispose();
             this.bmPS_Consultant.Dispose();

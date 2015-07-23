@@ -113,6 +113,7 @@
             this.ExportFinalButton.Label = "Export as Final PDF";
             this.ExportFinalButton.Name = "ExportFinalButton";
             this.ExportFinalButton.ShowImage = true;
+            this.ExportFinalButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportDraftButton_Click);
             // 
             // Ribbon1
             // 

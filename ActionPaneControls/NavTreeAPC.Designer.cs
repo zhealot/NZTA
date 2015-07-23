@@ -125,12 +125,16 @@
             treeNode18.Name = "SectionC";
             treeNode18.Text = "Section C";
             treeNode19.Name = "Node4";
+            treeNode19.Tag = "bmSigningSet";
             treeNode19.Text = "Signing Set";
             treeNode20.Name = "Node6";
+            treeNode20.Tag = "bmContract_FrontPage";
             treeNode20.Text = "Contract front page";
             treeNode21.Name = "Node8";
+            treeNode21.Tag = "bmContract_Contents";
             treeNode21.Text = "Contents";
             treeNode22.Name = "Node9";
+            treeNode22.Tag = "bmContract_Abbreviations";
             treeNode22.Text = "Abbreviations";
             treeNode23.Name = "Node5";
             treeNode23.Text = "Contract";

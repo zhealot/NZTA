@@ -30,7 +30,7 @@ namespace NZTA_Contract_Generator.Constants
              {"Napier", new Address {building = "Level 2, Dunvegan House", streetAddress = "215 Hastings Street", boxNumber = "PO Box 740", 
                  city = "Napier", postcode = "4140", telephone = "64 6 974 5520", fax="64 6 974 5529"}},
             
-             {"Palmerston North", new Address {building = "", streetAddress = "Level 3, 43 Ashley Street", boxNumber = "Private Bag 11777", 
+             {"Palmerston North", new Address {building = "Level 3", streetAddress = "43 Ashley Street", boxNumber = "Private Bag 11777", 
                  city = "Palmerston North", postcode = "4442", telephone = "64 6 953 6396", fax="64 6 953 6203"}},
             
              {"Wellington", new Address {building = "Level 9, PSIS House", streetAddress = "20 Ballance Street", boxNumber = "PO Box 5084, Lambton Quay", 
@@ -39,11 +39,11 @@ namespace NZTA_Contract_Generator.Constants
              {"Blenheim", new Address {building = "Marlborough Roads" + Environment.NewLine +"Level 1, The Forum", streetAddress = "Unit 2.4, Market Street", boxNumber = "PO Box 1031", 
                  city = "7240", postcode = "Blenheim", telephone = "64 3 520 8330", fax="64 3 577 5309 "}},
             
-             {"Christchurch", new Address {building = "", streetAddress = "", boxNumber = "", 
-                 city = "", postcode = "", telephone = "", fax=""}},
+             {"Christchurch", new Address {building = "Airport Business Park, Unit C", streetAddress = "92 Russley Road", boxNumber = "PO Box 1479", 
+                 city = "Christchurch", postcode = "8140", telephone = "64 3 964 2800", fax="64 3 964 2793"}},
             
-             {"Dunedin", new Address {building = "Airport Business Park, Unit C", streetAddress = "92 Russley Road", boxNumber = "PO Box 1479", 
-                 city = "", postcode = "8140", telephone = "64 3 964 2800", fax="64 3 964 2793"}}
+             {"Dunedin", new Address {building = "Level 2, AA Centre", streetAddress = "450 Moray Place", boxNumber = "PO Box 5245, Moray Place", 
+                 city = "Dunedin", postcode = "9058", telephone = "64 3 951 3009", fax="64 3 951 3013"}}
       
          };  
 
