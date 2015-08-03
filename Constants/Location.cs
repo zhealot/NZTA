@@ -15,17 +15,17 @@ namespace NZTA_Contract_Generator.Constants
              {"National Office", new Address {building = "Victoria Arcade", streetAddress = "50 Victoria Street", boxNumber = "Private Bag 6995", 
                  city = "Wellington", postcode = "6141", telephone = "64 4 894 5400", fax="64 4 894 6100"}},
 
-             {"Whangarei", new Address {building = "Walton Plaza, 1st Floor", streetAddress = "4 Albert St," + Environment.NewLine + "Whangarei", boxNumber = "Private Bag 106602", 
+             {"Whangarei", new Address {building = "Walton Plaza, 1st Floor", streetAddress = "4 Albert St Whangarei", boxNumber = "Private Bag 106602", 
                  city = "Auckland", postcode = "1143", telephone = "64 9 430 4355", fax="64 9 459 6944"}},
             
              {"Auckland", new Address {building = "Level 11, HSBC House", streetAddress = "1 Queen Street", boxNumber = "Private Bag 106602", 
                  city = "Auckland", postcode = "1143", telephone = "64 9 969 9800", fax="64 9 969 9813"}},
             
              {"Hamilton", new Address {building = "Level 1, Deloitte Building", streetAddress = "24 Bridge Street", boxNumber = "PO Box 973, Waikato Mail Centre", 
-                 city = "Hamilton", postcode = " 3240", telephone = "64 7 958 7220", fax="64 7 957 1437"}},
+                 city = "Hamilton", postcode = "3240", telephone = "64 7 958 7220", fax="64 7 957 1437"}},
             
-             {"Tauranga", new Address {building = "3rd Floor" + Environment.NewLine + "Harrington House", streetAddress = "32 Harington Street", boxNumber = "PO Box 13-055"+Environment.NewLine+"Tauranga Central", 
-                 city = "Tauranga", postcode = "3110", telephone = "07 927 6009", fax="07 578 2909"}},
+             {"Tauranga", new Address {building = "3rd Floor Harrington House", streetAddress = "32 Harington Street", boxNumber = "PO Box 13-055 Tauranga Central", 
+                 city = "Tauranga", postcode = "3141", telephone = "07 927 6009", fax="07 578 2909"}},
             
              {"Napier", new Address {building = "Level 2, Dunvegan House", streetAddress = "215 Hastings Street", boxNumber = "PO Box 740", 
                  city = "Napier", postcode = "4140", telephone = "64 6 974 5520", fax="64 6 974 5529"}},
@@ -36,10 +36,10 @@ namespace NZTA_Contract_Generator.Constants
              {"Wellington", new Address {building = "Level 9, PSIS House", streetAddress = "20 Ballance Street", boxNumber = "PO Box 5084, Lambton Quay", 
                  city = "Wellington", postcode = "6145", telephone = "64 4 894 5200 ", fax="64 4 894 3305"}},
             
-             {"Blenheim", new Address {building = "Marlborough Roads" + Environment.NewLine +"Level 1, The Forum", streetAddress = "Unit 2.4, Market Street", boxNumber = "PO Box 1031", 
-                 city = "7240", postcode = "Blenheim", telephone = "64 3 520 8330", fax="64 3 577 5309 "}},
+             {"Blenheim", new Address {building = "Marlborough Roads, Level 1, The Forum", streetAddress = "Unit 2.4, Market Street", boxNumber = "PO Box 1031", 
+                 city = "Blenheim", postcode = "7240", telephone = "64 3 520 8330", fax="64 3 577 5309 "}},
             
-             {"Christchurch", new Address {building = "Airport Business Park, Unit C", streetAddress = "92 Russley Road", boxNumber = "PO Box 1479", 
+             {"Christchurch", new Address {building = "Airport Business Park, Unit C", streetAddress = "92 Russley Road", boxNumber = "PO Box 1479, Russley", 
                  city = "Christchurch", postcode = "8140", telephone = "64 3 964 2800", fax="64 3 964 2793"}},
             
              {"Dunedin", new Address {building = "Level 2, AA Centre", streetAddress = "450 Moray Place", boxNumber = "PO Box 5245, Moray Place", 

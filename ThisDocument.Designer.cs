@@ -353,6 +353,10 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmSigningSet;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl145;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmStandardSpecificationClause;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -623,6 +627,8 @@ namespace NZTA_Contract_Generator {
             this.bmContract_Contents.BeginInit();
             this.bmContract_FrontPage.BeginInit();
             this.bmSigningSet.BeginInit();
+            this.richTextContentControl145.BeginInit();
+            this.bmStandardSpecificationClause.BeginInit();
         }
         
         /// 
@@ -630,6 +636,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmStandardSpecificationClause.EndInit();
+            this.richTextContentControl145.EndInit();
             this.bmSigningSet.EndInit();
             this.bmContract_FrontPage.EndInit();
             this.bmContract_Contents.EndInit();
@@ -974,6 +982,8 @@ namespace NZTA_Contract_Generator {
             this.bmContract_Contents = Globals.Factory.CreateBookmark(null, null, "bmContract_Contents", "bmContract_Contents", this);
             this.bmContract_FrontPage = Globals.Factory.CreateBookmark(null, null, "bmContract_FrontPage", "bmContract_FrontPage", this);
             this.bmSigningSet = Globals.Factory.CreateBookmark(null, null, "bmSigningSet", "bmSigningSet", this);
+            this.richTextContentControl145 = Globals.Factory.CreateRichTextContentControl(null, null, "3969055229", "richTextContentControl145", this);
+            this.bmStandardSpecificationClause = Globals.Factory.CreateBookmark(null, null, "bmStandardSpecificationClause", "bmStandardSpecificationClause", this);
         }
         
         /// 
@@ -1655,6 +1665,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmSigningSet.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // richTextContentControl145
+            // 
+            this.richTextContentControl145.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmStandardSpecificationClause
+            // 
+            this.bmStandardSpecificationClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1671,6 +1689,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmStandardSpecificationClause.Dispose();
+            this.richTextContentControl145.Dispose();
             this.bmSigningSet.Dispose();
             this.bmContract_FrontPage.Dispose();
             this.bmContract_Contents.Dispose();

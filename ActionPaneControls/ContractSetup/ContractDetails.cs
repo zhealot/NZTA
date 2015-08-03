@@ -337,13 +337,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
         {
             contract.anotherMeansYes = anotherMeansYes.Checked;
+            contract.anotherMeansNo = anotherMeansNo.Checked;
             otherDetails.Enabled = anotherMeansYes.Checked;
-            //Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
-            //otherDetails.Focus();
-            otherDetails_Leave(otherDetails, null);
+            otherDetails.Focus();
         }
-
-
 
         private void isPersonDifferentNo_CheckedChanged(object sender, EventArgs e)
         {
@@ -431,14 +428,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void otherDetails_Leave(object sender, EventArgs e)
         {
-            if ( !anotherMeansNo.Checked && string.IsNullOrEmpty(otherDetails.Text))
+            if ( anotherMeansYes.Checked && string.IsNullOrEmpty(otherDetails.Text))
             {
+                //otherDetails.Focus();
                 Util.Help.guidanceNote("Please enter content.");
-                otherDetails.Focus();
                 return;
             }
-            contract.otherDetails = ((TextBox)sender).Text;
-            Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
+            else
+            {
+                contract.otherDetails = ((TextBox)sender).Text;
+                Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
+            }            
         }
 
         private void otherDetails_TextChanged(object sender, EventArgs e)

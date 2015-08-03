@@ -289,14 +289,8 @@ namespace NZTA_Contract_Generator
         //End of Contract Pricing
 
         //Start of Specifications
-        public Boolean ContractManagemnet { get; set; }
-        public Boolean InvestigationReporting { get; set; }
-        public Boolean DesignProject { get; set; }
-        public Boolean DesignConstruct { get; set; }
-        public Boolean MSQA { get; set; }
-        public Boolean NetworkMangement { get; set; }
-        public Boolean HybridContract { get; set; }
         public Boolean BridgesOther { get; set; }
+        public Boolean StateHighway { get; set; }
         public Boolean MultipleProjects_No { get; set; }
         public Boolean MultipleProjects_Yes { get; set; }
         public String Project1 { get; set; }

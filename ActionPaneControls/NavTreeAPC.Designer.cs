@@ -96,6 +96,7 @@
             treeNode7.Tag = "Liability_Insurance";
             treeNode7.Text = "Liability and Insurance";
             treeNode8.Name = "Node0";
+            treeNode8.Tag = "Contract_Details";
             treeNode8.Text = "Contract Setup";
             treeNode9.Name = "SupplierSelectionMethod.SupplierSelectionMethod";
             treeNode9.Tag = "Supplier_Selection_Method";
