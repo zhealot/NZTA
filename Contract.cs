@@ -12,6 +12,7 @@ namespace NZTA_Contract_Generator
         public object this[string propertyName]
         {
             get { return this.GetType().GetProperty(propertyName).GetValue(this, null); }
+            set { this.GetType().GetProperty(propertyName).SetValue(this, value); }
         }
 
         //Contructor use to set defaults
@@ -92,6 +93,7 @@ namespace NZTA_Contract_Generator
         public String Different_Name { get; set; }
         public String Different_Email { get; set; }
 
+        public Boolean checkBox1 { get; set; }
         // End of Contract Details
 
         //Start of Interactive tender Process

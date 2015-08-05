@@ -127,8 +127,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl AlternativeTenders;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl MeetingSchedule;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl50;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl51;
@@ -357,6 +355,10 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmStandardSpecificationClause;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicInformation;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcInteractiveTenderProcess;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -514,7 +516,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl39.BeginInit();
             this.richTextContentControl40.BeginInit();
             this.AlternativeTenders.BeginInit();
-            this.MeetingSchedule.BeginInit();
             this.richTextContentControl50.BeginInit();
             this.richTextContentControl51.BeginInit();
             this.richTextContentControl52.BeginInit();
@@ -629,6 +630,8 @@ namespace NZTA_Contract_Generator {
             this.bmSigningSet.BeginInit();
             this.richTextContentControl145.BeginInit();
             this.bmStandardSpecificationClause.BeginInit();
+            this.rtcElectronicInformation.BeginInit();
+            this.rtcInteractiveTenderProcess.BeginInit();
         }
         
         /// 
@@ -636,6 +639,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcInteractiveTenderProcess.EndInit();
+            this.rtcElectronicInformation.EndInit();
             this.bmStandardSpecificationClause.EndInit();
             this.richTextContentControl145.EndInit();
             this.bmSigningSet.EndInit();
@@ -750,7 +755,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.EndInit();
             this.richTextContentControl51.EndInit();
             this.richTextContentControl50.EndInit();
-            this.MeetingSchedule.EndInit();
             this.AlternativeTenders.EndInit();
             this.richTextContentControl40.EndInit();
             this.richTextContentControl39.EndInit();
@@ -869,7 +873,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl39 = Globals.Factory.CreateRichTextContentControl(null, null, "4203496865", "richTextContentControl39", this);
             this.richTextContentControl40 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl40", this);
             this.AlternativeTenders = Globals.Factory.CreateRichTextContentControl(null, null, "2701580115", "AlternativeTenders", this);
-            this.MeetingSchedule = Globals.Factory.CreateRichTextContentControl(null, null, "2769722768", "MeetingSchedule", this);
             this.richTextContentControl50 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl50", this);
             this.richTextContentControl51 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl51", this);
             this.richTextContentControl52 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl52", this);
@@ -984,6 +987,8 @@ namespace NZTA_Contract_Generator {
             this.bmSigningSet = Globals.Factory.CreateBookmark(null, null, "bmSigningSet", "bmSigningSet", this);
             this.richTextContentControl145 = Globals.Factory.CreateRichTextContentControl(null, null, "3969055229", "richTextContentControl145", this);
             this.bmStandardSpecificationClause = Globals.Factory.CreateBookmark(null, null, "bmStandardSpecificationClause", "bmStandardSpecificationClause", this);
+            this.rtcElectronicInformation = Globals.Factory.CreateRichTextContentControl(null, null, "88591614", "rtcElectronicInformation", this);
+            this.rtcInteractiveTenderProcess = Globals.Factory.CreateRichTextContentControl(null, null, "3020425276", "rtcInteractiveTenderProcess", this);
         }
         
         /// 
@@ -1212,10 +1217,6 @@ namespace NZTA_Contract_Generator {
             // AlternativeTenders
             // 
             this.AlternativeTenders.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // MeetingSchedule
-            // 
-            this.MeetingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl50
             // 
@@ -1673,6 +1674,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmStandardSpecificationClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcElectronicInformation
+            // 
+            this.rtcElectronicInformation.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcInteractiveTenderProcess
+            // 
+            this.rtcInteractiveTenderProcess.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1689,6 +1698,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcInteractiveTenderProcess.Dispose();
+            this.rtcElectronicInformation.Dispose();
             this.bmStandardSpecificationClause.Dispose();
             this.richTextContentControl145.Dispose();
             this.bmSigningSet.Dispose();
@@ -1803,7 +1814,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.Dispose();
             this.richTextContentControl51.Dispose();
             this.richTextContentControl50.Dispose();
-            this.MeetingSchedule.Dispose();
             this.AlternativeTenders.Dispose();
             this.richTextContentControl40.Dispose();
             this.richTextContentControl39.Dispose();

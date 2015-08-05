@@ -131,11 +131,10 @@
             this.Meeting_Box.Controls.Add(this.label3);
             this.Meeting_Box.Location = new System.Drawing.Point(9, 106);
             this.Meeting_Box.Name = "Meeting_Box";
-            this.Meeting_Box.Size = new System.Drawing.Size(307, 531);
+            this.Meeting_Box.Size = new System.Drawing.Size(290, 387);
             this.Meeting_Box.TabIndex = 6;
             this.Meeting_Box.TabStop = false;
             this.Meeting_Box.Visible = false;
-            this.Meeting_Box.Enter += new System.EventHandler(this.Meeting_Box_Enter);
             // 
             // Individual_Place
             // 
@@ -162,7 +161,7 @@
             this.Individual5_Check.Size = new System.Drawing.Size(15, 14);
             this.Individual5_Check.TabIndex = 21;
             this.Individual5_Check.UseVisualStyleBackColor = true;
-            this.Individual5_Check.CheckedChanged += new System.EventHandler(this.Individual5_Check_CheckedChanged);
+            this.Individual5_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Individual5_Date
             // 
@@ -171,7 +170,7 @@
             this.Individual5_Date.Name = "Individual5_Date";
             this.Individual5_Date.Size = new System.Drawing.Size(200, 20);
             this.Individual5_Date.TabIndex = 20;
-            this.Individual5_Date.ValueChanged += new System.EventHandler(this.Individual5_Date_ValueChanged);
+            this.Individual5_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label9
             // 
@@ -190,7 +189,7 @@
             this.Individual4_Check.Size = new System.Drawing.Size(15, 14);
             this.Individual4_Check.TabIndex = 18;
             this.Individual4_Check.UseVisualStyleBackColor = true;
-            this.Individual4_Check.CheckedChanged += new System.EventHandler(this.Individual4_Check_CheckedChanged);
+            this.Individual4_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Individual4_Date
             // 
@@ -199,7 +198,7 @@
             this.Individual4_Date.Name = "Individual4_Date";
             this.Individual4_Date.Size = new System.Drawing.Size(200, 20);
             this.Individual4_Date.TabIndex = 17;
-            this.Individual4_Date.ValueChanged += new System.EventHandler(this.Individual4_Date_ValueChanged);
+            this.Individual4_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label8
             // 
@@ -218,7 +217,7 @@
             this.Individual3_Check.Size = new System.Drawing.Size(15, 14);
             this.Individual3_Check.TabIndex = 15;
             this.Individual3_Check.UseVisualStyleBackColor = true;
-            this.Individual3_Check.CheckedChanged += new System.EventHandler(this.Individual3_Check_CheckedChanged);
+            this.Individual3_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Individual3_Date
             // 
@@ -227,7 +226,7 @@
             this.Individual3_Date.Name = "Individual3_Date";
             this.Individual3_Date.Size = new System.Drawing.Size(200, 20);
             this.Individual3_Date.TabIndex = 14;
-            this.Individual3_Date.ValueChanged += new System.EventHandler(this.Individual3_Date_ValueChanged);
+            this.Individual3_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label7
             // 
@@ -246,7 +245,7 @@
             this.Individual2_Check.Size = new System.Drawing.Size(15, 14);
             this.Individual2_Check.TabIndex = 12;
             this.Individual2_Check.UseVisualStyleBackColor = true;
-            this.Individual2_Check.CheckedChanged += new System.EventHandler(this.Individual2_Check_CheckedChanged);
+            this.Individual2_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Individual2_Date
             // 
@@ -255,7 +254,7 @@
             this.Individual2_Date.Name = "Individual2_Date";
             this.Individual2_Date.Size = new System.Drawing.Size(200, 20);
             this.Individual2_Date.TabIndex = 11;
-            this.Individual2_Date.ValueChanged += new System.EventHandler(this.Individual2_Date_ValueChanged);
+            this.Individual2_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label6
             // 
@@ -274,7 +273,7 @@
             this.Individual1_Check.Size = new System.Drawing.Size(15, 14);
             this.Individual1_Check.TabIndex = 9;
             this.Individual1_Check.UseVisualStyleBackColor = true;
-            this.Individual1_Check.CheckedChanged += new System.EventHandler(this.Individual1_Check_CheckedChanged);
+            this.Individual1_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Individual1_Date
             // 
@@ -283,7 +282,7 @@
             this.Individual1_Date.Name = "Individual1_Date";
             this.Individual1_Date.Size = new System.Drawing.Size(200, 20);
             this.Individual1_Date.TabIndex = 8;
-            this.Individual1_Date.ValueChanged += new System.EventHandler(this.Individual1_Date_ValueChanged);
+            this.Individual1_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label5
             // 
@@ -320,7 +319,7 @@
             this.Combined_Time.ShowUpDown = true;
             this.Combined_Time.Size = new System.Drawing.Size(92, 20);
             this.Combined_Time.TabIndex = 4;
-            this.Combined_Time.ValueChanged += new System.EventHandler(this.Combined_Time_ValueChanged);
+            this.Combined_Time.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Combined_Check
             // 
@@ -330,16 +329,18 @@
             this.Combined_Check.Size = new System.Drawing.Size(15, 14);
             this.Combined_Check.TabIndex = 3;
             this.Combined_Check.UseVisualStyleBackColor = true;
-            this.Combined_Check.CheckedChanged += new System.EventHandler(this.Combined_Check_CheckedChanged);
+            this.Combined_Check.CheckedChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Combined_Date
             // 
             this.Combined_Date.CustomFormat = "";
             this.Combined_Date.Location = new System.Drawing.Point(54, 50);
+            this.Combined_Date.MinDate = new System.DateTime(2015, 8, 5, 12, 6, 2, 0);
             this.Combined_Date.Name = "Combined_Date";
             this.Combined_Date.Size = new System.Drawing.Size(200, 20);
             this.Combined_Date.TabIndex = 2;
-            this.Combined_Date.ValueChanged += new System.EventHandler(this.Combined_Date_ValueChanged);
+            this.Combined_Date.Value = new System.DateTime(2015, 8, 5, 12, 6, 2, 0);
+            this.Combined_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label3
             // 
@@ -369,7 +370,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "InteractiveTenderProcess";
-            this.Size = new System.Drawing.Size(316, 650);
+            this.Size = new System.Drawing.Size(316, 513);
             this.Meeting_Box.ResumeLayout(false);
             this.Meeting_Box.PerformLayout();
             this.ResumeLayout(false);

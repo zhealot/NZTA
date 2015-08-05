@@ -306,6 +306,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.elecYes = elecYes.Checked;
             gbElecForm.Enabled = elecYes.Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcElectronicInformation.Range.Font.Hidden = (elecYes.Checked == true ? 0 : 1);
+            //### to be done: continue numbering for the following paragraph after hiding content control
+            //NZTA_Contract_Generator.Globals.ThisDocument.Tender_Submission_Programme.Range.ListFormat.ApplyListTemplate(NZTA_Contract_Generator.Globals.ThisDocument.Tender_Submission_Programme.Range.ListFormat.ListTemplate, true);
             if (anotherMeansYes.Checked)
             {
                 anotherMeansYes_CheckedChanged(anotherMeansYes, null);
@@ -319,10 +322,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void elecNo_CheckedChanged(object sender, EventArgs e)
         {
-            if (!ignoreChange)
+            if (!ignoreChange && elecNo.Checked)
             {
                 contract.elecNo = elecNo.Checked;
-                Util.ContentControls.setText("E-Copy", "");
+                NZTA_Contract_Generator.Globals.ThisDocument.rtcElectronicInformation.Range.Font.Hidden = (elecNo.Checked == true ? 1 : 0);
+                //### to be done: continue numbering for the following paragraph after hiding content control
+                //NZTA_Contract_Generator.Globals.ThisDocument.Tender_Submission_Programme.Range.ListFormat.ApplyListTemplateWithLevel(NZTA_Contract_Generator.Globals.ThisDocument.ListTemplates[])
+                //Microsoft.Office.Interop.Word.ListGalleries(Microsoft.Office.Interop.Word.WdListGalleryType.wdOutlineNumberGallery)
+                //NZTA_Contract_Generator.Globals.ThisDocument.Tender_Submission_Programme.Range.ListFormat.ApplyListTemplateWithLevel(Microsoft.Office.Interop.Word.ListGalleries(Microsoft.Office.Interop.Word.WdListGalleryType.wdOutlineNumberGallery)
             }
             NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
@@ -331,7 +338,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.anotherMeansNo = anotherMeansNo.Checked;
             otherDetails.Enabled = !anotherMeansNo.Checked;
-            Util.ContentControls.setText("E-Copy", " and Email");
+            Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on email");
         }
 
         private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
@@ -437,7 +444,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             else
             {
                 contract.otherDetails = ((TextBox)sender).Text;
-                Util.ContentControls.setText("E-Copy", "accompanied by an electronic copy on " + contract.otherDetails);
+                Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on " + contract.otherDetails);
             }            
         }
 
@@ -478,6 +485,5 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 contract.Different_Email = ((TextBox)sender).Text;
             }
         }
-
     }
 }
