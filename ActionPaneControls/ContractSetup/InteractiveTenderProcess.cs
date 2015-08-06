@@ -14,25 +14,30 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             InitializeComponent();
             //Load saved state. Defaults set in state...
-            Util.SavedState.setControlsToState(contract, Controls);            
+            CommercialInConfidence_Check.Checked = false;
+            Util.SavedState.setControlsToState(contract, Controls);
         }
 
         private void Interactive_Yes_CheckedChanged(object sender, EventArgs e)
         {
             Meeting_Box.Enabled = Interactive_Yes.Checked;
             Meeting_Box.Visible = Interactive_Yes.Checked;
+            CommercialInConfidence_Check.Checked = Interactive_Yes.Checked;
             contract.Interactive_Yes = Interactive_Yes.Checked;
             contract.Interactive_No = Interactive_No.Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcInteractiveTenderProcess.Range.Font.Hidden = Interactive_Yes.Checked ? 0 : 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcCommercialInConfidence.Range.Font.Hidden = Interactive_Yes.Checked ? 0 : 1;
         }
 
         private void Interactive_No_CheckedChanged(object sender, EventArgs e)
         {
             Meeting_Box.Enabled = !Interactive_No.Checked;
             Meeting_Box.Visible = !Interactive_No.Checked;
+            CommercialInConfidence_Check.Checked = !Interactive_No.Checked;
             contract.Interactive_Yes = Interactive_Yes.Checked;
             contract.Interactive_No = Interactive_No.Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcInteractiveTenderProcess.Range.Font.Hidden = Interactive_No.Checked ? 1 : 0;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcCommercialInConfidence.Range.Font.Hidden = Interactive_No.Checked ? 1 : 0;
         }
 
         private void AnyItemChanged(object sender, EventArgs e)
@@ -95,7 +100,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 if (kv.Key.Checked)
                 {
                     tb.Rows[rw].Cells[1].Range.Text = kv.Value.ToShortDateString();
-                    tb.Rows[rw].Cells[2].Range.Text = kv.Key.Name.Substring(0, 10) + " Meeting " + (rw - (Combined_Check.Checked ? 1 : 0)).ToString();
+                    tb.Rows[rw].Cells[2].Range.Text = kv.Key.Name.Substring(0, 10) + " Meeting " + Util.ContentControls.IntegerToRoman((rw - (Combined_Check.Checked ? 1 : 0)));
                 }
                 rw++;
             }
@@ -117,6 +122,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Combined_Place = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+
+        private void CommercialInConfidence_Check_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.CommercialInConfidence_Check = CommercialInConfidence_Check.Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcCommercialInConfidence.Range.Font.Hidden = (CommercialInConfidence_Check.Checked ? 0 : 1);           
         }
     }
 }

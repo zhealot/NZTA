@@ -359,6 +359,18 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcInteractiveTenderProcess;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCommercialInConfidence;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BaseEstimate;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BrooksLaw;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPreLettingClause;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPresentationOfTenderClause;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -632,6 +644,12 @@ namespace NZTA_Contract_Generator {
             this.bmStandardSpecificationClause.BeginInit();
             this.rtcElectronicInformation.BeginInit();
             this.rtcInteractiveTenderProcess.BeginInit();
+            this.rtcCommercialInConfidence.BeginInit();
+            this.rtcPricing_BaseEstimate.BeginInit();
+            this.rtcPricing_BrooksLaw.BeginInit();
+            this.rtcPricing_TargetPrice.BeginInit();
+            this.rtcPreLettingClause.BeginInit();
+            this.rtcPresentationOfTenderClause.BeginInit();
         }
         
         /// 
@@ -639,6 +657,12 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcPresentationOfTenderClause.EndInit();
+            this.rtcPreLettingClause.EndInit();
+            this.rtcPricing_TargetPrice.EndInit();
+            this.rtcPricing_BrooksLaw.EndInit();
+            this.rtcPricing_BaseEstimate.EndInit();
+            this.rtcCommercialInConfidence.EndInit();
             this.rtcInteractiveTenderProcess.EndInit();
             this.rtcElectronicInformation.EndInit();
             this.bmStandardSpecificationClause.EndInit();
@@ -989,6 +1013,12 @@ namespace NZTA_Contract_Generator {
             this.bmStandardSpecificationClause = Globals.Factory.CreateBookmark(null, null, "bmStandardSpecificationClause", "bmStandardSpecificationClause", this);
             this.rtcElectronicInformation = Globals.Factory.CreateRichTextContentControl(null, null, "88591614", "rtcElectronicInformation", this);
             this.rtcInteractiveTenderProcess = Globals.Factory.CreateRichTextContentControl(null, null, "3020425276", "rtcInteractiveTenderProcess", this);
+            this.rtcCommercialInConfidence = Globals.Factory.CreateRichTextContentControl(null, null, "1089276715", "rtcCommercialInConfidence", this);
+            this.rtcPricing_BaseEstimate = Globals.Factory.CreateRichTextContentControl(null, null, "2160735491", "rtcPricing_BaseEstimate", this);
+            this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
+            this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "2674831161", "rtcPricing_TargetPrice", this);
+            this.rtcPreLettingClause = Globals.Factory.CreateRichTextContentControl(null, null, "2109774492", "rtcPreLettingClause", this);
+            this.rtcPresentationOfTenderClause = Globals.Factory.CreateRichTextContentControl(null, null, "2085336182", "rtcPresentationOfTenderClause", this);
         }
         
         /// 
@@ -1682,6 +1712,30 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcInteractiveTenderProcess.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcCommercialInConfidence
+            // 
+            this.rtcCommercialInConfidence.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPricing_BaseEstimate
+            // 
+            this.rtcPricing_BaseEstimate.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPricing_BrooksLaw
+            // 
+            this.rtcPricing_BrooksLaw.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPricing_TargetPrice
+            // 
+            this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPreLettingClause
+            // 
+            this.rtcPreLettingClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPresentationOfTenderClause
+            // 
+            this.rtcPresentationOfTenderClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1698,6 +1752,12 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcPresentationOfTenderClause.Dispose();
+            this.rtcPreLettingClause.Dispose();
+            this.rtcPricing_TargetPrice.Dispose();
+            this.rtcPricing_BrooksLaw.Dispose();
+            this.rtcPricing_BaseEstimate.Dispose();
+            this.rtcCommercialInConfidence.Dispose();
             this.rtcInteractiveTenderProcess.Dispose();
             this.rtcElectronicInformation.Dispose();
             this.bmStandardSpecificationClause.Dispose();

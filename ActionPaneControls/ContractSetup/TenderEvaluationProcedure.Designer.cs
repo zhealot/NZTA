@@ -241,6 +241,7 @@
             this.help1.TabIndex = 23;
             this.help1.Text = "?";
             this.help1.UseVisualStyleBackColor = true;
+            this.help1.Click += new System.EventHandler(this.help1_Click);
             // 
             // ET4_Company
             // 

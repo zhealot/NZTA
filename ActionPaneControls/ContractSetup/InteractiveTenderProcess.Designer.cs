@@ -57,6 +57,7 @@
             this.Combined_Date = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.help1 = new System.Windows.Forms.Button();
+            this.CommercialInConfidence_Check = new System.Windows.Forms.CheckBox();
             this.Meeting_Box.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // Interactive_Yes
             // 
             this.Interactive_Yes.AutoSize = true;
-            this.Interactive_Yes.Location = new System.Drawing.Point(9, 81);
+            this.Interactive_Yes.Location = new System.Drawing.Point(86, 93);
             this.Interactive_Yes.Name = "Interactive_Yes";
             this.Interactive_Yes.Size = new System.Drawing.Size(43, 17);
             this.Interactive_Yes.TabIndex = 4;
@@ -95,7 +96,7 @@
             // Interactive_No
             // 
             this.Interactive_No.AutoSize = true;
-            this.Interactive_No.Location = new System.Drawing.Point(135, 81);
+            this.Interactive_No.Location = new System.Drawing.Point(9, 93);
             this.Interactive_No.Name = "Interactive_No";
             this.Interactive_No.Size = new System.Drawing.Size(39, 17);
             this.Interactive_No.TabIndex = 5;
@@ -129,9 +130,9 @@
             this.Meeting_Box.Controls.Add(this.Combined_Check);
             this.Meeting_Box.Controls.Add(this.Combined_Date);
             this.Meeting_Box.Controls.Add(this.label3);
-            this.Meeting_Box.Location = new System.Drawing.Point(9, 106);
+            this.Meeting_Box.Location = new System.Drawing.Point(9, 147);
             this.Meeting_Box.Name = "Meeting_Box";
-            this.Meeting_Box.Size = new System.Drawing.Size(290, 387);
+            this.Meeting_Box.Size = new System.Drawing.Size(290, 379);
             this.Meeting_Box.TabIndex = 6;
             this.Meeting_Box.TabStop = false;
             this.Meeting_Box.Visible = false;
@@ -353,7 +354,7 @@
             // 
             // help1
             // 
-            this.help1.Location = new System.Drawing.Point(253, 77);
+            this.help1.Location = new System.Drawing.Point(253, 53);
             this.help1.Name = "help1";
             this.help1.Size = new System.Drawing.Size(60, 23);
             this.help1.TabIndex = 13;
@@ -361,8 +362,19 @@
             this.help1.UseVisualStyleBackColor = true;
             this.help1.Click += new System.EventHandler(this.help1_Click);
             // 
+            // CommercialInConfidence_Check
+            // 
+            this.CommercialInConfidence_Check.Location = new System.Drawing.Point(152, 82);
+            this.CommercialInConfidence_Check.Name = "CommercialInConfidence_Check";
+            this.CommercialInConfidence_Check.Size = new System.Drawing.Size(121, 40);
+            this.CommercialInConfidence_Check.TabIndex = 14;
+            this.CommercialInConfidence_Check.Text = "Include Commercial In Confidence ?";
+            this.CommercialInConfidence_Check.UseVisualStyleBackColor = true;
+            this.CommercialInConfidence_Check.CheckedChanged += new System.EventHandler(this.CommercialInConfidence_Check_CheckedChanged);
+            // 
             // InteractiveTenderProcess
             // 
+            this.Controls.Add(this.CommercialInConfidence_Check);
             this.Controls.Add(this.help1);
             this.Controls.Add(this.Meeting_Box);
             this.Controls.Add(this.Interactive_No);
@@ -370,7 +382,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "InteractiveTenderProcess";
-            this.Size = new System.Drawing.Size(316, 513);
+            this.Size = new System.Drawing.Size(316, 529);
             this.Meeting_Box.ResumeLayout(false);
             this.Meeting_Box.PerformLayout();
             this.ResumeLayout(false);
@@ -409,5 +421,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Combined_Place;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox CommercialInConfidence_Check;
     }
 }

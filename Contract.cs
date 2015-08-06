@@ -123,6 +123,8 @@ namespace NZTA_Contract_Generator
 
         public String Individual_Place { get; set; }
 
+        public Boolean CommercialInConfidence_Check { get; set; }
+
         //End of Interactive tender process
 
         //Start of pricing options

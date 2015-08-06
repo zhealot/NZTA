@@ -131,5 +131,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
 
         }
+
+        private void help1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

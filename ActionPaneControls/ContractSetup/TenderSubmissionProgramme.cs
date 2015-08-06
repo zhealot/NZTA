@@ -22,6 +22,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
             ignoreChange = false;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = 1;
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }
@@ -75,31 +77,35 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void PresentationsRequired_No_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_No = true;
-            contract.PrelettingMeetings_Yes = false;
+            contract.PrelettingMeetings_No = ((RadioButton)sender).Checked;
+            contract.PrelettingMeetings_Yes = !((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
         }
 
         private void PresentationsRequired_Yes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_Yes = true;
-            contract.PrelettingMeetings_No = false;
+            contract.PrelettingMeetings_Yes = ((RadioButton)sender).Checked;
+            contract.PrelettingMeetings_No = !((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void PrelettingMeetings_No_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_No = true;
-            contract.PrelettingMeetings_Yes = false;
-            PrelettingEndDate.Enabled = false;
-            PrelettingFromDate.Enabled = false;
+            contract.PrelettingMeetings_No = ((RadioButton)sender).Checked;
+            contract.PrelettingMeetings_Yes = !((RadioButton)sender).Checked;
+            PrelettingEndDate.Enabled = !((RadioButton)sender).Checked;
+            PrelettingFromDate.Enabled = !((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
             Util.ContentControls.setText("Preletting_Period", "Not required");
         }
       
         private void PrelettingMeetings_Yes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_Yes = true;
-            contract.PrelettingMeetings_No = false;
-            PrelettingFromDate.Enabled = true;
-            PrelettingEndDate.Enabled = true;
+            contract.PrelettingMeetings_Yes = ((RadioButton)sender).Checked;
+            contract.PrelettingMeetings_No = !((RadioButton)sender).Checked;
+            PrelettingFromDate.Enabled = ((RadioButton)sender).Checked;
+            PrelettingEndDate.Enabled = ((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void Presentation_Address_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,27 +16,35 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             InitializeComponent();
 
             //Load saved state. Defaults set in state...
+            gbTargetPrice.Enabled = false;
+            gbBaseEstimate.Enabled = false;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BrooksLaw.Range.Font.Hidden = 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BaseEstimate.Range.Font.Hidden = 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_TargetPrice.Range.Font.Hidden = 1;
             Util.SavedState.setControlsToState(contract, Controls);
+            
         }
 
         private void BaseEstimate_Check_CheckedChanged(object sender, EventArgs e)
         {
             contract.BaseEstimate_Check = ((CheckBox)sender).Checked;
+            TargetPrice_Check.Checked = !((CheckBox)sender).Checked;
+            gbBaseEstimate.Enabled = ((CheckBox)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BaseEstimate.Range.Font.Hidden = BaseEstimate_Check.Checked ? 0 : 1;
         }
 
         private void BrooksLaw_Check_CheckedChanged(object sender, EventArgs e)
         {
             contract.BrooksLaw_Check = ((CheckBox)sender).Checked;
-        }
-
-        private void RatesOnly_Check_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.RatesOnly_Check = ((CheckBox)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BrooksLaw.Range.Font.Hidden = BrooksLaw_Check.Checked ? 0 : 1;
         }
 
         private void TargetPrice_Check_CheckedChanged(object sender, EventArgs e)
         {
             contract.TargetPrice_Check = ((CheckBox)sender).Checked;
+            BaseEstimate_Check.Checked = !((CheckBox)sender).Checked;
+            gbTargetPrice.Enabled = ((CheckBox)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_TargetPrice.Range.Font.Hidden = TargetPrice_Check.Checked ? 0 : 1;
         }
 
         private void BaseEstimate_Amount_TextChanged(object sender, EventArgs e)
