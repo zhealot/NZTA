@@ -58,19 +58,24 @@
             this.lblM = new System.Windows.Forms.Label();
             this.lblRS = new System.Windows.Forms.Label();
             this.lblRE = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbMethods = new System.Windows.Forms.GroupBox();
+            this.helpPQMPDA = new System.Windows.Forms.Button();
+            this.helpPQM = new System.Windows.Forms.Button();
             this.rbBLO = new System.Windows.Forms.RadioButton();
             this.rbTP = new System.Windows.Forms.RadioButton();
             this.rbLPC = new System.Windows.Forms.RadioButton();
             this.rbPQMPDA = new System.Windows.Forms.RadioButton();
             this.rbPQM = new System.Windows.Forms.RadioButton();
             this.btnOK = new System.Windows.Forms.Button();
+            this.helpLPC = new System.Windows.Forms.Button();
+            this.helpTP = new System.Windows.Forms.Button();
+            this.helpBL = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnM.SuspendLayout();
             this.pnRS.SuspendLayout();
             this.pnTR.SuspendLayout();
             this.pnRE.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbMethods.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -395,19 +400,44 @@
             this.lblRE.TabIndex = 2;
             this.lblRE.Text = "Relevant Experience";
             // 
-            // groupBox3
+            // gbMethods
             // 
-            this.groupBox3.Controls.Add(this.rbBLO);
-            this.groupBox3.Controls.Add(this.rbTP);
-            this.groupBox3.Controls.Add(this.rbLPC);
-            this.groupBox3.Controls.Add(this.rbPQMPDA);
-            this.groupBox3.Controls.Add(this.rbPQM);
-            this.groupBox3.Location = new System.Drawing.Point(4, 83);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(180, 134);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Methods";
+            this.gbMethods.Controls.Add(this.helpBL);
+            this.gbMethods.Controls.Add(this.helpTP);
+            this.gbMethods.Controls.Add(this.helpLPC);
+            this.gbMethods.Controls.Add(this.helpPQMPDA);
+            this.gbMethods.Controls.Add(this.helpPQM);
+            this.gbMethods.Controls.Add(this.rbBLO);
+            this.gbMethods.Controls.Add(this.rbTP);
+            this.gbMethods.Controls.Add(this.rbLPC);
+            this.gbMethods.Controls.Add(this.rbPQMPDA);
+            this.gbMethods.Controls.Add(this.rbPQM);
+            this.gbMethods.Location = new System.Drawing.Point(4, 83);
+            this.gbMethods.Name = "gbMethods";
+            this.gbMethods.Size = new System.Drawing.Size(202, 134);
+            this.gbMethods.TabIndex = 8;
+            this.gbMethods.TabStop = false;
+            this.gbMethods.Text = "Methods";
+            // 
+            // helpPQMPDA
+            // 
+            this.helpPQMPDA.Location = new System.Drawing.Point(129, 40);
+            this.helpPQMPDA.Name = "helpPQMPDA";
+            this.helpPQMPDA.Size = new System.Drawing.Size(23, 22);
+            this.helpPQMPDA.TabIndex = 45;
+            this.helpPQMPDA.Text = "?";
+            this.helpPQMPDA.UseVisualStyleBackColor = true;
+            this.helpPQMPDA.Click += new System.EventHandler(this.helpPQMPDA_Click);
+            // 
+            // helpPQM
+            // 
+            this.helpPQM.Location = new System.Drawing.Point(95, 17);
+            this.helpPQM.Name = "helpPQM";
+            this.helpPQM.Size = new System.Drawing.Size(23, 22);
+            this.helpPQM.TabIndex = 45;
+            this.helpPQM.Text = "?";
+            this.helpPQM.UseVisualStyleBackColor = true;
+            this.helpPQM.Click += new System.EventHandler(this.helpPQM_Click);
             // 
             // rbBLO
             // 
@@ -479,13 +509,43 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // helpLPC
+            // 
+            this.helpLPC.Location = new System.Drawing.Point(154, 63);
+            this.helpLPC.Name = "helpLPC";
+            this.helpLPC.Size = new System.Drawing.Size(23, 22);
+            this.helpLPC.TabIndex = 45;
+            this.helpLPC.Text = "?";
+            this.helpLPC.UseVisualStyleBackColor = true;
+            this.helpLPC.Click += new System.EventHandler(this.helpLPC_Click);
+            // 
+            // helpTP
+            // 
+            this.helpTP.Location = new System.Drawing.Point(95, 86);
+            this.helpTP.Name = "helpTP";
+            this.helpTP.Size = new System.Drawing.Size(23, 22);
+            this.helpTP.TabIndex = 45;
+            this.helpTP.Text = "?";
+            this.helpTP.UseVisualStyleBackColor = true;
+            this.helpTP.Click += new System.EventHandler(this.helpTP_Click);
+            // 
+            // helpBL
+            // 
+            this.helpBL.Location = new System.Drawing.Point(129, 109);
+            this.helpBL.Name = "helpBL";
+            this.helpBL.Size = new System.Drawing.Size(23, 22);
+            this.helpBL.TabIndex = 45;
+            this.helpBL.Text = "?";
+            this.helpBL.UseVisualStyleBackColor = true;
+            this.helpBL.Click += new System.EventHandler(this.helpBL_Click);
+            // 
             // SupplierSelectionMethod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbMethods);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -502,8 +562,8 @@
             this.pnTR.PerformLayout();
             this.pnRE.ResumeLayout(false);
             this.pnRE.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbMethods.ResumeLayout(false);
+            this.gbMethods.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -539,7 +599,7 @@
         private System.Windows.Forms.Panel pnRE;
         private System.Windows.Forms.RadioButton rbRE_F;
         private System.Windows.Forms.RadioButton rbRE_P;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbMethods;
         private System.Windows.Forms.RadioButton rbBLO;
         private System.Windows.Forms.RadioButton rbTP;
         private System.Windows.Forms.RadioButton rbLPC;
@@ -547,6 +607,11 @@
         private System.Windows.Forms.RadioButton rbPQM;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.CheckBox cbTrackRecord;
+        private System.Windows.Forms.Button helpPQM;
+        private System.Windows.Forms.Button helpPQMPDA;
+        private System.Windows.Forms.Button helpLPC;
+        private System.Windows.Forms.Button helpTP;
+        private System.Windows.Forms.Button helpBL;
 
     }
 }

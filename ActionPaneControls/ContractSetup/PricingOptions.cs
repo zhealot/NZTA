@@ -45,6 +45,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             BaseEstimate_Check.Checked = !((CheckBox)sender).Checked;
             gbTargetPrice.Enabled = ((CheckBox)sender).Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_TargetPrice.Range.Font.Hidden = TargetPrice_Check.Checked ? 0 : 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcUnitRateItems.Range.Font.Hidden = TargetPrice_Check.Checked ? 1 : 0;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcContractPaymentScheduleTargetPriceClause.Range.Font.Hidden = TargetPrice_Check.Checked ? 0 : 1;
         }
 
         private void BaseEstimate_Amount_TextChanged(object sender, EventArgs e)

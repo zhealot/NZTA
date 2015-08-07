@@ -90,20 +90,24 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void geoNo_CheckedChanged(object sender, EventArgs e)
         {
-            scheduledItems.Enabled = false;
-            provisionalSum.Enabled = false;
-            schedLabel.Enabled = false;
-            contract.geoNo = true;
-            contract.geoYes = false;
+            scheduledItems.Enabled = !((RadioButton)sender).Checked;
+            provisionalSum.Enabled = !((RadioButton)sender).Checked;
+            schedLabel.Enabled = !((RadioButton)sender).Checked;
+            contract.geoNo = ((RadioButton)sender).Checked;
+            contract.geoYes = !((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechnicalSection.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechProvisionalSum.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechScheduledItems.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
         }
 
         private void geoYes_CheckedChanged(object sender, EventArgs e)
         {
-            scheduledItems.Enabled = true;
-            provisionalSum.Enabled = true;
-            schedLabel.Enabled = true;
-            contract.geoNo = false;
-            contract.geoYes = true;
+            scheduledItems.Enabled = ((RadioButton)sender).Checked;
+            provisionalSum.Enabled = ((RadioButton)sender).Checked;
+            schedLabel.Enabled = ((RadioButton)sender).Checked;
+            contract.geoNo = !((RadioButton)sender).Checked;
+            contract.geoYes = ((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechnicalSection.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void help2_Click(object sender, EventArgs e)
@@ -188,14 +192,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void provisionalSum_CheckedChanged(object sender, EventArgs e)
         {
-            contract.provisionalSum = true;
-            contract.scheduledItems = false;
+            contract.provisionalSum = ((RadioButton)sender).Checked;
+            contract.scheduledItems = !((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechProvisionalSum.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechScheduledItems.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
         }
 
         private void scheduledItems_CheckedChanged(object sender, EventArgs e)
         {
-            contract.provisionalSum = false;
-            contract.scheduledItems = true;
+            contract.provisionalSum = !((RadioButton)sender).Checked;
+            contract.scheduledItems = ((RadioButton)sender).Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechProvisionalSum.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcGeotechScheduledItems.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void clientSiteNo_CheckedChanged(object sender, EventArgs e)

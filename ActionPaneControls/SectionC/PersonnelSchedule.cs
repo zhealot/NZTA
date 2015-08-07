@@ -19,5 +19,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }
+
+        private void TeamLeaderProjectDirector_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

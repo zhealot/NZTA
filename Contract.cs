@@ -23,8 +23,13 @@ namespace NZTA_Contract_Generator
             numDays = "eight";
             numHours = "48";
 
+            //Tender Evaluation Procedure
+            AuditPeriod = 2;
+            InterviewNotice = 1;
+
             //Interactive Tender Process
             Interactive_No = true;
+            InterviewNotice = 1;
         }
 
         //Start of Contract Details
@@ -284,9 +289,14 @@ namespace NZTA_Contract_Generator
         public Boolean rbOtherLevels { get; set; }
         //End of Liability and Insurance
 
-        //Start of Personnel
-        public String tbWeighting { get; set; }
-        //End of Personnel
+        //Start of Personnel Schedule
+        public String TeamLeaderProjectDirector { get; set; }
+        public String TeamLeaderProjectDirectorPhone { get; set; }
+        public String DeputyLeaderProjectDirector { get; set; }
+        public String DeputyLeaderProjectDirectorPhone { get; set; }
+
+
+        //End of Personnel Schedule
 
         //Start of Contract Pricing
         public String CP_Total { get; set; }

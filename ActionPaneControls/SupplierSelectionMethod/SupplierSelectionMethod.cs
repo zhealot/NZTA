@@ -16,10 +16,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         public SupplierSelectionMethod()
         {
             InitializeComponent();
-            //Load saved state. Defaults set in state...
-            Util.SavedState.setControlsToState(contract, Controls);
             tbTR.Enabled = cbTrackRecord.Checked;
             pnM.Enabled = false; pnRE.Enabled = false; pnRS.Enabled = false; pnTR.Enabled = false;
+            //Load saved state. Defaults set in state...
+            Util.SavedState.setControlsToState(contract, Controls);
+            if (contract.BrooksLaw_Check)
+            {
+                rbBLO.Checked = true;
+                gbMethods.Enabled = false;
+            }
+            if (contract.TargetPrice_Check)
+            {
+                rbTP.Checked = true;
+                gbMethods.Enabled = false;
+            }
         }
 
         private void rbPQM_CheckedChanged(object sender, EventArgs e)
@@ -29,7 +39,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void cbTrackRecord_CheckedChanged(object sender, EventArgs e)
         {
+            contract.cbTrackRecord = cbTrackRecord.Checked;
             tbTR.Enabled = cbTrackRecord.Checked;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause1.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause2.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause3.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -193,6 +207,33 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             contract.rbBLO = rbBLO.Checked;
             lblP.Enabled = !rbBLO.Checked;
             tbP.Enabled = !rbBLO.Checked;
+        }
+
+        private void helpPQM_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Where a NPA is used, the weighting applied must not be less than 10%, and Price must not be less than 20% and must not exceed 30% without specific approval.  If Price weighting exceeds 30% then approval from the Manager of Project Services at National Office must be obtained. The total must add up to 100%.");
+        }
+
+        private void helpPQMPDA_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote(": Where a NPA is used, the weighting applied must not be less than 10%, and Price must not be less than 20% and must not exceed 30% without specific approval.  If Price weighting exceeds 30% then approval from the Manager Project Services at National Office must be obtained. The total must add up to 100%.");
+        }
+
+        private void helpLPC_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Mandatory NPAs must be chosen and scored on a Pass/Fail basis with relevant Pass/Fail marking forms, unless you have applied rules from guidance note 3 under 3.2 above.");
+        }
+
+        private void helpTP_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Mandatory NPAs must be chosen (each NPA must not be less than 10%), and total must add up to 100% with relevant marking forms) unless you have applied rules from guidance note 3 under 3.2 above.");
+        }
+
+        private void helpBL_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Mandatory NPAs must be chosen (each NPA must not be less than 10%), and total must add up to 100% with relevant marking forms.");
         }              
+
+
     }
 }

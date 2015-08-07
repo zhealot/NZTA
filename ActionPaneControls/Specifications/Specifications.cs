@@ -13,6 +13,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
     public partial class Specifications : UserControl
     {
         Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        ThisDocument doc = NZTA_Contract_Generator.Globals.ThisDocument;
         public Specifications()
         {
             InitializeComponent();

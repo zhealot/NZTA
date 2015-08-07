@@ -9,7 +9,7 @@ using Microsoft.Office.Tools.Word;
 using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Office = Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
-using NZTA_Contract_Generator.ActionPaneControls.SectionC;
+//using NZTA_Contract_Generator.ActionPaneControls.SectionC;
 
 namespace NZTA_Contract_Generator
 {
@@ -38,7 +38,7 @@ namespace NZTA_Contract_Generator
             //Add edit form
             apc = new ActionPaneControls.ContractSetup.ContractDetails();
             this.ActionsPane.Controls.Add(apc);
-
+            this.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = false;
             //We want nav tree then edit form
             this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;            
         }
@@ -64,7 +64,9 @@ namespace NZTA_Contract_Generator
         private void InternalStartup()
         {
             this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
+            this.rtcGeoTestingSum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcGeoTestingSum_Entering);
             this.rtcGeoTestingSum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcGeoTestingSum_Exiting);
+            this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
             this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
@@ -97,6 +99,16 @@ namespace NZTA_Contract_Generator
         private void richTextContentControl1_Entering(object sender, ContentControlEnteringEventArgs e)
         {
             
+        }
+
+        private void rtcGeoTestingSum_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
+
+        private void rtcAdditionalServicesSchedule_Sum_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
         }
     }
 }

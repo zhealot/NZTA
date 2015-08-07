@@ -62,5 +62,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.rbOtherLevels = ((RadioButton)sender).Checked;
         }
+
+        private void help2_Click(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Guidance Note:  other amount to be approved by the Risk/Insurance Sub VAC as per Appendix XXIII for Professional Services, of the Contract Procedures Manual (SM021), for Consultancy Services with fees estimated in excess of $1,000,000.00 per annum, or a total estimated fee for the period of the Contract in excess of $5,000,000, or contracts that are considered high risk, e.g. tunnels and bridges, other service providers in close proximity (gas pipelines, railway), new technology.>>");
+        }
     }
 }

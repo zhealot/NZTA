@@ -54,12 +54,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.ET4_Name = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.ET5_Company = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ET5_Position = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.ET5_Name = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.AuditPeriod = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
@@ -294,61 +288,10 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Name 4:";
             // 
-            // ET5_Company
-            // 
-            this.ET5_Company.Location = new System.Drawing.Point(78, 510);
-            this.ET5_Company.Name = "ET5_Company";
-            this.ET5_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET5_Company.TabIndex = 35;
-            this.ET5_Company.TextChanged += new System.EventHandler(this.ET5_Company_TextChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 513);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 13);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Company 5:";
-            // 
-            // ET5_Position
-            // 
-            this.ET5_Position.Location = new System.Drawing.Point(78, 486);
-            this.ET5_Position.Name = "ET5_Position";
-            this.ET5_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET5_Position.TabIndex = 33;
-            this.ET5_Position.TextChanged += new System.EventHandler(this.ET5_Position_TextChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 489);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Position 5:";
-            // 
-            // ET5_Name
-            // 
-            this.ET5_Name.Location = new System.Drawing.Point(6, 462);
-            this.ET5_Name.Name = "ET5_Name";
-            this.ET5_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET5_Name.TabIndex = 31;
-            this.ET5_Name.TextChanged += new System.EventHandler(this.ET5_Name_TextChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 445);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 13);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "Name 5:";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 542);
+            this.label18.Location = new System.Drawing.Point(4, 461);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 13);
             this.label18.TabIndex = 46;
@@ -356,16 +299,21 @@
             // 
             // AuditPeriod
             // 
-            this.AuditPeriod.Location = new System.Drawing.Point(167, 540);
+            this.AuditPeriod.Location = new System.Drawing.Point(168, 459);
             this.AuditPeriod.Name = "AuditPeriod";
             this.AuditPeriod.Size = new System.Drawing.Size(109, 20);
             this.AuditPeriod.TabIndex = 50;
+            this.AuditPeriod.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.AuditPeriod.ValueChanged += new System.EventHandler(this.Audit_Period_ValueChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(3, 569);
+            this.label17.Location = new System.Drawing.Point(4, 488);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 13);
             this.label17.TabIndex = 34;
@@ -373,7 +321,7 @@
             // 
             // InterviewCity
             // 
-            this.InterviewCity.Location = new System.Drawing.Point(139, 566);
+            this.InterviewCity.Location = new System.Drawing.Point(140, 485);
             this.InterviewCity.Name = "InterviewCity";
             this.InterviewCity.Size = new System.Drawing.Size(137, 20);
             this.InterviewCity.TabIndex = 35;
@@ -382,7 +330,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 594);
+            this.label19.Location = new System.Drawing.Point(4, 513);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(124, 13);
             this.label19.TabIndex = 46;
@@ -390,7 +338,7 @@
             // 
             // InterviewNotice
             // 
-            this.InterviewNotice.Location = new System.Drawing.Point(167, 592);
+            this.InterviewNotice.Location = new System.Drawing.Point(168, 511);
             this.InterviewNotice.Name = "InterviewNotice";
             this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
             this.InterviewNotice.TabIndex = 50;
@@ -404,12 +352,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.InterviewCity);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.ET5_Company);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.ET5_Position);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.ET5_Name);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.ET4_Company);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ET4_Position);
@@ -437,7 +379,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TenderEvaluationProcedure";
-            this.Size = new System.Drawing.Size(280, 633);
+            this.Size = new System.Drawing.Size(280, 555);
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).EndInit();
             this.ResumeLayout(false);
@@ -473,12 +415,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox ET4_Name;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox ET5_Company;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox ET5_Position;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox ET5_Name;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown AuditPeriod;
         private System.Windows.Forms.Label label17;

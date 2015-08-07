@@ -109,7 +109,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void Audit_Period_ValueChanged(object sender, EventArgs e)
         {
             contract.AuditPeriod = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s" : ""));
         }
 
         private void InterviewCity_TextChanged(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void InterviewNotice_ValueChanged(object sender, EventArgs e)
         {
             contract.InterviewNotice = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s'" : "'s"));
         }
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
@@ -134,7 +134,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void help1_Click(object sender, EventArgs e)
         {
-
+            Util.Help.guidanceNote("At least one TET member must be qualified for tenders >$200,000, but this does not have to be the TET Leader");
         }
     }
 }

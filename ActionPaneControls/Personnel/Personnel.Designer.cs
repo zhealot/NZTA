@@ -93,7 +93,7 @@
             this.btnGetPersonnel.Name = "btnGetPersonnel";
             this.btnGetPersonnel.Size = new System.Drawing.Size(91, 36);
             this.btnGetPersonnel.TabIndex = 6;
-            this.btnGetPersonnel.Text = "From Form B";
+            this.btnGetPersonnel.Text = "Read Form B";
             this.btnGetPersonnel.UseVisualStyleBackColor = true;
             this.btnGetPersonnel.Click += new System.EventHandler(this.btnGetPersonnel_Click);
             // 

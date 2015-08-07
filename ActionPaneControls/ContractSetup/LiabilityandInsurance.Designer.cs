@@ -41,6 +41,7 @@
             this.PublicLiabilityInsurance = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.help2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,6 +157,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.help2);
             this.groupBox1.Controls.Add(this.rbApprovedDefault);
             this.groupBox1.Controls.Add(this.rbNotRequired);
             this.groupBox1.Controls.Add(this.rbOtherLevels);
@@ -164,6 +166,16 @@
             this.groupBox1.Size = new System.Drawing.Size(251, 160);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
+            // 
+            // help2
+            // 
+            this.help2.Location = new System.Drawing.Point(222, 113);
+            this.help2.Name = "help2";
+            this.help2.Size = new System.Drawing.Size(23, 23);
+            this.help2.TabIndex = 45;
+            this.help2.Text = "?";
+            this.help2.UseVisualStyleBackColor = true;
+            this.help2.Click += new System.EventHandler(this.help2_Click);
             // 
             // LiabilityandInsurance
             // 
@@ -200,5 +212,6 @@
         private System.Windows.Forms.TextBox PublicLiabilityInsurance;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button help2;
     }
 }

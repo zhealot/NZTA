@@ -17,6 +17,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public TenderFormat()
         {
             InitializeComponent();
+
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);            
         }
@@ -213,6 +214,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     TimeResource_Page.Focus();
                     Util.Help.guidanceNote("Please enter a number");
                 }
+            }
+            else
+            {
+                Util.ContentControls.setText("TimeResource", "");
             }
         }
     }

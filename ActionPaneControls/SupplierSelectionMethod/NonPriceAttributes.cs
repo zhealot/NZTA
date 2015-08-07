@@ -18,24 +18,25 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             InitializeComponent();
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
+            TrackRecord.Enabled = contract.cbTrackRecord;
         }
 
         private void RelevantExperience_ValueChanged(object sender, EventArgs e)
         {
             contract.RelevantExperience = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }
 
         private void TrackRecord_ValueChanged(object sender, EventArgs e)
         {
             contract.TrackRecord = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }
 
         private void ExperienceVSRecord_ValueChanged(object sender, EventArgs e)
         {
             contract.ExperienceVSRecord = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, ((NumericUpDown)sender).Value.ToString());
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }
 
         private void button1_Click(object sender, EventArgs e)
