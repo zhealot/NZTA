@@ -20,7 +20,7 @@
     <PublishUrl>C:\Users\Tao\Box Sync\2. Staff Related Activities\Tao%27s\Source\Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.71</ApplicationVersion>
+    <ApplicationVersion>1.0.0.72</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -32,6 +32,11 @@
     <OfficeApplicationDescription />
   </PropertyGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -54,6 +59,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -158,10 +164,10 @@
     <Compile Include="ActionPaneControls\NavTreeAPC.Designer.cs">
       <DependentUpon>NavTreeAPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="ActionPaneControls\Personnel\Personnel.cs">
+    <Compile Include="ActionPaneControls\SectionC\Personnel\Personnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ActionPaneControls\Personnel\Personnel.Designer.cs">
+    <Compile Include="ActionPaneControls\SectionC\Personnel\Personnel.Designer.cs">
       <DependentUpon>Personnel.cs</DependentUpon>
     </Compile>
     <Compile Include="ActionPaneControls\SectionC\PaymentSchedule.cs">
@@ -244,7 +250,7 @@
     <EmbeddedResource Include="ActionPaneControls\NavTreeAPC.resx">
       <DependentUpon>NavTreeAPC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ActionPaneControls\Personnel\Personnel.resx">
+    <EmbeddedResource Include="ActionPaneControls\SectionC\Personnel\Personnel.resx">
       <DependentUpon>Personnel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActionPaneControls\SectionC\PaymentSchedule.resx">
@@ -304,6 +310,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -315,7 +322,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Final_PDF.png" />
+    <None Include="Resources\Draft_PDF.png" />
+    <None Include="Resources\Word.png" />
+    <None Include="Resources\Control Panel.png" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -343,7 +355,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="NZTA Contract.dotx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]NZTA Contract.dotx&quot;" />
         <Host Name="Word Document" Path=".\NZTA Contract.dotx" GeneratedCodeNamespace="NZTA_Contract_Generator" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="1A1243D4FCF4E134967DFE3E67292C334DFFB392" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="81019D6DF7D13A1ADCB985F48B27A00DE932EAB9" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

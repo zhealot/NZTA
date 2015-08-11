@@ -40,7 +40,8 @@ namespace NZTA_Contract_Generator
             this.ActionsPane.Controls.Add(apc);
             this.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = false;
             //We want nav tree then edit form
-            this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;            
+            this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;
+            Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = true; 
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)

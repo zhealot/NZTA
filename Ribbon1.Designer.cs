@@ -38,8 +38,8 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.CGTAB = this.Factory.CreateRibbonTab();
             this.DisplayOptionsGroup = this.Factory.CreateRibbonGroup();
-            this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
             this.ExportGroup = this.Factory.CreateRibbonGroup();
+            this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
             this.ExportWordButton = this.Factory.CreateRibbonButton();
             this.ExportDraftButton = this.Factory.CreateRibbonButton();
             this.ExportFinalButton = this.Factory.CreateRibbonButton();
@@ -74,15 +74,6 @@
             this.DisplayOptionsGroup.Label = "Display Options";
             this.DisplayOptionsGroup.Name = "DisplayOptionsGroup";
             // 
-            // toggleButton1
-            // 
-            this.toggleButton1.Checked = true;
-            this.toggleButton1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.toggleButton1.Label = "Toggle Navigation Tree";
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.ShowImage = true;
-            this.toggleButton1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.toggleButton1_Click);
-            // 
             // ExportGroup
             // 
             this.ExportGroup.Items.Add(this.ExportWordButton);
@@ -91,10 +82,21 @@
             this.ExportGroup.Label = "Export";
             this.ExportGroup.Name = "ExportGroup";
             // 
+            // toggleButton1
+            // 
+            this.toggleButton1.Checked = true;
+            this.toggleButton1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.toggleButton1.Image = global::NZTA_Contract_Generator.Properties.Resources.Control_Panel;
+            this.toggleButton1.Label = "Toggle Navigation Tree";
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.ShowImage = true;
+            this.toggleButton1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.toggleButton1_Click);
+            // 
             // ExportWordButton
             // 
             this.ExportWordButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.ExportWordButton.Label = "Export as Word";
+            this.ExportWordButton.Image = global::NZTA_Contract_Generator.Properties.Resources.Word;
+            this.ExportWordButton.Label = "Word";
             this.ExportWordButton.Name = "ExportWordButton";
             this.ExportWordButton.ShowImage = true;
             this.ExportWordButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportWordButton_Click);
@@ -102,7 +104,8 @@
             // ExportDraftButton
             // 
             this.ExportDraftButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.ExportDraftButton.Label = "Export as Draft PDF";
+            this.ExportDraftButton.Image = global::NZTA_Contract_Generator.Properties.Resources.Draft_PDF;
+            this.ExportDraftButton.Label = "Draft PDF";
             this.ExportDraftButton.Name = "ExportDraftButton";
             this.ExportDraftButton.ShowImage = true;
             this.ExportDraftButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportDraftButton_Click);
@@ -110,10 +113,11 @@
             // ExportFinalButton
             // 
             this.ExportFinalButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.ExportFinalButton.Label = "Export as Final PDF";
+            this.ExportFinalButton.Image = global::NZTA_Contract_Generator.Properties.Resources.Final_PDF;
+            this.ExportFinalButton.Label = "Final PDF";
             this.ExportFinalButton.Name = "ExportFinalButton";
             this.ExportFinalButton.ShowImage = true;
-            this.ExportFinalButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportDraftButton_Click);
+            this.ExportFinalButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportFinalButton_Click);
             // 
             // Ribbon1
             // 

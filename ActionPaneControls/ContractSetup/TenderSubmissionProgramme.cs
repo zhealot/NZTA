@@ -72,20 +72,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void TargetDate_ValueChanged(object sender, EventArgs e)
         {
             contract.TargetDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd-MMMM-yyyy"));
         }
 
         private void PresentationsRequired_No_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_No = ((RadioButton)sender).Checked;
-            contract.PrelettingMeetings_Yes = !((RadioButton)sender).Checked;
+            contract.PresentationsRequired_Yes = !((RadioButton)sender).Checked;
+            contract.PresentationsRequired_No = ((RadioButton)sender).Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
         }
 
         private void PresentationsRequired_Yes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.PrelettingMeetings_Yes = ((RadioButton)sender).Checked;
-            contract.PrelettingMeetings_No = !((RadioButton)sender).Checked;
+            contract.PresentationsRequired_Yes = ((RadioButton)sender).Checked;
+            contract.PresentationsRequired_No = !((RadioButton)sender).Checked;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
