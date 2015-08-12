@@ -22,6 +22,9 @@ namespace NZTA_Contract_Generator
             geoNo = true;
             numDays = "eight";
             numHours = "48";
+            elecNo = true;
+            CostIndex = 0.80m;
+            CostFluctuations_Check = false;
 
             //Tender Evaluation Procedure
             AuditPeriod = 2;
@@ -30,6 +33,12 @@ namespace NZTA_Contract_Generator
             //Interactive Tender Process
             Interactive_No = true;
             InterviewNotice = 1;
+
+            //Tender Submission Programme
+            anotherMeansNo = true;
+
+            //Liability and Insurances
+            rbApprovedDefault = true;
         }
 
         //Start of Contract Details
@@ -70,6 +79,7 @@ namespace NZTA_Contract_Generator
         public Boolean altTenderNo { get; set; }
 
         public String TenderBox { get; set; }
+        public String TargetDate { get; set; }
 
         public String Nominated_Person { get; set; }
         public String Nominated_Phone { get; set; }
@@ -88,17 +98,10 @@ namespace NZTA_Contract_Generator
         public String numDays { get; set; }
         public String numHours { get; set; }
 
-        public Boolean elecYes { get; set; }
-        public Boolean elecNo { get; set; }
-        public Boolean anotherMeansYes { get; set; }
-        public Boolean anotherMeansNo { get; set; }
-        public String otherDetails { get; set; }
-        public Boolean isPersonDifferentYes { get; set; }
-        public Boolean isPersonDifferentNo { get; set; }
-        public String Different_Name { get; set; }
-        public String Different_Email { get; set; }
-
         public Boolean checkBox1 { get; set; }
+
+        public Boolean CostFluctuations_Check { get; set; }
+        public Decimal CostIndex { get; set; }
         // End of Contract Details
 
         //Start of Interactive tender Process
@@ -159,6 +162,12 @@ namespace NZTA_Contract_Generator
         public String Presentation_Box { get; set; }
         public String Presentation_City { get; set; }
 
+        public Boolean elecYes { get; set; }
+        public Boolean elecNo { get; set; }
+        public Boolean anotherMeansYes { get; set; }
+        public Boolean anotherMeansNo { get; set; }
+        public String otherDetails { get; set; }
+
         public String Evaluation_Start { get; set; }
         public String Evaluation_End { get; set; }
         public String Evaluation_Other { get; set; }
@@ -169,7 +178,6 @@ namespace NZTA_Contract_Generator
         public String PrelettingEndDate { get; set; }
         public String PrelettingOther { get; set; }
 
-        public String TargetDate { get; set; }
 
         //End of tender submission programme
 
@@ -262,7 +270,6 @@ namespace NZTA_Contract_Generator
         //End of Tender Evaluation Procedure
 
         //Start of Payment Schedule
-        public String CostIndex { get; set; }
         public String ConsultantsProjectQualityPlan { get; set; }
         public String BaselineProgrramme { get; set; }
         public String HealthSafetyManagementPlan { get; set; }
@@ -284,7 +291,6 @@ namespace NZTA_Contract_Generator
         public String PublicLiabilityInsurance { get; set; }
         public String MaximumLiability { get; set; }
         public String DurationOfLiability { get; set; }
-        public Boolean rbNotRequired { get; set; }
         public Boolean rbApprovedDefault { get; set; }
         public Boolean rbOtherLevels { get; set; }
         //End of Liability and Insurance
@@ -294,7 +300,6 @@ namespace NZTA_Contract_Generator
         public String TeamLeaderProjectDirectorPhone { get; set; }
         public String DeputyLeaderProjectDirector { get; set; }
         public String DeputyLeaderProjectDirectorPhone { get; set; }
-
 
         //End of Personnel Schedule
 
@@ -308,7 +313,10 @@ namespace NZTA_Contract_Generator
         public Boolean MultipleProjects_No { get; set; }
         public Boolean MultipleProjects_Yes { get; set; }
         public String Project1 { get; set; }
-
         //End of Specifications
+
+        //Start of Personnel
+        public String tbWeighting { get; set; }
+        //End of Personnel
     }
 }

@@ -91,7 +91,7 @@
             this.Interactive_Yes.TabStop = true;
             this.Interactive_Yes.Text = "Yes";
             this.Interactive_Yes.UseVisualStyleBackColor = true;
-            this.Interactive_Yes.CheckedChanged += new System.EventHandler(this.Interactive_Yes_CheckedChanged);
+            this.Interactive_Yes.CheckedChanged += new System.EventHandler(this.Interactive_CheckedChanged);
             // 
             // Interactive_No
             // 
@@ -103,7 +103,7 @@
             this.Interactive_No.TabStop = true;
             this.Interactive_No.Text = "No";
             this.Interactive_No.UseVisualStyleBackColor = true;
-            this.Interactive_No.CheckedChanged += new System.EventHandler(this.Interactive_No_CheckedChanged);
+            this.Interactive_No.CheckedChanged += new System.EventHandler(this.Interactive_CheckedChanged);
             // 
             // Meeting_Box
             // 

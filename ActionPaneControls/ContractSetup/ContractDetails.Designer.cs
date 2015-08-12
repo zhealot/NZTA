@@ -98,21 +98,6 @@
             this.numDays = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.numHours = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.elecNo = new System.Windows.Forms.RadioButton();
-            this.elecYes = new System.Windows.Forms.RadioButton();
-            this.label36 = new System.Windows.Forms.Label();
-            this.anotherMeansYes = new System.Windows.Forms.RadioButton();
-            this.anotherMeansNo = new System.Windows.Forms.RadioButton();
-            this.otherDetails = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.isPersonDifferentNo = new System.Windows.Forms.RadioButton();
-            this.isPersonDifferentYes = new System.Windows.Forms.RadioButton();
-            this.label39 = new System.Windows.Forms.Label();
-            this.Different_Email = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.Different_Name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -120,9 +105,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.gbElecForm = new System.Windows.Forms.GroupBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.Consultant_Name = new System.Windows.Forms.TextBox();
@@ -134,17 +116,21 @@
             this.MadeDate = new System.Windows.Forms.DateTimePicker();
             this.label47 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.CloseDate = new System.Windows.Forms.DateTimePicker();
+            this.label35 = new System.Windows.Forms.Label();
+            this.help3 = new System.Windows.Forms.Button();
+            this.CostFluctuations_Check = new System.Windows.Forms.CheckBox();
+            this.lblCostIndex = new System.Windows.Forms.Label();
+            this.CostIndex = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.gbElecForm.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).BeginInit();
             this.SuspendLayout();
             // 
             // Contract_Name
@@ -778,156 +764,6 @@
             this.numHours.TabIndex = 71;
             this.numHours.TextChanged += new System.EventHandler(this.numHours_TextChanged);
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(2, 10);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(263, 13);
-            this.label35.TabIndex = 72;
-            this.label35.Text = "Are you providing electronic copies of documentation?";
-            // 
-            // elecNo
-            // 
-            this.elecNo.AutoSize = true;
-            this.elecNo.Location = new System.Drawing.Point(134, 26);
-            this.elecNo.Name = "elecNo";
-            this.elecNo.Size = new System.Drawing.Size(39, 17);
-            this.elecNo.TabIndex = 74;
-            this.elecNo.TabStop = true;
-            this.elecNo.Text = "No";
-            this.elecNo.UseVisualStyleBackColor = true;
-            this.elecNo.CheckedChanged += new System.EventHandler(this.elecNo_CheckedChanged);
-            // 
-            // elecYes
-            // 
-            this.elecYes.AutoSize = true;
-            this.elecYes.Location = new System.Drawing.Point(5, 26);
-            this.elecYes.Name = "elecYes";
-            this.elecYes.Size = new System.Drawing.Size(43, 17);
-            this.elecYes.TabIndex = 73;
-            this.elecYes.TabStop = true;
-            this.elecYes.Text = "Yes";
-            this.elecYes.UseVisualStyleBackColor = true;
-            this.elecYes.CheckedChanged += new System.EventHandler(this.elecYes_CheckedChanged);
-            // 
-            // label36
-            // 
-            this.label36.Location = new System.Drawing.Point(2, 13);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(323, 32);
-            this.label36.TabIndex = 75;
-            this.label36.Text = "As well as by email, will you provide another means for electronic copies to be o" +
-    "btained? ";
-            // 
-            // anotherMeansYes
-            // 
-            this.anotherMeansYes.AutoSize = true;
-            this.anotherMeansYes.Location = new System.Drawing.Point(41, 50);
-            this.anotherMeansYes.Name = "anotherMeansYes";
-            this.anotherMeansYes.Size = new System.Drawing.Size(115, 17);
-            this.anotherMeansYes.TabIndex = 77;
-            this.anotherMeansYes.TabStop = true;
-            this.anotherMeansYes.Text = "Yes (email or other)";
-            this.anotherMeansYes.UseVisualStyleBackColor = true;
-            this.anotherMeansYes.CheckedChanged += new System.EventHandler(this.anotherMeansYes_CheckedChanged);
-            // 
-            // anotherMeansNo
-            // 
-            this.anotherMeansNo.AutoSize = true;
-            this.anotherMeansNo.Location = new System.Drawing.Point(5, 50);
-            this.anotherMeansNo.Name = "anotherMeansNo";
-            this.anotherMeansNo.Size = new System.Drawing.Size(39, 17);
-            this.anotherMeansNo.TabIndex = 76;
-            this.anotherMeansNo.TabStop = true;
-            this.anotherMeansNo.Text = "No";
-            this.anotherMeansNo.UseVisualStyleBackColor = true;
-            this.anotherMeansNo.CheckedChanged += new System.EventHandler(this.anotherMeansNo_CheckedChanged);
-            // 
-            // otherDetails
-            // 
-            this.otherDetails.Location = new System.Drawing.Point(210, 48);
-            this.otherDetails.Name = "otherDetails";
-            this.otherDetails.Size = new System.Drawing.Size(100, 20);
-            this.otherDetails.TabIndex = 78;
-            this.otherDetails.Leave += new System.EventHandler(this.otherDetails_Leave);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(167, 52);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(33, 13);
-            this.label37.TabIndex = 79;
-            this.label37.Text = "Other";
-            // 
-            // label38
-            // 
-            this.label38.Location = new System.Drawing.Point(2, 13);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(270, 29);
-            this.label38.TabIndex = 80;
-            this.label38.Text = "Is the person distributing the electronic information different from the \'Clients" +
-    " Nominated Person\' above?";
-            // 
-            // isPersonDifferentNo
-            // 
-            this.isPersonDifferentNo.AutoSize = true;
-            this.isPersonDifferentNo.Location = new System.Drawing.Point(5, 45);
-            this.isPersonDifferentNo.Name = "isPersonDifferentNo";
-            this.isPersonDifferentNo.Size = new System.Drawing.Size(39, 17);
-            this.isPersonDifferentNo.TabIndex = 82;
-            this.isPersonDifferentNo.TabStop = true;
-            this.isPersonDifferentNo.Text = "No";
-            this.isPersonDifferentNo.UseVisualStyleBackColor = true;
-            this.isPersonDifferentNo.CheckedChanged += new System.EventHandler(this.isPersonDifferentNo_CheckedChanged);
-            // 
-            // isPersonDifferentYes
-            // 
-            this.isPersonDifferentYes.AutoSize = true;
-            this.isPersonDifferentYes.Location = new System.Drawing.Point(142, 45);
-            this.isPersonDifferentYes.Name = "isPersonDifferentYes";
-            this.isPersonDifferentYes.Size = new System.Drawing.Size(109, 17);
-            this.isPersonDifferentYes.TabIndex = 81;
-            this.isPersonDifferentYes.TabStop = true;
-            this.isPersonDifferentYes.Text = "Yes (enter details)";
-            this.isPersonDifferentYes.UseVisualStyleBackColor = true;
-            this.isPersonDifferentYes.CheckedChanged += new System.EventHandler(this.isPersonDifferentYes_CheckedChanged);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(37, 97);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(35, 13);
-            this.label39.TabIndex = 88;
-            this.label39.Text = "Email:";
-            // 
-            // Different_Email
-            // 
-            this.Different_Email.Location = new System.Drawing.Point(90, 94);
-            this.Different_Email.Name = "Different_Email";
-            this.Different_Email.Size = new System.Drawing.Size(174, 20);
-            this.Different_Email.TabIndex = 87;
-            this.Different_Email.Validating += new System.ComponentModel.CancelEventHandler(this.Different_Email_Validating);
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(37, 71);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(38, 13);
-            this.label41.TabIndex = 84;
-            this.label41.Text = "Name:";
-            // 
-            // Different_Name
-            // 
-            this.Different_Name.Location = new System.Drawing.Point(90, 68);
-            this.Different_Name.Name = "Different_Name";
-            this.Different_Name.Size = new System.Drawing.Size(174, 20);
-            this.Different_Name.TabIndex = 83;
-            this.Different_Name.TextChanged += new System.EventHandler(this.Different_Name_TextChanged);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label40);
@@ -1015,9 +851,9 @@
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.Nominated_Person);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Location = new System.Drawing.Point(7, 1030);
+            this.groupBox3.Location = new System.Drawing.Point(3, 1102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 303);
+            this.groupBox3.Size = new System.Drawing.Size(331, 296);
             this.groupBox3.TabIndex = 90;
             this.groupBox3.TabStop = false;
             // 
@@ -1037,52 +873,11 @@
             this.groupBox4.Controls.Add(this.numDays);
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.label32);
-            this.groupBox4.Location = new System.Drawing.Point(3, 1333);
+            this.groupBox4.Location = new System.Drawing.Point(4, 1404);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(331, 121);
+            this.groupBox4.Size = new System.Drawing.Size(331, 130);
             this.groupBox4.TabIndex = 91;
             this.groupBox4.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.gbElecForm);
-            this.groupBox5.Controls.Add(this.groupBox9);
-            this.groupBox5.Controls.Add(this.elecNo);
-            this.groupBox5.Controls.Add(this.elecYes);
-            this.groupBox5.Controls.Add(this.label35);
-            this.groupBox5.Location = new System.Drawing.Point(4, 1454);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(330, 264);
-            this.groupBox5.TabIndex = 92;
-            this.groupBox5.TabStop = false;
-            // 
-            // gbElecForm
-            // 
-            this.gbElecForm.Controls.Add(this.otherDetails);
-            this.gbElecForm.Controls.Add(this.label37);
-            this.gbElecForm.Controls.Add(this.anotherMeansYes);
-            this.gbElecForm.Controls.Add(this.anotherMeansNo);
-            this.gbElecForm.Controls.Add(this.label36);
-            this.gbElecForm.Location = new System.Drawing.Point(5, 46);
-            this.gbElecForm.Name = "gbElecForm";
-            this.gbElecForm.Size = new System.Drawing.Size(314, 77);
-            this.gbElecForm.TabIndex = 90;
-            this.gbElecForm.TabStop = false;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label39);
-            this.groupBox9.Controls.Add(this.Different_Email);
-            this.groupBox9.Controls.Add(this.label41);
-            this.groupBox9.Controls.Add(this.Different_Name);
-            this.groupBox9.Controls.Add(this.isPersonDifferentNo);
-            this.groupBox9.Controls.Add(this.isPersonDifferentYes);
-            this.groupBox9.Controls.Add(this.label38);
-            this.groupBox9.Location = new System.Drawing.Point(3, 129);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(315, 125);
-            this.groupBox9.TabIndex = 89;
-            this.groupBox9.TabStop = false;
             // 
             // groupBox6
             // 
@@ -1194,14 +989,90 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Consultant Information";
             // 
+            // CloseDate
+            // 
+            this.CloseDate.Location = new System.Drawing.Point(9, 1064);
+            this.CloseDate.Name = "CloseDate";
+            this.CloseDate.Size = new System.Drawing.Size(200, 20);
+            this.CloseDate.TabIndex = 97;
+            this.CloseDate.ValueChanged += new System.EventHandler(this.CloseDate_ValueChanged);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(7, 1036);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(186, 13);
+            this.label35.TabIndex = 96;
+            this.label35.Text = "Tenders close on what day and date?";
+            // 
+            // help3
+            // 
+            this.help3.Location = new System.Drawing.Point(138, 1548);
+            this.help3.Name = "help3";
+            this.help3.Size = new System.Drawing.Size(23, 23);
+            this.help3.TabIndex = 99;
+            this.help3.Text = "?";
+            this.help3.UseVisualStyleBackColor = true;
+            this.help3.Click += new System.EventHandler(this.help3_Click);
+            // 
+            // CostFluctuations_Check
+            // 
+            this.CostFluctuations_Check.AutoSize = true;
+            this.CostFluctuations_Check.Location = new System.Drawing.Point(4, 1552);
+            this.CostFluctuations_Check.Name = "CostFluctuations_Check";
+            this.CostFluctuations_Check.Size = new System.Drawing.Size(128, 17);
+            this.CostFluctuations_Check.TabIndex = 98;
+            this.CostFluctuations_Check.Text = "Pay Cost Fluctuations";
+            this.CostFluctuations_Check.UseVisualStyleBackColor = true;
+            this.CostFluctuations_Check.CheckedChanged += new System.EventHandler(this.CostFluctuations_Check_CheckedChanged);
+            // 
+            // lblCostIndex
+            // 
+            this.lblCostIndex.AutoSize = true;
+            this.lblCostIndex.Location = new System.Drawing.Point(181, 1553);
+            this.lblCostIndex.Name = "lblCostIndex";
+            this.lblCostIndex.Size = new System.Drawing.Size(39, 13);
+            this.lblCostIndex.TabIndex = 100;
+            this.lblCostIndex.Text = "Index: ";
+            // 
+            // CostIndex
+            // 
+            this.CostIndex.DecimalPlaces = 2;
+            this.CostIndex.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.CostIndex.Location = new System.Drawing.Point(226, 1551);
+            this.CostIndex.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CostIndex.Name = "CostIndex";
+            this.CostIndex.Size = new System.Drawing.Size(79, 20);
+            this.CostIndex.TabIndex = 101;
+            this.CostIndex.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.CostIndex.ValueChanged += new System.EventHandler(this.CostIndex_ValueChanged);
+            // 
             // ContractDetails
             // 
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.Controls.Add(this.CostIndex);
+            this.Controls.Add(this.lblCostIndex);
+            this.Controls.Add(this.help3);
+            this.Controls.Add(this.CloseDate);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.CostFluctuations_Check);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -1216,7 +1087,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(338, 1721);
+            this.Size = new System.Drawing.Size(338, 1584);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1228,18 +1099,13 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.gbElecForm.ResumeLayout(false);
-            this.gbElecForm.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1315,32 +1181,14 @@
         private System.Windows.Forms.TextBox numDays;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox numHours;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.RadioButton elecNo;
-        private System.Windows.Forms.RadioButton elecYes;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.RadioButton anotherMeansYes;
-        private System.Windows.Forms.RadioButton anotherMeansNo;
-        private System.Windows.Forms.TextBox otherDetails;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.RadioButton isPersonDifferentNo;
-        private System.Windows.Forms.RadioButton isPersonDifferentYes;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox Different_Email;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox Different_Name;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox Street_2;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.GroupBox gbElecForm;
-        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox Consultant_Name;
@@ -1353,6 +1201,12 @@
         private System.Windows.Forms.Label label47;
         public System.Windows.Forms.TextBox Contract_Name;
         private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.DateTimePicker CloseDate;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button help3;
+        private System.Windows.Forms.CheckBox CostFluctuations_Check;
+        private System.Windows.Forms.Label lblCostIndex;
+        private System.Windows.Forms.NumericUpDown CostIndex;
 
     }
 }

@@ -66,7 +66,7 @@ namespace NZTA_Contract_Generator
                                                                                 true, true, Microsoft.Office.Interop.Word.WdExportCreateBookmarks.wdExportCreateNoBookmarks, true,
                                                                                 true, false, ref missing);
                 }
-                catch (Exception ex)
+                catch
                 {
                     Util.Help.guidanceNote("Sorry, failed to export PDF");
                 }

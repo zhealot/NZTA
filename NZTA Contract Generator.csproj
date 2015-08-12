@@ -164,10 +164,10 @@
     <Compile Include="ActionPaneControls\NavTreeAPC.Designer.cs">
       <DependentUpon>NavTreeAPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="ActionPaneControls\SectionC\Personnel\Personnel.cs">
+    <Compile Include="ActionPaneControls\Personnel\Personnel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ActionPaneControls\SectionC\Personnel\Personnel.Designer.cs">
+    <Compile Include="ActionPaneControls\Personnel\Personnel.Designer.cs">
       <DependentUpon>Personnel.cs</DependentUpon>
     </Compile>
     <Compile Include="ActionPaneControls\SectionC\PaymentSchedule.cs">
@@ -250,7 +250,7 @@
     <EmbeddedResource Include="ActionPaneControls\NavTreeAPC.resx">
       <DependentUpon>NavTreeAPC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ActionPaneControls\SectionC\Personnel\Personnel.resx">
+    <EmbeddedResource Include="ActionPaneControls\Personnel\Personnel.resx">
       <DependentUpon>Personnel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActionPaneControls\SectionC\PaymentSchedule.resx">

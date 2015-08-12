@@ -21,6 +21,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Presentation_Address.DataSource = new BindingSource(Constants.Location.data, null);
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
+            gbElecForm.Enabled = false;
             ignoreChange = false;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = 1;
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = 1;
@@ -28,11 +29,66 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.SavedState.setControlsToState(contract, Controls);
         }
 
-        private void CloseDate_ValueChanged(object sender, EventArgs e)
+        private void elecYes_CheckedChanged(object sender, EventArgs e)
         {
-            contract.CloseDate = CloseDate.Value.ToString("O");
-            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMM/yyyy"));
+            contract.elecYes = ((RadioButton)sender).Checked;
+            contract.elecNo = !((RadioButton)sender).Checked;
+            gbElecForm.Enabled = ((RadioButton)sender).Checked;
+            var rg = Globals.ThisDocument.rtcElectronicInformation.Range;
+            rg.Paragraphs.First.Range.set_Style("NZTA Tendering: Level 2");
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = (elecYes.Checked ? 0 : 1);
+            if (anotherMeansYes.Checked)
+            {
+                anotherMeansYes_CheckedChanged(anotherMeansYes, null);
+            }
+            else
+            {
+                anotherMeansNo_CheckedChanged(anotherMeansNo, null);
+            }
+            NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
+
+        private void elecNo_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.elecNo = ((RadioButton)sender).Checked;
+            contract.elecYes = !((RadioButton)sender).Checked;
+            gbElecForm.Enabled = !((RadioButton)sender).Checked;
+            var rg = Globals.ThisDocument.rtcElectronicInformation.Range;
+            rg.Paragraphs.First.Range.set_Style("NZTA Body Text");
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = (elecNo.Checked ? 1 : 0);
+        }
+
+        private void anotherMeansNo_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.anotherMeansNo = anotherMeansNo.Checked;
+            otherDetails.Enabled = !anotherMeansNo.Checked;
+            Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on email");
+        }
+
+        private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
+        {
+            contract.anotherMeansYes = anotherMeansYes.Checked;
+            contract.anotherMeansNo = anotherMeansNo.Checked;
+            otherDetails.Enabled = anotherMeansYes.Checked;
+            otherDetails.Focus();
+        }
+        
+        private void otherDetails_Leave(object sender, EventArgs e)
+        {
+            if ( anotherMeansYes.Checked && string.IsNullOrEmpty(otherDetails.Text))
+            {
+                Util.Help.guidanceNote("Please enter content.");
+                return;
+            }
+            else
+            {
+                contract.otherDetails = ((TextBox)sender).Text;
+                Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on " + contract.otherDetails);
+            }            
+        }
+
 
         private void Evaluation_Start_ValueChanged(object sender, EventArgs e)
         {

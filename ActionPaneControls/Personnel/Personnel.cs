@@ -125,5 +125,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
                 tbWeighting.ScrollToCaret();
             }
         }
+
+        private void tbWeighting_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

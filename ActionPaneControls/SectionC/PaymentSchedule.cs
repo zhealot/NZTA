@@ -22,17 +22,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 
         private void CostIndex_TextChanged(object sender, EventArgs e)
         {
-            Decimal d;
-            if (Decimal.TryParse(((TextBox)sender).Text, out d))
-            {
-                contract.CostIndex = d.ToString("0.00");
-                Util.ContentControls.setText("CostIndex1", contract.CostIndex);
-                Util.ContentControls.setText("CostIndex2", (1 - d).ToString("0.00"));
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter 1 digit decimal");
-            }            
+         
         }
 
         private void ConsultantsProjectQualityPlan_TextChanged(object sender, EventArgs e)
@@ -229,5 +219,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
                 Util.Help.guidanceNote("Please enter a number for percentage");
             }
         }
+
     }
 }

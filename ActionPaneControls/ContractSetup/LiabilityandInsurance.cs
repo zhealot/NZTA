@@ -48,19 +48,31 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
-        private void rbNotRequired_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.rbNotRequired = ((RadioButton)sender).Checked;
-        }
-
         private void rbApprovedDefault_CheckedChanged(object sender, EventArgs e)
         {
             contract.rbApprovedDefault = ((RadioButton)sender).Checked;
+            contract.rbOtherLevels = !((RadioButton)sender).Checked;
+            var rg = Globals.ThisDocument.rtcLimitationDefault.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            rg = Globals.ThisDocument.rtcLimitationOther.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            rg = Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs.First.Range;
+            object yes=true;
+            //###rg.ListFormat.ApplyListTemplate(rg.ListFormat.ListTemplate, true);
         }
 
         private void rbOtherLevels_CheckedChanged(object sender, EventArgs e)
         {
+            contract.rbApprovedDefault = !((RadioButton)sender).Checked;
             contract.rbOtherLevels = ((RadioButton)sender).Checked;
+            var rg = Globals.ThisDocument.rtcLimitationDefault.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            rg = Globals.ThisDocument.rtcLimitationOther.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void help2_Click(object sender, EventArgs e)
