@@ -24,7 +24,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         {
          
         }
-
+        //### mapping locations? 
         private void ConsultantsProjectQualityPlan_TextChanged(object sender, EventArgs e)
         {
             if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))

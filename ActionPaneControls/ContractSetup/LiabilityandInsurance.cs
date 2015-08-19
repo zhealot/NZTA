@@ -18,6 +18,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void PublicLiabilityInsurance_TextChanged(object sender, EventArgs e)
         {
+            //### page 183, Amount of Cover
             if (Util.ContentControls.IsAmount(((TextBox)sender).Text))
             {
                 contract.PublicLiabilityInsurance = ((TextBox)sender).Text;
@@ -48,31 +49,21 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
-        private void rbApprovedDefault_CheckedChanged(object sender, EventArgs e)
+        private void InsuranceLevel_CheckedChanged(object sender, EventArgs e)
         {
-            contract.rbApprovedDefault = ((RadioButton)sender).Checked;
-            contract.rbOtherLevels = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcLimitationDefault.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-            rg = Globals.ThisDocument.rtcLimitationOther.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs.First.Range;
-            object yes=true;
-            //###rg.ListFormat.ApplyListTemplate(rg.ListFormat.ListTemplate, true);
-        }
-
-        private void rbOtherLevels_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.rbApprovedDefault = !((RadioButton)sender).Checked;
-            contract.rbOtherLevels = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcLimitationDefault.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcLimitationOther.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            bool blDefaultChkd = rbApprovedDefault.Checked;
+            contract.rbApprovedDefault = blDefaultChkd;
+            contract.rbOtherLevels = !blDefaultChkd;
+            var rgDefault = Globals.ThisDocument.rtcLimitationDefault.Range;
+            var rgOther = Globals.ThisDocument.rtcLimitationOther.Range;
+            rgDefault.SetRange(rgDefault.Start - 1, rgDefault.End + 2);
+            rgDefault.Font.Hidden = blDefaultChkd ? 0 : 1;
+            rgOther.SetRange(rgOther.Start - 1, rgOther.End + 2);
+            rgOther.Font.Hidden = !blDefaultChkd ? 0 : 1;
+            if (!blDefaultChkd)
+            {
+                MaximumLiability.Focus();
+            }
         }
 
         private void help2_Click(object sender, EventArgs e)

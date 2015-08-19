@@ -126,6 +126,7 @@
             this.TeamLeaderProjectDirectorPhone.Name = "TeamLeaderProjectDirectorPhone";
             this.TeamLeaderProjectDirectorPhone.Size = new System.Drawing.Size(147, 21);
             this.TeamLeaderProjectDirectorPhone.TabIndex = 1;
+            this.TeamLeaderProjectDirectorPhone.TextChanged += new System.EventHandler(this.TeamLeaderProjectDirectorPhone_TextChanged);
             // 
             // label3
             // 

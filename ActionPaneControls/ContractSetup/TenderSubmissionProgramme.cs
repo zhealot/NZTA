@@ -142,6 +142,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.PresentationsRequired_Yes = ((RadioButton)sender).Checked;
             contract.PresentationsRequired_No = !((RadioButton)sender).Checked;
+            //### 3.5 formatting
             NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 

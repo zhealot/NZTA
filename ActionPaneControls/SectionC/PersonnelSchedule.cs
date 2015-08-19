@@ -24,5 +24,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         {
 
         }
+
+        private void TeamLeaderProjectDirectorPhone_TextChanged(object sender, EventArgs e)
+        {
+            //### Personal Schedule talbe (page 62)
+        }
     }
 }

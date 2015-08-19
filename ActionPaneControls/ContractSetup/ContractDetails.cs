@@ -238,6 +238,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.altTenderYes = true;
             contract.altTenderNo = false;
+            //### 1.13
             NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
         }
 
@@ -403,7 +404,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CostFluctuations_Check_CheckedChanged(object sender, EventArgs e)
         {
-            //### check CostFluctuation, select other pane then come back to Contract Setup, 1st clause in cc is set to body text style, instead of "NZTA Tendering: Level 3"
             bool blChkd = ((CheckBox)sender).Checked;
             contract.CostFluctuations_Check = blChkd;
             CostIndex.Enabled = blChkd;

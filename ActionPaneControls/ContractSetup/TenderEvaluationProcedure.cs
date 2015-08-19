@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public TenderEvaluationProcedure()
         {
             InitializeComponent();
-            //###Load saved state. Defaults set in state...
+            //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }
 
@@ -108,6 +108,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Audit_Period_ValueChanged(object sender, EventArgs e)
         {
+            //### must not greater than 2 weeks
             contract.AuditPeriod = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s" : ""));
         }

@@ -27,6 +27,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void BaseEstimate_Check_CheckedChanged(object sender, EventArgs e)
         {
+            //### fix numbering 
             contract.BaseEstimate_Check = ((CheckBox)sender).Checked;
             TargetPrice_Check.Checked = !((CheckBox)sender).Checked;
             gbBaseEstimate.Enabled = ((CheckBox)sender).Checked;
