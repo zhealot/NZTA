@@ -301,7 +301,7 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl162;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl163;
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcAlternativeTenderNo;
         
         internal Microsoft.Office.Tools.Word.Bookmark bmPersonalStart;
         
@@ -332,6 +332,8 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeoTestingSum;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcAlternativeTenderYes;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -577,7 +579,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl160.BeginInit();
             this.richTextContentControl161.BeginInit();
             this.richTextContentControl162.BeginInit();
-            this.richTextContentControl163.BeginInit();
+            this.rtcAlternativeTenderNo.BeginInit();
             this.bmPersonalStart.BeginInit();
             this.bmPersonalEnd.BeginInit();
             this.bmPersonalAbove.BeginInit();
@@ -593,6 +595,7 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethStart.BeginInit();
             this.FormC_MethEnd.BeginInit();
             this.rtcGeoTestingSum.BeginInit();
+            this.rtcAlternativeTenderYes.BeginInit();
         }
         
         /// 
@@ -600,6 +603,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcAlternativeTenderYes.EndInit();
             this.rtcGeoTestingSum.EndInit();
             this.FormC_MethEnd.EndInit();
             this.FormC_MethStart.EndInit();
@@ -615,7 +619,7 @@ namespace NZTA_Contract_Generator {
             this.bmPersonalAbove.EndInit();
             this.bmPersonalEnd.EndInit();
             this.bmPersonalStart.EndInit();
-            this.richTextContentControl163.EndInit();
+            this.rtcAlternativeTenderNo.EndInit();
             this.richTextContentControl162.EndInit();
             this.richTextContentControl161.EndInit();
             this.richTextContentControl160.EndInit();
@@ -908,7 +912,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl160 = Globals.Factory.CreateRichTextContentControl(null, null, "2616318665", "richTextContentControl160", this);
             this.richTextContentControl161 = Globals.Factory.CreateRichTextContentControl(null, null, "3015096423", "richTextContentControl161", this);
             this.richTextContentControl162 = Globals.Factory.CreateRichTextContentControl(null, null, "2786534762", "richTextContentControl162", this);
-            this.richTextContentControl163 = Globals.Factory.CreateRichTextContentControl(null, null, "4152458658", "richTextContentControl163", this);
+            this.rtcAlternativeTenderNo = Globals.Factory.CreateRichTextContentControl(null, null, "4152458658", "rtcAlternativeTenderNo", this);
             this.bmPersonalStart = Globals.Factory.CreateBookmark(null, null, "bmPersonalStart", "bmPersonalStart", this);
             this.bmPersonalEnd = Globals.Factory.CreateBookmark(null, null, "bmPersonalEnd", "bmPersonalEnd", this);
             this.bmPersonalAbove = Globals.Factory.CreateBookmark(null, null, "bmPersonalAbove", "bmPersonalAbove", this);
@@ -924,6 +928,7 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
             this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
             this.rtcGeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "720943843", "rtcGeoTestingSum", this);
+            this.rtcAlternativeTenderYes = Globals.Factory.CreateRichTextContentControl(null, null, "910882152", "rtcAlternativeTenderYes", this);
         }
         
         /// 
@@ -1501,9 +1506,9 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl162.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl163
+            // rtcAlternativeTenderNo
             // 
-            this.richTextContentControl163.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.rtcAlternativeTenderNo.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // bmPersonalStart
             // 
@@ -1565,6 +1570,10 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcGeoTestingSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcAlternativeTenderYes
+            // 
+            this.rtcAlternativeTenderYes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1581,6 +1590,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcAlternativeTenderYes.Dispose();
             this.rtcGeoTestingSum.Dispose();
             this.FormC_MethEnd.Dispose();
             this.FormC_MethStart.Dispose();
@@ -1596,7 +1606,7 @@ namespace NZTA_Contract_Generator {
             this.bmPersonalAbove.Dispose();
             this.bmPersonalEnd.Dispose();
             this.bmPersonalStart.Dispose();
-            this.richTextContentControl163.Dispose();
+            this.rtcAlternativeTenderNo.Dispose();
             this.richTextContentControl162.Dispose();
             this.richTextContentControl161.Dispose();
             this.richTextContentControl160.Dispose();

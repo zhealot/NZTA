@@ -228,16 +228,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         }
 
         //### 1.13
-        private void altTenderNo_CheckedChanged(object sender, EventArgs e)
+        private void altTender_Changed(object sender, EventArgs e)
         {
-            contract.altTenderNo = true;
-            contract.altTenderYes = false;
-        }
-
-        private void altTenderYes_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.altTenderYes = true;
-            contract.altTenderNo = false;
+            bool blYes = altTenderYes.Checked;
+            contract.altTenderNo = !blYes;
+            contract.altTenderYes = blYes;
+            var altYesRg = Globals.ThisDocument.rtcAlternativeTenderYes.Range;
+            var altNoRg = Globals.ThisDocument.rtcAlternativeTenderNo.Range;
+            altYesRg.SetRange(altYesRg.Start - 1, altYesRg.End + 2);
+            altNoRg.SetRange(altNoRg.Start - 1, altNoRg.End + 2);
+            Globals.ThisDocument.rtcAlternativeTenderNo.Range.Font.Hidden = blYes ? 1 : 0;
+            Globals.ThisDocument.rtcAlternativeTenderYes.Range.Font.Hidden = blYes ? 0 : 1;
+            Globals.ThisDocument.rtcAlternativeTenderYes.Range.Select();
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)

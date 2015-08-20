@@ -519,7 +519,7 @@
             this.altTenderNo.TabStop = true;
             this.altTenderNo.Text = "No";
             this.altTenderNo.UseVisualStyleBackColor = true;
-            this.altTenderNo.CheckedChanged += new System.EventHandler(this.altTenderNo_CheckedChanged);
+            this.altTenderNo.CheckedChanged += new System.EventHandler(this.altTender_Changed);
             // 
             // altTenderYes
             // 
@@ -531,7 +531,7 @@
             this.altTenderYes.TabStop = true;
             this.altTenderYes.Text = "Yes";
             this.altTenderYes.UseVisualStyleBackColor = true;
-            this.altTenderYes.CheckedChanged += new System.EventHandler(this.altTenderYes_CheckedChanged);
+            this.altTenderYes.CheckedChanged += new System.EventHandler(this.altTender_Changed);
             // 
             // help2
             // 
