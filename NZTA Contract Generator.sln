@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZTA Contract Generator", "NZTA Contract Generator.csproj", "{882C4A27-53AA-4A85-AF03-685B41A71CBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZTA New Base", "NZTA New Base.csproj", "{882C4A27-53AA-4A85-AF03-685B41A71CBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

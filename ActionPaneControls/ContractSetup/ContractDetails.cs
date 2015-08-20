@@ -227,19 +227,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.clientSiteYes = false;
         }
 
+        //### 1.13
         private void altTenderNo_CheckedChanged(object sender, EventArgs e)
         {
             contract.altTenderNo = true;
             contract.altTenderYes = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
         }
 
         private void altTenderYes_CheckedChanged(object sender, EventArgs e)
         {
             contract.altTenderYes = true;
             contract.altTenderNo = false;
-            //### 1.13
-            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -65,8 +65,6 @@ namespace NZTA_Contract_Generator
         private void InternalStartup()
         {
             this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
-            this.rtcGeoTestingSum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcGeoTestingSum_Entering);
-            this.rtcGeoTestingSum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcGeoTestingSum_Exiting);
             this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
             this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);

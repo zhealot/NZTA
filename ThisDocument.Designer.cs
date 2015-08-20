@@ -19,30 +19,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.ActionsPane ActionsPane;
         
-        internal Microsoft.Office.Tools.Word.Bookmark Additional_Services_Schedule;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Contract_Details;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Contract_Pricing;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Geotechnical_Testing_Schedule;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Liability_Insurance;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Non_Price_Attributes;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Personnel_Schedule;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Pricing_Options;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Supplier_Selection_Method;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Evaluation_Procedure;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Format;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark Tender_Submission_Programme;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl1;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl2;
@@ -95,10 +71,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl26;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl27;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl28;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl29;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl30;
@@ -119,11 +91,7 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl38;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl39;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl40;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl AlternativeTenders;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl50;
         
@@ -241,36 +209,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl116;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl117;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl118;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl119;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl120;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl121;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl122;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl123;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl124;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl125;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl126;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl127;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl128;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl129;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl130;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl131;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl132;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl133;
@@ -287,41 +225,7 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl140;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl141;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl142;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl143;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl144;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark MethStart;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethStart;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark MethAbove;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
-        
         internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalAbove;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalStart;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalEnd;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmASSEnd;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmPSEnd;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmPS_Consultant;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmContractPricingSchedule;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmContractPaymentSchedule;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeoTestingSum;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_GeoTestingSum;
         
@@ -329,33 +233,15 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_ASS_Sum;
         
-        internal Microsoft.Office.Tools.Word.Bookmark bmContract_Abbreviations;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmContract_Contents;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmContract_FrontPage;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSigningSet;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl145;
         
-        internal Microsoft.Office.Tools.Word.Bookmark bmStandardSpecificationClause;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicInformation;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcInteractiveTenderProcess;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCommercialInConfidence;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BaseEstimate;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BrooksLaw;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPreLettingClause;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPresentationOfTenderClause;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTrackRecordClause2;
         
@@ -367,17 +253,11 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeotechProvisionalSum;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeotechScheduledItems;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcUnitRateItems;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcContractPaymentScheduleTargetPriceClause;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcLimitationDefault;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcLimitationOther;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTargetPriceTenderForm;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCostFluctuationsNo;
         
@@ -385,7 +265,73 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcDurationOfLiability;
         
-        internal Microsoft.Office.Tools.Word.Bookmark bmSiteInspection;
+        internal Microsoft.Office.Tools.Word.PictureContentControl pictureContentControl1;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl146;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl147;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl148;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl149;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl150;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl151;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcInteractiveTenderProcess;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCommercialInConfidence;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPresentationOfTenderClause;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPreLettingClause;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTargetPriceTenderForm;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeotechScheduledItems;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcUnitRateItems;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl159;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl160;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl161;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl162;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl163;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalStart;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPersonalAbove;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmASSEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPSEnd;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmPS_Consultant;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmContractPaymentSchedule;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmContractPricingSchedule;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmStandardSpecificationClause;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark MethStart;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Evaluation_Procedure;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark MethAbove;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethStart;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark FormC_MethEnd;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeoTestingSum;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -490,18 +436,6 @@ namespace NZTA_Contract_Generator {
         private void BeginInitialization() {
             this.BeginInit();
             this.ActionsPane.BeginInit();
-            this.Additional_Services_Schedule.BeginInit();
-            this.Contract_Details.BeginInit();
-            this.Contract_Pricing.BeginInit();
-            this.Geotechnical_Testing_Schedule.BeginInit();
-            this.Liability_Insurance.BeginInit();
-            this.Non_Price_Attributes.BeginInit();
-            this.Personnel_Schedule.BeginInit();
-            this.Pricing_Options.BeginInit();
-            this.Supplier_Selection_Method.BeginInit();
-            this.Tender_Evaluation_Procedure.BeginInit();
-            this.Tender_Format.BeginInit();
-            this.Tender_Submission_Programme.BeginInit();
             this.richTextContentControl1.BeginInit();
             this.richTextContentControl2.BeginInit();
             this.richTextContentControl3.BeginInit();
@@ -528,8 +462,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl24.BeginInit();
             this.richTextContentControl25.BeginInit();
             this.richTextContentControl26.BeginInit();
-            this.richTextContentControl27.BeginInit();
-            this.richTextContentControl28.BeginInit();
             this.richTextContentControl29.BeginInit();
             this.richTextContentControl30.BeginInit();
             this.richTextContentControl31.BeginInit();
@@ -540,9 +472,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl36.BeginInit();
             this.richTextContentControl37.BeginInit();
             this.richTextContentControl38.BeginInit();
-            this.richTextContentControl39.BeginInit();
             this.richTextContentControl40.BeginInit();
-            this.AlternativeTenders.BeginInit();
             this.richTextContentControl50.BeginInit();
             this.richTextContentControl51.BeginInit();
             this.richTextContentControl52.BeginInit();
@@ -601,21 +531,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl114.BeginInit();
             this.richTextContentControl115.BeginInit();
             this.richTextContentControl116.BeginInit();
-            this.richTextContentControl117.BeginInit();
-            this.richTextContentControl118.BeginInit();
-            this.richTextContentControl119.BeginInit();
-            this.richTextContentControl120.BeginInit();
-            this.richTextContentControl121.BeginInit();
-            this.richTextContentControl122.BeginInit();
-            this.richTextContentControl123.BeginInit();
-            this.richTextContentControl124.BeginInit();
-            this.richTextContentControl125.BeginInit();
-            this.richTextContentControl126.BeginInit();
-            this.richTextContentControl127.BeginInit();
-            this.richTextContentControl128.BeginInit();
-            this.richTextContentControl129.BeginInit();
-            this.richTextContentControl130.BeginInit();
-            this.richTextContentControl131.BeginInit();
             this.richTextContentControl132.BeginInit();
             this.richTextContentControl133.BeginInit();
             this.richTextContentControl134.BeginInit();
@@ -624,56 +539,60 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl137.BeginInit();
             this.richTextContentControl138.BeginInit();
             this.richTextContentControl140.BeginInit();
-            this.richTextContentControl141.BeginInit();
-            this.richTextContentControl142.BeginInit();
-            this.richTextContentControl143.BeginInit();
-            this.richTextContentControl144.BeginInit();
-            this.MethStart.BeginInit();
-            this.FormC_MethStart.BeginInit();
-            this.MethAbove.BeginInit();
-            this.FormC_MethEnd.BeginInit();
             this.DocumentFormatForm.BeginInit();
-            this.bmPersonalAbove.BeginInit();
-            this.bmPersonalStart.BeginInit();
-            this.bmPersonalEnd.BeginInit();
-            this.bmASSEnd.BeginInit();
-            this.bmPSEnd.BeginInit();
-            this.bmPS_Consultant.BeginInit();
-            this.bmContractPricingSchedule.BeginInit();
-            this.bmContractPaymentSchedule.BeginInit();
-            this.rtcGeoTestingSum.BeginInit();
             this.rtcCPS_GeoTestingSum.BeginInit();
             this.rtcAdditionalServicesSchedule_Sum.BeginInit();
             this.rtcCPS_ASS_Sum.BeginInit();
-            this.bmContract_Abbreviations.BeginInit();
-            this.bmContract_Contents.BeginInit();
-            this.bmContract_FrontPage.BeginInit();
-            this.bmSigningSet.BeginInit();
             this.richTextContentControl145.BeginInit();
-            this.bmStandardSpecificationClause.BeginInit();
             this.rtcElectronicInformation.BeginInit();
-            this.rtcInteractiveTenderProcess.BeginInit();
-            this.rtcCommercialInConfidence.BeginInit();
             this.rtcPricing_BaseEstimate.BeginInit();
             this.rtcPricing_BrooksLaw.BeginInit();
             this.rtcPricing_TargetPrice.BeginInit();
-            this.rtcPreLettingClause.BeginInit();
-            this.rtcPresentationOfTenderClause.BeginInit();
             this.rtcTrackRecordClause2.BeginInit();
             this.rtcTrackRecordClause1.BeginInit();
             this.rtcTrackRecordClause3.BeginInit();
             this.rtcGeotechnicalSection.BeginInit();
             this.rtcGeotechProvisionalSum.BeginInit();
-            this.rtcGeotechScheduledItems.BeginInit();
-            this.rtcUnitRateItems.BeginInit();
             this.rtcContractPaymentScheduleTargetPriceClause.BeginInit();
             this.rtcLimitationDefault.BeginInit();
             this.rtcLimitationOther.BeginInit();
-            this.rtcTargetPriceTenderForm.BeginInit();
             this.rtcCostFluctuationsNo.BeginInit();
             this.rtcCostFluctuationsYes.BeginInit();
             this.rtcDurationOfLiability.BeginInit();
-            this.bmSiteInspection.BeginInit();
+            this.pictureContentControl1.BeginInit();
+            this.richTextContentControl146.BeginInit();
+            this.richTextContentControl147.BeginInit();
+            this.richTextContentControl148.BeginInit();
+            this.richTextContentControl149.BeginInit();
+            this.richTextContentControl150.BeginInit();
+            this.richTextContentControl151.BeginInit();
+            this.rtcInteractiveTenderProcess.BeginInit();
+            this.rtcCommercialInConfidence.BeginInit();
+            this.rtcPresentationOfTenderClause.BeginInit();
+            this.rtcPreLettingClause.BeginInit();
+            this.rtcTargetPriceTenderForm.BeginInit();
+            this.rtcGeotechScheduledItems.BeginInit();
+            this.rtcUnitRateItems.BeginInit();
+            this.richTextContentControl159.BeginInit();
+            this.richTextContentControl160.BeginInit();
+            this.richTextContentControl161.BeginInit();
+            this.richTextContentControl162.BeginInit();
+            this.richTextContentControl163.BeginInit();
+            this.bmPersonalStart.BeginInit();
+            this.bmPersonalEnd.BeginInit();
+            this.bmPersonalAbove.BeginInit();
+            this.bmASSEnd.BeginInit();
+            this.bmPSEnd.BeginInit();
+            this.bmPS_Consultant.BeginInit();
+            this.bmContractPaymentSchedule.BeginInit();
+            this.bmContractPricingSchedule.BeginInit();
+            this.bmStandardSpecificationClause.BeginInit();
+            this.MethStart.BeginInit();
+            this.Tender_Evaluation_Procedure.BeginInit();
+            this.MethAbove.BeginInit();
+            this.FormC_MethStart.BeginInit();
+            this.FormC_MethEnd.BeginInit();
+            this.rtcGeoTestingSum.BeginInit();
         }
         
         /// 
@@ -681,56 +600,60 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
-            this.bmSiteInspection.EndInit();
+            this.rtcGeoTestingSum.EndInit();
+            this.FormC_MethEnd.EndInit();
+            this.FormC_MethStart.EndInit();
+            this.MethAbove.EndInit();
+            this.Tender_Evaluation_Procedure.EndInit();
+            this.MethStart.EndInit();
+            this.bmStandardSpecificationClause.EndInit();
+            this.bmContractPricingSchedule.EndInit();
+            this.bmContractPaymentSchedule.EndInit();
+            this.bmPS_Consultant.EndInit();
+            this.bmPSEnd.EndInit();
+            this.bmASSEnd.EndInit();
+            this.bmPersonalAbove.EndInit();
+            this.bmPersonalEnd.EndInit();
+            this.bmPersonalStart.EndInit();
+            this.richTextContentControl163.EndInit();
+            this.richTextContentControl162.EndInit();
+            this.richTextContentControl161.EndInit();
+            this.richTextContentControl160.EndInit();
+            this.richTextContentControl159.EndInit();
+            this.rtcUnitRateItems.EndInit();
+            this.rtcGeotechScheduledItems.EndInit();
+            this.rtcTargetPriceTenderForm.EndInit();
+            this.rtcPreLettingClause.EndInit();
+            this.rtcPresentationOfTenderClause.EndInit();
+            this.rtcCommercialInConfidence.EndInit();
+            this.rtcInteractiveTenderProcess.EndInit();
+            this.richTextContentControl151.EndInit();
+            this.richTextContentControl150.EndInit();
+            this.richTextContentControl149.EndInit();
+            this.richTextContentControl148.EndInit();
+            this.richTextContentControl147.EndInit();
+            this.richTextContentControl146.EndInit();
+            this.pictureContentControl1.EndInit();
             this.rtcDurationOfLiability.EndInit();
             this.rtcCostFluctuationsYes.EndInit();
             this.rtcCostFluctuationsNo.EndInit();
-            this.rtcTargetPriceTenderForm.EndInit();
             this.rtcLimitationOther.EndInit();
             this.rtcLimitationDefault.EndInit();
             this.rtcContractPaymentScheduleTargetPriceClause.EndInit();
-            this.rtcUnitRateItems.EndInit();
-            this.rtcGeotechScheduledItems.EndInit();
             this.rtcGeotechProvisionalSum.EndInit();
             this.rtcGeotechnicalSection.EndInit();
             this.rtcTrackRecordClause3.EndInit();
             this.rtcTrackRecordClause1.EndInit();
             this.rtcTrackRecordClause2.EndInit();
-            this.rtcPresentationOfTenderClause.EndInit();
-            this.rtcPreLettingClause.EndInit();
             this.rtcPricing_TargetPrice.EndInit();
             this.rtcPricing_BrooksLaw.EndInit();
             this.rtcPricing_BaseEstimate.EndInit();
-            this.rtcCommercialInConfidence.EndInit();
-            this.rtcInteractiveTenderProcess.EndInit();
             this.rtcElectronicInformation.EndInit();
-            this.bmStandardSpecificationClause.EndInit();
             this.richTextContentControl145.EndInit();
-            this.bmSigningSet.EndInit();
-            this.bmContract_FrontPage.EndInit();
-            this.bmContract_Contents.EndInit();
-            this.bmContract_Abbreviations.EndInit();
             this.rtcCPS_ASS_Sum.EndInit();
             this.rtcAdditionalServicesSchedule_Sum.EndInit();
             this.rtcCPS_GeoTestingSum.EndInit();
-            this.rtcGeoTestingSum.EndInit();
-            this.bmContractPaymentSchedule.EndInit();
-            this.bmContractPricingSchedule.EndInit();
-            this.bmPS_Consultant.EndInit();
-            this.bmPSEnd.EndInit();
-            this.bmASSEnd.EndInit();
-            this.bmPersonalEnd.EndInit();
-            this.bmPersonalStart.EndInit();
-            this.bmPersonalAbove.EndInit();
             this.DocumentFormatForm.EndInit();
-            this.FormC_MethEnd.EndInit();
-            this.MethAbove.EndInit();
-            this.FormC_MethStart.EndInit();
-            this.MethStart.EndInit();
-            this.richTextContentControl144.EndInit();
-            this.richTextContentControl143.EndInit();
-            this.richTextContentControl142.EndInit();
-            this.richTextContentControl141.EndInit();
             this.richTextContentControl140.EndInit();
             this.richTextContentControl138.EndInit();
             this.richTextContentControl137.EndInit();
@@ -739,21 +662,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl134.EndInit();
             this.richTextContentControl133.EndInit();
             this.richTextContentControl132.EndInit();
-            this.richTextContentControl131.EndInit();
-            this.richTextContentControl130.EndInit();
-            this.richTextContentControl129.EndInit();
-            this.richTextContentControl128.EndInit();
-            this.richTextContentControl127.EndInit();
-            this.richTextContentControl126.EndInit();
-            this.richTextContentControl125.EndInit();
-            this.richTextContentControl124.EndInit();
-            this.richTextContentControl123.EndInit();
-            this.richTextContentControl122.EndInit();
-            this.richTextContentControl121.EndInit();
-            this.richTextContentControl120.EndInit();
-            this.richTextContentControl119.EndInit();
-            this.richTextContentControl118.EndInit();
-            this.richTextContentControl117.EndInit();
             this.richTextContentControl116.EndInit();
             this.richTextContentControl115.EndInit();
             this.richTextContentControl114.EndInit();
@@ -812,9 +720,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.EndInit();
             this.richTextContentControl51.EndInit();
             this.richTextContentControl50.EndInit();
-            this.AlternativeTenders.EndInit();
             this.richTextContentControl40.EndInit();
-            this.richTextContentControl39.EndInit();
             this.richTextContentControl38.EndInit();
             this.richTextContentControl37.EndInit();
             this.richTextContentControl36.EndInit();
@@ -825,8 +731,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl31.EndInit();
             this.richTextContentControl30.EndInit();
             this.richTextContentControl29.EndInit();
-            this.richTextContentControl28.EndInit();
-            this.richTextContentControl27.EndInit();
             this.richTextContentControl26.EndInit();
             this.richTextContentControl25.EndInit();
             this.richTextContentControl24.EndInit();
@@ -853,18 +757,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl3.EndInit();
             this.richTextContentControl2.EndInit();
             this.richTextContentControl1.EndInit();
-            this.Tender_Submission_Programme.EndInit();
-            this.Tender_Format.EndInit();
-            this.Tender_Evaluation_Procedure.EndInit();
-            this.Supplier_Selection_Method.EndInit();
-            this.Pricing_Options.EndInit();
-            this.Personnel_Schedule.EndInit();
-            this.Non_Price_Attributes.EndInit();
-            this.Liability_Insurance.EndInit();
-            this.Geotechnical_Testing_Schedule.EndInit();
-            this.Contract_Pricing.EndInit();
-            this.Contract_Details.EndInit();
-            this.Additional_Services_Schedule.EndInit();
             this.ActionsPane.EndInit();
             this.EndInit();
         }
@@ -875,18 +767,6 @@ namespace NZTA_Contract_Generator {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
             this.ActionsPane = Globals.Factory.CreateActionsPane(null, null, "ActionsPane", "ActionsPane", this);
-            this.Additional_Services_Schedule = Globals.Factory.CreateBookmark(null, null, "Additional_Services_Schedule", "Additional_Services_Schedule", this);
-            this.Contract_Details = Globals.Factory.CreateBookmark(null, null, "Contract_Details", "Contract_Details", this);
-            this.Contract_Pricing = Globals.Factory.CreateBookmark(null, null, "Contract_Pricing", "Contract_Pricing", this);
-            this.Geotechnical_Testing_Schedule = Globals.Factory.CreateBookmark(null, null, "Geotechnical_Testing_Schedule", "Geotechnical_Testing_Schedule", this);
-            this.Liability_Insurance = Globals.Factory.CreateBookmark(null, null, "Liability_Insurance", "Liability_Insurance", this);
-            this.Non_Price_Attributes = Globals.Factory.CreateBookmark(null, null, "Non_Price_Attributes", "Non_Price_Attributes", this);
-            this.Personnel_Schedule = Globals.Factory.CreateBookmark(null, null, "Personnel_Schedule", "Personnel_Schedule", this);
-            this.Pricing_Options = Globals.Factory.CreateBookmark(null, null, "Pricing_Options", "Pricing_Options", this);
-            this.Supplier_Selection_Method = Globals.Factory.CreateBookmark(null, null, "Supplier_Selection_Method", "Supplier_Selection_Method", this);
-            this.Tender_Evaluation_Procedure = Globals.Factory.CreateBookmark(null, null, "Tender_Evaluation_Procedure", "Tender_Evaluation_Procedure", this);
-            this.Tender_Format = Globals.Factory.CreateBookmark(null, null, "Tender_Format", "Tender_Format", this);
-            this.Tender_Submission_Programme = Globals.Factory.CreateBookmark(null, null, "Tender_Submission_Programme", "Tender_Submission_Programme", this);
             this.richTextContentControl1 = Globals.Factory.CreateRichTextContentControl(null, null, "2995438561", "richTextContentControl1", this);
             this.richTextContentControl2 = Globals.Factory.CreateRichTextContentControl(null, null, "3011478966", "richTextContentControl2", this);
             this.richTextContentControl3 = Globals.Factory.CreateRichTextContentControl(null, null, "1839502725", "richTextContentControl3", this);
@@ -913,8 +793,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl24 = Globals.Factory.CreateRichTextContentControl(null, null, "4137966592", "richTextContentControl24", this);
             this.richTextContentControl25 = Globals.Factory.CreateRichTextContentControl(null, null, "1603068122", "richTextContentControl25", this);
             this.richTextContentControl26 = Globals.Factory.CreateRichTextContentControl(null, null, "1668204497", "richTextContentControl26", this);
-            this.richTextContentControl27 = Globals.Factory.CreateRichTextContentControl(null, null, "3899370984", "richTextContentControl27", this);
-            this.richTextContentControl28 = Globals.Factory.CreateRichTextContentControl(null, null, "312373938", "richTextContentControl28", this);
             this.richTextContentControl29 = Globals.Factory.CreateRichTextContentControl(null, null, "1661040138", "richTextContentControl29", this);
             this.richTextContentControl30 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl30", this);
             this.richTextContentControl31 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl31", this);
@@ -925,9 +803,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl36 = Globals.Factory.CreateRichTextContentControl(null, null, "795332043", "richTextContentControl36", this);
             this.richTextContentControl37 = Globals.Factory.CreateRichTextContentControl(null, null, "799043528", "richTextContentControl37", this);
             this.richTextContentControl38 = Globals.Factory.CreateRichTextContentControl(null, null, "3806717593", "richTextContentControl38", this);
-            this.richTextContentControl39 = Globals.Factory.CreateRichTextContentControl(null, null, "4203496865", "richTextContentControl39", this);
             this.richTextContentControl40 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl40", this);
-            this.AlternativeTenders = Globals.Factory.CreateRichTextContentControl(null, null, "2701580115", "AlternativeTenders", this);
             this.richTextContentControl50 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl50", this);
             this.richTextContentControl51 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl51", this);
             this.richTextContentControl52 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl52", this);
@@ -986,21 +862,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl114 = Globals.Factory.CreateRichTextContentControl(null, null, "622041455", "richTextContentControl114", this);
             this.richTextContentControl115 = Globals.Factory.CreateRichTextContentControl(null, null, "1181942687", "richTextContentControl115", this);
             this.richTextContentControl116 = Globals.Factory.CreateRichTextContentControl(null, null, "750698887", "richTextContentControl116", this);
-            this.richTextContentControl117 = Globals.Factory.CreateRichTextContentControl(null, null, "1872803379", "richTextContentControl117", this);
-            this.richTextContentControl118 = Globals.Factory.CreateRichTextContentControl(null, null, "4027645029", "richTextContentControl118", this);
-            this.richTextContentControl119 = Globals.Factory.CreateRichTextContentControl(null, null, "3118554565", "richTextContentControl119", this);
-            this.richTextContentControl120 = Globals.Factory.CreateRichTextContentControl(null, null, "1746691313", "richTextContentControl120", this);
-            this.richTextContentControl121 = Globals.Factory.CreateRichTextContentControl(null, null, "2280917914", "richTextContentControl121", this);
-            this.richTextContentControl122 = Globals.Factory.CreateRichTextContentControl(null, null, "1832482926", "richTextContentControl122", this);
-            this.richTextContentControl123 = Globals.Factory.CreateRichTextContentControl(null, null, "2259082364", "richTextContentControl123", this);
-            this.richTextContentControl124 = Globals.Factory.CreateRichTextContentControl(null, null, "2803406837", "richTextContentControl124", this);
-            this.richTextContentControl125 = Globals.Factory.CreateRichTextContentControl(null, null, "221805465", "richTextContentControl125", this);
-            this.richTextContentControl126 = Globals.Factory.CreateRichTextContentControl(null, null, "3801862377", "richTextContentControl126", this);
-            this.richTextContentControl127 = Globals.Factory.CreateRichTextContentControl(null, null, "1910875994", "richTextContentControl127", this);
-            this.richTextContentControl128 = Globals.Factory.CreateRichTextContentControl(null, null, "671218377", "richTextContentControl128", this);
-            this.richTextContentControl129 = Globals.Factory.CreateRichTextContentControl(null, null, "1713761711", "richTextContentControl129", this);
-            this.richTextContentControl130 = Globals.Factory.CreateRichTextContentControl(null, null, "2274363203", "richTextContentControl130", this);
-            this.richTextContentControl131 = Globals.Factory.CreateRichTextContentControl(null, null, "337514017", "richTextContentControl131", this);
             this.richTextContentControl132 = Globals.Factory.CreateRichTextContentControl(null, null, "197898652", "richTextContentControl132", this);
             this.richTextContentControl133 = Globals.Factory.CreateRichTextContentControl(null, null, "299585356", "richTextContentControl133", this);
             this.richTextContentControl134 = Globals.Factory.CreateRichTextContentControl(null, null, "2100446674", "richTextContentControl134", this);
@@ -1009,56 +870,60 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl137 = Globals.Factory.CreateRichTextContentControl(null, null, "2373102989", "richTextContentControl137", this);
             this.richTextContentControl138 = Globals.Factory.CreateRichTextContentControl(null, null, "136855772", "richTextContentControl138", this);
             this.richTextContentControl140 = Globals.Factory.CreateRichTextContentControl(null, null, "4066816672", "richTextContentControl140", this);
-            this.richTextContentControl141 = Globals.Factory.CreateRichTextContentControl(null, null, "2133434360", "richTextContentControl141", this);
-            this.richTextContentControl142 = Globals.Factory.CreateRichTextContentControl(null, null, "1139070360", "richTextContentControl142", this);
-            this.richTextContentControl143 = Globals.Factory.CreateRichTextContentControl(null, null, "1152408033", "richTextContentControl143", this);
-            this.richTextContentControl144 = Globals.Factory.CreateRichTextContentControl(null, null, "2809499199", "richTextContentControl144", this);
-            this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
-            this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
-            this.MethAbove = Globals.Factory.CreateBookmark(null, null, "MethAbove", "MethAbove", this);
-            this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
             this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
-            this.bmPersonalAbove = Globals.Factory.CreateBookmark(null, null, "bmPersonalAbove", "bmPersonalAbove", this);
-            this.bmPersonalStart = Globals.Factory.CreateBookmark(null, null, "bmPersonalStart", "bmPersonalStart", this);
-            this.bmPersonalEnd = Globals.Factory.CreateBookmark(null, null, "bmPersonalEnd", "bmPersonalEnd", this);
-            this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
-            this.bmPSEnd = Globals.Factory.CreateBookmark(null, null, "bmPSEnd", "bmPSEnd", this);
-            this.bmPS_Consultant = Globals.Factory.CreateBookmark(null, null, "bmPS_Consultant", "bmPS_Consultant", this);
-            this.bmContractPricingSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPricingSchedule", "bmContractPricingSchedule", this);
-            this.bmContractPaymentSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPaymentSchedule", "bmContractPaymentSchedule", this);
-            this.rtcGeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "720943843", "rtcGeoTestingSum", this);
             this.rtcCPS_GeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "3830924054", "rtcCPS_GeoTestingSum", this);
             this.rtcAdditionalServicesSchedule_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "3756918911", "rtcAdditionalServicesSchedule_Sum", this);
             this.rtcCPS_ASS_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "1493913556", "rtcCPS_ASS_Sum", this);
-            this.bmContract_Abbreviations = Globals.Factory.CreateBookmark(null, null, "bmContract_Abbreviations", "bmContract_Abbreviations", this);
-            this.bmContract_Contents = Globals.Factory.CreateBookmark(null, null, "bmContract_Contents", "bmContract_Contents", this);
-            this.bmContract_FrontPage = Globals.Factory.CreateBookmark(null, null, "bmContract_FrontPage", "bmContract_FrontPage", this);
-            this.bmSigningSet = Globals.Factory.CreateBookmark(null, null, "bmSigningSet", "bmSigningSet", this);
             this.richTextContentControl145 = Globals.Factory.CreateRichTextContentControl(null, null, "3969055229", "richTextContentControl145", this);
-            this.bmStandardSpecificationClause = Globals.Factory.CreateBookmark(null, null, "bmStandardSpecificationClause", "bmStandardSpecificationClause", this);
             this.rtcElectronicInformation = Globals.Factory.CreateRichTextContentControl(null, null, "88591614", "rtcElectronicInformation", this);
-            this.rtcInteractiveTenderProcess = Globals.Factory.CreateRichTextContentControl(null, null, "3020425276", "rtcInteractiveTenderProcess", this);
-            this.rtcCommercialInConfidence = Globals.Factory.CreateRichTextContentControl(null, null, "1089276715", "rtcCommercialInConfidence", this);
             this.rtcPricing_BaseEstimate = Globals.Factory.CreateRichTextContentControl(null, null, "2160735491", "rtcPricing_BaseEstimate", this);
             this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
             this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "2674831161", "rtcPricing_TargetPrice", this);
-            this.rtcPreLettingClause = Globals.Factory.CreateRichTextContentControl(null, null, "2109774492", "rtcPreLettingClause", this);
-            this.rtcPresentationOfTenderClause = Globals.Factory.CreateRichTextContentControl(null, null, "2085336182", "rtcPresentationOfTenderClause", this);
             this.rtcTrackRecordClause2 = Globals.Factory.CreateRichTextContentControl(null, null, "3391591495", "rtcTrackRecordClause2", this);
             this.rtcTrackRecordClause1 = Globals.Factory.CreateRichTextContentControl(null, null, "1776293451", "rtcTrackRecordClause1", this);
             this.rtcTrackRecordClause3 = Globals.Factory.CreateRichTextContentControl(null, null, "2705048589", "rtcTrackRecordClause3", this);
             this.rtcGeotechnicalSection = Globals.Factory.CreateRichTextContentControl(null, null, "1697731321", "rtcGeotechnicalSection", this);
             this.rtcGeotechProvisionalSum = Globals.Factory.CreateRichTextContentControl(null, null, "2331324845", "rtcGeotechProvisionalSum", this);
-            this.rtcGeotechScheduledItems = Globals.Factory.CreateRichTextContentControl(null, null, "1150103649", "rtcGeotechScheduledItems", this);
-            this.rtcUnitRateItems = Globals.Factory.CreateRichTextContentControl(null, null, "2537840427", "rtcUnitRateItems", this);
             this.rtcContractPaymentScheduleTargetPriceClause = Globals.Factory.CreateRichTextContentControl(null, null, "1632212650", "rtcContractPaymentScheduleTargetPriceClause", this);
             this.rtcLimitationDefault = Globals.Factory.CreateRichTextContentControl(null, null, "1902945669", "rtcLimitationDefault", this);
             this.rtcLimitationOther = Globals.Factory.CreateRichTextContentControl(null, null, "4067582861", "rtcLimitationOther", this);
-            this.rtcTargetPriceTenderForm = Globals.Factory.CreateRichTextContentControl(null, null, "2906410267", "rtcTargetPriceTenderForm", this);
             this.rtcCostFluctuationsNo = Globals.Factory.CreateRichTextContentControl(null, null, "3417195109", "rtcCostFluctuationsNo", this);
             this.rtcCostFluctuationsYes = Globals.Factory.CreateRichTextContentControl(null, null, "3444255805", "rtcCostFluctuationsYes", this);
             this.rtcDurationOfLiability = Globals.Factory.CreateRichTextContentControl(null, null, "823473802", "rtcDurationOfLiability", this);
-            this.bmSiteInspection = Globals.Factory.CreateBookmark(null, null, "bmSiteInspection", "bmSiteInspection", this);
+            this.pictureContentControl1 = Globals.Factory.CreatePictureContentControl(null, null, "2056966668", "pictureContentControl1", this);
+            this.richTextContentControl146 = Globals.Factory.CreateRichTextContentControl(null, null, "2420519530", "richTextContentControl146", this);
+            this.richTextContentControl147 = Globals.Factory.CreateRichTextContentControl(null, null, "1443030410", "richTextContentControl147", this);
+            this.richTextContentControl148 = Globals.Factory.CreateRichTextContentControl(null, null, "2941165581", "richTextContentControl148", this);
+            this.richTextContentControl149 = Globals.Factory.CreateRichTextContentControl(null, null, "516198338", "richTextContentControl149", this);
+            this.richTextContentControl150 = Globals.Factory.CreateRichTextContentControl(null, null, "1716854116", "richTextContentControl150", this);
+            this.richTextContentControl151 = Globals.Factory.CreateRichTextContentControl(null, null, "375819658", "richTextContentControl151", this);
+            this.rtcInteractiveTenderProcess = Globals.Factory.CreateRichTextContentControl(null, null, "2490890793", "rtcInteractiveTenderProcess", this);
+            this.rtcCommercialInConfidence = Globals.Factory.CreateRichTextContentControl(null, null, "690815109", "rtcCommercialInConfidence", this);
+            this.rtcPresentationOfTenderClause = Globals.Factory.CreateRichTextContentControl(null, null, "686720531", "rtcPresentationOfTenderClause", this);
+            this.rtcPreLettingClause = Globals.Factory.CreateRichTextContentControl(null, null, "3658319613", "rtcPreLettingClause", this);
+            this.rtcTargetPriceTenderForm = Globals.Factory.CreateRichTextContentControl(null, null, "233748409", "rtcTargetPriceTenderForm", this);
+            this.rtcGeotechScheduledItems = Globals.Factory.CreateRichTextContentControl(null, null, "2140301371", "rtcGeotechScheduledItems", this);
+            this.rtcUnitRateItems = Globals.Factory.CreateRichTextContentControl(null, null, "359404536", "rtcUnitRateItems", this);
+            this.richTextContentControl159 = Globals.Factory.CreateRichTextContentControl(null, null, "1501544591", "richTextContentControl159", this);
+            this.richTextContentControl160 = Globals.Factory.CreateRichTextContentControl(null, null, "2616318665", "richTextContentControl160", this);
+            this.richTextContentControl161 = Globals.Factory.CreateRichTextContentControl(null, null, "3015096423", "richTextContentControl161", this);
+            this.richTextContentControl162 = Globals.Factory.CreateRichTextContentControl(null, null, "2786534762", "richTextContentControl162", this);
+            this.richTextContentControl163 = Globals.Factory.CreateRichTextContentControl(null, null, "4152458658", "richTextContentControl163", this);
+            this.bmPersonalStart = Globals.Factory.CreateBookmark(null, null, "bmPersonalStart", "bmPersonalStart", this);
+            this.bmPersonalEnd = Globals.Factory.CreateBookmark(null, null, "bmPersonalEnd", "bmPersonalEnd", this);
+            this.bmPersonalAbove = Globals.Factory.CreateBookmark(null, null, "bmPersonalAbove", "bmPersonalAbove", this);
+            this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
+            this.bmPSEnd = Globals.Factory.CreateBookmark(null, null, "bmPSEnd", "bmPSEnd", this);
+            this.bmPS_Consultant = Globals.Factory.CreateBookmark(null, null, "bmPS_Consultant", "bmPS_Consultant", this);
+            this.bmContractPaymentSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPaymentSchedule", "bmContractPaymentSchedule", this);
+            this.bmContractPricingSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPricingSchedule", "bmContractPricingSchedule", this);
+            this.bmStandardSpecificationClause = Globals.Factory.CreateBookmark(null, null, "bmStandardSpecificationClause", "bmStandardSpecificationClause", this);
+            this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
+            this.Tender_Evaluation_Procedure = Globals.Factory.CreateBookmark(null, null, "Tender_Evaluation_Procedure", "Tender_Evaluation_Procedure", this);
+            this.MethAbove = Globals.Factory.CreateBookmark(null, null, "MethAbove", "MethAbove", this);
+            this.FormC_MethStart = Globals.Factory.CreateBookmark(null, null, "FormC_MethStart", "FormC_MethStart", this);
+            this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
+            this.rtcGeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "720943843", "rtcGeoTestingSum", this);
         }
         
         /// 
@@ -1071,54 +936,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.ActionsPane.AutoSize = false;
             this.ActionsPane.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            // 
-            // Additional_Services_Schedule
-            // 
-            this.Additional_Services_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Contract_Details
-            // 
-            this.Contract_Details.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Contract_Pricing
-            // 
-            this.Contract_Pricing.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Geotechnical_Testing_Schedule
-            // 
-            this.Geotechnical_Testing_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Liability_Insurance
-            // 
-            this.Liability_Insurance.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Non_Price_Attributes
-            // 
-            this.Non_Price_Attributes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Personnel_Schedule
-            // 
-            this.Personnel_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Pricing_Options
-            // 
-            this.Pricing_Options.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Supplier_Selection_Method
-            // 
-            this.Supplier_Selection_Method.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Evaluation_Procedure
-            // 
-            this.Tender_Evaluation_Procedure.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Format
-            // 
-            this.Tender_Format.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // Tender_Submission_Programme
-            // 
-            this.Tender_Submission_Programme.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl1
             // 
@@ -1224,14 +1041,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl26.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl27
-            // 
-            this.richTextContentControl27.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl28
-            // 
-            this.richTextContentControl28.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl29
             // 
             this.richTextContentControl29.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1272,17 +1081,9 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl38.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl39
-            // 
-            this.richTextContentControl39.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl40
             // 
             this.richTextContentControl40.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // AlternativeTenders
-            // 
-            this.AlternativeTenders.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl50
             // 
@@ -1516,66 +1317,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl116.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl117
-            // 
-            this.richTextContentControl117.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl118
-            // 
-            this.richTextContentControl118.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl119
-            // 
-            this.richTextContentControl119.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl120
-            // 
-            this.richTextContentControl120.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl121
-            // 
-            this.richTextContentControl121.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl122
-            // 
-            this.richTextContentControl122.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl123
-            // 
-            this.richTextContentControl123.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl124
-            // 
-            this.richTextContentControl124.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl125
-            // 
-            this.richTextContentControl125.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl126
-            // 
-            this.richTextContentControl126.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl127
-            // 
-            this.richTextContentControl127.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl128
-            // 
-            this.richTextContentControl128.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl129
-            // 
-            this.richTextContentControl129.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl130
-            // 
-            this.richTextContentControl130.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl131
-            // 
-            this.richTextContentControl131.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl132
             // 
             this.richTextContentControl132.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1608,77 +1349,9 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl140.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl141
-            // 
-            this.richTextContentControl141.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl142
-            // 
-            this.richTextContentControl142.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl143
-            // 
-            this.richTextContentControl143.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl144
-            // 
-            this.richTextContentControl144.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // MethStart
-            // 
-            this.MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // FormC_MethStart
-            // 
-            this.FormC_MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // MethAbove
-            // 
-            this.MethAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // FormC_MethEnd
-            // 
-            this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // DocumentFormatForm
             // 
             this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmPersonalAbove
-            // 
-            this.bmPersonalAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmPersonalStart
-            // 
-            this.bmPersonalStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmPersonalEnd
-            // 
-            this.bmPersonalEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmASSEnd
-            // 
-            this.bmASSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmPSEnd
-            // 
-            this.bmPSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmPS_Consultant
-            // 
-            this.bmPS_Consultant.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmContractPricingSchedule
-            // 
-            this.bmContractPricingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmContractPaymentSchedule
-            // 
-            this.bmContractPaymentSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcGeoTestingSum
-            // 
-            this.rtcGeoTestingSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcCPS_GeoTestingSum
             // 
@@ -1692,41 +1365,13 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcCPS_ASS_Sum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // bmContract_Abbreviations
-            // 
-            this.bmContract_Abbreviations.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmContract_Contents
-            // 
-            this.bmContract_Contents.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmContract_FrontPage
-            // 
-            this.bmContract_FrontPage.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSigningSet
-            // 
-            this.bmSigningSet.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl145
             // 
             this.richTextContentControl145.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // bmStandardSpecificationClause
-            // 
-            this.bmStandardSpecificationClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // rtcElectronicInformation
             // 
             this.rtcElectronicInformation.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcInteractiveTenderProcess
-            // 
-            this.rtcInteractiveTenderProcess.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcCommercialInConfidence
-            // 
-            this.rtcCommercialInConfidence.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcPricing_BaseEstimate
             // 
@@ -1739,14 +1384,6 @@ namespace NZTA_Contract_Generator {
             // rtcPricing_TargetPrice
             // 
             this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcPreLettingClause
-            // 
-            this.rtcPreLettingClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcPresentationOfTenderClause
-            // 
-            this.rtcPresentationOfTenderClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcTrackRecordClause2
             // 
@@ -1768,14 +1405,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcGeotechProvisionalSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // rtcGeotechScheduledItems
-            // 
-            this.rtcGeotechScheduledItems.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcUnitRateItems
-            // 
-            this.rtcUnitRateItems.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // rtcContractPaymentScheduleTargetPriceClause
             // 
             this.rtcContractPaymentScheduleTargetPriceClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1787,10 +1416,6 @@ namespace NZTA_Contract_Generator {
             // rtcLimitationOther
             // 
             this.rtcLimitationOther.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcTargetPriceTenderForm
-            // 
-            this.rtcTargetPriceTenderForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcCostFluctuationsNo
             // 
@@ -1804,9 +1429,141 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcDurationOfLiability.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // bmSiteInspection
+            // pictureContentControl1
             // 
-            this.bmSiteInspection.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.pictureContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl146
+            // 
+            this.richTextContentControl146.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl147
+            // 
+            this.richTextContentControl147.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl148
+            // 
+            this.richTextContentControl148.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl149
+            // 
+            this.richTextContentControl149.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl150
+            // 
+            this.richTextContentControl150.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl151
+            // 
+            this.richTextContentControl151.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcInteractiveTenderProcess
+            // 
+            this.rtcInteractiveTenderProcess.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcCommercialInConfidence
+            // 
+            this.rtcCommercialInConfidence.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPresentationOfTenderClause
+            // 
+            this.rtcPresentationOfTenderClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPreLettingClause
+            // 
+            this.rtcPreLettingClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcTargetPriceTenderForm
+            // 
+            this.rtcTargetPriceTenderForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcGeotechScheduledItems
+            // 
+            this.rtcGeotechScheduledItems.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcUnitRateItems
+            // 
+            this.rtcUnitRateItems.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl159
+            // 
+            this.richTextContentControl159.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl160
+            // 
+            this.richTextContentControl160.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl161
+            // 
+            this.richTextContentControl161.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl162
+            // 
+            this.richTextContentControl162.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl163
+            // 
+            this.richTextContentControl163.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalStart
+            // 
+            this.bmPersonalStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalEnd
+            // 
+            this.bmPersonalEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPersonalAbove
+            // 
+            this.bmPersonalAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmASSEnd
+            // 
+            this.bmASSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPSEnd
+            // 
+            this.bmPSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmPS_Consultant
+            // 
+            this.bmPS_Consultant.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmContractPaymentSchedule
+            // 
+            this.bmContractPaymentSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmContractPricingSchedule
+            // 
+            this.bmContractPricingSchedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmStandardSpecificationClause
+            // 
+            this.bmStandardSpecificationClause.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // MethStart
+            // 
+            this.MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Evaluation_Procedure
+            // 
+            this.Tender_Evaluation_Procedure.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // MethAbove
+            // 
+            this.MethAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // FormC_MethStart
+            // 
+            this.FormC_MethStart.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // FormC_MethEnd
+            // 
+            this.FormC_MethEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcGeoTestingSum
+            // 
+            this.rtcGeoTestingSum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // ThisDocument
             // 
@@ -1824,56 +1581,60 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
-            this.bmSiteInspection.Dispose();
+            this.rtcGeoTestingSum.Dispose();
+            this.FormC_MethEnd.Dispose();
+            this.FormC_MethStart.Dispose();
+            this.MethAbove.Dispose();
+            this.Tender_Evaluation_Procedure.Dispose();
+            this.MethStart.Dispose();
+            this.bmStandardSpecificationClause.Dispose();
+            this.bmContractPricingSchedule.Dispose();
+            this.bmContractPaymentSchedule.Dispose();
+            this.bmPS_Consultant.Dispose();
+            this.bmPSEnd.Dispose();
+            this.bmASSEnd.Dispose();
+            this.bmPersonalAbove.Dispose();
+            this.bmPersonalEnd.Dispose();
+            this.bmPersonalStart.Dispose();
+            this.richTextContentControl163.Dispose();
+            this.richTextContentControl162.Dispose();
+            this.richTextContentControl161.Dispose();
+            this.richTextContentControl160.Dispose();
+            this.richTextContentControl159.Dispose();
+            this.rtcUnitRateItems.Dispose();
+            this.rtcGeotechScheduledItems.Dispose();
+            this.rtcTargetPriceTenderForm.Dispose();
+            this.rtcPreLettingClause.Dispose();
+            this.rtcPresentationOfTenderClause.Dispose();
+            this.rtcCommercialInConfidence.Dispose();
+            this.rtcInteractiveTenderProcess.Dispose();
+            this.richTextContentControl151.Dispose();
+            this.richTextContentControl150.Dispose();
+            this.richTextContentControl149.Dispose();
+            this.richTextContentControl148.Dispose();
+            this.richTextContentControl147.Dispose();
+            this.richTextContentControl146.Dispose();
+            this.pictureContentControl1.Dispose();
             this.rtcDurationOfLiability.Dispose();
             this.rtcCostFluctuationsYes.Dispose();
             this.rtcCostFluctuationsNo.Dispose();
-            this.rtcTargetPriceTenderForm.Dispose();
             this.rtcLimitationOther.Dispose();
             this.rtcLimitationDefault.Dispose();
             this.rtcContractPaymentScheduleTargetPriceClause.Dispose();
-            this.rtcUnitRateItems.Dispose();
-            this.rtcGeotechScheduledItems.Dispose();
             this.rtcGeotechProvisionalSum.Dispose();
             this.rtcGeotechnicalSection.Dispose();
             this.rtcTrackRecordClause3.Dispose();
             this.rtcTrackRecordClause1.Dispose();
             this.rtcTrackRecordClause2.Dispose();
-            this.rtcPresentationOfTenderClause.Dispose();
-            this.rtcPreLettingClause.Dispose();
             this.rtcPricing_TargetPrice.Dispose();
             this.rtcPricing_BrooksLaw.Dispose();
             this.rtcPricing_BaseEstimate.Dispose();
-            this.rtcCommercialInConfidence.Dispose();
-            this.rtcInteractiveTenderProcess.Dispose();
             this.rtcElectronicInformation.Dispose();
-            this.bmStandardSpecificationClause.Dispose();
             this.richTextContentControl145.Dispose();
-            this.bmSigningSet.Dispose();
-            this.bmContract_FrontPage.Dispose();
-            this.bmContract_Contents.Dispose();
-            this.bmContract_Abbreviations.Dispose();
             this.rtcCPS_ASS_Sum.Dispose();
             this.rtcAdditionalServicesSchedule_Sum.Dispose();
             this.rtcCPS_GeoTestingSum.Dispose();
-            this.rtcGeoTestingSum.Dispose();
-            this.bmContractPaymentSchedule.Dispose();
-            this.bmContractPricingSchedule.Dispose();
-            this.bmPS_Consultant.Dispose();
-            this.bmPSEnd.Dispose();
-            this.bmASSEnd.Dispose();
-            this.bmPersonalEnd.Dispose();
-            this.bmPersonalStart.Dispose();
-            this.bmPersonalAbove.Dispose();
             this.DocumentFormatForm.Dispose();
-            this.FormC_MethEnd.Dispose();
-            this.MethAbove.Dispose();
-            this.FormC_MethStart.Dispose();
-            this.MethStart.Dispose();
-            this.richTextContentControl144.Dispose();
-            this.richTextContentControl143.Dispose();
-            this.richTextContentControl142.Dispose();
-            this.richTextContentControl141.Dispose();
             this.richTextContentControl140.Dispose();
             this.richTextContentControl138.Dispose();
             this.richTextContentControl137.Dispose();
@@ -1882,21 +1643,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl134.Dispose();
             this.richTextContentControl133.Dispose();
             this.richTextContentControl132.Dispose();
-            this.richTextContentControl131.Dispose();
-            this.richTextContentControl130.Dispose();
-            this.richTextContentControl129.Dispose();
-            this.richTextContentControl128.Dispose();
-            this.richTextContentControl127.Dispose();
-            this.richTextContentControl126.Dispose();
-            this.richTextContentControl125.Dispose();
-            this.richTextContentControl124.Dispose();
-            this.richTextContentControl123.Dispose();
-            this.richTextContentControl122.Dispose();
-            this.richTextContentControl121.Dispose();
-            this.richTextContentControl120.Dispose();
-            this.richTextContentControl119.Dispose();
-            this.richTextContentControl118.Dispose();
-            this.richTextContentControl117.Dispose();
             this.richTextContentControl116.Dispose();
             this.richTextContentControl115.Dispose();
             this.richTextContentControl114.Dispose();
@@ -1955,9 +1701,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.Dispose();
             this.richTextContentControl51.Dispose();
             this.richTextContentControl50.Dispose();
-            this.AlternativeTenders.Dispose();
             this.richTextContentControl40.Dispose();
-            this.richTextContentControl39.Dispose();
             this.richTextContentControl38.Dispose();
             this.richTextContentControl37.Dispose();
             this.richTextContentControl36.Dispose();
@@ -1968,8 +1712,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl31.Dispose();
             this.richTextContentControl30.Dispose();
             this.richTextContentControl29.Dispose();
-            this.richTextContentControl28.Dispose();
-            this.richTextContentControl27.Dispose();
             this.richTextContentControl26.Dispose();
             this.richTextContentControl25.Dispose();
             this.richTextContentControl24.Dispose();
@@ -1996,18 +1738,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl3.Dispose();
             this.richTextContentControl2.Dispose();
             this.richTextContentControl1.Dispose();
-            this.Tender_Submission_Programme.Dispose();
-            this.Tender_Format.Dispose();
-            this.Tender_Evaluation_Procedure.Dispose();
-            this.Supplier_Selection_Method.Dispose();
-            this.Pricing_Options.Dispose();
-            this.Personnel_Schedule.Dispose();
-            this.Non_Price_Attributes.Dispose();
-            this.Liability_Insurance.Dispose();
-            this.Geotechnical_Testing_Schedule.Dispose();
-            this.Contract_Pricing.Dispose();
-            this.Contract_Details.Dispose();
-            this.Additional_Services_Schedule.Dispose();
             this.ActionsPane.Dispose();
             base.OnShutdown();
         }
