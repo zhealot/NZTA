@@ -13,7 +13,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     public partial class TenderFormat : UserControl
     {
         Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
-        bool ignoreChange = false;
         public TenderFormat()
         {
             InitializeComponent();

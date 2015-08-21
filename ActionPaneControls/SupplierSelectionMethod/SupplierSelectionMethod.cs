@@ -41,9 +41,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             contract.cbTrackRecord = cbTrackRecord.Checked;
             tbTR.Enabled = cbTrackRecord.Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause1.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause2.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause3.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            var TRC1Rg = Globals.ThisDocument.rtcTrackRecordClause1.Range;
+            var TRC2Rg = Globals.ThisDocument.rtcTrackRecordClause2.Range;
+            var TRC3Rg = Globals.ThisDocument.rtcTrackRecordClause3.Range;
+            object style = cbTrackRecord.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            TRC1Rg.SetRange(TRC1Rg.Start - 1, TRC1Rg.End + 2);
+            TRC2Rg.SetRange(TRC2Rg.Start - 1, TRC2Rg.End + 2);
+            TRC3Rg.SetRange(TRC3Rg.Start - 1, TRC3Rg.End + 2);
+            TRC1Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            TRC2Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            TRC3Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            Util.ContentControls.setText("TrackRecordClause4", cbTrackRecord.Checked ? "and Track Record" : "");
         }
 
         private void btnOK_Click(object sender, EventArgs e)

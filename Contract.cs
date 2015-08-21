@@ -25,10 +25,17 @@ namespace NZTA_Contract_Generator
             elecNo = true;
             CostIndex = 0.80m;
             CostFluctuations_Check = false;
+            altTenderNo = true;
+            clientSiteNo = true;
 
             //Tender Evaluation Procedure
             AuditPeriod = 2;
             InterviewNotice = 1;
+
+            //Pricing Options
+            BaseEstimate_Check = true;
+            BrooksLaw_Check = false;
+            TargetPrice_Check = false;
 
             //Interactive Tender Process
             Interactive_No = true;
@@ -37,6 +44,9 @@ namespace NZTA_Contract_Generator
 
             //Tender Submission Programme
             anotherMeansNo = true;
+            PresentationsRequired_No = true;
+            PrelettingMeetings_No = true;
+            
 
             //Liability and Insurances
             rbApprovedDefault = true;

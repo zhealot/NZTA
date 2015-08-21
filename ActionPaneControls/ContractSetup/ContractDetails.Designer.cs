@@ -487,6 +487,7 @@
             this.clientSiteYes.TabStop = true;
             this.clientSiteYes.Text = "Yes";
             this.clientSiteYes.UseVisualStyleBackColor = true;
+            this.clientSiteYes.CheckedChanged += new System.EventHandler(this.SiteInspection_Changed);
             // 
             // clientSiteNo
             // 
@@ -498,7 +499,7 @@
             this.clientSiteNo.TabStop = true;
             this.clientSiteNo.Text = "No";
             this.clientSiteNo.UseVisualStyleBackColor = true;
-            this.clientSiteNo.CheckedChanged += new System.EventHandler(this.clientSiteNo_CheckedChanged);
+            this.clientSiteNo.CheckedChanged += new System.EventHandler(this.SiteInspection_Changed);
             // 
             // label20
             // 

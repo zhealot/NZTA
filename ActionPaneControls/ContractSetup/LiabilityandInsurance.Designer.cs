@@ -65,9 +65,9 @@
             // 
             // rbApprovedDefault
             // 
-            this.rbApprovedDefault.Location = new System.Drawing.Point(8, 19);
+            this.rbApprovedDefault.Location = new System.Drawing.Point(6, 19);
             this.rbApprovedDefault.Name = "rbApprovedDefault";
-            this.rbApprovedDefault.Size = new System.Drawing.Size(225, 41);
+            this.rbApprovedDefault.Size = new System.Drawing.Size(190, 30);
             this.rbApprovedDefault.TabIndex = 5;
             this.rbApprovedDefault.TabStop = true;
             this.rbApprovedDefault.Text = "Levels have been approved at default levels";
@@ -76,9 +76,9 @@
             // 
             // rbOtherLevels
             // 
-            this.rbOtherLevels.Location = new System.Drawing.Point(8, 66);
+            this.rbOtherLevels.Location = new System.Drawing.Point(6, 55);
             this.rbOtherLevels.Name = "rbOtherLevels";
-            this.rbOtherLevels.Size = new System.Drawing.Size(225, 41);
+            this.rbOtherLevels.Size = new System.Drawing.Size(190, 20);
             this.rbOtherLevels.TabIndex = 6;
             this.rbOtherLevels.TabStop = true;
             this.rbOtherLevels.Text = "Other levels have been approved";
@@ -87,7 +87,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 218);
+            this.label3.Location = new System.Drawing.Point(6, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(254, 33);
             this.label3.TabIndex = 7;
@@ -95,7 +95,7 @@
             // 
             // MaximumLiability
             // 
-            this.MaximumLiability.Location = new System.Drawing.Point(6, 255);
+            this.MaximumLiability.Location = new System.Drawing.Point(6, 232);
             this.MaximumLiability.Name = "MaximumLiability";
             this.MaximumLiability.Size = new System.Drawing.Size(225, 20);
             this.MaximumLiability.TabIndex = 8;
@@ -103,7 +103,7 @@
             // 
             // DurationOfLiability
             // 
-            this.DurationOfLiability.Location = new System.Drawing.Point(6, 313);
+            this.DurationOfLiability.Location = new System.Drawing.Point(6, 290);
             this.DurationOfLiability.Name = "DurationOfLiability";
             this.DurationOfLiability.Size = new System.Drawing.Size(225, 20);
             this.DurationOfLiability.TabIndex = 10;
@@ -112,7 +112,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(6, 289);
+            this.label4.Location = new System.Drawing.Point(6, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(254, 21);
             this.label4.TabIndex = 9;
@@ -120,7 +120,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(6, 340);
+            this.label5.Location = new System.Drawing.Point(6, 317);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(225, 63);
             this.label5.TabIndex = 11;
@@ -129,7 +129,7 @@
             // 
             // PublicLiabilityInsurance
             // 
-            this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 425);
+            this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 415);
             this.PublicLiabilityInsurance.Name = "PublicLiabilityInsurance";
             this.PublicLiabilityInsurance.Size = new System.Drawing.Size(225, 20);
             this.PublicLiabilityInsurance.TabIndex = 12;
@@ -137,12 +137,12 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 403);
+            this.label6.Location = new System.Drawing.Point(6, 380);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 13);
+            this.label6.Size = new System.Drawing.Size(234, 32);
             this.label6.TabIndex = 13;
-            this.label6.Text = "The amount of Public Liability Insurance will be: ";
+            this.label6.Text = "The amount of Public Liability Insurance will be: (Default value 5,000,000 if lea" +
+    "ve blank)";
             // 
             // groupBox1
             // 
@@ -151,13 +151,13 @@
             this.groupBox1.Controls.Add(this.rbOtherLevels);
             this.groupBox1.Location = new System.Drawing.Point(6, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 110);
+            this.groupBox1.Size = new System.Drawing.Size(225, 86);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
             // help2
             // 
-            this.help2.Location = new System.Drawing.Point(222, 75);
+            this.help2.Location = new System.Drawing.Point(190, 52);
             this.help2.Name = "help2";
             this.help2.Size = new System.Drawing.Size(23, 23);
             this.help2.TabIndex = 45;

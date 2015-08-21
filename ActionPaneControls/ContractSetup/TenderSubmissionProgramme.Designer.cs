@@ -54,7 +54,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.Evaluation_Other = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.PrelettingMeetings_Yes = new System.Windows.Forms.RadioButton();
             this.PrelettingMeetings_No = new System.Windows.Forms.RadioButton();
             this.PrelettingOther = new System.Windows.Forms.TextBox();
@@ -65,7 +64,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.TargetDate = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbPrelettingDate = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -78,10 +77,12 @@
             this.elecNo = new System.Windows.Forms.RadioButton();
             this.elecYes = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbPrelettingDate.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.gbElecForm.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,7 +124,7 @@
             this.PresentationsRequired_No.TabStop = true;
             this.PresentationsRequired_No.Text = "No";
             this.PresentationsRequired_No.UseVisualStyleBackColor = true;
-            this.PresentationsRequired_No.CheckedChanged += new System.EventHandler(this.PresentationsRequired_No_CheckedChanged);
+            this.PresentationsRequired_No.CheckedChanged += new System.EventHandler(this.Presentations_Changed);
             // 
             // PresentationsRequired_Yes
             // 
@@ -135,7 +136,7 @@
             this.PresentationsRequired_Yes.TabStop = true;
             this.PresentationsRequired_Yes.Text = "Yes";
             this.PresentationsRequired_Yes.UseVisualStyleBackColor = true;
-            this.PresentationsRequired_Yes.CheckedChanged += new System.EventHandler(this.PresentationsRequired_Yes_CheckedChanged);
+            this.PresentationsRequired_Yes.CheckedChanged += new System.EventHandler(this.Presentations_Changed);
             // 
             // label13
             // 
@@ -252,7 +253,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 551);
+            this.label5.Location = new System.Drawing.Point(3, 503);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 13);
             this.label5.TabIndex = 56;
@@ -261,7 +262,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 568);
+            this.label6.Location = new System.Drawing.Point(3, 524);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 57;
@@ -269,7 +270,7 @@
             // 
             // Evaluation_Start
             // 
-            this.Evaluation_Start.Location = new System.Drawing.Point(6, 584);
+            this.Evaluation_Start.Location = new System.Drawing.Point(3, 540);
             this.Evaluation_Start.Name = "Evaluation_Start";
             this.Evaluation_Start.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_Start.TabIndex = 58;
@@ -277,7 +278,7 @@
             // 
             // Evaluation_End
             // 
-            this.Evaluation_End.Location = new System.Drawing.Point(6, 623);
+            this.Evaluation_End.Location = new System.Drawing.Point(3, 579);
             this.Evaluation_End.Name = "Evaluation_End";
             this.Evaluation_End.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_End.TabIndex = 60;
@@ -286,7 +287,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 607);
+            this.label10.Location = new System.Drawing.Point(3, 563);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 59;
@@ -295,7 +296,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 650);
+            this.label14.Location = new System.Drawing.Point(3, 606);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 13);
             this.label14.TabIndex = 61;
@@ -303,7 +304,7 @@
             // 
             // Evaluation_Other
             // 
-            this.Evaluation_Other.Location = new System.Drawing.Point(100, 647);
+            this.Evaluation_Other.Location = new System.Drawing.Point(97, 603);
             this.Evaluation_Other.Name = "Evaluation_Other";
             this.Evaluation_Other.Size = new System.Drawing.Size(173, 20);
             this.Evaluation_Other.TabIndex = 62;
@@ -311,7 +312,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(65, 645);
+            this.button1.Location = new System.Drawing.Point(62, 601);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 63;
@@ -319,42 +320,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 14);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(172, 13);
-            this.label15.TabIndex = 64;
-            this.label15.Text = "Are Preletting Meeting (s) required?";
-            // 
             // PrelettingMeetings_Yes
             // 
             this.PrelettingMeetings_Yes.AutoSize = true;
-            this.PrelettingMeetings_Yes.Location = new System.Drawing.Point(7, 30);
+            this.PrelettingMeetings_Yes.Location = new System.Drawing.Point(5, 28);
             this.PrelettingMeetings_Yes.Name = "PrelettingMeetings_Yes";
             this.PrelettingMeetings_Yes.Size = new System.Drawing.Size(43, 17);
             this.PrelettingMeetings_Yes.TabIndex = 66;
             this.PrelettingMeetings_Yes.TabStop = true;
             this.PrelettingMeetings_Yes.Text = "Yes";
             this.PrelettingMeetings_Yes.UseVisualStyleBackColor = true;
-            this.PrelettingMeetings_Yes.CheckedChanged += new System.EventHandler(this.PrelettingMeetings_Yes_CheckedChanged);
+            this.PrelettingMeetings_Yes.CheckedChanged += new System.EventHandler(this.PrelettingMetting_Changed);
             // 
             // PrelettingMeetings_No
             // 
             this.PrelettingMeetings_No.AutoSize = true;
-            this.PrelettingMeetings_No.Location = new System.Drawing.Point(119, 30);
+            this.PrelettingMeetings_No.Location = new System.Drawing.Point(117, 28);
             this.PrelettingMeetings_No.Name = "PrelettingMeetings_No";
             this.PrelettingMeetings_No.Size = new System.Drawing.Size(39, 17);
             this.PrelettingMeetings_No.TabIndex = 65;
             this.PrelettingMeetings_No.TabStop = true;
             this.PrelettingMeetings_No.Text = "No";
             this.PrelettingMeetings_No.UseVisualStyleBackColor = true;
-            this.PrelettingMeetings_No.CheckedChanged += new System.EventHandler(this.PrelettingMeetings_No_CheckedChanged);
+            this.PrelettingMeetings_No.CheckedChanged += new System.EventHandler(this.PrelettingMetting_Changed);
             // 
             // PrelettingOther
             // 
-            this.PrelettingOther.Location = new System.Drawing.Point(79, 131);
+            this.PrelettingOther.Location = new System.Drawing.Point(56, 95);
             this.PrelettingOther.Name = "PrelettingOther";
             this.PrelettingOther.Size = new System.Drawing.Size(185, 20);
             this.PrelettingOther.TabIndex = 72;
@@ -363,7 +355,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 134);
+            this.label16.Location = new System.Drawing.Point(6, 98);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 13);
             this.label16.TabIndex = 71;
@@ -371,7 +363,7 @@
             // 
             // PrelettingEndDate
             // 
-            this.PrelettingEndDate.Location = new System.Drawing.Point(7, 107);
+            this.PrelettingEndDate.Location = new System.Drawing.Point(6, 71);
             this.PrelettingEndDate.Name = "PrelettingEndDate";
             this.PrelettingEndDate.Size = new System.Drawing.Size(200, 20);
             this.PrelettingEndDate.TabIndex = 70;
@@ -380,7 +372,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 91);
+            this.label17.Location = new System.Drawing.Point(6, 55);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 13);
             this.label17.TabIndex = 69;
@@ -388,7 +380,7 @@
             // 
             // PrelettingFromDate
             // 
-            this.PrelettingFromDate.Location = new System.Drawing.Point(7, 68);
+            this.PrelettingFromDate.Location = new System.Drawing.Point(6, 32);
             this.PrelettingFromDate.Name = "PrelettingFromDate";
             this.PrelettingFromDate.Size = new System.Drawing.Size(200, 20);
             this.PrelettingFromDate.TabIndex = 68;
@@ -397,7 +389,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 52);
+            this.label18.Location = new System.Drawing.Point(6, 16);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 13);
             this.label18.TabIndex = 67;
@@ -405,7 +397,7 @@
             // 
             // TargetDate
             // 
-            this.TargetDate.Location = new System.Drawing.Point(6, 865);
+            this.TargetDate.Location = new System.Drawing.Point(3, 857);
             this.TargetDate.Name = "TargetDate";
             this.TargetDate.Size = new System.Drawing.Size(200, 20);
             this.TargetDate.TabIndex = 74;
@@ -414,33 +406,29 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(6, 849);
+            this.label19.Location = new System.Drawing.Point(3, 841);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(146, 13);
             this.label19.TabIndex = 73;
             this.label19.Text = "Target date for Tender award";
             // 
-            // groupBox1
+            // gbPrelettingDate
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.PrelettingOther);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.PrelettingEndDate);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.PrelettingFromDate);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.PrelettingMeetings_Yes);
-            this.groupBox1.Controls.Add(this.PrelettingMeetings_No);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Location = new System.Drawing.Point(2, 678);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 159);
-            this.groupBox1.TabIndex = 75;
-            this.groupBox1.TabStop = false;
+            this.gbPrelettingDate.Controls.Add(this.PrelettingOther);
+            this.gbPrelettingDate.Controls.Add(this.label16);
+            this.gbPrelettingDate.Controls.Add(this.PrelettingEndDate);
+            this.gbPrelettingDate.Controls.Add(this.label17);
+            this.gbPrelettingDate.Controls.Add(this.PrelettingFromDate);
+            this.gbPrelettingDate.Controls.Add(this.label18);
+            this.gbPrelettingDate.Location = new System.Drawing.Point(6, 702);
+            this.gbPrelettingDate.Name = "gbPrelettingDate";
+            this.gbPrelettingDate.Size = new System.Drawing.Size(257, 125);
+            this.gbPrelettingDate.TabIndex = 75;
+            this.gbPrelettingDate.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(186, 9);
+            this.button2.Location = new System.Drawing.Point(196, 25);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(23, 23);
             this.button2.TabIndex = 73;
@@ -469,13 +457,13 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(2, 249);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(276, 270);
+            this.groupBox2.Size = new System.Drawing.Size(276, 241);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(212, 864);
+            this.button3.Location = new System.Drawing.Point(209, 856);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(23, 23);
             this.button3.TabIndex = 77;
@@ -582,12 +570,26 @@
             this.label35.TabIndex = 72;
             this.label35.Text = "Are you providing electronic copies of documentation?";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.PrelettingMeetings_Yes);
+            this.groupBox3.Controls.Add(this.PrelettingMeetings_No);
+            this.groupBox3.Location = new System.Drawing.Point(6, 643);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(227, 53);
+            this.groupBox3.TabIndex = 94;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Are Preletting Meeting (s) required?";
+            // 
             // TenderSubmissionProgramme
             // 
+            this.AutoScroll = true;
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbPrelettingDate);
             this.Controls.Add(this.TargetDate);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button1);
@@ -600,15 +602,17 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "TenderSubmissionProgramme";
-            this.Size = new System.Drawing.Size(280, 890);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Size = new System.Drawing.Size(280, 892);
+            this.gbPrelettingDate.ResumeLayout(false);
+            this.gbPrelettingDate.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.gbElecForm.ResumeLayout(false);
             this.gbElecForm.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,7 +646,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox Evaluation_Other;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton PrelettingMeetings_Yes;
         private System.Windows.Forms.RadioButton PrelettingMeetings_No;
         private System.Windows.Forms.TextBox PrelettingOther;
@@ -653,7 +656,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker TargetDate;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbPrelettingDate;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -666,5 +669,6 @@
         private System.Windows.Forms.RadioButton elecNo;
         private System.Windows.Forms.RadioButton elecYes;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

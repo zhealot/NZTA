@@ -18,39 +18,49 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             //Load saved state. Defaults set in state...
             gbTargetPrice.Enabled = false;
             gbBaseEstimate.Enabled = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BrooksLaw.Range.Font.Hidden = 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BaseEstimate.Range.Font.Hidden = 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_TargetPrice.Range.Font.Hidden = 1;
             Util.SavedState.setControlsToState(contract, Controls);
             
         }
 
-        private void BaseEstimate_Check_CheckedChanged(object sender, EventArgs e)
+        private void PricingOption_Changed(object sender, EventArgs e)
         {
-            //### fix numbering 
-            contract.BaseEstimate_Check = ((CheckBox)sender).Checked;
-            TargetPrice_Check.Checked = !((CheckBox)sender).Checked;
-            gbBaseEstimate.Enabled = ((CheckBox)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BaseEstimate.Range.Font.Hidden = BaseEstimate_Check.Checked ? 0 : 1;
-            Globals.ThisDocument.rtcTargetPriceTenderForm.Range.Font.Hidden = !((CheckBox)sender).Checked ? 0 : 1;
+            bool BaseChkd = BaseEstimate_Check.Checked;
+            BaseEstimate_Check.Checked = BaseChkd;
+            TargetPrice_Check.Checked = !BaseChkd;
+            contract.BaseEstimate_Check = BaseChkd;
+            contract.TargetPrice_Check = !BaseChkd;
+            gbBaseEstimate.Enabled = BaseChkd;
+            gbTargetPrice.Enabled = !BaseChkd;
+            var BaseRg = Globals.ThisDocument.rtcPricing_BaseEstimate.Range;
+            var TargetRg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
+            var BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
+            object BLStyle = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            object BaseStyle = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            object TargetStyle = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            BaseRg.SetRange(BaseRg.Start - 1, BaseRg.End + 2);
+            TargetRg.SetRange(TargetRg.Start - 1, TargetRg.End + 2);
+            BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
+            BaseRg.Paragraphs[1].set_Style(ref BaseStyle);
+            TargetRg.Paragraphs[1].set_Style(ref TargetStyle);
+            BLRg.Paragraphs[1].set_Style(ref BLStyle);
+            BaseRg.Font.Hidden = BaseChkd ? 0 : 1;
+            TargetRg.Font.Hidden = BaseChkd ? 1 : 0;
+            BLRg.Font.Hidden = BrooksLaw_Check.Checked && BaseEstimate_Check.Checked ? 0 : 1;
+            var rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = BaseChkd ? 1 : 0;
         }
+
 
         private void BrooksLaw_Check_CheckedChanged(object sender, EventArgs e)
         {
-            contract.BrooksLaw_Check = ((CheckBox)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_BrooksLaw.Range.Font.Hidden = BrooksLaw_Check.Checked ? 0 : 1;
-        }
-
-        private void TargetPrice_Check_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.TargetPrice_Check = ((CheckBox)sender).Checked;
-            BaseEstimate_Check.Checked = !((CheckBox)sender).Checked;
-            BrooksLaw_Check.Checked = !((CheckBox)sender).Checked;
-            gbTargetPrice.Enabled = ((CheckBox)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPricing_TargetPrice.Range.Font.Hidden = TargetPrice_Check.Checked ? 0 : 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcUnitRateItems.Range.Font.Hidden = TargetPrice_Check.Checked ? 1 : 0;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcContractPaymentScheduleTargetPriceClause.Range.Font.Hidden = TargetPrice_Check.Checked ? 0 : 1;
-            Globals.ThisDocument.rtcTargetPriceTenderForm.Range.Font.Hidden = ((CheckBox)sender).Checked ? 0 : 1;
+            bool BLChkd = BrooksLaw_Check.Checked; 
+            contract.BrooksLaw_Check = BLChkd;
+            var BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
+            object BLStyle = BLChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
+            BLRg.Paragraphs[1].set_Style(ref BLStyle);
+            BLRg.Font.Hidden = (BLChkd && BaseEstimate_Check.Checked) ? 0 : 1;
         }
 
         private void BaseEstimate_Amount_TextChanged(object sender, EventArgs e)

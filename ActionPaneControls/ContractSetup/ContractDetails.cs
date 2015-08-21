@@ -221,25 +221,31 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
-        private void clientSiteNo_CheckedChanged(object sender, EventArgs e)
+        private void SiteInspection_Changed(object sender, EventArgs e)
         {
-            contract.clientSiteNo = true;
-            contract.clientSiteYes = false;
+            bool SiteYesChkd = clientSiteYes.Checked;
+            contract.clientSiteNo = !SiteYesChkd;
+            contract.clientSiteYes = SiteYesChkd;
+            var SiteRg = Globals.ThisDocument.rtcSiteInspection.Range;
+            object SiteStyle = SiteYesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            SiteRg.SetRange(SiteRg.Start - 1, SiteRg.End + 2);
+            SiteRg.Paragraphs[1].set_Style(ref SiteStyle);
+            SiteRg.Font.Hidden = SiteYesChkd ? 0 : 1;
         }
 
-        //### 1.13
         private void altTender_Changed(object sender, EventArgs e)
         {
             bool blYes = altTenderYes.Checked;
-            contract.altTenderNo = !blYes;
             contract.altTenderYes = blYes;
+            contract.altTenderNo = !blYes;
             var altYesRg = Globals.ThisDocument.rtcAlternativeTenderYes.Range;
             var altNoRg = Globals.ThisDocument.rtcAlternativeTenderNo.Range;
             altYesRg.SetRange(altYesRg.Start - 1, altYesRg.End + 2);
             altNoRg.SetRange(altNoRg.Start - 1, altNoRg.End + 2);
-            Globals.ThisDocument.rtcAlternativeTenderNo.Range.Font.Hidden = blYes ? 1 : 0;
-            Globals.ThisDocument.rtcAlternativeTenderYes.Range.Font.Hidden = blYes ? 0 : 1;
-            Globals.ThisDocument.rtcAlternativeTenderYes.Range.Select();
+            var stl = blYes ? "Normal" : altYesRg.Paragraphs[1].get_Style();
+            altNoRg.set_Style(ref stl);
+            altNoRg.Font.Hidden = blYes ? 1 : 0;
+            altYesRg.Font.Hidden = blYes ? 0 : 1;
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)

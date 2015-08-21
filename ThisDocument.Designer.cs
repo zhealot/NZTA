@@ -223,8 +223,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl138;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl140;
-        
         internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_GeoTestingSum;
@@ -334,6 +332,34 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcGeoTestingSum;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcAlternativeTenderYes;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Contract_Details;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Contract_Pricing;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Liability_Insurance;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Non_Price_Attributes;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Personnel_Schedule;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Pricing_Options;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Supplier_Selection_Method;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Format;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark Tender_Submission_Programme;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl163;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcLevel3Style;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcLevel2Style;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSiteInspection;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTrackRecordClause4;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -540,7 +566,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl136.BeginInit();
             this.richTextContentControl137.BeginInit();
             this.richTextContentControl138.BeginInit();
-            this.richTextContentControl140.BeginInit();
             this.DocumentFormatForm.BeginInit();
             this.rtcCPS_GeoTestingSum.BeginInit();
             this.rtcAdditionalServicesSchedule_Sum.BeginInit();
@@ -596,6 +621,20 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethEnd.BeginInit();
             this.rtcGeoTestingSum.BeginInit();
             this.rtcAlternativeTenderYes.BeginInit();
+            this.Contract_Details.BeginInit();
+            this.Contract_Pricing.BeginInit();
+            this.Liability_Insurance.BeginInit();
+            this.Non_Price_Attributes.BeginInit();
+            this.Personnel_Schedule.BeginInit();
+            this.Pricing_Options.BeginInit();
+            this.Supplier_Selection_Method.BeginInit();
+            this.Tender_Format.BeginInit();
+            this.Tender_Submission_Programme.BeginInit();
+            this.richTextContentControl163.BeginInit();
+            this.rtcLevel3Style.BeginInit();
+            this.rtcLevel2Style.BeginInit();
+            this.rtcSiteInspection.BeginInit();
+            this.rtcTrackRecordClause4.BeginInit();
         }
         
         /// 
@@ -603,6 +642,20 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcTrackRecordClause4.EndInit();
+            this.rtcSiteInspection.EndInit();
+            this.rtcLevel2Style.EndInit();
+            this.rtcLevel3Style.EndInit();
+            this.richTextContentControl163.EndInit();
+            this.Tender_Submission_Programme.EndInit();
+            this.Tender_Format.EndInit();
+            this.Supplier_Selection_Method.EndInit();
+            this.Pricing_Options.EndInit();
+            this.Personnel_Schedule.EndInit();
+            this.Non_Price_Attributes.EndInit();
+            this.Liability_Insurance.EndInit();
+            this.Contract_Pricing.EndInit();
+            this.Contract_Details.EndInit();
             this.rtcAlternativeTenderYes.EndInit();
             this.rtcGeoTestingSum.EndInit();
             this.FormC_MethEnd.EndInit();
@@ -658,7 +711,6 @@ namespace NZTA_Contract_Generator {
             this.rtcAdditionalServicesSchedule_Sum.EndInit();
             this.rtcCPS_GeoTestingSum.EndInit();
             this.DocumentFormatForm.EndInit();
-            this.richTextContentControl140.EndInit();
             this.richTextContentControl138.EndInit();
             this.richTextContentControl137.EndInit();
             this.richTextContentControl136.EndInit();
@@ -873,7 +925,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl136 = Globals.Factory.CreateRichTextContentControl(null, null, "271914501", "richTextContentControl136", this);
             this.richTextContentControl137 = Globals.Factory.CreateRichTextContentControl(null, null, "2373102989", "richTextContentControl137", this);
             this.richTextContentControl138 = Globals.Factory.CreateRichTextContentControl(null, null, "136855772", "richTextContentControl138", this);
-            this.richTextContentControl140 = Globals.Factory.CreateRichTextContentControl(null, null, "4066816672", "richTextContentControl140", this);
             this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
             this.rtcCPS_GeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "3830924054", "rtcCPS_GeoTestingSum", this);
             this.rtcAdditionalServicesSchedule_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "3756918911", "rtcAdditionalServicesSchedule_Sum", this);
@@ -929,6 +980,20 @@ namespace NZTA_Contract_Generator {
             this.FormC_MethEnd = Globals.Factory.CreateBookmark(null, null, "FormC_MethEnd", "FormC_MethEnd", this);
             this.rtcGeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "720943843", "rtcGeoTestingSum", this);
             this.rtcAlternativeTenderYes = Globals.Factory.CreateRichTextContentControl(null, null, "910882152", "rtcAlternativeTenderYes", this);
+            this.Contract_Details = Globals.Factory.CreateBookmark(null, null, "Contract_Details", "Contract_Details", this);
+            this.Contract_Pricing = Globals.Factory.CreateBookmark(null, null, "Contract_Pricing", "Contract_Pricing", this);
+            this.Liability_Insurance = Globals.Factory.CreateBookmark(null, null, "Liability_Insurance", "Liability_Insurance", this);
+            this.Non_Price_Attributes = Globals.Factory.CreateBookmark(null, null, "Non_Price_Attributes", "Non_Price_Attributes", this);
+            this.Personnel_Schedule = Globals.Factory.CreateBookmark(null, null, "Personnel_Schedule", "Personnel_Schedule", this);
+            this.Pricing_Options = Globals.Factory.CreateBookmark(null, null, "Pricing_Options", "Pricing_Options", this);
+            this.Supplier_Selection_Method = Globals.Factory.CreateBookmark(null, null, "Supplier_Selection_Method", "Supplier_Selection_Method", this);
+            this.Tender_Format = Globals.Factory.CreateBookmark(null, null, "Tender_Format", "Tender_Format", this);
+            this.Tender_Submission_Programme = Globals.Factory.CreateBookmark(null, null, "Tender_Submission_Programme", "Tender_Submission_Programme", this);
+            this.richTextContentControl163 = Globals.Factory.CreateRichTextContentControl(null, null, "1128671870", "richTextContentControl163", this);
+            this.rtcLevel3Style = Globals.Factory.CreateRichTextContentControl(null, null, "1690792238", "rtcLevel3Style", this);
+            this.rtcLevel2Style = Globals.Factory.CreateRichTextContentControl(null, null, "176926770", "rtcLevel2Style", this);
+            this.rtcSiteInspection = Globals.Factory.CreateRichTextContentControl(null, null, "3570286375", "rtcSiteInspection", this);
+            this.rtcTrackRecordClause4 = Globals.Factory.CreateRichTextContentControl(null, null, "1807583944", "rtcTrackRecordClause4", this);
         }
         
         /// 
@@ -1350,10 +1415,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl138.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl140
-            // 
-            this.richTextContentControl140.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // DocumentFormatForm
             // 
             this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1574,6 +1635,62 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcAlternativeTenderYes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // Contract_Details
+            // 
+            this.Contract_Details.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Contract_Pricing
+            // 
+            this.Contract_Pricing.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Liability_Insurance
+            // 
+            this.Liability_Insurance.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Non_Price_Attributes
+            // 
+            this.Non_Price_Attributes.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Personnel_Schedule
+            // 
+            this.Personnel_Schedule.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Pricing_Options
+            // 
+            this.Pricing_Options.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Supplier_Selection_Method
+            // 
+            this.Supplier_Selection_Method.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Format
+            // 
+            this.Tender_Format.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // Tender_Submission_Programme
+            // 
+            this.Tender_Submission_Programme.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl163
+            // 
+            this.richTextContentControl163.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcLevel3Style
+            // 
+            this.rtcLevel3Style.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcLevel2Style
+            // 
+            this.rtcLevel2Style.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSiteInspection
+            // 
+            this.rtcSiteInspection.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcTrackRecordClause4
+            // 
+            this.rtcTrackRecordClause4.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1590,6 +1707,20 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcTrackRecordClause4.Dispose();
+            this.rtcSiteInspection.Dispose();
+            this.rtcLevel2Style.Dispose();
+            this.rtcLevel3Style.Dispose();
+            this.richTextContentControl163.Dispose();
+            this.Tender_Submission_Programme.Dispose();
+            this.Tender_Format.Dispose();
+            this.Supplier_Selection_Method.Dispose();
+            this.Pricing_Options.Dispose();
+            this.Personnel_Schedule.Dispose();
+            this.Non_Price_Attributes.Dispose();
+            this.Liability_Insurance.Dispose();
+            this.Contract_Pricing.Dispose();
+            this.Contract_Details.Dispose();
             this.rtcAlternativeTenderYes.Dispose();
             this.rtcGeoTestingSum.Dispose();
             this.FormC_MethEnd.Dispose();
@@ -1645,7 +1776,6 @@ namespace NZTA_Contract_Generator {
             this.rtcAdditionalServicesSchedule_Sum.Dispose();
             this.rtcCPS_GeoTestingSum.Dispose();
             this.DocumentFormatForm.Dispose();
-            this.richTextContentControl140.Dispose();
             this.richTextContentControl138.Dispose();
             this.richTextContentControl137.Dispose();
             this.richTextContentControl136.Dispose();

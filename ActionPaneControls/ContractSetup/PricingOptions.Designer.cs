@@ -31,21 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PricingOptions));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BaseEstimate_Check = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BaseEstimate_Amount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ProvisionalSumAmount = new System.Windows.Forms.TextBox();
             this.BrooksLaw_Check = new System.Windows.Forms.CheckBox();
-            this.TargetPrice_Check = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TargetPriceAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TargetPriceAmountInWords = new System.Windows.Forms.TextBox();
             this.gbBaseEstimate = new System.Windows.Forms.GroupBox();
             this.gbTargetPrice = new System.Windows.Forms.GroupBox();
+            this.BaseEstimate_Check = new System.Windows.Forms.RadioButton();
+            this.TargetPrice_Check = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbBaseEstimate.SuspendLayout();
             this.gbTargetPrice.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -67,17 +69,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // BaseEstimate_Check
-            // 
-            this.BaseEstimate_Check.AutoSize = true;
-            this.BaseEstimate_Check.Location = new System.Drawing.Point(3, 157);
-            this.BaseEstimate_Check.Name = "BaseEstimate_Check";
-            this.BaseEstimate_Check.Size = new System.Drawing.Size(115, 17);
-            this.BaseEstimate_Check.TabIndex = 5;
-            this.BaseEstimate_Check.Text = "The Base Estimate";
-            this.BaseEstimate_Check.UseVisualStyleBackColor = true;
-            this.BaseEstimate_Check.CheckedChanged += new System.EventHandler(this.BaseEstimate_Check_CheckedChanged);
             // 
             // label3
             // 
@@ -123,17 +114,6 @@
             this.BrooksLaw_Check.UseVisualStyleBackColor = true;
             this.BrooksLaw_Check.CheckedChanged += new System.EventHandler(this.BrooksLaw_Check_CheckedChanged);
             // 
-            // TargetPrice_Check
-            // 
-            this.TargetPrice_Check.AutoSize = true;
-            this.TargetPrice_Check.Location = new System.Drawing.Point(3, 308);
-            this.TargetPrice_Check.Name = "TargetPrice_Check";
-            this.TargetPrice_Check.Size = new System.Drawing.Size(106, 17);
-            this.TargetPrice_Check.TabIndex = 12;
-            this.TargetPrice_Check.Text = "The Target Price";
-            this.TargetPrice_Check.UseVisualStyleBackColor = true;
-            this.TargetPrice_Check.CheckedChanged += new System.EventHandler(this.TargetPrice_Check_CheckedChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -175,7 +155,7 @@
             this.gbBaseEstimate.Controls.Add(this.BaseEstimate_Amount);
             this.gbBaseEstimate.Controls.Add(this.label4);
             this.gbBaseEstimate.Controls.Add(this.ProvisionalSumAmount);
-            this.gbBaseEstimate.Location = new System.Drawing.Point(3, 180);
+            this.gbBaseEstimate.Location = new System.Drawing.Point(2, 212);
             this.gbBaseEstimate.Name = "gbBaseEstimate";
             this.gbBaseEstimate.Size = new System.Drawing.Size(274, 113);
             this.gbBaseEstimate.TabIndex = 17;
@@ -193,13 +173,47 @@
             this.gbTargetPrice.TabIndex = 18;
             this.gbTargetPrice.TabStop = false;
             // 
+            // BaseEstimate_Check
+            // 
+            this.BaseEstimate_Check.AutoSize = true;
+            this.BaseEstimate_Check.Location = new System.Drawing.Point(6, 26);
+            this.BaseEstimate_Check.Name = "BaseEstimate_Check";
+            this.BaseEstimate_Check.Size = new System.Drawing.Size(92, 17);
+            this.BaseEstimate_Check.TabIndex = 19;
+            this.BaseEstimate_Check.TabStop = true;
+            this.BaseEstimate_Check.Text = "Base Estimate";
+            this.BaseEstimate_Check.UseVisualStyleBackColor = true;
+            this.BaseEstimate_Check.CheckedChanged += new System.EventHandler(this.PricingOption_Changed);
+            // 
+            // TargetPrice_Check
+            // 
+            this.TargetPrice_Check.AutoSize = true;
+            this.TargetPrice_Check.Location = new System.Drawing.Point(140, 26);
+            this.TargetPrice_Check.Name = "TargetPrice_Check";
+            this.TargetPrice_Check.Size = new System.Drawing.Size(83, 17);
+            this.TargetPrice_Check.TabIndex = 19;
+            this.TargetPrice_Check.TabStop = true;
+            this.TargetPrice_Check.Text = "Target Price";
+            this.TargetPrice_Check.UseVisualStyleBackColor = true;
+            this.TargetPrice_Check.CheckedChanged += new System.EventHandler(this.PricingOption_Changed);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TargetPrice_Check);
+            this.groupBox1.Controls.Add(this.BaseEstimate_Check);
+            this.groupBox1.Location = new System.Drawing.Point(3, 161);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(262, 49);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Pricing Option";
+            // 
             // PricingOptions
             // 
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbTargetPrice);
             this.Controls.Add(this.gbBaseEstimate);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TargetPrice_Check);
-            this.Controls.Add(this.BaseEstimate_Check);
             this.Controls.Add(this.label1);
             this.Name = "PricingOptions";
             this.Size = new System.Drawing.Size(280, 462);
@@ -207,6 +221,8 @@
             this.gbBaseEstimate.PerformLayout();
             this.gbTargetPrice.ResumeLayout(false);
             this.gbTargetPrice.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,18 +232,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox BaseEstimate_Check;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox BaseEstimate_Amount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox ProvisionalSumAmount;
         private System.Windows.Forms.CheckBox BrooksLaw_Check;
-        private System.Windows.Forms.CheckBox TargetPrice_Check;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TargetPriceAmount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TargetPriceAmountInWords;
         private System.Windows.Forms.GroupBox gbBaseEstimate;
         private System.Windows.Forms.GroupBox gbTargetPrice;
+        private System.Windows.Forms.RadioButton BaseEstimate_Check;
+        private System.Windows.Forms.RadioButton TargetPrice_Check;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

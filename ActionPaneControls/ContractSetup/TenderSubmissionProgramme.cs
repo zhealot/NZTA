@@ -131,21 +131,32 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd-MMMM-yyyy"));
         }
 
-        private void PresentationsRequired_No_CheckedChanged(object sender, EventArgs e)
+        private void Presentations_Changed(object sender, EventArgs e)
         {
-            contract.PresentationsRequired_Yes = !((RadioButton)sender).Checked;
-            contract.PresentationsRequired_No = ((RadioButton)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            bool PreYes = PresentationsRequired_Yes.Checked;
+            contract.PresentationsRequired_No = !PreYes;
+            contract.PresentationsRequired_Yes = PreYes;
+            var PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
+            object PreStyle = PreYes ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            PreRg.SetRange(PreRg.Start - 1, PreRg.End + 2);
+            PreRg.Paragraphs[1].set_Style(ref PreStyle);
+            PreRg.Font.Hidden = PreYes ? 0 : 1;
+            if (PreYes) { PreRg.Select(); }
         }
 
-        private void PresentationsRequired_Yes_CheckedChanged(object sender, EventArgs e)
+        private void PrelettingMetting_Changed(object sender, EventArgs e)
         {
-            contract.PresentationsRequired_Yes = ((RadioButton)sender).Checked;
-            contract.PresentationsRequired_No = !((RadioButton)sender).Checked;
-            //### 3.5 formatting
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            bool YesChkd = PrelettingMeetings_Yes.Checked;
+            contract.PrelettingMeetings_Yes = YesChkd;
+            contract.PrelettingMeetings_No = !YesChkd;
+            gbPrelettingDate.Enabled = YesChkd;
+            var YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
+            object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            YesRg.SetRange(YesRg.Start - 1, YesRg.End + 2);
+            YesRg.Paragraphs[1].set_Style(ref style);
+            YesRg.Font.Hidden = YesChkd ? 0 : 1;
+            if (YesChkd) { YesRg.Select(); }
         }
-
         private void PrelettingMeetings_No_CheckedChanged(object sender, EventArgs e)
         {
             contract.PrelettingMeetings_No = ((RadioButton)sender).Checked;

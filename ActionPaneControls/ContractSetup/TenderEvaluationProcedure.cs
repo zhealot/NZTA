@@ -108,9 +108,16 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Audit_Period_ValueChanged(object sender, EventArgs e)
         {
-            //### must not greater than 2 weeks
-            contract.AuditPeriod = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s" : ""));
+            if (AuditPeriod.Value > 2)
+            {
+                Util.Help.guidanceNote("Audit period must not be greater than 2 weeks.");
+                AuditPeriod.Value = 2;
+            }
+            else
+            {
+                contract.AuditPeriod = ((NumericUpDown)sender).Value;
+                Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s" : ""));
+            }
         }
 
         private void InterviewCity_TextChanged(object sender, EventArgs e)
