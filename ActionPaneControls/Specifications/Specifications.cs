@@ -25,32 +25,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
         {
             contract.BridgesOther = BridgesOther.Checked;
             contract.StateHighway = StateHighway.Checked;
-            object start = NZTA_Contract_Generator.Globals.ThisDocument.bmStandardSpecificationClause.Range.Start;
-            var rg = NZTA_Contract_Generator.Globals.ThisDocument.Range(ref start, ref start);
-            rg.MoveEnd(Microsoft.Office.Interop.Word.WdUnits.wdParagraph, 2);
-            if (BridgesOther.Checked || StateHighway.Checked)
-            {
-                Util.ContentControls.setText("Standard_Specifications", " and Standard Specifications");
-                if (!rg.Text.Contains("Standard Specifications"))
-                {
-                    rg.Collapse(Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseStart);
-                    rg.InsertParagraph();
-                    rg.InsertAfter("Standard Specifications will only be attached to the signing sets.  To view copies of the Standard Specifications during the tender period, refer to the Highways Information Portal (");
-                    rg.Collapse(Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd);
-                    rg.Hyperlinks.Add(rg, "http://hip.nzta.govt.nz/technical-information", TextToDisplay: "http://hip.nzta.govt.nz/technical-information");
-                    rg.MoveEnd(Microsoft.Office.Interop.Word.WdUnits.wdParagraph, 1);
-                    rg.MoveEnd(Microsoft.Office.Interop.Word.WdUnits.wdCharacter, -1);
-                    rg.InsertAfter(").");
-                }
-            }
-            else
-            {
-                if (rg.Text.Contains("Standard Specifications"))
-                {
-                    rg.Delete();
-                }
-                Util.ContentControls.setText("Standard_Specifications", "");
-            }
+            bool chkd = BridgesOther.Checked || StateHighway.Checked ? true : false;
+            var rg = Globals.ThisDocument.rtcStandardSpecificationsClause.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
+            Util.ContentControls.setText("Standard_Specifications", chkd ? " and Standard Specifications" : "");
         }
 
         private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)

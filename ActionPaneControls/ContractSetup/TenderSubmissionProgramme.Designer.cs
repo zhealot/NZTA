@@ -494,6 +494,7 @@
             this.gbElecForm.Size = new System.Drawing.Size(264, 104);
             this.gbElecForm.TabIndex = 90;
             this.gbElecForm.TabStop = false;
+            this.gbElecForm.Enter += new System.EventHandler(this.gbElecForm_Enter);
             // 
             // otherDetails
             // 
@@ -501,8 +502,7 @@
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(130, 20);
             this.otherDetails.TabIndex = 78;
-            this.otherDetails.TextChanged += new System.EventHandler(this.otherDetails_Leave);
-            this.otherDetails.Leave += new System.EventHandler(this.otherDetails_Leave);
+            this.otherDetails.Leave += new System.EventHandler(this.anotherMeans_Changed);
             // 
             // anotherMeansYes
             // 
@@ -514,7 +514,7 @@
             this.anotherMeansYes.TabStop = true;
             this.anotherMeansYes.Text = "Yes (email or other)";
             this.anotherMeansYes.UseVisualStyleBackColor = true;
-            this.anotherMeansYes.CheckedChanged += new System.EventHandler(this.anotherMeansYes_CheckedChanged);
+            this.anotherMeansYes.CheckedChanged += new System.EventHandler(this.anotherMeans_Changed);
             // 
             // anotherMeansNo
             // 
@@ -526,7 +526,7 @@
             this.anotherMeansNo.TabStop = true;
             this.anotherMeansNo.Text = "No";
             this.anotherMeansNo.UseVisualStyleBackColor = true;
-            this.anotherMeansNo.CheckedChanged += new System.EventHandler(this.anotherMeansNo_CheckedChanged);
+            this.anotherMeansNo.CheckedChanged += new System.EventHandler(this.anotherMeans_Changed);
             // 
             // label36
             // 
@@ -547,7 +547,7 @@
             this.elecNo.TabStop = true;
             this.elecNo.Text = "No";
             this.elecNo.UseVisualStyleBackColor = true;
-            this.elecNo.CheckedChanged += new System.EventHandler(this.elecNo_CheckedChanged);
+            this.elecNo.CheckedChanged += new System.EventHandler(this.elec_Changed);
             // 
             // elecYes
             // 
@@ -559,7 +559,7 @@
             this.elecYes.TabStop = true;
             this.elecYes.Text = "Yes";
             this.elecYes.UseVisualStyleBackColor = true;
-            this.elecYes.CheckedChanged += new System.EventHandler(this.elecYes_CheckedChanged);
+            this.elecYes.CheckedChanged += new System.EventHandler(this.elec_Changed);
             // 
             // label35
             // 
@@ -602,7 +602,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "TenderSubmissionProgramme";
-            this.Size = new System.Drawing.Size(280, 892);
+            this.Size = new System.Drawing.Size(249, 807);
             this.gbPrelettingDate.ResumeLayout(false);
             this.gbPrelettingDate.PerformLayout();
             this.groupBox2.ResumeLayout(false);

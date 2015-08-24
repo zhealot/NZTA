@@ -40,7 +40,7 @@ namespace NZTA_Contract_Generator
             //Interactive Tender Process
             Interactive_No = true;
             InterviewNotice = 1;
-            CommercialInConfidence_Check = false;
+            CommercialInConfidence_Check = true;
 
             //Tender Submission Programme
             anotherMeansNo = true;

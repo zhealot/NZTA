@@ -87,41 +87,59 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void geoNo_CheckedChanged(object sender, EventArgs e)
+        private void geo_Changed(object sender, EventArgs e)
         {
-            scheduledItems.Enabled = !((RadioButton)sender).Checked;
-            provisionalSum.Enabled = !((RadioButton)sender).Checked;
-            schedLabel.Enabled = !((RadioButton)sender).Checked;
-            contract.geoNo = ((RadioButton)sender).Checked;
-            contract.geoYes = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            bool YesChkd = geoYes.Checked;
+            bool PSChkd = provisionalSum.Checked;
+            contract.geoYes = YesChkd;
+            contract.geoNo = !YesChkd;
+            contract.provisionalSum = PSChkd;
+            contract.scheduledItems = !PSChkd;
+            var GeoRg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
+            var PSRg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+            var SRg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+            GeoRg.SetRange(GeoRg.Start - 1, GeoRg.End + 2);
+            PSRg.SetRange(PSRg.Start - 1, PSRg.End + 2);
+            SRg.SetRange(SRg.Start - 1, SRg.End + 2);
+            GeoRg.Font.Hidden = YesChkd ? 0 : 1;
+            PSRg.Font.Hidden = (YesChkd && PSChkd) ? 0 : 1;
+            SRg.Font.Hidden = (YesChkd && !PSChkd) ? 0 : 1;
         }
+        //private void geoNo_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    scheduledItems.Enabled = !((RadioButton)sender).Checked;
+        //    provisionalSum.Enabled = !((RadioButton)sender).Checked;
+        //    schedLabel.Enabled = !((RadioButton)sender).Checked;
+        //    contract.geoNo = ((RadioButton)sender).Checked;
+        //    contract.geoYes = !((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+        //    rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+        //    rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+        //}
 
-        private void geoYes_CheckedChanged(object sender, EventArgs e)
-        {
-            scheduledItems.Enabled = ((RadioButton)sender).Checked;
-            provisionalSum.Enabled = ((RadioButton)sender).Checked;
-            schedLabel.Enabled = ((RadioButton)sender).Checked;
-            contract.geoNo = !((RadioButton)sender).Checked;
-            contract.geoYes = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-            rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = provisionalSum.Checked ? 0 : 1;
-            rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = scheduledItems.Checked ? 0 : 1;
-        }
+        //private void geoYes_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    scheduledItems.Enabled = ((RadioButton)sender).Checked;
+        //    provisionalSum.Enabled = ((RadioButton)sender).Checked;
+        //    schedLabel.Enabled = ((RadioButton)sender).Checked;
+        //    contract.geoNo = !((RadioButton)sender).Checked;
+        //    contract.geoYes = ((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+        //    rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = provisionalSum.Checked ? 0 : 1;
+        //    rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = scheduledItems.Checked ? 0 : 1;
+        //}
 
         private void help2_Click(object sender, EventArgs e)
         {
@@ -203,23 +221,23 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void provisionalSum_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.provisionalSum = ((RadioButton)sender).Checked;
-            contract.scheduledItems = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-        }
+        //private void provisionalSum_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.provisionalSum = ((RadioButton)sender).Checked;
+        //    contract.scheduledItems = !((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+        //}
 
-        private void scheduledItems_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.provisionalSum = !((RadioButton)sender).Checked;
-            contract.scheduledItems = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-        }
+        //private void scheduledItems_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.provisionalSum = !((RadioButton)sender).Checked;
+        //    contract.scheduledItems = ((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+        //}
 
         private void SiteInspection_Changed(object sender, EventArgs e)
         {
@@ -231,6 +249,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             SiteRg.SetRange(SiteRg.Start - 1, SiteRg.End + 2);
             SiteRg.Paragraphs[1].set_Style(ref SiteStyle);
             SiteRg.Font.Hidden = SiteYesChkd ? 0 : 1;
+            if (SiteYesChkd) { SiteRg.Select(); } 
         }
 
         private void altTender_Changed(object sender, EventArgs e)
@@ -246,6 +265,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             altNoRg.set_Style(ref stl);
             altNoRg.Font.Hidden = blYes ? 1 : 0;
             altYesRg.Font.Hidden = blYes ? 0 : 1;
+            if (blYes) { altYesRg.Select(); }
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -254,6 +274,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.TenderBox = selectedEntry.Key;
+                Util.ContentControls.setText(((ComboBox)sender).Name, selectedEntry.Value.building + ", " + selectedEntry.Value.streetAddress + ", " + selectedEntry.Value.city);
             }
         }
 
@@ -417,11 +438,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             CostIndex.Enabled = blChkd; 
             var rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
             var rgYes = Globals.ThisDocument.rtcCostFluctuationsYes.Range;
-            rgNo.Paragraphs.First.Range.set_Style((blChkd ? "NZTA Body Text" : "NZTA Tendering: Level 3"));
+            object style = blChkd ? "Normal" : Globals.ThisDocument.rtcLevel3Style.Range.get_Style();
+            rgNo.Paragraphs.First.Range.set_Style(ref style);
             rgNo.SetRange(rgNo.Start - 1, rgNo.End + 2);
             rgNo.Font.Hidden = blChkd ? 1 : 0;
             rgYes.SetRange(rgYes.Start - 1, rgYes.End + 2);
             rgYes.Font.Hidden = blChkd ? 0 : 1;
+            if (blChkd)
+            { 
+                rgYes.Select();
+            }
+            else
+            {
+                rgNo.Select();
+            }
         }
 
         private void CostIndex_ValueChanged(object sender, EventArgs e)

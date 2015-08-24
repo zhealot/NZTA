@@ -19,16 +19,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Interactive_CheckedChanged(object sender, EventArgs e)
         {
-            bool blChkd = Interactive_Yes.Checked ? true : false;
+            bool blChkd = Interactive_Yes.Checked;
             Meeting_Box.Enabled = blChkd;
             Meeting_Box.Visible = blChkd;
             //CommercialInConfidence_Check.Checked = Interactive_Yes.Checked;
             contract.Interactive_Yes = blChkd;
             contract.Interactive_No = !blChkd;
             var rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
-            rg.Paragraphs.First.set_Style(blChkd ? "NZTA Tendering: Level 2" : "NZTA Body Text");
+            object style = blChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Paragraphs[1].Range.set_Style(ref style);
             rg.Font.Hidden = blChkd ? 0 : 1;
+            if (blChkd) { rg.Select(); }
         }
 
         private void CommercialInConfidence_Check_CheckedChanged(object sender, EventArgs e)
@@ -36,8 +38,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.CommercialInConfidence_Check = CommercialInConfidence_Check.Checked;
             var rg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Paragraphs.First.set_Style(CommercialInConfidence_Check.Checked ? "NZTA Tendering: Level 2" : "NZTA Body Text");
+            object style = CommercialInConfidence_Check.Checked ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            rg.Paragraphs[1].Range.set_Style(ref style);
             rg.Font.Hidden = CommercialInConfidence_Check.Checked ? 0 : 1;
+            if (CommercialInConfidence_Check.Checked) { rg.Select(); }
         }
 
         private void AnyItemChanged(object sender, EventArgs e)

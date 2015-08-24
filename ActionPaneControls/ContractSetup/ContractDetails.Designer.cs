@@ -413,7 +413,7 @@
             this.geoYes.TabStop = true;
             this.geoYes.Text = "Yes";
             this.geoYes.UseVisualStyleBackColor = true;
-            this.geoYes.CheckedChanged += new System.EventHandler(this.geoYes_CheckedChanged);
+            this.geoYes.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // label17
             // 
@@ -434,7 +434,7 @@
             this.geoNo.TabStop = true;
             this.geoNo.Text = "No";
             this.geoNo.UseVisualStyleBackColor = true;
-            this.geoNo.CheckedChanged += new System.EventHandler(this.geoNo_CheckedChanged);
+            this.geoNo.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // schedLabel
             // 
@@ -455,7 +455,7 @@
             this.provisionalSum.TabStop = true;
             this.provisionalSum.Text = "Provisional Sum";
             this.provisionalSum.UseVisualStyleBackColor = true;
-            this.provisionalSum.CheckedChanged += new System.EventHandler(this.provisionalSum_CheckedChanged);
+            this.provisionalSum.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // scheduledItems
             // 
@@ -467,7 +467,7 @@
             this.scheduledItems.TabStop = true;
             this.scheduledItems.Text = "Scheduled Items";
             this.scheduledItems.UseVisualStyleBackColor = true;
-            this.scheduledItems.CheckedChanged += new System.EventHandler(this.scheduledItems_CheckedChanged);
+            this.scheduledItems.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // label19
             // 
