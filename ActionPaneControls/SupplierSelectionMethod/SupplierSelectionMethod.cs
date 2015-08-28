@@ -52,6 +52,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             TRC2Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
             TRC3Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
             Util.ContentControls.setText("TrackRecordClause4", cbTrackRecord.Checked ? "and Track Record" : "");
+            Util.ContentControls.setText("TrackRecordFill", cbTrackRecord.Checked ? " and Track Record" : "");
         }
 
         private void btnOK_Click(object sender, EventArgs e)

@@ -27,7 +27,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool BaseChkd = BaseEstimate_Check.Checked;
 
             BaseEstimate_Check.Checked = BaseChkd;
-            TargetPrice_Check.Checked = !BaseChkd;
             contract.BaseEstimate_Check = BaseChkd;
             contract.TargetPrice_Check = !BaseChkd;
             gbBaseEstimate.Enabled = BaseChkd;
@@ -39,26 +38,32 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             var UnitRateRg = Globals.ThisDocument.rtcUnitRateItems.Range;
             var HourlyRateRg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             
-            object BLStyle = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
             object BaseStyle = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
             object TargetStyle = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            object BLStyle = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
             object RateStyle = BaseChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
 
-            BaseRg.SetRange(BaseRg.Start - 1, BaseRg.End + 2);
+            BaseRg.Collapse();
+            BaseRg.set_Style(ref BaseStyle);
+            TargetRg.Collapse();
+            TargetRg.set_Style(ref TargetStyle);
+            BLRg.Collapse();
+            BLRg.set_Style(ref BLStyle);
+            HourlyRateRg.Collapse();
+            HourlyRateRg.set_Style(ref RateStyle);
+            UnitRateRg.Collapse();
+            UnitRateRg.set_Style(ref RateStyle);
+
+            BaseRg = Globals.ThisDocument.rtcPricing_BaseEstimate.Range;
+            TargetRg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
+            BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
+            UnitRateRg = Globals.ThisDocument.rtcUnitRateItems.Range;
+            HourlyRateRg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             BaseRg.SetRange(BaseRg.Start - 1, BaseRg.End + 2);
             TargetRg.SetRange(TargetRg.Start - 1, TargetRg.End + 2);
             BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
             UnitRateRg.SetRange(UnitRateRg.Start - 1, UnitRateRg.End + 2);
             HourlyRateRg.SetRange(HourlyRateRg.Start - 1, HourlyRateRg.End + 2);
-
-            BaseRg.Paragraphs[1].set_Style(ref BaseStyle);
-            TargetRg.Paragraphs[1].set_Style(ref TargetStyle);
-            BLRg.Paragraphs[1].set_Style(ref BLStyle);
-            //when set cc UnitRate's 1st paragraph alone, 2nd paragraph get messed up, don't know why. so set all paragraphs to level 3 then set 1st paragraph to level2
-            object lvl3= Globals.ThisDocument.rtcLevel3Style.Range.get_Style();
-            UnitRateRg.Paragraphs.set_Style(ref lvl3);
-            UnitRateRg.Paragraphs[1].set_Style(ref RateStyle);
-            HourlyRateRg.Paragraphs[1].set_Style(ref RateStyle);
 
             BaseRg.Font.Hidden = BaseChkd ? 0 : 1;
             TargetRg.Font.Hidden = BaseChkd ? 1 : 0;

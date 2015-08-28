@@ -36,7 +36,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             var Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
             object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
-            Rg.Paragraphs.First.set_Style(ref style);
+            Rg.Collapse();
+            Rg.set_Style(ref style);
+            Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
             Rg.SetRange(Rg.Start - 1, Rg.End + 2);
             Rg.Font.Hidden = YesChkd ? 0 : 1;
             Rg.Select();
@@ -113,8 +115,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.PresentationsRequired_Yes = PreYes;
             var PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
             object PreStyle = PreYes ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            PreRg.Collapse();
+            PreRg.set_Style(ref PreStyle);
+            PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
             PreRg.SetRange(PreRg.Start - 1, PreRg.End + 2);
-            PreRg.Paragraphs[1].set_Style(ref PreStyle);
             PreRg.Font.Hidden = PreYes ? 0 : 1;
             if (PreYes) { PreRg.Select(); }
         }
@@ -127,8 +131,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             gbPrelettingDate.Enabled = YesChkd;
             var YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
             object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            YesRg.Collapse();
+            YesRg.set_Style(ref style);
+            YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
             YesRg.SetRange(YesRg.Start - 1, YesRg.End + 2);
-            YesRg.Paragraphs[1].set_Style(ref style);
             YesRg.Font.Hidden = YesChkd ? 0 : 1;
             if (YesChkd) { YesRg.Select(); }
         }

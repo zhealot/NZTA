@@ -22,52 +22,16 @@ namespace NZTA_Contract_Generator
 
         private void ExportWordButton_Click(object sender, RibbonControlEventArgs e)
         {
-            var doc = Globals.ThisDocument;
-            object start = doc.Characters.First.Start;
-            object end = doc.Characters.Last.End;
-            var rg = doc.Range(ref start, ref start);
-            rg.Find.ClearFormatting();
-            rg.Find.Forward = true;
-            object GuidanceStyle = doc.Styles["NZTA Body Text (Yellow Highlight)"];
-            rg.Find.set_Style(ref GuidanceStyle);
-            //rg.Find.Highlight = 1;
-            rg.Find.Text = "";
-            rg.Find.Replacement.Text = "";
-            rg.Find.Forward = true;
-            rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindStop;
-            rg.Find.Format = true;
-            rg.Find.MatchCase = false;
-            rg.Find.MatchWholeWord = false;
-            rg.Find.MatchByte = false;
-            rg.Find.MatchWildcards = false;
-            rg.Find.MatchSoundsLike = false;
-            rg.Find.MatchAllWordForms = false;
-            rg.Find.Execute();
-            //object[] arg = { "SelectSimilarFormatting" };
-            //### Find.style approach: not able to locate all instances
-            //doc.Application.GetType().InvokeMember("WordBasic",System.Reflection.BindingFlags.InvokeMethod,null,null, arg);
-
-            int i = 0;
-            while (rg.Find.Found)
+            try
             {
-                System.Diagnostics.Debug.WriteLine(i++.ToString() + "-" + rg.Start + "-" + rg.End);
-                rg.Delete();
-                //rg.Collapse(WdCollapseDirection.wdCollapseStart);
-                //rg.Find.Execute(Replace: Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne);
-                //rg.Collapse(WdCollapseDirection.wdCollapseEnd);
-                rg.Find.Execute();
+                NZTA_Contract_Generator.Globals.ThisDocument.Save();
+                NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
+                Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = false;
             }
-
-            //try
-            //{
-            //    NZTA_Contract_Generator.Globals.ThisDocument.Save();
-            //    NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
-            //    Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = false; 
-            //}
-            //catch(Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void ExportDraftButton_Click(object sender, RibbonControlEventArgs e)
@@ -140,6 +104,40 @@ namespace NZTA_Contract_Generator
                 {
                     Console.WriteLine(ex.Message);
                 }
+            }
+        }
+
+        private void button1_Click(object sender, RibbonControlEventArgs e)
+        //remove guidance notes, which have hightlight color as format
+        {
+            var doc = Globals.ThisDocument;
+            object start = doc.Characters.First.Start;
+            object end = doc.Characters.Last.End;
+            var rg = doc.Range(ref start, ref start);
+            rg.Find.ClearFormatting();
+            rg.Find.Forward = true;
+            //object GuidanceStyle = doc.Styles["NZTA Body Text (Yellow Highlight)"];
+            //rg.Find.set_Style(ref GuidanceStyle);
+            rg.Find.Highlight = 1;
+            rg.Find.Text = "";
+            rg.Find.Replacement.Text = "";
+            rg.Find.Forward = true;
+            rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindStop;
+            rg.Find.Format = true;
+            rg.Find.MatchCase = false;
+            rg.Find.MatchWholeWord = false;
+            rg.Find.MatchByte = false;
+            rg.Find.MatchWildcards = false;
+            rg.Find.MatchSoundsLike = false;
+            rg.Find.MatchAllWordForms = false;
+            rg.Find.Execute();
+
+            int s = 0, d = 0;
+            while (rg.Find.Found && !(rg.Start==s && rg.End==d))
+            {
+                s = rg.Start; d = rg.End;
+                rg.Delete();
+                rg.Find.Execute();
             }
         }
     }

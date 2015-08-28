@@ -64,12 +64,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.rbOtherLevels = !blDefaultChkd;
             var rgDefault = Globals.ThisDocument.rtcLimitationDefault.Range;
             var rgOther = Globals.ThisDocument.rtcLimitationOther.Range;
-            rgDefault.SetRange(rgDefault.Start - 1, rgDefault.End + 2);
-            rgOther.SetRange(rgOther.Start - 1, rgOther.End + 2);
             var DefaultStyle = blDefaultChkd ? Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs[1].get_Style() : "Normal";
             var OtherStyle = !blDefaultChkd ? Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs[1].get_Style() : "Normal";
             rgDefault.set_Style(ref DefaultStyle);
             rgOther.set_Style(ref OtherStyle);
+            rgDefault.SetRange(rgDefault.Start - 1, rgDefault.End + 2);
+            rgOther.SetRange(rgOther.Start - 1, rgOther.End + 2);
             rgDefault.Font.Hidden = blDefaultChkd ? 0 : 1;
             rgOther.Font.Hidden = blDefaultChkd ? 1 : 0;
             if (!blDefaultChkd)

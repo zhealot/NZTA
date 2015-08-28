@@ -20,7 +20,7 @@
     <PublishUrl>C:\Users\Tao\Box Sync\2. Staff Related Activities\Tao%27s\Source\Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.72</ApplicationVersion>
+    <ApplicationVersion>1.0.0.77</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -46,6 +46,11 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <PropertyGroup>
@@ -294,6 +299,7 @@
     <Compile Include="ThisDocument.cs">
       <DependentUpon>NZTA Contract.dotx</DependentUpon>
     </Compile>
+    <None Include="NZTA New Base_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\ThisDocument.datasource" />
     <None Include="ThisDocument.Designer.xml">
       <DependentUpon>ThisDocument.cs</DependentUpon>
@@ -328,6 +334,9 @@
     <None Include="Resources\Word.png" />
     <None Include="Resources\Control Panel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -336,10 +345,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>NZTA Contract Generator_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>NZTA New Base_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>16947A66ED0BDD8D995E066F153E4657BEBF1B53</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>92250C7C61E06C6FFA26717AE7491DE88A6FB71D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -355,7 +364,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="NZTA Contract.dotx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]NZTA Contract.dotx&quot;" />
         <Host Name="Word Document" Path=".\NZTA Contract.dotx" GeneratedCodeNamespace="NZTA_Contract_Generator" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="81019D6DF7D13A1ADCB985F48B27A00DE932EAB9" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="F48B1803E2FC51678A04C66263F604F51E6D2EE2" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

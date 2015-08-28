@@ -22,26 +22,33 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool blChkd = Interactive_Yes.Checked;
             Meeting_Box.Enabled = blChkd;
             Meeting_Box.Visible = blChkd;
-            //CommercialInConfidence_Check.Checked = Interactive_Yes.Checked;
             contract.Interactive_Yes = blChkd;
             contract.Interactive_No = !blChkd;
             var rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
             object style = blChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            //apply rg.Paragraphs.First.set_Style() affects above line, so instead of seting style to paragraph, collapse range to first paragraph and set it style
+            //rg.Paragraphs.First.set_Style(ref style); 
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Paragraphs[1].Range.set_Style(ref style);
             rg.Font.Hidden = blChkd ? 0 : 1;
             if (blChkd) { rg.Select(); }
         }
 
         private void CommercialInConfidence_Check_CheckedChanged(object sender, EventArgs e)
         {
-            contract.CommercialInConfidence_Check = CommercialInConfidence_Check.Checked;
-            var rg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            object style = CommercialInConfidence_Check.Checked ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
-            rg.Paragraphs[1].Range.set_Style(ref style);
-            rg.Font.Hidden = CommercialInConfidence_Check.Checked ? 0 : 1;
-            if (CommercialInConfidence_Check.Checked) { rg.Select(); }
+            bool Chkd = CommercialInConfidence_Check.Checked;
+            contract.CommercialInConfidence_Check = Chkd; 
+            var CCIRg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
+            object style = Chkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            CCIRg.Collapse();
+            CCIRg.set_Style(ref style);
+            CCIRg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
+            //CCIRg.Paragraphs.First.set_Style(ref style);
+            CCIRg.SetRange(CCIRg.Start - 1, CCIRg.End + 2);
+            CCIRg.Font.Hidden = Chkd ? 0 : 1;
+            if (Chkd) { CCIRg.Select(); }
         }
 
         private void AnyItemChanged(object sender, EventArgs e)

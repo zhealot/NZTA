@@ -602,7 +602,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "TenderSubmissionProgramme";
-            this.Size = new System.Drawing.Size(249, 807);
+            this.Size = new System.Drawing.Size(298, 807);
             this.gbPrelettingDate.ResumeLayout(false);
             this.gbPrelettingDate.PerformLayout();
             this.groupBox2.ResumeLayout(false);

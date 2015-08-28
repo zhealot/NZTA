@@ -62,7 +62,6 @@
             this.geoYes = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.geoNo = new System.Windows.Forms.RadioButton();
-            this.schedLabel = new System.Windows.Forms.Label();
             this.provisionalSum = new System.Windows.Forms.RadioButton();
             this.scheduledItems = new System.Windows.Forms.RadioButton();
             this.label19 = new System.Windows.Forms.Label();
@@ -101,7 +100,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gbGeo = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -124,7 +123,7 @@
             this.CostIndex = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.gbGeo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -436,19 +435,10 @@
             this.geoNo.UseVisualStyleBackColor = true;
             this.geoNo.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
-            // schedLabel
-            // 
-            this.schedLabel.AllowDrop = true;
-            this.schedLabel.Location = new System.Drawing.Point(6, 72);
-            this.schedLabel.Name = "schedLabel";
-            this.schedLabel.Size = new System.Drawing.Size(314, 30);
-            this.schedLabel.TabIndex = 35;
-            this.schedLabel.Text = "Will your schedule be based as Provisional Sum or Scheduled Items?";
-            // 
             // provisionalSum
             // 
             this.provisionalSum.AutoSize = true;
-            this.provisionalSum.Location = new System.Drawing.Point(6, 15);
+            this.provisionalSum.Location = new System.Drawing.Point(6, 35);
             this.provisionalSum.Name = "provisionalSum";
             this.provisionalSum.Size = new System.Drawing.Size(100, 17);
             this.provisionalSum.TabIndex = 36;
@@ -460,7 +450,7 @@
             // scheduledItems
             // 
             this.scheduledItems.AutoSize = true;
-            this.scheduledItems.Location = new System.Drawing.Point(122, 15);
+            this.scheduledItems.Location = new System.Drawing.Point(122, 35);
             this.scheduledItems.Name = "scheduledItems";
             this.scheduledItems.Size = new System.Drawing.Size(104, 17);
             this.scheduledItems.TabIndex = 37;
@@ -811,8 +801,7 @@
             // 
             this.groupBox2.Controls.Add(this.geoYes);
             this.groupBox2.Controls.Add(this.geoNo);
-            this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Controls.Add(this.schedLabel);
+            this.groupBox2.Controls.Add(this.gbGeo);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Location = new System.Drawing.Point(3, 675);
             this.groupBox2.Name = "groupBox2";
@@ -820,15 +809,16 @@
             this.groupBox2.TabIndex = 89;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox7
+            // gbGeo
             // 
-            this.groupBox7.Controls.Add(this.scheduledItems);
-            this.groupBox7.Controls.Add(this.provisionalSum);
-            this.groupBox7.Location = new System.Drawing.Point(10, 105);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(273, 40);
-            this.groupBox7.TabIndex = 39;
-            this.groupBox7.TabStop = false;
+            this.gbGeo.Controls.Add(this.scheduledItems);
+            this.gbGeo.Controls.Add(this.provisionalSum);
+            this.gbGeo.Location = new System.Drawing.Point(28, 70);
+            this.gbGeo.Name = "gbGeo";
+            this.gbGeo.Size = new System.Drawing.Size(243, 65);
+            this.gbGeo.TabIndex = 39;
+            this.gbGeo.TabStop = false;
+            this.gbGeo.Text = "Will your schedule be based as Provisional Sum or Scheduled Items?";
             // 
             // groupBox3
             // 
@@ -1094,8 +1084,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.gbGeo.ResumeLayout(false);
+            this.gbGeo.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1147,7 +1137,6 @@
         private System.Windows.Forms.RadioButton geoYes;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RadioButton geoNo;
-        private System.Windows.Forms.Label schedLabel;
         private System.Windows.Forms.RadioButton provisionalSum;
         private System.Windows.Forms.RadioButton scheduledItems;
         private System.Windows.Forms.Label label19;
@@ -1189,7 +1178,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox Street_2;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gbGeo;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox Consultant_Name;

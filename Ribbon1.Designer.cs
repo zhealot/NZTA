@@ -40,6 +40,7 @@
             this.DisplayOptionsGroup = this.Factory.CreateRibbonGroup();
             this.ExportGroup = this.Factory.CreateRibbonGroup();
             this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
+            this.button1 = this.Factory.CreateRibbonButton();
             this.ExportWordButton = this.Factory.CreateRibbonButton();
             this.ExportDraftButton = this.Factory.CreateRibbonButton();
             this.ExportFinalButton = this.Factory.CreateRibbonButton();
@@ -71,6 +72,7 @@
             // DisplayOptionsGroup
             // 
             this.DisplayOptionsGroup.Items.Add(this.toggleButton1);
+            this.DisplayOptionsGroup.Items.Add(this.button1);
             this.DisplayOptionsGroup.Label = "Display Options";
             this.DisplayOptionsGroup.Name = "DisplayOptionsGroup";
             // 
@@ -87,10 +89,19 @@
             this.toggleButton1.Checked = true;
             this.toggleButton1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.toggleButton1.Image = global::NZTA_Contract_Generator.Properties.Resources.Control_Panel;
-            this.toggleButton1.Label = "Toggle Navigation Tree";
+            this.toggleButton1.Label = "Navigation Tree";
             this.toggleButton1.Name = "toggleButton1";
             this.toggleButton1.ShowImage = true;
             this.toggleButton1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.toggleButton1_Click);
+            // 
+            // button1
+            // 
+            this.button1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.button1.Image = global::NZTA_Contract_Generator.Properties.Resources.remove;
+            this.button1.Label = "Remove Guidance";
+            this.button1.Name = "button1";
+            this.button1.ShowImage = true;
+            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
             // 
             // ExportWordButton
             // 
@@ -148,6 +159,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportFinalButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportDraftButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonToggleButton toggleButton1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
     }
 
     partial class ThisRibbonCollection

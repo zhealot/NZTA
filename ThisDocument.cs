@@ -68,6 +68,7 @@ namespace NZTA_Contract_Generator
             this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
             this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.rtcInteractiveTenderProcess.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcInteractiveTenderProcess_Entering);
+            this.rtcAlternativeTenderYes.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAlternativeTenderYes_Entering);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -112,6 +113,11 @@ namespace NZTA_Contract_Generator
         }
 
         private void rtcInteractiveTenderProcess_Entering(object sender, ContentControlEnteringEventArgs e)
+        {
+
+        }
+
+        private void rtcAlternativeTenderYes_Entering(object sender, ContentControlEnteringEventArgs e)
         {
 
         }
