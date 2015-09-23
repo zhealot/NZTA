@@ -121,6 +121,7 @@
             this.CostFluctuations_Check = new System.Windows.Forms.CheckBox();
             this.lblCostIndex = new System.Windows.Forms.Label();
             this.CostIndex = new System.Windows.Forms.NumericUpDown();
+            this.StatementOfInterestAbilityClose_Chk = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbGeo.SuspendLayout();
@@ -1051,10 +1052,21 @@
             65536});
             this.CostIndex.ValueChanged += new System.EventHandler(this.CostIndex_ValueChanged);
             // 
+            // StatementOfInterestAbilityClose_Chk
+            // 
+            this.StatementOfInterestAbilityClose_Chk.Location = new System.Drawing.Point(226, 1052);
+            this.StatementOfInterestAbilityClose_Chk.Name = "StatementOfInterestAbilityClose_Chk";
+            this.StatementOfInterestAbilityClose_Chk.Size = new System.Drawing.Size(93, 50);
+            this.StatementOfInterestAbilityClose_Chk.TabIndex = 102;
+            this.StatementOfInterestAbilityClose_Chk.Text = "Statement of Interest and Ability Close";
+            this.StatementOfInterestAbilityClose_Chk.UseVisualStyleBackColor = true;
+            this.StatementOfInterestAbilityClose_Chk.CheckedChanged += new System.EventHandler(this.StatementOfInterestAbilityClose_Chk_CheckedChanged);
+            // 
             // ContractDetails
             // 
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.Controls.Add(this.StatementOfInterestAbilityClose_Chk);
             this.Controls.Add(this.CostIndex);
             this.Controls.Add(this.lblCostIndex);
             this.Controls.Add(this.help3);
@@ -1197,6 +1209,7 @@
         private System.Windows.Forms.CheckBox CostFluctuations_Check;
         private System.Windows.Forms.Label lblCostIndex;
         private System.Windows.Forms.NumericUpDown CostIndex;
+        private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
 
     }
 }

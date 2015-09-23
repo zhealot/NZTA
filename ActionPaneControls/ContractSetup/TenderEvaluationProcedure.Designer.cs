@@ -56,12 +56,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.AuditPeriod = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.InterviewCity = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.InterviewNotice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -310,48 +305,10 @@
             0});
             this.AuditPeriod.ValueChanged += new System.EventHandler(this.Audit_Period_ValueChanged);
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 488);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 13);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Interview City";
-            // 
-            // InterviewCity
-            // 
-            this.InterviewCity.Location = new System.Drawing.Point(140, 485);
-            this.InterviewCity.Name = "InterviewCity";
-            this.InterviewCity.Size = new System.Drawing.Size(137, 20);
-            this.InterviewCity.TabIndex = 35;
-            this.InterviewCity.TextChanged += new System.EventHandler(this.InterviewCity_TextChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 513);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(124, 13);
-            this.label19.TabIndex = 46;
-            this.label19.Text = "Interview Notice (weeks)";
-            // 
-            // InterviewNotice
-            // 
-            this.InterviewNotice.Location = new System.Drawing.Point(168, 511);
-            this.InterviewNotice.Name = "InterviewNotice";
-            this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
-            this.InterviewNotice.TabIndex = 50;
-            this.InterviewNotice.ValueChanged += new System.EventHandler(this.InterviewNotice_ValueChanged);
-            // 
             // TenderEvaluationProcedure
             // 
-            this.Controls.Add(this.InterviewNotice);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.AuditPeriod);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.InterviewCity);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.ET4_Company);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ET4_Position);
@@ -381,7 +338,6 @@
             this.Name = "TenderEvaluationProcedure";
             this.Size = new System.Drawing.Size(280, 555);
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,9 +373,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown AuditPeriod;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox InterviewCity;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.NumericUpDown InterviewNotice;
     }
 }

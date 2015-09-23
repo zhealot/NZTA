@@ -39,7 +39,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
                     rg.Find.ClearFormatting();
                     rg.Find.MatchCase = false;
                     rg.Find.MatchWholeWord = true;
-                    rg.Find.Text = rw.Cells[1].Range.Text.Replace("\r\a", "");
+                    rg.Find.Text = rw.Cells[1].Range.Text.Replace("\r\a", "").Trim();
                     rg.Find.Execute(); 
                     while (rg.Find.Found && rg.InRange(NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range)) 
                     {

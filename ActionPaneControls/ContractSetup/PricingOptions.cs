@@ -19,13 +19,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             gbTargetPrice.Enabled = false;
             gbBaseEstimate.Enabled = false;
             Util.SavedState.setControlsToState(contract, Controls);
-            
         }
 
         private void PricingOption_Changed(object sender, EventArgs e)
         {
             bool BaseChkd = BaseEstimate_Check.Checked;
-
             BaseEstimate_Check.Checked = BaseChkd;
             contract.BaseEstimate_Check = BaseChkd;
             contract.TargetPrice_Check = !BaseChkd;
@@ -37,6 +35,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             var BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
             var UnitRateRg = Globals.ThisDocument.rtcUnitRateItems.Range;
             var HourlyRateRg = Globals.ThisDocument.rtcHourlyRateItems.Range;
+            var CPSTargetPriceClause = Globals.ThisDocument.rtcContractPaymentScheduleTargetPriceClause.Range;
             
             object BaseStyle = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
             object TargetStyle = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
@@ -54,22 +53,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             UnitRateRg.Collapse();
             UnitRateRg.set_Style(ref RateStyle);
 
-            BaseRg = Globals.ThisDocument.rtcPricing_BaseEstimate.Range;
-            TargetRg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
-            BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
-            UnitRateRg = Globals.ThisDocument.rtcUnitRateItems.Range;
-            HourlyRateRg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             BaseRg.SetRange(BaseRg.Start - 1, BaseRg.End + 2);
             TargetRg.SetRange(TargetRg.Start - 1, TargetRg.End + 2);
             BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
             UnitRateRg.SetRange(UnitRateRg.Start - 1, UnitRateRg.End + 2);
             HourlyRateRg.SetRange(HourlyRateRg.Start - 1, HourlyRateRg.End + 2);
+            CPSTargetPriceClause.SetRange(CPSTargetPriceClause.Start - 1, CPSTargetPriceClause.End + 2);
 
             BaseRg.Font.Hidden = BaseChkd ? 0 : 1;
             TargetRg.Font.Hidden = BaseChkd ? 1 : 0;
             BLRg.Font.Hidden = BrooksLaw_Check.Checked && BaseEstimate_Check.Checked ? 0 : 1;
             UnitRateRg.Font.Hidden = BaseChkd ? 0 : 1;
             HourlyRateRg.Font.Hidden = BaseChkd ? 0 : 1;
+            CPSTargetPriceClause.Font.Hidden = BaseChkd ? 1 : 0;
 
             var rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);

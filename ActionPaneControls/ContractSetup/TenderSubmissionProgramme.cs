@@ -21,6 +21,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Presentation_Address.DataSource = new BindingSource(Constants.Location.data, null);
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
+            Presentation_Address.SelectedIndex = -1;
             gbElecForm.Enabled = false;
             ignoreChange = false;
             //Load saved state. Defaults set in state...
@@ -67,39 +68,40 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void Evaluation_Start_ValueChanged(object sender, EventArgs e)
+        private void Evaluation_Date_Changed(object sender, EventArgs e)
         {
-            contract.Evaluation_Start = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
-        }
-
-        private void Evaluation_End_ValueChanged(object sender, EventArgs e)
-        {
-            if (Evaluation_End.Value < Evaluation_Start.Value)
+            if (Evaluation_Start.Value > Evaluation_End.Value)
             {
                 Util.Help.guidanceNote("End date should not be earlier than start date");
                 return;
             }
-            contract.Evaluation_End = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
+            contract.Evaluation_Start = Evaluation_Start.Value.ToString("O");
+            contract.Evaluation_End = Evaluation_End.Value.ToString("O");
+            Util.ContentControls.setText("Evaluation_Period", "From " + Evaluation_Start.Value.ToString("dd/MMMM/yyyy") + " to " + Evaluation_End.Value.ToString("dd/MMMM/yyyy"));
         }
 
-        private void PrelettingFromDate_ValueChanged(object sender, EventArgs e)
+        private void Evaluation_Other_TextChanged(object sender, EventArgs e)
         {
-            contract.PrelettingFromDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
+            contract.Evaluation_Other = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Evaluation_Period", Evaluation_Other.Text);
         }
 
-        private void PrelettingEndDate_ValueChanged(object sender, EventArgs e)
+        private void Preletting_Date_Changed(object sender, EventArgs e)
         {
-            contract.PrelettingEndDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
+            if (PrelettingFromDate.Value > PrelettingEndDate.Value)
+            {
+                Util.Help.guidanceNote("End date should not be earlier than start date");
+                return;
+            }
+            contract.PrelettingFromDate = PrelettingFromDate.Value.ToString("O");
+            contract.PrelettingEndDate = PrelettingEndDate.Value.ToString("O");
+            Util.ContentControls.setText("Preletting_Period", "From " + PrelettingFromDate.Value.ToString("dd/MMMM/yyyy") + " to " + PrelettingEndDate.Value.ToString("dd/MMMM/yyyy"));
         }
 
-        //### in format: "from xx to xx"?
-        private void Preletting_Period(object sender, EventArgs e)
+        private void PrelettingOther_TextChanged(object sender, EventArgs e)
         {
-            Util.ContentControls.setText("Preletting_Period", "from " + contract.PrelettingFromDate + Environment.NewLine + " to " + contract.PrelettingEndDate);
+            contract.PrelettingOther = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Preletting_Period", PrelettingOther.Text);
         }
 
         private void TargetDate_ValueChanged(object sender, EventArgs e)
@@ -123,6 +125,16 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (PreYes) { PreRg.Select(); }
         }
 
+        private void InterviewCity_TextChanged(object sender, EventArgs e)
+        {
+            contract.InterviewCity = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+        }
+        private void InterviewNotice_ValueChanged(object sender, EventArgs e)
+        {
+            contract.InterviewNotice = ((NumericUpDown)sender).Value;
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s'" : "'s"));
+        }
         private void PrelettingMetting_Changed(object sender, EventArgs e)
         {
             bool YesChkd = PrelettingMeetings_Yes.Checked;
@@ -206,18 +218,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
-        private void Evaluation_Other_TextChanged(object sender, EventArgs e)
-        {
-            contract.Evaluation_Other = ((TextBox)sender).Text;
-            Util.ContentControls.setText("Preletting_Period", Evaluation_Other.Text);
-        }
-
-        private void PrelettingOther_TextChanged(object sender, EventArgs e)
-        {
-            contract.PrelettingOther = ((TextBox)sender).Text;
-            Util.ContentControls.setText("Preletting_Period", PrelettingOther.Text);
-        }
-
         private void help1_Click(object sender, EventArgs e)
         {
             Util.Help.guidanceNote("Allows for tenderers to present their tenders and ask questions.  Tenderers are not allowed to present any new information other than that covered within their tender submission.");
@@ -241,8 +241,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void gbElecForm_Enter(object sender, EventArgs e)
         {
-
-
         }
     }
 }

@@ -11,9 +11,13 @@ namespace NZTA_Contract_Generator.Util
         {
             ThisDocument doc = NZTA_Contract_Generator.Globals.ThisDocument;
             Microsoft.Office.Interop.Word.ContentControls ccs = doc.SelectContentControlsByTag(tag);
+            bool ccLocked;
             foreach (ContentControl cc in ccs)
             {
+                ccLocked = cc.LockContents;
+                cc.LockContents = false;
                 cc.Range.Text = text.Replace("\r\n", " ");
+                cc.LockContents = ccLocked;
             }  
         }
 

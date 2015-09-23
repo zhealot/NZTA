@@ -29,7 +29,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             var rg = Globals.ThisDocument.rtcStandardSpecificationsClause.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = chkd ? 0 : 1;
-            Util.ContentControls.setText("Standard_Specifications", chkd ? " and Standard Specifications" : "");
+            Util.ContentControls.setText("Standard_Specifications", chkd ? "and Standard Specifications" : "");
+            chkd = BridgesOther.Checked;
+            rg = Globals.ThisDocument.rtcClauseBridge.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
+            chkd = StateHighway.Checked;
+            rg = Globals.ThisDocument.rtcClauseHighway.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
         }
 
         private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)

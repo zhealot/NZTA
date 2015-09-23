@@ -369,6 +369,32 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl169;
         
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_D;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_C;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_A;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_B;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_E;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_F;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_G;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmRFTDocuments;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcClauseBridge;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcClauseHighway;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcStatementOfInterestAbilityClose;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcStatementOfInterestAbilityCloseTitle;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl170;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -647,6 +673,19 @@ namespace NZTA_Contract_Generator {
             this.MethStart.BeginInit();
             this.richTextContentControl168.BeginInit();
             this.richTextContentControl169.BeginInit();
+            this.bmSECTION_D.BeginInit();
+            this.bmSECTION_C.BeginInit();
+            this.bmSECTION_A.BeginInit();
+            this.bmSECTION_B.BeginInit();
+            this.bmSECTION_E.BeginInit();
+            this.bmSECTION_F.BeginInit();
+            this.bmSECTION_G.BeginInit();
+            this.bmRFTDocuments.BeginInit();
+            this.rtcClauseBridge.BeginInit();
+            this.rtcClauseHighway.BeginInit();
+            this.rtcStatementOfInterestAbilityClose.BeginInit();
+            this.rtcStatementOfInterestAbilityCloseTitle.BeginInit();
+            this.richTextContentControl170.BeginInit();
         }
         
         /// 
@@ -654,6 +693,19 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.richTextContentControl170.EndInit();
+            this.rtcStatementOfInterestAbilityCloseTitle.EndInit();
+            this.rtcStatementOfInterestAbilityClose.EndInit();
+            this.rtcClauseHighway.EndInit();
+            this.rtcClauseBridge.EndInit();
+            this.bmRFTDocuments.EndInit();
+            this.bmSECTION_G.EndInit();
+            this.bmSECTION_F.EndInit();
+            this.bmSECTION_E.EndInit();
+            this.bmSECTION_B.EndInit();
+            this.bmSECTION_A.EndInit();
+            this.bmSECTION_C.EndInit();
+            this.bmSECTION_D.EndInit();
             this.richTextContentControl169.EndInit();
             this.richTextContentControl168.EndInit();
             this.MethStart.EndInit();
@@ -1014,6 +1066,19 @@ namespace NZTA_Contract_Generator {
             this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
             this.richTextContentControl168 = Globals.Factory.CreateRichTextContentControl(null, null, "3068755074", "richTextContentControl168", this);
             this.richTextContentControl169 = Globals.Factory.CreateRichTextContentControl(null, null, "3566512576", "richTextContentControl169", this);
+            this.bmSECTION_D = Globals.Factory.CreateBookmark(null, null, "bmSECTION_D", "bmSECTION_D", this);
+            this.bmSECTION_C = Globals.Factory.CreateBookmark(null, null, "bmSECTION_C", "bmSECTION_C", this);
+            this.bmSECTION_A = Globals.Factory.CreateBookmark(null, null, "bmSECTION_A", "bmSECTION_A", this);
+            this.bmSECTION_B = Globals.Factory.CreateBookmark(null, null, "bmSECTION_B", "bmSECTION_B", this);
+            this.bmSECTION_E = Globals.Factory.CreateBookmark(null, null, "bmSECTION_E", "bmSECTION_E", this);
+            this.bmSECTION_F = Globals.Factory.CreateBookmark(null, null, "bmSECTION_F", "bmSECTION_F", this);
+            this.bmSECTION_G = Globals.Factory.CreateBookmark(null, null, "bmSECTION_G", "bmSECTION_G", this);
+            this.bmRFTDocuments = Globals.Factory.CreateBookmark(null, null, "bmRFTDocuments", "bmRFTDocuments", this);
+            this.rtcClauseBridge = Globals.Factory.CreateRichTextContentControl(null, null, "2898381404", "rtcClauseBridge", this);
+            this.rtcClauseHighway = Globals.Factory.CreateRichTextContentControl(null, null, "2464766942", "rtcClauseHighway", this);
+            this.rtcStatementOfInterestAbilityClose = Globals.Factory.CreateRichTextContentControl(null, null, "523755645", "rtcStatementOfInterestAbilityClose", this);
+            this.rtcStatementOfInterestAbilityCloseTitle = Globals.Factory.CreateRichTextContentControl(null, null, "294267740", "rtcStatementOfInterestAbilityCloseTitle", this);
+            this.richTextContentControl170 = Globals.Factory.CreateRichTextContentControl(null, null, "1932309654", "richTextContentControl170", this);
         }
         
         /// 
@@ -1727,6 +1792,58 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl169.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // bmSECTION_D
+            // 
+            this.bmSECTION_D.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_C
+            // 
+            this.bmSECTION_C.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_A
+            // 
+            this.bmSECTION_A.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_B
+            // 
+            this.bmSECTION_B.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_E
+            // 
+            this.bmSECTION_E.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_F
+            // 
+            this.bmSECTION_F.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_G
+            // 
+            this.bmSECTION_G.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmRFTDocuments
+            // 
+            this.bmRFTDocuments.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcClauseBridge
+            // 
+            this.rtcClauseBridge.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcClauseHighway
+            // 
+            this.rtcClauseHighway.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcStatementOfInterestAbilityClose
+            // 
+            this.rtcStatementOfInterestAbilityClose.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcStatementOfInterestAbilityCloseTitle
+            // 
+            this.rtcStatementOfInterestAbilityCloseTitle.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl170
+            // 
+            this.richTextContentControl170.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1743,6 +1860,19 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.richTextContentControl170.Dispose();
+            this.rtcStatementOfInterestAbilityCloseTitle.Dispose();
+            this.rtcStatementOfInterestAbilityClose.Dispose();
+            this.rtcClauseHighway.Dispose();
+            this.rtcClauseBridge.Dispose();
+            this.bmRFTDocuments.Dispose();
+            this.bmSECTION_G.Dispose();
+            this.bmSECTION_F.Dispose();
+            this.bmSECTION_E.Dispose();
+            this.bmSECTION_B.Dispose();
+            this.bmSECTION_A.Dispose();
+            this.bmSECTION_C.Dispose();
+            this.bmSECTION_D.Dispose();
             this.richTextContentControl169.Dispose();
             this.richTextContentControl168.Dispose();
             this.MethStart.Dispose();

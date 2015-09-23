@@ -53,12 +53,8 @@
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Personnel", new System.Windows.Forms.TreeNode[] {
             treeNode13});
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Contract Pricing");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Geotechnical Testing Schedule");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Additional Services Schedule");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16,
-            treeNode17});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
+            treeNode15});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
@@ -99,7 +95,7 @@
             treeNode11.Name = "SupplierSelectionMethod.SupplierSelectionMethod";
             treeNode11.Text = "Supplier Selection Method";
             treeNode12.Name = "Specifications.Specifications";
-            treeNode12.Tag = "Specifications";
+            treeNode12.Tag = "bmRFTDocuments";
             treeNode12.Text = "Specifications";
             treeNode13.Name = "Personnel.Personnel";
             treeNode13.Tag = "Personnel";
@@ -109,20 +105,14 @@
             treeNode15.Name = "SectionC.ContractPricing";
             treeNode15.Tag = "Contract_Pricing";
             treeNode15.Text = "Contract Pricing";
-            treeNode16.Name = "SectionC.GeotechnicalTestingSchedule";
-            treeNode16.Tag = "Geotechnical_Testing_Schedule";
-            treeNode16.Text = "Geotechnical Testing Schedule";
-            treeNode17.Name = "SectionC.AdditionalServicesSchedule";
-            treeNode17.Tag = "Additional_Services_Schedule";
-            treeNode17.Text = "Additional Services Schedule";
-            treeNode18.Name = "SectionC";
-            treeNode18.Text = "Section C";
+            treeNode16.Name = "SectionC";
+            treeNode16.Text = "Section C";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode11,
             treeNode12,
             treeNode14,
-            treeNode18});
+            treeNode16});
             this.treeView1.Size = new System.Drawing.Size(268, 650);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

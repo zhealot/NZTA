@@ -27,6 +27,7 @@ namespace NZTA_Contract_Generator
             CostFluctuations_Check = false;
             altTenderNo = true;
             clientSiteNo = true;
+            StatementOfInterestAbilityClose_Chk = true; 
 
             //Tender Evaluation Procedure
             AuditPeriod = 2;
@@ -47,9 +48,15 @@ namespace NZTA_Contract_Generator
             PresentationsRequired_No = true;
             PrelettingMeetings_No = true;
             
+            //Specifications
+            BridgesOther = true;
+            StateHighway = true;
 
             //Liability and Insurances
             rbApprovedDefault = true;
+
+            //Supplier Selection Methods
+            cbTrackRecord = false;
         }
 
         //Start of Contract Details
@@ -92,6 +99,8 @@ namespace NZTA_Contract_Generator
         public String TenderBox { get; set; }
         public String TargetDate { get; set; }
 
+        public String CloseDate { get; set; }
+        public Boolean StatementOfInterestAbilityClose_Chk { get; set; }
         public String Nominated_Person { get; set; }
         public String Nominated_Phone { get; set; }
         public String Nominated_Email { get; set; }
@@ -156,15 +165,11 @@ namespace NZTA_Contract_Generator
         public Boolean TargetPrice_Check { get; set; }
         public String TargetPriceAmount { get; set; }
         public String TargetPriceAmountInWords { get; set; }
-
         //End of pricing options
 
         //Start of tender submission programme
-
-        public String CloseDate { get; set; }
         public Boolean PresentationsRequired_Yes { get; set; }
         public Boolean PresentationsRequired_No { get; set; }
-
         public String Presentation_Address { get; set; }
         public String Presentation_Company { get; set; }
         public String Presentation_Building { get; set; }
@@ -188,8 +193,8 @@ namespace NZTA_Contract_Generator
         public String PrelettingFromDate { get; set; }
         public String PrelettingEndDate { get; set; }
         public String PrelettingOther { get; set; }
-
-
+        public String InterviewCity { get; set; }
+        public Decimal InterviewNotice { get; set; }
         //End of tender submission programme
 
         //Start of Tender Format programme
@@ -275,8 +280,6 @@ namespace NZTA_Contract_Generator
         public String ET5_Name { get; set; }
         public String ET5_Position { get; set; }
         public String ET5_Company { get; set; }        
-        public String InterviewCity { get; set; }
-        public Decimal InterviewNotice { get; set; }
         public Decimal AuditPeriod { get; set; }
         //End of Tender Evaluation Procedure
 

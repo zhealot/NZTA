@@ -30,6 +30,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 rbTP.Checked = true;
                 gbMethods.Enabled = false;
             }
+            //### show/hide clauses base on cbTrackRecord status, there should be a better way to achieve this
+            cbTrackRecord_CheckedChanged(null, null);
         }
 
         private void rbPQM_CheckedChanged(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             var TRC2Rg = Globals.ThisDocument.rtcTrackRecordClause2.Range;
             var TRC3Rg = Globals.ThisDocument.rtcTrackRecordClause3.Range;
             object style = cbTrackRecord.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            TRC3Rg.set_Style(ref style);
             TRC1Rg.SetRange(TRC1Rg.Start - 1, TRC1Rg.End + 2);
             TRC2Rg.SetRange(TRC2Rg.Start - 1, TRC2Rg.End + 2);
             TRC3Rg.SetRange(TRC3Rg.Start - 1, TRC3Rg.End + 2);

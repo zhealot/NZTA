@@ -120,16 +120,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void InterviewCity_TextChanged(object sender, EventArgs e)
-        {
-            contract.InterviewCity = ((TextBox)sender).Text;
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-        }
-        private void InterviewNotice_ValueChanged(object sender, EventArgs e)
-        {
-            contract.InterviewNotice = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s'" : "'s"));
-        }
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
 

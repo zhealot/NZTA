@@ -78,11 +78,16 @@
             this.elecYes = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.InterviewCity = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.InterviewNotice = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             this.gbPrelettingDate.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.gbElecForm.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +96,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(69)))), ((int)(((byte)(106)))));
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 58);
+            this.label1.Size = new System.Drawing.Size(278, 58);
             this.label1.TabIndex = 4;
             this.label1.Text = "Tender Submission Programme";
             // 
@@ -253,7 +258,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 503);
+            this.label5.Location = new System.Drawing.Point(3, 566);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 13);
             this.label5.TabIndex = 56;
@@ -262,7 +267,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 524);
+            this.label6.Location = new System.Drawing.Point(3, 587);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 57;
@@ -270,24 +275,24 @@
             // 
             // Evaluation_Start
             // 
-            this.Evaluation_Start.Location = new System.Drawing.Point(3, 540);
+            this.Evaluation_Start.Location = new System.Drawing.Point(3, 603);
             this.Evaluation_Start.Name = "Evaluation_Start";
             this.Evaluation_Start.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_Start.TabIndex = 58;
-            this.Evaluation_Start.ValueChanged += new System.EventHandler(this.Evaluation_Start_ValueChanged);
+            this.Evaluation_Start.ValueChanged += new System.EventHandler(this.Evaluation_Date_Changed);
             // 
             // Evaluation_End
             // 
-            this.Evaluation_End.Location = new System.Drawing.Point(3, 579);
+            this.Evaluation_End.Location = new System.Drawing.Point(3, 642);
             this.Evaluation_End.Name = "Evaluation_End";
             this.Evaluation_End.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_End.TabIndex = 60;
-            this.Evaluation_End.ValueChanged += new System.EventHandler(this.Evaluation_End_ValueChanged);
+            this.Evaluation_End.ValueChanged += new System.EventHandler(this.Evaluation_Date_Changed);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 563);
+            this.label10.Location = new System.Drawing.Point(3, 626);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 59;
@@ -296,7 +301,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 606);
+            this.label14.Location = new System.Drawing.Point(3, 669);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 13);
             this.label14.TabIndex = 61;
@@ -304,7 +309,7 @@
             // 
             // Evaluation_Other
             // 
-            this.Evaluation_Other.Location = new System.Drawing.Point(97, 603);
+            this.Evaluation_Other.Location = new System.Drawing.Point(97, 666);
             this.Evaluation_Other.Name = "Evaluation_Other";
             this.Evaluation_Other.Size = new System.Drawing.Size(173, 20);
             this.Evaluation_Other.TabIndex = 62;
@@ -312,7 +317,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 601);
+            this.button1.Location = new System.Drawing.Point(62, 664);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 63;
@@ -367,7 +372,7 @@
             this.PrelettingEndDate.Name = "PrelettingEndDate";
             this.PrelettingEndDate.Size = new System.Drawing.Size(200, 20);
             this.PrelettingEndDate.TabIndex = 70;
-            this.PrelettingEndDate.ValueChanged += new System.EventHandler(this.PrelettingEndDate_ValueChanged);
+            this.PrelettingEndDate.ValueChanged += new System.EventHandler(this.Preletting_Date_Changed);
             // 
             // label17
             // 
@@ -384,7 +389,7 @@
             this.PrelettingFromDate.Name = "PrelettingFromDate";
             this.PrelettingFromDate.Size = new System.Drawing.Size(200, 20);
             this.PrelettingFromDate.TabIndex = 68;
-            this.PrelettingFromDate.ValueChanged += new System.EventHandler(this.PrelettingFromDate_ValueChanged);
+            this.PrelettingFromDate.ValueChanged += new System.EventHandler(this.Preletting_Date_Changed);
             // 
             // label18
             // 
@@ -397,7 +402,7 @@
             // 
             // TargetDate
             // 
-            this.TargetDate.Location = new System.Drawing.Point(3, 857);
+            this.TargetDate.Location = new System.Drawing.Point(3, 920);
             this.TargetDate.Name = "TargetDate";
             this.TargetDate.Size = new System.Drawing.Size(200, 20);
             this.TargetDate.TabIndex = 74;
@@ -406,7 +411,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 841);
+            this.label19.Location = new System.Drawing.Point(3, 904);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(146, 13);
             this.label19.TabIndex = 73;
@@ -420,7 +425,7 @@
             this.gbPrelettingDate.Controls.Add(this.label17);
             this.gbPrelettingDate.Controls.Add(this.PrelettingFromDate);
             this.gbPrelettingDate.Controls.Add(this.label18);
-            this.gbPrelettingDate.Location = new System.Drawing.Point(6, 702);
+            this.gbPrelettingDate.Location = new System.Drawing.Point(6, 765);
             this.gbPrelettingDate.Name = "gbPrelettingDate";
             this.gbPrelettingDate.Size = new System.Drawing.Size(257, 125);
             this.gbPrelettingDate.TabIndex = 75;
@@ -455,15 +460,15 @@
             this.groupBox2.Controls.Add(this.PresentationsRequired_Yes);
             this.groupBox2.Controls.Add(this.help1);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(2, 249);
+            this.groupBox2.Location = new System.Drawing.Point(2, 232);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(276, 241);
+            this.groupBox2.Size = new System.Drawing.Size(276, 258);
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 856);
+            this.button3.Location = new System.Drawing.Point(209, 919);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(23, 23);
             this.button3.TabIndex = 77;
@@ -575,16 +580,54 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.PrelettingMeetings_Yes);
             this.groupBox3.Controls.Add(this.PrelettingMeetings_No);
-            this.groupBox3.Location = new System.Drawing.Point(6, 643);
+            this.groupBox3.Location = new System.Drawing.Point(6, 706);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(227, 53);
             this.groupBox3.TabIndex = 94;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Are Preletting Meeting (s) required?";
             // 
+            // InterviewCity
+            // 
+            this.InterviewCity.Location = new System.Drawing.Point(140, 496);
+            this.InterviewCity.Name = "InterviewCity";
+            this.InterviewCity.Size = new System.Drawing.Size(137, 20);
+            this.InterviewCity.TabIndex = 96;
+            this.InterviewCity.TextChanged += new System.EventHandler(this.InterviewCity_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 499);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 95;
+            this.label2.Text = "Interview City";
+            // 
+            // InterviewNotice
+            // 
+            this.InterviewNotice.Location = new System.Drawing.Point(168, 522);
+            this.InterviewNotice.Name = "InterviewNotice";
+            this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
+            this.InterviewNotice.TabIndex = 98;
+            this.InterviewNotice.ValueChanged += new System.EventHandler(this.InterviewNotice_ValueChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(4, 524);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 13);
+            this.label15.TabIndex = 97;
+            this.label15.Text = "Interview Notice (weeks)";
+            // 
             // TenderSubmissionProgramme
             // 
             this.AutoScroll = true;
+            this.Controls.Add(this.InterviewNotice);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.InterviewCity);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.button3);
@@ -602,7 +645,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "TenderSubmissionProgramme";
-            this.Size = new System.Drawing.Size(298, 807);
+            this.Size = new System.Drawing.Size(300, 943);
             this.gbPrelettingDate.ResumeLayout(false);
             this.gbPrelettingDate.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -613,6 +656,7 @@
             this.gbElecForm.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,5 +714,9 @@
         private System.Windows.Forms.RadioButton elecYes;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox InterviewCity;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown InterviewNotice;
+        private System.Windows.Forms.Label label15;
     }
 }

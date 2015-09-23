@@ -115,6 +115,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 }
                 rw++;
             }
+            tb.Range.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
         }
 

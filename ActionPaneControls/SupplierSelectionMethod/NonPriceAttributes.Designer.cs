@@ -170,7 +170,7 @@
             this.tbPercent.Size = new System.Drawing.Size(40, 497);
             this.tbPercent.TabIndex = 14;
             this.tbPercent.Text = "15\r\n0\r\n10\r\n5\r\n10\r\n20\r\n0\r\n30\r\n0\r\n10\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n" +
-    "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
+    "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
             // 
             // button2
             // 

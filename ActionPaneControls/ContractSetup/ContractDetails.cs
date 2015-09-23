@@ -377,7 +377,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void CloseDate_ValueChanged(object sender, EventArgs e)
         {
             contract.CloseDate = CloseDate.Value.ToString("O");
-            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMM/yyyy"));
+            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMMM/yyyy"));
         }
 
         private void Email_1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -430,6 +430,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             Util.ContentControls.setText("CostIndex1", CostIndex.Value.ToString());
             Util.ContentControls.setText("CostIndex2", (1 - CostIndex.Value).ToString());
+        }
+
+        private void StatementOfInterestAbilityClose_Chk_CheckedChanged(object sender, EventArgs e)
+        {
+            bool chkd = StatementOfInterestAbilityClose_Chk.Checked;
+            contract.StatementOfInterestAbilityClose_Chk = chkd;
+            var style = chkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            var rg = Globals.ThisDocument.rtcStatementOfInterestAbilityClose.Range;
+            rg.set_Style(ref style);
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
+            rg = Globals.ThisDocument.rtcStatementOfInterestAbilityCloseTitle.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
         }
     }
 }
