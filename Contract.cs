@@ -324,6 +324,7 @@ namespace NZTA_Contract_Generator
         //Start of Specifications
         public Boolean BridgesOther { get; set; }
         public Boolean StateHighway { get; set; }
+        public Boolean OtherSpecification { get; set; }
         public Boolean MultipleProjects_No { get; set; }
         public Boolean MultipleProjects_Yes { get; set; }
         public String Project1 { get; set; }

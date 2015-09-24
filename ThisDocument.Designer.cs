@@ -395,6 +395,10 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl170;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcClauseOther;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmBridegInPricingTable;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -686,6 +690,8 @@ namespace NZTA_Contract_Generator {
             this.rtcStatementOfInterestAbilityClose.BeginInit();
             this.rtcStatementOfInterestAbilityCloseTitle.BeginInit();
             this.richTextContentControl170.BeginInit();
+            this.rtcClauseOther.BeginInit();
+            this.bmBridegInPricingTable.BeginInit();
         }
         
         /// 
@@ -693,6 +699,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmBridegInPricingTable.EndInit();
+            this.rtcClauseOther.EndInit();
             this.richTextContentControl170.EndInit();
             this.rtcStatementOfInterestAbilityCloseTitle.EndInit();
             this.rtcStatementOfInterestAbilityClose.EndInit();
@@ -1079,6 +1087,8 @@ namespace NZTA_Contract_Generator {
             this.rtcStatementOfInterestAbilityClose = Globals.Factory.CreateRichTextContentControl(null, null, "523755645", "rtcStatementOfInterestAbilityClose", this);
             this.rtcStatementOfInterestAbilityCloseTitle = Globals.Factory.CreateRichTextContentControl(null, null, "294267740", "rtcStatementOfInterestAbilityCloseTitle", this);
             this.richTextContentControl170 = Globals.Factory.CreateRichTextContentControl(null, null, "1932309654", "richTextContentControl170", this);
+            this.rtcClauseOther = Globals.Factory.CreateRichTextContentControl(null, null, "4190007251", "rtcClauseOther", this);
+            this.bmBridegInPricingTable = Globals.Factory.CreateBookmark(null, null, "bmBridegInPricingTable", "bmBridegInPricingTable", this);
         }
         
         /// 
@@ -1844,6 +1854,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl170.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcClauseOther
+            // 
+            this.rtcClauseOther.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmBridegInPricingTable
+            // 
+            this.bmBridegInPricingTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1860,6 +1878,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmBridegInPricingTable.Dispose();
+            this.rtcClauseOther.Dispose();
             this.richTextContentControl170.Dispose();
             this.rtcStatementOfInterestAbilityCloseTitle.Dispose();
             this.rtcStatementOfInterestAbilityClose.Dispose();

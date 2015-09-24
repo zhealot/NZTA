@@ -15,12 +15,16 @@ namespace NZTA_Contract_Generator
 {
     public partial class ThisDocument
     {
-
         public Control apc;
         public Contract contract;
 
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
+            //turn off Paragraph Marks
+            if (Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll )
+            {
+                Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll = false;
+            }
 
             //See if we have saved state
             contract = Util.XML.loadFromXML();
@@ -71,6 +75,7 @@ namespace NZTA_Contract_Generator
             this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
             this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.rtcInteractiveTenderProcess.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcInteractiveTenderProcess_Entering);
+            this.bmContractPricingSchedule.SelectionChange += new Microsoft.Office.Tools.Word.SelectionEventHandler(this.bmContractPricingSchedule_SelectionChange);
             this.rtcAlternativeTenderYes.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAlternativeTenderYes_Entering);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
@@ -124,5 +129,15 @@ namespace NZTA_Contract_Generator
         {
 
         }
+
+        private void bmContractPricingSchedule_SelectionChange(object sender, SelectionEventArgs e)
+        {
+
+        }
+    }
+    public static class GlobalVar
+    {
+        //Date string format
+        public const string DateFormat = "dd MMMM yyyy";
     }
 }

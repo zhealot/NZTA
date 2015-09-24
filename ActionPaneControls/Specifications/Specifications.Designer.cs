@@ -37,6 +37,8 @@
             this.MultipleProjects_Yes = new System.Windows.Forms.RadioButton();
             this.MultipleProjects_No = new System.Windows.Forms.RadioButton();
             this.StateHighway = new System.Windows.Forms.CheckBox();
+            this.OtherSpecification = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.MultipleProjects_Yes);
             this.groupBox1.Controls.Add(this.MultipleProjects_No);
-            this.groupBox1.Location = new System.Drawing.Point(5, 144);
+            this.groupBox1.Location = new System.Drawing.Point(5, 191);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -142,19 +144,42 @@
             this.StateHighway.UseVisualStyleBackColor = true;
             this.StateHighway.CheckedChanged += new System.EventHandler(this.BridgesOther_CheckedChanged);
             // 
+            // OtherSpecification
+            // 
+            this.OtherSpecification.Location = new System.Drawing.Point(5, 144);
+            this.OtherSpecification.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.OtherSpecification.Name = "OtherSpecification";
+            this.OtherSpecification.Size = new System.Drawing.Size(212, 22);
+            this.OtherSpecification.TabIndex = 7;
+            this.OtherSpecification.Text = "Other";
+            this.OtherSpecification.UseVisualStyleBackColor = true;
+            this.OtherSpecification.CheckedChanged += new System.EventHandler(this.OtherSpecification_Changed);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(183, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(36, 21);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Specifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.OtherSpecification);
             this.Controls.Add(this.StateHighway);
             this.Controls.Add(this.BridgesOther);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Specifications";
-            this.Size = new System.Drawing.Size(241, 332);
+            this.Size = new System.Drawing.Size(241, 363);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -172,5 +197,7 @@
         private System.Windows.Forms.RadioButton MultipleProjects_Yes;
         private System.Windows.Forms.RadioButton MultipleProjects_No;
         private System.Windows.Forms.CheckBox StateHighway;
+        private System.Windows.Forms.CheckBox OtherSpecification;
+        private System.Windows.Forms.Button button1;
     }
 }

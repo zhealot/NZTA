@@ -40,6 +40,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             rg.Font.Hidden = chkd ? 0 : 1;
         }
 
+        private void OtherSpecification_Changed(object sender, EventArgs e)
+        {
+            contract.OtherSpecification = OtherSpecification.Checked;
+            var rg = Globals.ThisDocument.rtcClauseOther.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = OtherSpecification.Checked ? 0 : 1;
+            if (OtherSpecification.Checked)
+            {
+                rg.Select();
+            }
+        }
+
         private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)
         {
             contract.MultipleProjects_No = ((RadioButton)sender).Checked;
@@ -53,6 +65,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
         private void Project1_TextChanged(object sender, EventArgs e)
         {
             contract.Project1 = ((TextBox)sender).Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var tb = Globals.ThisDocument.bmBridegInPricingTable.Tables[1];
+            int hiden = tb.Rows[Globals.ThisDocument.bmBridegInPricingTable.Rows[1].Index].Range.Font.Hidden;
+            tb.Rows[Globals.ThisDocument.bmBridegInPricingTable.Rows[1].Index].Range.Font.Hidden = hiden == -1 ? 0 : 1;
         }
     }
 }

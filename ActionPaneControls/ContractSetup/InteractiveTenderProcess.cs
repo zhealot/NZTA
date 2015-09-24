@@ -102,7 +102,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             int rw = 1;
             if (Combined_Check.Checked)
             {
-                tb.Rows[rw].Cells[1].Range.Text = Combined_Date.Value.ToString("dd-MMMM-yyyy")+ Environment.NewLine + Combined_Time.Value.ToShortTimeString();
+                tb.Rows[rw].Cells[1].Range.Text = Combined_Date.Value.ToString(GlobalVar.DateFormat)+ Environment.NewLine + Combined_Time.Value.ToShortTimeString();
                 tb.Rows[rw].Cells[2].Range.Text = "Combined Meeting";
                 rw++;
             }
@@ -110,7 +110,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 if (kv.Key.Checked)
                 {
-                    tb.Rows[rw].Cells[1].Range.Text = kv.Value.ToString("dd-MMMM-yyyy");
+                    tb.Rows[rw].Cells[1].Range.Text = kv.Value.ToString(GlobalVar.DateFormat);
                     tb.Rows[rw].Cells[2].Range.Text = kv.Key.Name.Substring(0, 10) + " Meeting " + Util.ContentControls.IntegerToRoman((rw - (Combined_Check.Checked ? 1 : 0)));
                 }
                 rw++;

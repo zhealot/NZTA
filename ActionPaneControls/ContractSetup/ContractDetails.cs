@@ -377,7 +377,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void CloseDate_ValueChanged(object sender, EventArgs e)
         {
             contract.CloseDate = CloseDate.Value.ToString("O");
-            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMMM/yyyy"));
+            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString(GlobalVar.DateFormat));
         }
 
         private void Email_1_Validating(object sender, System.ComponentModel.CancelEventArgs e)

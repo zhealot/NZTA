@@ -77,7 +77,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
             contract.Evaluation_Start = Evaluation_Start.Value.ToString("O");
             contract.Evaluation_End = Evaluation_End.Value.ToString("O");
-            Util.ContentControls.setText("Evaluation_Period", "From " + Evaluation_Start.Value.ToString("dd/MMMM/yyyy") + " to " + Evaluation_End.Value.ToString("dd/MMMM/yyyy"));
+            Util.ContentControls.setText("Evaluation_Period", "From " + Evaluation_Start.Value.ToString(GlobalVar.DateFormat) + " to " + Evaluation_End.Value.ToString(GlobalVar.DateFormat));
         }
 
         private void Evaluation_Other_TextChanged(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
             contract.PrelettingFromDate = PrelettingFromDate.Value.ToString("O");
             contract.PrelettingEndDate = PrelettingEndDate.Value.ToString("O");
-            Util.ContentControls.setText("Preletting_Period", "From " + PrelettingFromDate.Value.ToString("dd/MMMM/yyyy") + " to " + PrelettingEndDate.Value.ToString("dd/MMMM/yyyy"));
+            Util.ContentControls.setText("Preletting_Period", "From " + PrelettingFromDate.Value.ToString(GlobalVar.DateFormat) + " to " + PrelettingEndDate.Value.ToString(GlobalVar.DateFormat));
         }
 
         private void PrelettingOther_TextChanged(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void TargetDate_ValueChanged(object sender, EventArgs e)
         {
             contract.TargetDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd-MMMM-yyyy"));
+            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString(GlobalVar.DateFormat));
         }
 
         private void Presentations_Changed(object sender, EventArgs e)
