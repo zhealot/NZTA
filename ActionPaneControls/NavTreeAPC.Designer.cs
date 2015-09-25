@@ -53,8 +53,10 @@
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Personnel", new System.Windows.Forms.TreeNode[] {
             treeNode13});
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Contract Pricing");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
-            treeNode15});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("PaymentSchedule");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Section C", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
@@ -105,14 +107,17 @@
             treeNode15.Name = "SectionC.ContractPricing";
             treeNode15.Tag = "Contract_Pricing";
             treeNode15.Text = "Contract Pricing";
-            treeNode16.Name = "SectionC";
-            treeNode16.Text = "Section C";
+            treeNode16.Name = "SectionC.PaymentSchedule";
+            treeNode16.Tag = "bmPaymentSchedule";
+            treeNode16.Text = "PaymentSchedule";
+            treeNode17.Name = "SectionC";
+            treeNode17.Text = "Section C";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode11,
             treeNode12,
             treeNode14,
-            treeNode16});
+            treeNode17});
             this.treeView1.Size = new System.Drawing.Size(268, 650);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

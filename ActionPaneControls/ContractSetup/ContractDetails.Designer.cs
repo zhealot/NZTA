@@ -117,10 +117,6 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CloseDate = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
-            this.help3 = new System.Windows.Forms.Button();
-            this.CostFluctuations_Check = new System.Windows.Forms.CheckBox();
-            this.lblCostIndex = new System.Windows.Forms.Label();
-            this.CostIndex = new System.Windows.Forms.NumericUpDown();
             this.StatementOfInterestAbilityClose_Chk = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,7 +126,6 @@
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).BeginInit();
             this.SuspendLayout();
             // 
             // Contract_Name
@@ -998,60 +993,6 @@
             this.label35.TabIndex = 96;
             this.label35.Text = "Tenders close on what day and date?";
             // 
-            // help3
-            // 
-            this.help3.Location = new System.Drawing.Point(138, 1548);
-            this.help3.Name = "help3";
-            this.help3.Size = new System.Drawing.Size(23, 23);
-            this.help3.TabIndex = 99;
-            this.help3.Text = "?";
-            this.help3.UseVisualStyleBackColor = true;
-            this.help3.Click += new System.EventHandler(this.help3_Click);
-            // 
-            // CostFluctuations_Check
-            // 
-            this.CostFluctuations_Check.AutoSize = true;
-            this.CostFluctuations_Check.Location = new System.Drawing.Point(4, 1552);
-            this.CostFluctuations_Check.Name = "CostFluctuations_Check";
-            this.CostFluctuations_Check.Size = new System.Drawing.Size(128, 17);
-            this.CostFluctuations_Check.TabIndex = 98;
-            this.CostFluctuations_Check.Text = "Pay Cost Fluctuations";
-            this.CostFluctuations_Check.UseVisualStyleBackColor = true;
-            this.CostFluctuations_Check.CheckedChanged += new System.EventHandler(this.CostFluctuations_Check_CheckedChanged);
-            // 
-            // lblCostIndex
-            // 
-            this.lblCostIndex.AutoSize = true;
-            this.lblCostIndex.Location = new System.Drawing.Point(181, 1553);
-            this.lblCostIndex.Name = "lblCostIndex";
-            this.lblCostIndex.Size = new System.Drawing.Size(39, 13);
-            this.lblCostIndex.TabIndex = 100;
-            this.lblCostIndex.Text = "Index: ";
-            // 
-            // CostIndex
-            // 
-            this.CostIndex.DecimalPlaces = 2;
-            this.CostIndex.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.CostIndex.Location = new System.Drawing.Point(226, 1551);
-            this.CostIndex.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CostIndex.Name = "CostIndex";
-            this.CostIndex.Size = new System.Drawing.Size(79, 20);
-            this.CostIndex.TabIndex = 101;
-            this.CostIndex.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.CostIndex.ValueChanged += new System.EventHandler(this.CostIndex_ValueChanged);
-            // 
             // StatementOfInterestAbilityClose_Chk
             // 
             this.StatementOfInterestAbilityClose_Chk.Location = new System.Drawing.Point(226, 1052);
@@ -1067,12 +1008,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.StatementOfInterestAbilityClose_Chk);
-            this.Controls.Add(this.CostIndex);
-            this.Controls.Add(this.lblCostIndex);
-            this.Controls.Add(this.help3);
             this.Controls.Add(this.CloseDate);
             this.Controls.Add(this.label35);
-            this.Controls.Add(this.CostFluctuations_Check);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
@@ -1108,7 +1045,6 @@
             this.groupBox8.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1205,10 +1141,6 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.DateTimePicker CloseDate;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button help3;
-        private System.Windows.Forms.CheckBox CostFluctuations_Check;
-        private System.Windows.Forms.Label lblCostIndex;
-        private System.Windows.Forms.NumericUpDown CostIndex;
         private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
 
     }

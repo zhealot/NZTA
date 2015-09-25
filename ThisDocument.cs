@@ -139,5 +139,9 @@ namespace NZTA_Contract_Generator
     {
         //Date string format
         public const string DateFormat = "dd MMMM yyyy";
+        /// <summary>
+        /// style name for Normal 
+        /// </summary>
+        public const string StyleNormal = "Normal";
     }
 }

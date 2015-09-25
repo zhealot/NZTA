@@ -24,7 +24,6 @@ namespace NZTA_Contract_Generator
             numHours = "48";
             elecNo = true;
             CostIndex = 0.80m;
-            CostFluctuations_Check = false;
             altTenderNo = true;
             clientSiteNo = true;
             StatementOfInterestAbilityClose_Chk = true; 
@@ -55,8 +54,14 @@ namespace NZTA_Contract_Generator
             //Liability and Insurances
             rbApprovedDefault = true;
 
+            //Payment Schedule
+            UnitRate_chk = true;
+            HourlyRate_chk = true;  
+            CostFluctuations_Check = false;
+
             //Supplier Selection Methods
             cbTrackRecord = false;
+
         }
 
         //Start of Contract Details
@@ -120,8 +125,6 @@ namespace NZTA_Contract_Generator
 
         public Boolean checkBox1 { get; set; }
 
-        public Boolean CostFluctuations_Check { get; set; }
-        public Decimal CostIndex { get; set; }
         // End of Contract Details
 
         //Start of Interactive tender Process
@@ -284,21 +287,11 @@ namespace NZTA_Contract_Generator
         //End of Tender Evaluation Procedure
 
         //Start of Payment Schedule
-        public String ConsultantsProjectQualityPlan { get; set; }
-        public String BaselineProgrramme { get; set; }
-        public String HealthSafetyManagementPlan { get; set; }
-        public String CommunityEngagementPlan { get; set; }
-        public String ActivityRisk { get; set; }
-        public String ProgrammeBusinessCase { get; set; }
-        public String TransportTrafficModel { get; set; }
-        public String IndicativeBusinessCase { get; set; }
-        public String TransportTrafficModel2 { get; set; }
-        public String DetailedBusinessCase { get; set; }
-        public String AssessmentReport { get; set; }
-        public String GeotechnicalInterpretiveReport { get; set; }
-        public String General { get; set; }
-        public String AssetOwnersManual { get; set; }
-        public String PropertyRequirements { get; set; }
+        public Boolean UnitRate_chk { get; set; }
+        public Boolean HourlyRate_chk { get; set; }
+        public Boolean CostFluctuations_Check { get; set; }
+        public Decimal CostIndex { get; set; }
+
         //End of Payment Schedule
 
         //Start of Liability and Insurance

@@ -25,19 +25,38 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
         {
             contract.BridgesOther = BridgesOther.Checked;
             contract.StateHighway = StateHighway.Checked;
+            bool BridgeChkd = BridgesOther.Checked;
+            bool HighwayChkd = StateHighway.Checked;
+            // hide/show clause in StandardSpecifications
             bool chkd = BridgesOther.Checked || StateHighway.Checked ? true : false;
             var rg = Globals.ThisDocument.rtcStandardSpecificationsClause.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = chkd ? 0 : 1;
+            Util.ContentControls.RangeHideShow(ref rg, BridgeChkd || HighwayChkd);
             Util.ContentControls.setText("Standard_Specifications", chkd ? "and Standard Specifications" : "");
-            chkd = BridgesOther.Checked;
+            //hide/show clauses in Page 16
             rg = Globals.ThisDocument.rtcClauseBridge.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = chkd ? 0 : 1;
-            chkd = StateHighway.Checked;
+            Util.ContentControls.RangeHideShow(ref rg, BridgeChkd);
             rg = Globals.ThisDocument.rtcClauseHighway.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = chkd ? 0 : 1;
+            Util.ContentControls.RangeHideShow(ref rg, HighwayChkd);
+
+            //hide/show row in contract pricing & payment tables
+            var bm8Bridges = Globals.ThisDocument.bm8BridegInPricingTable;
+            var bm9Highways = Globals.ThisDocument.bm9HighwayInPricingTable;
+            var bm10Geo = Globals.ThisDocument.bm10GeoInPricingTable;
+            try
+            {
+                for (int i = bm8Bridges.Rows[1].Index; i < bm9Highways.Rows[1].Index; i++)
+                {
+                    Globals.ThisDocument.bm8BridegInPricingTable.Tables[1].Rows[i].Range.Font.Hidden = BridgeChkd ? 0 : 1;
+                }
+                for (int i = bm9Highways.Rows[1].Index; i < bm10Geo.Rows[1].Index; i++)
+                {
+                    Globals.ThisDocument.bm9HighwayInPricingTable.Tables[1].Rows[i].Range.Font.Hidden = HighwayChkd ? 0 : 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
         }
 
         private void OtherSpecification_Changed(object sender, EventArgs e)
@@ -65,13 +84,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
         private void Project1_TextChanged(object sender, EventArgs e)
         {
             contract.Project1 = ((TextBox)sender).Text;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var tb = Globals.ThisDocument.bmBridegInPricingTable.Tables[1];
-            int hiden = tb.Rows[Globals.ThisDocument.bmBridegInPricingTable.Rows[1].Index].Range.Font.Hidden;
-            tb.Rows[Globals.ThisDocument.bmBridegInPricingTable.Rows[1].Index].Range.Font.Hidden = hiden == -1 ? 0 : 1;
         }
     }
 }

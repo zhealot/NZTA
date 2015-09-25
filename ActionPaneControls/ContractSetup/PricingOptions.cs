@@ -24,50 +24,34 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void PricingOption_Changed(object sender, EventArgs e)
         {
             bool BaseChkd = BaseEstimate_Check.Checked;
-            BaseEstimate_Check.Checked = BaseChkd;
             contract.BaseEstimate_Check = BaseChkd;
             contract.TargetPrice_Check = !BaseChkd;
             gbBaseEstimate.Enabled = BaseChkd;
             gbTargetPrice.Enabled = !BaseChkd;
 
-            var BaseRg = Globals.ThisDocument.rtcPricing_BaseEstimate.Range;
-            var TargetRg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
-            var BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
-            var UnitRateRg = Globals.ThisDocument.rtcUnitRateItems.Range;
-            var HourlyRateRg = Globals.ThisDocument.rtcHourlyRateItems.Range;
-            var CPSTargetPriceClause = Globals.ThisDocument.rtcContractPaymentScheduleTargetPriceClause.Range;
-            
-            object BaseStyle = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
-            object TargetStyle = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
-            object BLStyle = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
-            object RateStyle = BaseChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            //Base Estimate clause Title 
+            object style = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            var rg = Globals.ThisDocument.rtcPricing_BaseEstimateTitle.Range;
+            rg.set_Style(ref style);
+            Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
 
-            BaseRg.Collapse();
-            BaseRg.set_Style(ref BaseStyle);
-            TargetRg.Collapse();
-            TargetRg.set_Style(ref TargetStyle);
-            BLRg.Collapse();
-            BLRg.set_Style(ref BLStyle);
-            HourlyRateRg.Collapse();
-            HourlyRateRg.set_Style(ref RateStyle);
-            UnitRateRg.Collapse();
-            UnitRateRg.set_Style(ref RateStyle);
+            //Base Estimate clause Body 
+            rg = Globals.ThisDocument.rtcPricing_BaseEstimateBody.Range;
+            Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
 
-            BaseRg.SetRange(BaseRg.Start - 1, BaseRg.End + 2);
-            TargetRg.SetRange(TargetRg.Start - 1, TargetRg.End + 2);
-            BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
-            UnitRateRg.SetRange(UnitRateRg.Start - 1, UnitRateRg.End + 2);
-            HourlyRateRg.SetRange(HourlyRateRg.Start - 1, HourlyRateRg.End + 2);
-            CPSTargetPriceClause.SetRange(CPSTargetPriceClause.Start - 1, CPSTargetPriceClause.End + 2);
+            //Boork's Law clause 
+            rg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
+            style = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            rg.set_Style(ref style);
+            Util.ContentControls.RangeHideShow(ref rg, BrooksLaw_Check.Checked && BaseChkd);
 
-            BaseRg.Font.Hidden = BaseChkd ? 0 : 1;
-            TargetRg.Font.Hidden = BaseChkd ? 1 : 0;
-            BLRg.Font.Hidden = BrooksLaw_Check.Checked && BaseEstimate_Check.Checked ? 0 : 1;
-            UnitRateRg.Font.Hidden = BaseChkd ? 0 : 1;
-            HourlyRateRg.Font.Hidden = BaseChkd ? 0 : 1;
-            CPSTargetPriceClause.Font.Hidden = BaseChkd ? 1 : 0;
+            //Target Price clause 
+            rg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
+            style = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            rg.set_Style(ref style);
+            Util.ContentControls.RangeHideShow(ref rg, !BaseChkd);
 
-            var rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
+            rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = BaseChkd ? 1 : 0;
         }

@@ -181,6 +181,18 @@ namespace NZTA_Contract_Generator.Util
                 default: return i.ToString();
             }
         }
+
+        /// <summary> 
+        ///<param name="range">range to show/hide</param> 
+        ///<param name="show">true to show, false to hide</param> 
+        ///<param name="start">offset of start,default -1</param> 
+        ///<param name="end">offset of end,default +2</param> 
+        /// </summary> 
+        public static void RangeHideShow(ref Microsoft.Office.Interop.Word.Range range, bool show, int start = -1, int end = 2)
+        {
+            range.SetRange(range.Start + start, range.End + end);
+            range.Font.Hidden = show ? 0 : 1;
+        }
     }
 
 

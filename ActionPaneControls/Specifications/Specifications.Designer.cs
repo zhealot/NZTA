@@ -38,7 +38,6 @@
             this.MultipleProjects_No = new System.Windows.Forms.RadioButton();
             this.StateHighway = new System.Windows.Forms.CheckBox();
             this.OtherSpecification = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,22 +154,11 @@
             this.OtherSpecification.UseVisualStyleBackColor = true;
             this.OtherSpecification.CheckedChanged += new System.EventHandler(this.OtherSpecification_Changed);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(183, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 21);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Specifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.OtherSpecification);
             this.Controls.Add(this.StateHighway);
@@ -198,6 +186,5 @@
         private System.Windows.Forms.RadioButton MultipleProjects_No;
         private System.Windows.Forms.CheckBox StateHighway;
         private System.Windows.Forms.CheckBox OtherSpecification;
-        private System.Windows.Forms.Button button1;
     }
 }

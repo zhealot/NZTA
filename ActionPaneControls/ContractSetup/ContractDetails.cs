@@ -43,7 +43,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
-            CostFluctuations_Check_CheckedChanged(CostFluctuations_Check, null);
         }
         public string ContractName { get { return Contract_Name.Text; } set { Contract_Name.Text = value; } }        
         private void Contract_Name_TextChanged(object sender, EventArgs e)
@@ -394,43 +393,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void help3_Click(object sender, EventArgs e)
-        {
-            Util.Help.guidanceNote("Cost fluctuations will be paid where contract period is more than 12 months");
-        }
-
-        private void CostFluctuations_Check_CheckedChanged(object sender, EventArgs e)
-        {
-            bool blChkd = ((CheckBox)sender).Checked;
-            contract.CostFluctuations_Check = blChkd;
-            CostIndex.Enabled = blChkd;
-            lblCostIndex.Enabled = blChkd;
-            CostIndex.Enabled = blChkd; 
-            var rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
-            var rgYes = Globals.ThisDocument.rtcCostFluctuationsYes.Range;
-            object style = blChkd ? "Normal" : Globals.ThisDocument.rtcLevel3Style.Range.get_Style();
-            rgNo.Collapse();
-            rgNo.set_Style(ref style);
-            rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
-            rgNo.SetRange(rgNo.Start - 1, rgNo.End + 2);
-            rgNo.Font.Hidden = blChkd ? 1 : 0;
-            rgYes.SetRange(rgYes.Start - 1, rgYes.End + 2);
-            rgYes.Font.Hidden = blChkd ? 0 : 1;
-            if (blChkd)
-            { 
-                rgYes.Select();
-            }
-            else
-            {
-                rgNo.Select();
-            }
-        }
-
-        private void CostIndex_ValueChanged(object sender, EventArgs e)
-        {
-            Util.ContentControls.setText("CostIndex1", CostIndex.Value.ToString());
-            Util.ContentControls.setText("CostIndex2", (1 - CostIndex.Value).ToString());
-        }
 
         private void StatementOfInterestAbilityClose_Chk_CheckedChanged(object sender, EventArgs e)
         {
