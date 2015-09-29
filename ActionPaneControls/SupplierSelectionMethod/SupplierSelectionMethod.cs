@@ -30,6 +30,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 rbTP.Checked = true;
                 gbMethods.Enabled = false;
             }
+            if (contract.BaseEstimate_Check)
+            {
+                rbTP.Enabled = false;
+                rbBLO.Enabled = false;
+            }
             //### show/hide clauses base on cbTrackRecord status, there should be a better way to achieve this
             cbTrackRecord_CheckedChanged(null, null);
         }

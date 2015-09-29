@@ -38,9 +38,9 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.CGTAB = this.Factory.CreateRibbonTab();
             this.DisplayOptionsGroup = this.Factory.CreateRibbonGroup();
-            this.ExportGroup = this.Factory.CreateRibbonGroup();
             this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
             this.button1 = this.Factory.CreateRibbonButton();
+            this.ExportGroup = this.Factory.CreateRibbonGroup();
             this.ExportWordButton = this.Factory.CreateRibbonButton();
             this.ExportDraftButton = this.Factory.CreateRibbonButton();
             this.ExportFinalButton = this.Factory.CreateRibbonButton();
@@ -76,14 +76,6 @@
             this.DisplayOptionsGroup.Label = "Display Options";
             this.DisplayOptionsGroup.Name = "DisplayOptionsGroup";
             // 
-            // ExportGroup
-            // 
-            this.ExportGroup.Items.Add(this.ExportWordButton);
-            this.ExportGroup.Items.Add(this.ExportDraftButton);
-            this.ExportGroup.Items.Add(this.ExportFinalButton);
-            this.ExportGroup.Label = "Export";
-            this.ExportGroup.Name = "ExportGroup";
-            // 
             // toggleButton1
             // 
             this.toggleButton1.Checked = true;
@@ -102,6 +94,14 @@
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            // 
+            // ExportGroup
+            // 
+            this.ExportGroup.Items.Add(this.ExportWordButton);
+            this.ExportGroup.Items.Add(this.ExportDraftButton);
+            this.ExportGroup.Items.Add(this.ExportFinalButton);
+            this.ExportGroup.Label = "Export";
+            this.ExportGroup.Name = "ExportGroup";
             // 
             // ExportWordButton
             // 

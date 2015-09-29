@@ -407,6 +407,26 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bm8BridegInPricingTable;
         
+        internal Microsoft.Office.Tools.Word.Bookmark bm8BridegInPaymentTable;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bm9HighwayInPaymentTable;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bm10GeoInPaymentTable;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bm7TableListLevel1;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal9;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal10;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal11;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal12;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTotal;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal11_2;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -704,6 +724,16 @@ namespace NZTA_Contract_Generator {
             this.bm10GeoInPricingTable.BeginInit();
             this.bm9HighwayInPricingTable.BeginInit();
             this.bm8BridegInPricingTable.BeginInit();
+            this.bm8BridegInPaymentTable.BeginInit();
+            this.bm9HighwayInPaymentTable.BeginInit();
+            this.bm10GeoInPaymentTable.BeginInit();
+            this.bm7TableListLevel1.BeginInit();
+            this.rtcSubTotal9.BeginInit();
+            this.rtcSubTotal10.BeginInit();
+            this.rtcSubTotal11.BeginInit();
+            this.rtcSubTotal12.BeginInit();
+            this.rtcTotal.BeginInit();
+            this.rtcSubTotal11_2.BeginInit();
         }
         
         /// 
@@ -711,6 +741,16 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcSubTotal11_2.EndInit();
+            this.rtcTotal.EndInit();
+            this.rtcSubTotal12.EndInit();
+            this.rtcSubTotal11.EndInit();
+            this.rtcSubTotal10.EndInit();
+            this.rtcSubTotal9.EndInit();
+            this.bm7TableListLevel1.EndInit();
+            this.bm10GeoInPaymentTable.EndInit();
+            this.bm9HighwayInPaymentTable.EndInit();
+            this.bm8BridegInPaymentTable.EndInit();
             this.bm8BridegInPricingTable.EndInit();
             this.bm9HighwayInPricingTable.EndInit();
             this.bm10GeoInPricingTable.EndInit();
@@ -1109,6 +1149,16 @@ namespace NZTA_Contract_Generator {
             this.bm10GeoInPricingTable = Globals.Factory.CreateBookmark(null, null, "bm10GeoInPricingTable", "bm10GeoInPricingTable", this);
             this.bm9HighwayInPricingTable = Globals.Factory.CreateBookmark(null, null, "bm9HighwayInPricingTable", "bm9HighwayInPricingTable", this);
             this.bm8BridegInPricingTable = Globals.Factory.CreateBookmark(null, null, "bm8BridegInPricingTable", "bm8BridegInPricingTable", this);
+            this.bm8BridegInPaymentTable = Globals.Factory.CreateBookmark(null, null, "bm8BridegInPaymentTable", "bm8BridegInPaymentTable", this);
+            this.bm9HighwayInPaymentTable = Globals.Factory.CreateBookmark(null, null, "bm9HighwayInPaymentTable", "bm9HighwayInPaymentTable", this);
+            this.bm10GeoInPaymentTable = Globals.Factory.CreateBookmark(null, null, "bm10GeoInPaymentTable", "bm10GeoInPaymentTable", this);
+            this.bm7TableListLevel1 = Globals.Factory.CreateBookmark(null, null, "bm7TableListLevel1", "bm7TableListLevel1", this);
+            this.rtcSubTotal9 = Globals.Factory.CreateRichTextContentControl(null, null, "1312284731", "rtcSubTotal9", this);
+            this.rtcSubTotal10 = Globals.Factory.CreateRichTextContentControl(null, null, "3643442846", "rtcSubTotal10", this);
+            this.rtcSubTotal11 = Globals.Factory.CreateRichTextContentControl(null, null, "3223313383", "rtcSubTotal11", this);
+            this.rtcSubTotal12 = Globals.Factory.CreateRichTextContentControl(null, null, "2348515783", "rtcSubTotal12", this);
+            this.rtcTotal = Globals.Factory.CreateRichTextContentControl(null, null, "392007017", "rtcTotal", this);
+            this.rtcSubTotal11_2 = Globals.Factory.CreateRichTextContentControl(null, null, "3710277922", "rtcSubTotal11_2", this);
         }
         
         /// 
@@ -1898,6 +1948,46 @@ namespace NZTA_Contract_Generator {
             // 
             this.bm8BridegInPricingTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // bm8BridegInPaymentTable
+            // 
+            this.bm8BridegInPaymentTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bm9HighwayInPaymentTable
+            // 
+            this.bm9HighwayInPaymentTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bm10GeoInPaymentTable
+            // 
+            this.bm10GeoInPaymentTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bm7TableListLevel1
+            // 
+            this.bm7TableListLevel1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSubTotal9
+            // 
+            this.rtcSubTotal9.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSubTotal10
+            // 
+            this.rtcSubTotal10.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSubTotal11
+            // 
+            this.rtcSubTotal11.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSubTotal12
+            // 
+            this.rtcSubTotal12.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcTotal
+            // 
+            this.rtcTotal.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSubTotal11_2
+            // 
+            this.rtcSubTotal11_2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -1914,6 +2004,16 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcSubTotal11_2.Dispose();
+            this.rtcTotal.Dispose();
+            this.rtcSubTotal12.Dispose();
+            this.rtcSubTotal11.Dispose();
+            this.rtcSubTotal10.Dispose();
+            this.rtcSubTotal9.Dispose();
+            this.bm7TableListLevel1.Dispose();
+            this.bm10GeoInPaymentTable.Dispose();
+            this.bm9HighwayInPaymentTable.Dispose();
+            this.bm8BridegInPaymentTable.Dispose();
             this.bm8BridegInPricingTable.Dispose();
             this.bm9HighwayInPricingTable.Dispose();
             this.bm10GeoInPricingTable.Dispose();

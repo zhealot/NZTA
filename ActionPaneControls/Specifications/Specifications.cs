@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;   
 
 namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
 {
@@ -32,7 +33,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             var rg = Globals.ThisDocument.rtcStandardSpecificationsClause.Range;
             Util.ContentControls.RangeHideShow(ref rg, BridgeChkd || HighwayChkd);
             Util.ContentControls.setText("Standard_Specifications", chkd ? "and Standard Specifications" : "");
-            //hide/show clauses in Page 16
+            //hide/show clauses in Contract Agreement Form 4.1
             rg = Globals.ThisDocument.rtcClauseBridge.Range;
             Util.ContentControls.RangeHideShow(ref rg, BridgeChkd);
             rg = Globals.ThisDocument.rtcClauseHighway.Range;
@@ -44,19 +45,53 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             var bm10Geo = Globals.ThisDocument.bm10GeoInPricingTable;
             try
             {
+                bm8Bridges.Rows[1].Cells[1].Range.SetListLevel(BridgeChkd ? (short)1 : (short)2);
+                bm9Highways.Rows[1].Cells[1].Range.SetListLevel(HighwayChkd ? (short)1 : (short)2);
                 for (int i = bm8Bridges.Rows[1].Index; i < bm9Highways.Rows[1].Index; i++)
                 {
-                    Globals.ThisDocument.bm8BridegInPricingTable.Tables[1].Rows[i].Range.Font.Hidden = BridgeChkd ? 0 : 1;
+                    bm8Bridges.Tables[1].Rows[i].Range.Font.Hidden = BridgeChkd ? 0 : 1;
                 }
                 for (int i = bm9Highways.Rows[1].Index; i < bm10Geo.Rows[1].Index; i++)
                 {
-                    Globals.ThisDocument.bm9HighwayInPricingTable.Tables[1].Rows[i].Range.Font.Hidden = HighwayChkd ? 0 : 1;
+                    bm9Highways.Tables[1].Rows[i].Range.Font.Hidden = HighwayChkd ? 0 : 1;
                 }
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.Message);
             }
+
+
+            bm8Bridges = Globals.ThisDocument.bm8BridegInPaymentTable;
+            bm9Highways = Globals.ThisDocument.bm9HighwayInPaymentTable;
+            bm10Geo = Globals.ThisDocument.bm10GeoInPaymentTable;
+            try
+            {
+                bm8Bridges.Rows[1].Cells[1].Range.SetListLevel(BridgeChkd ? (short)1 : (short)2);
+                bm9Highways.Rows[1].Cells[1].Range.SetListLevel(HighwayChkd ? (short)1 : (short)2);
+                for (int i = bm8Bridges.Rows[1].Index; i < bm9Highways.Rows[1].Index; i++)
+                {
+                    bm8Bridges.Tables[1].Rows[i].Range.Font.Hidden = BridgeChkd ? 0 : 1;
+                }
+                for (int i = bm9Highways.Rows[1].Index; i < bm10Geo.Rows[1].Index; i++)
+                {
+                    bm9Highways.Tables[1].Rows[i].Range.Font.Hidden = HighwayChkd ? 0 : 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            //update subtaol and total number
+            int sub = 9;
+            sub = BridgeChkd ? sub : sub - 1;
+            sub = HighwayChkd ? sub : sub - 1;
+            Globals.ThisDocument.rtcSubTotal9.Range.Text = sub++.ToString();
+            Globals.ThisDocument.rtcSubTotal10.Range.Text = sub++.ToString();
+            Globals.ThisDocument.rtcSubTotal11.Range.Text = sub.ToString();
+            Globals.ThisDocument.rtcSubTotal11_2.Range.Text = sub++.ToString();
+            Globals.ThisDocument.rtcSubTotal12.Range.Text = sub.ToString();
+            Globals.ThisDocument.rtcTotal.Range.Text = sub.ToString();
         }
 
         private void OtherSpecification_Changed(object sender, EventArgs e)
