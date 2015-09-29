@@ -1,0 +1,12 @@
+1> Contract Details: added a checkbox to hide/show Statement of Interest Ability clause
+2> moved Interview City and Interview Notice from Tender Evaluation Procedure pance to Tender Submission Programme pane
+3> Tender Submission Programme: change date format to dd MMMM yyyy
+4> Specification: 	added a checkbox for 'Other clause'
+			hide/show rows in Contrcat Pricing Schedule and Contract Payment Schedule talbe, according to selections made in pane
+5> Pricing Options pane:	hide/show clause according to Base Estimeat or Target Price selected.
+				Brooks' Law made unselectable when Target Price selected.
+				hide/show Unit Rate Items and Hourly Rate Items clauses, according to Pricing option selected.
+
+				
+				
+			
