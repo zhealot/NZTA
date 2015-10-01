@@ -73,10 +73,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (Evaluation_Start.Value > Evaluation_End.Value)
             {
                 Util.Help.guidanceNote("End date should not be earlier than start date");
-                return;
             }
-            contract.Evaluation_Start = Evaluation_Start.Value.ToString("O");
-            contract.Evaluation_End = Evaluation_End.Value.ToString("O");
+            contract.Evaluation_End = sender == Evaluation_End ? Evaluation_End.Value.ToString("O") : contract.Evaluation_End;
+            contract.Evaluation_Start = sender == Evaluation_Start ? Evaluation_Start.Value.ToString("O") : contract.Evaluation_Start;
             Util.ContentControls.setText("Evaluation_Period", "From " + Evaluation_Start.Value.ToString(GlobalVar.DateFormat) + " to " + Evaluation_End.Value.ToString(GlobalVar.DateFormat));
         }
 
@@ -91,10 +90,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (PrelettingFromDate.Value > PrelettingEndDate.Value)
             {
                 Util.Help.guidanceNote("End date should not be earlier than start date");
-                return;
             }
-            contract.PrelettingFromDate = PrelettingFromDate.Value.ToString("O");
-            contract.PrelettingEndDate = PrelettingEndDate.Value.ToString("O");
+            contract.PrelettingFromDate = sender == PrelettingFromDate ? PrelettingFromDate.Value.ToString("O") : contract.PrelettingFromDate;
+            contract.PrelettingEndDate = sender == PrelettingEndDate ? PrelettingEndDate.Value.ToString("O") : contract.PrelettingEndDate;
             Util.ContentControls.setText("Preletting_Period", "From " + PrelettingFromDate.Value.ToString(GlobalVar.DateFormat) + " to " + PrelettingEndDate.Value.ToString(GlobalVar.DateFormat));
         }
 

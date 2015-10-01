@@ -108,6 +108,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("Project_Page", "");
             }
+            Globals.ThisDocument.bmProjectRow.Rows[1].Range.Font.Hidden = Project_Check.Checked ? 0 : 1;
         }
 
         private void NonPrice_Page_TextChanged(object sender, EventArgs e)
@@ -170,7 +171,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("Outline_Page", "");
             }
-
+            Globals.ThisDocument.bmOutlineRow.Rows[1].Range.Font.Hidden = Outline_Check.Checked ? 0 : 1;
         }
 
         private void CV_Page_TextChanged(object sender, EventArgs e)
@@ -195,6 +196,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("CV_Page", "");
             }
+            Globals.ThisDocument.bmCVRow.Rows[1].Range.Font.Hidden = CV_Check.Checked ? 0 : 1;
         }
 
         private void TimeResource_Page_TextChanged(object sender, EventArgs e)
@@ -218,6 +220,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("TimeResource", "");
             }
+            Globals.ThisDocument.bmTimeResourceRow.Rows[1].Range.Font.Hidden = TimeResource_Check.Checked ? 0 : 1;
         }
     }
 }

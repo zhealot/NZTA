@@ -117,8 +117,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl61;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl TenderFormatAppend;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl63;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl64;
@@ -427,6 +425,16 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSubTotal11_2;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl TenderFormatAppend;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmOutlineRow;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmProjectRow;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmCVRow;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmTimeResourceRow;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -579,7 +587,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl59.BeginInit();
             this.richTextContentControl60.BeginInit();
             this.richTextContentControl61.BeginInit();
-            this.TenderFormatAppend.BeginInit();
             this.richTextContentControl63.BeginInit();
             this.richTextContentControl64.BeginInit();
             this.richTextContentControl65.BeginInit();
@@ -734,6 +741,11 @@ namespace NZTA_Contract_Generator {
             this.rtcSubTotal12.BeginInit();
             this.rtcTotal.BeginInit();
             this.rtcSubTotal11_2.BeginInit();
+            this.TenderFormatAppend.BeginInit();
+            this.bmOutlineRow.BeginInit();
+            this.bmProjectRow.BeginInit();
+            this.bmCVRow.BeginInit();
+            this.bmTimeResourceRow.BeginInit();
         }
         
         /// 
@@ -741,6 +753,11 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmTimeResourceRow.EndInit();
+            this.bmCVRow.EndInit();
+            this.bmProjectRow.EndInit();
+            this.bmOutlineRow.EndInit();
+            this.TenderFormatAppend.EndInit();
             this.rtcSubTotal11_2.EndInit();
             this.rtcTotal.EndInit();
             this.rtcSubTotal12.EndInit();
@@ -895,7 +912,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl65.EndInit();
             this.richTextContentControl64.EndInit();
             this.richTextContentControl63.EndInit();
-            this.TenderFormatAppend.EndInit();
             this.richTextContentControl61.EndInit();
             this.richTextContentControl60.EndInit();
             this.richTextContentControl59.EndInit();
@@ -1004,7 +1020,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl59 = Globals.Factory.CreateRichTextContentControl(null, null, "3909930918", "richTextContentControl59", this);
             this.richTextContentControl60 = Globals.Factory.CreateRichTextContentControl(null, null, "2141539433", "richTextContentControl60", this);
             this.richTextContentControl61 = Globals.Factory.CreateRichTextContentControl(null, null, "1853837190", "richTextContentControl61", this);
-            this.TenderFormatAppend = Globals.Factory.CreateRichTextContentControl(null, null, "239370087", "TenderFormatAppend", this);
             this.richTextContentControl63 = Globals.Factory.CreateRichTextContentControl(null, null, "1366956474", "richTextContentControl63", this);
             this.richTextContentControl64 = Globals.Factory.CreateRichTextContentControl(null, null, "840744964", "richTextContentControl64", this);
             this.richTextContentControl65 = Globals.Factory.CreateRichTextContentControl(null, null, "1312837409", "richTextContentControl65", this);
@@ -1159,6 +1174,11 @@ namespace NZTA_Contract_Generator {
             this.rtcSubTotal12 = Globals.Factory.CreateRichTextContentControl(null, null, "2348515783", "rtcSubTotal12", this);
             this.rtcTotal = Globals.Factory.CreateRichTextContentControl(null, null, "392007017", "rtcTotal", this);
             this.rtcSubTotal11_2 = Globals.Factory.CreateRichTextContentControl(null, null, "3710277922", "rtcSubTotal11_2", this);
+            this.TenderFormatAppend = Globals.Factory.CreateRichTextContentControl(null, null, "2864926682", "TenderFormatAppend", this);
+            this.bmOutlineRow = Globals.Factory.CreateBookmark(null, null, "bmOutlineRow", "bmOutlineRow", this);
+            this.bmProjectRow = Globals.Factory.CreateBookmark(null, null, "bmProjectRow", "bmProjectRow", this);
+            this.bmCVRow = Globals.Factory.CreateBookmark(null, null, "bmCVRow", "bmCVRow", this);
+            this.bmTimeResourceRow = Globals.Factory.CreateBookmark(null, null, "bmTimeResourceRow", "bmTimeResourceRow", this);
         }
         
         /// 
@@ -1367,10 +1387,6 @@ namespace NZTA_Contract_Generator {
             // richTextContentControl61
             // 
             this.richTextContentControl61.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // TenderFormatAppend
-            // 
-            this.TenderFormatAppend.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl63
             // 
@@ -1988,6 +2004,26 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcSubTotal11_2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // TenderFormatAppend
+            // 
+            this.TenderFormatAppend.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmOutlineRow
+            // 
+            this.bmOutlineRow.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmProjectRow
+            // 
+            this.bmProjectRow.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmCVRow
+            // 
+            this.bmCVRow.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmTimeResourceRow
+            // 
+            this.bmTimeResourceRow.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2004,6 +2040,11 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmTimeResourceRow.Dispose();
+            this.bmCVRow.Dispose();
+            this.bmProjectRow.Dispose();
+            this.bmOutlineRow.Dispose();
+            this.TenderFormatAppend.Dispose();
             this.rtcSubTotal11_2.Dispose();
             this.rtcTotal.Dispose();
             this.rtcSubTotal12.Dispose();
@@ -2158,7 +2199,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl65.Dispose();
             this.richTextContentControl64.Dispose();
             this.richTextContentControl63.Dispose();
-            this.TenderFormatAppend.Dispose();
             this.richTextContentControl61.Dispose();
             this.richTextContentControl60.Dispose();
             this.richTextContentControl59.Dispose();

@@ -20,7 +20,7 @@
     <PublishUrl>C:\Users\Tao\Box Sync\2. Staff Related Activities\Tao%27s\Source\Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.80</ApplicationVersion>
+    <ApplicationVersion>1.0.0.81</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -369,7 +369,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="NZTA Contract.dotx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]NZTA Contract.dotx&quot;" />
         <Host Name="Word Document" Path=".\NZTA Contract.dotx" GeneratedCodeNamespace="NZTA_Contract_Generator" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="CB5223AF740126E546F3BC66D68EAB616EAF680C" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" PublishedHash="22628AB46572BA4EBCCDF2D8BE1AEFC080290363" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

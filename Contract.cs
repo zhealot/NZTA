@@ -47,6 +47,12 @@ namespace NZTA_Contract_Generator
             PresentationsRequired_No = true;
             PrelettingMeetings_No = true;
             
+            //Tender Format 
+            Outline_Check = true;
+            CV_Check = true;
+            TimeResource_Check = true;
+            Project_Check = true;
+
             //Specifications
             BridgesOther = true;
             StateHighway = true;
