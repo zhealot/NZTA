@@ -1,3 +1,7 @@
+
+02-Oct-15 11:42 AM	set default values in Contract.cs
+			prove: Ribbon->Remove Guidance function
+
 30-Sep-15 01:06 PM	bug fix: date time picker's value not set when re-load a pane
 			add: hide/show rows in tender format form according to
 			checkbox status

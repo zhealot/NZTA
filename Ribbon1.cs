@@ -110,19 +110,15 @@ namespace NZTA_Contract_Generator
         private void button1_Click(object sender, RibbonControlEventArgs e)
         //remove guidance notes, which have hightlight color as format
         {
-            var doc = Globals.ThisDocument;
-            object start = doc.Characters.First.Start;
-            object end = doc.Characters.Last.End;
-            var rg = doc.Range(ref start, ref start);
+            Globals.ThisDocument.Application.ScreenUpdating = false;
+
+            var rg = Globals.ThisDocument.Paragraphs.First.Range;
             rg.Find.ClearFormatting();
             rg.Find.Forward = true;
-            //object GuidanceStyle = doc.Styles["NZTA Body Text (Yellow Highlight)"];
-            //rg.Find.set_Style(ref GuidanceStyle);
             rg.Find.Highlight = 1;
             rg.Find.Text = "";
             rg.Find.Replacement.Text = "";
-            rg.Find.Forward = true;
-            rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindStop;
+            rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindContinue;
             rg.Find.Format = true;
             rg.Find.MatchCase = false;
             rg.Find.MatchWholeWord = false;
@@ -132,13 +128,25 @@ namespace NZTA_Contract_Generator
             rg.Find.MatchAllWordForms = false;
             rg.Find.Execute();
 
-            int s = 0, d = 0;
-            while (rg.Find.Found && !(rg.Start==s && rg.End==d))
+            int first = 0;
+            if (rg.Find.Found) { first = rg.Start; }
+            while (rg.Find.Found && rg.Start >= first)
             {
-                s = rg.Start; d = rg.End;
-                rg.Delete();
+                first = rg.Start;
+                try
+                {
+                    rg.Delete();
+                    rg.SetRange(rg.Start + 1, rg.Start + 1);
+                }
+                catch(Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("####" + ex.Message);
+                }
+                int info=rg.Information[Microsoft.Office.Interop.Word.WdInformation.wdActiveEndPageNumber];
+                System.Diagnostics.Debug.WriteLine(info.ToString());
                 rg.Find.Execute();
             }
+            Globals.ThisDocument.Application.ScreenUpdating = true;
         }
     }
 }

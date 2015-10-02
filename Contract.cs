@@ -19,13 +19,14 @@ namespace NZTA_Contract_Generator
         public Contract()
         {
             //Contract Details
-            geoNo = true;
+            geoYes = true;
+            provisionalSum = true;
             numDays = "eight";
             numHours = "48";
             elecNo = true;
             CostIndex = 0.80m;
-            altTenderNo = true;
-            clientSiteNo = true;
+            altTenderYes = true;
+            clientSiteYes = true;
             StatementOfInterestAbilityClose_Chk = true; 
 
             //Tender Evaluation Procedure
@@ -38,14 +39,14 @@ namespace NZTA_Contract_Generator
             TargetPrice_Check = false;
 
             //Interactive Tender Process
-            Interactive_No = true;
+            Interactive_Yes = true;
             InterviewNotice = 1;
             CommercialInConfidence_Check = true;
 
             //Tender Submission Programme
-            anotherMeansNo = true;
-            PresentationsRequired_No = true;
-            PrelettingMeetings_No = true;
+            anotherMeansYes = true;
+            PresentationsRequired_Yes = true;
+            PrelettingMeetings_Yes = true;
             
             //Tender Format 
             Outline_Check = true;
@@ -56,6 +57,7 @@ namespace NZTA_Contract_Generator
             //Specifications
             BridgesOther = true;
             StateHighway = true;
+            MultipleProjects_No = true; 
 
             //Liability and Insurances
             rbApprovedDefault = true;
@@ -63,11 +65,10 @@ namespace NZTA_Contract_Generator
             //Payment Schedule
             UnitRate_chk = true;
             HourlyRate_chk = true;  
-            CostFluctuations_Check = false;
+            CostFluctuations_Check = true;
 
             //Supplier Selection Methods
             cbTrackRecord = false;
-
         }
 
         //Start of Contract Details

@@ -46,9 +46,11 @@ namespace NZTA_Contract_Generator
             //We want nav tree then edit form
             this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;
             //show task pane
-            Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = true;
+            this.Application.CommandBars["Task Pane"].Visible = true;
             //update fields
-            Globals.ThisDocument.Fields.Update();
+            this.Fields.Update();
+            //show Custom Ribbon
+            Globals.Ribbons.Ribbon1.tab1.RibbonUI.ActivateTab("CGTAB");
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)
