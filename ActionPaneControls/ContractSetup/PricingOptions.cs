@@ -41,16 +41,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Boork's Law clause 
             rg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
-            style = BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            style = BaseChkd && BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BrooksLaw_Check.Checked && BaseChkd);
 
             //Target Price clause 
             rg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
-            style = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            style = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, !BaseChkd);
 
+            //Target Price Tender Form
             rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = BaseChkd ? 1 : 0;

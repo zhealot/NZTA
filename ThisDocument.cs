@@ -50,7 +50,7 @@ namespace NZTA_Contract_Generator
             //update fields
             this.Fields.Update();
             //show Custom Ribbon
-            Globals.Ribbons.Ribbon1.tab1.RibbonUI.ActivateTab("CGTAB");
+            //Globals.Ribbons.Ribbon1.tab1.RibbonUI.ActivateTab("CGTAB");
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)
@@ -73,29 +73,12 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
-            this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
-            this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
-            this.rtcInteractiveTenderProcess.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcInteractiveTenderProcess_Entering);
-            this.bmContractPricingSchedule.SelectionChange += new Microsoft.Office.Tools.Word.SelectionEventHandler(this.bmContractPricingSchedule_SelectionChange);
-            this.rtcAlternativeTenderYes.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAlternativeTenderYes_Entering);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
         }
 
         #endregion
-
-
-        private void richTextContentControl43_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void richTextContentControl47_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
 
         private void rtcGeoTestingSum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
@@ -107,35 +90,6 @@ namespace NZTA_Contract_Generator
             NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = NZTA_Contract_Generator.Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
         }
 
-        private void richTextContentControl1_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-            
-        }
-
-        private void rtcGeoTestingSum_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void rtcAdditionalServicesSchedule_Sum_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void rtcInteractiveTenderProcess_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void rtcAlternativeTenderYes_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void bmContractPricingSchedule_SelectionChange(object sender, SelectionEventArgs e)
-        {
-
-        }
     }
     public static class GlobalVar
     {

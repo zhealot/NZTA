@@ -231,10 +231,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicInformation;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BrooksLaw;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTrackRecordClause2;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTrackRecordClause1;
@@ -434,6 +430,10 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.Bookmark bmCVRow;
         
         internal Microsoft.Office.Tools.Word.Bookmark bmTimeResourceRow;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_BrooksLaw;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -644,8 +644,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCPS_ASS_Sum.BeginInit();
             this.richTextContentControl145.BeginInit();
             this.rtcElectronicInformation.BeginInit();
-            this.rtcPricing_BrooksLaw.BeginInit();
-            this.rtcPricing_TargetPrice.BeginInit();
             this.rtcTrackRecordClause2.BeginInit();
             this.rtcTrackRecordClause1.BeginInit();
             this.rtcGeotechnicalSection.BeginInit();
@@ -746,6 +744,8 @@ namespace NZTA_Contract_Generator {
             this.bmProjectRow.BeginInit();
             this.bmCVRow.BeginInit();
             this.bmTimeResourceRow.BeginInit();
+            this.rtcPricing_BrooksLaw.BeginInit();
+            this.rtcPricing_TargetPrice.BeginInit();
         }
         
         /// 
@@ -753,6 +753,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcPricing_TargetPrice.EndInit();
+            this.rtcPricing_BrooksLaw.EndInit();
             this.bmTimeResourceRow.EndInit();
             this.bmCVRow.EndInit();
             this.bmProjectRow.EndInit();
@@ -853,8 +855,6 @@ namespace NZTA_Contract_Generator {
             this.rtcGeotechnicalSection.EndInit();
             this.rtcTrackRecordClause1.EndInit();
             this.rtcTrackRecordClause2.EndInit();
-            this.rtcPricing_TargetPrice.EndInit();
-            this.rtcPricing_BrooksLaw.EndInit();
             this.rtcElectronicInformation.EndInit();
             this.richTextContentControl145.EndInit();
             this.rtcCPS_ASS_Sum.EndInit();
@@ -1077,8 +1077,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCPS_ASS_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "1493913556", "rtcCPS_ASS_Sum", this);
             this.richTextContentControl145 = Globals.Factory.CreateRichTextContentControl(null, null, "3969055229", "richTextContentControl145", this);
             this.rtcElectronicInformation = Globals.Factory.CreateRichTextContentControl(null, null, "88591614", "rtcElectronicInformation", this);
-            this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
-            this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "2674831161", "rtcPricing_TargetPrice", this);
             this.rtcTrackRecordClause2 = Globals.Factory.CreateRichTextContentControl(null, null, "3391591495", "rtcTrackRecordClause2", this);
             this.rtcTrackRecordClause1 = Globals.Factory.CreateRichTextContentControl(null, null, "1776293451", "rtcTrackRecordClause1", this);
             this.rtcGeotechnicalSection = Globals.Factory.CreateRichTextContentControl(null, null, "1697731321", "rtcGeotechnicalSection", this);
@@ -1179,6 +1177,8 @@ namespace NZTA_Contract_Generator {
             this.bmProjectRow = Globals.Factory.CreateBookmark(null, null, "bmProjectRow", "bmProjectRow", this);
             this.bmCVRow = Globals.Factory.CreateBookmark(null, null, "bmCVRow", "bmCVRow", this);
             this.bmTimeResourceRow = Globals.Factory.CreateBookmark(null, null, "bmTimeResourceRow", "bmTimeResourceRow", this);
+            this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
+            this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "769362992", "rtcPricing_TargetPrice", this);
         }
         
         /// 
@@ -1616,14 +1616,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcElectronicInformation.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // rtcPricing_BrooksLaw
-            // 
-            this.rtcPricing_BrooksLaw.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcPricing_TargetPrice
-            // 
-            this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // rtcTrackRecordClause2
             // 
             this.rtcTrackRecordClause2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2024,6 +2016,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmTimeResourceRow.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcPricing_BrooksLaw
+            // 
+            this.rtcPricing_BrooksLaw.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcPricing_TargetPrice
+            // 
+            this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2040,6 +2040,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcPricing_TargetPrice.Dispose();
+            this.rtcPricing_BrooksLaw.Dispose();
             this.bmTimeResourceRow.Dispose();
             this.bmCVRow.Dispose();
             this.bmProjectRow.Dispose();
@@ -2140,8 +2142,6 @@ namespace NZTA_Contract_Generator {
             this.rtcGeotechnicalSection.Dispose();
             this.rtcTrackRecordClause1.Dispose();
             this.rtcTrackRecordClause2.Dispose();
-            this.rtcPricing_TargetPrice.Dispose();
-            this.rtcPricing_BrooksLaw.Dispose();
             this.rtcElectronicInformation.Dispose();
             this.richTextContentControl145.Dispose();
             this.rtcCPS_ASS_Sum.Dispose();
