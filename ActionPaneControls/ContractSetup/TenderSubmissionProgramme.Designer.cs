@@ -114,7 +114,7 @@
             this.help1.Location = new System.Drawing.Point(188, 15);
             this.help1.Name = "help1";
             this.help1.Size = new System.Drawing.Size(23, 23);
-            this.help1.TabIndex = 13;
+            this.help1.TabIndex = 0;
             this.help1.Text = "?";
             this.help1.UseVisualStyleBackColor = true;
             this.help1.Click += new System.EventHandler(this.help1_Click);
@@ -125,7 +125,7 @@
             this.PresentationsRequired_No.Location = new System.Drawing.Point(9, 36);
             this.PresentationsRequired_No.Name = "PresentationsRequired_No";
             this.PresentationsRequired_No.Size = new System.Drawing.Size(39, 17);
-            this.PresentationsRequired_No.TabIndex = 42;
+            this.PresentationsRequired_No.TabIndex = 1;
             this.PresentationsRequired_No.TabStop = true;
             this.PresentationsRequired_No.Text = "No";
             this.PresentationsRequired_No.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.PresentationsRequired_Yes.Location = new System.Drawing.Point(121, 36);
             this.PresentationsRequired_Yes.Name = "PresentationsRequired_Yes";
             this.PresentationsRequired_Yes.Size = new System.Drawing.Size(43, 17);
-            this.PresentationsRequired_Yes.TabIndex = 41;
+            this.PresentationsRequired_Yes.TabIndex = 2;
             this.PresentationsRequired_Yes.TabStop = true;
             this.PresentationsRequired_Yes.Text = "Yes";
             this.PresentationsRequired_Yes.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.Presentation_City.Location = new System.Drawing.Point(138, 213);
             this.Presentation_City.Name = "Presentation_City";
             this.Presentation_City.Size = new System.Drawing.Size(136, 20);
-            this.Presentation_City.TabIndex = 50;
+            this.Presentation_City.TabIndex = 8;
             this.Presentation_City.TextChanged += new System.EventHandler(this.Presentation_City_TextChanged);
             // 
             // Presentation_Box
@@ -192,7 +192,7 @@
             this.Presentation_Box.Location = new System.Drawing.Point(138, 187);
             this.Presentation_Box.Name = "Presentation_Box";
             this.Presentation_Box.Size = new System.Drawing.Size(136, 20);
-            this.Presentation_Box.TabIndex = 49;
+            this.Presentation_Box.TabIndex = 7;
             this.Presentation_Box.TextChanged += new System.EventHandler(this.Presentation_Box_TextChanged);
             // 
             // Presentation_Street
@@ -200,7 +200,7 @@
             this.Presentation_Street.Location = new System.Drawing.Point(138, 161);
             this.Presentation_Street.Name = "Presentation_Street";
             this.Presentation_Street.Size = new System.Drawing.Size(136, 20);
-            this.Presentation_Street.TabIndex = 48;
+            this.Presentation_Street.TabIndex = 6;
             this.Presentation_Street.TextChanged += new System.EventHandler(this.Presentation_Street_TextChanged);
             // 
             // Presentation_Level
@@ -208,7 +208,7 @@
             this.Presentation_Level.Location = new System.Drawing.Point(138, 135);
             this.Presentation_Level.Name = "Presentation_Level";
             this.Presentation_Level.Size = new System.Drawing.Size(136, 20);
-            this.Presentation_Level.TabIndex = 47;
+            this.Presentation_Level.TabIndex = 5;
             this.Presentation_Level.TextChanged += new System.EventHandler(this.Presentation_Level_TextChanged);
             // 
             // Presentation_Company
@@ -216,7 +216,7 @@
             this.Presentation_Company.Location = new System.Drawing.Point(138, 109);
             this.Presentation_Company.Name = "Presentation_Company";
             this.Presentation_Company.Size = new System.Drawing.Size(136, 20);
-            this.Presentation_Company.TabIndex = 46;
+            this.Presentation_Company.TabIndex = 4;
             this.Presentation_Company.TextChanged += new System.EventHandler(this.Presentation_Company_TextChanged);
             // 
             // label8
@@ -243,7 +243,7 @@
             this.Presentation_Address.Location = new System.Drawing.Point(121, 82);
             this.Presentation_Address.Name = "Presentation_Address";
             this.Presentation_Address.Size = new System.Drawing.Size(152, 21);
-            this.Presentation_Address.TabIndex = 43;
+            this.Presentation_Address.TabIndex = 3;
             this.Presentation_Address.SelectedIndexChanged += new System.EventHandler(this.Presentation_Address_SelectedIndexChanged);
             // 
             // label4
@@ -278,7 +278,7 @@
             this.Evaluation_Start.Location = new System.Drawing.Point(3, 603);
             this.Evaluation_Start.Name = "Evaluation_Start";
             this.Evaluation_Start.Size = new System.Drawing.Size(200, 20);
-            this.Evaluation_Start.TabIndex = 58;
+            this.Evaluation_Start.TabIndex = 4;
             this.Evaluation_Start.ValueChanged += new System.EventHandler(this.Evaluation_Date_Changed);
             // 
             // Evaluation_End
@@ -286,7 +286,7 @@
             this.Evaluation_End.Location = new System.Drawing.Point(3, 642);
             this.Evaluation_End.Name = "Evaluation_End";
             this.Evaluation_End.Size = new System.Drawing.Size(200, 20);
-            this.Evaluation_End.TabIndex = 60;
+            this.Evaluation_End.TabIndex = 5;
             this.Evaluation_End.ValueChanged += new System.EventHandler(this.Evaluation_Date_Changed);
             // 
             // label10
@@ -312,7 +312,7 @@
             this.Evaluation_Other.Location = new System.Drawing.Point(97, 666);
             this.Evaluation_Other.Name = "Evaluation_Other";
             this.Evaluation_Other.Size = new System.Drawing.Size(173, 20);
-            this.Evaluation_Other.TabIndex = 62;
+            this.Evaluation_Other.TabIndex = 6;
             this.Evaluation_Other.TextChanged += new System.EventHandler(this.Evaluation_Other_TextChanged);
             // 
             // button1
@@ -331,7 +331,7 @@
             this.PrelettingMeetings_Yes.Location = new System.Drawing.Point(5, 28);
             this.PrelettingMeetings_Yes.Name = "PrelettingMeetings_Yes";
             this.PrelettingMeetings_Yes.Size = new System.Drawing.Size(43, 17);
-            this.PrelettingMeetings_Yes.TabIndex = 66;
+            this.PrelettingMeetings_Yes.TabIndex = 0;
             this.PrelettingMeetings_Yes.TabStop = true;
             this.PrelettingMeetings_Yes.Text = "Yes";
             this.PrelettingMeetings_Yes.UseVisualStyleBackColor = true;
@@ -343,7 +343,7 @@
             this.PrelettingMeetings_No.Location = new System.Drawing.Point(117, 28);
             this.PrelettingMeetings_No.Name = "PrelettingMeetings_No";
             this.PrelettingMeetings_No.Size = new System.Drawing.Size(39, 17);
-            this.PrelettingMeetings_No.TabIndex = 65;
+            this.PrelettingMeetings_No.TabIndex = 1;
             this.PrelettingMeetings_No.TabStop = true;
             this.PrelettingMeetings_No.Text = "No";
             this.PrelettingMeetings_No.UseVisualStyleBackColor = true;
@@ -354,7 +354,7 @@
             this.PrelettingOther.Location = new System.Drawing.Point(56, 95);
             this.PrelettingOther.Name = "PrelettingOther";
             this.PrelettingOther.Size = new System.Drawing.Size(185, 20);
-            this.PrelettingOther.TabIndex = 72;
+            this.PrelettingOther.TabIndex = 2;
             this.PrelettingOther.TextChanged += new System.EventHandler(this.PrelettingOther_TextChanged);
             // 
             // label16
@@ -371,7 +371,7 @@
             this.PrelettingEndDate.Location = new System.Drawing.Point(6, 71);
             this.PrelettingEndDate.Name = "PrelettingEndDate";
             this.PrelettingEndDate.Size = new System.Drawing.Size(200, 20);
-            this.PrelettingEndDate.TabIndex = 70;
+            this.PrelettingEndDate.TabIndex = 1;
             this.PrelettingEndDate.ValueChanged += new System.EventHandler(this.Preletting_Date_Changed);
             // 
             // label17
@@ -388,7 +388,7 @@
             this.PrelettingFromDate.Location = new System.Drawing.Point(6, 32);
             this.PrelettingFromDate.Name = "PrelettingFromDate";
             this.PrelettingFromDate.Size = new System.Drawing.Size(200, 20);
-            this.PrelettingFromDate.TabIndex = 68;
+            this.PrelettingFromDate.TabIndex = 0;
             this.PrelettingFromDate.ValueChanged += new System.EventHandler(this.Preletting_Date_Changed);
             // 
             // label18
@@ -405,7 +405,7 @@
             this.TargetDate.Location = new System.Drawing.Point(3, 920);
             this.TargetDate.Name = "TargetDate";
             this.TargetDate.Size = new System.Drawing.Size(200, 20);
-            this.TargetDate.TabIndex = 74;
+            this.TargetDate.TabIndex = 7;
             this.TargetDate.ValueChanged += new System.EventHandler(this.TargetDate_ValueChanged);
             // 
             // label19
@@ -463,7 +463,7 @@
             this.groupBox2.Location = new System.Drawing.Point(2, 232);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(276, 258);
-            this.groupBox2.TabIndex = 76;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // button3
@@ -485,7 +485,7 @@
             this.groupBox5.Location = new System.Drawing.Point(6, 70);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(276, 156);
-            this.groupBox5.TabIndex = 93;
+            this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             // 
             // gbElecForm
@@ -506,7 +506,7 @@
             this.otherDetails.Location = new System.Drawing.Point(126, 80);
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(130, 20);
-            this.otherDetails.TabIndex = 78;
+            this.otherDetails.TabIndex = 2;
             this.otherDetails.Leave += new System.EventHandler(this.anotherMeans_Changed);
             // 
             // anotherMeansYes
@@ -515,7 +515,7 @@
             this.anotherMeansYes.Location = new System.Drawing.Point(5, 81);
             this.anotherMeansYes.Name = "anotherMeansYes";
             this.anotherMeansYes.Size = new System.Drawing.Size(115, 17);
-            this.anotherMeansYes.TabIndex = 77;
+            this.anotherMeansYes.TabIndex = 1;
             this.anotherMeansYes.TabStop = true;
             this.anotherMeansYes.Text = "Yes (email or other)";
             this.anotherMeansYes.UseVisualStyleBackColor = true;
@@ -527,7 +527,7 @@
             this.anotherMeansNo.Location = new System.Drawing.Point(5, 50);
             this.anotherMeansNo.Name = "anotherMeansNo";
             this.anotherMeansNo.Size = new System.Drawing.Size(39, 17);
-            this.anotherMeansNo.TabIndex = 76;
+            this.anotherMeansNo.TabIndex = 0;
             this.anotherMeansNo.TabStop = true;
             this.anotherMeansNo.Text = "No";
             this.anotherMeansNo.UseVisualStyleBackColor = true;
@@ -548,7 +548,7 @@
             this.elecNo.Location = new System.Drawing.Point(134, 26);
             this.elecNo.Name = "elecNo";
             this.elecNo.Size = new System.Drawing.Size(39, 17);
-            this.elecNo.TabIndex = 74;
+            this.elecNo.TabIndex = 1;
             this.elecNo.TabStop = true;
             this.elecNo.Text = "No";
             this.elecNo.UseVisualStyleBackColor = true;
@@ -560,7 +560,7 @@
             this.elecYes.Location = new System.Drawing.Point(5, 26);
             this.elecYes.Name = "elecYes";
             this.elecYes.Size = new System.Drawing.Size(43, 17);
-            this.elecYes.TabIndex = 73;
+            this.elecYes.TabIndex = 0;
             this.elecYes.TabStop = true;
             this.elecYes.Text = "Yes";
             this.elecYes.UseVisualStyleBackColor = true;
@@ -592,7 +592,7 @@
             this.InterviewCity.Location = new System.Drawing.Point(140, 496);
             this.InterviewCity.Name = "InterviewCity";
             this.InterviewCity.Size = new System.Drawing.Size(137, 20);
-            this.InterviewCity.TabIndex = 96;
+            this.InterviewCity.TabIndex = 2;
             this.InterviewCity.TextChanged += new System.EventHandler(this.InterviewCity_TextChanged);
             // 
             // label2
@@ -609,7 +609,7 @@
             this.InterviewNotice.Location = new System.Drawing.Point(168, 522);
             this.InterviewNotice.Name = "InterviewNotice";
             this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
-            this.InterviewNotice.TabIndex = 98;
+            this.InterviewNotice.TabIndex = 3;
             this.InterviewNotice.ValueChanged += new System.EventHandler(this.InterviewNotice_ValueChanged);
             // 
             // label15

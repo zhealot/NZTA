@@ -59,6 +59,9 @@
             this.lblRS = new System.Windows.Forms.Label();
             this.lblRE = new System.Windows.Forms.Label();
             this.gbMethods = new System.Windows.Forms.GroupBox();
+            this.helpBL = new System.Windows.Forms.Button();
+            this.helpTP = new System.Windows.Forms.Button();
+            this.helpLPC = new System.Windows.Forms.Button();
             this.helpPQMPDA = new System.Windows.Forms.Button();
             this.helpPQM = new System.Windows.Forms.Button();
             this.rbBLO = new System.Windows.Forms.RadioButton();
@@ -67,9 +70,6 @@
             this.rbPQMPDA = new System.Windows.Forms.RadioButton();
             this.rbPQM = new System.Windows.Forms.RadioButton();
             this.btnOK = new System.Windows.Forms.Button();
-            this.helpLPC = new System.Windows.Forms.Button();
-            this.helpTP = new System.Windows.Forms.Button();
-            this.helpBL = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnM.SuspendLayout();
             this.pnRS.SuspendLayout();
@@ -95,7 +95,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(268, 32);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 1;
             this.label2.Text = "You must choose one of the following Supplier Selection Methods(e.g. PQM).";
             // 
             // groupBox1
@@ -124,7 +124,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Size = new System.Drawing.Size(279, 157);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // cbTrackRecord
@@ -133,7 +133,7 @@
             this.cbTrackRecord.Location = new System.Drawing.Point(5, 43);
             this.cbTrackRecord.Name = "cbTrackRecord";
             this.cbTrackRecord.Size = new System.Drawing.Size(92, 17);
-            this.cbTrackRecord.TabIndex = 10;
+            this.cbTrackRecord.TabIndex = 2;
             this.cbTrackRecord.Text = "Track Record";
             this.cbTrackRecord.UseVisualStyleBackColor = true;
             this.cbTrackRecord.CheckedChanged += new System.EventHandler(this.cbTrackRecord_CheckedChanged);
@@ -155,7 +155,7 @@
             this.rbM_F.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbM_F.Name = "rbM_F";
             this.rbM_F.Size = new System.Drawing.Size(41, 17);
-            this.rbM_F.TabIndex = 0;
+            this.rbM_F.TabIndex = 1;
             this.rbM_F.TabStop = true;
             this.rbM_F.Text = "Fail";
             this.rbM_F.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.rbRS_F.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbRS_F.Name = "rbRS_F";
             this.rbRS_F.Size = new System.Drawing.Size(41, 17);
-            this.rbRS_F.TabIndex = 0;
+            this.rbRS_F.TabIndex = 1;
             this.rbRS_F.TabStop = true;
             this.rbRS_F.Text = "Fail";
             this.rbRS_F.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.rbTR_F.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbTR_F.Name = "rbTR_F";
             this.rbTR_F.Size = new System.Drawing.Size(41, 17);
-            this.rbTR_F.TabIndex = 0;
+            this.rbTR_F.TabIndex = 1;
             this.rbTR_F.TabStop = true;
             this.rbTR_F.Text = "Fail";
             this.rbTR_F.UseVisualStyleBackColor = true;
@@ -257,7 +257,7 @@
             this.rbRE_F.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rbRE_F.Name = "rbRE_F";
             this.rbRE_F.Size = new System.Drawing.Size(41, 17);
-            this.rbRE_F.TabIndex = 0;
+            this.rbRE_F.TabIndex = 1;
             this.rbRE_F.TabStop = true;
             this.rbRE_F.Text = "Fail";
             this.rbRE_F.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@
             this.tbP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbP.Name = "tbP";
             this.tbP.Size = new System.Drawing.Size(35, 20);
-            this.tbP.TabIndex = 3;
+            this.tbP.TabIndex = 9;
             this.tbP.Text = "20";
             // 
             // tbM
@@ -298,7 +298,7 @@
             this.tbM.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbM.Name = "tbM";
             this.tbM.Size = new System.Drawing.Size(35, 20);
-            this.tbM.TabIndex = 3;
+            this.tbM.TabIndex = 7;
             this.tbM.Text = "35";
             // 
             // tbRS
@@ -307,7 +307,7 @@
             this.tbRS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbRS.Name = "tbRS";
             this.tbRS.Size = new System.Drawing.Size(35, 20);
-            this.tbRS.TabIndex = 3;
+            this.tbRS.TabIndex = 5;
             this.tbRS.Text = "25";
             // 
             // tbRE
@@ -316,7 +316,7 @@
             this.tbRE.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbRE.Name = "tbRE";
             this.tbRE.Size = new System.Drawing.Size(35, 20);
-            this.tbRE.TabIndex = 3;
+            this.tbRE.TabIndex = 1;
             this.tbRE.Text = "15";
             // 
             // label6
@@ -370,7 +370,7 @@
             this.lblP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP.Name = "lblP";
             this.lblP.Size = new System.Drawing.Size(47, 22);
-            this.lblP.TabIndex = 2;
+            this.lblP.TabIndex = 8;
             this.lblP.Text = "Price";
             // 
             // lblM
@@ -379,7 +379,7 @@
             this.lblM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblM.Name = "lblM";
             this.lblM.Size = new System.Drawing.Size(75, 19);
-            this.lblM.TabIndex = 2;
+            this.lblM.TabIndex = 6;
             this.lblM.Text = "Methodology";
             // 
             // lblRS
@@ -388,7 +388,7 @@
             this.lblRS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRS.Name = "lblRS";
             this.lblRS.Size = new System.Drawing.Size(88, 19);
-            this.lblRS.TabIndex = 2;
+            this.lblRS.TabIndex = 4;
             this.lblRS.Text = "Relevant Skills";
             // 
             // lblRE
@@ -397,7 +397,7 @@
             this.lblRE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRE.Name = "lblRE";
             this.lblRE.Size = new System.Drawing.Size(115, 23);
-            this.lblRE.TabIndex = 2;
+            this.lblRE.TabIndex = 0;
             this.lblRE.Text = "Relevant Experience";
             // 
             // gbMethods
@@ -415,9 +415,39 @@
             this.gbMethods.Location = new System.Drawing.Point(4, 83);
             this.gbMethods.Name = "gbMethods";
             this.gbMethods.Size = new System.Drawing.Size(202, 134);
-            this.gbMethods.TabIndex = 8;
+            this.gbMethods.TabIndex = 0;
             this.gbMethods.TabStop = false;
             this.gbMethods.Text = "Methods";
+            // 
+            // helpBL
+            // 
+            this.helpBL.Location = new System.Drawing.Point(129, 109);
+            this.helpBL.Name = "helpBL";
+            this.helpBL.Size = new System.Drawing.Size(23, 22);
+            this.helpBL.TabIndex = 45;
+            this.helpBL.Text = "?";
+            this.helpBL.UseVisualStyleBackColor = true;
+            this.helpBL.Click += new System.EventHandler(this.helpBL_Click);
+            // 
+            // helpTP
+            // 
+            this.helpTP.Location = new System.Drawing.Point(95, 86);
+            this.helpTP.Name = "helpTP";
+            this.helpTP.Size = new System.Drawing.Size(23, 22);
+            this.helpTP.TabIndex = 45;
+            this.helpTP.Text = "?";
+            this.helpTP.UseVisualStyleBackColor = true;
+            this.helpTP.Click += new System.EventHandler(this.helpTP_Click);
+            // 
+            // helpLPC
+            // 
+            this.helpLPC.Location = new System.Drawing.Point(154, 63);
+            this.helpLPC.Name = "helpLPC";
+            this.helpLPC.Size = new System.Drawing.Size(23, 22);
+            this.helpLPC.TabIndex = 45;
+            this.helpLPC.Text = "?";
+            this.helpLPC.UseVisualStyleBackColor = true;
+            this.helpLPC.Click += new System.EventHandler(this.helpLPC_Click);
             // 
             // helpPQMPDA
             // 
@@ -445,7 +475,7 @@
             this.rbBLO.Location = new System.Drawing.Point(6, 112);
             this.rbBLO.Name = "rbBLO";
             this.rbBLO.Size = new System.Drawing.Size(117, 17);
-            this.rbBLO.TabIndex = 0;
+            this.rbBLO.TabIndex = 4;
             this.rbBLO.TabStop = true;
             this.rbBLO.Text = "Brook\'s Law Option";
             this.rbBLO.UseVisualStyleBackColor = true;
@@ -457,7 +487,7 @@
             this.rbTP.Location = new System.Drawing.Point(6, 89);
             this.rbTP.Name = "rbTP";
             this.rbTP.Size = new System.Drawing.Size(83, 17);
-            this.rbTP.TabIndex = 0;
+            this.rbTP.TabIndex = 3;
             this.rbTP.TabStop = true;
             this.rbTP.Text = "Target Price";
             this.rbTP.UseVisualStyleBackColor = true;
@@ -469,7 +499,7 @@
             this.rbLPC.Location = new System.Drawing.Point(6, 66);
             this.rbLPC.Name = "rbLPC";
             this.rbLPC.Size = new System.Drawing.Size(142, 17);
-            this.rbLPC.TabIndex = 0;
+            this.rbLPC.TabIndex = 2;
             this.rbLPC.TabStop = true;
             this.rbLPC.Text = "Lowest Price Conforming";
             this.rbLPC.UseVisualStyleBackColor = true;
@@ -481,7 +511,7 @@
             this.rbPQMPDA.Location = new System.Drawing.Point(6, 43);
             this.rbPQMPDA.Name = "rbPQMPDA";
             this.rbPQMPDA.Size = new System.Drawing.Size(117, 17);
-            this.rbPQMPDA.TabIndex = 0;
+            this.rbPQMPDA.TabIndex = 1;
             this.rbPQMPDA.TabStop = true;
             this.rbPQMPDA.Text = "PQM Simple + PDA";
             this.rbPQMPDA.UseVisualStyleBackColor = true;
@@ -504,40 +534,10 @@
             this.btnOK.Location = new System.Drawing.Point(180, 386);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(101, 31);
-            this.btnOK.TabIndex = 9;
+            this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // helpLPC
-            // 
-            this.helpLPC.Location = new System.Drawing.Point(154, 63);
-            this.helpLPC.Name = "helpLPC";
-            this.helpLPC.Size = new System.Drawing.Size(23, 22);
-            this.helpLPC.TabIndex = 45;
-            this.helpLPC.Text = "?";
-            this.helpLPC.UseVisualStyleBackColor = true;
-            this.helpLPC.Click += new System.EventHandler(this.helpLPC_Click);
-            // 
-            // helpTP
-            // 
-            this.helpTP.Location = new System.Drawing.Point(95, 86);
-            this.helpTP.Name = "helpTP";
-            this.helpTP.Size = new System.Drawing.Size(23, 22);
-            this.helpTP.TabIndex = 45;
-            this.helpTP.Text = "?";
-            this.helpTP.UseVisualStyleBackColor = true;
-            this.helpTP.Click += new System.EventHandler(this.helpTP_Click);
-            // 
-            // helpBL
-            // 
-            this.helpBL.Location = new System.Drawing.Point(129, 109);
-            this.helpBL.Name = "helpBL";
-            this.helpBL.Size = new System.Drawing.Size(23, 22);
-            this.helpBL.TabIndex = 45;
-            this.helpBL.Text = "?";
-            this.helpBL.UseVisualStyleBackColor = true;
-            this.helpBL.Click += new System.EventHandler(this.helpBL_Click);
             // 
             // SupplierSelectionMethod
             // 

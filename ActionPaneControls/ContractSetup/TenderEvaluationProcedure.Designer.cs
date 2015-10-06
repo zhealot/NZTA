@@ -83,7 +83,7 @@
             this.EvaluationTeamLeader.Location = new System.Drawing.Point(6, 98);
             this.EvaluationTeamLeader.Name = "EvaluationTeamLeader";
             this.EvaluationTeamLeader.Size = new System.Drawing.Size(212, 20);
-            this.EvaluationTeamLeader.TabIndex = 6;
+            this.EvaluationTeamLeader.TabIndex = 0;
             this.EvaluationTeamLeader.TextChanged += new System.EventHandler(this.EvaluationTeamLeader_TextChanged);
             // 
             // label3
@@ -100,7 +100,7 @@
             this.ETL_Position.Location = new System.Drawing.Point(78, 122);
             this.ETL_Position.Name = "ETL_Position";
             this.ETL_Position.Size = new System.Drawing.Size(140, 20);
-            this.ETL_Position.TabIndex = 8;
+            this.ETL_Position.TabIndex = 1;
             this.ETL_Position.TextChanged += new System.EventHandler(this.ETL_Position_TextChanged);
             // 
             // label4
@@ -117,7 +117,7 @@
             this.ETL_Company.Location = new System.Drawing.Point(78, 146);
             this.ETL_Company.Name = "ETL_Company";
             this.ETL_Company.Size = new System.Drawing.Size(140, 20);
-            this.ETL_Company.TabIndex = 10;
+            this.ETL_Company.TabIndex = 2;
             this.ETL_Company.TextChanged += new System.EventHandler(this.ETL_Company_TextChanged);
             // 
             // ET2_Company
@@ -125,7 +125,7 @@
             this.ET2_Company.Location = new System.Drawing.Point(78, 236);
             this.ET2_Company.Name = "ET2_Company";
             this.ET2_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET2_Company.TabIndex = 16;
+            this.ET2_Company.TabIndex = 5;
             this.ET2_Company.TextChanged += new System.EventHandler(this.ET2_Company_TextChanged);
             // 
             // label5
@@ -142,7 +142,7 @@
             this.ET2_Position.Location = new System.Drawing.Point(78, 212);
             this.ET2_Position.Name = "ET2_Position";
             this.ET2_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET2_Position.TabIndex = 14;
+            this.ET2_Position.TabIndex = 4;
             this.ET2_Position.TextChanged += new System.EventHandler(this.ET2_Position_TextChanged);
             // 
             // label6
@@ -159,7 +159,7 @@
             this.ET2_Name.Location = new System.Drawing.Point(6, 188);
             this.ET2_Name.Name = "ET2_Name";
             this.ET2_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET2_Name.TabIndex = 12;
+            this.ET2_Name.TabIndex = 3;
             this.ET2_Name.TextChanged += new System.EventHandler(this.ET2_Name_TextChanged);
             // 
             // label7
@@ -176,7 +176,7 @@
             this.ET3_Company.Location = new System.Drawing.Point(78, 327);
             this.ET3_Company.Name = "ET3_Company";
             this.ET3_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET3_Company.TabIndex = 22;
+            this.ET3_Company.TabIndex = 8;
             this.ET3_Company.TextChanged += new System.EventHandler(this.ET3_Company_TextChanged);
             // 
             // label8
@@ -193,7 +193,7 @@
             this.ET3_Position.Location = new System.Drawing.Point(78, 303);
             this.ET3_Position.Name = "ET3_Position";
             this.ET3_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET3_Position.TabIndex = 20;
+            this.ET3_Position.TabIndex = 7;
             this.ET3_Position.TextChanged += new System.EventHandler(this.ET3_Position_TextChanged);
             // 
             // label9
@@ -210,7 +210,7 @@
             this.ET3_Name.Location = new System.Drawing.Point(6, 279);
             this.ET3_Name.Name = "ET3_Name";
             this.ET3_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET3_Name.TabIndex = 18;
+            this.ET3_Name.TabIndex = 6;
             this.ET3_Name.TextChanged += new System.EventHandler(this.ET3_Name_TextChanged);
             // 
             // label10
@@ -237,7 +237,7 @@
             this.ET4_Company.Location = new System.Drawing.Point(78, 416);
             this.ET4_Company.Name = "ET4_Company";
             this.ET4_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET4_Company.TabIndex = 29;
+            this.ET4_Company.TabIndex = 11;
             this.ET4_Company.TextChanged += new System.EventHandler(this.ET4_Company_TextChanged);
             // 
             // label11
@@ -254,7 +254,7 @@
             this.ET4_Position.Location = new System.Drawing.Point(78, 392);
             this.ET4_Position.Name = "ET4_Position";
             this.ET4_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET4_Position.TabIndex = 27;
+            this.ET4_Position.TabIndex = 10;
             this.ET4_Position.TextChanged += new System.EventHandler(this.ET4_Position_TextChanged);
             // 
             // label12
@@ -271,7 +271,7 @@
             this.ET4_Name.Location = new System.Drawing.Point(6, 368);
             this.ET4_Name.Name = "ET4_Name";
             this.ET4_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET4_Name.TabIndex = 25;
+            this.ET4_Name.TabIndex = 9;
             this.ET4_Name.TextChanged += new System.EventHandler(this.ET4_Name_TextChanged);
             // 
             // label13
@@ -297,7 +297,7 @@
             this.AuditPeriod.Location = new System.Drawing.Point(168, 459);
             this.AuditPeriod.Name = "AuditPeriod";
             this.AuditPeriod.Size = new System.Drawing.Size(109, 20);
-            this.AuditPeriod.TabIndex = 50;
+            this.AuditPeriod.TabIndex = 12;
             this.AuditPeriod.Value = new decimal(new int[] {
             2,
             0,

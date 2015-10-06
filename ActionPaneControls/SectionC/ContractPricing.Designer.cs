@@ -51,7 +51,7 @@
             this.button1.Location = new System.Drawing.Point(6, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 42);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Contract Pricing Schedule";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -62,7 +62,7 @@
             this.lbMissing.Location = new System.Drawing.Point(6, 118);
             this.lbMissing.Name = "lbMissing";
             this.lbMissing.Size = new System.Drawing.Size(249, 355);
-            this.lbMissing.TabIndex = 4;
+            this.lbMissing.TabIndex = 1;
             // 
             // label2
             // 

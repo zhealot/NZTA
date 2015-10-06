@@ -68,7 +68,7 @@
             this.rbApprovedDefault.Location = new System.Drawing.Point(6, 19);
             this.rbApprovedDefault.Name = "rbApprovedDefault";
             this.rbApprovedDefault.Size = new System.Drawing.Size(190, 30);
-            this.rbApprovedDefault.TabIndex = 5;
+            this.rbApprovedDefault.TabIndex = 0;
             this.rbApprovedDefault.TabStop = true;
             this.rbApprovedDefault.Text = "Levels have been approved at default levels";
             this.rbApprovedDefault.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.rbOtherLevels.Location = new System.Drawing.Point(6, 55);
             this.rbOtherLevels.Name = "rbOtherLevels";
             this.rbOtherLevels.Size = new System.Drawing.Size(190, 20);
-            this.rbOtherLevels.TabIndex = 6;
+            this.rbOtherLevels.TabIndex = 1;
             this.rbOtherLevels.TabStop = true;
             this.rbOtherLevels.Text = "Other levels have been approved";
             this.rbOtherLevels.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@
             this.MaximumLiability.Location = new System.Drawing.Point(6, 232);
             this.MaximumLiability.Name = "MaximumLiability";
             this.MaximumLiability.Size = new System.Drawing.Size(225, 20);
-            this.MaximumLiability.TabIndex = 8;
+            this.MaximumLiability.TabIndex = 1;
             this.MaximumLiability.TextChanged += new System.EventHandler(this.MaximumLiability_TextChanged);
             // 
             // DurationOfLiability
@@ -106,7 +106,7 @@
             this.DurationOfLiability.Location = new System.Drawing.Point(6, 290);
             this.DurationOfLiability.Name = "DurationOfLiability";
             this.DurationOfLiability.Size = new System.Drawing.Size(225, 20);
-            this.DurationOfLiability.TabIndex = 10;
+            this.DurationOfLiability.TabIndex = 2;
             this.DurationOfLiability.Text = "six years from the date of completion of Services";
             this.DurationOfLiability.TextChanged += new System.EventHandler(this.DurationOfLiability_TextChanged);
             // 
@@ -132,7 +132,7 @@
             this.PublicLiabilityInsurance.Location = new System.Drawing.Point(6, 415);
             this.PublicLiabilityInsurance.Name = "PublicLiabilityInsurance";
             this.PublicLiabilityInsurance.Size = new System.Drawing.Size(225, 20);
-            this.PublicLiabilityInsurance.TabIndex = 12;
+            this.PublicLiabilityInsurance.TabIndex = 3;
             this.PublicLiabilityInsurance.TextChanged += new System.EventHandler(this.PublicLiabilityInsurance_TextChanged);
             // 
             // label6
@@ -152,7 +152,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 90);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 86);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // help2
@@ -160,7 +160,7 @@
             this.help2.Location = new System.Drawing.Point(190, 52);
             this.help2.Name = "help2";
             this.help2.Size = new System.Drawing.Size(23, 23);
-            this.help2.TabIndex = 45;
+            this.help2.TabIndex = 2;
             this.help2.Text = "?";
             this.help2.UseVisualStyleBackColor = true;
             this.help2.Click += new System.EventHandler(this.help2_Click);

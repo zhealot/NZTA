@@ -84,7 +84,7 @@
             this.BaseEstimate_Amount.Location = new System.Drawing.Point(140, 14);
             this.BaseEstimate_Amount.Name = "BaseEstimate_Amount";
             this.BaseEstimate_Amount.Size = new System.Drawing.Size(122, 20);
-            this.BaseEstimate_Amount.TabIndex = 7;
+            this.BaseEstimate_Amount.TabIndex = 0;
             this.BaseEstimate_Amount.TextChanged += new System.EventHandler(this.BaseEstimate_Amount_TextChanged);
             // 
             // label4
@@ -100,7 +100,7 @@
             this.ProvisionalSumAmount.Location = new System.Drawing.Point(140, 54);
             this.ProvisionalSumAmount.Name = "ProvisionalSumAmount";
             this.ProvisionalSumAmount.Size = new System.Drawing.Size(122, 20);
-            this.ProvisionalSumAmount.TabIndex = 9;
+            this.ProvisionalSumAmount.TabIndex = 1;
             this.ProvisionalSumAmount.TextChanged += new System.EventHandler(this.ProvisionalSumAmount_TextChanged);
             // 
             // BrooksLaw_Check
@@ -109,7 +109,7 @@
             this.BrooksLaw_Check.Location = new System.Drawing.Point(0, 86);
             this.BrooksLaw_Check.Name = "BrooksLaw_Check";
             this.BrooksLaw_Check.Size = new System.Drawing.Size(84, 17);
-            this.BrooksLaw_Check.TabIndex = 10;
+            this.BrooksLaw_Check.TabIndex = 2;
             this.BrooksLaw_Check.Text = "Brook\'s Law";
             this.BrooksLaw_Check.UseVisualStyleBackColor = true;
             this.BrooksLaw_Check.CheckedChanged += new System.EventHandler(this.BrooksLaw_Check_CheckedChanged);
@@ -128,7 +128,7 @@
             this.TargetPriceAmount.Location = new System.Drawing.Point(140, 13);
             this.TargetPriceAmount.Name = "TargetPriceAmount";
             this.TargetPriceAmount.Size = new System.Drawing.Size(122, 20);
-            this.TargetPriceAmount.TabIndex = 14;
+            this.TargetPriceAmount.TabIndex = 0;
             this.TargetPriceAmount.TextChanged += new System.EventHandler(this.TargetPriceAmount_TextChanged);
             // 
             // label6
@@ -145,7 +145,7 @@
             this.TargetPriceAmountInWords.Location = new System.Drawing.Point(3, 78);
             this.TargetPriceAmountInWords.Name = "TargetPriceAmountInWords";
             this.TargetPriceAmountInWords.Size = new System.Drawing.Size(259, 20);
-            this.TargetPriceAmountInWords.TabIndex = 16;
+            this.TargetPriceAmountInWords.TabIndex = 1;
             this.TargetPriceAmountInWords.TextChanged += new System.EventHandler(this.TargetPriceAmountInWords_TextChanged);
             // 
             // gbBaseEstimate
@@ -179,7 +179,7 @@
             this.BaseEstimate_Check.Location = new System.Drawing.Point(6, 26);
             this.BaseEstimate_Check.Name = "BaseEstimate_Check";
             this.BaseEstimate_Check.Size = new System.Drawing.Size(92, 17);
-            this.BaseEstimate_Check.TabIndex = 19;
+            this.BaseEstimate_Check.TabIndex = 0;
             this.BaseEstimate_Check.TabStop = true;
             this.BaseEstimate_Check.Text = "Base Estimate";
             this.BaseEstimate_Check.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.TargetPrice_Check.Location = new System.Drawing.Point(140, 26);
             this.TargetPrice_Check.Name = "TargetPrice_Check";
             this.TargetPrice_Check.Size = new System.Drawing.Size(83, 17);
-            this.TargetPrice_Check.TabIndex = 19;
+            this.TargetPrice_Check.TabIndex = 1;
             this.TargetPrice_Check.TabStop = true;
             this.TargetPrice_Check.Text = "Target Price";
             this.TargetPrice_Check.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             this.groupBox1.Location = new System.Drawing.Point(3, 161);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(262, 49);
-            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pricing Option";
             // 

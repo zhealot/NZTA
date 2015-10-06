@@ -67,7 +67,7 @@
             this.BridgesOther.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.BridgesOther.Name = "BridgesOther";
             this.BridgesOther.Size = new System.Drawing.Size(194, 23);
-            this.BridgesOther.TabIndex = 7;
+            this.BridgesOther.TabIndex = 0;
             this.BridgesOther.Text = "Bridges && Other Structures";
             this.BridgesOther.UseVisualStyleBackColor = true;
             this.BridgesOther.CheckedChanged += new System.EventHandler(this.BridgesOther_CheckedChanged);
@@ -83,7 +83,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Size = new System.Drawing.Size(215, 169);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "2. Do you have multiple projects or regions for this Contract?";
             // 
@@ -93,7 +93,7 @@
             this.Project1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Project1.Name = "Project1";
             this.Project1.Size = new System.Drawing.Size(128, 20);
-            this.Project1.TabIndex = 2;
+            this.Project1.TabIndex = 3;
             this.Project1.TextChanged += new System.EventHandler(this.Project1_TextChanged);
             // 
             // label3
@@ -112,7 +112,7 @@
             this.MultipleProjects_Yes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MultipleProjects_Yes.Name = "MultipleProjects_Yes";
             this.MultipleProjects_Yes.Size = new System.Drawing.Size(206, 58);
-            this.MultipleProjects_Yes.TabIndex = 0;
+            this.MultipleProjects_Yes.TabIndex = 2;
             this.MultipleProjects_Yes.TabStop = true;
             this.MultipleProjects_Yes.Text = "Yes, select to enable the option to price items for individual projects and name " +
     "the projects below:";
@@ -138,7 +138,7 @@
             this.StateHighway.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.StateHighway.Name = "StateHighway";
             this.StateHighway.Size = new System.Drawing.Size(212, 22);
-            this.StateHighway.TabIndex = 7;
+            this.StateHighway.TabIndex = 1;
             this.StateHighway.Text = "State Highway Traffic Monitoring";
             this.StateHighway.UseVisualStyleBackColor = true;
             this.StateHighway.CheckedChanged += new System.EventHandler(this.BridgesOther_CheckedChanged);
@@ -149,7 +149,7 @@
             this.OtherSpecification.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.OtherSpecification.Name = "OtherSpecification";
             this.OtherSpecification.Size = new System.Drawing.Size(212, 22);
-            this.OtherSpecification.TabIndex = 7;
+            this.OtherSpecification.TabIndex = 2;
             this.OtherSpecification.Text = "Other";
             this.OtherSpecification.UseVisualStyleBackColor = true;
             this.OtherSpecification.CheckedChanged += new System.EventHandler(this.OtherSpecification_Changed);

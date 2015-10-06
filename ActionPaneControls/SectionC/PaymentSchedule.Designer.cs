@@ -56,7 +56,7 @@
             this.UnitRate_chk.Location = new System.Drawing.Point(8, 60);
             this.UnitRate_chk.Name = "UnitRate_chk";
             this.UnitRate_chk.Size = new System.Drawing.Size(99, 17);
-            this.UnitRate_chk.TabIndex = 6;
+            this.UnitRate_chk.TabIndex = 0;
             this.UnitRate_chk.Text = "Unit Rate Items";
             this.UnitRate_chk.UseVisualStyleBackColor = true;
             this.UnitRate_chk.CheckedChanged += new System.EventHandler(this.UnitRate_chk_CheckedChanged);
@@ -67,7 +67,7 @@
             this.HourlyRate_chk.Location = new System.Drawing.Point(8, 98);
             this.HourlyRate_chk.Name = "HourlyRate_chk";
             this.HourlyRate_chk.Size = new System.Drawing.Size(110, 17);
-            this.HourlyRate_chk.TabIndex = 6;
+            this.HourlyRate_chk.TabIndex = 1;
             this.HourlyRate_chk.Text = "Hourly Rate Items";
             this.HourlyRate_chk.UseVisualStyleBackColor = true;
             this.HourlyRate_chk.CheckedChanged += new System.EventHandler(this.HourlyRate_chk_CheckedChanged);
@@ -88,7 +88,7 @@
             0});
             this.CostIndex.Name = "CostIndex";
             this.CostIndex.Size = new System.Drawing.Size(79, 20);
-            this.CostIndex.TabIndex = 105;
+            this.CostIndex.TabIndex = 3;
             this.CostIndex.Value = new decimal(new int[] {
             8,
             0,
@@ -121,7 +121,7 @@
             this.CostFluctuations_Check.Location = new System.Drawing.Point(8, 131);
             this.CostFluctuations_Check.Name = "CostFluctuations_Check";
             this.CostFluctuations_Check.Size = new System.Drawing.Size(128, 17);
-            this.CostFluctuations_Check.TabIndex = 102;
+            this.CostFluctuations_Check.TabIndex = 2;
             this.CostFluctuations_Check.Text = "Pay Cost Fluctuations";
             this.CostFluctuations_Check.UseVisualStyleBackColor = true;
             this.CostFluctuations_Check.CheckedChanged += new System.EventHandler(this.CostFluctuations_Check_CheckedChanged);

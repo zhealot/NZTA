@@ -133,19 +133,21 @@ namespace NZTA_Contract_Generator
             while (rg.Find.Found && rg.Start >= first)
             {
                 first = rg.Start;
+                //int info=rg.Information[Microsoft.Office.Interop.Word.WdInformation.wdActiveEndPageNumber];
+                //System.Diagnostics.Debug.WriteLine(info.ToString() + rg.Text.Substring(0, Math.Min(rg.Text.Length, 20)));
                 try
                 {
                     rg.Delete();
+                    //in case rg is not deleted successfully 
                     rg.SetRange(rg.Start + 1, rg.Start + 1);
                 }
                 catch(Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine("####" + ex.Message);
                 }
-                int info=rg.Information[Microsoft.Office.Interop.Word.WdInformation.wdActiveEndPageNumber];
-                System.Diagnostics.Debug.WriteLine(info.ToString());
                 rg.Find.Execute();
             }
+
             Globals.ThisDocument.Application.ScreenUpdating = true;
         }
     }

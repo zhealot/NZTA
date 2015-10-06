@@ -222,5 +222,16 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
             Globals.ThisDocument.bmTimeResourceRow.Rows[1].Range.Font.Hidden = TimeResource_Check.Checked ? 0 : 1;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //set font color to black to normal paragraph
+            Microsoft.Office.Interop.Word.Style stl;
+            foreach (Microsoft.Office.Interop.Word.Paragraph pg in Globals.ThisDocument.Paragraphs)
+            {
+
+                stl = pg.get_Style();
+            }
+        }
     }
 }
