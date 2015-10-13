@@ -23,10 +23,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Address_1.SelectedIndex = -1;
            
             //Region combobox
-            Region.DataSource = new BindingSource(Constants.Location.data, null);
-            Region.DisplayMember = "Key";
-            Region.ValueMember = "Value";
-            Region.SelectedIndex = -1;
+            //Region.DataSource = new BindingSource(Constants.Location.data, null);
+            //Region.DisplayMember = "Key";
+            //Region.ValueMember = "Value";
+            //Region.SelectedIndex = -1;
 
             //Tender box
             TenderBox.DataSource = new BindingSource(Constants.Location.data, null);

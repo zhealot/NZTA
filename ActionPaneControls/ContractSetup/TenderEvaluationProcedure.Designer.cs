@@ -285,18 +285,17 @@
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 461);
+            this.label18.Location = new System.Drawing.Point(2, 469);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(104, 13);
+            this.label18.Size = new System.Drawing.Size(178, 29);
             this.label18.TabIndex = 46;
-            this.label18.Text = "Audit Period (weeks)";
+            this.label18.Text = "COI Notification to Probity Auditor (weeks)";
             // 
             // AuditPeriod
             // 
-            this.AuditPeriod.Location = new System.Drawing.Point(168, 459);
+            this.AuditPeriod.Location = new System.Drawing.Point(186, 469);
             this.AuditPeriod.Name = "AuditPeriod";
-            this.AuditPeriod.Size = new System.Drawing.Size(109, 20);
+            this.AuditPeriod.Size = new System.Drawing.Size(82, 20);
             this.AuditPeriod.TabIndex = 12;
             this.AuditPeriod.Value = new decimal(new int[] {
             2,

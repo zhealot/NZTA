@@ -435,6 +435,8 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicCopy;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -746,6 +748,7 @@ namespace NZTA_Contract_Generator {
             this.bmTimeResourceRow.BeginInit();
             this.rtcPricing_BrooksLaw.BeginInit();
             this.rtcPricing_TargetPrice.BeginInit();
+            this.rtcElectronicCopy.BeginInit();
         }
         
         /// 
@@ -753,6 +756,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcElectronicCopy.EndInit();
             this.rtcPricing_TargetPrice.EndInit();
             this.rtcPricing_BrooksLaw.EndInit();
             this.bmTimeResourceRow.EndInit();
@@ -1179,6 +1183,7 @@ namespace NZTA_Contract_Generator {
             this.bmTimeResourceRow = Globals.Factory.CreateBookmark(null, null, "bmTimeResourceRow", "bmTimeResourceRow", this);
             this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
             this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "769362992", "rtcPricing_TargetPrice", this);
+            this.rtcElectronicCopy = Globals.Factory.CreateRichTextContentControl(null, null, "2623178283", "rtcElectronicCopy", this);
         }
         
         /// 
@@ -2024,6 +2029,10 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // rtcElectronicCopy
+            // 
+            this.rtcElectronicCopy.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2040,6 +2049,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcElectronicCopy.Dispose();
             this.rtcPricing_TargetPrice.Dispose();
             this.rtcPricing_BrooksLaw.Dispose();
             this.bmTimeResourceRow.Dispose();

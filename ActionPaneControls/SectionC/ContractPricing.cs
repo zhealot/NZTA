@@ -30,32 +30,46 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             lbMissing.Items.Clear();
             Microsoft.Office.Interop.Word.Range rg;
             foreach (Microsoft.Office.Interop.Word.Row rw in NZTA_Contract_Generator.Globals.ThisDocument.bmContractPricingSchedule.Tables[1].Rows)
-            {             
-                //text like: 1.2.3
-                if (Regex.IsMatch(rw.Cells[1].Range.Text.Replace("\r\a", ""), @"^(\d+.)*\d+$"))
-                {
+            {
+                //ignore hidden rows
+                if (rw.Range.Font.Hidden != 0) continue;
+                //look for text like: 1.2.3 in numbering
+                var PricingNumText = rw.Cells[1].Range.ListFormat.ListString == "" ? rw.Cells[1].Range.Text.Replace("\r\a", "") : rw.Cells[1].Range.ListFormat.ListString;
+                PricingNumText.Trim();
+                if (Regex.IsMatch(PricingNumText, @"^(\d+.)*\d+$"))
+                {                    
                     rg = NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range;
                     bool found = false;
                     rg.Find.ClearFormatting();
                     rg.Find.MatchCase = false;
                     rg.Find.MatchWholeWord = true;
-                    rg.Find.Text = rw.Cells[1].Range.Text.Replace("\r\a", "").Trim();
-                    rg.Find.Execute(); 
-                    while (rg.Find.Found && rg.InRange(NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range)) 
+                    rg.Find.Forward = true;
+                    rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindContinue;
+                    rg.Find.Text = rw.Cells[2].Range.Text.Replace("\r\a", "").Trim(); //rw.Cells[1].Range.ListFormat.ListString;
+                    rg.Find.Execute();
+                    var LastPosition = rg.Start;
+                    while (rg.Find.Found && rg.InRange(NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range) && rg.Start >= LastPosition) 
                     {
-                        if(rg.Rows[1].Cells[1].Range.Text == rw.Cells[1].Range.Text)
-                         {                             
-                             if (rg.Rows[1].Cells[2].Range.Text == rw.Cells[2].Range.Text)
-                             {
-                                 found = true;
-                             }
-                             break;
+                        LastPosition = rg.End;
+                        if (rg.Rows[1].Cells[2].Range.Text.Replace("\r\a", "").Trim() == rw.Cells[2].Range.Text.Replace("\r\a", "").Trim())
+                        {
+                            var PaymentNumText = rg.Rows[1].Cells[1].Range.ListFormat.ListString == "" ? rg.Rows[1].Cells[1].Range.Text.Replace("\r\a", "") : rg.Rows[1].Cells[1].Range.ListFormat.ListString;
+                            PaymentNumText.Trim();
+                            if (PaymentNumText == PricingNumText)
+                            {
+                                found = true;
+                                break;
+                            }
                         }
-                        else rg.Find.Execute();
+                        //else
+                        //{
+                            rg.Collapse(Microsoft.Office.Interop.Word.WdCollapseDirection.wdCollapseEnd);
+                            rg.Find.Execute();
+                        //}
                     }
                     if (!found && !rw.Cells[2].Range.Text.Contains("[Other]"))
                     {
-                        lbMissing.Items.Add(rw.Cells[1].Range.Text.Replace("\r\a","") + " " + rw.Cells[2].Range.Text.Replace("\r\a",""));
+                        lbMissing.Items.Add(PricingNumText + " " + rw.Cells[2].Range.Text.Replace("\r\a",""));
                     }
                 }
             }

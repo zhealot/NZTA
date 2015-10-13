@@ -57,8 +57,6 @@
             this.Email_1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.Region = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.geoYes = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.geoNo = new System.Windows.Forms.RadioButton();
@@ -380,28 +378,10 @@
             this.label15.TabIndex = 29;
             this.label15.Text = "Email:";
             // 
-            // Region
-            // 
-            this.Region.FormattingEnabled = true;
-            this.Region.Location = new System.Drawing.Point(9, 648);
-            this.Region.Name = "Region";
-            this.Region.Size = new System.Drawing.Size(265, 21);
-            this.Region.TabIndex = 4;
-            this.Region.SelectedIndexChanged += new System.EventHandler(this.Region_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 628);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(201, 13);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Which region will this contract be based?";
-            // 
             // geoYes
             // 
             this.geoYes.AutoSize = true;
-            this.geoYes.Location = new System.Drawing.Point(16, 34);
+            this.geoYes.Location = new System.Drawing.Point(16, 48);
             this.geoYes.Name = "geoYes";
             this.geoYes.Size = new System.Drawing.Size(43, 17);
             this.geoYes.TabIndex = 1;
@@ -413,7 +393,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1, 11);
+            this.label17.Location = new System.Drawing.Point(5, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(201, 13);
             this.label17.TabIndex = 33;
@@ -422,7 +402,7 @@
             // geoNo
             // 
             this.geoNo.AutoSize = true;
-            this.geoNo.Location = new System.Drawing.Point(135, 34);
+            this.geoNo.Location = new System.Drawing.Point(135, 48);
             this.geoNo.Name = "geoNo";
             this.geoNo.Size = new System.Drawing.Size(39, 17);
             this.geoNo.TabIndex = 2;
@@ -723,13 +703,13 @@
             // 
             this.label33.Location = new System.Drawing.Point(3, 31);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(355, 22);
+            this.label33.Size = new System.Drawing.Size(267, 28);
             this.label33.TabIndex = 68;
             this.label33.Text = "Number of days enquiries must be raised before the Tender closes:";
             // 
             // numDays
             // 
-            this.numDays.Location = new System.Drawing.Point(3, 56);
+            this.numDays.Location = new System.Drawing.Point(6, 72);
             this.numDays.Name = "numDays";
             this.numDays.Size = new System.Drawing.Size(136, 20);
             this.numDays.TabIndex = 0;
@@ -737,7 +717,7 @@
             // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(3, 81);
+            this.label34.Location = new System.Drawing.Point(6, 97);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(301, 17);
             this.label34.TabIndex = 70;
@@ -745,7 +725,7 @@
             // 
             // numHours
             // 
-            this.numHours.Location = new System.Drawing.Point(3, 101);
+            this.numHours.Location = new System.Drawing.Point(6, 117);
             this.numHours.Name = "numHours";
             this.numHours.Size = new System.Drawing.Size(136, 20);
             this.numHours.TabIndex = 1;
@@ -780,7 +760,7 @@
             this.groupBox1.Controls.Add(this.PM_Name);
             this.groupBox1.Location = new System.Drawing.Point(3, 262);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 363);
+            this.groupBox1.Size = new System.Drawing.Size(328, 363);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -799,9 +779,9 @@
             this.groupBox2.Controls.Add(this.geoNo);
             this.groupBox2.Controls.Add(this.gbGeo);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Location = new System.Drawing.Point(3, 675);
+            this.groupBox2.Location = new System.Drawing.Point(3, 631);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 159);
+            this.groupBox2.Size = new System.Drawing.Size(328, 184);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -809,7 +789,7 @@
             // 
             this.gbGeo.Controls.Add(this.scheduledItems);
             this.gbGeo.Controls.Add(this.provisionalSum);
-            this.gbGeo.Location = new System.Drawing.Point(28, 70);
+            this.gbGeo.Location = new System.Drawing.Point(28, 84);
             this.gbGeo.Name = "gbGeo";
             this.gbGeo.Size = new System.Drawing.Size(243, 65);
             this.gbGeo.TabIndex = 3;
@@ -840,7 +820,7 @@
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(3, 1102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(331, 296);
+            this.groupBox3.Size = new System.Drawing.Size(328, 296);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
@@ -862,7 +842,7 @@
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(4, 1404);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(331, 130);
+            this.groupBox4.Size = new System.Drawing.Size(327, 148);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
@@ -871,9 +851,9 @@
             this.groupBox6.Controls.Add(this.clientSiteNo);
             this.groupBox6.Controls.Add(this.clientSiteYes);
             this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Location = new System.Drawing.Point(3, 840);
+            this.groupBox6.Location = new System.Drawing.Point(3, 832);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(331, 64);
+            this.groupBox6.Size = new System.Drawing.Size(328, 72);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             // 
@@ -885,7 +865,7 @@
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Location = new System.Drawing.Point(4, 906);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(330, 60);
+            this.groupBox8.Size = new System.Drawing.Size(327, 60);
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             // 
@@ -1019,15 +999,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TenderBox);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.Region);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Contract_Number);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(338, 1584);
+            this.Size = new System.Drawing.Size(338, 1575);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1080,8 +1058,6 @@
         private System.Windows.Forms.TextBox Email_1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox Region;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RadioButton geoYes;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RadioButton geoNo;
