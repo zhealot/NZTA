@@ -72,7 +72,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Index_Page_TextChanged(object sender, EventArgs e)
         {
-            //### check font colour
             contract.Index_A3_Check = (sender == Index_A3_Check) ? Index_A3_Check.Checked : contract.Index_A3_Check;
             contract.Index_Double_Check = (sender == Index_Double_Check) ? Index_Double_Check.Checked : contract.Index_Double_Check;
             if (Util.ContentControls.Validator(Index_Page.Text, typeof(int)))
@@ -119,7 +118,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (Util.ContentControls.Validator(NonPrice_Page.Text, typeof(int)))
             {
                 contract.NonPrice_Page = NonPrice_Page.Text;
-                Util.ContentControls.setText("NonPrice_Page", NonPrice_Page.Text + (NonPrice_A3_Check.Checked == true ? " x A3 " : "") + (NonPrice_Double_Check.Checked == true ? " x Double " : ""));
+                Util.ContentControls.setText("NonPrice_Page", NonPrice_Page.Text + (NonPrice_A3_Check.Checked == true ? " x A3 " : "") + (NonPrice_Double_Check.Checked == true ? " x Double sided" : ""));
             }
             else
             {
@@ -160,7 +159,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     Util.ContentControls.setText("Outline_Page",
                                                 Outline_Page.Text +
                                                 ((Outline_A3_Check.Checked == true) ? " x A3 " : "") +
-                                                ((Outline_Double_Check.Checked == true) ? " x Double " : ""));//### 'Double Sided'
+                                                ((Outline_Double_Check.Checked == true) ? " x Double sided" : ""));
                 }
                 else 
                 {
@@ -177,16 +176,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CV_Page_TextChanged(object sender, EventArgs e)
         {
-            //### add 'Double' and 'A3' for CVs
             contract.CV_Check = (sender == CV_Check) ? CV_Check.Checked : contract.CV_Check;
             contract.CV_A3_Check = (sender == CV_A3_Check) ? CV_A3_Check.Checked : contract.CV_A3_Check;
+            contract.CV_Double_Check = (sender == CV_Double_Check) ? CV_Double_Check.Checked : contract.CV_Double_Check;
             if (CV_Check.Checked)
             {
                 if (Util.ContentControls.Validator(CV_Page.Text, typeof(int)))
                 {
                     contract.CV_Page = CV_Page.Text;
-                    Util.ContentControls.setText("CV_Page", CV_Page.Text +
-                        ((CV_A3_Check.Checked == true) ? " x A3 " : ""));
+                    Util.ContentControls.setText("CV_Page", 
+                        CV_Page.Text +
+                        ((CV_A3_Check.Checked == true) ? " x A3 " : "") +
+                        ((CV_Double_Check.Checked == true) ? " x Double sided" : ""));
                 }
                 else
                 {

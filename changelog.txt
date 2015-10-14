@@ -1,7 +1,8 @@
 					***** detailed instruction, buttons, ribbons, daetime pickers 
 					***** Personnel: make Personnel Schedule & Addtitional Service Schedule exactly the same with Form B, give a warning before deleteing other rows
 							ability to add rows in PS and ASSchedule.
-14-Oct-15 02:24 PM	
+15-Oct-15 11:09 AM	new issues: start date mustn't before today date, etc
+14-Oct-15 02:24 PM	hide 'Section G' in 'Agreement Form' page 13;
 13-Oct-15 09:45 AM	in Interactive Tender Process, set text in cc Combined_Date and Combined_Time
 02-Oct-15 11:42 AM	set default values in Contract.cs
 			prove: Ribbon->Remove Guidance function

@@ -19,6 +19,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
             TrackRecord.Enabled = contract.cbTrackRecord;
+            ExperienceVSRecord.Enabled = contract.cbTrackRecord;
         }
 
         private void RelevantExperience_ValueChanged(object sender, EventArgs e)
@@ -29,15 +30,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void TrackRecord_ValueChanged(object sender, EventArgs e)
         {
-            //### linked to track record
             contract.TrackRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
+            ExperienceVSRecord.Value = contract.TrackRecord;
         }
 
         private void ExperienceVSRecord_ValueChanged(object sender, EventArgs e)
         {
-            //### linked to track record
-            //### value <= track record value
+            if (ExperienceVSRecord.Value > TrackRecord.Value)
+            {
+                Util.Help.guidanceNote("Experience vs Track Record number should be fewer than Track Record number.");
+                ExperienceVSRecord.Value = contract.TrackRecord;
+            }
             contract.ExperienceVSRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }

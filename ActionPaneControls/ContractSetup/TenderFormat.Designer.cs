@@ -68,6 +68,7 @@
             this.RowsCount = new System.Windows.Forms.NumericUpDown();
             this.Outline_A3_Check = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.CV_Double_Check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RowsCount)).BeginInit();
             this.SuspendLayout();
@@ -471,6 +472,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // CV_Double_Check
+            // 
+            this.CV_Double_Check.AutoSize = true;
+            this.CV_Double_Check.Location = new System.Drawing.Point(184, 498);
+            this.CV_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CV_Double_Check.Name = "CV_Double_Check";
+            this.CV_Double_Check.Size = new System.Drawing.Size(15, 14);
+            this.CV_Double_Check.TabIndex = 12;
+            this.CV_Double_Check.UseVisualStyleBackColor = true;
+            this.CV_Double_Check.CheckedChanged += new System.EventHandler(this.CV_Page_TextChanged);
+            // 
             // TenderFormat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,6 +502,7 @@
             this.Controls.Add(this.CV_A3_Check);
             this.Controls.Add(this.Index_Double_Check);
             this.Controls.Add(this.Outline_A3_Check);
+            this.Controls.Add(this.CV_Double_Check);
             this.Controls.Add(this.Outline_Double_Check);
             this.Controls.Add(this.NonPrice_A3_Check);
             this.Controls.Add(this.TimeResource_Page);
@@ -567,6 +580,7 @@
         private System.Windows.Forms.NumericUpDown RowsCount;
         private System.Windows.Forms.CheckBox Outline_A3_Check;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox CV_Double_Check;
 
     }
 }

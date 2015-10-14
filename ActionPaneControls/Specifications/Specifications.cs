@@ -110,20 +110,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             Globals.ThisDocument.rtcSectionG.Range.Font.Hidden = (OtherSpecification.Checked || BridgesOther.Checked || StateHighway.Checked) ? 0 : 1;
         }
 
-        private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)
-        {
-            //### take this section out
-            contract.MultipleProjects_No = ((RadioButton)sender).Checked;
-        }
+        //private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.MultipleProjects_No = ((RadioButton)sender).Checked;
+        //}
 
-        private void MultipleProjects_Yes_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.MultipleProjects_Yes = ((RadioButton)sender).Checked;
-        }
+        //private void MultipleProjects_Yes_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.MultipleProjects_Yes = ((RadioButton)sender).Checked;
+        //}
 
-        private void Project1_TextChanged(object sender, EventArgs e)
-        {
-            contract.Project1 = ((TextBox)sender).Text;
-        }
+        //private void Project1_TextChanged(object sender, EventArgs e)
+        //{
+        //    contract.Project1 = ((TextBox)sender).Text;
+        //}
     }
 }

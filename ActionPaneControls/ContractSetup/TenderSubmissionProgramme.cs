@@ -71,10 +71,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Evaluation_Date_Changed(object sender, EventArgs e)
         {
-            //### no past date can be selected.
-            if (Evaluation_Start.Value > Evaluation_End.Value)
+            if (Evaluation_Start.Value > Evaluation_End.Value || Evaluation_Start.Value <  DateTime.Today )
             {
-                Util.Help.guidanceNote("End date should not be earlier than start date");
+                Evaluation_Start.Value = Evaluation_End.Value;
+                Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
             }
             contract.Evaluation_End = sender == Evaluation_End ? Evaluation_End.Value.ToString("O") : contract.Evaluation_End;
             contract.Evaluation_Start = sender == Evaluation_Start ? Evaluation_Start.Value.ToString("O") : contract.Evaluation_Start;
@@ -89,9 +89,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Preletting_Date_Changed(object sender, EventArgs e)
         {
-            if (PrelettingFromDate.Value > PrelettingEndDate.Value)
+            if (PrelettingFromDate.Value > PrelettingEndDate.Value || PrelettingFromDate.Value < DateTime.Today)
             {
-                Util.Help.guidanceNote("End date should not be earlier than start date");
+                PrelettingFromDate.Value = PrelettingEndDate.Value;
+                Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
             }
             contract.PrelettingFromDate = sender == PrelettingFromDate ? PrelettingFromDate.Value.ToString("O") : contract.PrelettingFromDate;
             contract.PrelettingEndDate = sender == PrelettingEndDate ? PrelettingEndDate.Value.ToString("O") : contract.PrelettingEndDate;

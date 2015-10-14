@@ -97,8 +97,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 {
                     if(RE + TR + RS + M + (((rbTP.Checked) || (rbBLO.Checked) ) ? 0 : P) == 100)  //if (RE + TR + RS + M + P == 100)
                     {
-                        if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
-                        {
+                        //if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
+                        //{
                             if (rbPQM.Checked || rbPQMPDA.Checked) //PQM and PQM+PDA
                             {
                                 if (P >= 20 && P <= 30) //check price
@@ -121,11 +121,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                                         Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
                                     }
                                 }
-                                ////for PQM and PQM+PDA, check Price 
+                                //for PQM and PQM+PDA, check Price 
                                 else 
                                 {
                                     tbP.Focus();
-                                //### Warning just for:Price 20-30%, get rid of others
                                     Util.Help.guidanceNote("Price must not be less than 20% and must not exceed 30% without specific approval");
                                     return;
                                 }
@@ -166,12 +165,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                             Util.ContentControls.setText("MethodologyWeighting", Docu.rtcMethodology.Text);
                         }
                         //weighting <10%
-                        else
-                        {
-                            Util.Help.guidanceNote("Weighting applied must not less then 10%");
-                            return;
-                        }
-                    }
+                        //else
+                        //{
+                        //    Util.Help.guidanceNote("Weighting applied must not less then 10%");
+                        //    return;
+                        //}
+                    //}
                     //add up not 100%
                     else
                     {

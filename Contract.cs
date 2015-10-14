@@ -233,6 +233,7 @@ namespace NZTA_Contract_Generator
         public Boolean Outline_Double_Check { get; set; }
         public Boolean Project_A3_Check { get; set; }
         public Boolean CV_A3_Check { get; set; }
+        public Boolean CV_Double_Check { get; set; }
         public Boolean TimeResource_A3_Check { get; set; }
         public Boolean Docu1_Check { get; set; }
         public Boolean Docu1_A3_Check { get; set; }
