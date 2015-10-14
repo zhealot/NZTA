@@ -61,7 +61,7 @@
             this.lbMissing.FormattingEnabled = true;
             this.lbMissing.Location = new System.Drawing.Point(6, 118);
             this.lbMissing.Name = "lbMissing";
-            this.lbMissing.Size = new System.Drawing.Size(249, 355);
+            this.lbMissing.Size = new System.Drawing.Size(249, 485);
             this.lbMissing.TabIndex = 1;
             // 
             // label2
@@ -83,7 +83,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "ContractPricing";
-            this.Size = new System.Drawing.Size(418, 497);
+            this.Size = new System.Drawing.Size(266, 611);
             this.ResumeLayout(false);
             this.PerformLayout();
 

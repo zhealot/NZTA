@@ -183,29 +183,11 @@
     <Compile Include="ActionPaneControls\SectionC\PaymentSchedule.Designer.cs">
       <DependentUpon>PaymentSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="ActionPaneControls\SectionC\PersonnelSchedule.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ActionPaneControls\SectionC\PersonnelSchedule.Designer.cs">
-      <DependentUpon>PersonnelSchedule.cs</DependentUpon>
-    </Compile>
     <Compile Include="ActionPaneControls\SectionC\ContractPricing.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ActionPaneControls\SectionC\ContractPricing.Designer.cs">
       <DependentUpon>ContractPricing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.Designer.cs">
-      <DependentUpon>GeotechnicalTestingSchedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.Designer.cs">
-      <DependentUpon>AdditionalServicesSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="ActionPaneControls\Specifications\Specifications.cs">
       <SubType>UserControl</SubType>
@@ -263,17 +245,8 @@
     <EmbeddedResource Include="ActionPaneControls\SectionC\PaymentSchedule.resx">
       <DependentUpon>PaymentSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ActionPaneControls\SectionC\PersonnelSchedule.resx">
-      <DependentUpon>PersonnelSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ActionPaneControls\SectionC\AdditionalServicesSchedule.resx">
-      <DependentUpon>AdditionalServicesSchedule.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ActionPaneControls\SectionC\ContractPricing.resx">
       <DependentUpon>ContractPricing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ActionPaneControls\SectionC\GeotechnicalTestingSchedule.resx">
-      <DependentUpon>GeotechnicalTestingSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActionPaneControls\Specifications\Specifications.resx">
       <DependentUpon>Specifications.cs</DependentUpon>

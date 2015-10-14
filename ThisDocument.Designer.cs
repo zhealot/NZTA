@@ -77,10 +77,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl31;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl32;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl33;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl34;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl35;
@@ -90,8 +86,6 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl37;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl38;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl40;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl50;
         
@@ -250,8 +244,6 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCostFluctuationsYes;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcDurationOfLiability;
-        
-        internal Microsoft.Office.Tools.Word.PictureContentControl pictureContentControl1;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl146;
         
@@ -437,6 +429,30 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicCopy;
         
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl171;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl172;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl173;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSectionG;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcIndividualClaus1;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcIndividualClaus2;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcAgencyOrCompany;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl174;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl175;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcBaseEstimateTenderForm;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcHourlyRateItem2;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl176;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -569,14 +585,11 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl29.BeginInit();
             this.richTextContentControl30.BeginInit();
             this.richTextContentControl31.BeginInit();
-            this.richTextContentControl32.BeginInit();
-            this.richTextContentControl33.BeginInit();
             this.richTextContentControl34.BeginInit();
             this.richTextContentControl35.BeginInit();
             this.richTextContentControl36.BeginInit();
             this.richTextContentControl37.BeginInit();
             this.richTextContentControl38.BeginInit();
-            this.richTextContentControl40.BeginInit();
             this.richTextContentControl50.BeginInit();
             this.richTextContentControl51.BeginInit();
             this.richTextContentControl52.BeginInit();
@@ -656,7 +669,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCostFluctuationsNo.BeginInit();
             this.rtcCostFluctuationsYes.BeginInit();
             this.rtcDurationOfLiability.BeginInit();
-            this.pictureContentControl1.BeginInit();
             this.richTextContentControl146.BeginInit();
             this.richTextContentControl147.BeginInit();
             this.richTextContentControl148.BeginInit();
@@ -749,6 +761,18 @@ namespace NZTA_Contract_Generator {
             this.rtcPricing_BrooksLaw.BeginInit();
             this.rtcPricing_TargetPrice.BeginInit();
             this.rtcElectronicCopy.BeginInit();
+            this.richTextContentControl171.BeginInit();
+            this.richTextContentControl172.BeginInit();
+            this.richTextContentControl173.BeginInit();
+            this.rtcSectionG.BeginInit();
+            this.rtcIndividualClaus1.BeginInit();
+            this.rtcIndividualClaus2.BeginInit();
+            this.rtcAgencyOrCompany.BeginInit();
+            this.richTextContentControl174.BeginInit();
+            this.richTextContentControl175.BeginInit();
+            this.rtcBaseEstimateTenderForm.BeginInit();
+            this.rtcHourlyRateItem2.BeginInit();
+            this.richTextContentControl176.BeginInit();
         }
         
         /// 
@@ -756,6 +780,18 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.richTextContentControl176.EndInit();
+            this.rtcHourlyRateItem2.EndInit();
+            this.rtcBaseEstimateTenderForm.EndInit();
+            this.richTextContentControl175.EndInit();
+            this.richTextContentControl174.EndInit();
+            this.rtcAgencyOrCompany.EndInit();
+            this.rtcIndividualClaus2.EndInit();
+            this.rtcIndividualClaus1.EndInit();
+            this.rtcSectionG.EndInit();
+            this.richTextContentControl173.EndInit();
+            this.richTextContentControl172.EndInit();
+            this.richTextContentControl171.EndInit();
             this.rtcElectronicCopy.EndInit();
             this.rtcPricing_TargetPrice.EndInit();
             this.rtcPricing_BrooksLaw.EndInit();
@@ -848,7 +884,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl148.EndInit();
             this.richTextContentControl147.EndInit();
             this.richTextContentControl146.EndInit();
-            this.pictureContentControl1.EndInit();
             this.rtcDurationOfLiability.EndInit();
             this.rtcCostFluctuationsYes.EndInit();
             this.rtcCostFluctuationsNo.EndInit();
@@ -928,14 +963,11 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.EndInit();
             this.richTextContentControl51.EndInit();
             this.richTextContentControl50.EndInit();
-            this.richTextContentControl40.EndInit();
             this.richTextContentControl38.EndInit();
             this.richTextContentControl37.EndInit();
             this.richTextContentControl36.EndInit();
             this.richTextContentControl35.EndInit();
             this.richTextContentControl34.EndInit();
-            this.richTextContentControl33.EndInit();
-            this.richTextContentControl32.EndInit();
             this.richTextContentControl31.EndInit();
             this.richTextContentControl30.EndInit();
             this.richTextContentControl29.EndInit();
@@ -1004,14 +1036,11 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl29 = Globals.Factory.CreateRichTextContentControl(null, null, "1661040138", "richTextContentControl29", this);
             this.richTextContentControl30 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl30", this);
             this.richTextContentControl31 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl31", this);
-            this.richTextContentControl32 = Globals.Factory.CreateRichTextContentControl(null, null, "869421511", "richTextContentControl32", this);
-            this.richTextContentControl33 = Globals.Factory.CreateRichTextContentControl(null, null, "3172821666", "richTextContentControl33", this);
             this.richTextContentControl34 = Globals.Factory.CreateRichTextContentControl(null, null, "46739209", "richTextContentControl34", this);
             this.richTextContentControl35 = Globals.Factory.CreateRichTextContentControl(null, null, "1227035432", "richTextContentControl35", this);
             this.richTextContentControl36 = Globals.Factory.CreateRichTextContentControl(null, null, "795332043", "richTextContentControl36", this);
             this.richTextContentControl37 = Globals.Factory.CreateRichTextContentControl(null, null, "799043528", "richTextContentControl37", this);
             this.richTextContentControl38 = Globals.Factory.CreateRichTextContentControl(null, null, "3806717593", "richTextContentControl38", this);
-            this.richTextContentControl40 = Globals.Factory.CreateRichTextContentControl(null, null, "2029049825", "richTextContentControl40", this);
             this.richTextContentControl50 = Globals.Factory.CreateRichTextContentControl(null, null, "3929831446", "richTextContentControl50", this);
             this.richTextContentControl51 = Globals.Factory.CreateRichTextContentControl(null, null, "1162047053", "richTextContentControl51", this);
             this.richTextContentControl52 = Globals.Factory.CreateRichTextContentControl(null, null, "447735765", "richTextContentControl52", this);
@@ -1091,7 +1120,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCostFluctuationsNo = Globals.Factory.CreateRichTextContentControl(null, null, "3417195109", "rtcCostFluctuationsNo", this);
             this.rtcCostFluctuationsYes = Globals.Factory.CreateRichTextContentControl(null, null, "3444255805", "rtcCostFluctuationsYes", this);
             this.rtcDurationOfLiability = Globals.Factory.CreateRichTextContentControl(null, null, "823473802", "rtcDurationOfLiability", this);
-            this.pictureContentControl1 = Globals.Factory.CreatePictureContentControl(null, null, "2056966668", "pictureContentControl1", this);
             this.richTextContentControl146 = Globals.Factory.CreateRichTextContentControl(null, null, "2420519530", "richTextContentControl146", this);
             this.richTextContentControl147 = Globals.Factory.CreateRichTextContentControl(null, null, "1443030410", "richTextContentControl147", this);
             this.richTextContentControl148 = Globals.Factory.CreateRichTextContentControl(null, null, "2941165581", "richTextContentControl148", this);
@@ -1184,6 +1212,18 @@ namespace NZTA_Contract_Generator {
             this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
             this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "769362992", "rtcPricing_TargetPrice", this);
             this.rtcElectronicCopy = Globals.Factory.CreateRichTextContentControl(null, null, "2623178283", "rtcElectronicCopy", this);
+            this.richTextContentControl171 = Globals.Factory.CreateRichTextContentControl(null, null, "4212590399", "richTextContentControl171", this);
+            this.richTextContentControl172 = Globals.Factory.CreateRichTextContentControl(null, null, "1189881491", "richTextContentControl172", this);
+            this.richTextContentControl173 = Globals.Factory.CreateRichTextContentControl(null, null, "497237523", "richTextContentControl173", this);
+            this.rtcSectionG = Globals.Factory.CreateRichTextContentControl(null, null, "2492049704", "rtcSectionG", this);
+            this.rtcIndividualClaus1 = Globals.Factory.CreateRichTextContentControl(null, null, "2228176193", "rtcIndividualClaus1", this);
+            this.rtcIndividualClaus2 = Globals.Factory.CreateRichTextContentControl(null, null, "552434896", "rtcIndividualClaus2", this);
+            this.rtcAgencyOrCompany = Globals.Factory.CreateRichTextContentControl(null, null, "1874032985", "rtcAgencyOrCompany", this);
+            this.richTextContentControl174 = Globals.Factory.CreateRichTextContentControl(null, null, "253093873", "richTextContentControl174", this);
+            this.richTextContentControl175 = Globals.Factory.CreateRichTextContentControl(null, null, "1419989610", "richTextContentControl175", this);
+            this.rtcBaseEstimateTenderForm = Globals.Factory.CreateRichTextContentControl(null, null, "2667127502", "rtcBaseEstimateTenderForm", this);
+            this.rtcHourlyRateItem2 = Globals.Factory.CreateRichTextContentControl(null, null, "1185715648", "rtcHourlyRateItem2", this);
+            this.richTextContentControl176 = Globals.Factory.CreateRichTextContentControl(null, null, "3226706940", "richTextContentControl176", this);
         }
         
         /// 
@@ -1313,14 +1353,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl31.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl32
-            // 
-            this.richTextContentControl32.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl33
-            // 
-            this.richTextContentControl33.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl34
             // 
             this.richTextContentControl34.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -1340,10 +1372,6 @@ namespace NZTA_Contract_Generator {
             // richTextContentControl38
             // 
             this.richTextContentControl38.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl40
-            // 
-            this.richTextContentControl40.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl50
             // 
@@ -1660,10 +1688,6 @@ namespace NZTA_Contract_Generator {
             // rtcDurationOfLiability
             // 
             this.rtcDurationOfLiability.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // pictureContentControl1
-            // 
-            this.pictureContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl146
             // 
@@ -2033,6 +2057,54 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcElectronicCopy.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // richTextContentControl171
+            // 
+            this.richTextContentControl171.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl172
+            // 
+            this.richTextContentControl172.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl173
+            // 
+            this.richTextContentControl173.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcSectionG
+            // 
+            this.rtcSectionG.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcIndividualClaus1
+            // 
+            this.rtcIndividualClaus1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcIndividualClaus2
+            // 
+            this.rtcIndividualClaus2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcAgencyOrCompany
+            // 
+            this.rtcAgencyOrCompany.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl174
+            // 
+            this.richTextContentControl174.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl175
+            // 
+            this.richTextContentControl175.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcBaseEstimateTenderForm
+            // 
+            this.rtcBaseEstimateTenderForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcHourlyRateItem2
+            // 
+            this.rtcHourlyRateItem2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl176
+            // 
+            this.richTextContentControl176.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2049,6 +2121,18 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.richTextContentControl176.Dispose();
+            this.rtcHourlyRateItem2.Dispose();
+            this.rtcBaseEstimateTenderForm.Dispose();
+            this.richTextContentControl175.Dispose();
+            this.richTextContentControl174.Dispose();
+            this.rtcAgencyOrCompany.Dispose();
+            this.rtcIndividualClaus2.Dispose();
+            this.rtcIndividualClaus1.Dispose();
+            this.rtcSectionG.Dispose();
+            this.richTextContentControl173.Dispose();
+            this.richTextContentControl172.Dispose();
+            this.richTextContentControl171.Dispose();
             this.rtcElectronicCopy.Dispose();
             this.rtcPricing_TargetPrice.Dispose();
             this.rtcPricing_BrooksLaw.Dispose();
@@ -2141,7 +2225,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl148.Dispose();
             this.richTextContentControl147.Dispose();
             this.richTextContentControl146.Dispose();
-            this.pictureContentControl1.Dispose();
             this.rtcDurationOfLiability.Dispose();
             this.rtcCostFluctuationsYes.Dispose();
             this.rtcCostFluctuationsNo.Dispose();
@@ -2221,14 +2304,11 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl52.Dispose();
             this.richTextContentControl51.Dispose();
             this.richTextContentControl50.Dispose();
-            this.richTextContentControl40.Dispose();
             this.richTextContentControl38.Dispose();
             this.richTextContentControl37.Dispose();
             this.richTextContentControl36.Dispose();
             this.richTextContentControl35.Dispose();
             this.richTextContentControl34.Dispose();
-            this.richTextContentControl33.Dispose();
-            this.richTextContentControl32.Dispose();
             this.richTextContentControl31.Dispose();
             this.richTextContentControl30.Dispose();
             this.richTextContentControl29.Dispose();

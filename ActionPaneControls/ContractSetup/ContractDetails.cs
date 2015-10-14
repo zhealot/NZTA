@@ -312,6 +312,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void numDays_TextChanged(object sender, EventArgs e)
         {
+            //use: five (5)
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
             contract.numDays = ((TextBox)sender).Text;
         }

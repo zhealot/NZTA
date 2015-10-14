@@ -43,6 +43,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             var bm8Bridges = Globals.ThisDocument.bm8BridegInPricingTable;
             var bm9Highways = Globals.ThisDocument.bm9HighwayInPricingTable;
             var bm10Geo = Globals.ThisDocument.bm10GeoInPricingTable;
+            Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
             try
             {
                 bm8Bridges.Rows[1].Cells[1].Range.SetListLevel(BridgeChkd ? (short)1 : (short)2);
@@ -92,6 +93,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             Globals.ThisDocument.rtcSubTotal11_2.Range.Text = sub++.ToString();
             Globals.ThisDocument.rtcSubTotal12.Range.Text = sub.ToString();
             Globals.ThisDocument.rtcTotal.Range.Text = sub.ToString();
+            Globals.ThisDocument.rtcSectionG.Range.Font.Hidden = (OtherSpecification.Checked || BridgesOther.Checked || StateHighway.Checked) ? 0 : 1;
+            Cursor.Current = System.Windows.Forms.Cursors.Default;
         }
 
         private void OtherSpecification_Changed(object sender, EventArgs e)
@@ -104,10 +107,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             {
                 rg.Select();
             }
+            Globals.ThisDocument.rtcSectionG.Range.Font.Hidden = (OtherSpecification.Checked || BridgesOther.Checked || StateHighway.Checked) ? 0 : 1;
         }
 
         private void MultipleProjects_No_CheckedChanged(object sender, EventArgs e)
         {
+            //### take this section out
             contract.MultipleProjects_No = ((RadioButton)sender).Checked;
         }
 

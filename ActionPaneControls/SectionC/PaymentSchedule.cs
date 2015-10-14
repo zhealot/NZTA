@@ -85,6 +85,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             rg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
             rg.Select();
+            rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
+            Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
         }
     }
 }

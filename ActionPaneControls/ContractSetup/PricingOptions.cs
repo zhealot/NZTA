@@ -35,6 +35,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
 
+            //Base Estimate Tender Form
+            rg = Globals.ThisDocument.rtcBaseEstimateTenderForm.Range;
+            Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
+
             //Base Estimate clause Body 
             rg = Globals.ThisDocument.rtcPricing_BaseEstimateBody.Range;
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);

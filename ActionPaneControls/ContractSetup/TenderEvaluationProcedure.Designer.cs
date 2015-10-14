@@ -56,6 +56,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.AuditPeriod = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,15 +288,15 @@
             // 
             this.label18.Location = new System.Drawing.Point(2, 469);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(178, 29);
+            this.label18.Size = new System.Drawing.Size(216, 23);
             this.label18.TabIndex = 46;
             this.label18.Text = "COI Notification to Probity Auditor (weeks)";
             // 
             // AuditPeriod
             // 
-            this.AuditPeriod.Location = new System.Drawing.Point(186, 469);
+            this.AuditPeriod.Location = new System.Drawing.Point(157, 495);
             this.AuditPeriod.Name = "AuditPeriod";
-            this.AuditPeriod.Size = new System.Drawing.Size(82, 20);
+            this.AuditPeriod.Size = new System.Drawing.Size(61, 20);
             this.AuditPeriod.TabIndex = 12;
             this.AuditPeriod.Value = new decimal(new int[] {
             2,
@@ -303,6 +304,16 @@
             0,
             0});
             this.AuditPeriod.ValueChanged += new System.EventHandler(this.Audit_Period_ValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(224, 469);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // TenderEvaluationProcedure
             // 
@@ -314,6 +325,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.ET4_Name);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.help1);
             this.Controls.Add(this.ET3_Company);
             this.Controls.Add(this.label8);
@@ -335,7 +347,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TenderEvaluationProcedure";
-            this.Size = new System.Drawing.Size(280, 555);
+            this.Size = new System.Drawing.Size(280, 524);
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -372,5 +384,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown AuditPeriod;
+        private System.Windows.Forms.Button button1;
     }
 }

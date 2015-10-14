@@ -60,6 +60,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void InsuranceLevel_CheckedChanged(object sender, EventArgs e)
         {
             bool blDefaultChkd = rbApprovedDefault.Checked;
+            pnGroup1.Enabled = !blDefaultChkd;
             contract.rbApprovedDefault = blDefaultChkd;
             contract.rbOtherLevels = !blDefaultChkd;
             var rgDefault = Globals.ThisDocument.rtcLimitationDefault.Range;

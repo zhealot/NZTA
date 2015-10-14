@@ -24,7 +24,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void CopyOfEnvelope_ValueChanged(object sender, EventArgs e)
         {
             contract.CopyOfEnvelope = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText("CopyOfEnvelope", Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
         }
 
         private void CoverLetter_Page_TextChanged(object sender, EventArgs e)
@@ -72,6 +72,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Index_Page_TextChanged(object sender, EventArgs e)
         {
+            //### check font colour
             contract.Index_A3_Check = (sender == Index_A3_Check) ? Index_A3_Check.Checked : contract.Index_A3_Check;
             contract.Index_Double_Check = (sender == Index_Double_Check) ? Index_Double_Check.Checked : contract.Index_Double_Check;
             if (Util.ContentControls.Validator(Index_Page.Text, typeof(int)))
@@ -159,7 +160,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     Util.ContentControls.setText("Outline_Page",
                                                 Outline_Page.Text +
                                                 ((Outline_A3_Check.Checked == true) ? " x A3 " : "") +
-                                                ((Outline_Double_Check.Checked == true) ? " x Double " : ""));
+                                                ((Outline_Double_Check.Checked == true) ? " x Double " : ""));//### 'Double Sided'
                 }
                 else 
                 {
@@ -176,6 +177,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void CV_Page_TextChanged(object sender, EventArgs e)
         {
+            //### add 'Double' and 'A3' for CVs
             contract.CV_Check = (sender == CV_Check) ? CV_Check.Checked : contract.CV_Check;
             contract.CV_A3_Check = (sender == CV_A3_Check) ? CV_A3_Check.Checked : contract.CV_A3_Check;
             if (CV_Check.Checked)

@@ -125,6 +125,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                                 else 
                                 {
                                     tbP.Focus();
+                                //### Warning just for:Price 20-30%, get rid of others
                                     Util.Help.guidanceNote("Price must not be less than 20% and must not exceed 30% without specific approval");
                                     return;
                                 }

@@ -57,6 +57,7 @@ namespace NZTA_Contract_Generator
             //Specifications
             BridgesOther = true;
             StateHighway = true;
+            OtherSpecification = true;
             MultipleProjects_No = true; 
 
             //Liability and Insurances

@@ -70,6 +70,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }
 
+        //### keep 3 positions by default, ability to add new rows
         private void ET4_Name_TextChanged(object sender, EventArgs e)
         {
             contract.ET4_Name = ((TextBox)sender).Text;
@@ -133,6 +134,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void help1_Click(object sender, EventArgs e)
         {
             Util.Help.guidanceNote("At least one TET member must be qualified for tenders >$200,000, but this does not have to be the TET Leader");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Util.Help.guidanceNote("Guidance note: must not be greater than 2 weeks");
         }
     }
 }

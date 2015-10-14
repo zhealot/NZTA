@@ -29,12 +29,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void TrackRecord_ValueChanged(object sender, EventArgs e)
         {
+            //### linked to track record
             contract.TrackRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }
 
         private void ExperienceVSRecord_ValueChanged(object sender, EventArgs e)
         {
+            //### linked to track record
+            //### value <= track record value
             contract.ExperienceVSRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
         }

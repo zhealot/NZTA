@@ -1,10 +1,7 @@
 					***** detailed instruction, buttons, ribbons, daetime pickers 
-					***** 1.10.3 wrong linkage, 'are you' means NZTA
-					***** Contract Prcing: issue of numbering new format, regex
-					***** take out "Which region will this contract based" in Contract Setup
 					***** Personnel: make Personnel Schedule & Addtitional Service Schedule exactly the same with Form B, give a warning before deleteing other rows
 							ability to add rows in PS and ASSchedule.
-					***** Give hint while processing
+14-Oct-15 02:24 PM	
 13-Oct-15 09:45 AM	in Interactive Tender Process, set text in cc Combined_Date and Combined_Time
 02-Oct-15 11:42 AM	set default values in Contract.cs
 			prove: Ribbon->Remove Guidance function

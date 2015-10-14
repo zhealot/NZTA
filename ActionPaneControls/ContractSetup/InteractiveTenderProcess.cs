@@ -117,6 +117,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 }
                 rw++;
             }
+            bool chkd = Individual1_Check.Checked || Individual2_Check.Checked || Individual3_Check.Checked || Individual4_Check.Checked || Individual5_Check.Checked;
+            var RgClause = Globals.ThisDocument.rtcIndividualClaus1.Range;
+            Util.ContentControls.RangeHideShow(ref RgClause, chkd);
+            RgClause = Globals.ThisDocument.rtcIndividualClaus2.Range;
+            Util.ContentControls.RangeHideShow(ref RgClause, chkd);
+
             tb.Range.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
         }

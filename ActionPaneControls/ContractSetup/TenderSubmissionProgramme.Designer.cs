@@ -213,7 +213,7 @@
             // 
             // Presentation_Company
             // 
-            this.Presentation_Company.Location = new System.Drawing.Point(138, 109);
+            this.Presentation_Company.Location = new System.Drawing.Point(138, 108);
             this.Presentation_Company.Name = "Presentation_Company";
             this.Presentation_Company.Size = new System.Drawing.Size(136, 20);
             this.Presentation_Company.TabIndex = 4;

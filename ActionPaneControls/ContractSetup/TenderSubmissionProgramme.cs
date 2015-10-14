@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
 
+//### go to revelant part when button or checkbox clicked.
 namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     partial class TenderSubmissionProgramme : UserControl
@@ -59,17 +60,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 }
                 else
                 {
-                    Util.ContentControls.setText("E-Copy", contract.otherDetails); 
+                    Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails); 
                 }
             }
             else
             {
-                Util.ContentControls.setText("E-Copy", "Email"); 
+                Util.ContentControls.setText("E-Copy", ""); 
             }
         }
 
         private void Evaluation_Date_Changed(object sender, EventArgs e)
         {
+            //### no past date can be selected.
             if (Evaluation_Start.Value > Evaluation_End.Value)
             {
                 Util.Help.guidanceNote("End date should not be earlier than start date");
@@ -183,6 +185,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Presentation_Street.Text = selectedEntry.Value.streetAddress;
                 Presentation_Box.Text = selectedEntry.Value.boxNumber;
                 Presentation_City.Text = selectedEntry.Value.city;
+                Util.ContentControls.setText("Presentation_Company", "Transport Agency’s office");
             }
         }
 
