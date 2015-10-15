@@ -31,7 +31,11 @@ namespace NZTA_Contract_Generator
 
             //Tender Evaluation Procedure
             AuditPeriod = 2;
-            InterviewNotice = 1;
+            TET2_Chk = true;
+            TET3_Chk = true;
+            TET4_Chk = true;
+            TET5_Chk = true;
+
 
             //Pricing Options
             BaseEstimate_Check = true;
@@ -277,7 +281,7 @@ namespace NZTA_Contract_Generator
         //End of Supplier Selection Methods
 
         //Start of Tender Evaluation Procedure
-        public String EvaluationTeamLeader { get; set; }
+        public String ETL_Name { get; set; }
         public String ETL_Position { get; set; }
         public String ETL_Company { get; set; }
         public String ET2_Name { get; set; }
@@ -293,6 +297,10 @@ namespace NZTA_Contract_Generator
         public String ET5_Position { get; set; }
         public String ET5_Company { get; set; }        
         public Decimal AuditPeriod { get; set; }
+        public Boolean TET2_Chk { get; set; }
+        public Boolean TET3_Chk { get; set; }
+        public Boolean TET4_Chk { get; set; }
+        public Boolean TET5_Chk { get; set; }
         //End of Tender Evaluation Procedure
 
         //Start of Payment Schedule

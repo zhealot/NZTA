@@ -193,7 +193,28 @@ namespace NZTA_Contract_Generator.Util
             range.SetRange(range.Start + start, range.End + end);
             range.Font.Hidden = show ? 0 : 1;
         }
+
+        //make sure table has certain number of rows
+        public static bool RowsInTable(ref Microsoft.Office.Interop.Word.Table tb, int rows)
+        {
+            try
+            {
+                int n = tb.Rows.Count - rows;
+                if (n > 0)
+                {
+                    do { tb.Rows.Last.Delete(); }
+                    while (tb.Rows.Count > rows);
+                }
+                if (n < 0)
+                {
+                    object RowsToAdd = rows - tb.Rows.Count;
+                    tb.Rows.Last.Select();
+                    Globals.ThisDocument.Application.Selection.InsertRowsBelow(ref RowsToAdd);
+                    Globals.ThisDocument.Application.Selection.Collapse();
+                }
+                return true;
+            }
+            catch (Exception ex) { return false; }
+        }
     }
-
-
 }

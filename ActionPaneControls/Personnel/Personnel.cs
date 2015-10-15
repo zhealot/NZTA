@@ -60,33 +60,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
             }
         }
 
-        //### make PS exactly the same as Fomr B
         private void btnPS_Click(object sender, EventArgs e)
         {
-            //int i = 0;
-            //foreach (var ls in lbPersonnel.Items)
-            //{
-            //    object txt = ls.ToString();
-            //    var rg = NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Tables[1].Range;
-            //    var rgConsultant = NZTA_Contract_Generator.Globals.ThisDocument.bmPS_Consultant.Tables[1].Range;
-            //    rg.Find.ClearFormatting();
-            //    rg.Find.MatchCase = false;
-            //    rg.Find.MatchWholeWord = true;
-            //    rgConsultant.Find.ClearFormatting();
-            //    rgConsultant.Find.MatchCase = false;
-            //    rgConsultant.Find.MatchWholeWord = true;
-            //    if (!rg.Find.Execute(ref txt) && !rgConsultant.Find.Execute(ref txt ))
-            //    {
-            //        NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Rows[1].Range.Copy();
-            //        NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Range.PasteAppendTable();
-            //        NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Tables[1].Rows[NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Rows[1].Index + 1].Range.Delete();
-            //        NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Tables[1].Rows[NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Rows[1].Index + 1].Cells[1].Range.Text = txt.ToString();
-            //        i++;
-            //    }
-            //}
-            //Util.Help.guidanceNote(i.ToString() + " rows were added to Personal Schedule");
-            //NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Select();
-
+            //check whether rows exist in PS not in Form B
             Globals.ThisDocument.Application.ScreenUpdating = false;
             try
             {
@@ -113,14 +89,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                Util.Help.guidanceNote("Operation not succeed: " + ex.Message);
-            }
+            catch (Exception ex) { Util.Help.guidanceNote("Operation not succeed: " + ex.Message); }
             
             try
             {
-                //skip first rows
+                //skip first rows that belong to Consultants Staff table
                 int FirstRows = 2; 
                 //delete every row in Key Personnel table and copy from Form B
                 var tb = Globals.ThisDocument.bmKeyPersonnel.Tables[1];
@@ -135,14 +108,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
                 //ASS has more rows than Form B
                 else
                 {
-                    do
-                    {
-                        tb.Rows.Last.Delete();
-                    }
+                    do { tb.Rows.Last.Delete(); }
                     while (tb.Rows.Count > lbPersonnel.Items.Count - FirstRows);
                 }
-                //copy items to Key Personnel table
-                //skip first x rows, which belong to Consultant's Staff
+                //copy items to Key Personnel table skip first x rows, which belong to Consultant's Staff
                 for (int i = FirstRows; i < lbPersonnel.Items.Count; i++)
                 {
                     tb.Rows[i - FirstRows + 1].Range.Delete();

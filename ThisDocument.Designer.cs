@@ -119,30 +119,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl66;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl69;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl70;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl71;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl72;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl73;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl74;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl75;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl76;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl77;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl78;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl79;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl80;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl84;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSupplierSelectoionMethodName;
@@ -453,6 +429,8 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmKeyPersonnel;
         
+        internal Microsoft.Office.Tools.Word.Bookmark bmTenderEvaluationTeam;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -606,18 +584,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl64.BeginInit();
             this.richTextContentControl65.BeginInit();
             this.richTextContentControl66.BeginInit();
-            this.richTextContentControl69.BeginInit();
-            this.richTextContentControl70.BeginInit();
-            this.richTextContentControl71.BeginInit();
-            this.richTextContentControl72.BeginInit();
-            this.richTextContentControl73.BeginInit();
-            this.richTextContentControl74.BeginInit();
-            this.richTextContentControl75.BeginInit();
-            this.richTextContentControl76.BeginInit();
-            this.richTextContentControl77.BeginInit();
-            this.richTextContentControl78.BeginInit();
-            this.richTextContentControl79.BeginInit();
-            this.richTextContentControl80.BeginInit();
             this.richTextContentControl84.BeginInit();
             this.rtcSupplierSelectoionMethodName.BeginInit();
             this.rtcRelevantExperience.BeginInit();
@@ -773,6 +739,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl176.BeginInit();
             this.bmASSEnd.BeginInit();
             this.bmKeyPersonnel.BeginInit();
+            this.bmTenderEvaluationTeam.BeginInit();
         }
         
         /// 
@@ -780,6 +747,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmTenderEvaluationTeam.EndInit();
             this.bmKeyPersonnel.EndInit();
             this.bmASSEnd.EndInit();
             this.richTextContentControl176.EndInit();
@@ -935,18 +903,6 @@ namespace NZTA_Contract_Generator {
             this.rtcRelevantExperience.EndInit();
             this.rtcSupplierSelectoionMethodName.EndInit();
             this.richTextContentControl84.EndInit();
-            this.richTextContentControl80.EndInit();
-            this.richTextContentControl79.EndInit();
-            this.richTextContentControl78.EndInit();
-            this.richTextContentControl77.EndInit();
-            this.richTextContentControl76.EndInit();
-            this.richTextContentControl75.EndInit();
-            this.richTextContentControl74.EndInit();
-            this.richTextContentControl73.EndInit();
-            this.richTextContentControl72.EndInit();
-            this.richTextContentControl71.EndInit();
-            this.richTextContentControl70.EndInit();
-            this.richTextContentControl69.EndInit();
             this.richTextContentControl66.EndInit();
             this.richTextContentControl65.EndInit();
             this.richTextContentControl64.EndInit();
@@ -1057,18 +1013,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl64 = Globals.Factory.CreateRichTextContentControl(null, null, "840744964", "richTextContentControl64", this);
             this.richTextContentControl65 = Globals.Factory.CreateRichTextContentControl(null, null, "1312837409", "richTextContentControl65", this);
             this.richTextContentControl66 = Globals.Factory.CreateRichTextContentControl(null, null, "2173434664", "richTextContentControl66", this);
-            this.richTextContentControl69 = Globals.Factory.CreateRichTextContentControl(null, null, "1823993579", "richTextContentControl69", this);
-            this.richTextContentControl70 = Globals.Factory.CreateRichTextContentControl(null, null, "418218952", "richTextContentControl70", this);
-            this.richTextContentControl71 = Globals.Factory.CreateRichTextContentControl(null, null, "3906922201", "richTextContentControl71", this);
-            this.richTextContentControl72 = Globals.Factory.CreateRichTextContentControl(null, null, "1328790965", "richTextContentControl72", this);
-            this.richTextContentControl73 = Globals.Factory.CreateRichTextContentControl(null, null, "850064440", "richTextContentControl73", this);
-            this.richTextContentControl74 = Globals.Factory.CreateRichTextContentControl(null, null, "136778827", "richTextContentControl74", this);
-            this.richTextContentControl75 = Globals.Factory.CreateRichTextContentControl(null, null, "3287983803", "richTextContentControl75", this);
-            this.richTextContentControl76 = Globals.Factory.CreateRichTextContentControl(null, null, "3822673428", "richTextContentControl76", this);
-            this.richTextContentControl77 = Globals.Factory.CreateRichTextContentControl(null, null, "3385651841", "richTextContentControl77", this);
-            this.richTextContentControl78 = Globals.Factory.CreateRichTextContentControl(null, null, "3670354976", "richTextContentControl78", this);
-            this.richTextContentControl79 = Globals.Factory.CreateRichTextContentControl(null, null, "516509744", "richTextContentControl79", this);
-            this.richTextContentControl80 = Globals.Factory.CreateRichTextContentControl(null, null, "2764631749", "richTextContentControl80", this);
             this.richTextContentControl84 = Globals.Factory.CreateRichTextContentControl(null, null, "379295691", "richTextContentControl84", this);
             this.rtcSupplierSelectoionMethodName = Globals.Factory.CreateRichTextContentControl(null, null, "1298791432", "rtcSupplierSelectoionMethodName", this);
             this.rtcRelevantExperience = Globals.Factory.CreateRichTextContentControl(null, null, "1640991528", "rtcRelevantExperience", this);
@@ -1224,6 +1168,7 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl176 = Globals.Factory.CreateRichTextContentControl(null, null, "3226706940", "richTextContentControl176", this);
             this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
             this.bmKeyPersonnel = Globals.Factory.CreateBookmark(null, null, "bmKeyPersonnel", "bmKeyPersonnel", this);
+            this.bmTenderEvaluationTeam = Globals.Factory.CreateBookmark(null, null, "bmTenderEvaluationTeam", "bmTenderEvaluationTeam", this);
         }
         
         /// 
@@ -1436,54 +1381,6 @@ namespace NZTA_Contract_Generator {
             // richTextContentControl66
             // 
             this.richTextContentControl66.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl69
-            // 
-            this.richTextContentControl69.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl70
-            // 
-            this.richTextContentControl70.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl71
-            // 
-            this.richTextContentControl71.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl72
-            // 
-            this.richTextContentControl72.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl73
-            // 
-            this.richTextContentControl73.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl74
-            // 
-            this.richTextContentControl74.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl75
-            // 
-            this.richTextContentControl75.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl76
-            // 
-            this.richTextContentControl76.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl77
-            // 
-            this.richTextContentControl77.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl78
-            // 
-            this.richTextContentControl78.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl79
-            // 
-            this.richTextContentControl79.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl80
-            // 
-            this.richTextContentControl80.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl84
             // 
@@ -2105,6 +2002,10 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmKeyPersonnel.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // bmTenderEvaluationTeam
+            // 
+            this.bmTenderEvaluationTeam.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2121,6 +2022,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmTenderEvaluationTeam.Dispose();
             this.bmKeyPersonnel.Dispose();
             this.bmASSEnd.Dispose();
             this.richTextContentControl176.Dispose();
@@ -2276,18 +2178,6 @@ namespace NZTA_Contract_Generator {
             this.rtcRelevantExperience.Dispose();
             this.rtcSupplierSelectoionMethodName.Dispose();
             this.richTextContentControl84.Dispose();
-            this.richTextContentControl80.Dispose();
-            this.richTextContentControl79.Dispose();
-            this.richTextContentControl78.Dispose();
-            this.richTextContentControl77.Dispose();
-            this.richTextContentControl76.Dispose();
-            this.richTextContentControl75.Dispose();
-            this.richTextContentControl74.Dispose();
-            this.richTextContentControl73.Dispose();
-            this.richTextContentControl72.Dispose();
-            this.richTextContentControl71.Dispose();
-            this.richTextContentControl70.Dispose();
-            this.richTextContentControl69.Dispose();
             this.richTextContentControl66.Dispose();
             this.richTextContentControl65.Dispose();
             this.richTextContentControl64.Dispose();
