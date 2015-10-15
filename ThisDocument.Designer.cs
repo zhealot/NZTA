@@ -281,8 +281,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmPersonalAbove;
         
-        internal Microsoft.Office.Tools.Word.Bookmark bmASSEnd;
-        
         internal Microsoft.Office.Tools.Word.Bookmark bmPSEnd;
         
         internal Microsoft.Office.Tools.Word.Bookmark bmPS_Consultant;
@@ -452,6 +450,8 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcHourlyRateItem2;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl176;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmASSEnd;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -687,7 +687,6 @@ namespace NZTA_Contract_Generator {
             this.bmPersonalStart.BeginInit();
             this.bmPersonalEnd.BeginInit();
             this.bmPersonalAbove.BeginInit();
-            this.bmASSEnd.BeginInit();
             this.bmPSEnd.BeginInit();
             this.bmPS_Consultant.BeginInit();
             this.bmContractPaymentSchedule.BeginInit();
@@ -773,6 +772,7 @@ namespace NZTA_Contract_Generator {
             this.rtcBaseEstimateTenderForm.BeginInit();
             this.rtcHourlyRateItem2.BeginInit();
             this.richTextContentControl176.BeginInit();
+            this.bmASSEnd.BeginInit();
         }
         
         /// 
@@ -780,6 +780,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmASSEnd.EndInit();
             this.richTextContentControl176.EndInit();
             this.rtcHourlyRateItem2.EndInit();
             this.rtcBaseEstimateTenderForm.EndInit();
@@ -865,7 +866,6 @@ namespace NZTA_Contract_Generator {
             this.bmContractPaymentSchedule.EndInit();
             this.bmPS_Consultant.EndInit();
             this.bmPSEnd.EndInit();
-            this.bmASSEnd.EndInit();
             this.bmPersonalAbove.EndInit();
             this.bmPersonalEnd.EndInit();
             this.bmPersonalStart.EndInit();
@@ -1138,7 +1138,6 @@ namespace NZTA_Contract_Generator {
             this.bmPersonalStart = Globals.Factory.CreateBookmark(null, null, "bmPersonalStart", "bmPersonalStart", this);
             this.bmPersonalEnd = Globals.Factory.CreateBookmark(null, null, "bmPersonalEnd", "bmPersonalEnd", this);
             this.bmPersonalAbove = Globals.Factory.CreateBookmark(null, null, "bmPersonalAbove", "bmPersonalAbove", this);
-            this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
             this.bmPSEnd = Globals.Factory.CreateBookmark(null, null, "bmPSEnd", "bmPSEnd", this);
             this.bmPS_Consultant = Globals.Factory.CreateBookmark(null, null, "bmPS_Consultant", "bmPS_Consultant", this);
             this.bmContractPaymentSchedule = Globals.Factory.CreateBookmark(null, null, "bmContractPaymentSchedule", "bmContractPaymentSchedule", this);
@@ -1224,6 +1223,7 @@ namespace NZTA_Contract_Generator {
             this.rtcBaseEstimateTenderForm = Globals.Factory.CreateRichTextContentControl(null, null, "2667127502", "rtcBaseEstimateTenderForm", this);
             this.rtcHourlyRateItem2 = Globals.Factory.CreateRichTextContentControl(null, null, "1185715648", "rtcHourlyRateItem2", this);
             this.richTextContentControl176 = Globals.Factory.CreateRichTextContentControl(null, null, "3226706940", "richTextContentControl176", this);
+            this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
         }
         
         /// 
@@ -1761,10 +1761,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmPersonalAbove.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // bmASSEnd
-            // 
-            this.bmASSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // bmPSEnd
             // 
             this.bmPSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2105,6 +2101,10 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl176.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // bmASSEnd
+            // 
+            this.bmASSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2121,6 +2121,7 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmASSEnd.Dispose();
             this.richTextContentControl176.Dispose();
             this.rtcHourlyRateItem2.Dispose();
             this.rtcBaseEstimateTenderForm.Dispose();
@@ -2206,7 +2207,6 @@ namespace NZTA_Contract_Generator {
             this.bmContractPaymentSchedule.Dispose();
             this.bmPS_Consultant.Dispose();
             this.bmPSEnd.Dispose();
-            this.bmASSEnd.Dispose();
             this.bmPersonalAbove.Dispose();
             this.bmPersonalEnd.Dispose();
             this.bmPersonalStart.Dispose();

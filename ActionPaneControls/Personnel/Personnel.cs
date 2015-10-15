@@ -86,31 +86,80 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
             }
             Util.Help.guidanceNote(i.ToString() + " rows were added to Personal Schedule");
             NZTA_Contract_Generator.Globals.ThisDocument.bmPSEnd.Select();
+
+            
         }
 
         private void btnASS_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            foreach (var ls in lbPersonnel.Items)
+            //check whether some rows in ASS not existed in Form B
+            Globals.ThisDocument.Application.ScreenUpdating = false;
+            var tb = Globals.ThisDocument.bmASSEnd.Tables[1];
+            try
             {
-                object txt = ls.ToString();
-                var rg = NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Tables[1].Range;
-                rg.Find.ClearFormatting();
-                rg.Find.MatchWholeWord = true;
-                rg.Find.MatchCase = false;
-                if (!rg.Find.Execute(ref txt))
+                Microsoft.Office.Interop.Word.Range rgFormB;
+                for (int j = 2; j < Globals.ThisDocument.bmASSEnd.Rows[1].Index; j++)
                 {
-                    //NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Rows.Add().Cells[2].Range.Text = txt.ToString();
-                    //NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Select();
-                    NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Rows[1].Range.Copy();
-                    NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Range.PasteAppendTable();
-                    NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Tables[1].Rows[NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Rows[1].Index + 1].Range.Delete();
-                    NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Tables[1].Rows[NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Rows[1].Index + 1].Cells[2].Range.Text = txt.ToString();
-                    i++;
-                }                
+                    rgFormB = Globals.ThisDocument.bmPersonalStart.Tables[1].Range;
+                    rgFormB.Find.ClearFormatting();
+                    rgFormB.Find.MatchWholeWord = true;
+                    rgFormB.Find.MatchCase = false;
+                    rgFormB.Find.Forward = true;
+                    rgFormB.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindStop;
+                    if (tb.Rows[j].Cells[2].Range.Text.Replace("\r\a", "").Trim() == "") continue;
+                    rgFormB.Find.Text = tb.Rows[j].Cells[2].Range.Text.Replace("\r\a", "").Trim();
+                    rgFormB.Find.Execute();
+                    if (!rgFormB.Find.Found || rgFormB.Cells[1].ColumnIndex != 1 
+                        || rgFormB.Start > Globals.ThisDocument.bmPersonalEnd.Range.End
+                        || rgFormB.End < Globals.ThisDocument.bmPersonalStart.Start)
+                    {
+                        if (MessageBox.Show("There're some entries that not existed in Form B, and this operation will delete them, continue?", "Continue Transfer",
+                            MessageBoxButtons.YesNo) ==DialogResult.No) return;
+                        else break;
+                    }
+                }
             }
-            Util.Help.guidanceNote(i.ToString() + " rows were added to Additional Service Schedule");
-            NZTA_Contract_Generator.Globals.ThisDocument.bmASSEnd.Select();
+            catch (Exception ex)
+            {
+                Util.Help.guidanceNote("Operation not succeed" + ex.Message);
+            }
+
+            try
+            {
+                //delete every row in ASS and copy from Form B
+                object n = lbPersonnel.Items.Count - (Globals.ThisDocument.bmASSEnd.Rows[1].Index - 2);
+                //ASS has fewer rows than Form B
+                if ((int)n >= 0)
+                {
+                    tb.Rows[Globals.ThisDocument.bmASSEnd.Rows[1].Index - 1].Select();
+                    Globals.ThisDocument.Application.Selection.InsertRowsBelow(ref n);
+                    Globals.ThisDocument.Application.Selection.Collapse();
+                }
+                //ASS has more rows than Form B
+                else
+                {
+                    do
+                    {
+                        tb.Rows[Globals.ThisDocument.bmASSEnd.Rows[1].Index - 1].Delete();
+                    }
+                    while (Globals.ThisDocument.bmASSEnd.Rows[1].Index - 2 > lbPersonnel.Items.Count);
+                }
+                //copy items to ASS
+                int i = 2;
+                foreach (var item in lbPersonnel.Items)
+                {
+                    tb.Rows[i].Range.Delete();
+                    tb.Rows[i].Cells[1].Range.Text = (i - 1).ToString();
+                    tb.Rows[i].Cells[2].Range.Text = item.ToString();
+                    i++;
+                }
+                tb.Select();
+            }
+            catch(Exception ex)
+            {
+                Util.Help.guidanceNote("Operation not succeed" + ex.Message);
+            }
+            Globals.ThisDocument.Application.ScreenUpdating = true; 
         }
 
         private void lbPersonnel_SelectedIndexChanged(object sender, EventArgs e)
