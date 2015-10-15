@@ -65,7 +65,6 @@
             this.tbWeighting.Name = "tbWeighting";
             this.tbWeighting.Size = new System.Drawing.Size(64, 498);
             this.tbWeighting.TabIndex = 1;
-            this.tbWeighting.TextChanged += new System.EventHandler(this.tbWeighting_TextChanged);
             // 
             // btnPS
             // 
