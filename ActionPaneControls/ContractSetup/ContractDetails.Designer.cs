@@ -92,9 +92,7 @@
             this.Address_2 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.numDays = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.numHours = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -102,6 +100,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numHours = new System.Windows.Forms.NumericUpDown();
+            this.numDays = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.Consultant_Name = new System.Windows.Forms.TextBox();
@@ -121,6 +121,8 @@
             this.gbGeo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDays)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -703,33 +705,17 @@
             // 
             this.label33.Location = new System.Drawing.Point(3, 31);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(267, 28);
+            this.label33.Size = new System.Drawing.Size(170, 31);
             this.label33.TabIndex = 68;
             this.label33.Text = "Number of days enquiries must be raised before the Tender closes:";
             // 
-            // numDays
-            // 
-            this.numDays.Location = new System.Drawing.Point(6, 72);
-            this.numDays.Name = "numDays";
-            this.numDays.Size = new System.Drawing.Size(136, 20);
-            this.numDays.TabIndex = 0;
-            this.numDays.TextChanged += new System.EventHandler(this.numDays_TextChanged);
-            // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(6, 97);
+            this.label34.Location = new System.Drawing.Point(3, 71);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(301, 17);
+            this.label34.Size = new System.Drawing.Size(162, 30);
             this.label34.TabIndex = 70;
             this.label34.Text = "Number of hours NZTA client will endeavour to answer within:";
-            // 
-            // numHours
-            // 
-            this.numHours.Location = new System.Drawing.Point(6, 117);
-            this.numHours.Name = "numHours";
-            this.numHours.Size = new System.Drawing.Size(136, 20);
-            this.numHours.TabIndex = 1;
-            this.numHours.TextChanged += new System.EventHandler(this.numHours_TextChanged);
             // 
             // groupBox1
             // 
@@ -836,15 +822,41 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.numHours);
-            this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.numDays);
+            this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(4, 1404);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(327, 148);
+            this.groupBox4.Size = new System.Drawing.Size(327, 113);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
+            // 
+            // numHours
+            // 
+            this.numHours.Location = new System.Drawing.Point(222, 69);
+            this.numHours.Name = "numHours";
+            this.numHours.Size = new System.Drawing.Size(62, 20);
+            this.numHours.TabIndex = 71;
+            this.numHours.Value = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.numHours.ValueChanged += new System.EventHandler(this.numHours_ValueChanged);
+            // 
+            // numDays
+            // 
+            this.numDays.Location = new System.Drawing.Point(222, 31);
+            this.numDays.Name = "numDays";
+            this.numDays.Size = new System.Drawing.Size(62, 20);
+            this.numDays.TabIndex = 71;
+            this.numDays.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numDays.ValueChanged += new System.EventHandler(this.numDays_ValueChanged);
             // 
             // groupBox6
             // 
@@ -1005,7 +1017,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(338, 1575);
+            this.Size = new System.Drawing.Size(338, 1539);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1017,6 +1029,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDays)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -1092,9 +1106,7 @@
         private System.Windows.Forms.ComboBox Address_2;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox numDays;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox numHours;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1118,6 +1130,8 @@
         private System.Windows.Forms.DateTimePicker CloseDate;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
+        private System.Windows.Forms.NumericUpDown numHours;
+        private System.Windows.Forms.NumericUpDown numDays;
 
     }
 }

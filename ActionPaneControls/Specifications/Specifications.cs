@@ -95,6 +95,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             Globals.ThisDocument.rtcTotal.Range.Text = sub.ToString();
             Globals.ThisDocument.rtcSectionG.Range.Font.Hidden = (OtherSpecification.Checked || BridgesOther.Checked || StateHighway.Checked) ? 0 : 1;
             Cursor.Current = System.Windows.Forms.Cursors.Default;
+            Globals.ThisDocument.rtcSectionG.Range.Select();
         }
 
         private void OtherSpecification_Changed(object sender, EventArgs e)

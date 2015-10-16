@@ -76,6 +76,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Select();
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
+            Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Select();
         }
     }
 }

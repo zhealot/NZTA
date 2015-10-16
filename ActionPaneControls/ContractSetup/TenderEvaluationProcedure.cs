@@ -26,6 +26,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     throw new Exception();
                 }
                 tb.Rows[2].Range.Text = ETL_Name.Text + ", " + ETL_Company.Text + ", " + ETL_Position.Text + ". (Leader)";
+                tb.Range.Select();
             }
             catch (Exception ex)
             {
@@ -46,6 +47,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     txt += ", " + ((TextBox)this.Controls.Find("ET" + n.ToString() + "_Position", true)[0]).Text;
                     txt += ", " + ((TextBox)this.Controls.Find("ET" + n.ToString() + "_Company", true)[0]).Text+".";
                     tb.Rows[n + 1].Cells[1].Range.Text = txt;
+                    tb.Range.Select();
                 }
             }
             catch (Exception ex) { Util.Help.guidanceNote("Failed: " + ex.Message); }
@@ -62,6 +64,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 {
                     ((GroupBox)this.Controls.Find("gbTET" + n.ToString(), true)[0]).Enabled = ((CheckBox)sender).Checked;
                     Globals.ThisDocument.bmTenderEvaluationTeam.Tables[1].Rows[n + 1].Range.Font.Hidden = ((CheckBox)sender).Checked ? 0 : 1;
+                    tb.Range.Select();
                 }
             }
             catch (Exception ex) { Util.Help.guidanceNote("Failed: " + ex.Message); }
@@ -79,6 +82,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 contract.AuditPeriod = ((NumericUpDown)sender).Value;
                 Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s" : ""));
+                Globals.ThisDocument.rtcAuditPeriod.Range.Select();
             }
         }
 

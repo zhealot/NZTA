@@ -26,6 +26,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             contract.RelevantExperience = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
+            Globals.ThisDocument.rtcRelevantExperienceProjects.Range.Select();
         }
 
         private void TrackRecord_ValueChanged(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             contract.TrackRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
             ExperienceVSRecord.Value = contract.TrackRecord;
+            Globals.ThisDocument.rtcTrackRecordProjects.Range.Select();
         }
 
         private void ExperienceVSRecord_ValueChanged(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             {
                 Util.Help.guidanceNote("Experience vs Track Record number should be fewer than Track Record number.");
                 ExperienceVSRecord.Value = contract.TrackRecord;
+                Globals.ThisDocument.rtcExVsRecordProjects.Range.Select();
             }
             contract.ExperienceVSRecord = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value));
@@ -134,6 +137,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             FormC_MethStart.Select();
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
+            Globals.ThisDocument.FormC_MethStart.Select();
+
         }
 
         private void lbMeths_SelectedIndexChanged(object sender, EventArgs e)

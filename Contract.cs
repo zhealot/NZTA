@@ -21,8 +21,8 @@ namespace NZTA_Contract_Generator
             //Contract Details
             geoYes = true;
             provisionalSum = true;
-            numDays = "eight";
-            numHours = "48";
+            numDays = 8;
+            numHours = 48;
             elecNo = true;
             CostIndex = 0.80m;
             altTenderYes = true;
@@ -132,8 +132,8 @@ namespace NZTA_Contract_Generator
         public String Fax_2 { get; set; }
         public String Email_2 { get; set; }
 
-        public String numDays { get; set; }
-        public String numHours { get; set; }
+        public Decimal numDays { get; set; }
+        public Decimal numHours { get; set; }
 
         public Boolean checkBox1 { get; set; }
 

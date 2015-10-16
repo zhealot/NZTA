@@ -44,14 +44,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             rgNo.Font.Hidden = blChkd ? 1 : 0;
             rgYes.SetRange(rgYes.Start - 1, rgYes.End + 2);
             rgYes.Font.Hidden = blChkd ? 0 : 1;
-            if (blChkd)
-            { 
-                rgYes.Select();
-            }
-            else
-            {
-                rgNo.Select();
-            }
+            if (blChkd) { rgYes.Select(); }
+            else { rgNo.Select(); }
         }
 
         private void CostIndex_ValueChanged(object sender, EventArgs e)
@@ -59,6 +53,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             contract.CostIndex = CostIndex.Value;
             Util.ContentControls.setText("CostIndex1", CostIndex.Value.ToString());
             Util.ContentControls.setText("CostIndex2", (1 - CostIndex.Value).ToString());
+            Globals.ThisDocument.rtcCostIndex1.Range.Select();
         }
 
         private void UnitRate_chk_CheckedChanged(object sender, EventArgs e)

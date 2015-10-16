@@ -34,6 +34,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             var rg = Globals.ThisDocument.rtcPricing_BaseEstimateTitle.Range;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
+            if (BaseChkd) rg.Select();
 
             //Base Estimate Tender Form
             rg = Globals.ThisDocument.rtcBaseEstimateTenderForm.Range;
@@ -48,12 +49,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             style = BaseChkd && BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BrooksLaw_Check.Checked && BaseChkd);
+            if (BrooksLaw_Check.Checked) rg.Select();
 
             //Target Price clause 
             rg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
             style = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, !BaseChkd);
+            if (!BaseChkd) rg.Select();
 
             //Target Price Tender Form
             rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
@@ -79,6 +82,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (Util.ContentControls.StringToCurrency(((TextBox)sender).Text) != null)
             {
                 Util.ContentControls.setText(((TextBox)sender).Name, Util.ContentControls.StringToCurrency(((TextBox)sender).Text));
+                Globals.ThisDocument.rtcBaseEstimateAmount.Range.Select();
             }
             else
                 Util.Help.guidanceNote("Please enter a number");
@@ -90,6 +94,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (Util.ContentControls.StringToCurrency(((TextBox)sender).Text) != null)
             {
                 Util.ContentControls.setText(((TextBox)sender).Name, Util.ContentControls.StringToCurrency(((TextBox)sender).Text));
+                Globals.ThisDocument.rtcProvisionalSumAmount.Range.Select();
             }
             else
                 Util.Help.guidanceNote("Please enter a number");
@@ -105,6 +110,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 if (Decimal.TryParse(((TextBox)sender).Text,out amnt))
                 {
                     TargetPriceAmountInWords.Text = Util.ContentControls.DecimalToWords(amnt);
+                    Globals.ThisDocument.rtcTargetPriceAmount.Range.Select();
                 }
                 else
                     Util.Help.guidanceNote("Please enter a number");

@@ -82,7 +82,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Box_1.Text = selectedEntry.Value.boxNumber;
                 City_1.Text = selectedEntry.Value.city;
                 Telephone_1.Text = selectedEntry.Value.telephone;
-                Fax_1.Text = selectedEntry.Value.fax;                
+                Fax_1.Text = selectedEntry.Value.fax;
+                Globals.ThisDocument.rtcAddress1.Range.Select();
             }
         }
 
@@ -98,12 +99,16 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             var GeoRg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
             var PSRg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
             var SRg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            GeoRg.SetRange(GeoRg.Start - 1, GeoRg.End + 2);
-            PSRg.SetRange(PSRg.Start - 1, PSRg.End + 2);
-            SRg.SetRange(SRg.Start - 1, SRg.End + 2);
-            GeoRg.Font.Hidden = YesChkd ? 0 : 1;
-            PSRg.Font.Hidden = (YesChkd && PSChkd) ? 0 : 1;
-            SRg.Font.Hidden = (YesChkd && !PSChkd) ? 0 : 1;
+            Util.ContentControls.RangeHideShow(ref GeoRg, YesChkd);
+            Util.ContentControls.RangeHideShow(ref PSRg, (YesChkd && PSChkd));
+            Util.ContentControls.RangeHideShow(ref SRg, (YesChkd && !PSChkd));
+            //GeoRg.SetRange(GeoRg.Start - 1, GeoRg.End + 2);
+            //PSRg.SetRange(PSRg.Start - 1, PSRg.End + 2);
+            //SRg.SetRange(SRg.Start - 1, SRg.End + 2);
+            //GeoRg.Font.Hidden = YesChkd ? 0 : 1;
+            //PSRg.Font.Hidden = (YesChkd && PSChkd) ? 0 : 1;
+            //SRg.Font.Hidden = (YesChkd && !PSChkd) ? 0 : 1;
+            GeoRg.Select();
         }
 
         private void help2_Click(object sender, EventArgs e)
@@ -117,6 +122,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.Nominated_Person = ((TextBox)sender).Text;
             object here = Globals.ThisDocument.SelectContentControlsByTag(((TextBox)sender).Name)[1].Range;
             Globals.ThisDocument.Application.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToObject, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 1, ref here);
+            Globals.ThisDocument.rtcNominatedPerson.Range.Select();
         }
 
         private void Nominated_Email_TextChanged(object sender, EventArgs e)
@@ -244,6 +250,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.TenderBox = selectedEntry.Key;
                 Util.ContentControls.setText(((ComboBox)sender).Name, selectedEntry.Value.building + ", " + selectedEntry.Value.streetAddress + ", " + selectedEntry.Value.city);
+                Globals.ThisDocument.rtcTenderBox.Range.Select();
             }
         }
 
@@ -310,19 +317,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }        
 
-        private void numDays_TextChanged(object sender, EventArgs e)
-        {
-            //use: five (5)
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            contract.numDays = ((TextBox)sender).Text;
-        }
-
-        private void numHours_TextChanged(object sender, EventArgs e)
-        {
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            contract.numHours = ((TextBox)sender).Text;
-        }
-
         private void Nominated_Email_Leave(object sender, EventArgs e)
         {
             if (Util.ContentControls.IsEmail(((TextBox)sender).Text))
@@ -352,6 +346,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
                 Util.ContentControls.setText("Date_Month", MadeDate.Value.ToString("MMM"));
                 Util.ContentControls.setText("Date_Year", MadeDate.Value.Year.ToString());
+                Globals.ThisDocument.rtcContractDate.Range.Select();
             }
             
         }
@@ -378,6 +373,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.CloseDate = CloseDate.Value.ToString("O");
             Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString(GlobalVar.DateFormat));
+            Globals.ThisDocument.rtcCloseDate.Range.Select();
         }
 
         private void Email_1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -407,6 +403,20 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             rg = Globals.ThisDocument.rtcStatementOfInterestAbilityCloseTitle.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = chkd ? 0 : 1;
+        }
+
+        private void numDays_ValueChanged(object sender, EventArgs e)
+        {
+            contract.numDays = numDays.Value;
+            Util.ContentControls.setText(numDays.Name, numDays.Value.ToString() + " (" + Util.ContentControls.NumberToWords((int)numDays.Value) + ")");
+            Globals.ThisDocument.rtcEnquiryDays.Range.Select();
+        }
+
+        private void numHours_ValueChanged(object sender, EventArgs e)
+        {
+            contract.numHours = numHours.Value;
+            Util.ContentControls.setText(numHours.Name, numHours.Value.ToString() + " (" + Util.ContentControls.NumberToWords((int)numHours.Value) + ")");
+            Globals.ThisDocument.rtcEnquiryHours.Range.Select();
         }
     }
 }

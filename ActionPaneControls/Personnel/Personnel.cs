@@ -58,6 +58,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
                     Util.Help.guidanceNote("Weightings must add to 100");
                 }
             }
+            tbl.Select();
         }
 
         private void btnPS_Click(object sender, EventArgs e)
@@ -124,7 +125,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
             {
                 Util.Help.guidanceNote("Operation not succeed" + ex.Message);
             }
-            Globals.ThisDocument.Application.ScreenUpdating = true; 
+            Globals.ThisDocument.Application.ScreenUpdating = true;
+            Globals.ThisDocument.bmKeyPersonnel.Tables[1].Select();
         }
 
         private void btnASS_Click(object sender, EventArgs e)
@@ -196,7 +198,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
             {
                 Util.Help.guidanceNote("Operation not succeed" + ex.Message);
             }
-            Globals.ThisDocument.Application.ScreenUpdating = true; 
+            Globals.ThisDocument.Application.ScreenUpdating = true;
+            Globals.ThisDocument.bmASSEnd.Tables[1].Select();
         }
 
         private void lbPersonnel_SelectedIndexChanged(object sender, EventArgs e)

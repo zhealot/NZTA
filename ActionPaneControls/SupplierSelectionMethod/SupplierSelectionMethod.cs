@@ -37,6 +37,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             }
             //### show/hide clauses base on cbTrackRecord status, there should be a better way to achieve this
             cbTrackRecord_CheckedChanged(null, null);
+            Globals.ThisDocument.Supplier_Selection_Method.Select();
         }
 
         private void rbPQM_CheckedChanged(object sender, EventArgs e)
@@ -163,6 +164,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                             Util.ContentControls.setText("TrackRecordWeighting", Docu.rtcTrackRecord.Text);
                             Util.ContentControls.setText("RelevantSkillsWeighting", Docu.rtcRelevantSkills.Text);
                             Util.ContentControls.setText("MethodologyWeighting", Docu.rtcMethodology.Text);
+                            Globals.ThisDocument.rtcSupplierSelectoionMethodName.Range.Select();
                         }
                         //weighting <10%
                         //else

@@ -43,7 +43,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
             Rg.SetRange(Rg.Start - 1, Rg.End + 2);
             Rg.Font.Hidden = YesChkd ? 0 : 1;
-            Rg.Select();
+            if (YesChkd) Rg.Select();
         }
 
         private void anotherMeans_Changed(object sender, EventArgs e)
@@ -60,7 +60,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 }
                 else
                 {
-                    Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails); 
+                    Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+                    Globals.ThisDocument.rtcECopy.Range.Select();
                 }
             }
             else
@@ -75,6 +76,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Evaluation_Start.Value = Evaluation_End.Value;
                 Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
+                Globals.ThisDocument.rtcEvaluationPeriod.Range.Select();
             }
             contract.Evaluation_End = sender == Evaluation_End ? Evaluation_End.Value.ToString("O") : contract.Evaluation_End;
             contract.Evaluation_Start = sender == Evaluation_Start ? Evaluation_Start.Value.ToString("O") : contract.Evaluation_Start;
@@ -93,6 +95,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 PrelettingFromDate.Value = PrelettingEndDate.Value;
                 Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
+                Globals.ThisDocument.rtcPrelettingPeriod.Range.Select();
             }
             contract.PrelettingFromDate = sender == PrelettingFromDate ? PrelettingFromDate.Value.ToString("O") : contract.PrelettingFromDate;
             contract.PrelettingEndDate = sender == PrelettingEndDate ? PrelettingEndDate.Value.ToString("O") : contract.PrelettingEndDate;
@@ -109,6 +112,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.TargetDate = ((DateTimePicker)sender).Value.ToString("O");
             Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString(GlobalVar.DateFormat));
+            Globals.ThisDocument.rtcTargetDate.Range.Select();
         }
 
         private void Presentations_Changed(object sender, EventArgs e)
@@ -130,11 +134,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.InterviewCity = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcInterviewCity.Range.Select();
         }
         private void InterviewNotice_ValueChanged(object sender, EventArgs e)
         {
             contract.InterviewNotice = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s'" : "'s"));
+            Globals.ThisDocument.rtcInterviewNotice.Range.Select();
         }
         private void PrelettingMetting_Changed(object sender, EventArgs e)
         {
@@ -194,18 +200,21 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Presentation_Company = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcAgencyOrCompany.Range.Select();
         }
 
         private void Presentation_Level_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Building = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcPresentationLevel.Range.Select();
         }
 
         private void Presentation_Street_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Street = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcPresentationStreet.Range.Select();
         }
 
         private void Presentation_Box_TextChanged(object sender, EventArgs e)
@@ -218,6 +227,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Presentation_City = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcPresentationCity.Range.Select();
         }
 
         private void help1_Click(object sender, EventArgs e)
