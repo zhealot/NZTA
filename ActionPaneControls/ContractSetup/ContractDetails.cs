@@ -14,6 +14,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public ContractDetails()
         {
             InitializeComponent();
+
+            //display build date
+            System.Reflection.Assembly asbly = System.Reflection.Assembly.GetCallingAssembly();
+            System.IO.FileInfo fileInfo = new System.IO.FileInfo(asbly.Location);
+            DateTime lastModified = fileInfo.LastWriteTime;
+            lblBuiltDate.Text = "Built: " + lastModified.ToShortDateString() + ", " + lastModified.ToShortTimeString();
+
             //Load any data
             ignoreChange = true;            
             //Address combobox

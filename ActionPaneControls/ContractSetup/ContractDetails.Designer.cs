@@ -116,6 +116,7 @@
             this.CloseDate = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
             this.StatementOfInterestAbilityClose_Chk = new System.Windows.Forms.CheckBox();
+            this.lblBuiltDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbGeo.SuspendLayout();
@@ -828,7 +829,7 @@
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(4, 1404);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(327, 113);
+            this.groupBox4.Size = new System.Drawing.Size(327, 106);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
@@ -995,10 +996,19 @@
             this.StatementOfInterestAbilityClose_Chk.UseVisualStyleBackColor = true;
             this.StatementOfInterestAbilityClose_Chk.CheckedChanged += new System.EventHandler(this.StatementOfInterestAbilityClose_Chk_CheckedChanged);
             // 
+            // lblBuiltDate
+            // 
+            this.lblBuiltDate.AutoSize = true;
+            this.lblBuiltDate.Location = new System.Drawing.Point(211, 1513);
+            this.lblBuiltDate.Name = "lblBuiltDate";
+            this.lblBuiltDate.Size = new System.Drawing.Size(0, 13);
+            this.lblBuiltDate.TabIndex = 46;
+            // 
             // ContractDetails
             // 
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.Controls.Add(this.lblBuiltDate);
             this.Controls.Add(this.StatementOfInterestAbilityClose_Chk);
             this.Controls.Add(this.CloseDate);
             this.Controls.Add(this.label35);
@@ -1132,6 +1142,7 @@
         private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
         private System.Windows.Forms.NumericUpDown numHours;
         private System.Windows.Forms.NumericUpDown numDays;
+        private System.Windows.Forms.Label lblBuiltDate;
 
     }
 }

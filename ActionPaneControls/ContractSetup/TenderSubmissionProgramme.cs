@@ -4,7 +4,6 @@ using System.Text;
 using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
 
-//### go to revelant part when button or checkbox clicked.
 namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     partial class TenderSubmissionProgramme : UserControl
