@@ -67,7 +67,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.RowsCount = new System.Windows.Forms.NumericUpDown();
             this.Outline_A3_Check = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.CV_Double_Check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.CopyOfEnvelope)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RowsCount)).BeginInit();
@@ -462,16 +461,6 @@
             this.Outline_A3_Check.UseVisualStyleBackColor = true;
             this.Outline_A3_Check.CheckedChanged += new System.EventHandler(this.Outline_Page_TextChanged);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(171, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // CV_Double_Check
             // 
             this.CV_Double_Check.AutoSize = true;
@@ -489,7 +478,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Project_Check);
@@ -579,7 +567,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown RowsCount;
         private System.Windows.Forms.CheckBox Outline_A3_Check;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox CV_Double_Check;
 
     }

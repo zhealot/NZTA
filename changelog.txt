@@ -1,6 +1,5 @@
 					***** detailed instruction, buttons, ribbons, daetime pickers 
-					***** Personnel: make Personnel Schedule & Addtitional Service Schedule exactly the same with Form B, give a warning before deleteing other rows
-							ability to add rows in PS and ASSchedule.
+19-Oct-15 09:58 AM	add: add-in built date&time in ContractDetails Pane.
 16-Oct-15 04:27 PM	go to relevant part of document after action;
 			hide/show rows in Tender Eveluation Team table
 			according to selection.
