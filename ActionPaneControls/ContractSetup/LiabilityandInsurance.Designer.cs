@@ -137,6 +137,7 @@
             this.PublicLiabilityInsurance.Name = "PublicLiabilityInsurance";
             this.PublicLiabilityInsurance.Size = new System.Drawing.Size(225, 20);
             this.PublicLiabilityInsurance.TabIndex = 16;
+            this.PublicLiabilityInsurance.TextChanged += new System.EventHandler(this.PublicLiabilityInsurance_TextChanged);
             // 
             // label5
             // 
@@ -154,6 +155,7 @@
             this.DurationOfLiability.Size = new System.Drawing.Size(225, 20);
             this.DurationOfLiability.TabIndex = 15;
             this.DurationOfLiability.Text = "six years from the date of completion of Services";
+            this.DurationOfLiability.TextChanged += new System.EventHandler(this.DurationOfLiability_TextChanged);
             // 
             // label4
             // 
@@ -169,6 +171,7 @@
             this.MaximumLiability.Name = "MaximumLiability";
             this.MaximumLiability.Size = new System.Drawing.Size(225, 20);
             this.MaximumLiability.TabIndex = 14;
+            this.MaximumLiability.TextChanged += new System.EventHandler(this.MaximumLiability_TextChanged);
             // 
             // label3
             // 

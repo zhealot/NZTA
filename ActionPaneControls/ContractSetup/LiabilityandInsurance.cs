@@ -19,17 +19,17 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void PublicLiabilityInsurance_TextChanged(object sender, EventArgs e)
         {
             var value = PublicLiabilityInsurance.Text;
-            if (string.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value) || rbApprovedDefault.Checked)
             {
-                Util.ContentControls.setText(((TextBox)sender).Name, "The minimum amount of Public Liability Insurance required will be $5,000,000.00.");
+                Util.ContentControls.setText(PublicLiabilityInsurance.Name, "The minimum amount of Public Liability Insurance required will be $5,000,000.00.");
                 contract.PublicLiabilityInsurance = value;
             }
             else
             {
-                if (Util.ContentControls.IsAmount(((TextBox)sender).Text))
+                if (Util.ContentControls.IsAmount(PublicLiabilityInsurance.Text))
                 {
-                    contract.PublicLiabilityInsurance = ((TextBox)sender).Text;
-                    Util.ContentControls.setText(((TextBox)sender).Name, "The amount of Public Liability Insurance required will be $ " + value);
+                    contract.PublicLiabilityInsurance = (PublicLiabilityInsurance.Text);
+                    Util.ContentControls.setText(PublicLiabilityInsurance.Name, "The amount of Public Liability Insurance required will be $ " + value);
                 }
                 else
                 {
@@ -77,6 +77,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 MaximumLiability.Focus();
             }
+            PublicLiabilityInsurance_TextChanged(null, null);
         }
 
         private void help2_Click(object sender, EventArgs e)
