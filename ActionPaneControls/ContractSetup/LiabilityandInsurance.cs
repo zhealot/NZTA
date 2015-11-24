@@ -18,15 +18,23 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void PublicLiabilityInsurance_TextChanged(object sender, EventArgs e)
         {
-            //### page 183, Amount of Cover
-            if (Util.ContentControls.IsAmount(((TextBox)sender).Text))
+            var value = PublicLiabilityInsurance.Text;
+            if (string.IsNullOrEmpty(value) || rbApprovedDefault.Checked)
             {
-                contract.PublicLiabilityInsurance = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                Util.ContentControls.setText(PublicLiabilityInsurance.Name, "The minimum amount of Public Liability Insurance required will be $5,000,000.00.");
+                contract.PublicLiabilityInsurance = value;
             }
             else
             {
-                Util.Help.guidanceNote("Please enter a number");
+                if (Util.ContentControls.IsAmount(PublicLiabilityInsurance.Text))
+                {
+                    contract.PublicLiabilityInsurance = (PublicLiabilityInsurance.Text);
+                    Util.ContentControls.setText(PublicLiabilityInsurance.Name, "The amount of Public Liability Insurance required will be $ " + value);
+                }
+                else
+                {
+                    Util.Help.guidanceNote("Please enter a number");
+                }
             }
         }
 
@@ -52,18 +60,24 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void InsuranceLevel_CheckedChanged(object sender, EventArgs e)
         {
             bool blDefaultChkd = rbApprovedDefault.Checked;
+            pnGroup1.Enabled = !blDefaultChkd;
             contract.rbApprovedDefault = blDefaultChkd;
             contract.rbOtherLevels = !blDefaultChkd;
             var rgDefault = Globals.ThisDocument.rtcLimitationDefault.Range;
             var rgOther = Globals.ThisDocument.rtcLimitationOther.Range;
+            var DefaultStyle = blDefaultChkd ? Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs[1].get_Style() : "Normal";
+            var OtherStyle = !blDefaultChkd ? Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs[1].get_Style() : "Normal";
+            rgDefault.set_Style(ref DefaultStyle);
+            rgOther.set_Style(ref OtherStyle);
             rgDefault.SetRange(rgDefault.Start - 1, rgDefault.End + 2);
-            rgDefault.Font.Hidden = blDefaultChkd ? 0 : 1;
             rgOther.SetRange(rgOther.Start - 1, rgOther.End + 2);
-            rgOther.Font.Hidden = !blDefaultChkd ? 0 : 1;
+            rgDefault.Font.Hidden = blDefaultChkd ? 0 : 1;
+            rgOther.Font.Hidden = blDefaultChkd ? 1 : 0;
             if (!blDefaultChkd)
             {
                 MaximumLiability.Focus();
             }
+            PublicLiabilityInsurance_TextChanged(null, null);
         }
 
         private void help2_Click(object sender, EventArgs e)

@@ -55,7 +55,7 @@
             this.lbPersonnel.Location = new System.Drawing.Point(3, 61);
             this.lbPersonnel.Name = "lbPersonnel";
             this.lbPersonnel.Size = new System.Drawing.Size(250, 498);
-            this.lbPersonnel.TabIndex = 4;
+            this.lbPersonnel.TabIndex = 0;
             this.lbPersonnel.SelectedIndexChanged += new System.EventHandler(this.lbPersonnel_SelectedIndexChanged);
             // 
             // tbWeighting
@@ -64,15 +64,14 @@
             this.tbWeighting.Multiline = true;
             this.tbWeighting.Name = "tbWeighting";
             this.tbWeighting.Size = new System.Drawing.Size(64, 498);
-            this.tbWeighting.TabIndex = 5;
-            this.tbWeighting.TextChanged += new System.EventHandler(this.tbWeighting_TextChanged);
+            this.tbWeighting.TabIndex = 1;
             // 
             // btnPS
             // 
             this.btnPS.Location = new System.Drawing.Point(116, 577);
             this.btnPS.Name = "btnPS";
             this.btnPS.Size = new System.Drawing.Size(91, 36);
-            this.btnPS.TabIndex = 6;
+            this.btnPS.TabIndex = 3;
             this.btnPS.Text = "Personal Schedule";
             this.btnPS.UseVisualStyleBackColor = true;
             this.btnPS.Click += new System.EventHandler(this.btnPS_Click);
@@ -82,7 +81,7 @@
             this.btnASS.Location = new System.Drawing.Point(213, 577);
             this.btnASS.Name = "btnASS";
             this.btnASS.Size = new System.Drawing.Size(106, 36);
-            this.btnASS.TabIndex = 6;
+            this.btnASS.TabIndex = 4;
             this.btnASS.Text = "Additional Services Schedule";
             this.btnASS.UseVisualStyleBackColor = true;
             this.btnASS.Click += new System.EventHandler(this.btnASS_Click);
@@ -92,7 +91,7 @@
             this.btnGetPersonnel.Location = new System.Drawing.Point(8, 577);
             this.btnGetPersonnel.Name = "btnGetPersonnel";
             this.btnGetPersonnel.Size = new System.Drawing.Size(91, 36);
-            this.btnGetPersonnel.TabIndex = 6;
+            this.btnGetPersonnel.TabIndex = 2;
             this.btnGetPersonnel.Text = "Read Form B";
             this.btnGetPersonnel.UseVisualStyleBackColor = true;
             this.btnGetPersonnel.Click += new System.EventHandler(this.btnGetPersonnel_Click);

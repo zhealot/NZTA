@@ -11,9 +11,13 @@ namespace NZTA_Contract_Generator.Util
         {
             ThisDocument doc = NZTA_Contract_Generator.Globals.ThisDocument;
             Microsoft.Office.Interop.Word.ContentControls ccs = doc.SelectContentControlsByTag(tag);
+            bool ccLocked;
             foreach (ContentControl cc in ccs)
             {
+                ccLocked = cc.LockContents;
+                cc.LockContents = false;
                 cc.Range.Text = text.Replace("\r\n", " ");
+                cc.LockContents = ccLocked;
             }  
         }
 
@@ -177,7 +181,40 @@ namespace NZTA_Contract_Generator.Util
                 default: return i.ToString();
             }
         }
+
+        /// <summary> 
+        ///<param name="range">range to show/hide</param> 
+        ///<param name="show">true to show, false to hide</param> 
+        ///<param name="start">offset of start,default -1</param> 
+        ///<param name="end">offset of end,default +2</param> 
+        /// </summary> 
+        public static void RangeHideShow(ref Microsoft.Office.Interop.Word.Range range, bool show, int start = -1, int end = 2)
+        {
+            range.SetRange(range.Start + start, range.End + end);
+            range.Font.Hidden = show ? 0 : 1;
+        }
+
+        //make sure table has certain number of rows
+        public static bool RowsInTable(ref Microsoft.Office.Interop.Word.Table tb, int rows)
+        {
+            try
+            {
+                int n = tb.Rows.Count - rows;
+                if (n > 0)
+                {
+                    do { tb.Rows.Last.Delete(); }
+                    while (tb.Rows.Count > rows);
+                }
+                if (n < 0)
+                {
+                    object RowsToAdd = rows - tb.Rows.Count;
+                    tb.Rows.Last.Select();
+                    Globals.ThisDocument.Application.Selection.InsertRowsBelow(ref RowsToAdd);
+                    Globals.ThisDocument.Application.Selection.Collapse();
+                }
+                return true;
+            }
+            catch (Exception ex) { return false; }
+        }
     }
-
-
 }

@@ -30,6 +30,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 rbTP.Checked = true;
                 gbMethods.Enabled = false;
             }
+            if (contract.BaseEstimate_Check)
+            {
+                rbTP.Enabled = false;
+                rbBLO.Enabled = false;
+            }
+            //### show/hide clauses base on cbTrackRecord status, there should be a better way to achieve this
+            cbTrackRecord_CheckedChanged(null, null);
+            Globals.ThisDocument.Supplier_Selection_Method.Select();
         }
 
         private void rbPQM_CheckedChanged(object sender, EventArgs e)
@@ -41,9 +49,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             contract.cbTrackRecord = cbTrackRecord.Checked;
             tbTR.Enabled = cbTrackRecord.Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause1.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause2.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcTrackRecordClause3.Range.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            var TRC1Rg = Globals.ThisDocument.rtcTrackRecordClause1.Range;
+            var TRC2Rg = Globals.ThisDocument.rtcTrackRecordClause2.Range;
+            var TRC3Rg = Globals.ThisDocument.rtcTrackRecordClause3.Range;
+            object style = cbTrackRecord.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            TRC3Rg.set_Style(ref style);
+            TRC1Rg.SetRange(TRC1Rg.Start - 1, TRC1Rg.End + 2);
+            TRC2Rg.SetRange(TRC2Rg.Start - 1, TRC2Rg.End + 2);
+            TRC3Rg.SetRange(TRC3Rg.Start - 1, TRC3Rg.End + 2);
+            TRC1Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            TRC2Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            TRC3Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
+            Util.ContentControls.setText("TrackRecordClause4", cbTrackRecord.Checked ? "and Track Record" : "");
+            Util.ContentControls.setText("TrackRecordFill", cbTrackRecord.Checked ? " and Track Record" : "");
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -80,8 +98,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 {
                     if(RE + TR + RS + M + (((rbTP.Checked) || (rbBLO.Checked) ) ? 0 : P) == 100)  //if (RE + TR + RS + M + P == 100)
                     {
-                        if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
-                        {
+                        //if (RE >= 10 && (cbTrackRecord.Checked == true ? TR >= 10 : true) && RS >= 10 && M >= 10)
+                        //{
                             if (rbPQM.Checked || rbPQMPDA.Checked) //PQM and PQM+PDA
                             {
                                 if (P >= 20 && P <= 30) //check price
@@ -104,7 +122,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                                         Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
                                     }
                                 }
-                                ////for PQM and PQM+PDA, check Price 
+                                //for PQM and PQM+PDA, check Price 
                                 else 
                                 {
                                     tbP.Focus();
@@ -146,14 +164,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                             Util.ContentControls.setText("TrackRecordWeighting", Docu.rtcTrackRecord.Text);
                             Util.ContentControls.setText("RelevantSkillsWeighting", Docu.rtcRelevantSkills.Text);
                             Util.ContentControls.setText("MethodologyWeighting", Docu.rtcMethodology.Text);
+                            Globals.ThisDocument.rtcSupplierSelectoionMethodName.Range.Select();
                         }
                         //weighting <10%
-                        else
-                        {
-                            Util.Help.guidanceNote("Weighting applied must not less then 10%");
-                            return;
-                        }
-                    }
+                        //else
+                        //{
+                        //    Util.Help.guidanceNote("Weighting applied must not less then 10%");
+                        //    return;
+                        //}
+                    //}
                     //add up not 100%
                     else
                     {

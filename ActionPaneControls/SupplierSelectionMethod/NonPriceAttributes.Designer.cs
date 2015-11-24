@@ -85,7 +85,7 @@
             this.RelevantExperience.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RelevantExperience.Name = "RelevantExperience";
             this.RelevantExperience.Size = new System.Drawing.Size(90, 20);
-            this.RelevantExperience.TabIndex = 5;
+            this.RelevantExperience.TabIndex = 0;
             this.RelevantExperience.ValueChanged += new System.EventHandler(this.RelevantExperience_ValueChanged);
             // 
             // label5
@@ -112,7 +112,7 @@
             this.TrackRecord.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TrackRecord.Name = "TrackRecord";
             this.TrackRecord.Size = new System.Drawing.Size(90, 20);
-            this.TrackRecord.TabIndex = 5;
+            this.TrackRecord.TabIndex = 1;
             this.TrackRecord.ValueChanged += new System.EventHandler(this.TrackRecord_ValueChanged);
             // 
             // ExperienceVSRecord
@@ -121,7 +121,7 @@
             this.ExperienceVSRecord.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ExperienceVSRecord.Name = "ExperienceVSRecord";
             this.ExperienceVSRecord.Size = new System.Drawing.Size(90, 20);
-            this.ExperienceVSRecord.TabIndex = 8;
+            this.ExperienceVSRecord.TabIndex = 2;
             this.ExperienceVSRecord.ValueChanged += new System.EventHandler(this.ExperienceVSRecord_ValueChanged);
             // 
             // label7
@@ -147,7 +147,7 @@
             this.button1.Location = new System.Drawing.Point(3, 269);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Get Methodology";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -158,7 +158,7 @@
             this.lbMeths.Location = new System.Drawing.Point(3, 311);
             this.lbMeths.Name = "lbMeths";
             this.lbMeths.Size = new System.Drawing.Size(301, 498);
-            this.lbMeths.TabIndex = 13;
+            this.lbMeths.TabIndex = 5;
             this.lbMeths.SelectedIndexChanged += new System.EventHandler(this.lbMeths_SelectedIndexChanged);
             // 
             // tbPercent
@@ -168,16 +168,16 @@
             this.tbPercent.Multiline = true;
             this.tbPercent.Name = "tbPercent";
             this.tbPercent.Size = new System.Drawing.Size(40, 497);
-            this.tbPercent.TabIndex = 14;
+            this.tbPercent.TabIndex = 6;
             this.tbPercent.Text = "15\r\n0\r\n10\r\n5\r\n10\r\n20\r\n0\r\n30\r\n0\r\n10\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n" +
-    "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
+    "0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0\r\n0";
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(211, 269);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 23);
-            this.button2.TabIndex = 12;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Transfer to Form C";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.TransferToFormC_Click);

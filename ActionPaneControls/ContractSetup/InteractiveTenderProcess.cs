@@ -19,25 +19,36 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void Interactive_CheckedChanged(object sender, EventArgs e)
         {
-            bool blChkd = Interactive_Yes.Checked ? true : false;
+            bool blChkd = Interactive_Yes.Checked;
             Meeting_Box.Enabled = blChkd;
             Meeting_Box.Visible = blChkd;
-            //CommercialInConfidence_Check.Checked = Interactive_Yes.Checked;
             contract.Interactive_Yes = blChkd;
             contract.Interactive_No = !blChkd;
             var rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
-            rg.Paragraphs.First.set_Style(blChkd ? "NZTA Tendering: Level 2" : "NZTA Body Text");
+            object style = blChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            //apply rg.Paragraphs.First.set_Style() affects above line, so instead of seting style to paragraph, collapse range to first paragraph and set it style
+            //rg.Paragraphs.First.set_Style(ref style); 
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = blChkd ? 0 : 1;
+            if (blChkd) { rg.Select(); }
         }
 
         private void CommercialInConfidence_Check_CheckedChanged(object sender, EventArgs e)
         {
-            contract.CommercialInConfidence_Check = CommercialInConfidence_Check.Checked;
-            var rg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Paragraphs.First.set_Style(CommercialInConfidence_Check.Checked ? "NZTA Tendering: Level 2" : "NZTA Body Text");
-            rg.Font.Hidden = CommercialInConfidence_Check.Checked ? 0 : 1;
+            bool Chkd = CommercialInConfidence_Check.Checked;
+            contract.CommercialInConfidence_Check = Chkd; 
+            var CCIRg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
+            object style = Chkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            CCIRg.Collapse();
+            CCIRg.set_Style(ref style);
+            CCIRg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
+            //CCIRg.Paragraphs.First.set_Style(ref style);
+            CCIRg.SetRange(CCIRg.Start - 1, CCIRg.End + 2);
+            CCIRg.Font.Hidden = Chkd ? 0 : 1;
+            if (Chkd) { CCIRg.Select(); }
         }
 
         private void AnyItemChanged(object sender, EventArgs e)
@@ -91,7 +102,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             int rw = 1;
             if (Combined_Check.Checked)
             {
-                tb.Rows[rw].Cells[1].Range.Text = Combined_Date.Value.ToString("dd-MMMM-yyyy")+ Environment.NewLine + Combined_Time.Value.ToShortTimeString();
+                tb.Rows[rw].Cells[1].Range.Text = Combined_Date.Value.ToString(GlobalVar.DateFormat)+ Environment.NewLine + Combined_Time.Value.ToShortTimeString();
+                Util.ContentControls.setText("Combined_Date", Combined_Date.Value.ToString(GlobalVar.DateFormat));
+                Util.ContentControls.setText("Combined_Time", Combined_Date.Value.ToShortTimeString());
                 tb.Rows[rw].Cells[2].Range.Text = "Combined Meeting";
                 rw++;
             }
@@ -99,11 +112,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 if (kv.Key.Checked)
                 {
-                    tb.Rows[rw].Cells[1].Range.Text = kv.Value.ToString("dd-MMMM-yyyy");
+                    tb.Rows[rw].Cells[1].Range.Text = kv.Value.ToString(GlobalVar.DateFormat);
                     tb.Rows[rw].Cells[2].Range.Text = kv.Key.Name.Substring(0, 10) + " Meeting " + Util.ContentControls.IntegerToRoman((rw - (Combined_Check.Checked ? 1 : 0)));
                 }
                 rw++;
             }
+            bool chkd = Individual1_Check.Checked || Individual2_Check.Checked || Individual3_Check.Checked || Individual4_Check.Checked || Individual5_Check.Checked;
+            var RgClause = Globals.ThisDocument.rtcIndividualClaus1.Range;
+            Util.ContentControls.RangeHideShow(ref RgClause, chkd);
+            RgClause = Globals.ThisDocument.rtcIndividualClaus2.Range;
+            Util.ContentControls.RangeHideShow(ref RgClause, chkd);
+
+            tb.Range.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
             NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
         }
 

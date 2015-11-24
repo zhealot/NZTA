@@ -19,27 +19,61 @@ namespace NZTA_Contract_Generator
         public Contract()
         {
             //Contract Details
-            geoNo = true;
-            numDays = "eight";
-            numHours = "48";
+            geoYes = true;
+            provisionalSum = true;
+            numDays = 8;
+            numHours = 48;
             elecNo = true;
             CostIndex = 0.80m;
-            CostFluctuations_Check = false;
+            altTenderYes = true;
+            clientSiteYes = true;
+            StatementOfInterestAbilityClose_Chk = true; 
 
             //Tender Evaluation Procedure
             AuditPeriod = 2;
-            InterviewNotice = 1;
+            TET2_Chk = true;
+            TET3_Chk = true;
+            TET4_Chk = true;
+            TET5_Chk = true;
+
+
+            //Pricing Options
+            BaseEstimate_Check = true;
+            BrooksLaw_Check = false;
+            TargetPrice_Check = false;
 
             //Interactive Tender Process
-            Interactive_No = true;
+            Interactive_Yes = true;
             InterviewNotice = 1;
-            CommercialInConfidence_Check = false;
+            CommercialInConfidence_Check = true;
 
             //Tender Submission Programme
-            anotherMeansNo = true;
+            anotherMeansYes = true;
+            PresentationsRequired_Yes = true;
+            PrelettingMeetings_Yes = true;
+            
+            //Tender Format 
+            Outline_Check = true;
+            CV_Check = true;
+            TimeResource_Check = true;
+            Project_Check = true;
+
+            //Specifications
+            BridgesOther = true;
+            StateHighway = true;
+            OtherSpecification = true;
+            MultipleProjects_No = true; 
 
             //Liability and Insurances
             rbApprovedDefault = true;
+
+            //Payment Schedule
+            UnitRate_chk = true;
+            HourlyRate_chk = true;  
+            CostFluctuations_Check = true;
+
+            //Supplier Selection Methods
+            cbTrackRecord = false;
         }
 
         //Start of Contract Details
@@ -82,6 +116,8 @@ namespace NZTA_Contract_Generator
         public String TenderBox { get; set; }
         public String TargetDate { get; set; }
 
+        public String CloseDate { get; set; }
+        public Boolean StatementOfInterestAbilityClose_Chk { get; set; }
         public String Nominated_Person { get; set; }
         public String Nominated_Phone { get; set; }
         public String Nominated_Email { get; set; }
@@ -96,13 +132,11 @@ namespace NZTA_Contract_Generator
         public String Fax_2 { get; set; }
         public String Email_2 { get; set; }
 
-        public String numDays { get; set; }
-        public String numHours { get; set; }
+        public Decimal numDays { get; set; }
+        public Decimal numHours { get; set; }
 
         public Boolean checkBox1 { get; set; }
 
-        public Boolean CostFluctuations_Check { get; set; }
-        public Decimal CostIndex { get; set; }
         // End of Contract Details
 
         //Start of Interactive tender Process
@@ -146,15 +180,11 @@ namespace NZTA_Contract_Generator
         public Boolean TargetPrice_Check { get; set; }
         public String TargetPriceAmount { get; set; }
         public String TargetPriceAmountInWords { get; set; }
-
         //End of pricing options
 
         //Start of tender submission programme
-
-        public String CloseDate { get; set; }
         public Boolean PresentationsRequired_Yes { get; set; }
         public Boolean PresentationsRequired_No { get; set; }
-
         public String Presentation_Address { get; set; }
         public String Presentation_Company { get; set; }
         public String Presentation_Building { get; set; }
@@ -178,8 +208,8 @@ namespace NZTA_Contract_Generator
         public String PrelettingFromDate { get; set; }
         public String PrelettingEndDate { get; set; }
         public String PrelettingOther { get; set; }
-
-
+        public String InterviewCity { get; set; }
+        public Decimal InterviewNotice { get; set; }
         //End of tender submission programme
 
         //Start of Tender Format programme
@@ -207,6 +237,7 @@ namespace NZTA_Contract_Generator
         public Boolean Outline_Double_Check { get; set; }
         public Boolean Project_A3_Check { get; set; }
         public Boolean CV_A3_Check { get; set; }
+        public Boolean CV_Double_Check { get; set; }
         public Boolean TimeResource_A3_Check { get; set; }
         public Boolean Docu1_Check { get; set; }
         public Boolean Docu1_A3_Check { get; set; }
@@ -250,7 +281,7 @@ namespace NZTA_Contract_Generator
         //End of Supplier Selection Methods
 
         //Start of Tender Evaluation Procedure
-        public String EvaluationTeamLeader { get; set; }
+        public String ETL_Name { get; set; }
         public String ETL_Position { get; set; }
         public String ETL_Company { get; set; }
         public String ET2_Name { get; set; }
@@ -265,27 +296,19 @@ namespace NZTA_Contract_Generator
         public String ET5_Name { get; set; }
         public String ET5_Position { get; set; }
         public String ET5_Company { get; set; }        
-        public String InterviewCity { get; set; }
-        public Decimal InterviewNotice { get; set; }
         public Decimal AuditPeriod { get; set; }
+        public Boolean TET2_Chk { get; set; }
+        public Boolean TET3_Chk { get; set; }
+        public Boolean TET4_Chk { get; set; }
+        public Boolean TET5_Chk { get; set; }
         //End of Tender Evaluation Procedure
 
         //Start of Payment Schedule
-        public String ConsultantsProjectQualityPlan { get; set; }
-        public String BaselineProgrramme { get; set; }
-        public String HealthSafetyManagementPlan { get; set; }
-        public String CommunityEngagementPlan { get; set; }
-        public String ActivityRisk { get; set; }
-        public String ProgrammeBusinessCase { get; set; }
-        public String TransportTrafficModel { get; set; }
-        public String IndicativeBusinessCase { get; set; }
-        public String TransportTrafficModel2 { get; set; }
-        public String DetailedBusinessCase { get; set; }
-        public String AssessmentReport { get; set; }
-        public String GeotechnicalInterpretiveReport { get; set; }
-        public String General { get; set; }
-        public String AssetOwnersManual { get; set; }
-        public String PropertyRequirements { get; set; }
+        public Boolean UnitRate_chk { get; set; }
+        public Boolean HourlyRate_chk { get; set; }
+        public Boolean CostFluctuations_Check { get; set; }
+        public Decimal CostIndex { get; set; }
+
         //End of Payment Schedule
 
         //Start of Liability and Insurance
@@ -311,6 +334,7 @@ namespace NZTA_Contract_Generator
         //Start of Specifications
         public Boolean BridgesOther { get; set; }
         public Boolean StateHighway { get; set; }
+        public Boolean OtherSpecification { get; set; }
         public Boolean MultipleProjects_No { get; set; }
         public Boolean MultipleProjects_Yes { get; set; }
         public String Project1 { get; set; }

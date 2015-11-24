@@ -1,0 +1,28 @@
+					***** detailed instruction, buttons, ribbons, daetime pickers 
+19-Oct-15 09:58 AM	add: add-in built date&time in ContractDetails Pane.
+16-Oct-15 04:27 PM	go to relevant part of document after action;
+			hide/show rows in Tender Eveluation Team table
+			according to selection.
+15-Oct-15 11:09 AM	new issues: start date mustn't before today date, etc
+14-Oct-15 02:24 PM	hide 'Section G' in 'Agreement Form' page 13;
+13-Oct-15 09:45 AM	in Interactive Tender Process, set text in cc Combined_Date and Combined_Time
+02-Oct-15 11:42 AM	set default values in Contract.cs
+			prove: Ribbon->Remove Guidance function
+
+30-Sep-15 01:06 PM	bug fix: date time picker's value not set when re-load a pane
+			add: hide/show rows in tender format form according to
+			checkbox status
+
+
+1> Contract Details: added a checkbox to hide/show Statement of Interest Ability clause
+2> moved Interview City and Interview Notice from Tender Evaluation Procedure pance to Tender Submission Programme pane
+3> Tender Submission Programme: change date format to dd MMMM yyyy
+4> Specification: 	added a checkbox for 'Other clause'
+			hide/show rows in Contrcat Pricing Schedule and Contract Payment Schedule talbe, according to selections made in pane
+5> Pricing Options pane:	hide/show clause according to Base Estimeat or Target Price selected.
+				Brooks' Law made unselectable when Target Price selected.
+				hide/show Unit Rate Items and Hourly Rate Items clauses, according to Pricing option selected.
+
+				
+				
+			

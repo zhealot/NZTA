@@ -13,7 +13,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     public partial class TenderFormat : UserControl
     {
         Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
-        bool ignoreChange = false;
         public TenderFormat()
         {
             InitializeComponent();
@@ -25,7 +24,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void CopyOfEnvelope_ValueChanged(object sender, EventArgs e)
         {
             contract.CopyOfEnvelope = ((NumericUpDown)sender).Value;
-            Util.ContentControls.setText("CopyOfEnvelope", Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
+            Globals.ThisDocument.rtcCopyOfEnvelope.Range.Select();
         }
 
         private void CoverLetter_Page_TextChanged(object sender, EventArgs e)
@@ -34,6 +34,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 contract.CoverLetter_Page = ((TextBox)sender).Text;
                 Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                Globals.ThisDocument.rtcCoverLetterPage.Range.Select();
             }
             else
             {
@@ -48,6 +49,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 contract.Personnel_Page = ((TextBox)sender).Text;
                 Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+                Globals.ThisDocument.rtcPersonnelPage.Range.Select();
             }
             else
             {
@@ -79,6 +81,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 contract.Index_Page = Index_Page.Text;                
                 Util.ContentControls.setText("Index_Page", Index_Page.Text + ((Index_A3_Check.Checked == true) ? " x A3 " : "")+((Index_Double_Check.Checked == true) ? " x Double sided" : ""));
+                Globals.ThisDocument.rtcIndexPage.Range.Select();
             }
             else
             {
@@ -98,6 +101,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     contract.Project_Page = Project_Page.Text;
                     Util.ContentControls.setText("Project_Page", Project_Page.Text +
                         ((Project_A3_Check.Checked == true) ? " x A3" : ""));
+                    Globals.ThisDocument.rtcProjectPage.Range.Select();
                 }
                 else
                 {
@@ -109,6 +113,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("Project_Page", "");
             }
+            Globals.ThisDocument.bmProjectRow.Rows[1].Range.Font.Hidden = Project_Check.Checked ? 0 : 1;
         }
 
         private void NonPrice_Page_TextChanged(object sender, EventArgs e)
@@ -118,7 +123,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (Util.ContentControls.Validator(NonPrice_Page.Text, typeof(int)))
             {
                 contract.NonPrice_Page = NonPrice_Page.Text;
-                Util.ContentControls.setText("NonPrice_Page", NonPrice_Page.Text + (NonPrice_A3_Check.Checked == true ? " x A3 " : "") + (NonPrice_Double_Check.Checked == true ? " x Double " : ""));
+                Util.ContentControls.setText("NonPrice_Page", NonPrice_Page.Text + (NonPrice_A3_Check.Checked == true ? " x A3 " : "") + (NonPrice_Double_Check.Checked == true ? " x Double sided" : ""));
+                Globals.ThisDocument.rtcNonPricePage.Range.Select();
             }
             else
             {
@@ -159,7 +165,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     Util.ContentControls.setText("Outline_Page",
                                                 Outline_Page.Text +
                                                 ((Outline_A3_Check.Checked == true) ? " x A3 " : "") +
-                                                ((Outline_Double_Check.Checked == true) ? " x Double " : ""));
+                                                ((Outline_Double_Check.Checked == true) ? " x Double sided" : ""));
+                    Globals.ThisDocument.rtcOutlinePage.Range.Select();
                 }
                 else 
                 {
@@ -171,20 +178,24 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("Outline_Page", "");
             }
-
+            Globals.ThisDocument.bmOutlineRow.Rows[1].Range.Font.Hidden = Outline_Check.Checked ? 0 : 1;
         }
 
         private void CV_Page_TextChanged(object sender, EventArgs e)
         {
             contract.CV_Check = (sender == CV_Check) ? CV_Check.Checked : contract.CV_Check;
             contract.CV_A3_Check = (sender == CV_A3_Check) ? CV_A3_Check.Checked : contract.CV_A3_Check;
+            contract.CV_Double_Check = (sender == CV_Double_Check) ? CV_Double_Check.Checked : contract.CV_Double_Check;
             if (CV_Check.Checked)
             {
                 if (Util.ContentControls.Validator(CV_Page.Text, typeof(int)))
                 {
                     contract.CV_Page = CV_Page.Text;
-                    Util.ContentControls.setText("CV_Page", CV_Page.Text +
-                        ((CV_A3_Check.Checked == true) ? " x A3 " : ""));
+                    Util.ContentControls.setText("CV_Page", 
+                        CV_Page.Text +
+                        ((CV_A3_Check.Checked == true) ? " x A3 " : "") +
+                        ((CV_Double_Check.Checked == true) ? " x Double sided" : ""));
+                    Globals.ThisDocument.rtcCVPage.Range.Select();
                 }
                 else
                 {
@@ -196,6 +207,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("CV_Page", "");
             }
+            Globals.ThisDocument.bmCVRow.Rows[1].Range.Font.Hidden = CV_Check.Checked ? 0 : 1;
         }
 
         private void TimeResource_Page_TextChanged(object sender, EventArgs e)
@@ -208,6 +220,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 {
                     contract.TimeResource_Page = TimeResource_Page.Text;
                     Util.ContentControls.setText("TimeResource", TimeResource_Page.Text + ((TimeResource_A3_Check.Checked == true) ? " x A3" : ""));
+                    Globals.ThisDocument.rtcTimeResource.Range.Select();
                 }
                 else
                 {
@@ -219,6 +232,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 Util.ContentControls.setText("TimeResource", "");
             }
+            Globals.ThisDocument.bmTimeResourceRow.Rows[1].Range.Font.Hidden = TimeResource_Check.Checked ? 0 : 1;
         }
     }
 }

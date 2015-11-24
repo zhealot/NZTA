@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.EvaluationTeamLeader = new System.Windows.Forms.TextBox();
+            this.ETL_Name = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ETL_Position = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,12 +56,28 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.AuditPeriod = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.InterviewCity = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.InterviewNotice = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TET2_Chk = new System.Windows.Forms.CheckBox();
+            this.gbTET2 = new System.Windows.Forms.GroupBox();
+            this.gbTET3 = new System.Windows.Forms.GroupBox();
+            this.TET3_Chk = new System.Windows.Forms.CheckBox();
+            this.gbTET4 = new System.Windows.Forms.GroupBox();
+            this.TET4_Chk = new System.Windows.Forms.CheckBox();
+            this.gbTET1 = new System.Windows.Forms.GroupBox();
+            this.gbTET5 = new System.Windows.Forms.GroupBox();
+            this.ET5_Company = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ET5_Position = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ET5_Name = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TET5_Chk = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).BeginInit();
+            this.gbTET2.SuspendLayout();
+            this.gbTET3.SuspendLayout();
+            this.gbTET4.SuspendLayout();
+            this.gbTET1.SuspendLayout();
+            this.gbTET5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,24 +93,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 81);
+            this.label2.Location = new System.Drawing.Point(6, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name of Evaluation Team Leader:";
             // 
-            // EvaluationTeamLeader
+            // ETL_Name
             // 
-            this.EvaluationTeamLeader.Location = new System.Drawing.Point(6, 98);
-            this.EvaluationTeamLeader.Name = "EvaluationTeamLeader";
-            this.EvaluationTeamLeader.Size = new System.Drawing.Size(212, 20);
-            this.EvaluationTeamLeader.TabIndex = 6;
-            this.EvaluationTeamLeader.TextChanged += new System.EventHandler(this.EvaluationTeamLeader_TextChanged);
+            this.ETL_Name.Location = new System.Drawing.Point(9, 41);
+            this.ETL_Name.Name = "ETL_Name";
+            this.ETL_Name.Size = new System.Drawing.Size(212, 20);
+            this.ETL_Name.TabIndex = 0;
+            this.ETL_Name.TextChanged += new System.EventHandler(this.TeamLeader_Change);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 125);
+            this.label3.Location = new System.Drawing.Point(6, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 7;
@@ -102,16 +118,16 @@
             // 
             // ETL_Position
             // 
-            this.ETL_Position.Location = new System.Drawing.Point(78, 122);
+            this.ETL_Position.Location = new System.Drawing.Point(81, 65);
             this.ETL_Position.Name = "ETL_Position";
             this.ETL_Position.Size = new System.Drawing.Size(140, 20);
-            this.ETL_Position.TabIndex = 8;
-            this.ETL_Position.TextChanged += new System.EventHandler(this.ETL_Position_TextChanged);
+            this.ETL_Position.TabIndex = 1;
+            this.ETL_Position.TextChanged += new System.EventHandler(this.TeamLeader_Change);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 149);
+            this.label4.Location = new System.Drawing.Point(6, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 9;
@@ -119,24 +135,24 @@
             // 
             // ETL_Company
             // 
-            this.ETL_Company.Location = new System.Drawing.Point(78, 146);
+            this.ETL_Company.Location = new System.Drawing.Point(81, 89);
             this.ETL_Company.Name = "ETL_Company";
             this.ETL_Company.Size = new System.Drawing.Size(140, 20);
-            this.ETL_Company.TabIndex = 10;
-            this.ETL_Company.TextChanged += new System.EventHandler(this.ETL_Company_TextChanged);
+            this.ETL_Company.TabIndex = 2;
+            this.ETL_Company.TextChanged += new System.EventHandler(this.TeamLeader_Change);
             // 
             // ET2_Company
             // 
-            this.ET2_Company.Location = new System.Drawing.Point(78, 236);
+            this.ET2_Company.Location = new System.Drawing.Point(78, 75);
             this.ET2_Company.Name = "ET2_Company";
             this.ET2_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET2_Company.TabIndex = 16;
-            this.ET2_Company.TextChanged += new System.EventHandler(this.ET2_Company_TextChanged);
+            this.ET2_Company.TabIndex = 5;
+            this.ET2_Company.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 239);
+            this.label5.Location = new System.Drawing.Point(3, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 15;
@@ -144,16 +160,16 @@
             // 
             // ET2_Position
             // 
-            this.ET2_Position.Location = new System.Drawing.Point(78, 212);
+            this.ET2_Position.Location = new System.Drawing.Point(78, 51);
             this.ET2_Position.Name = "ET2_Position";
             this.ET2_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET2_Position.TabIndex = 14;
-            this.ET2_Position.TextChanged += new System.EventHandler(this.ET2_Position_TextChanged);
+            this.ET2_Position.TabIndex = 4;
+            this.ET2_Position.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 215);
+            this.label6.Location = new System.Drawing.Point(3, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 13;
@@ -161,16 +177,16 @@
             // 
             // ET2_Name
             // 
-            this.ET2_Name.Location = new System.Drawing.Point(6, 188);
+            this.ET2_Name.Location = new System.Drawing.Point(78, 27);
             this.ET2_Name.Name = "ET2_Name";
-            this.ET2_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET2_Name.TabIndex = 12;
-            this.ET2_Name.TextChanged += new System.EventHandler(this.ET2_Name_TextChanged);
+            this.ET2_Name.Size = new System.Drawing.Size(140, 20);
+            this.ET2_Name.TabIndex = 3;
+            this.ET2_Name.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 171);
+            this.label7.Location = new System.Drawing.Point(3, 30);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 11;
@@ -178,16 +194,16 @@
             // 
             // ET3_Company
             // 
-            this.ET3_Company.Location = new System.Drawing.Point(78, 327);
+            this.ET3_Company.Location = new System.Drawing.Point(81, 72);
             this.ET3_Company.Name = "ET3_Company";
             this.ET3_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET3_Company.TabIndex = 22;
-            this.ET3_Company.TextChanged += new System.EventHandler(this.ET3_Company_TextChanged);
+            this.ET3_Company.TabIndex = 8;
+            this.ET3_Company.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 330);
+            this.label8.Location = new System.Drawing.Point(6, 75);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 21;
@@ -195,16 +211,16 @@
             // 
             // ET3_Position
             // 
-            this.ET3_Position.Location = new System.Drawing.Point(78, 303);
+            this.ET3_Position.Location = new System.Drawing.Point(81, 48);
             this.ET3_Position.Name = "ET3_Position";
             this.ET3_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET3_Position.TabIndex = 20;
-            this.ET3_Position.TextChanged += new System.EventHandler(this.ET3_Position_TextChanged);
+            this.ET3_Position.TabIndex = 7;
+            this.ET3_Position.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 306);
+            this.label9.Location = new System.Drawing.Point(6, 51);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 19;
@@ -212,16 +228,16 @@
             // 
             // ET3_Name
             // 
-            this.ET3_Name.Location = new System.Drawing.Point(6, 279);
+            this.ET3_Name.Location = new System.Drawing.Point(81, 24);
             this.ET3_Name.Name = "ET3_Name";
-            this.ET3_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET3_Name.TabIndex = 18;
-            this.ET3_Name.TextChanged += new System.EventHandler(this.ET3_Name_TextChanged);
+            this.ET3_Name.Size = new System.Drawing.Size(140, 20);
+            this.ET3_Name.TabIndex = 6;
+            this.ET3_Name.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 262);
+            this.label10.Location = new System.Drawing.Point(6, 24);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 17;
@@ -229,7 +245,7 @@
             // 
             // help1
             // 
-            this.help1.Location = new System.Drawing.Point(224, 96);
+            this.help1.Location = new System.Drawing.Point(198, 12);
             this.help1.Name = "help1";
             this.help1.Size = new System.Drawing.Size(23, 23);
             this.help1.TabIndex = 23;
@@ -239,16 +255,16 @@
             // 
             // ET4_Company
             // 
-            this.ET4_Company.Location = new System.Drawing.Point(78, 416);
+            this.ET4_Company.Location = new System.Drawing.Point(81, 75);
             this.ET4_Company.Name = "ET4_Company";
             this.ET4_Company.Size = new System.Drawing.Size(140, 20);
-            this.ET4_Company.TabIndex = 29;
-            this.ET4_Company.TextChanged += new System.EventHandler(this.ET4_Company_TextChanged);
+            this.ET4_Company.TabIndex = 11;
+            this.ET4_Company.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 419);
+            this.label11.Location = new System.Drawing.Point(6, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 28;
@@ -256,16 +272,16 @@
             // 
             // ET4_Position
             // 
-            this.ET4_Position.Location = new System.Drawing.Point(78, 392);
+            this.ET4_Position.Location = new System.Drawing.Point(81, 51);
             this.ET4_Position.Name = "ET4_Position";
             this.ET4_Position.Size = new System.Drawing.Size(140, 20);
-            this.ET4_Position.TabIndex = 27;
-            this.ET4_Position.TextChanged += new System.EventHandler(this.ET4_Position_TextChanged);
+            this.ET4_Position.TabIndex = 10;
+            this.ET4_Position.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 395);
+            this.label12.Location = new System.Drawing.Point(6, 54);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 26;
@@ -273,16 +289,16 @@
             // 
             // ET4_Name
             // 
-            this.ET4_Name.Location = new System.Drawing.Point(6, 368);
+            this.ET4_Name.Location = new System.Drawing.Point(81, 27);
             this.ET4_Name.Name = "ET4_Name";
-            this.ET4_Name.Size = new System.Drawing.Size(212, 20);
-            this.ET4_Name.TabIndex = 25;
-            this.ET4_Name.TextChanged += new System.EventHandler(this.ET4_Name_TextChanged);
+            this.ET4_Name.Size = new System.Drawing.Size(140, 20);
+            this.ET4_Name.TabIndex = 9;
+            this.ET4_Name.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 351);
+            this.label13.Location = new System.Drawing.Point(6, 27);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 24;
@@ -290,19 +306,18 @@
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 461);
+            this.label18.Location = new System.Drawing.Point(6, 78);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(104, 13);
+            this.label18.Size = new System.Drawing.Size(149, 36);
             this.label18.TabIndex = 46;
-            this.label18.Text = "Audit Period (weeks)";
+            this.label18.Text = "COI Notification to Probity Auditor (weeks)";
             // 
             // AuditPeriod
             // 
-            this.AuditPeriod.Location = new System.Drawing.Point(168, 459);
+            this.AuditPeriod.Location = new System.Drawing.Point(144, 78);
             this.AuditPeriod.Name = "AuditPeriod";
-            this.AuditPeriod.Size = new System.Drawing.Size(109, 20);
-            this.AuditPeriod.TabIndex = 50;
+            this.AuditPeriod.Size = new System.Drawing.Size(61, 20);
+            this.AuditPeriod.TabIndex = 12;
             this.AuditPeriod.Value = new decimal(new int[] {
             2,
             0,
@@ -310,80 +325,212 @@
             0});
             this.AuditPeriod.ValueChanged += new System.EventHandler(this.Audit_Period_ValueChanged);
             // 
-            // label17
+            // button1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 488);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 13);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Interview City";
+            this.button1.Location = new System.Drawing.Point(215, 78);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // InterviewCity
+            // TET2_Chk
             // 
-            this.InterviewCity.Location = new System.Drawing.Point(140, 485);
-            this.InterviewCity.Name = "InterviewCity";
-            this.InterviewCity.Size = new System.Drawing.Size(137, 20);
-            this.InterviewCity.TabIndex = 35;
-            this.InterviewCity.TextChanged += new System.EventHandler(this.InterviewCity_TextChanged);
+            this.TET2_Chk.Location = new System.Drawing.Point(170, 253);
+            this.TET2_Chk.Name = "TET2_Chk";
+            this.TET2_Chk.Size = new System.Drawing.Size(65, 16);
+            this.TET2_Chk.TabIndex = 47;
+            this.TET2_Chk.Text = "Include";
+            this.TET2_Chk.UseVisualStyleBackColor = true;
+            this.TET2_Chk.CheckedChanged += new System.EventHandler(this.Checkbox_Changed);
             // 
-            // label19
+            // gbTET2
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(4, 513);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(124, 13);
-            this.label19.TabIndex = 46;
-            this.label19.Text = "Interview Notice (weeks)";
+            this.gbTET2.Controls.Add(this.ET2_Company);
+            this.gbTET2.Controls.Add(this.label5);
+            this.gbTET2.Controls.Add(this.ET2_Position);
+            this.gbTET2.Controls.Add(this.label6);
+            this.gbTET2.Controls.Add(this.ET2_Name);
+            this.gbTET2.Controls.Add(this.label7);
+            this.gbTET2.Location = new System.Drawing.Point(9, 264);
+            this.gbTET2.Name = "gbTET2";
+            this.gbTET2.Size = new System.Drawing.Size(232, 104);
+            this.gbTET2.TabIndex = 48;
+            this.gbTET2.TabStop = false;
+            this.gbTET2.Text = "Team 2";
             // 
-            // InterviewNotice
+            // gbTET3
             // 
-            this.InterviewNotice.Location = new System.Drawing.Point(168, 511);
-            this.InterviewNotice.Name = "InterviewNotice";
-            this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
-            this.InterviewNotice.TabIndex = 50;
-            this.InterviewNotice.ValueChanged += new System.EventHandler(this.InterviewNotice_ValueChanged);
+            this.gbTET3.Controls.Add(this.ET3_Company);
+            this.gbTET3.Controls.Add(this.label8);
+            this.gbTET3.Controls.Add(this.ET3_Position);
+            this.gbTET3.Controls.Add(this.label9);
+            this.gbTET3.Controls.Add(this.ET3_Name);
+            this.gbTET3.Controls.Add(this.label10);
+            this.gbTET3.Location = new System.Drawing.Point(9, 383);
+            this.gbTET3.Name = "gbTET3";
+            this.gbTET3.Size = new System.Drawing.Size(232, 101);
+            this.gbTET3.TabIndex = 49;
+            this.gbTET3.TabStop = false;
+            this.gbTET3.Text = "Team 3";
+            // 
+            // TET3_Chk
+            // 
+            this.TET3_Chk.Location = new System.Drawing.Point(170, 372);
+            this.TET3_Chk.Name = "TET3_Chk";
+            this.TET3_Chk.Size = new System.Drawing.Size(65, 16);
+            this.TET3_Chk.TabIndex = 47;
+            this.TET3_Chk.Text = "Include";
+            this.TET3_Chk.UseVisualStyleBackColor = true;
+            this.TET3_Chk.CheckedChanged += new System.EventHandler(this.Checkbox_Changed);
+            // 
+            // gbTET4
+            // 
+            this.gbTET4.Controls.Add(this.ET4_Company);
+            this.gbTET4.Controls.Add(this.label11);
+            this.gbTET4.Controls.Add(this.ET4_Position);
+            this.gbTET4.Controls.Add(this.label12);
+            this.gbTET4.Controls.Add(this.ET4_Name);
+            this.gbTET4.Controls.Add(this.label13);
+            this.gbTET4.Location = new System.Drawing.Point(9, 501);
+            this.gbTET4.Name = "gbTET4";
+            this.gbTET4.Size = new System.Drawing.Size(232, 101);
+            this.gbTET4.TabIndex = 51;
+            this.gbTET4.TabStop = false;
+            this.gbTET4.Text = "Team 4";
+            // 
+            // TET4_Chk
+            // 
+            this.TET4_Chk.Location = new System.Drawing.Point(170, 490);
+            this.TET4_Chk.Name = "TET4_Chk";
+            this.TET4_Chk.Size = new System.Drawing.Size(65, 16);
+            this.TET4_Chk.TabIndex = 47;
+            this.TET4_Chk.Text = "Include";
+            this.TET4_Chk.UseVisualStyleBackColor = true;
+            this.TET4_Chk.CheckedChanged += new System.EventHandler(this.Checkbox_Changed);
+            // 
+            // gbTET1
+            // 
+            this.gbTET1.Controls.Add(this.ETL_Company);
+            this.gbTET1.Controls.Add(this.label4);
+            this.gbTET1.Controls.Add(this.ETL_Position);
+            this.gbTET1.Controls.Add(this.label3);
+            this.gbTET1.Controls.Add(this.ETL_Name);
+            this.gbTET1.Controls.Add(this.label2);
+            this.gbTET1.Controls.Add(this.help1);
+            this.gbTET1.Location = new System.Drawing.Point(6, 128);
+            this.gbTET1.Name = "gbTET1";
+            this.gbTET1.Size = new System.Drawing.Size(232, 115);
+            this.gbTET1.TabIndex = 52;
+            this.gbTET1.TabStop = false;
+            this.gbTET1.Text = "Team 1";
+            // 
+            // gbTET5
+            // 
+            this.gbTET5.Controls.Add(this.ET5_Company);
+            this.gbTET5.Controls.Add(this.label14);
+            this.gbTET5.Controls.Add(this.ET5_Position);
+            this.gbTET5.Controls.Add(this.label15);
+            this.gbTET5.Controls.Add(this.ET5_Name);
+            this.gbTET5.Controls.Add(this.label16);
+            this.gbTET5.Location = new System.Drawing.Point(9, 618);
+            this.gbTET5.Name = "gbTET5";
+            this.gbTET5.Size = new System.Drawing.Size(232, 101);
+            this.gbTET5.TabIndex = 51;
+            this.gbTET5.TabStop = false;
+            this.gbTET5.Text = "Team 5";
+            // 
+            // ET5_Company
+            // 
+            this.ET5_Company.Location = new System.Drawing.Point(81, 75);
+            this.ET5_Company.Name = "ET5_Company";
+            this.ET5_Company.Size = new System.Drawing.Size(140, 20);
+            this.ET5_Company.TabIndex = 11;
+            this.ET5_Company.TextChanged += new System.EventHandler(this.Text_Change);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 78);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 13);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Company 5:";
+            // 
+            // ET5_Position
+            // 
+            this.ET5_Position.Location = new System.Drawing.Point(81, 51);
+            this.ET5_Position.Name = "ET5_Position";
+            this.ET5_Position.Size = new System.Drawing.Size(140, 20);
+            this.ET5_Position.TabIndex = 10;
+            this.ET5_Position.TextChanged += new System.EventHandler(this.Text_Change);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 54);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 26;
+            this.label15.Text = "Position 5:";
+            // 
+            // ET5_Name
+            // 
+            this.ET5_Name.Location = new System.Drawing.Point(81, 27);
+            this.ET5_Name.Name = "ET5_Name";
+            this.ET5_Name.Size = new System.Drawing.Size(140, 20);
+            this.ET5_Name.TabIndex = 9;
+            this.ET5_Name.TextChanged += new System.EventHandler(this.Text_Change);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 13);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Name 5:";
+            // 
+            // TET5_Chk
+            // 
+            this.TET5_Chk.Location = new System.Drawing.Point(170, 608);
+            this.TET5_Chk.Name = "TET5_Chk";
+            this.TET5_Chk.Size = new System.Drawing.Size(65, 16);
+            this.TET5_Chk.TabIndex = 47;
+            this.TET5_Chk.Text = "Include";
+            this.TET5_Chk.UseVisualStyleBackColor = true;
+            this.TET5_Chk.CheckedChanged += new System.EventHandler(this.Checkbox_Changed);
             // 
             // TenderEvaluationProcedure
             // 
-            this.Controls.Add(this.InterviewNotice);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.TET2_Chk);
+            this.Controls.Add(this.TET3_Chk);
+            this.Controls.Add(this.TET4_Chk);
+            this.Controls.Add(this.TET5_Chk);
+            this.Controls.Add(this.gbTET1);
+            this.Controls.Add(this.gbTET5);
+            this.Controls.Add(this.gbTET4);
+            this.Controls.Add(this.gbTET3);
+            this.Controls.Add(this.gbTET2);
             this.Controls.Add(this.AuditPeriod);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.InterviewCity);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.ET4_Company);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.ET4_Position);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.ET4_Name);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.help1);
-            this.Controls.Add(this.ET3_Company);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.ET3_Position);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.ET3_Name);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.ET2_Company);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.ET2_Position);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.ET2_Name);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.ETL_Company);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.ETL_Position);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.EvaluationTeamLeader);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "TenderEvaluationProcedure";
-            this.Size = new System.Drawing.Size(280, 555);
+            this.Size = new System.Drawing.Size(255, 733);
             ((System.ComponentModel.ISupportInitialize)(this.AuditPeriod)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InterviewNotice)).EndInit();
+            this.gbTET2.ResumeLayout(false);
+            this.gbTET2.PerformLayout();
+            this.gbTET3.ResumeLayout(false);
+            this.gbTET3.PerformLayout();
+            this.gbTET4.ResumeLayout(false);
+            this.gbTET4.PerformLayout();
+            this.gbTET1.ResumeLayout(false);
+            this.gbTET1.PerformLayout();
+            this.gbTET5.ResumeLayout(false);
+            this.gbTET5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -391,7 +538,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox EvaluationTeamLeader;
+        private System.Windows.Forms.TextBox ETL_Name;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ETL_Position;
         private System.Windows.Forms.Label label4;
@@ -417,9 +564,21 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown AuditPeriod;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox InterviewCity;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.NumericUpDown InterviewNotice;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox TET2_Chk;
+        private System.Windows.Forms.GroupBox gbTET2;
+        private System.Windows.Forms.GroupBox gbTET3;
+        private System.Windows.Forms.CheckBox TET3_Chk;
+        private System.Windows.Forms.GroupBox gbTET4;
+        private System.Windows.Forms.CheckBox TET4_Chk;
+        private System.Windows.Forms.GroupBox gbTET1;
+        private System.Windows.Forms.GroupBox gbTET5;
+        private System.Windows.Forms.CheckBox TET5_Chk;
+        private System.Windows.Forms.TextBox ET5_Company;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox ET5_Position;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox ET5_Name;
+        private System.Windows.Forms.Label label16;
     }
 }

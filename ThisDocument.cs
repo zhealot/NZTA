@@ -15,12 +15,16 @@ namespace NZTA_Contract_Generator
 {
     public partial class ThisDocument
     {
-
         public Control apc;
         public Contract contract;
 
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
+            //turn off Paragraph Marks
+            if (Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll )
+            {
+                Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll = false;
+            }
 
             //See if we have saved state
             contract = Util.XML.loadFromXML();
@@ -41,7 +45,12 @@ namespace NZTA_Contract_Generator
             this.Application.TaskPanes[Word.WdTaskPanes.wdTaskPaneDocumentActions].Visible = false;
             //We want nav tree then edit form
             this.ActionsPane.StackOrder = Microsoft.Office.Tools.StackStyle.FromLeft;
-            Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = true; 
+            //show task pane
+            this.Application.CommandBars["Task Pane"].Visible = true;
+            //update fields
+            this.Fields.Update();
+            //show Custom Ribbon
+            //Globals.Ribbons.Ribbon1.tab1.RibbonUI.ActivateTab("CGTAB");
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)
@@ -64,28 +73,12 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
-            this.richTextContentControl1.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.richTextContentControl1_Entering);
-            this.rtcGeoTestingSum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcGeoTestingSum_Entering);
-            this.rtcGeoTestingSum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcGeoTestingSum_Exiting);
-            this.rtcAdditionalServicesSchedule_Sum.Entering += new Microsoft.Office.Tools.Word.ContentControlEnteringEventHandler(this.rtcAdditionalServicesSchedule_Sum_Entering);
-            this.rtcAdditionalServicesSchedule_Sum.Exiting += new Microsoft.Office.Tools.Word.ContentControlExitingEventHandler(this.rtcAdditionalServicesSchedule_Sum_Exiting);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
         }
 
         #endregion
-
-
-        private void richTextContentControl43_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void richTextContentControl47_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
 
         private void rtcGeoTestingSum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
@@ -97,19 +90,14 @@ namespace NZTA_Contract_Generator
             NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = NZTA_Contract_Generator.Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
         }
 
-        private void richTextContentControl1_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-            
-        }
-
-        private void rtcGeoTestingSum_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
-
-        private void rtcAdditionalServicesSchedule_Sum_Entering(object sender, ContentControlEnteringEventArgs e)
-        {
-
-        }
+    }
+    public static class GlobalVar
+    {
+        //Date string format
+        public const string DateFormat = "dd MMMM yyyy";
+        /// <summary>
+        /// style name for Normal 
+        /// </summary>
+        public const string StyleNormal = "Normal";
     }
 }

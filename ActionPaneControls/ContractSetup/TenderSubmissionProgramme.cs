@@ -21,131 +21,141 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Presentation_Address.DataSource = new BindingSource(Constants.Location.data, null);
             Presentation_Address.DisplayMember = "Key";
             Presentation_Address.ValueMember = "Value";
+            Presentation_Address.SelectedIndex = -1;
             gbElecForm.Enabled = false;
             ignoreChange = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = 1;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = 1;
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
         }
 
-        private void elecYes_CheckedChanged(object sender, EventArgs e)
+        private void elec_Changed(object sender, EventArgs e)
         {
-            contract.elecYes = ((RadioButton)sender).Checked;
-            contract.elecNo = !((RadioButton)sender).Checked;
-            gbElecForm.Enabled = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcElectronicInformation.Range;
-            rg.Paragraphs.First.Range.set_Style("NZTA Tendering: Level 2");
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = (elecYes.Checked ? 0 : 1);
-            if (anotherMeansYes.Checked)
+            bool YesChkd = elecYes.Checked;
+            contract.elecNo = !YesChkd;
+            contract.elecYes = YesChkd;
+            gbElecForm.Enabled = YesChkd;
+
+            var Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
+            object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            Rg.Collapse();
+            Rg.set_Style(ref style);
+            Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
+            Rg.SetRange(Rg.Start - 1, Rg.End + 2);
+            Rg.Font.Hidden = YesChkd ? 0 : 1;
+            if (YesChkd) Rg.Select();
+        }
+
+        private void anotherMeans_Changed(object sender, EventArgs e)
+        {
+            bool YesChkd = anotherMeansYes.Checked;
+            contract.anotherMeansYes = YesChkd;
+            contract.anotherMeansNo = !YesChkd;
+            contract.otherDetails = otherDetails.Text;
+            if (YesChkd)
             {
-                anotherMeansYes_CheckedChanged(anotherMeansYes, null);
+                if (string.IsNullOrEmpty(otherDetails.Text))
+                {
+                    Util.Help.guidanceNote("Please enter content.");
+                }
+                else
+                {
+                    Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+                    Globals.ThisDocument.rtcECopy.Range.Select();
+                }
             }
             else
             {
-                anotherMeansNo_CheckedChanged(anotherMeansNo, null);
+                Util.ContentControls.setText("E-Copy", ""); 
             }
-            NZTA_Contract_Generator.Globals.ThisDocument.DocumentFormatForm.Select();
         }
 
-        private void elecNo_CheckedChanged(object sender, EventArgs e)
+        private void Evaluation_Date_Changed(object sender, EventArgs e)
         {
-            contract.elecNo = ((RadioButton)sender).Checked;
-            contract.elecYes = !((RadioButton)sender).Checked;
-            gbElecForm.Enabled = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcElectronicInformation.Range;
-            rg.Paragraphs.First.Range.set_Style("NZTA Body Text");
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = (elecNo.Checked ? 1 : 0);
-        }
-
-        private void anotherMeansNo_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.anotherMeansNo = anotherMeansNo.Checked;
-            otherDetails.Enabled = !anotherMeansNo.Checked;
-            Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on email");
-        }
-
-        private void anotherMeansYes_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.anotherMeansYes = anotherMeansYes.Checked;
-            contract.anotherMeansNo = anotherMeansNo.Checked;
-            otherDetails.Enabled = anotherMeansYes.Checked;
-            otherDetails.Focus();
-        }
-        
-        private void otherDetails_Leave(object sender, EventArgs e)
-        {
-            if ( anotherMeansYes.Checked && string.IsNullOrEmpty(otherDetails.Text))
+            if (Evaluation_Start.Value > Evaluation_End.Value || Evaluation_Start.Value <  DateTime.Today )
             {
-                Util.Help.guidanceNote("Please enter content.");
-                return;
+                Evaluation_Start.Value = Evaluation_End.Value;
+                Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
+                Globals.ThisDocument.rtcEvaluationPeriod.Range.Select();
             }
-            else
-            {
-                contract.otherDetails = ((TextBox)sender).Text;
-                Util.ContentControls.setText("E-Copy", " and accompanied by an electronic copy on " + contract.otherDetails);
-            }            
+            contract.Evaluation_End = sender == Evaluation_End ? Evaluation_End.Value.ToString("O") : contract.Evaluation_End;
+            contract.Evaluation_Start = sender == Evaluation_Start ? Evaluation_Start.Value.ToString("O") : contract.Evaluation_Start;
+            Util.ContentControls.setText("Evaluation_Period", "From " + Evaluation_Start.Value.ToString(GlobalVar.DateFormat) + " to " + Evaluation_End.Value.ToString(GlobalVar.DateFormat));
         }
 
-
-        private void Evaluation_Start_ValueChanged(object sender, EventArgs e)
+        private void Evaluation_Other_TextChanged(object sender, EventArgs e)
         {
-            contract.Evaluation_Start = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
+            contract.Evaluation_Other = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Evaluation_Period", Evaluation_Other.Text);
         }
 
-        private void Evaluation_End_ValueChanged(object sender, EventArgs e)
+        private void Preletting_Date_Changed(object sender, EventArgs e)
         {
-            if (Evaluation_End.Value < Evaluation_Start.Value)
+            if (PrelettingFromDate.Value > PrelettingEndDate.Value || PrelettingFromDate.Value < DateTime.Today)
             {
-                Util.Help.guidanceNote("End date should not be earlier than start date");
-                return;
+                PrelettingFromDate.Value = PrelettingEndDate.Value;
+                Util.Help.guidanceNote("Start date should not be later than end date or earlier than today.");
+                Globals.ThisDocument.rtcPrelettingPeriod.Range.Select();
             }
-            contract.Evaluation_End = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Evaluation_Period", "From " + contract.Evaluation_Start + " to " + contract.Evaluation_End);
+            contract.PrelettingFromDate = sender == PrelettingFromDate ? PrelettingFromDate.Value.ToString("O") : contract.PrelettingFromDate;
+            contract.PrelettingEndDate = sender == PrelettingEndDate ? PrelettingEndDate.Value.ToString("O") : contract.PrelettingEndDate;
+            Util.ContentControls.setText("Preletting_Period", "From " + PrelettingFromDate.Value.ToString(GlobalVar.DateFormat) + " to " + PrelettingEndDate.Value.ToString(GlobalVar.DateFormat));
         }
 
-        private void PrelettingFromDate_ValueChanged(object sender, EventArgs e)
+        private void PrelettingOther_TextChanged(object sender, EventArgs e)
         {
-            contract.PrelettingFromDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
-        }
-
-        private void PrelettingEndDate_ValueChanged(object sender, EventArgs e)
-        {
-            contract.PrelettingEndDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText("Preletting_Period", "From " + contract.PrelettingFromDate + " to " + contract.PrelettingEndDate);
-        }
-
-        //### in format: "from xx to xx"?
-        private void Preletting_Period(object sender, EventArgs e)
-        {
-            Util.ContentControls.setText("Preletting_Period", "from " + contract.PrelettingFromDate + Environment.NewLine + " to " + contract.PrelettingEndDate);
+            contract.PrelettingOther = ((TextBox)sender).Text;
+            Util.ContentControls.setText("Preletting_Period", PrelettingOther.Text);
         }
 
         private void TargetDate_ValueChanged(object sender, EventArgs e)
         {
             contract.TargetDate = ((DateTimePicker)sender).Value.ToString("O");
-            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString("dd-MMMM-yyyy"));
+            Util.ContentControls.setText(((DateTimePicker)sender).Name, ((DateTimePicker)sender).Value.ToString(GlobalVar.DateFormat));
+            Globals.ThisDocument.rtcTargetDate.Range.Select();
         }
 
-        private void PresentationsRequired_No_CheckedChanged(object sender, EventArgs e)
+        private void Presentations_Changed(object sender, EventArgs e)
         {
-            contract.PresentationsRequired_Yes = !((RadioButton)sender).Checked;
-            contract.PresentationsRequired_No = ((RadioButton)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            bool PreYes = PresentationsRequired_Yes.Checked;
+            contract.PresentationsRequired_No = !PreYes;
+            contract.PresentationsRequired_Yes = PreYes;
+            var PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
+            object PreStyle = PreYes ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            PreRg.Collapse();
+            PreRg.set_Style(ref PreStyle);
+            PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
+            PreRg.SetRange(PreRg.Start - 1, PreRg.End + 2);
+            PreRg.Font.Hidden = PreYes ? 0 : 1;
+            if (PreYes) { PreRg.Select(); }
         }
 
-        private void PresentationsRequired_Yes_CheckedChanged(object sender, EventArgs e)
+        private void InterviewCity_TextChanged(object sender, EventArgs e)
         {
-            contract.PresentationsRequired_Yes = ((RadioButton)sender).Checked;
-            contract.PresentationsRequired_No = !((RadioButton)sender).Checked;
-            //### 3.5 formatting
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPresentationOfTenderClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            contract.InterviewCity = ((TextBox)sender).Text;
+            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcInterviewCity.Range.Select();
         }
-
+        private void InterviewNotice_ValueChanged(object sender, EventArgs e)
+        {
+            contract.InterviewNotice = ((NumericUpDown)sender).Value;
+            Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(((NumericUpDown)sender).Value) + " week" + (((NumericUpDown)sender).Value > 1 ? "s'" : "'s"));
+            Globals.ThisDocument.rtcInterviewNotice.Range.Select();
+        }
+        private void PrelettingMetting_Changed(object sender, EventArgs e)
+        {
+            bool YesChkd = PrelettingMeetings_Yes.Checked;
+            contract.PrelettingMeetings_Yes = YesChkd;
+            contract.PrelettingMeetings_No = !YesChkd;
+            gbPrelettingDate.Enabled = YesChkd;
+            var YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
+            object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            YesRg.Collapse();
+            YesRg.set_Style(ref style);
+            YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
+            YesRg.SetRange(YesRg.Start - 1, YesRg.End + 2);
+            YesRg.Font.Hidden = YesChkd ? 0 : 1;
+            if (YesChkd) { YesRg.Select(); }
+        }
         private void PrelettingMeetings_No_CheckedChanged(object sender, EventArgs e)
         {
             contract.PrelettingMeetings_No = ((RadioButton)sender).Checked;
@@ -181,6 +191,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Presentation_Street.Text = selectedEntry.Value.streetAddress;
                 Presentation_Box.Text = selectedEntry.Value.boxNumber;
                 Presentation_City.Text = selectedEntry.Value.city;
+                Util.ContentControls.setText("Presentation_Company", "Transport Agency’s office");
             }
         }
 
@@ -188,18 +199,21 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Presentation_Company = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcAgencyOrCompany.Range.Select();
         }
 
         private void Presentation_Level_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Building = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcPresentationLevel.Range.Select();
         }
 
         private void Presentation_Street_TextChanged(object sender, EventArgs e)
         {
             contract.Presentation_Street = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
+            Globals.ThisDocument.rtcPresentationStreet.Range.Select();
         }
 
         private void Presentation_Box_TextChanged(object sender, EventArgs e)
@@ -212,18 +226,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.Presentation_City = ((TextBox)sender).Text;
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-        }
-
-        private void Evaluation_Other_TextChanged(object sender, EventArgs e)
-        {
-            contract.Evaluation_Other = ((TextBox)sender).Text;
-            Util.ContentControls.setText("Preletting_Period", Evaluation_Other.Text);
-        }
-
-        private void PrelettingOther_TextChanged(object sender, EventArgs e)
-        {
-            contract.PrelettingOther = ((TextBox)sender).Text;
-            Util.ContentControls.setText("Preletting_Period", PrelettingOther.Text);
+            Globals.ThisDocument.rtcPresentationCity.Range.Select();
         }
 
         private void help1_Click(object sender, EventArgs e)
@@ -245,6 +248,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void button3_Click(object sender, EventArgs e)
         {
             Util.Help.guidanceNote("Typically 4-5 weeks after close of tender");
+        }
+
+        private void gbElecForm_Enter(object sender, EventArgs e)
+        {
         }
     }
 }

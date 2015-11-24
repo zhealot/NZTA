@@ -18,207 +18,73 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             InitializeComponent();
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
+            UnitRate_chk_CheckedChanged(null, null);
+            HourlyRate_chk_CheckedChanged(null, null);
+            CostFluctuations_Check_CheckedChanged(null,null);
         }
 
-        private void CostIndex_TextChanged(object sender, EventArgs e)
+        private void help3_Click(object sender, EventArgs e)
         {
-         
-        }
-        //### mapping locations? 
-        private void ConsultantsProjectQualityPlan_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.ConsultantsProjectQualityPlan = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }  
+            Util.Help.guidanceNote("Cost fluctuations will be paid where contract period is more than 12 months");
         }
 
-        private void BaselineProgrramme_TextChanged(object sender, EventArgs e)
+        private void CostFluctuations_Check_CheckedChanged(object sender, EventArgs e)
         {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.BaselineProgrramme = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }  
+            bool blChkd = CostFluctuations_Check.Checked;
+            contract.CostFluctuations_Check = blChkd;
+            CostIndex.Enabled = blChkd;
+            lblCostIndex.Enabled = blChkd;
+            var rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
+            var rgYes = Globals.ThisDocument.rtcCostFluctuationsYes.Range;
+            object style = blChkd ? "Normal" : Globals.ThisDocument.rtcLevel3Style.Range.get_Style();
+            rgNo.Collapse();
+            rgNo.set_Style(ref style);
+            rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
+            rgNo.SetRange(rgNo.Start - 1, rgNo.End + 2);
+            rgNo.Font.Hidden = blChkd ? 1 : 0;
+            rgYes.SetRange(rgYes.Start - 1, rgYes.End + 2);
+            rgYes.Font.Hidden = blChkd ? 0 : 1;
+            if (blChkd) { rgYes.Select(); }
+            else { rgNo.Select(); }
         }
 
-        private void HealthSafetyManagementPlan_TextChanged(object sender, EventArgs e)
+        private void CostIndex_ValueChanged(object sender, EventArgs e)
         {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.HealthSafetyManagementPlan = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }  
+            contract.CostIndex = CostIndex.Value;
+            Util.ContentControls.setText("CostIndex1", CostIndex.Value.ToString());
+            Util.ContentControls.setText("CostIndex2", (1 - CostIndex.Value).ToString());
+            Globals.ThisDocument.rtcCostIndex1.Range.Select();
         }
 
-        private void CommunityEngagementPlan_TextChanged(object sender, EventArgs e)
+        private void UnitRate_chk_CheckedChanged(object sender, EventArgs e)
         {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.CommunityEngagementPlan = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
+            bool UnitRateChkd = UnitRate_chk.Checked;
+            contract.UnitRate_chk = UnitRate_chk.Checked;
+            var rg = Globals.ThisDocument.rtcUnitRateItems.Range;
+            object style = UnitRateChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : GlobalVar.StyleNormal;
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcUnitRateItems.Range;
+            Util.ContentControls.RangeHideShow(ref rg, UnitRateChkd);
+            rg.Select();
         }
 
-        private void ActivityRisk_TextChanged(object sender, EventArgs e)
+        private void HourlyRate_chk_CheckedChanged(object sender, EventArgs e)
         {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.ActivityRisk = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
+            contract.HourlyRate_chk = HourlyRate_chk.Checked;
+            bool HourlyRateChkd = HourlyRate_chk.Checked;
+            var rg = Globals.ThisDocument.rtcHourlyRateItems.Range;
+            object style = HourlyRateChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : GlobalVar.StyleNormal;
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcHourlyRateItems.Range;
+            Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
+            rg.Select();
+            rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
+            rg.Collapse();
+            rg.set_Style(ref style);
+            rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
+            Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
         }
-        
-        private void ProgrammeBusinessCase_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.ProgrammeBusinessCase = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void TransportTrafficModel_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.ProgrammeBusinessCase = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void IndicativeBusinessCase_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.ProgrammeBusinessCase = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void TransportTrafficModel2_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.TransportTrafficModel2 = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void DetailedBusinessCase_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.DetailedBusinessCase = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void AssessmentReport_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.AssessmentReport = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void GeotechnicalInterpretiveReport_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.GeotechnicalInterpretiveReport = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void General_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.General = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void AssetOwnersManual_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.AssetOwnersManual = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
-        private void PropertyRequirements_TextChanged(object sender, EventArgs e)
-        {
-            if (Util.ContentControls.IsPercentage(((TextBox)sender).Text))
-            {
-                contract.PropertyRequirements = ((TextBox)sender).Text;
-                Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            }
-            else
-            {
-                Util.Help.guidanceNote("Please enter a number for percentage");
-            }
-        }
-
     }
 }

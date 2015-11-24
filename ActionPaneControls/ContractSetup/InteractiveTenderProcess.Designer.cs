@@ -69,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 25);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Interactive Tender Process";
             // 
             // label2
@@ -78,7 +78,7 @@
             this.label2.Location = new System.Drawing.Point(6, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 13);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 6;
             this.label2.Text = "Will you have an Interactive Tender Process?";
             // 
             // Interactive_Yes
@@ -87,7 +87,7 @@
             this.Interactive_Yes.Location = new System.Drawing.Point(86, 93);
             this.Interactive_Yes.Name = "Interactive_Yes";
             this.Interactive_Yes.Size = new System.Drawing.Size(43, 17);
-            this.Interactive_Yes.TabIndex = 4;
+            this.Interactive_Yes.TabIndex = 1;
             this.Interactive_Yes.TabStop = true;
             this.Interactive_Yes.Text = "Yes";
             this.Interactive_Yes.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.Interactive_No.Location = new System.Drawing.Point(9, 93);
             this.Interactive_No.Name = "Interactive_No";
             this.Interactive_No.Size = new System.Drawing.Size(39, 17);
-            this.Interactive_No.TabIndex = 5;
+            this.Interactive_No.TabIndex = 0;
             this.Interactive_No.TabStop = true;
             this.Interactive_No.Text = "No";
             this.Interactive_No.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.Meeting_Box.Location = new System.Drawing.Point(9, 147);
             this.Meeting_Box.Name = "Meeting_Box";
             this.Meeting_Box.Size = new System.Drawing.Size(290, 379);
-            this.Meeting_Box.TabIndex = 6;
+            this.Meeting_Box.TabIndex = 3;
             this.Meeting_Box.TabStop = false;
             this.Meeting_Box.Visible = false;
             // 
@@ -142,7 +142,7 @@
             this.Individual_Place.Location = new System.Drawing.Point(9, 352);
             this.Individual_Place.Name = "Individual_Place";
             this.Individual_Place.Size = new System.Drawing.Size(245, 20);
-            this.Individual_Place.TabIndex = 23;
+            this.Individual_Place.TabIndex = 15;
             this.Individual_Place.TextChanged += new System.EventHandler(this.Individual_Place_TextChanged);
             // 
             // label10
@@ -170,7 +170,7 @@
             this.Individual5_Date.Location = new System.Drawing.Point(54, 313);
             this.Individual5_Date.Name = "Individual5_Date";
             this.Individual5_Date.Size = new System.Drawing.Size(200, 20);
-            this.Individual5_Date.TabIndex = 20;
+            this.Individual5_Date.TabIndex = 14;
             this.Individual5_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label9
@@ -179,7 +179,7 @@
             this.label9.Location = new System.Drawing.Point(6, 297);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(172, 13);
-            this.label9.TabIndex = 19;
+            this.label9.TabIndex = 13;
             this.label9.Text = "Optional Individual Meeting V date:";
             // 
             // Individual4_Check
@@ -198,7 +198,7 @@
             this.Individual4_Date.Location = new System.Drawing.Point(54, 274);
             this.Individual4_Date.Name = "Individual4_Date";
             this.Individual4_Date.Size = new System.Drawing.Size(200, 20);
-            this.Individual4_Date.TabIndex = 17;
+            this.Individual4_Date.TabIndex = 12;
             this.Individual4_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label8
@@ -207,7 +207,7 @@
             this.label8.Location = new System.Drawing.Point(6, 258);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 13);
-            this.label8.TabIndex = 16;
+            this.label8.TabIndex = 11;
             this.label8.Text = "Optional Individual Meeting IV date:";
             // 
             // Individual3_Check
@@ -226,7 +226,7 @@
             this.Individual3_Date.Location = new System.Drawing.Point(54, 233);
             this.Individual3_Date.Name = "Individual3_Date";
             this.Individual3_Date.Size = new System.Drawing.Size(200, 20);
-            this.Individual3_Date.TabIndex = 14;
+            this.Individual3_Date.TabIndex = 10;
             this.Individual3_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label7
@@ -235,7 +235,7 @@
             this.label7.Location = new System.Drawing.Point(6, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 13);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 9;
             this.label7.Text = "Optional Individual Meeting III date:";
             // 
             // Individual2_Check
@@ -254,7 +254,7 @@
             this.Individual2_Date.Location = new System.Drawing.Point(54, 194);
             this.Individual2_Date.Name = "Individual2_Date";
             this.Individual2_Date.Size = new System.Drawing.Size(200, 20);
-            this.Individual2_Date.TabIndex = 11;
+            this.Individual2_Date.TabIndex = 8;
             this.Individual2_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label6
@@ -263,7 +263,7 @@
             this.label6.Location = new System.Drawing.Point(6, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 13);
-            this.label6.TabIndex = 10;
+            this.label6.TabIndex = 7;
             this.label6.Text = "Individual Meeting II date:";
             // 
             // Individual1_Check
@@ -282,7 +282,7 @@
             this.Individual1_Date.Location = new System.Drawing.Point(54, 155);
             this.Individual1_Date.Name = "Individual1_Date";
             this.Individual1_Date.Size = new System.Drawing.Size(200, 20);
-            this.Individual1_Date.TabIndex = 8;
+            this.Individual1_Date.TabIndex = 6;
             this.Individual1_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // label5
@@ -291,7 +291,7 @@
             this.label5.Location = new System.Drawing.Point(6, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 13);
-            this.label5.TabIndex = 7;
+            this.label5.TabIndex = 5;
             this.label5.Text = "Individual Meeting I date:";
             // 
             // Combined_Place
@@ -299,7 +299,7 @@
             this.Combined_Place.Location = new System.Drawing.Point(9, 116);
             this.Combined_Place.Name = "Combined_Place";
             this.Combined_Place.Size = new System.Drawing.Size(245, 20);
-            this.Combined_Place.TabIndex = 6;
+            this.Combined_Place.TabIndex = 4;
             this.Combined_Place.TextChanged += new System.EventHandler(this.Combined_Place_TextChanged);
             // 
             // label4
@@ -308,7 +308,7 @@
             this.label4.Location = new System.Drawing.Point(6, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 13);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Combined Meeting place:";
             // 
             // Combined_Time
@@ -319,7 +319,7 @@
             this.Combined_Time.Name = "Combined_Time";
             this.Combined_Time.ShowUpDown = true;
             this.Combined_Time.Size = new System.Drawing.Size(92, 20);
-            this.Combined_Time.TabIndex = 4;
+            this.Combined_Time.TabIndex = 2;
             this.Combined_Time.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
             // Combined_Check
@@ -339,7 +339,7 @@
             this.Combined_Date.MinDate = new System.DateTime(2015, 8, 5, 12, 6, 2, 0);
             this.Combined_Date.Name = "Combined_Date";
             this.Combined_Date.Size = new System.Drawing.Size(200, 20);
-            this.Combined_Date.TabIndex = 2;
+            this.Combined_Date.TabIndex = 1;
             this.Combined_Date.Value = new System.DateTime(2015, 8, 5, 12, 6, 2, 0);
             this.Combined_Date.ValueChanged += new System.EventHandler(this.AnyItemChanged);
             // 
@@ -367,7 +367,7 @@
             this.CommercialInConfidence_Check.Location = new System.Drawing.Point(152, 82);
             this.CommercialInConfidence_Check.Name = "CommercialInConfidence_Check";
             this.CommercialInConfidence_Check.Size = new System.Drawing.Size(121, 40);
-            this.CommercialInConfidence_Check.TabIndex = 14;
+            this.CommercialInConfidence_Check.TabIndex = 2;
             this.CommercialInConfidence_Check.Text = "Include Commercial In Confidence ?";
             this.CommercialInConfidence_Check.UseVisualStyleBackColor = true;
             this.CommercialInConfidence_Check.CheckedChanged += new System.EventHandler(this.CommercialInConfidence_Check_CheckedChanged);

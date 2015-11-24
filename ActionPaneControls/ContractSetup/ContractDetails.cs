@@ -14,6 +14,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         public ContractDetails()
         {
             InitializeComponent();
+
+            //display build date
+            System.Reflection.Assembly asbly = System.Reflection.Assembly.GetCallingAssembly();
+            System.IO.FileInfo fileInfo = new System.IO.FileInfo(asbly.Location);
+            DateTime lastModified = fileInfo.LastWriteTime;
+            lblBuiltDate.Text = "Built: " + lastModified.ToShortDateString() + ", " + lastModified.ToShortTimeString();
+
             //Load any data
             ignoreChange = true;            
             //Address combobox
@@ -23,10 +30,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Address_1.SelectedIndex = -1;
            
             //Region combobox
-            Region.DataSource = new BindingSource(Constants.Location.data, null);
-            Region.DisplayMember = "Key";
-            Region.ValueMember = "Value";
-            Region.SelectedIndex = -1;
+            //Region.DataSource = new BindingSource(Constants.Location.data, null);
+            //Region.DisplayMember = "Key";
+            //Region.ValueMember = "Value";
+            //Region.SelectedIndex = -1;
 
             //Tender box
             TenderBox.DataSource = new BindingSource(Constants.Location.data, null);
@@ -43,7 +50,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Load saved state. Defaults set in state...
             Util.SavedState.setControlsToState(contract, Controls);
-            CostFluctuations_Check_CheckedChanged(CostFluctuations_Check, null);
         }
         public string ContractName { get { return Contract_Name.Text; } set { Contract_Name.Text = value; } }        
         private void Contract_Name_TextChanged(object sender, EventArgs e)
@@ -83,44 +89,33 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Box_1.Text = selectedEntry.Value.boxNumber;
                 City_1.Text = selectedEntry.Value.city;
                 Telephone_1.Text = selectedEntry.Value.telephone;
-                Fax_1.Text = selectedEntry.Value.fax;                
+                Fax_1.Text = selectedEntry.Value.fax;
+                Globals.ThisDocument.rtcAddress1.Range.Select();
             }
         }
 
-        private void geoNo_CheckedChanged(object sender, EventArgs e)
+        private void geo_Changed(object sender, EventArgs e)
         {
-            scheduledItems.Enabled = !((RadioButton)sender).Checked;
-            provisionalSum.Enabled = !((RadioButton)sender).Checked;
-            schedLabel.Enabled = !((RadioButton)sender).Checked;
-            contract.geoNo = ((RadioButton)sender).Checked;
-            contract.geoYes = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-            rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
-        }
-
-        private void geoYes_CheckedChanged(object sender, EventArgs e)
-        {
-            scheduledItems.Enabled = ((RadioButton)sender).Checked;
-            provisionalSum.Enabled = ((RadioButton)sender).Checked;
-            schedLabel.Enabled = ((RadioButton)sender).Checked;
-            contract.geoNo = !((RadioButton)sender).Checked;
-            contract.geoYes = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-            rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = provisionalSum.Checked ? 0 : 1;
-            rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = scheduledItems.Checked ? 0 : 1;
+            bool YesChkd = geoYes.Checked;
+            bool PSChkd = provisionalSum.Checked;
+            contract.geoYes = YesChkd;
+            contract.geoNo = !YesChkd;
+            contract.provisionalSum = PSChkd;
+            contract.scheduledItems = !PSChkd;
+            gbGeo.Enabled = YesChkd;
+            var GeoRg = Globals.ThisDocument.rtcGeotechnicalSection.Range;
+            var PSRg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+            var SRg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+            Util.ContentControls.RangeHideShow(ref GeoRg, YesChkd);
+            Util.ContentControls.RangeHideShow(ref PSRg, (YesChkd && PSChkd));
+            Util.ContentControls.RangeHideShow(ref SRg, (YesChkd && !PSChkd));
+            //GeoRg.SetRange(GeoRg.Start - 1, GeoRg.End + 2);
+            //PSRg.SetRange(PSRg.Start - 1, PSRg.End + 2);
+            //SRg.SetRange(SRg.Start - 1, SRg.End + 2);
+            //GeoRg.Font.Hidden = YesChkd ? 0 : 1;
+            //PSRg.Font.Hidden = (YesChkd && PSChkd) ? 0 : 1;
+            //SRg.Font.Hidden = (YesChkd && !PSChkd) ? 0 : 1;
+            GeoRg.Select();
         }
 
         private void help2_Click(object sender, EventArgs e)
@@ -132,6 +127,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
             contract.Nominated_Person = ((TextBox)sender).Text;
+            object here = Globals.ThisDocument.SelectContentControlsByTag(((TextBox)sender).Name)[1].Range;
+            Globals.ThisDocument.Application.Selection.GoTo(Microsoft.Office.Interop.Word.WdGoToItem.wdGoToObject, Microsoft.Office.Interop.Word.WdGoToDirection.wdGoToFirst, 1, ref here);
+            Globals.ThisDocument.rtcNominatedPerson.Range.Select();
         }
 
         private void Nominated_Email_TextChanged(object sender, EventArgs e)
@@ -203,43 +201,53 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void provisionalSum_CheckedChanged(object sender, EventArgs e)
+        //private void provisionalSum_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.provisionalSum = ((RadioButton)sender).Checked;
+        //    contract.scheduledItems = !((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+        //}
+
+        //private void scheduledItems_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    contract.provisionalSum = !((RadioButton)sender).Checked;
+        //    contract.scheduledItems = ((RadioButton)sender).Checked;
+        //    var rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
+        //    rg.SetRange(rg.Start - 1, rg.End + 2);
+        //    rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+        //}
+
+        private void SiteInspection_Changed(object sender, EventArgs e)
         {
-            contract.provisionalSum = ((RadioButton)sender).Checked;
-            contract.scheduledItems = !((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechProvisionalSum.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            bool SiteYesChkd = clientSiteYes.Checked;
+            contract.clientSiteNo = !SiteYesChkd;
+            contract.clientSiteYes = SiteYesChkd;
+            var SiteRg = Globals.ThisDocument.rtcSiteInspection.Range;
+            object SiteStyle = SiteYesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
+            SiteRg.Collapse();
+            SiteRg.set_Style(ref SiteStyle);
+            SiteRg = Globals.ThisDocument.rtcSiteInspection.Range;
+            SiteRg.SetRange(SiteRg.Start - 1, SiteRg.End + 2);
+            SiteRg.Font.Hidden = SiteYesChkd ? 0 : 1;
+            if (SiteYesChkd) { SiteRg.Select(); } 
         }
 
-        private void scheduledItems_CheckedChanged(object sender, EventArgs e)
+        private void altTender_Changed(object sender, EventArgs e)
         {
-            contract.provisionalSum = !((RadioButton)sender).Checked;
-            contract.scheduledItems = ((RadioButton)sender).Checked;
-            var rg = Globals.ThisDocument.rtcGeotechScheduledItems.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
-        }
-
-        private void clientSiteNo_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.clientSiteNo = true;
-            contract.clientSiteYes = false;
-        }
-
-        private void altTenderNo_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.altTenderNo = true;
-            contract.altTenderYes = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
-        }
-
-        private void altTenderYes_CheckedChanged(object sender, EventArgs e)
-        {
-            contract.altTenderYes = true;
-            contract.altTenderNo = false;
-            //### 1.13
-            NZTA_Contract_Generator.Globals.ThisDocument.AlternativeTenders.Text = NZTA_Contract_Generator.Constants.Text.GetText(((RadioButton)sender).Name);
+            bool blYes = altTenderYes.Checked;
+            contract.altTenderYes = blYes;
+            contract.altTenderNo = !blYes;
+            var altYesRg = Globals.ThisDocument.rtcAlternativeTenderYes.Range;
+            var altNoRg = Globals.ThisDocument.rtcAlternativeTenderNo.Range;
+            var stl = blYes ? "Normal" : altYesRg.Paragraphs.First.get_Style();
+            altNoRg.set_Style(ref stl);
+            altYesRg.SetRange(altYesRg.Start - 1, altYesRg.End + 2);
+            altNoRg.SetRange(altNoRg.Start - 1, altNoRg.End + 2);
+            altNoRg.Font.Hidden = blYes ? 1 : 0;
+            altYesRg.Font.Hidden = blYes ? 0 : 1;
+            if (blYes) { altYesRg.Select(); }
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,6 +256,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 KeyValuePair<String, Util.Address> selectedEntry = (KeyValuePair<String, Util.Address>)((ComboBox)sender).SelectedItem;
                 contract.TenderBox = selectedEntry.Key;
+                Util.ContentControls.setText(((ComboBox)sender).Name, selectedEntry.Value.building + ", " + selectedEntry.Value.streetAddress + ", " + selectedEntry.Value.city);
+                Globals.ThisDocument.rtcTenderBox.Range.Select();
             }
         }
 
@@ -314,18 +324,6 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
         }        
 
-        private void numDays_TextChanged(object sender, EventArgs e)
-        {
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            contract.numDays = ((TextBox)sender).Text;
-        }
-
-        private void numHours_TextChanged(object sender, EventArgs e)
-        {
-            Util.ContentControls.setText(((TextBox)sender).Name, ((TextBox)sender).Text);
-            contract.numHours = ((TextBox)sender).Text;
-        }
-
         private void Nominated_Email_Leave(object sender, EventArgs e)
         {
             if (Util.ContentControls.IsEmail(((TextBox)sender).Text))
@@ -355,6 +353,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                 Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
                 Util.ContentControls.setText("Date_Month", MadeDate.Value.ToString("MMM"));
                 Util.ContentControls.setText("Date_Year", MadeDate.Value.Year.ToString());
+                Globals.ThisDocument.rtcContractDate.Range.Select();
             }
             
         }
@@ -380,7 +379,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         private void CloseDate_ValueChanged(object sender, EventArgs e)
         {
             contract.CloseDate = CloseDate.Value.ToString("O");
-            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString("dd/MMM/yyyy"));
+            Util.ContentControls.setText("CloseDate", CloseDate.Value.ToString(GlobalVar.DateFormat));
+            Globals.ThisDocument.rtcCloseDate.Range.Select();
         }
 
         private void Email_1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -397,31 +397,33 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
         }
 
-        private void help3_Click(object sender, EventArgs e)
+
+        private void StatementOfInterestAbilityClose_Chk_CheckedChanged(object sender, EventArgs e)
         {
-            Util.Help.guidanceNote("Cost fluctuations will be paid where contract period is more than 12 months");
+            bool chkd = StatementOfInterestAbilityClose_Chk.Checked;
+            contract.StatementOfInterestAbilityClose_Chk = chkd;
+            var style = chkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
+            var rg = Globals.ThisDocument.rtcStatementOfInterestAbilityClose.Range;
+            rg.set_Style(ref style);
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
+            rg = Globals.ThisDocument.rtcStatementOfInterestAbilityCloseTitle.Range;
+            rg.SetRange(rg.Start - 1, rg.End + 2);
+            rg.Font.Hidden = chkd ? 0 : 1;
         }
 
-        private void CostFluctuations_Check_CheckedChanged(object sender, EventArgs e)
+        private void numDays_ValueChanged(object sender, EventArgs e)
         {
-            bool blChkd = ((CheckBox)sender).Checked;
-            contract.CostFluctuations_Check = blChkd;
-            CostIndex.Enabled = blChkd;
-            lblCostIndex.Enabled = blChkd;
-            CostIndex.Enabled = blChkd; 
-            var rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
-            var rgYes = Globals.ThisDocument.rtcCostFluctuationsYes.Range;
-            rgNo.Paragraphs.First.Range.set_Style((blChkd ? "NZTA Body Text" : "NZTA Tendering: Level 3"));
-            rgNo.SetRange(rgNo.Start - 1, rgNo.End + 2);
-            rgNo.Font.Hidden = blChkd ? 1 : 0;
-            rgYes.SetRange(rgYes.Start - 1, rgYes.End + 2);
-            rgYes.Font.Hidden = blChkd ? 0 : 1;
+            contract.numDays = numDays.Value;
+            Util.ContentControls.setText(numDays.Name, numDays.Value.ToString() + " (" + Util.ContentControls.NumberToWords((int)numDays.Value) + ")");
+            Globals.ThisDocument.rtcEnquiryDays.Range.Select();
         }
 
-        private void CostIndex_ValueChanged(object sender, EventArgs e)
+        private void numHours_ValueChanged(object sender, EventArgs e)
         {
-            Util.ContentControls.setText("CostIndex1", CostIndex.Value.ToString());
-            Util.ContentControls.setText("CostIndex2", (1 - CostIndex.Value).ToString());
+            contract.numHours = numHours.Value;
+            Util.ContentControls.setText(numHours.Name, numHours.Value.ToString() + " (" + Util.ContentControls.NumberToWords((int)numHours.Value) + ")");
+            Globals.ThisDocument.rtcEnquiryHours.Range.Select();
         }
     }
 }

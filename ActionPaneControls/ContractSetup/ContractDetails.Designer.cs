@@ -57,12 +57,9 @@
             this.Email_1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.Region = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.geoYes = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.geoNo = new System.Windows.Forms.RadioButton();
-            this.schedLabel = new System.Windows.Forms.Label();
             this.provisionalSum = new System.Windows.Forms.RadioButton();
             this.scheduledItems = new System.Windows.Forms.RadioButton();
             this.label19 = new System.Windows.Forms.Label();
@@ -95,16 +92,16 @@
             this.Address_2 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.numDays = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.numHours = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gbGeo = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numHours = new System.Windows.Forms.NumericUpDown();
+            this.numDays = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.Consultant_Name = new System.Windows.Forms.TextBox();
@@ -118,19 +115,18 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CloseDate = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
-            this.help3 = new System.Windows.Forms.Button();
-            this.CostFluctuations_Check = new System.Windows.Forms.CheckBox();
-            this.lblCostIndex = new System.Windows.Forms.Label();
-            this.CostIndex = new System.Windows.Forms.NumericUpDown();
+            this.StatementOfInterestAbilityClose_Chk = new System.Windows.Forms.CheckBox();
+            this.lblBuiltDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.gbGeo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDays)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).BeginInit();
             this.SuspendLayout();
             // 
             // Contract_Name
@@ -149,7 +145,7 @@
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 25);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Contract Details";
             // 
             // label2
@@ -175,7 +171,7 @@
             this.Contract_Number.Location = new System.Drawing.Point(131, 76);
             this.Contract_Number.Name = "Contract_Number";
             this.Contract_Number.Size = new System.Drawing.Size(174, 20);
-            this.Contract_Number.TabIndex = 3;
+            this.Contract_Number.TabIndex = 1;
             this.Contract_Number.TextChanged += new System.EventHandler(this.Contract_Number_TextChanged);
             // 
             // label4
@@ -192,7 +188,7 @@
             this.PM_Name.Location = new System.Drawing.Point(97, 37);
             this.PM_Name.Name = "PM_Name";
             this.PM_Name.Size = new System.Drawing.Size(174, 20);
-            this.PM_Name.TabIndex = 5;
+            this.PM_Name.TabIndex = 0;
             this.PM_Name.TextChanged += new System.EventHandler(this.PM_Name_TextChanged);
             // 
             // label5
@@ -218,7 +214,7 @@
             this.PM_Title.Location = new System.Drawing.Point(97, 63);
             this.PM_Title.Name = "PM_Title";
             this.PM_Title.Size = new System.Drawing.Size(174, 20);
-            this.PM_Title.TabIndex = 8;
+            this.PM_Title.TabIndex = 1;
             this.PM_Title.TextChanged += new System.EventHandler(this.PM_Title_TextChanged);
             // 
             // Address_1
@@ -227,7 +223,7 @@
             this.Address_1.Location = new System.Drawing.Point(134, 123);
             this.Address_1.Name = "Address_1";
             this.Address_1.Size = new System.Drawing.Size(186, 21);
-            this.Address_1.TabIndex = 10;
+            this.Address_1.TabIndex = 2;
             this.Address_1.SelectedIndexChanged += new System.EventHandler(this.Address_1_SelectedIndexChanged);
             // 
             // label7
@@ -263,7 +259,7 @@
             this.Company_Name_1.Location = new System.Drawing.Point(134, 149);
             this.Company_Name_1.Name = "Company_Name_1";
             this.Company_Name_1.Size = new System.Drawing.Size(186, 20);
-            this.Company_Name_1.TabIndex = 14;
+            this.Company_Name_1.TabIndex = 3;
             this.Company_Name_1.TextChanged += new System.EventHandler(this.Company_Name_1_TextChanged);
             // 
             // Level_1
@@ -271,7 +267,7 @@
             this.Level_1.Location = new System.Drawing.Point(134, 175);
             this.Level_1.Name = "Level_1";
             this.Level_1.Size = new System.Drawing.Size(186, 20);
-            this.Level_1.TabIndex = 15;
+            this.Level_1.TabIndex = 4;
             this.Level_1.TextChanged += new System.EventHandler(this.Level_1_TextChanged);
             // 
             // Street_1
@@ -279,7 +275,7 @@
             this.Street_1.Location = new System.Drawing.Point(134, 201);
             this.Street_1.Name = "Street_1";
             this.Street_1.Size = new System.Drawing.Size(186, 20);
-            this.Street_1.TabIndex = 16;
+            this.Street_1.TabIndex = 5;
             this.Street_1.TextChanged += new System.EventHandler(this.Street_1_TextChanged);
             // 
             // Box_1
@@ -287,7 +283,7 @@
             this.Box_1.Location = new System.Drawing.Point(134, 230);
             this.Box_1.Name = "Box_1";
             this.Box_1.Size = new System.Drawing.Size(186, 20);
-            this.Box_1.TabIndex = 17;
+            this.Box_1.TabIndex = 6;
             this.Box_1.TextChanged += new System.EventHandler(this.Box_1_TextChanged);
             // 
             // City_1
@@ -295,7 +291,7 @@
             this.City_1.Location = new System.Drawing.Point(134, 253);
             this.City_1.Name = "City_1";
             this.City_1.Size = new System.Drawing.Size(186, 20);
-            this.City_1.TabIndex = 18;
+            this.City_1.TabIndex = 7;
             this.City_1.TextChanged += new System.EventHandler(this.City_1_TextChanged);
             // 
             // Telephone_1
@@ -303,7 +299,7 @@
             this.Telephone_1.Location = new System.Drawing.Point(134, 279);
             this.Telephone_1.Name = "Telephone_1";
             this.Telephone_1.Size = new System.Drawing.Size(186, 20);
-            this.Telephone_1.TabIndex = 19;
+            this.Telephone_1.TabIndex = 8;
             this.Telephone_1.TextChanged += new System.EventHandler(this.Telephone_1_TextChanged);
             // 
             // label9
@@ -356,7 +352,7 @@
             this.Fax_1.Location = new System.Drawing.Point(134, 305);
             this.Fax_1.Name = "Fax_1";
             this.Fax_1.Size = new System.Drawing.Size(186, 20);
-            this.Fax_1.TabIndex = 26;
+            this.Fax_1.TabIndex = 9;
             this.Fax_1.TextChanged += new System.EventHandler(this.Fax_1_TextChanged);
             // 
             // Email_1
@@ -364,7 +360,7 @@
             this.Email_1.Location = new System.Drawing.Point(134, 331);
             this.Email_1.Name = "Email_1";
             this.Email_1.Size = new System.Drawing.Size(186, 20);
-            this.Email_1.TabIndex = 27;
+            this.Email_1.TabIndex = 10;
             this.Email_1.Validating += new System.ComponentModel.CancelEventHandler(this.Email_1_Validating);
             // 
             // label14
@@ -385,40 +381,22 @@
             this.label15.TabIndex = 29;
             this.label15.Text = "Email:";
             // 
-            // Region
-            // 
-            this.Region.FormattingEnabled = true;
-            this.Region.Location = new System.Drawing.Point(9, 648);
-            this.Region.Name = "Region";
-            this.Region.Size = new System.Drawing.Size(265, 21);
-            this.Region.TabIndex = 30;
-            this.Region.SelectedIndexChanged += new System.EventHandler(this.Region_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 628);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(201, 13);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Which region will this contract be based?";
-            // 
             // geoYes
             // 
             this.geoYes.AutoSize = true;
-            this.geoYes.Location = new System.Drawing.Point(16, 34);
+            this.geoYes.Location = new System.Drawing.Point(16, 48);
             this.geoYes.Name = "geoYes";
             this.geoYes.Size = new System.Drawing.Size(43, 17);
-            this.geoYes.TabIndex = 32;
+            this.geoYes.TabIndex = 1;
             this.geoYes.TabStop = true;
             this.geoYes.Text = "Yes";
             this.geoYes.UseVisualStyleBackColor = true;
-            this.geoYes.CheckedChanged += new System.EventHandler(this.geoYes_CheckedChanged);
+            this.geoYes.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(1, 11);
+            this.label17.Location = new System.Drawing.Point(5, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(201, 13);
             this.label17.TabIndex = 33;
@@ -427,47 +405,38 @@
             // geoNo
             // 
             this.geoNo.AutoSize = true;
-            this.geoNo.Location = new System.Drawing.Point(135, 34);
+            this.geoNo.Location = new System.Drawing.Point(135, 48);
             this.geoNo.Name = "geoNo";
             this.geoNo.Size = new System.Drawing.Size(39, 17);
-            this.geoNo.TabIndex = 34;
+            this.geoNo.TabIndex = 2;
             this.geoNo.TabStop = true;
             this.geoNo.Text = "No";
             this.geoNo.UseVisualStyleBackColor = true;
-            this.geoNo.CheckedChanged += new System.EventHandler(this.geoNo_CheckedChanged);
-            // 
-            // schedLabel
-            // 
-            this.schedLabel.AllowDrop = true;
-            this.schedLabel.Location = new System.Drawing.Point(6, 72);
-            this.schedLabel.Name = "schedLabel";
-            this.schedLabel.Size = new System.Drawing.Size(314, 30);
-            this.schedLabel.TabIndex = 35;
-            this.schedLabel.Text = "Will your schedule be based as Provisional Sum or Scheduled Items?";
+            this.geoNo.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // provisionalSum
             // 
             this.provisionalSum.AutoSize = true;
-            this.provisionalSum.Location = new System.Drawing.Point(6, 15);
+            this.provisionalSum.Location = new System.Drawing.Point(6, 35);
             this.provisionalSum.Name = "provisionalSum";
             this.provisionalSum.Size = new System.Drawing.Size(100, 17);
-            this.provisionalSum.TabIndex = 36;
+            this.provisionalSum.TabIndex = 0;
             this.provisionalSum.TabStop = true;
             this.provisionalSum.Text = "Provisional Sum";
             this.provisionalSum.UseVisualStyleBackColor = true;
-            this.provisionalSum.CheckedChanged += new System.EventHandler(this.provisionalSum_CheckedChanged);
+            this.provisionalSum.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // scheduledItems
             // 
             this.scheduledItems.AutoSize = true;
-            this.scheduledItems.Location = new System.Drawing.Point(122, 15);
+            this.scheduledItems.Location = new System.Drawing.Point(122, 35);
             this.scheduledItems.Name = "scheduledItems";
             this.scheduledItems.Size = new System.Drawing.Size(104, 17);
-            this.scheduledItems.TabIndex = 37;
+            this.scheduledItems.TabIndex = 1;
             this.scheduledItems.TabStop = true;
             this.scheduledItems.Text = "Scheduled Items";
             this.scheduledItems.UseVisualStyleBackColor = true;
-            this.scheduledItems.CheckedChanged += new System.EventHandler(this.scheduledItems_CheckedChanged);
+            this.scheduledItems.CheckedChanged += new System.EventHandler(this.geo_Changed);
             // 
             // label19
             // 
@@ -483,10 +452,11 @@
             this.clientSiteYes.Location = new System.Drawing.Point(128, 37);
             this.clientSiteYes.Name = "clientSiteYes";
             this.clientSiteYes.Size = new System.Drawing.Size(43, 17);
-            this.clientSiteYes.TabIndex = 39;
+            this.clientSiteYes.TabIndex = 1;
             this.clientSiteYes.TabStop = true;
             this.clientSiteYes.Text = "Yes";
             this.clientSiteYes.UseVisualStyleBackColor = true;
+            this.clientSiteYes.CheckedChanged += new System.EventHandler(this.SiteInspection_Changed);
             // 
             // clientSiteNo
             // 
@@ -494,11 +464,11 @@
             this.clientSiteNo.Location = new System.Drawing.Point(9, 37);
             this.clientSiteNo.Name = "clientSiteNo";
             this.clientSiteNo.Size = new System.Drawing.Size(39, 17);
-            this.clientSiteNo.TabIndex = 40;
+            this.clientSiteNo.TabIndex = 0;
             this.clientSiteNo.TabStop = true;
             this.clientSiteNo.Text = "No";
             this.clientSiteNo.UseVisualStyleBackColor = true;
-            this.clientSiteNo.CheckedChanged += new System.EventHandler(this.clientSiteNo_CheckedChanged);
+            this.clientSiteNo.CheckedChanged += new System.EventHandler(this.SiteInspection_Changed);
             // 
             // label20
             // 
@@ -515,11 +485,11 @@
             this.altTenderNo.Location = new System.Drawing.Point(9, 31);
             this.altTenderNo.Name = "altTenderNo";
             this.altTenderNo.Size = new System.Drawing.Size(39, 17);
-            this.altTenderNo.TabIndex = 43;
+            this.altTenderNo.TabIndex = 0;
             this.altTenderNo.TabStop = true;
             this.altTenderNo.Text = "No";
             this.altTenderNo.UseVisualStyleBackColor = true;
-            this.altTenderNo.CheckedChanged += new System.EventHandler(this.altTenderNo_CheckedChanged);
+            this.altTenderNo.CheckedChanged += new System.EventHandler(this.altTender_Changed);
             // 
             // altTenderYes
             // 
@@ -527,11 +497,11 @@
             this.altTenderYes.Location = new System.Drawing.Point(127, 31);
             this.altTenderYes.Name = "altTenderYes";
             this.altTenderYes.Size = new System.Drawing.Size(43, 17);
-            this.altTenderYes.TabIndex = 42;
+            this.altTenderYes.TabIndex = 1;
             this.altTenderYes.TabStop = true;
             this.altTenderYes.Text = "Yes";
             this.altTenderYes.UseVisualStyleBackColor = true;
-            this.altTenderYes.CheckedChanged += new System.EventHandler(this.altTenderYes_CheckedChanged);
+            this.altTenderYes.CheckedChanged += new System.EventHandler(this.altTender_Changed);
             // 
             // help2
             // 
@@ -557,7 +527,7 @@
             this.TenderBox.Location = new System.Drawing.Point(9, 1003);
             this.TenderBox.Name = "TenderBox";
             this.TenderBox.Size = new System.Drawing.Size(265, 21);
-            this.TenderBox.TabIndex = 46;
+            this.TenderBox.TabIndex = 8;
             this.TenderBox.SelectedIndexChanged += new System.EventHandler(this.TenderBox_SelectedIndexChanged);
             // 
             // label22
@@ -565,7 +535,7 @@
             this.label22.Location = new System.Drawing.Point(3, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(265, 30);
-            this.label22.TabIndex = 47;
+            this.label22.TabIndex = 2;
             this.label22.Text = "Communications during the tender period (client\'s nominated person):";
             // 
             // label23
@@ -582,7 +552,7 @@
             this.Nominated_Phone.Location = new System.Drawing.Point(97, 59);
             this.Nominated_Phone.Name = "Nominated_Phone";
             this.Nominated_Phone.Size = new System.Drawing.Size(174, 20);
-            this.Nominated_Phone.TabIndex = 51;
+            this.Nominated_Phone.TabIndex = 4;
             this.Nominated_Phone.TextChanged += new System.EventHandler(this.Nominated_Phone_TextChanged);
             // 
             // label25
@@ -599,7 +569,7 @@
             this.Nominated_Person.Location = new System.Drawing.Point(97, 33);
             this.Nominated_Person.Name = "Nominated_Person";
             this.Nominated_Person.Size = new System.Drawing.Size(174, 20);
-            this.Nominated_Person.TabIndex = 48;
+            this.Nominated_Person.TabIndex = 3;
             this.Nominated_Person.TextChanged += new System.EventHandler(this.Nominated_Person_TextChanged);
             // 
             // label24
@@ -616,7 +586,7 @@
             this.Nominated_Email.Location = new System.Drawing.Point(97, 85);
             this.Nominated_Email.Name = "Nominated_Email";
             this.Nominated_Email.Size = new System.Drawing.Size(174, 20);
-            this.Nominated_Email.TabIndex = 53;
+            this.Nominated_Email.TabIndex = 5;
             this.Nominated_Email.TextChanged += new System.EventHandler(this.Nominated_Email_TextChanged);
             this.Nominated_Email.Leave += new System.EventHandler(this.Nominated_Email_Leave);
             // 
@@ -661,7 +631,7 @@
             this.City_2.Location = new System.Drawing.Point(160, 263);
             this.City_2.Name = "City_2";
             this.City_2.Size = new System.Drawing.Size(111, 20);
-            this.City_2.TabIndex = 62;
+            this.City_2.TabIndex = 11;
             this.City_2.TextChanged += new System.EventHandler(this.City_2_TextChanged);
             // 
             // Box_2
@@ -669,7 +639,7 @@
             this.Box_2.Location = new System.Drawing.Point(160, 237);
             this.Box_2.Name = "Box_2";
             this.Box_2.Size = new System.Drawing.Size(111, 20);
-            this.Box_2.TabIndex = 61;
+            this.Box_2.TabIndex = 10;
             this.Box_2.TextChanged += new System.EventHandler(this.Box_2_TextChanged);
             // 
             // Street_2
@@ -677,7 +647,7 @@
             this.Street_2.Location = new System.Drawing.Point(200, 211);
             this.Street_2.Name = "Street_2";
             this.Street_2.Size = new System.Drawing.Size(71, 20);
-            this.Street_2.TabIndex = 60;
+            this.Street_2.TabIndex = 9;
             this.Street_2.TextChanged += new System.EventHandler(this.Street_2_TextChanged);
             // 
             // Level_2
@@ -685,7 +655,7 @@
             this.Level_2.Location = new System.Drawing.Point(160, 185);
             this.Level_2.Name = "Level_2";
             this.Level_2.Size = new System.Drawing.Size(111, 20);
-            this.Level_2.TabIndex = 59;
+            this.Level_2.TabIndex = 8;
             this.Level_2.TextChanged += new System.EventHandler(this.Level_2_TextChanged);
             // 
             // Company_Name_2
@@ -693,7 +663,7 @@
             this.Company_Name_2.Location = new System.Drawing.Point(135, 159);
             this.Company_Name_2.Name = "Company_Name_2";
             this.Company_Name_2.Size = new System.Drawing.Size(136, 20);
-            this.Company_Name_2.TabIndex = 58;
+            this.Company_Name_2.TabIndex = 7;
             this.Company_Name_2.TextChanged += new System.EventHandler(this.Company_Name_2_TextChanged);
             // 
             // label30
@@ -720,7 +690,7 @@
             this.Address_2.Location = new System.Drawing.Point(135, 132);
             this.Address_2.Name = "Address_2";
             this.Address_2.Size = new System.Drawing.Size(136, 21);
-            this.Address_2.TabIndex = 55;
+            this.Address_2.TabIndex = 6;
             this.Address_2.SelectedIndexChanged += new System.EventHandler(this.Address_2_SelectedIndexChanged);
             // 
             // label32
@@ -736,33 +706,17 @@
             // 
             this.label33.Location = new System.Drawing.Point(3, 31);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(355, 22);
+            this.label33.Size = new System.Drawing.Size(170, 31);
             this.label33.TabIndex = 68;
             this.label33.Text = "Number of days enquiries must be raised before the Tender closes:";
             // 
-            // numDays
-            // 
-            this.numDays.Location = new System.Drawing.Point(3, 56);
-            this.numDays.Name = "numDays";
-            this.numDays.Size = new System.Drawing.Size(136, 20);
-            this.numDays.TabIndex = 69;
-            this.numDays.TextChanged += new System.EventHandler(this.numDays_TextChanged);
-            // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(3, 81);
+            this.label34.Location = new System.Drawing.Point(3, 71);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(301, 17);
+            this.label34.Size = new System.Drawing.Size(162, 30);
             this.label34.TabIndex = 70;
             this.label34.Text = "Number of hours NZTA client will endeavour to answer within:";
-            // 
-            // numHours
-            // 
-            this.numHours.Location = new System.Drawing.Point(3, 101);
-            this.numHours.Name = "numHours";
-            this.numHours.Size = new System.Drawing.Size(136, 20);
-            this.numHours.TabIndex = 71;
-            this.numHours.TextChanged += new System.EventHandler(this.numHours_TextChanged);
             // 
             // groupBox1
             // 
@@ -793,8 +747,8 @@
             this.groupBox1.Controls.Add(this.PM_Name);
             this.groupBox1.Location = new System.Drawing.Point(3, 262);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 363);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(328, 363);
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // label40
@@ -810,24 +764,24 @@
             // 
             this.groupBox2.Controls.Add(this.geoYes);
             this.groupBox2.Controls.Add(this.geoNo);
-            this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Controls.Add(this.schedLabel);
+            this.groupBox2.Controls.Add(this.gbGeo);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Location = new System.Drawing.Point(3, 675);
+            this.groupBox2.Location = new System.Drawing.Point(3, 631);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(331, 159);
-            this.groupBox2.TabIndex = 89;
+            this.groupBox2.Size = new System.Drawing.Size(328, 184);
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox7
+            // gbGeo
             // 
-            this.groupBox7.Controls.Add(this.scheduledItems);
-            this.groupBox7.Controls.Add(this.provisionalSum);
-            this.groupBox7.Location = new System.Drawing.Point(10, 105);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(273, 40);
-            this.groupBox7.TabIndex = 39;
-            this.groupBox7.TabStop = false;
+            this.gbGeo.Controls.Add(this.scheduledItems);
+            this.gbGeo.Controls.Add(this.provisionalSum);
+            this.gbGeo.Location = new System.Drawing.Point(28, 84);
+            this.gbGeo.Name = "gbGeo";
+            this.gbGeo.Size = new System.Drawing.Size(243, 65);
+            this.gbGeo.TabIndex = 3;
+            this.gbGeo.TabStop = false;
+            this.gbGeo.Text = "Will your schedule be based as Provisional Sum or Scheduled Items?";
             // 
             // groupBox3
             // 
@@ -853,8 +807,8 @@
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Location = new System.Drawing.Point(3, 1102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(331, 296);
-            this.groupBox3.TabIndex = 90;
+            this.groupBox3.Size = new System.Drawing.Size(328, 296);
+            this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             // 
             // label18
@@ -869,25 +823,51 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.numHours);
-            this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.numDays);
+            this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Location = new System.Drawing.Point(4, 1404);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(331, 130);
-            this.groupBox4.TabIndex = 91;
+            this.groupBox4.Size = new System.Drawing.Size(327, 106);
+            this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
+            // 
+            // numHours
+            // 
+            this.numHours.Location = new System.Drawing.Point(222, 69);
+            this.numHours.Name = "numHours";
+            this.numHours.Size = new System.Drawing.Size(62, 20);
+            this.numHours.TabIndex = 71;
+            this.numHours.Value = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.numHours.ValueChanged += new System.EventHandler(this.numHours_ValueChanged);
+            // 
+            // numDays
+            // 
+            this.numDays.Location = new System.Drawing.Point(222, 31);
+            this.numDays.Name = "numDays";
+            this.numDays.Size = new System.Drawing.Size(62, 20);
+            this.numDays.TabIndex = 71;
+            this.numDays.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numDays.ValueChanged += new System.EventHandler(this.numDays_ValueChanged);
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.clientSiteNo);
             this.groupBox6.Controls.Add(this.clientSiteYes);
             this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Location = new System.Drawing.Point(3, 840);
+            this.groupBox6.Location = new System.Drawing.Point(3, 832);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(331, 64);
-            this.groupBox6.TabIndex = 93;
+            this.groupBox6.Size = new System.Drawing.Size(328, 72);
+            this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             // 
             // groupBox8
@@ -898,8 +878,8 @@
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Location = new System.Drawing.Point(4, 906);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(330, 60);
-            this.groupBox8.TabIndex = 94;
+            this.groupBox8.Size = new System.Drawing.Size(327, 60);
+            this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             // 
             // Consultant_Name
@@ -907,7 +887,7 @@
             this.Consultant_Name.Location = new System.Drawing.Point(145, 34);
             this.Consultant_Name.Name = "Consultant_Name";
             this.Consultant_Name.Size = new System.Drawing.Size(174, 20);
-            this.Consultant_Name.TabIndex = 48;
+            this.Consultant_Name.TabIndex = 0;
             this.Consultant_Name.TextChanged += new System.EventHandler(this.Consultant_Name_TextChanged);
             // 
             // label55
@@ -924,7 +904,7 @@
             this.Consultant_Address.Location = new System.Drawing.Point(145, 60);
             this.Consultant_Address.Name = "Consultant_Address";
             this.Consultant_Address.Size = new System.Drawing.Size(174, 20);
-            this.Consultant_Address.TabIndex = 51;
+            this.Consultant_Address.TabIndex = 1;
             this.Consultant_Address.TextChanged += new System.EventHandler(this.Consultant_Address_TextChanged);
             // 
             // label54
@@ -941,7 +921,7 @@
             this.Set_No.Location = new System.Drawing.Point(145, 86);
             this.Set_No.Name = "Set_No";
             this.Set_No.Size = new System.Drawing.Size(174, 20);
-            this.Set_No.TabIndex = 53;
+            this.Set_No.TabIndex = 2;
             this.Set_No.TextChanged += new System.EventHandler(this.Set_No_TextChanged);
             // 
             // label53
@@ -959,7 +939,7 @@
             this.MadeDate.Location = new System.Drawing.Point(119, 112);
             this.MadeDate.Name = "MadeDate";
             this.MadeDate.Size = new System.Drawing.Size(200, 20);
-            this.MadeDate.TabIndex = 56;
+            this.MadeDate.TabIndex = 3;
             this.MadeDate.ValueChanged += new System.EventHandler(this.MadeDate_ValueChanged);
             // 
             // label47
@@ -985,7 +965,7 @@
             this.groupBox10.Location = new System.Drawing.Point(3, 109);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(328, 147);
-            this.groupBox10.TabIndex = 95;
+            this.groupBox10.TabIndex = 2;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Consultant Information";
             // 
@@ -994,7 +974,7 @@
             this.CloseDate.Location = new System.Drawing.Point(9, 1064);
             this.CloseDate.Name = "CloseDate";
             this.CloseDate.Size = new System.Drawing.Size(200, 20);
-            this.CloseDate.TabIndex = 97;
+            this.CloseDate.TabIndex = 10;
             this.CloseDate.ValueChanged += new System.EventHandler(this.CloseDate_ValueChanged);
             // 
             // label35
@@ -1003,73 +983,35 @@
             this.label35.Location = new System.Drawing.Point(7, 1036);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(186, 13);
-            this.label35.TabIndex = 96;
+            this.label35.TabIndex = 9;
             this.label35.Text = "Tenders close on what day and date?";
             // 
-            // help3
+            // StatementOfInterestAbilityClose_Chk
             // 
-            this.help3.Location = new System.Drawing.Point(138, 1548);
-            this.help3.Name = "help3";
-            this.help3.Size = new System.Drawing.Size(23, 23);
-            this.help3.TabIndex = 99;
-            this.help3.Text = "?";
-            this.help3.UseVisualStyleBackColor = true;
-            this.help3.Click += new System.EventHandler(this.help3_Click);
+            this.StatementOfInterestAbilityClose_Chk.Location = new System.Drawing.Point(226, 1052);
+            this.StatementOfInterestAbilityClose_Chk.Name = "StatementOfInterestAbilityClose_Chk";
+            this.StatementOfInterestAbilityClose_Chk.Size = new System.Drawing.Size(93, 50);
+            this.StatementOfInterestAbilityClose_Chk.TabIndex = 11;
+            this.StatementOfInterestAbilityClose_Chk.Text = "Statement of Interest and Ability Close";
+            this.StatementOfInterestAbilityClose_Chk.UseVisualStyleBackColor = true;
+            this.StatementOfInterestAbilityClose_Chk.CheckedChanged += new System.EventHandler(this.StatementOfInterestAbilityClose_Chk_CheckedChanged);
             // 
-            // CostFluctuations_Check
+            // lblBuiltDate
             // 
-            this.CostFluctuations_Check.AutoSize = true;
-            this.CostFluctuations_Check.Location = new System.Drawing.Point(4, 1552);
-            this.CostFluctuations_Check.Name = "CostFluctuations_Check";
-            this.CostFluctuations_Check.Size = new System.Drawing.Size(128, 17);
-            this.CostFluctuations_Check.TabIndex = 98;
-            this.CostFluctuations_Check.Text = "Pay Cost Fluctuations";
-            this.CostFluctuations_Check.UseVisualStyleBackColor = true;
-            this.CostFluctuations_Check.CheckedChanged += new System.EventHandler(this.CostFluctuations_Check_CheckedChanged);
-            // 
-            // lblCostIndex
-            // 
-            this.lblCostIndex.AutoSize = true;
-            this.lblCostIndex.Location = new System.Drawing.Point(181, 1553);
-            this.lblCostIndex.Name = "lblCostIndex";
-            this.lblCostIndex.Size = new System.Drawing.Size(39, 13);
-            this.lblCostIndex.TabIndex = 100;
-            this.lblCostIndex.Text = "Index: ";
-            // 
-            // CostIndex
-            // 
-            this.CostIndex.DecimalPlaces = 2;
-            this.CostIndex.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.CostIndex.Location = new System.Drawing.Point(226, 1551);
-            this.CostIndex.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CostIndex.Name = "CostIndex";
-            this.CostIndex.Size = new System.Drawing.Size(79, 20);
-            this.CostIndex.TabIndex = 101;
-            this.CostIndex.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.CostIndex.ValueChanged += new System.EventHandler(this.CostIndex_ValueChanged);
+            this.lblBuiltDate.AutoSize = true;
+            this.lblBuiltDate.Location = new System.Drawing.Point(211, 1513);
+            this.lblBuiltDate.Name = "lblBuiltDate";
+            this.lblBuiltDate.Size = new System.Drawing.Size(0, 13);
+            this.lblBuiltDate.TabIndex = 46;
             // 
             // ContractDetails
             // 
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.Controls.Add(this.CostIndex);
-            this.Controls.Add(this.lblCostIndex);
-            this.Controls.Add(this.help3);
+            this.Controls.Add(this.lblBuiltDate);
+            this.Controls.Add(this.StatementOfInterestAbilityClose_Chk);
             this.Controls.Add(this.CloseDate);
             this.Controls.Add(this.label35);
-            this.Controls.Add(this.CostFluctuations_Check);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
@@ -1079,33 +1021,32 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TenderBox);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.Region);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Contract_Number);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contract_Name);
             this.Name = "ContractDetails";
-            this.Size = new System.Drawing.Size(338, 1584);
+            this.Size = new System.Drawing.Size(338, 1539);
             this.Load += new System.EventHandler(this.ContractDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.gbGeo.ResumeLayout(false);
+            this.gbGeo.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDays)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CostIndex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1141,12 +1082,9 @@
         private System.Windows.Forms.TextBox Email_1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox Region;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RadioButton geoYes;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RadioButton geoNo;
-        private System.Windows.Forms.Label schedLabel;
         private System.Windows.Forms.RadioButton provisionalSum;
         private System.Windows.Forms.RadioButton scheduledItems;
         private System.Windows.Forms.Label label19;
@@ -1178,9 +1116,7 @@
         private System.Windows.Forms.ComboBox Address_2;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox numDays;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox numHours;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1188,7 +1124,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox Street_2;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gbGeo;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox Consultant_Name;
@@ -1203,10 +1139,10 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.DateTimePicker CloseDate;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button help3;
-        private System.Windows.Forms.CheckBox CostFluctuations_Check;
-        private System.Windows.Forms.Label lblCostIndex;
-        private System.Windows.Forms.NumericUpDown CostIndex;
+        private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
+        private System.Windows.Forms.NumericUpDown numHours;
+        private System.Windows.Forms.NumericUpDown numDays;
+        private System.Windows.Forms.Label lblBuiltDate;
 
     }
 }
