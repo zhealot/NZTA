@@ -351,7 +351,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             if (MadeDate.Value != null && !ignoreChange)
             {
                 Util.ContentControls.setText("Date_Day", MadeDate.Value.Day.ToString());
-                Util.ContentControls.setText("Date_Month", MadeDate.Value.ToString("MMM"));
+                Util.ContentControls.setText("Date_Month", MadeDate.Value.ToString("MMMM"));
                 Util.ContentControls.setText("Date_Year", MadeDate.Value.Year.ToString());
                 Globals.ThisDocument.rtcContractDate.Range.Select();
             }
