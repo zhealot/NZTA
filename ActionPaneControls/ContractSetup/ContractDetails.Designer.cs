@@ -115,7 +115,6 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CloseDate = new System.Windows.Forms.DateTimePicker();
             this.label35 = new System.Windows.Forms.Label();
-            this.StatementOfInterestAbilityClose_Chk = new System.Windows.Forms.CheckBox();
             this.lblBuiltDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -986,16 +985,6 @@
             this.label35.TabIndex = 9;
             this.label35.Text = "Tenders close on what day and date?";
             // 
-            // StatementOfInterestAbilityClose_Chk
-            // 
-            this.StatementOfInterestAbilityClose_Chk.Location = new System.Drawing.Point(226, 1052);
-            this.StatementOfInterestAbilityClose_Chk.Name = "StatementOfInterestAbilityClose_Chk";
-            this.StatementOfInterestAbilityClose_Chk.Size = new System.Drawing.Size(93, 50);
-            this.StatementOfInterestAbilityClose_Chk.TabIndex = 11;
-            this.StatementOfInterestAbilityClose_Chk.Text = "Statement of Interest and Ability Close";
-            this.StatementOfInterestAbilityClose_Chk.UseVisualStyleBackColor = true;
-            this.StatementOfInterestAbilityClose_Chk.CheckedChanged += new System.EventHandler(this.StatementOfInterestAbilityClose_Chk_CheckedChanged);
-            // 
             // lblBuiltDate
             // 
             this.lblBuiltDate.AutoSize = true;
@@ -1009,7 +998,6 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.Controls.Add(this.lblBuiltDate);
-            this.Controls.Add(this.StatementOfInterestAbilityClose_Chk);
             this.Controls.Add(this.CloseDate);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.groupBox10);
@@ -1139,7 +1127,6 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.DateTimePicker CloseDate;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.CheckBox StatementOfInterestAbilityClose_Chk;
         private System.Windows.Forms.NumericUpDown numHours;
         private System.Windows.Forms.NumericUpDown numDays;
         private System.Windows.Forms.Label lblBuiltDate;

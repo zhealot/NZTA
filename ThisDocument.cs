@@ -73,6 +73,7 @@ namespace NZTA_Contract_Generator
         /// </summary>
         private void InternalStartup()
         {
+            this.bmPaymentSchedule.SelectionChange += new Microsoft.Office.Tools.Word.SelectionEventHandler(this.bmPaymentSchedule_SelectionChange);
             this.Startup += new System.EventHandler(this.ThisDocument_Startup);
             this.Shutdown += new System.EventHandler(this.ThisDocument_Shutdown);
 
@@ -90,6 +91,10 @@ namespace NZTA_Contract_Generator
             NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = NZTA_Contract_Generator.Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
         }
 
+        private void bmPaymentSchedule_SelectionChange(object sender, SelectionEventArgs e)
+        {
+
+        }
     }
     public static class GlobalVar
     {
