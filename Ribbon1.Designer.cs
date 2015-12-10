@@ -41,6 +41,7 @@
             this.ExportGroup = this.Factory.CreateRibbonGroup();
             this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
             this.button1 = this.Factory.CreateRibbonButton();
+            this.Finalize = this.Factory.CreateRibbonButton();
             this.ExportWordButton = this.Factory.CreateRibbonButton();
             this.ExportDraftButton = this.Factory.CreateRibbonButton();
             this.ExportFinalButton = this.Factory.CreateRibbonButton();
@@ -48,6 +49,7 @@
             this.CGTAB.SuspendLayout();
             this.DisplayOptionsGroup.SuspendLayout();
             this.ExportGroup.SuspendLayout();
+            this.SuspendLayout();
             // 
             // tab1
             // 
@@ -73,6 +75,7 @@
             // 
             this.DisplayOptionsGroup.Items.Add(this.toggleButton1);
             this.DisplayOptionsGroup.Items.Add(this.button1);
+            this.DisplayOptionsGroup.Items.Add(this.Finalize);
             this.DisplayOptionsGroup.Label = "Display Options";
             this.DisplayOptionsGroup.Name = "DisplayOptionsGroup";
             // 
@@ -102,6 +105,15 @@
             this.button1.Name = "button1";
             this.button1.ShowImage = true;
             this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            // 
+            // Finalize
+            // 
+            this.Finalize.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Finalize.Image = global::NZTA_Contract_Generator.Properties.Resources.finalize;
+            this.Finalize.Label = "Finalize";
+            this.Finalize.Name = "Finalize";
+            this.Finalize.ShowImage = true;
+            this.Finalize.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Finalize_Click);
             // 
             // ExportWordButton
             // 
@@ -145,6 +157,7 @@
             this.DisplayOptionsGroup.PerformLayout();
             this.ExportGroup.ResumeLayout(false);
             this.ExportGroup.PerformLayout();
+            this.ResumeLayout(false);
 
         }
 
@@ -160,6 +173,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportDraftButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonToggleButton toggleButton1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Finalize;
     }
 
     partial class ThisRibbonCollection

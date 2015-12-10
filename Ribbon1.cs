@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Office.Tools.Ribbon;
-using COM = System.Runtime.InteropServices.ComTypes;
 using Microsoft.Office.Interop.Word;
 
 namespace NZTA_Contract_Generator
@@ -147,6 +144,37 @@ namespace NZTA_Contract_Generator
             }
 
             Globals.ThisDocument.Application.ScreenUpdating = true;
+        }
+
+        private void Finalize_Click(object sender, RibbonControlEventArgs e)
+        //update all page ref fields code; make sure key page is on odd page & has a blank page afterwares
+        {
+            List<Microsoft.Office.Tools.Word.Bookmark> aBookMark = new List<Microsoft.Office.Tools.Word.Bookmark>();
+            aBookMark.Add(Globals.ThisDocument.bmSECTION_A);
+            foreach (var bm in aBookMark)
+            {
+                if ((int)bm.Information[WdInformation.wdActiveEndPageNumber] % 2 == 0)
+                {
+                    try
+                    {
+                        var rg =bm.GoTo(WdGoToItem.wdGoToPage, WdGoToDirection.wdGoToRelative, 0);
+                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
+                        rg.GoToPrevious(WdGoToItem.wdGoToLine);
+                        rg.Collapse(WdCollapseDirection.wdCollapseEnd);
+                        rg.InsertBreak(WdBreakType.wdPageBreak);
+                        rg.InsertBreak(WdBreakType.wdPageBreak);
+                        bm.Range.Collapse(WdCollapseDirection.wdCollapseEnd);
+                        bm.Range.InsertBreak(WdBreakType.wdPageBreak);
+                    }
+                    catch (Exception ex) { System.Diagnostics.Debug.WriteLine(ex.Message); }
+                }
+            }
+
+            foreach(Field fld in Globals.ThisDocument.Fields)
+            {
+                if (fld.Type == WdFieldType.wdFieldPageRef)
+                    fld.Update();                    
+            }
         }
     }
 }
