@@ -315,20 +315,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl169;
         
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_D;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_C;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_A;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_B;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_E;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_F;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_G;
-        
         internal Microsoft.Office.Tools.Word.Bookmark bmRFTDocuments;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcClauseBridge;
@@ -421,8 +407,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark bmTenderEvaluationTeam;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl1;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl2;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl3;
@@ -431,17 +415,15 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl5;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl6;
+        internal Microsoft.Office.Tools.Word.GroupContentControl ere;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl7;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl8;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl11;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl14;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl15;
+        internal Microsoft.Office.Tools.Word.GroupContentControl GCC_test;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl16;
         
@@ -479,8 +461,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl33;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl34;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl36;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl37;
@@ -517,8 +497,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl54;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl55;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl58;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl59;
@@ -543,8 +521,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl69;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl71;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl72;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl73;
@@ -559,12 +535,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl78;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl79;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl80;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl81;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl82;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl83;
@@ -576,6 +546,54 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl86;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl87;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl1;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl RTC_SectionA;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl RTC_SectionB;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl RTC_SectionC;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl RTC_SectionD;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl RTC_SectionE;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_C;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl88;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl89;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl90;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl92;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl93;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl94;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl95;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl96;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl97;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl99;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl100;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_A;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_B;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_D;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_E;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_G;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_F;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -828,13 +846,6 @@ namespace NZTA_Contract_Generator {
             this.MethStart.BeginInit();
             this.richTextContentControl168.BeginInit();
             this.richTextContentControl169.BeginInit();
-            this.bmSECTION_D.BeginInit();
-            this.bmSECTION_C.BeginInit();
-            this.bmSECTION_A.BeginInit();
-            this.bmSECTION_B.BeginInit();
-            this.bmSECTION_E.BeginInit();
-            this.bmSECTION_F.BeginInit();
-            this.bmSECTION_G.BeginInit();
             this.bmRFTDocuments.BeginInit();
             this.rtcClauseBridge.BeginInit();
             this.rtcClauseHighway.BeginInit();
@@ -881,17 +892,15 @@ namespace NZTA_Contract_Generator {
             this.bmASSEnd.BeginInit();
             this.bmKeyPersonnel.BeginInit();
             this.bmTenderEvaluationTeam.BeginInit();
-            this.groupContentControl1.BeginInit();
             this.groupContentControl2.BeginInit();
             this.groupContentControl3.BeginInit();
             this.groupContentControl4.BeginInit();
             this.groupContentControl5.BeginInit();
-            this.groupContentControl6.BeginInit();
+            this.ere.BeginInit();
             this.groupContentControl7.BeginInit();
-            this.groupContentControl8.BeginInit();
             this.groupContentControl11.BeginInit();
             this.groupContentControl14.BeginInit();
-            this.groupContentControl15.BeginInit();
+            this.GCC_test.BeginInit();
             this.groupContentControl16.BeginInit();
             this.groupContentControl17.BeginInit();
             this.groupContentControl18.BeginInit();
@@ -910,7 +919,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl31.BeginInit();
             this.groupContentControl32.BeginInit();
             this.groupContentControl33.BeginInit();
-            this.groupContentControl34.BeginInit();
             this.groupContentControl36.BeginInit();
             this.groupContentControl37.BeginInit();
             this.groupContentControl38.BeginInit();
@@ -929,7 +937,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl52.BeginInit();
             this.groupContentControl53.BeginInit();
             this.groupContentControl54.BeginInit();
-            this.groupContentControl55.BeginInit();
             this.groupContentControl58.BeginInit();
             this.groupContentControl59.BeginInit();
             this.groupContentControl60.BeginInit();
@@ -942,7 +949,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl67.BeginInit();
             this.groupContentControl68.BeginInit();
             this.groupContentControl69.BeginInit();
-            this.groupContentControl71.BeginInit();
             this.groupContentControl72.BeginInit();
             this.groupContentControl73.BeginInit();
             this.groupContentControl74.BeginInit();
@@ -950,15 +956,36 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl76.BeginInit();
             this.groupContentControl77.BeginInit();
             this.groupContentControl78.BeginInit();
-            this.groupContentControl79.BeginInit();
-            this.groupContentControl80.BeginInit();
-            this.groupContentControl81.BeginInit();
             this.groupContentControl82.BeginInit();
             this.groupContentControl83.BeginInit();
             this.groupContentControl84.BeginInit();
             this.groupContentControl85.BeginInit();
             this.groupContentControl86.BeginInit();
             this.groupContentControl87.BeginInit();
+            this.groupContentControl1.BeginInit();
+            this.RTC_SectionA.BeginInit();
+            this.RTC_SectionB.BeginInit();
+            this.RTC_SectionC.BeginInit();
+            this.RTC_SectionD.BeginInit();
+            this.RTC_SectionE.BeginInit();
+            this.bmSECTION_C.BeginInit();
+            this.groupContentControl88.BeginInit();
+            this.groupContentControl89.BeginInit();
+            this.groupContentControl90.BeginInit();
+            this.groupContentControl92.BeginInit();
+            this.groupContentControl93.BeginInit();
+            this.groupContentControl94.BeginInit();
+            this.groupContentControl95.BeginInit();
+            this.groupContentControl96.BeginInit();
+            this.groupContentControl97.BeginInit();
+            this.groupContentControl99.BeginInit();
+            this.groupContentControl100.BeginInit();
+            this.bmSECTION_A.BeginInit();
+            this.bmSECTION_B.BeginInit();
+            this.bmSECTION_D.BeginInit();
+            this.bmSECTION_E.BeginInit();
+            this.bmSECTION_G.BeginInit();
+            this.bmSECTION_F.BeginInit();
         }
         
         /// 
@@ -966,15 +993,36 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmSECTION_F.EndInit();
+            this.bmSECTION_G.EndInit();
+            this.bmSECTION_E.EndInit();
+            this.bmSECTION_D.EndInit();
+            this.bmSECTION_B.EndInit();
+            this.bmSECTION_A.EndInit();
+            this.groupContentControl100.EndInit();
+            this.groupContentControl99.EndInit();
+            this.groupContentControl97.EndInit();
+            this.groupContentControl96.EndInit();
+            this.groupContentControl95.EndInit();
+            this.groupContentControl94.EndInit();
+            this.groupContentControl93.EndInit();
+            this.groupContentControl92.EndInit();
+            this.groupContentControl90.EndInit();
+            this.groupContentControl89.EndInit();
+            this.groupContentControl88.EndInit();
+            this.bmSECTION_C.EndInit();
+            this.RTC_SectionE.EndInit();
+            this.RTC_SectionD.EndInit();
+            this.RTC_SectionC.EndInit();
+            this.RTC_SectionB.EndInit();
+            this.RTC_SectionA.EndInit();
+            this.groupContentControl1.EndInit();
             this.groupContentControl87.EndInit();
             this.groupContentControl86.EndInit();
             this.groupContentControl85.EndInit();
             this.groupContentControl84.EndInit();
             this.groupContentControl83.EndInit();
             this.groupContentControl82.EndInit();
-            this.groupContentControl81.EndInit();
-            this.groupContentControl80.EndInit();
-            this.groupContentControl79.EndInit();
             this.groupContentControl78.EndInit();
             this.groupContentControl77.EndInit();
             this.groupContentControl76.EndInit();
@@ -982,7 +1030,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl74.EndInit();
             this.groupContentControl73.EndInit();
             this.groupContentControl72.EndInit();
-            this.groupContentControl71.EndInit();
             this.groupContentControl69.EndInit();
             this.groupContentControl68.EndInit();
             this.groupContentControl67.EndInit();
@@ -995,7 +1042,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl60.EndInit();
             this.groupContentControl59.EndInit();
             this.groupContentControl58.EndInit();
-            this.groupContentControl55.EndInit();
             this.groupContentControl54.EndInit();
             this.groupContentControl53.EndInit();
             this.groupContentControl52.EndInit();
@@ -1014,7 +1060,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl38.EndInit();
             this.groupContentControl37.EndInit();
             this.groupContentControl36.EndInit();
-            this.groupContentControl34.EndInit();
             this.groupContentControl33.EndInit();
             this.groupContentControl32.EndInit();
             this.groupContentControl31.EndInit();
@@ -1033,17 +1078,15 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl18.EndInit();
             this.groupContentControl17.EndInit();
             this.groupContentControl16.EndInit();
-            this.groupContentControl15.EndInit();
+            this.GCC_test.EndInit();
             this.groupContentControl14.EndInit();
             this.groupContentControl11.EndInit();
-            this.groupContentControl8.EndInit();
             this.groupContentControl7.EndInit();
-            this.groupContentControl6.EndInit();
+            this.ere.EndInit();
             this.groupContentControl5.EndInit();
             this.groupContentControl4.EndInit();
             this.groupContentControl3.EndInit();
             this.groupContentControl2.EndInit();
-            this.groupContentControl1.EndInit();
             this.bmTenderEvaluationTeam.EndInit();
             this.bmKeyPersonnel.EndInit();
             this.bmASSEnd.EndInit();
@@ -1090,13 +1133,6 @@ namespace NZTA_Contract_Generator {
             this.rtcClauseHighway.EndInit();
             this.rtcClauseBridge.EndInit();
             this.bmRFTDocuments.EndInit();
-            this.bmSECTION_G.EndInit();
-            this.bmSECTION_F.EndInit();
-            this.bmSECTION_E.EndInit();
-            this.bmSECTION_B.EndInit();
-            this.bmSECTION_A.EndInit();
-            this.bmSECTION_C.EndInit();
-            this.bmSECTION_D.EndInit();
             this.richTextContentControl169.EndInit();
             this.richTextContentControl168.EndInit();
             this.MethStart.EndInit();
@@ -1403,13 +1439,6 @@ namespace NZTA_Contract_Generator {
             this.MethStart = Globals.Factory.CreateBookmark(null, null, "MethStart", "MethStart", this);
             this.richTextContentControl168 = Globals.Factory.CreateRichTextContentControl(null, null, "3068755074", "richTextContentControl168", this);
             this.richTextContentControl169 = Globals.Factory.CreateRichTextContentControl(null, null, "3566512576", "richTextContentControl169", this);
-            this.bmSECTION_D = Globals.Factory.CreateBookmark(null, null, "bmSECTION_D", "bmSECTION_D", this);
-            this.bmSECTION_C = Globals.Factory.CreateBookmark(null, null, "bmSECTION_C", "bmSECTION_C", this);
-            this.bmSECTION_A = Globals.Factory.CreateBookmark(null, null, "bmSECTION_A", "bmSECTION_A", this);
-            this.bmSECTION_B = Globals.Factory.CreateBookmark(null, null, "bmSECTION_B", "bmSECTION_B", this);
-            this.bmSECTION_E = Globals.Factory.CreateBookmark(null, null, "bmSECTION_E", "bmSECTION_E", this);
-            this.bmSECTION_F = Globals.Factory.CreateBookmark(null, null, "bmSECTION_F", "bmSECTION_F", this);
-            this.bmSECTION_G = Globals.Factory.CreateBookmark(null, null, "bmSECTION_G", "bmSECTION_G", this);
             this.bmRFTDocuments = Globals.Factory.CreateBookmark(null, null, "bmRFTDocuments", "bmRFTDocuments", this);
             this.rtcClauseBridge = Globals.Factory.CreateRichTextContentControl(null, null, "2898381404", "rtcClauseBridge", this);
             this.rtcClauseHighway = Globals.Factory.CreateRichTextContentControl(null, null, "2464766942", "rtcClauseHighway", this);
@@ -1456,17 +1485,15 @@ namespace NZTA_Contract_Generator {
             this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
             this.bmKeyPersonnel = Globals.Factory.CreateBookmark(null, null, "bmKeyPersonnel", "bmKeyPersonnel", this);
             this.bmTenderEvaluationTeam = Globals.Factory.CreateBookmark(null, null, "bmTenderEvaluationTeam", "bmTenderEvaluationTeam", this);
-            this.groupContentControl1 = Globals.Factory.CreateGroupContentControl(null, null, "2422675766", "groupContentControl1", this);
             this.groupContentControl2 = Globals.Factory.CreateGroupContentControl(null, null, "2231878678", "groupContentControl2", this);
             this.groupContentControl3 = Globals.Factory.CreateGroupContentControl(null, null, "3620936573", "groupContentControl3", this);
             this.groupContentControl4 = Globals.Factory.CreateGroupContentControl(null, null, "3898137533", "groupContentControl4", this);
             this.groupContentControl5 = Globals.Factory.CreateGroupContentControl(null, null, "1168836075", "groupContentControl5", this);
-            this.groupContentControl6 = Globals.Factory.CreateGroupContentControl(null, null, "1658417273", "groupContentControl6", this);
+            this.ere = Globals.Factory.CreateGroupContentControl(null, null, "1658417273", "ere", this);
             this.groupContentControl7 = Globals.Factory.CreateGroupContentControl(null, null, "629675134", "groupContentControl7", this);
-            this.groupContentControl8 = Globals.Factory.CreateGroupContentControl(null, null, "2218311827", "groupContentControl8", this);
             this.groupContentControl11 = Globals.Factory.CreateGroupContentControl(null, null, "600459685", "groupContentControl11", this);
             this.groupContentControl14 = Globals.Factory.CreateGroupContentControl(null, null, "2758998237", "groupContentControl14", this);
-            this.groupContentControl15 = Globals.Factory.CreateGroupContentControl(null, null, "4098113802", "groupContentControl15", this);
+            this.GCC_test = Globals.Factory.CreateGroupContentControl(null, null, "4098113802", "GCC_test", this);
             this.groupContentControl16 = Globals.Factory.CreateGroupContentControl(null, null, "1833020401", "groupContentControl16", this);
             this.groupContentControl17 = Globals.Factory.CreateGroupContentControl(null, null, "2913716891", "groupContentControl17", this);
             this.groupContentControl18 = Globals.Factory.CreateGroupContentControl(null, null, "301194325", "groupContentControl18", this);
@@ -1485,7 +1512,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl31 = Globals.Factory.CreateGroupContentControl(null, null, "3437005209", "groupContentControl31", this);
             this.groupContentControl32 = Globals.Factory.CreateGroupContentControl(null, null, "139396910", "groupContentControl32", this);
             this.groupContentControl33 = Globals.Factory.CreateGroupContentControl(null, null, "2936844880", "groupContentControl33", this);
-            this.groupContentControl34 = Globals.Factory.CreateGroupContentControl(null, null, "493305153", "groupContentControl34", this);
             this.groupContentControl36 = Globals.Factory.CreateGroupContentControl(null, null, "492462714", "groupContentControl36", this);
             this.groupContentControl37 = Globals.Factory.CreateGroupContentControl(null, null, "1092900948", "groupContentControl37", this);
             this.groupContentControl38 = Globals.Factory.CreateGroupContentControl(null, null, "2263790892", "groupContentControl38", this);
@@ -1504,7 +1530,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl52 = Globals.Factory.CreateGroupContentControl(null, null, "3061114182", "groupContentControl52", this);
             this.groupContentControl53 = Globals.Factory.CreateGroupContentControl(null, null, "325258083", "groupContentControl53", this);
             this.groupContentControl54 = Globals.Factory.CreateGroupContentControl(null, null, "551042101", "groupContentControl54", this);
-            this.groupContentControl55 = Globals.Factory.CreateGroupContentControl(null, null, "243689416", "groupContentControl55", this);
             this.groupContentControl58 = Globals.Factory.CreateGroupContentControl(null, null, "3101666677", "groupContentControl58", this);
             this.groupContentControl59 = Globals.Factory.CreateGroupContentControl(null, null, "3894670858", "groupContentControl59", this);
             this.groupContentControl60 = Globals.Factory.CreateGroupContentControl(null, null, "1503385528", "groupContentControl60", this);
@@ -1517,7 +1542,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl67 = Globals.Factory.CreateGroupContentControl(null, null, "1413437211", "groupContentControl67", this);
             this.groupContentControl68 = Globals.Factory.CreateGroupContentControl(null, null, "4095953480", "groupContentControl68", this);
             this.groupContentControl69 = Globals.Factory.CreateGroupContentControl(null, null, "133068097", "groupContentControl69", this);
-            this.groupContentControl71 = Globals.Factory.CreateGroupContentControl(null, null, "3273498613", "groupContentControl71", this);
             this.groupContentControl72 = Globals.Factory.CreateGroupContentControl(null, null, "3369004301", "groupContentControl72", this);
             this.groupContentControl73 = Globals.Factory.CreateGroupContentControl(null, null, "1807509498", "groupContentControl73", this);
             this.groupContentControl74 = Globals.Factory.CreateGroupContentControl(null, null, "1229500032", "groupContentControl74", this);
@@ -1525,15 +1549,36 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl76 = Globals.Factory.CreateGroupContentControl(null, null, "1051653028", "groupContentControl76", this);
             this.groupContentControl77 = Globals.Factory.CreateGroupContentControl(null, null, "1329101253", "groupContentControl77", this);
             this.groupContentControl78 = Globals.Factory.CreateGroupContentControl(null, null, "3476615967", "groupContentControl78", this);
-            this.groupContentControl79 = Globals.Factory.CreateGroupContentControl(null, null, "1716389241", "groupContentControl79", this);
-            this.groupContentControl80 = Globals.Factory.CreateGroupContentControl(null, null, "1314904852", "groupContentControl80", this);
-            this.groupContentControl81 = Globals.Factory.CreateGroupContentControl(null, null, "3897914573", "groupContentControl81", this);
             this.groupContentControl82 = Globals.Factory.CreateGroupContentControl(null, null, "1203596482", "groupContentControl82", this);
             this.groupContentControl83 = Globals.Factory.CreateGroupContentControl(null, null, "3063974613", "groupContentControl83", this);
             this.groupContentControl84 = Globals.Factory.CreateGroupContentControl(null, null, "1484131213", "groupContentControl84", this);
             this.groupContentControl85 = Globals.Factory.CreateGroupContentControl(null, null, "1969002233", "groupContentControl85", this);
             this.groupContentControl86 = Globals.Factory.CreateGroupContentControl(null, null, "1192491953", "groupContentControl86", this);
             this.groupContentControl87 = Globals.Factory.CreateGroupContentControl(null, null, "910895420", "groupContentControl87", this);
+            this.groupContentControl1 = Globals.Factory.CreateGroupContentControl(null, null, "2422675766", "groupContentControl1", this);
+            this.RTC_SectionA = Globals.Factory.CreateRichTextContentControl(null, null, "3438551023", "RTC_SectionA", this);
+            this.RTC_SectionB = Globals.Factory.CreateRichTextContentControl(null, null, "2151093148", "RTC_SectionB", this);
+            this.RTC_SectionC = Globals.Factory.CreateRichTextContentControl(null, null, "1764650000", "RTC_SectionC", this);
+            this.RTC_SectionD = Globals.Factory.CreateRichTextContentControl(null, null, "2152561012", "RTC_SectionD", this);
+            this.RTC_SectionE = Globals.Factory.CreateRichTextContentControl(null, null, "571475931", "RTC_SectionE", this);
+            this.bmSECTION_C = Globals.Factory.CreateBookmark(null, null, "bmSECTION_C", "bmSECTION_C", this);
+            this.groupContentControl88 = Globals.Factory.CreateGroupContentControl(null, null, "904806821", "groupContentControl88", this);
+            this.groupContentControl89 = Globals.Factory.CreateGroupContentControl(null, null, "2949194772", "groupContentControl89", this);
+            this.groupContentControl90 = Globals.Factory.CreateGroupContentControl(null, null, "1408489611", "groupContentControl90", this);
+            this.groupContentControl92 = Globals.Factory.CreateGroupContentControl(null, null, "1792870990", "groupContentControl92", this);
+            this.groupContentControl93 = Globals.Factory.CreateGroupContentControl(null, null, "2554646795", "groupContentControl93", this);
+            this.groupContentControl94 = Globals.Factory.CreateGroupContentControl(null, null, "32929254", "groupContentControl94", this);
+            this.groupContentControl95 = Globals.Factory.CreateGroupContentControl(null, null, "1695036104", "groupContentControl95", this);
+            this.groupContentControl96 = Globals.Factory.CreateGroupContentControl(null, null, "1872575896", "groupContentControl96", this);
+            this.groupContentControl97 = Globals.Factory.CreateGroupContentControl(null, null, "1210464266", "groupContentControl97", this);
+            this.groupContentControl99 = Globals.Factory.CreateGroupContentControl(null, null, "2581394556", "groupContentControl99", this);
+            this.groupContentControl100 = Globals.Factory.CreateGroupContentControl(null, null, "2778287410", "groupContentControl100", this);
+            this.bmSECTION_A = Globals.Factory.CreateBookmark(null, null, "bmSECTION_A", "bmSECTION_A", this);
+            this.bmSECTION_B = Globals.Factory.CreateBookmark(null, null, "bmSECTION_B", "bmSECTION_B", this);
+            this.bmSECTION_D = Globals.Factory.CreateBookmark(null, null, "bmSECTION_D", "bmSECTION_D", this);
+            this.bmSECTION_E = Globals.Factory.CreateBookmark(null, null, "bmSECTION_E", "bmSECTION_E", this);
+            this.bmSECTION_G = Globals.Factory.CreateBookmark(null, null, "bmSECTION_G", "bmSECTION_G", this);
+            this.bmSECTION_F = Globals.Factory.CreateBookmark(null, null, "bmSECTION_F", "bmSECTION_F", this);
         }
         
         /// 
@@ -2139,34 +2184,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.richTextContentControl169.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // bmSECTION_D
-            // 
-            this.bmSECTION_D.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_C
-            // 
-            this.bmSECTION_C.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_A
-            // 
-            this.bmSECTION_A.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_B
-            // 
-            this.bmSECTION_B.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_E
-            // 
-            this.bmSECTION_E.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_F
-            // 
-            this.bmSECTION_F.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // bmSECTION_G
-            // 
-            this.bmSECTION_G.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // bmRFTDocuments
             // 
             this.bmRFTDocuments.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2351,10 +2368,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmTenderEvaluationTeam.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl1
-            // 
-            this.groupContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl2
             // 
             this.groupContentControl2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2371,17 +2384,13 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl5.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl6
+            // ere
             // 
-            this.groupContentControl6.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.ere.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // groupContentControl7
             // 
             this.groupContentControl7.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl8
-            // 
-            this.groupContentControl8.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // groupContentControl11
             // 
@@ -2391,9 +2400,9 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl14.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl15
+            // GCC_test
             // 
-            this.groupContentControl15.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            this.GCC_test.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // groupContentControl16
             // 
@@ -2467,10 +2476,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl33.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl34
-            // 
-            this.groupContentControl34.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl36
             // 
             this.groupContentControl36.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2543,10 +2548,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl54.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl55
-            // 
-            this.groupContentControl55.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl58
             // 
             this.groupContentControl58.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2595,10 +2596,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl69.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl71
-            // 
-            this.groupContentControl71.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl72
             // 
             this.groupContentControl72.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2627,18 +2624,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl78.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl79
-            // 
-            this.groupContentControl79.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl80
-            // 
-            this.groupContentControl80.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl81
-            // 
-            this.groupContentControl81.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl82
             // 
             this.groupContentControl82.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2663,6 +2648,102 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl87.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // groupContentControl1
+            // 
+            this.groupContentControl1.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // RTC_SectionA
+            // 
+            this.RTC_SectionA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // RTC_SectionB
+            // 
+            this.RTC_SectionB.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // RTC_SectionC
+            // 
+            this.RTC_SectionC.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // RTC_SectionD
+            // 
+            this.RTC_SectionD.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // RTC_SectionE
+            // 
+            this.RTC_SectionE.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_C
+            // 
+            this.bmSECTION_C.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl88
+            // 
+            this.groupContentControl88.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl89
+            // 
+            this.groupContentControl89.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl90
+            // 
+            this.groupContentControl90.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl92
+            // 
+            this.groupContentControl92.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl93
+            // 
+            this.groupContentControl93.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl94
+            // 
+            this.groupContentControl94.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl95
+            // 
+            this.groupContentControl95.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl96
+            // 
+            this.groupContentControl96.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl97
+            // 
+            this.groupContentControl97.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl99
+            // 
+            this.groupContentControl99.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl100
+            // 
+            this.groupContentControl100.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_A
+            // 
+            this.bmSECTION_A.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_B
+            // 
+            this.bmSECTION_B.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_D
+            // 
+            this.bmSECTION_D.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_E
+            // 
+            this.bmSECTION_E.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_G
+            // 
+            this.bmSECTION_G.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmSECTION_F
+            // 
+            this.bmSECTION_F.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2679,15 +2760,36 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmSECTION_F.Dispose();
+            this.bmSECTION_G.Dispose();
+            this.bmSECTION_E.Dispose();
+            this.bmSECTION_D.Dispose();
+            this.bmSECTION_B.Dispose();
+            this.bmSECTION_A.Dispose();
+            this.groupContentControl100.Dispose();
+            this.groupContentControl99.Dispose();
+            this.groupContentControl97.Dispose();
+            this.groupContentControl96.Dispose();
+            this.groupContentControl95.Dispose();
+            this.groupContentControl94.Dispose();
+            this.groupContentControl93.Dispose();
+            this.groupContentControl92.Dispose();
+            this.groupContentControl90.Dispose();
+            this.groupContentControl89.Dispose();
+            this.groupContentControl88.Dispose();
+            this.bmSECTION_C.Dispose();
+            this.RTC_SectionE.Dispose();
+            this.RTC_SectionD.Dispose();
+            this.RTC_SectionC.Dispose();
+            this.RTC_SectionB.Dispose();
+            this.RTC_SectionA.Dispose();
+            this.groupContentControl1.Dispose();
             this.groupContentControl87.Dispose();
             this.groupContentControl86.Dispose();
             this.groupContentControl85.Dispose();
             this.groupContentControl84.Dispose();
             this.groupContentControl83.Dispose();
             this.groupContentControl82.Dispose();
-            this.groupContentControl81.Dispose();
-            this.groupContentControl80.Dispose();
-            this.groupContentControl79.Dispose();
             this.groupContentControl78.Dispose();
             this.groupContentControl77.Dispose();
             this.groupContentControl76.Dispose();
@@ -2695,7 +2797,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl74.Dispose();
             this.groupContentControl73.Dispose();
             this.groupContentControl72.Dispose();
-            this.groupContentControl71.Dispose();
             this.groupContentControl69.Dispose();
             this.groupContentControl68.Dispose();
             this.groupContentControl67.Dispose();
@@ -2708,7 +2809,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl60.Dispose();
             this.groupContentControl59.Dispose();
             this.groupContentControl58.Dispose();
-            this.groupContentControl55.Dispose();
             this.groupContentControl54.Dispose();
             this.groupContentControl53.Dispose();
             this.groupContentControl52.Dispose();
@@ -2727,7 +2827,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl38.Dispose();
             this.groupContentControl37.Dispose();
             this.groupContentControl36.Dispose();
-            this.groupContentControl34.Dispose();
             this.groupContentControl33.Dispose();
             this.groupContentControl32.Dispose();
             this.groupContentControl31.Dispose();
@@ -2746,17 +2845,15 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl18.Dispose();
             this.groupContentControl17.Dispose();
             this.groupContentControl16.Dispose();
-            this.groupContentControl15.Dispose();
+            this.GCC_test.Dispose();
             this.groupContentControl14.Dispose();
             this.groupContentControl11.Dispose();
-            this.groupContentControl8.Dispose();
             this.groupContentControl7.Dispose();
-            this.groupContentControl6.Dispose();
+            this.ere.Dispose();
             this.groupContentControl5.Dispose();
             this.groupContentControl4.Dispose();
             this.groupContentControl3.Dispose();
             this.groupContentControl2.Dispose();
-            this.groupContentControl1.Dispose();
             this.bmTenderEvaluationTeam.Dispose();
             this.bmKeyPersonnel.Dispose();
             this.bmASSEnd.Dispose();
@@ -2803,13 +2900,6 @@ namespace NZTA_Contract_Generator {
             this.rtcClauseHighway.Dispose();
             this.rtcClauseBridge.Dispose();
             this.bmRFTDocuments.Dispose();
-            this.bmSECTION_G.Dispose();
-            this.bmSECTION_F.Dispose();
-            this.bmSECTION_E.Dispose();
-            this.bmSECTION_B.Dispose();
-            this.bmSECTION_A.Dispose();
-            this.bmSECTION_C.Dispose();
-            this.bmSECTION_D.Dispose();
             this.richTextContentControl169.Dispose();
             this.richTextContentControl168.Dispose();
             this.MethStart.Dispose();

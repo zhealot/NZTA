@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Office.Interop.Word;
+using System.Collections.Generic;
 
 namespace NZTA_Contract_Generator
 {
@@ -21,8 +21,8 @@ namespace NZTA_Contract_Generator
         {
             try
             {
-                NZTA_Contract_Generator.Globals.ThisDocument.Save();
-                NZTA_Contract_Generator.Globals.ThisDocument.RemoveCustomization();
+                Globals.ThisDocument.Save();
+                Globals.ThisDocument.RemoveCustomization();
                 Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = false;
             }
             catch (Exception ex)
@@ -39,7 +39,7 @@ namespace NZTA_Contract_Generator
             doc.Application.Templates.LoadBuildingBlocks();
             //after calling LoadBuildingBlocks(), Blocks.dotx will be 1st in Templates
             var tmpl = doc.Application.Templates[1];   
-            Microsoft.Office.Interop.Word.Range rg = doc.Sections[1].Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+            Range rg = doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
             object Draft = "DRAFT 1";
             try
             {
@@ -59,11 +59,11 @@ namespace NZTA_Contract_Generator
                 object missing = System.Type.Missing;
                 try
                 {
-                    NZTA_Contract_Generator.Globals.ThisDocument.ExportAsFixedFormat(sd.FileName, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF,
-                                                                                true, Microsoft.Office.Interop.Word.WdExportOptimizeFor.wdExportOptimizeForPrint,
-                                                                                Microsoft.Office.Interop.Word.WdExportRange.wdExportAllDocument, 0, 0, Microsoft.Office.Interop.Word.WdExportItem.wdExportDocumentContent,
-                                                                                true, true, Microsoft.Office.Interop.Word.WdExportCreateBookmarks.wdExportCreateNoBookmarks, true,
-                                                                                true, false, ref missing);
+                    Globals.ThisDocument.ExportAsFixedFormat(outputFileName: sd.FileName, exportFormat: WdExportFormat.wdExportFormatPDF,
+                                                            openAfterExport: true, optimizeFor: WdExportOptimizeFor.wdExportOptimizeForPrint,
+                                                            range: WdExportRange.wdExportAllDocument, from: 0, to: 0, item: WdExportItem.wdExportDocumentContent,
+                                                            includeDocProps: true, keepIRM: true, createBookmarks: WdExportCreateBookmarks.wdExportCreateNoBookmarks,
+                                                            docStructureTags: true, bitmapMissingFonts: true, useISO19005_1: false, fixedFormatExtClassPtr: ref missing);
                 }
                 catch
                 {
@@ -72,7 +72,7 @@ namespace NZTA_Contract_Generator
             }
 
             //delete inserted watermark
-            foreach( Microsoft.Office.Interop.Word.Shape sp in doc.Sections[1].Headers[Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary].Shapes)
+            foreach( Shape sp in doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Shapes)
             {
                 if (sp.AlternativeText == "DRAFT")
                 {
@@ -85,17 +85,17 @@ namespace NZTA_Contract_Generator
         private void ExportFinalButton_Click(object sender, RibbonControlEventArgs e)
         {
             System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
-            sd.FileName = sd.InitialDirectory + NZTA_Contract_Generator.Globals.ThisDocument.contract.Contract_Name + "_" + NZTA_Contract_Generator.Globals.ThisDocument.contract.Contract_Number;
+            sd.FileName = sd.InitialDirectory + Globals.ThisDocument.contract.Contract_Name + "_" + Globals.ThisDocument.contract.Contract_Number;
             if (sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 object missing = System.Type.Missing;
                 try
                 {
-                    NZTA_Contract_Generator.Globals.ThisDocument.ExportAsFixedFormat(sd.FileName, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF,
-                                                                                true, Microsoft.Office.Interop.Word.WdExportOptimizeFor.wdExportOptimizeForPrint,
-                                                                                Microsoft.Office.Interop.Word.WdExportRange.wdExportAllDocument, 0, 0, Microsoft.Office.Interop.Word.WdExportItem.wdExportDocumentContent,
-                                                                                true, true, Microsoft.Office.Interop.Word.WdExportCreateBookmarks.wdExportCreateNoBookmarks, true,
-                                                                                true, false, ref missing);
+                    Globals.ThisDocument.ExportAsFixedFormat(outputFileName: sd.FileName, exportFormat: WdExportFormat.wdExportFormatPDF,
+                                                    openAfterExport: true, optimizeFor: WdExportOptimizeFor.wdExportOptimizeForPrint,
+                                                    range: WdExportRange.wdExportAllDocument, from: 0, to: 0, item: WdExportItem.wdExportDocumentContent,
+                                                    includeDocProps: true, keepIRM: true, createBookmarks: WdExportCreateBookmarks.wdExportCreateNoBookmarks,
+                                                    docStructureTags: true, bitmapMissingFonts: true, useISO19005_1: false, fixedFormatExtClassPtr: ref missing);
                 }
                 catch (Exception ex)
                 {
@@ -115,7 +115,7 @@ namespace NZTA_Contract_Generator
             rg.Find.Highlight = 1;
             rg.Find.Text = "";
             rg.Find.Replacement.Text = "";
-            rg.Find.Wrap = Microsoft.Office.Interop.Word.WdFindWrap.wdFindContinue;
+            rg.Find.Wrap = WdFindWrap.wdFindContinue;
             rg.Find.Format = true;
             rg.Find.MatchCase = false;
             rg.Find.MatchWholeWord = false;
@@ -147,34 +147,41 @@ namespace NZTA_Contract_Generator
         }
 
         private void Finalize_Click(object sender, RibbonControlEventArgs e)
-        //update all page ref fields code; make sure key page is on odd page & has a blank page afterwares
+        //update all page ref fields code; make sure key page is on odd page & has a blank page afterwards
         {
-            List<Microsoft.Office.Tools.Word.Bookmark> aBookMark = new List<Microsoft.Office.Tools.Word.Bookmark>();
-            aBookMark.Add(Globals.ThisDocument.bmSECTION_A);
-            foreach (var bm in aBookMark)
-            {
-                if ((int)bm.Information[WdInformation.wdActiveEndPageNumber] % 2 == 0)
-                {
-                    try
-                    {
-                        var rg =bm.GoTo(WdGoToItem.wdGoToPage, WdGoToDirection.wdGoToRelative, 0);
-                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
-                        rg.GoToPrevious(WdGoToItem.wdGoToLine);
-                        rg.Collapse(WdCollapseDirection.wdCollapseEnd);
-                        rg.InsertBreak(WdBreakType.wdPageBreak);
-                        rg.InsertBreak(WdBreakType.wdPageBreak);
-                        bm.Range.Collapse(WdCollapseDirection.wdCollapseEnd);
-                        bm.Range.InsertBreak(WdBreakType.wdPageBreak);
-                    }
-                    catch (Exception ex) { System.Diagnostics.Debug.WriteLine(ex.Message); }
-                }
-            }
+            //Globals.ThisDocument.Application.ScreenUpdating = false;
+            //List<Microsoft.Office.Tools.Word.RichTextContentControl> lsRTC = new List<Microsoft.Office.Tools.Word.RichTextContentControl>();
+            //lsRTC.Add(Globals.ThisDocument.RTC_SectionA);
+            //lsRTC.Add(Globals.ThisDocument.RTC_SectionB);
+            //lsRTC.Add(Globals.ThisDocument.RTC_SectionC);
+            //lsRTC.Add(Globals.ThisDocument.RTC_SectionD);
+            //lsRTC.Add(Globals.ThisDocument.RTC_SectionE);
 
-            foreach(Field fld in Globals.ThisDocument.Fields)
-            {
-                if (fld.Type == WdFieldType.wdFieldPageRef)
-                    fld.Update();                    
-            }
+            //foreach (var rtc in lsRTC)
+            //{
+            //    var rg = rtc.Range;
+            //    if (rg.Information[WdInformation.wdActiveEndPageNumber] % 2 == 0)
+            //    {
+            //        bool blLockContent = rtc.LockContents;
+            //        bool blLockCC = rtc.LockContentControl;
+            //        rtc.LockContentControl = false;
+            //        rtc.LockContents = false;
+            //        rg.SetRange(rg.Start - 1, rg.Start - 1);
+            //        rg.InsertBefore(" "); //### unable to insert page break from rg.Start-1, so insert a blank before CC then insert page break from there
+            //        rg = rtc.Range;
+            //        rg.SetRange(rg.Start - 1, rg.Start - 1);
+            //        rg.InsertBreak(WdBreakType.wdPageBreak);
+            //        rg.InsertBreak(WdBreakType.wdPageBreak);
+            //    }
+            //}
+
+            //foreach (Field fld in Globals.ThisDocument.Fields)
+            //{
+            //    if (fld.Type == WdFieldType.wdFieldPageRef)
+            //        fld.Update();                    
+            //}
+
+            //Globals.ThisDocument.Application.ScreenUpdating=true;
         }
     }
 }
