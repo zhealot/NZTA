@@ -62,19 +62,19 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
                     otherDetails.Focus();
                 }
             }
-            if (sender is TextBox && YesChkd)
-            {
-                if (string.IsNullOrEmpty(otherDetails.Text))
-                {
-                    Util.Help.guidanceNote("Please enter content for other electronic copies.");
-                }
-                else
-                {
-                    Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
-                    contract.otherDetails = otherDetails.Text;
-                    Globals.ThisDocument.rtcECopy.Range.Select();
-                }
-            }
+            //if (sender is TextBox && YesChkd)
+            //{
+            //    if (string.IsNullOrEmpty(otherDetails.Text))
+            //    {
+            //        Util.Help.guidanceNote("Please enter content for other electronic copies.");
+            //    }
+            //    else
+            //    {
+            //        Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+            //        contract.otherDetails = otherDetails.Text;
+            //        Globals.ThisDocument.rtcECopy.Range.Select();
+            //    }
+            //}
         }
 
         private void Evaluation_Date_Changed(object sender, EventArgs e)
@@ -258,8 +258,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.Help.guidanceNote("Typically 4-5 weeks after close of tender");
         }
 
-        private void gbElecForm_Enter(object sender, EventArgs e)
+        private void otherDetails_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            if (string.IsNullOrEmpty(otherDetails.Text) && anotherMeansYes.Checked)
+            {
+                //MessageBox.Show("please");
+                //if (otherDetails.Focused) return;
+                otherDetails.Focus();
+                e.Cancel = true;
+            }
+            else {
+                contract.otherDetails = otherDetails.Text;
+            }
         }
     }
 }

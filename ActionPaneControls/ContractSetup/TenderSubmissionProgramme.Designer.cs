@@ -499,7 +499,6 @@
             this.gbElecForm.Size = new System.Drawing.Size(264, 104);
             this.gbElecForm.TabIndex = 90;
             this.gbElecForm.TabStop = false;
-            this.gbElecForm.Enter += new System.EventHandler(this.gbElecForm_Enter);
             // 
             // otherDetails
             // 
@@ -507,7 +506,7 @@
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(130, 20);
             this.otherDetails.TabIndex = 2;
-            this.otherDetails.Leave += new System.EventHandler(this.anotherMeans_Changed);
+            this.otherDetails.Validating += new System.ComponentModel.CancelEventHandler(this.otherDetails_Validating);
             // 
             // anotherMeansYes
             // 
