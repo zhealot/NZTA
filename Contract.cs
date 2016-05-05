@@ -23,7 +23,6 @@ namespace NZTA_Contract_Generator
             provisionalSum = true;
             numDays = 8;
             numHours = 48;
-            elecNo = true;
             CostIndex = 0.80m;
             altTenderYes = true;
             clientSiteYes = true;
@@ -48,7 +47,8 @@ namespace NZTA_Contract_Generator
             CommercialInConfidence_Check = true;
 
             //Tender Submission Programme
-            anotherMeansYes = true;
+            elecNo = true;
+            anotherMeansNo = true;
             PresentationsRequired_Yes = true;
             PrelettingMeetings_Yes = true;
             

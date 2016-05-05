@@ -481,8 +481,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl46;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl47;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl48;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl49;
@@ -594,6 +592,10 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_G;
         
         internal Microsoft.Office.Tools.Word.Bookmark bmSECTION_F;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl103;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl104;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -929,7 +931,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl43.BeginInit();
             this.groupContentControl44.BeginInit();
             this.groupContentControl46.BeginInit();
-            this.groupContentControl47.BeginInit();
             this.groupContentControl48.BeginInit();
             this.groupContentControl49.BeginInit();
             this.groupContentControl50.BeginInit();
@@ -986,6 +987,8 @@ namespace NZTA_Contract_Generator {
             this.bmSECTION_E.BeginInit();
             this.bmSECTION_G.BeginInit();
             this.bmSECTION_F.BeginInit();
+            this.groupContentControl103.BeginInit();
+            this.groupContentControl104.BeginInit();
         }
         
         /// 
@@ -993,6 +996,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.groupContentControl104.EndInit();
+            this.groupContentControl103.EndInit();
             this.bmSECTION_F.EndInit();
             this.bmSECTION_G.EndInit();
             this.bmSECTION_E.EndInit();
@@ -1049,7 +1054,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl50.EndInit();
             this.groupContentControl49.EndInit();
             this.groupContentControl48.EndInit();
-            this.groupContentControl47.EndInit();
             this.groupContentControl46.EndInit();
             this.groupContentControl44.EndInit();
             this.groupContentControl43.EndInit();
@@ -1522,7 +1526,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl43 = Globals.Factory.CreateGroupContentControl(null, null, "1056360733", "groupContentControl43", this);
             this.groupContentControl44 = Globals.Factory.CreateGroupContentControl(null, null, "3511241898", "groupContentControl44", this);
             this.groupContentControl46 = Globals.Factory.CreateGroupContentControl(null, null, "2192331384", "groupContentControl46", this);
-            this.groupContentControl47 = Globals.Factory.CreateGroupContentControl(null, null, "385921388", "groupContentControl47", this);
             this.groupContentControl48 = Globals.Factory.CreateGroupContentControl(null, null, "3837781453", "groupContentControl48", this);
             this.groupContentControl49 = Globals.Factory.CreateGroupContentControl(null, null, "1361623479", "groupContentControl49", this);
             this.groupContentControl50 = Globals.Factory.CreateGroupContentControl(null, null, "19677657", "groupContentControl50", this);
@@ -1579,6 +1582,8 @@ namespace NZTA_Contract_Generator {
             this.bmSECTION_E = Globals.Factory.CreateBookmark(null, null, "bmSECTION_E", "bmSECTION_E", this);
             this.bmSECTION_G = Globals.Factory.CreateBookmark(null, null, "bmSECTION_G", "bmSECTION_G", this);
             this.bmSECTION_F = Globals.Factory.CreateBookmark(null, null, "bmSECTION_F", "bmSECTION_F", this);
+            this.groupContentControl103 = Globals.Factory.CreateGroupContentControl(null, null, "1130361172", "groupContentControl103", this);
+            this.groupContentControl104 = Globals.Factory.CreateGroupContentControl(null, null, "1977949483", "groupContentControl104", this);
         }
         
         /// 
@@ -2516,10 +2521,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl46.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl47
-            // 
-            this.groupContentControl47.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl48
             // 
             this.groupContentControl48.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2744,6 +2745,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.bmSECTION_F.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // groupContentControl103
+            // 
+            this.groupContentControl103.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl104
+            // 
+            this.groupContentControl104.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2760,6 +2769,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.groupContentControl104.Dispose();
+            this.groupContentControl103.Dispose();
             this.bmSECTION_F.Dispose();
             this.bmSECTION_G.Dispose();
             this.bmSECTION_E.Dispose();
@@ -2816,7 +2827,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl50.Dispose();
             this.groupContentControl49.Dispose();
             this.groupContentControl48.Dispose();
-            this.groupContentControl47.Dispose();
             this.groupContentControl46.Dispose();
             this.groupContentControl44.Dispose();
             this.groupContentControl43.Dispose();

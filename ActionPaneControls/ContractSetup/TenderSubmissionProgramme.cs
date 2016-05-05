@@ -51,21 +51,29 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.anotherMeansYes = YesChkd;
             contract.anotherMeansNo = !YesChkd;
             contract.otherDetails = otherDetails.Text;
-            if (YesChkd)
+            if (sender is RadioButton )
+            {
+                if (((RadioButton)sender).Name == "anotherMeansNo")
+                {
+                    otherDetails.Text = "";
+                }
+                else if(((RadioButton)sender).Name== "anotherMeansYes" && YesChkd)
+                {
+                    otherDetails.Focus();
+                }
+            }
+            if (sender is TextBox && YesChkd)
             {
                 if (string.IsNullOrEmpty(otherDetails.Text))
                 {
-                    Util.Help.guidanceNote("Please enter content.");
+                    Util.Help.guidanceNote("Please enter content for other electronic copies.");
                 }
                 else
                 {
                     Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
+                    contract.otherDetails = otherDetails.Text;
                     Globals.ThisDocument.rtcECopy.Range.Select();
                 }
-            }
-            else
-            {
-                Util.ContentControls.setText("E-Copy", ""); 
             }
         }
 

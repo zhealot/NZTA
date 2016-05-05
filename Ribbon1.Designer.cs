@@ -38,10 +38,10 @@
             this.group1 = this.Factory.CreateRibbonGroup();
             this.CGTAB = this.Factory.CreateRibbonTab();
             this.DisplayOptionsGroup = this.Factory.CreateRibbonGroup();
-            this.ExportGroup = this.Factory.CreateRibbonGroup();
-            this.toggleButton1 = this.Factory.CreateRibbonToggleButton();
-            this.button1 = this.Factory.CreateRibbonButton();
+            this.ToggleNaviTree = this.Factory.CreateRibbonToggleButton();
+            this.btnRemoveGuidance = this.Factory.CreateRibbonButton();
             this.Finalize = this.Factory.CreateRibbonButton();
+            this.ExportGroup = this.Factory.CreateRibbonGroup();
             this.ExportWordButton = this.Factory.CreateRibbonButton();
             this.ExportDraftButton = this.Factory.CreateRibbonButton();
             this.ExportFinalButton = this.Factory.CreateRibbonButton();
@@ -73,38 +73,30 @@
             // 
             // DisplayOptionsGroup
             // 
-            this.DisplayOptionsGroup.Items.Add(this.toggleButton1);
-            this.DisplayOptionsGroup.Items.Add(this.button1);
+            this.DisplayOptionsGroup.Items.Add(this.ToggleNaviTree);
+            this.DisplayOptionsGroup.Items.Add(this.btnRemoveGuidance);
             this.DisplayOptionsGroup.Items.Add(this.Finalize);
             this.DisplayOptionsGroup.Label = "Display Options";
             this.DisplayOptionsGroup.Name = "DisplayOptionsGroup";
             // 
-            // ExportGroup
+            // ToggleNaviTree
             // 
-            this.ExportGroup.Items.Add(this.ExportWordButton);
-            this.ExportGroup.Items.Add(this.ExportDraftButton);
-            this.ExportGroup.Items.Add(this.ExportFinalButton);
-            this.ExportGroup.Label = "Export";
-            this.ExportGroup.Name = "ExportGroup";
+            this.ToggleNaviTree.Checked = true;
+            this.ToggleNaviTree.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.ToggleNaviTree.Image = global::NZTA_Contract_Generator.Properties.Resources.Control_Panel;
+            this.ToggleNaviTree.Label = "Navigation Tree";
+            this.ToggleNaviTree.Name = "ToggleNaviTree";
+            this.ToggleNaviTree.ShowImage = true;
+            this.ToggleNaviTree.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ToggleNaviTree_Click);
             // 
-            // toggleButton1
+            // btnRemoveGuidance
             // 
-            this.toggleButton1.Checked = true;
-            this.toggleButton1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.toggleButton1.Image = global::NZTA_Contract_Generator.Properties.Resources.Control_Panel;
-            this.toggleButton1.Label = "Navigation Tree";
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.ShowImage = true;
-            this.toggleButton1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.toggleButton1_Click);
-            // 
-            // button1
-            // 
-            this.button1.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.button1.Image = global::NZTA_Contract_Generator.Properties.Resources.remove;
-            this.button1.Label = "Remove Guidance";
-            this.button1.Name = "button1";
-            this.button1.ShowImage = true;
-            this.button1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
+            this.btnRemoveGuidance.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnRemoveGuidance.Image = global::NZTA_Contract_Generator.Properties.Resources.remove;
+            this.btnRemoveGuidance.Label = "Remove Guidance";
+            this.btnRemoveGuidance.Name = "btnRemoveGuidance";
+            this.btnRemoveGuidance.ShowImage = true;
+            this.btnRemoveGuidance.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnRemoveGuidance_Click);
             // 
             // Finalize
             // 
@@ -114,6 +106,14 @@
             this.Finalize.Name = "Finalize";
             this.Finalize.ShowImage = true;
             this.Finalize.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Finalize_Click);
+            // 
+            // ExportGroup
+            // 
+            this.ExportGroup.Items.Add(this.ExportWordButton);
+            this.ExportGroup.Items.Add(this.ExportDraftButton);
+            this.ExportGroup.Items.Add(this.ExportFinalButton);
+            this.ExportGroup.Label = "Export";
+            this.ExportGroup.Name = "ExportGroup";
             // 
             // ExportWordButton
             // 
@@ -171,8 +171,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportWordButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportFinalButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ExportDraftButton;
-        internal Microsoft.Office.Tools.Ribbon.RibbonToggleButton toggleButton1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonToggleButton ToggleNaviTree;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnRemoveGuidance;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Finalize;
     }
 

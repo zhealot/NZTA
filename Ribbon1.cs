@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator
 
         }
 
-        private void toggleButton1_Click(object sender, RibbonControlEventArgs e)
+        private void ToggleNaviTree_Click(object sender, RibbonControlEventArgs e)
         {
             Globals.ThisDocument.Application.CommandBars["Task Pane"].Visible = ((RibbonToggleButton)sender).Checked;
         }
@@ -104,7 +104,7 @@ namespace NZTA_Contract_Generator
             }
         }
 
-        private void button1_Click(object sender, RibbonControlEventArgs e)
+        private void btnRemoveGuidance_Click(object sender, RibbonControlEventArgs e)
         //remove guidance notes, which have hightlight color as format
         {
             Globals.ThisDocument.Application.ScreenUpdating = false;
