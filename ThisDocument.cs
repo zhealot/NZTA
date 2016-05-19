@@ -83,12 +83,12 @@ namespace NZTA_Contract_Generator
 
         private void rtcGeoTestingSum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_GeoTestingSum.Range.Text = rtcGeoTestingSum.Range.Text;
+            Globals.ThisDocument.rtcCPS_GeoTestingSum.Range.Text = rtcGeoTestingSum.Range.Text;
         }
 
         private void rtcAdditionalServicesSchedule_Sum_Exiting(object sender, ContentControlExitingEventArgs e)
         {
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = NZTA_Contract_Generator.Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
+            Globals.ThisDocument.rtcCPS_ASS_Sum.Range.Text = Globals.ThisDocument.rtcAdditionalServicesSchedule_Sum.Range.Text;
         }
 
         private void bmPaymentSchedule_SelectionChange(object sender, SelectionEventArgs e)

@@ -8,7 +8,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
 {
     public partial class Personnel : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         public Personnel()
         {
             InitializeComponent();
@@ -23,15 +23,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Personnel
 
         private void btnGetPersonnel_Click(object sender, EventArgs e)
         {
-            NZTA_Contract_Generator.Globals.ThisDocument.bmPersonalStart.Select();
+            Globals.ThisDocument.bmPersonalStart.Select();
             //retrieve entries from section 5 Tender Evaluation Forms, Form B
-            var tbl = NZTA_Contract_Generator.Globals.ThisDocument.bmPersonalAbove.Tables[1];
+            var tbl = Globals.ThisDocument.bmPersonalAbove.Tables[1];
             lbPersonnel.Items.Clear();
             tbWeighting.Clear();
             List<decimal> pctg = new List<decimal>();
             decimal tmp;
-            for (int i = NZTA_Contract_Generator.Globals.ThisDocument.bmPersonalStart.Rows[1].Index;
-                     i < NZTA_Contract_Generator.Globals.ThisDocument.bmPersonalEnd.Rows[1].Index; i++)
+            for (int i = Globals.ThisDocument.bmPersonalStart.Rows[1].Index;
+                     i < Globals.ThisDocument.bmPersonalEnd.Rows[1].Index; i++)
             {
                 lbPersonnel.Items.Add(tbl.Rows[i].Cells[1].Range.Text.Replace("\r\a", ""));
                 if (tbl.Rows[i].Cells.Count > 1)

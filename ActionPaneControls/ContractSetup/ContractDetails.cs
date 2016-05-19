@@ -8,7 +8,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     partial class ContractDetails : UserControl
     {
 
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         bool ignoreChange = false;
 
         public ContractDetails()
@@ -109,6 +109,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.RangeHideShow(ref GeoRg, YesChkd);
             Util.ContentControls.RangeHideShow(ref PSRg, (YesChkd && PSChkd));
             Util.ContentControls.RangeHideShow(ref SRg, (YesChkd && !PSChkd));
+            Globals.ThisDocument.rtcGeoTS372.Range.Font.Hidden = YesChkd ? 0 : 1;
             //GeoRg.SetRange(GeoRg.Start - 1, GeoRg.End + 2);
             //PSRg.SetRange(PSRg.Start - 1, PSRg.End + 2);
             //SRg.SetRange(SRg.Start - 1, SRg.End + 2);
@@ -224,6 +225,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool SiteYesChkd = clientSiteYes.Checked;
             contract.clientSiteNo = !SiteYesChkd;
             contract.clientSiteYes = SiteYesChkd;
+            Globals.ThisDocument.rtcSiteInspection.LockContents = false;
             var SiteRg = Globals.ThisDocument.rtcSiteInspection.Range;
             object SiteStyle = SiteYesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             SiteRg.Collapse();
@@ -231,7 +233,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             SiteRg = Globals.ThisDocument.rtcSiteInspection.Range;
             SiteRg.SetRange(SiteRg.Start - 1, SiteRg.End + 2);
             SiteRg.Font.Hidden = SiteYesChkd ? 0 : 1;
-            if (SiteYesChkd) { SiteRg.Select(); } 
+            if (SiteYesChkd) { SiteRg.Select(); }
+            Globals.ThisDocument.rtcSiteInspection.LockContents = true;
         }
 
         private void altTender_Changed(object sender, EventArgs e)
@@ -239,6 +242,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool blYes = altTenderYes.Checked;
             contract.altTenderYes = blYes;
             contract.altTenderNo = !blYes;
+            Globals.ThisDocument.rtcAlternativeTenderNo.LockContents = false;
+            Globals.ThisDocument.rtcAlternativeTenderYes.LockContents = false;
             var altYesRg = Globals.ThisDocument.rtcAlternativeTenderYes.Range;
             var altNoRg = Globals.ThisDocument.rtcAlternativeTenderNo.Range;
             var stl = blYes ? "Normal" : altYesRg.Paragraphs.First.get_Style();
@@ -248,6 +253,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             altNoRg.Font.Hidden = blYes ? 1 : 0;
             altYesRg.Font.Hidden = blYes ? 0 : 1;
             if (blYes) { altYesRg.Select(); }
+            Globals.ThisDocument.rtcAlternativeTenderNo.LockContents = true;
+            Globals.ThisDocument.rtcAlternativeTenderYes.LockContents = true;
         }
 
         private void TenderBox_SelectedIndexChanged(object sender, EventArgs e)

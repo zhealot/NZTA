@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     public partial class TenderFormat : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         public TenderFormat()
         {
             InitializeComponent();
@@ -147,9 +147,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             for (int i = 0; i < RowsCount.Value; i++)
             {
-                NZTA_Contract_Generator.Globals.ThisDocument.TenderFormatAppend.Range.Tables[1].Rows.Add();
+                Globals.ThisDocument.TenderFormatAppend.Range.Tables[1].Rows.Add();
             }            
-            NZTA_Contract_Generator.Globals.ThisDocument.TenderFormatAppend.Range.Select();
+            Globals.ThisDocument.TenderFormatAppend.Range.Select();
         }
 
         private void Outline_Page_TextChanged(object sender, EventArgs e)

@@ -9,7 +9,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     partial class InteractiveTenderProcess : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;        
+        Contract contract = Globals.ThisDocument.contract;        
         public InteractiveTenderProcess()
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Meeting_Box.Visible = blChkd;
             contract.Interactive_Yes = blChkd;
             contract.Interactive_No = !blChkd;
+            Globals.ThisDocument.rtcInteractiveTenderProcess.LockContents = false;
             var rg = Globals.ThisDocument.rtcInteractiveTenderProcess.Range;
             object style = blChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             //apply rg.Paragraphs.First.set_Style() affects above line, so instead of seting style to paragraph, collapse range to first paragraph and set it style
@@ -34,12 +35,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             rg.SetRange(rg.Start - 1, rg.End + 2);
             rg.Font.Hidden = blChkd ? 0 : 1;
             if (blChkd) { rg.Select(); }
+            Globals.ThisDocument.rtcInteractiveTenderProcess.LockContents = true;
         }
 
         private void CommercialInConfidence_Check_CheckedChanged(object sender, EventArgs e)
         {
             bool Chkd = CommercialInConfidence_Check.Checked;
-            contract.CommercialInConfidence_Check = Chkd; 
+            contract.CommercialInConfidence_Check = Chkd;
+            Globals.ThisDocument.rtcCommercialInConfidence.LockContents = false;
             var CCIRg = Globals.ThisDocument.rtcCommercialInConfidence.Range;
             object style = Chkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             CCIRg.Collapse();
@@ -49,12 +52,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             CCIRg.SetRange(CCIRg.Start - 1, CCIRg.End + 2);
             CCIRg.Font.Hidden = Chkd ? 0 : 1;
             if (Chkd) { CCIRg.Select(); }
+            Globals.ThisDocument.rtcCommercialInConfidence.LockContents = true;
         }
 
         private void AnyItemChanged(object sender, EventArgs e)
         //handles any 1 of 6 meeting events changes, date/time/checked, populate Meeting talbe
         {
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
+            Globals.ThisDocument.Application.ScreenUpdating = false;
             Dictionary<CheckBox, DateTime> iMeetingItem = new Dictionary<CheckBox, DateTime>();
             //put Individual meetings data into a list then sort it 
             iMeetingItem.Clear();
@@ -88,7 +92,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             iMeetingItem.OrderBy(i => i.Value);
             
             //fill in meeting table if Combined meeting exists
-            var tb = NZTA_Contract_Generator.Globals.ThisDocument.rtcInteractiveTenderProcess.Range.Tables[1];
+            var tb = Globals.ThisDocument.rtcInteractiveTenderProcess.Range.Tables[1];
             tb.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitFixed);
 
             for (int i = tb.Rows.Count; i > 1; i--)
@@ -124,7 +128,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.RangeHideShow(ref RgClause, chkd);
 
             tb.Range.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
+            Globals.ThisDocument.Application.ScreenUpdating = true;
         }
 
         private void help1_Click(object sender, EventArgs e)

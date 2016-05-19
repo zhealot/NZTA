@@ -9,7 +9,7 @@ namespace NZTA_Contract_Generator.Util
 
         public static void setText(String tag, String text)
         {
-            ThisDocument doc = NZTA_Contract_Generator.Globals.ThisDocument;
+            ThisDocument doc = Globals.ThisDocument;
             Microsoft.Office.Interop.Word.ContentControls ccs = doc.SelectContentControlsByTag(tag);
             bool ccLocked;
             foreach (ContentControl cc in ccs)
@@ -214,7 +214,11 @@ namespace NZTA_Contract_Generator.Util
                 }
                 return true;
             }
-            catch (Exception ex) { return false; }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }

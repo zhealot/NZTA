@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
     public partial class PaymentSchedule : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;        
+        Contract contract = Globals.ThisDocument.contract;        
         public PaymentSchedule()
         {
             InitializeComponent();
@@ -34,6 +34,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             contract.CostFluctuations_Check = blChkd;
             CostIndex.Enabled = blChkd;
             lblCostIndex.Enabled = blChkd;
+            Globals.ThisDocument.rtcCostFluctuationsNo.LockContents = false;
+            Globals.ThisDocument.rtcCostFluctuationsYes.LockContents = false;
             var rgNo = Globals.ThisDocument.rtcCostFluctuationsNo.Range;
             var rgYes = Globals.ThisDocument.rtcCostFluctuationsYes.Range;
             object style = blChkd ? "Normal" : Globals.ThisDocument.rtcLevel3Style.Range.get_Style();
@@ -46,6 +48,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
             rgYes.Font.Hidden = blChkd ? 0 : 1;
             if (blChkd) { rgYes.Select(); }
             else { rgNo.Select(); }
+            Globals.ThisDocument.rtcCostFluctuationsNo.LockContents = true;
+            Globals.ThisDocument.rtcCostFluctuationsYes.LockContents = true;
         }
 
         private void CostIndex_ValueChanged(object sender, EventArgs e)
@@ -60,12 +64,14 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         {
             bool UnitRateChkd = UnitRate_chk.Checked;
             contract.UnitRate_chk = UnitRate_chk.Checked;
+            Globals.ThisDocument.rtcUnitRateItems.LockContents = false;
             var rg = Globals.ThisDocument.rtcUnitRateItems.Range;
             object style = UnitRateChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.Collapse();
             rg.set_Style(ref style);
             rg = Globals.ThisDocument.rtcUnitRateItems.Range;
             Util.ContentControls.RangeHideShow(ref rg, UnitRateChkd);
+            Globals.ThisDocument.rtcUnitRateItems.LockContents = true;
             rg.Select();
         }
 
@@ -73,18 +79,22 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
         {
             contract.HourlyRate_chk = HourlyRate_chk.Checked;
             bool HourlyRateChkd = HourlyRate_chk.Checked;
+            Globals.ThisDocument.rtcHourlyRateItems.LockContents = false;
             var rg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             object style = HourlyRateChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.Collapse();
             rg.set_Style(ref style);
             rg = Globals.ThisDocument.rtcHourlyRateItems.Range;
             Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
+            Globals.ThisDocument.rtcHourlyRateItems.LockContents = true;
             rg.Select();
+            Globals.ThisDocument.rtcHourlyRateItem2.LockContents = false;
             rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
             rg.Collapse();
             rg.set_Style(ref style);
             rg = Globals.ThisDocument.rtcHourlyRateItem2.Range;
             Util.ContentControls.RangeHideShow(ref rg, HourlyRateChkd);
+            Globals.ThisDocument.rtcHourlyRateItem2.LockContents = true;
         }
     }
 }

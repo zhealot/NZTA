@@ -13,7 +13,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 {
     public partial class ContractPricing : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         public ContractPricing()
         {
             InitializeComponent();
@@ -23,13 +23,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
+            var PaginationOption = Globals.ThisDocument.Application.Options.Pagination;
+            Globals.ThisDocument.Application.Options.Pagination = false;
+            Globals.ThisDocument.Application.ScreenUpdating = false;
             
             lbMissing.Items.Clear();
             Microsoft.Office.Interop.Word.Range rg;
-            foreach (Microsoft.Office.Interop.Word.Row rw in NZTA_Contract_Generator.Globals.ThisDocument.bmContractPricingSchedule.Tables[1].Rows)
+            foreach (Microsoft.Office.Interop.Word.Row rw in Globals.ThisDocument.bmContractPricingSchedule.Tables[1].Rows)
             {
                 //ignore hidden rows
                 if (rw.Range.Font.Hidden != 0) continue;
@@ -38,7 +38,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
                 PricingNumText.Trim();
                 if (Regex.IsMatch(PricingNumText, @"^(\d+.)*\d+$"))
                 {                    
-                    rg = NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range;
+                    rg = Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range;
                     bool found = false;
                     rg.Find.ClearFormatting();
                     rg.Find.MatchCase = false;
@@ -48,7 +48,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
                     rg.Find.Text = rw.Cells[2].Range.Text.Replace("\r\a", "").Trim(); //rw.Cells[1].Range.ListFormat.ListString;
                     rg.Find.Execute();
                     var LastPosition = rg.Start;
-                    while (rg.Find.Found && rg.InRange(NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range) && rg.Start >= LastPosition) 
+                    while (rg.Find.Found && rg.InRange(Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Range) && rg.Start >= LastPosition) 
                     {
                         LastPosition = rg.End;
                         if (rg.Rows[1].Cells[2].Range.Text.Replace("\r\a", "").Trim() == rw.Cells[2].Range.Text.Replace("\r\a", "").Trim())
@@ -73,9 +73,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SectionC
                     }
                 }
             }
-            NZTA_Contract_Generator.Globals.ThisDocument.bmContractPaymentSchedule.Select();
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
+            Globals.ThisDocument.bmContractPaymentSchedule.Select();
+            Globals.ThisDocument.Application.ScreenUpdating = true;
+            Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
             Globals.ThisDocument.bmContractPaymentSchedule.Tables[1].Select();
         }
     }

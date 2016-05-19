@@ -8,7 +8,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     partial class LiabilityandInsurance : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         public LiabilityandInsurance()
         {
             InitializeComponent();
@@ -63,6 +63,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             pnGroup1.Enabled = !blDefaultChkd;
             contract.rbApprovedDefault = blDefaultChkd;
             contract.rbOtherLevels = !blDefaultChkd;
+            Globals.ThisDocument.rtcLimitationDefault.LockContents = false;
+            Globals.ThisDocument.rtcLimitationOther.LockContents = false;
             var rgDefault = Globals.ThisDocument.rtcLimitationDefault.Range;
             var rgOther = Globals.ThisDocument.rtcLimitationOther.Range;
             var DefaultStyle = blDefaultChkd ? Globals.ThisDocument.rtcDurationOfLiability.Range.Paragraphs[1].get_Style() : "Normal";
@@ -77,6 +79,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 MaximumLiability.Focus();
             }
+            Globals.ThisDocument.rtcLimitationDefault.LockContents = true;
+            Globals.ThisDocument.rtcLimitationOther.LockContents = true;
             PublicLiabilityInsurance_TextChanged(null, null);
         }
 

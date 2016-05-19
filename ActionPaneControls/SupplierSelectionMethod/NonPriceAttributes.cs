@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 {
     public partial class NonPriceAttributes : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;        
+        Contract contract = Globals.ThisDocument.contract;        
         public NonPriceAttributes()
         {
             InitializeComponent();
@@ -51,9 +51,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 
         private void button1_Click(object sender, EventArgs e)
         {
-            object RgStart = NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Start;
-            object RgEnd = NZTA_Contract_Generator.Globals.ThisDocument.Tender_Evaluation_Procedure.Start;
-            var rg = NZTA_Contract_Generator.Globals.ThisDocument.Range(ref RgStart, ref RgEnd);
+            object RgStart = Globals.ThisDocument.MethStart.Start;
+            object RgEnd = Globals.ThisDocument.Tender_Evaluation_Procedure.Start;
+            var rg = Globals.ThisDocument.Range(ref RgStart, ref RgEnd);
             lbMeths.Items.Clear();
             rg.Find.ClearFormatting();
             object stl = Globals.ThisDocument.MethStart.Range.get_Style(); //"NZTA Tendering: Level 4 (Numbering)";
@@ -70,9 +70,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             }
             //retireve weighting data from 5 Form C and list them in ACP Textbox
             //tbPercent.Clear();
-            var tb =NZTA_Contract_Generator.Globals.ThisDocument.MethAbove.Tables[1];
-            for (int i = NZTA_Contract_Generator.Globals.ThisDocument.MethAbove.Rows[1].Index + 1; 
-                i <= NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart.Rows[1].Index; i++)
+            var tb =Globals.ThisDocument.MethAbove.Tables[1];
+            for (int i = Globals.ThisDocument.MethAbove.Rows[1].Index + 1; 
+                i <= Globals.ThisDocument.FormC_MethStart.Rows[1].Index; i++)
             {
                 if (tb.Rows[i].Cells.Count >= 2)
                 {
@@ -80,7 +80,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 }
             }
             tbPercent.Text = tbPercent.Text.TrimEnd(Environment.NewLine.ToCharArray());
-            NZTA_Contract_Generator.Globals.ThisDocument.MethStart.Select();
+            Globals.ThisDocument.MethStart.Select();
         }
 
         private void TransferToFormC_Click(object sender, EventArgs e)
@@ -113,13 +113,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 }    
             }
             
-            var FormC_MethStart = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethStart;
-            var FormC_MethEnd = NZTA_Contract_Generator.Globals.ThisDocument.FormC_MethEnd;
-            var MethAbove = NZTA_Contract_Generator.Globals.ThisDocument.MethAbove;
+            var FormC_MethStart = Globals.ThisDocument.FormC_MethStart;
+            var FormC_MethEnd = Globals.ThisDocument.FormC_MethEnd;
+            var MethAbove = Globals.ThisDocument.MethAbove;
             
-            var PaginationOption = NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = false;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = false;
+            var PaginationOption = Globals.ThisDocument.Application.Options.Pagination;
+            Globals.ThisDocument.Application.Options.Pagination = false;
+            Globals.ThisDocument.Application.ScreenUpdating = false;
 
             while (FormC_MethEnd.Range.Rows[1].Index - MethAbove.Range.Rows[1].Index > 2)
             {
@@ -135,8 +135,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 rw.Cells[2].Range.Text = (contract.rbLPC == true) ? "N/A" : pctg[i].ToString() + "%";
             }
             FormC_MethStart.Select();
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.ScreenUpdating = true;
-            NZTA_Contract_Generator.Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
+            Globals.ThisDocument.Application.ScreenUpdating = true;
+            Globals.ThisDocument.Application.Options.Pagination = PaginationOption;
             Globals.ThisDocument.FormC_MethStart.Select();
 
         }

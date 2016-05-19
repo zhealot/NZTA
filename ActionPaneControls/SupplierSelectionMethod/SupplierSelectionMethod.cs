@@ -12,7 +12,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
 {
     public partial class SupplierSelectionMethod : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         public SupplierSelectionMethod()
         {
             InitializeComponent();
@@ -49,6 +49,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
         {
             contract.cbTrackRecord = cbTrackRecord.Checked;
             tbTR.Enabled = cbTrackRecord.Checked;
+            Globals.ThisDocument.rtcTrackRecordClause1.LockContents = false;
+            Globals.ThisDocument.rtcTrackRecordClause2.LockContents = false;
+            Globals.ThisDocument.rtcTrackRecordClause3.LockContents = false;
             var TRC1Rg = Globals.ThisDocument.rtcTrackRecordClause1.Range;
             var TRC2Rg = Globals.ThisDocument.rtcTrackRecordClause2.Range;
             var TRC3Rg = Globals.ThisDocument.rtcTrackRecordClause3.Range;
@@ -62,6 +65,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
             TRC3Rg.Font.Hidden = cbTrackRecord.Checked ? 0 : 1;
             Util.ContentControls.setText("TrackRecordClause4", cbTrackRecord.Checked ? "and Track Record" : "");
             Util.ContentControls.setText("TrackRecordFill", cbTrackRecord.Checked ? " and Track Record" : "");
+            Globals.ThisDocument.rtcTrackRecordClause1.LockContents = true;
+            Globals.ThisDocument.rtcTrackRecordClause2.LockContents = true;
+            Globals.ThisDocument.rtcTrackRecordClause3.LockContents = true;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -72,7 +78,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 return;
             }
             Decimal RE, TR, RS, M, P;
-            var Docu = NZTA_Contract_Generator.Globals.ThisDocument;
+            var Docu = Globals.ThisDocument;
             //Lowest Price Conforming
             if (rbLPC.Checked)
             {

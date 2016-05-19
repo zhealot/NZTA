@@ -9,7 +9,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     partial class PricingOptions : UserControl
     {
 
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
 
         public PricingOptions()
         {
@@ -31,9 +31,11 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Base Estimate clause Title 
             object style = BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
+            Globals.ThisDocument.rtcPricing_BaseEstimateTitle.LockContents = false;
             var rg = Globals.ThisDocument.rtcPricing_BaseEstimateTitle.Range;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
+            Globals.ThisDocument.rtcPricing_BaseEstimateTitle.LockContents = true;
             if (BaseChkd) rg.Select();
 
             //Base Estimate Tender Form
@@ -45,17 +47,21 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
 
             //Boork's Law clause 
+            Globals.ThisDocument.rtcPricing_BrooksLaw.LockContents = false;
             rg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
             style = BaseChkd && BrooksLaw_Check.Checked ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, BrooksLaw_Check.Checked && BaseChkd);
+            Globals.ThisDocument.rtcPricing_BrooksLaw.LockContents = true;
             if (BrooksLaw_Check.Checked) rg.Select();
 
             //Target Price clause 
+            Globals.ThisDocument.rtcPricing_TargetPrice.LockContents = false;
             rg = Globals.ThisDocument.rtcPricing_TargetPrice.Range;
             style = !BaseChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : GlobalVar.StyleNormal;
             rg.set_Style(ref style);
             Util.ContentControls.RangeHideShow(ref rg, !BaseChkd);
+            Globals.ThisDocument.rtcPricing_TargetPrice.LockContents = true;
             if (!BaseChkd) rg.Select();
 
             //Target Price Tender Form
@@ -69,11 +75,13 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             bool BLChkd = BrooksLaw_Check.Checked; 
             contract.BrooksLaw_Check = BLChkd;
+            Globals.ThisDocument.rtcPricing_BrooksLaw.LockContents = false;
             var BLRg = Globals.ThisDocument.rtcPricing_BrooksLaw.Range;
             object BLStyle = BLChkd ? Globals.ThisDocument.rtcLevel3Style.Range.get_Style() : "Normal";
             BLRg.SetRange(BLRg.Start - 1, BLRg.End + 2);
             BLRg.Paragraphs[1].set_Style(ref BLStyle);
             BLRg.Font.Hidden = (BLChkd && BaseEstimate_Check.Checked) ? 0 : 1;
+            Globals.ThisDocument.rtcPricing_BrooksLaw.LockContents = true;
         }
 
         private void BaseEstimate_Amount_TextChanged(object sender, EventArgs e)

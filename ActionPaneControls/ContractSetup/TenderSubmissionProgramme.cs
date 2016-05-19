@@ -9,7 +9,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
     partial class TenderSubmissionProgramme : UserControl
     {
 
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;
+        Contract contract = Globals.ThisDocument.contract;
         bool ignoreChange = false;
 
         public TenderSubmissionProgramme()
@@ -35,6 +35,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.elecYes = YesChkd;
             gbElecForm.Enabled = YesChkd;
 
+            Globals.ThisDocument.rtcElectronicInformation.LockContents = false;
             var Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
             object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             Rg.Collapse();
@@ -43,6 +44,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Rg.SetRange(Rg.Start - 1, Rg.End + 2);
             Rg.Font.Hidden = YesChkd ? 0 : 1;
             if (YesChkd) Rg.Select();
+            Globals.ThisDocument.rtcElectronicInformation.LockContents = true;
         }
 
         private void anotherMeans_Changed(object sender, EventArgs e)
@@ -127,6 +129,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool PreYes = PresentationsRequired_Yes.Checked;
             contract.PresentationsRequired_No = !PreYes;
             contract.PresentationsRequired_Yes = PreYes;
+            Globals.ThisDocument.rtcPresentationOfTenderClause.LockContents = false;
             var PreRg = Globals.ThisDocument.rtcPresentationOfTenderClause.Range;
             object PreStyle = PreYes ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             PreRg.Collapse();
@@ -135,6 +138,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             PreRg.SetRange(PreRg.Start - 1, PreRg.End + 2);
             PreRg.Font.Hidden = PreYes ? 0 : 1;
             if (PreYes) { PreRg.Select(); }
+            Globals.ThisDocument.rtcPresentationOfTenderClause.LockContents = true;
         }
 
         private void InterviewCity_TextChanged(object sender, EventArgs e)
@@ -155,6 +159,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.PrelettingMeetings_Yes = YesChkd;
             contract.PrelettingMeetings_No = !YesChkd;
             gbPrelettingDate.Enabled = YesChkd;
+            Globals.ThisDocument.rtcPreLettingClause.LockContents = false;
             var YesRg = Globals.ThisDocument.rtcPreLettingClause.Range;
             object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             YesRg.Collapse();
@@ -163,6 +168,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             YesRg.SetRange(YesRg.Start - 1, YesRg.End + 2);
             YesRg.Font.Hidden = YesChkd ? 0 : 1;
             if (YesChkd) { YesRg.Select(); }
+            Globals.ThisDocument.rtcPreLettingClause.LockContents = true;
         }
         private void PrelettingMeetings_No_CheckedChanged(object sender, EventArgs e)
         {
@@ -170,7 +176,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.PrelettingMeetings_Yes = !((RadioButton)sender).Checked;
             PrelettingEndDate.Enabled = !((RadioButton)sender).Checked;
             PrelettingFromDate.Enabled = !((RadioButton)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
+            Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 1 : 0;
             Util.ContentControls.setText("Preletting_Period", "Not required");
         }
       
@@ -180,7 +186,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.PrelettingMeetings_No = !((RadioButton)sender).Checked;
             PrelettingFromDate.Enabled = ((RadioButton)sender).Checked;
             PrelettingEndDate.Enabled = ((RadioButton)sender).Checked;
-            NZTA_Contract_Generator.Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
+            Globals.ThisDocument.rtcPreLettingClause.Range.Font.Hidden = ((RadioButton)sender).Checked ? 0 : 1;
         }
 
         private void Presentation_Address_SelectedIndexChanged(object sender, EventArgs e)

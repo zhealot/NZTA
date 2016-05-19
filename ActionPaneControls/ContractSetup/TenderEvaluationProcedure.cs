@@ -8,7 +8,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 {
     partial class TenderEvaluationProcedure : UserControl
     {
-        Contract contract = NZTA_Contract_Generator.Globals.ThisDocument.contract;                
+        Contract contract = Globals.ThisDocument.contract;                
         public TenderEvaluationProcedure()
         {
             InitializeComponent();

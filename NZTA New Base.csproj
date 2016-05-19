@@ -20,7 +20,7 @@
     <PublishUrl>D:\publish\NZTA\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.87</ApplicationVersion>
+    <ApplicationVersion>1.0.0.88</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>

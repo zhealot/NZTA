@@ -16,10 +16,10 @@ namespace NZTA_Contract_Generator.Util
         public static Contract loadFromXML()
         {
             Microsoft.Office.Core.DocumentProperties properties;
-            properties = (Microsoft.Office.Core.DocumentProperties)NZTA_Contract_Generator.Globals.ThisDocument.CustomDocumentProperties;
+            properties = (Microsoft.Office.Core.DocumentProperties)Globals.ThisDocument.CustomDocumentProperties;
             try
             {
-                Microsoft.Office.Core.CustomXMLPart xmlPart = NZTA_Contract_Generator.Globals.ThisDocument.CustomXMLParts.SelectByID(properties["xmlId"].Value);
+                Microsoft.Office.Core.CustomXMLPart xmlPart = Globals.ThisDocument.CustomXMLParts.SelectByID(properties["xmlId"].Value);
                 XmlSerializer deserializer = new XmlSerializer(typeof(Contract));
                 Contract c = (Contract)deserializer.Deserialize(new StringReader(xmlPart.XML));
                 return c;
@@ -38,11 +38,11 @@ namespace NZTA_Contract_Generator.Util
             StringWriter writer = new StringWriter();
             System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(c.GetType());
             x.Serialize(writer, c);
-            Microsoft.Office.Core.CustomXMLPart xmlPart = NZTA_Contract_Generator.Globals.ThisDocument.CustomXMLParts.Add(writer.ToString());
+            Microsoft.Office.Core.CustomXMLPart xmlPart = Globals.ThisDocument.CustomXMLParts.Add(writer.ToString());
             
             
             Microsoft.Office.Core.DocumentProperties properties;
-            properties = (Microsoft.Office.Core.DocumentProperties)NZTA_Contract_Generator.Globals.ThisDocument.CustomDocumentProperties;
+            properties = (Microsoft.Office.Core.DocumentProperties)Globals.ThisDocument.CustomDocumentProperties;
             try
             {
                 properties["xmlId"].Value = xmlPart.Id;
