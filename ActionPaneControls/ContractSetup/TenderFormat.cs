@@ -145,10 +145,12 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Globals.ThisDocument.rtcTenderFormatTable.LockContents = false;
             for (int i = 0; i < RowsCount.Value; i++)
             {
                 Globals.ThisDocument.TenderFormatAppend.Range.Tables[1].Rows.Add();
             }            
+            Globals.ThisDocument.rtcTenderFormatTable.LockContents = true;
             Globals.ThisDocument.TenderFormatAppend.Range.Select();
         }
 

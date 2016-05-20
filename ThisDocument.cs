@@ -18,6 +18,7 @@ namespace NZTA_Contract_Generator
         public Control apc;
         public Contract contract;
 
+        
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
             //turn off Paragraph Marks

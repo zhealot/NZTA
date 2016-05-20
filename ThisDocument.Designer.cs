@@ -465,8 +465,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl39;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl40;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl41;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl42;
@@ -598,6 +596,12 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl107;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl108;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl109;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl112;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTenderFormatTable;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -925,7 +929,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl37.BeginInit();
             this.groupContentControl38.BeginInit();
             this.groupContentControl39.BeginInit();
-            this.groupContentControl40.BeginInit();
             this.groupContentControl41.BeginInit();
             this.groupContentControl42.BeginInit();
             this.groupContentControl43.BeginInit();
@@ -992,6 +995,9 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl106.BeginInit();
             this.groupContentControl107.BeginInit();
             this.groupContentControl108.BeginInit();
+            this.groupContentControl109.BeginInit();
+            this.groupContentControl112.BeginInit();
+            this.rtcTenderFormatTable.BeginInit();
         }
         
         /// 
@@ -999,6 +1005,9 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.rtcTenderFormatTable.EndInit();
+            this.groupContentControl112.EndInit();
+            this.groupContentControl109.EndInit();
             this.groupContentControl108.EndInit();
             this.groupContentControl107.EndInit();
             this.groupContentControl106.EndInit();
@@ -1065,7 +1074,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl43.EndInit();
             this.groupContentControl42.EndInit();
             this.groupContentControl41.EndInit();
-            this.groupContentControl40.EndInit();
             this.groupContentControl39.EndInit();
             this.groupContentControl38.EndInit();
             this.groupContentControl37.EndInit();
@@ -1522,7 +1530,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl37 = Globals.Factory.CreateGroupContentControl(null, null, "1092900948", "groupContentControl37", this);
             this.groupContentControl38 = Globals.Factory.CreateGroupContentControl(null, null, "2263790892", "groupContentControl38", this);
             this.groupContentControl39 = Globals.Factory.CreateGroupContentControl(null, null, "3499445186", "groupContentControl39", this);
-            this.groupContentControl40 = Globals.Factory.CreateGroupContentControl(null, null, "1167596617", "groupContentControl40", this);
             this.groupContentControl41 = Globals.Factory.CreateGroupContentControl(null, null, "3073917628", "groupContentControl41", this);
             this.groupContentControl42 = Globals.Factory.CreateGroupContentControl(null, null, "1796717618", "groupContentControl42", this);
             this.groupContentControl43 = Globals.Factory.CreateGroupContentControl(null, null, "1056360733", "groupContentControl43", this);
@@ -1589,6 +1596,9 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl106 = Globals.Factory.CreateGroupContentControl(null, null, "540472159", "groupContentControl106", this);
             this.groupContentControl107 = Globals.Factory.CreateGroupContentControl(null, null, "854396975", "groupContentControl107", this);
             this.groupContentControl108 = Globals.Factory.CreateGroupContentControl(null, null, "786005463", "groupContentControl108", this);
+            this.groupContentControl109 = Globals.Factory.CreateGroupContentControl(null, null, "2687632255", "groupContentControl109", this);
+            this.groupContentControl112 = Globals.Factory.CreateGroupContentControl(null, null, "3224161535", "groupContentControl112", this);
+            this.rtcTenderFormatTable = Globals.Factory.CreateRichTextContentControl(null, null, "2593276671", "rtcTenderFormatTable", this);
         }
         
         /// 
@@ -2494,10 +2504,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl39.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl40
-            // 
-            this.groupContentControl40.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl41
             // 
             this.groupContentControl41.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2762,6 +2768,18 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl108.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // groupContentControl109
+            // 
+            this.groupContentControl109.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl112
+            // 
+            this.groupContentControl112.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcTenderFormatTable
+            // 
+            this.rtcTenderFormatTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2778,6 +2796,9 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.rtcTenderFormatTable.Dispose();
+            this.groupContentControl112.Dispose();
+            this.groupContentControl109.Dispose();
             this.groupContentControl108.Dispose();
             this.groupContentControl107.Dispose();
             this.groupContentControl106.Dispose();
@@ -2844,7 +2865,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl43.Dispose();
             this.groupContentControl42.Dispose();
             this.groupContentControl41.Dispose();
-            this.groupContentControl40.Dispose();
             this.groupContentControl39.Dispose();
             this.groupContentControl38.Dispose();
             this.groupContentControl37.Dispose();

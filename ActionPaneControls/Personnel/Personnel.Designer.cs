@@ -68,21 +68,21 @@
             // 
             // btnPS
             // 
-            this.btnPS.Location = new System.Drawing.Point(116, 577);
+            this.btnPS.Location = new System.Drawing.Point(112, 577);
             this.btnPS.Name = "btnPS";
-            this.btnPS.Size = new System.Drawing.Size(91, 36);
+            this.btnPS.Size = new System.Drawing.Size(102, 36);
             this.btnPS.TabIndex = 3;
-            this.btnPS.Text = "Personal Schedule";
+            this.btnPS.Text = "Send To Personal Schedule";
             this.btnPS.UseVisualStyleBackColor = true;
             this.btnPS.Click += new System.EventHandler(this.btnPS_Click);
             // 
             // btnASS
             // 
-            this.btnASS.Location = new System.Drawing.Point(213, 577);
+            this.btnASS.Location = new System.Drawing.Point(224, 577);
             this.btnASS.Name = "btnASS";
             this.btnASS.Size = new System.Drawing.Size(106, 36);
             this.btnASS.TabIndex = 4;
-            this.btnASS.Text = "Additional Services Schedule";
+            this.btnASS.Text = "Send to Additional Services Schedule";
             this.btnASS.UseVisualStyleBackColor = true;
             this.btnASS.Click += new System.EventHandler(this.btnASS_Click);
             // 

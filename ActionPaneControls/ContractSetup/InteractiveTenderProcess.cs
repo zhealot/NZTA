@@ -90,8 +90,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             }
 
             iMeetingItem.OrderBy(i => i.Value);
-            
+
             //fill in meeting table if Combined meeting exists
+            Globals.ThisDocument.rtcInteractiveTenderProcess.LockContents = false;
             var tb = Globals.ThisDocument.rtcInteractiveTenderProcess.Range.Tables[1];
             tb.AutoFitBehavior(Microsoft.Office.Interop.Word.WdAutoFitBehavior.wdAutoFitFixed);
 
@@ -128,6 +129,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.RangeHideShow(ref RgClause, chkd);
 
             tb.Range.Font.ColorIndex = Microsoft.Office.Interop.Word.WdColorIndex.wdBlack;
+            Globals.ThisDocument.rtcInteractiveTenderProcess.LockContents = true;
             Globals.ThisDocument.Application.ScreenUpdating = true;
         }
 

@@ -69,7 +69,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                 rg.Find.Execute();
             }
             //retireve weighting data from 5 Form C and list them in ACP Textbox
-            //tbPercent.Clear();
+            tbPercent.Clear();
             var tb =Globals.ThisDocument.MethAbove.Tables[1];
             for (int i = Globals.ThisDocument.MethAbove.Rows[1].Index + 1; 
                 i <= Globals.ThisDocument.FormC_MethStart.Rows[1].Index; i++)
