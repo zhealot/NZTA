@@ -36,7 +36,10 @@ namespace NZTA_Contract_Generator
 
             //Add save handler
             this.BeforeSave += new Microsoft.Office.Tools.Word.SaveEventHandler(ThisDocument_BeforeSave);
-            
+
+            //Add new document event handler
+            this.New += ThisDocument_New;
+            this.Open += ThisDocument_Open;
             //Add NavTree
             this.ActionsPane.Controls.Add(new ActionPaneControls.NavTreeAPC());
 
@@ -52,6 +55,17 @@ namespace NZTA_Contract_Generator
             this.Fields.Update();
             //show Custom Ribbon
             //Globals.Ribbons.Ribbon1.tab1.RibbonUI.ActivateTab("CGTAB");
+        }
+
+        private void ThisDocument_Open()
+        {
+            Globals.ThisDocument.richTextContentControl1.Range.Select();
+        }
+
+        private void ThisDocument_New()
+        {
+            //select first page when creating new document
+            Globals.ThisDocument.richTextContentControl1.Range.Select();
         }
 
         void ThisDocument_BeforeSave(object sender, Microsoft.Office.Tools.Word.SaveEventArgs e)
