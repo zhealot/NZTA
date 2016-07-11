@@ -43,8 +43,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
 
             //Base Estimate clause Body 
+            Globals.ThisDocument.rtcPricing_BaseEstimateBody.LockContents = false;
             rg = Globals.ThisDocument.rtcPricing_BaseEstimateBody.Range;
             Util.ContentControls.RangeHideShow(ref rg, BaseChkd);
+            Globals.ThisDocument.rtcPricing_BaseEstimateBody.LockContents = true;
 
             //Boork's Law clause 
             Globals.ThisDocument.rtcPricing_BrooksLaw.LockContents = false;
@@ -66,9 +68,8 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
 
             //Target Price Tender Form
             rg = Globals.ThisDocument.rtcTargetPriceTenderForm.Range;
-            rg.SetRange(rg.Start - 1, rg.End + 2);
-            rg.Font.Hidden = BaseChkd ? 1 : 0;
-        }
+            Util.ContentControls.RangeHideShow(ref rg, !BaseChkd);
+       }
 
 
         private void BrooksLaw_Check_CheckedChanged(object sender, EventArgs e)

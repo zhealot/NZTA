@@ -489,14 +489,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl54;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl58;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl59;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl60;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl61;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl62;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl64;
@@ -941,10 +933,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl52.BeginInit();
             this.groupContentControl53.BeginInit();
             this.groupContentControl54.BeginInit();
-            this.groupContentControl58.BeginInit();
-            this.groupContentControl59.BeginInit();
-            this.groupContentControl60.BeginInit();
-            this.groupContentControl61.BeginInit();
             this.groupContentControl62.BeginInit();
             this.groupContentControl64.BeginInit();
             this.groupContentControl65.BeginInit();
@@ -1058,10 +1046,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl65.EndInit();
             this.groupContentControl64.EndInit();
             this.groupContentControl62.EndInit();
-            this.groupContentControl61.EndInit();
-            this.groupContentControl60.EndInit();
-            this.groupContentControl59.EndInit();
-            this.groupContentControl58.EndInit();
             this.groupContentControl54.EndInit();
             this.groupContentControl53.EndInit();
             this.groupContentControl52.EndInit();
@@ -1542,10 +1526,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl52 = Globals.Factory.CreateGroupContentControl(null, null, "3061114182", "groupContentControl52", this);
             this.groupContentControl53 = Globals.Factory.CreateGroupContentControl(null, null, "325258083", "groupContentControl53", this);
             this.groupContentControl54 = Globals.Factory.CreateGroupContentControl(null, null, "551042101", "groupContentControl54", this);
-            this.groupContentControl58 = Globals.Factory.CreateGroupContentControl(null, null, "3101666677", "groupContentControl58", this);
-            this.groupContentControl59 = Globals.Factory.CreateGroupContentControl(null, null, "3894670858", "groupContentControl59", this);
-            this.groupContentControl60 = Globals.Factory.CreateGroupContentControl(null, null, "1503385528", "groupContentControl60", this);
-            this.groupContentControl61 = Globals.Factory.CreateGroupContentControl(null, null, "188572062", "groupContentControl61", this);
             this.groupContentControl62 = Globals.Factory.CreateGroupContentControl(null, null, "1068388239", "groupContentControl62", this);
             this.groupContentControl64 = Globals.Factory.CreateGroupContentControl(null, null, "155110367", "groupContentControl64", this);
             this.groupContentControl65 = Globals.Factory.CreateGroupContentControl(null, null, "3950638618", "groupContentControl65", this);
@@ -2552,22 +2532,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl54.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl58
-            // 
-            this.groupContentControl58.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl59
-            // 
-            this.groupContentControl59.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl60
-            // 
-            this.groupContentControl60.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl61
-            // 
-            this.groupContentControl61.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl62
             // 
             this.groupContentControl62.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2849,10 +2813,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl65.Dispose();
             this.groupContentControl64.Dispose();
             this.groupContentControl62.Dispose();
-            this.groupContentControl61.Dispose();
-            this.groupContentControl60.Dispose();
-            this.groupContentControl59.Dispose();
-            this.groupContentControl58.Dispose();
             this.groupContentControl54.Dispose();
             this.groupContentControl53.Dispose();
             this.groupContentControl52.Dispose();

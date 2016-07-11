@@ -109,7 +109,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             {
                 tb.Rows[rw].Cells[1].Range.Text = Combined_Date.Value.ToString(GlobalVar.DateFormat)+ Environment.NewLine + Combined_Time.Value.ToShortTimeString();
                 Util.ContentControls.setText("Combined_Date", Combined_Date.Value.ToString(GlobalVar.DateFormat));
-                Util.ContentControls.setText("Combined_Time", Combined_Date.Value.ToShortTimeString());
+                Util.ContentControls.setText("Combined_Time", Combined_Time.Value.ToShortTimeString());
                 tb.Rows[rw].Cells[2].Range.Text = "Combined Meeting";
                 rw++;
             }
