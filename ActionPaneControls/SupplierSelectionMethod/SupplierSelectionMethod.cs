@@ -113,15 +113,15 @@ namespace NZTA_Contract_Generator.ActionPaneControls.SupplierSelectionMethod
                                     Docu.rtcPrice.Text = P.ToString() + "%";
                                     if (rbPQM.Checked)
                                     {
-                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple";
-                                        Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “PQM Simple Method”, of the Transport Agency’s Contract Procedures Manual (SM021)." +
+                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM";
+                                        Docu.rtcSupplierSelectionMethodStart.Text = "Tenders will be evaluated in accordance with this document and the “PQM Method”, of the Transport Agency’s Contract Procedures Manual (SM021)." +
                                                                                     Environment.NewLine + "Weightings will be given to each of the attributes as follows:";
                                         Docu.rtcSupplierSelectionMethodEnd.Text = "A tender receiving a score of 35% or less for any non-price attribute will fail on that attribute and that tender will be rejected.";
                                     }
                                     if (rbPQMPDA.Checked)
                                     {
-                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM Simple + Price Deviation Adjustment (PDA)";
-                                        Docu.rtcSupplierSelectionMethodStart.Text = "In addition to the PQM Simple evaluation method of the NZTA Contract Procedures Manual (SM021), the submitted tender price will have a Price Deviation Adjustment added.  This adjustment is calculated after all submitted price envelopes have been opened." +
+                                        Docu.rtcSupplierSelectoionMethodName.Text = "PQM + Price Deviation Adjustment (PDA)";
+                                        Docu.rtcSupplierSelectionMethodStart.Text = "In addition to the PQM evaluation method of the NZTA Contract Procedures Manual (SM021), the submitted tender price will have a Price Deviation Adjustment added.  This adjustment is calculated after all submitted price envelopes have been opened." +
                                                                                     Environment.NewLine + "If the tendered price is more than 90% of the median tender price, (when only two tenders are received the Base Estimate is included in the median price calculation), no adjustment will be made." +
                                                                                     Environment.NewLine + "If the tender price is less than 90% of the median tender price, the Price Deviation Adjustment is calculated by multiplying the difference between the tendered price and 90% of the median tender price by 1.5 to give a positive adjustment figure, which is then added to the submitted tendered price. E.g.  If 90% of the median tender price is $100,000.00 and a submitted tender price is $80,000.00 the PDA = ($100,000.00 - $80,000.00) x 1.5 = $30,000.00." +
                                                                                     Environment.NewLine + "Weightings will be given to each of the attributes as follows:";

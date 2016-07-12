@@ -67,10 +67,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTargetPriceAmount;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl30;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl31;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl34;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcEvaluationPeriod;
@@ -178,8 +174,6 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl137;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl138;
-        
-        internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCPS_GeoTestingSum;
         
@@ -371,13 +365,9 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcPricing_TargetPrice;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcElectronicCopy;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl171;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl172;
-        
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcECopy;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcSectionG;
         
@@ -447,29 +437,17 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl28;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl29;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl30;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl31;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl32;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl33;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl36;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl37;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl38;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl39;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl41;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl42;
-        
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl43;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl44;
         
@@ -594,6 +572,32 @@ namespace NZTA_Contract_Generator {
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl112;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcTenderFormatTable;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl173;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl174;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl175;
+        
+        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcECopy;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl113;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl114;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl115;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl116;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl117;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl118;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl119;
+        
+        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl120;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
@@ -722,8 +726,6 @@ namespace NZTA_Contract_Generator {
             this.rtcEnquiryDays.BeginInit();
             this.rtcEnquiryHours.BeginInit();
             this.rtcTargetPriceAmount.BeginInit();
-            this.richTextContentControl30.BeginInit();
-            this.richTextContentControl31.BeginInit();
             this.richTextContentControl34.BeginInit();
             this.rtcEvaluationPeriod.BeginInit();
             this.rtcPrelettingPeriod.BeginInit();
@@ -778,7 +780,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl136.BeginInit();
             this.richTextContentControl137.BeginInit();
             this.richTextContentControl138.BeginInit();
-            this.DocumentFormatForm.BeginInit();
             this.rtcCPS_GeoTestingSum.BeginInit();
             this.rtcAdditionalServicesSchedule_Sum.BeginInit();
             this.rtcCPS_ASS_Sum.BeginInit();
@@ -874,10 +875,8 @@ namespace NZTA_Contract_Generator {
             this.bmTimeResourceRow.BeginInit();
             this.rtcPricing_BrooksLaw.BeginInit();
             this.rtcPricing_TargetPrice.BeginInit();
-            this.rtcElectronicCopy.BeginInit();
             this.richTextContentControl171.BeginInit();
             this.richTextContentControl172.BeginInit();
-            this.rtcECopy.BeginInit();
             this.rtcSectionG.BeginInit();
             this.rtcIndividualClaus1.BeginInit();
             this.rtcIndividualClaus2.BeginInit();
@@ -912,18 +911,12 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl26.BeginInit();
             this.groupContentControl27.BeginInit();
             this.groupContentControl28.BeginInit();
-            this.groupContentControl29.BeginInit();
-            this.groupContentControl30.BeginInit();
-            this.groupContentControl31.BeginInit();
             this.groupContentControl32.BeginInit();
             this.groupContentControl33.BeginInit();
-            this.groupContentControl36.BeginInit();
             this.groupContentControl37.BeginInit();
             this.groupContentControl38.BeginInit();
-            this.groupContentControl39.BeginInit();
             this.groupContentControl41.BeginInit();
             this.groupContentControl42.BeginInit();
-            this.groupContentControl43.BeginInit();
             this.groupContentControl44.BeginInit();
             this.groupContentControl46.BeginInit();
             this.groupContentControl48.BeginInit();
@@ -986,6 +979,19 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl109.BeginInit();
             this.groupContentControl112.BeginInit();
             this.rtcTenderFormatTable.BeginInit();
+            this.DocumentFormatForm.BeginInit();
+            this.richTextContentControl173.BeginInit();
+            this.richTextContentControl174.BeginInit();
+            this.richTextContentControl175.BeginInit();
+            this.rtcECopy.BeginInit();
+            this.groupContentControl113.BeginInit();
+            this.groupContentControl114.BeginInit();
+            this.groupContentControl115.BeginInit();
+            this.groupContentControl116.BeginInit();
+            this.groupContentControl117.BeginInit();
+            this.groupContentControl118.BeginInit();
+            this.groupContentControl119.BeginInit();
+            this.groupContentControl120.BeginInit();
         }
         
         /// 
@@ -993,6 +999,19 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.groupContentControl120.EndInit();
+            this.groupContentControl119.EndInit();
+            this.groupContentControl118.EndInit();
+            this.groupContentControl117.EndInit();
+            this.groupContentControl116.EndInit();
+            this.groupContentControl115.EndInit();
+            this.groupContentControl114.EndInit();
+            this.groupContentControl113.EndInit();
+            this.rtcECopy.EndInit();
+            this.richTextContentControl175.EndInit();
+            this.richTextContentControl174.EndInit();
+            this.richTextContentControl173.EndInit();
+            this.DocumentFormatForm.EndInit();
             this.rtcTenderFormatTable.EndInit();
             this.groupContentControl112.EndInit();
             this.groupContentControl109.EndInit();
@@ -1055,18 +1074,12 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl48.EndInit();
             this.groupContentControl46.EndInit();
             this.groupContentControl44.EndInit();
-            this.groupContentControl43.EndInit();
             this.groupContentControl42.EndInit();
             this.groupContentControl41.EndInit();
-            this.groupContentControl39.EndInit();
             this.groupContentControl38.EndInit();
             this.groupContentControl37.EndInit();
-            this.groupContentControl36.EndInit();
             this.groupContentControl33.EndInit();
             this.groupContentControl32.EndInit();
-            this.groupContentControl31.EndInit();
-            this.groupContentControl30.EndInit();
-            this.groupContentControl29.EndInit();
             this.groupContentControl28.EndInit();
             this.groupContentControl27.EndInit();
             this.groupContentControl26.EndInit();
@@ -1101,10 +1114,8 @@ namespace NZTA_Contract_Generator {
             this.rtcIndividualClaus2.EndInit();
             this.rtcIndividualClaus1.EndInit();
             this.rtcSectionG.EndInit();
-            this.rtcECopy.EndInit();
             this.richTextContentControl172.EndInit();
             this.richTextContentControl171.EndInit();
-            this.rtcElectronicCopy.EndInit();
             this.rtcPricing_TargetPrice.EndInit();
             this.rtcPricing_BrooksLaw.EndInit();
             this.bmTimeResourceRow.EndInit();
@@ -1200,7 +1211,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCPS_ASS_Sum.EndInit();
             this.rtcAdditionalServicesSchedule_Sum.EndInit();
             this.rtcCPS_GeoTestingSum.EndInit();
-            this.DocumentFormatForm.EndInit();
             this.richTextContentControl138.EndInit();
             this.richTextContentControl137.EndInit();
             this.richTextContentControl136.EndInit();
@@ -1255,8 +1265,6 @@ namespace NZTA_Contract_Generator {
             this.rtcPrelettingPeriod.EndInit();
             this.rtcEvaluationPeriod.EndInit();
             this.richTextContentControl34.EndInit();
-            this.richTextContentControl31.EndInit();
-            this.richTextContentControl30.EndInit();
             this.rtcTargetPriceAmount.EndInit();
             this.rtcEnquiryHours.EndInit();
             this.rtcEnquiryDays.EndInit();
@@ -1315,8 +1323,6 @@ namespace NZTA_Contract_Generator {
             this.rtcEnquiryDays = Globals.Factory.CreateRichTextContentControl(null, null, "1603068122", "rtcEnquiryDays", this);
             this.rtcEnquiryHours = Globals.Factory.CreateRichTextContentControl(null, null, "1668204497", "rtcEnquiryHours", this);
             this.rtcTargetPriceAmount = Globals.Factory.CreateRichTextContentControl(null, null, "1661040138", "rtcTargetPriceAmount", this);
-            this.richTextContentControl30 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl30", this);
-            this.richTextContentControl31 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl31", this);
             this.richTextContentControl34 = Globals.Factory.CreateRichTextContentControl(null, null, "46739209", "richTextContentControl34", this);
             this.rtcEvaluationPeriod = Globals.Factory.CreateRichTextContentControl(null, null, "1227035432", "rtcEvaluationPeriod", this);
             this.rtcPrelettingPeriod = Globals.Factory.CreateRichTextContentControl(null, null, "795332043", "rtcPrelettingPeriod", this);
@@ -1371,7 +1377,6 @@ namespace NZTA_Contract_Generator {
             this.richTextContentControl136 = Globals.Factory.CreateRichTextContentControl(null, null, "271914501", "richTextContentControl136", this);
             this.richTextContentControl137 = Globals.Factory.CreateRichTextContentControl(null, null, "2373102989", "richTextContentControl137", this);
             this.richTextContentControl138 = Globals.Factory.CreateRichTextContentControl(null, null, "136855772", "richTextContentControl138", this);
-            this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
             this.rtcCPS_GeoTestingSum = Globals.Factory.CreateRichTextContentControl(null, null, "3830924054", "rtcCPS_GeoTestingSum", this);
             this.rtcAdditionalServicesSchedule_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "3756918911", "rtcAdditionalServicesSchedule_Sum", this);
             this.rtcCPS_ASS_Sum = Globals.Factory.CreateRichTextContentControl(null, null, "1493913556", "rtcCPS_ASS_Sum", this);
@@ -1467,10 +1472,8 @@ namespace NZTA_Contract_Generator {
             this.bmTimeResourceRow = Globals.Factory.CreateBookmark(null, null, "bmTimeResourceRow", "bmTimeResourceRow", this);
             this.rtcPricing_BrooksLaw = Globals.Factory.CreateRichTextContentControl(null, null, "500245648", "rtcPricing_BrooksLaw", this);
             this.rtcPricing_TargetPrice = Globals.Factory.CreateRichTextContentControl(null, null, "769362992", "rtcPricing_TargetPrice", this);
-            this.rtcElectronicCopy = Globals.Factory.CreateRichTextContentControl(null, null, "2623178283", "rtcElectronicCopy", this);
             this.richTextContentControl171 = Globals.Factory.CreateRichTextContentControl(null, null, "4212590399", "richTextContentControl171", this);
             this.richTextContentControl172 = Globals.Factory.CreateRichTextContentControl(null, null, "1189881491", "richTextContentControl172", this);
-            this.rtcECopy = Globals.Factory.CreateRichTextContentControl(null, null, "497237523", "rtcECopy", this);
             this.rtcSectionG = Globals.Factory.CreateRichTextContentControl(null, null, "2492049704", "rtcSectionG", this);
             this.rtcIndividualClaus1 = Globals.Factory.CreateRichTextContentControl(null, null, "2228176193", "rtcIndividualClaus1", this);
             this.rtcIndividualClaus2 = Globals.Factory.CreateRichTextContentControl(null, null, "552434896", "rtcIndividualClaus2", this);
@@ -1505,18 +1508,12 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl26 = Globals.Factory.CreateGroupContentControl(null, null, "3999671241", "groupContentControl26", this);
             this.groupContentControl27 = Globals.Factory.CreateGroupContentControl(null, null, "3563190372", "groupContentControl27", this);
             this.groupContentControl28 = Globals.Factory.CreateGroupContentControl(null, null, "2505931553", "groupContentControl28", this);
-            this.groupContentControl29 = Globals.Factory.CreateGroupContentControl(null, null, "759259399", "groupContentControl29", this);
-            this.groupContentControl30 = Globals.Factory.CreateGroupContentControl(null, null, "2411565531", "groupContentControl30", this);
-            this.groupContentControl31 = Globals.Factory.CreateGroupContentControl(null, null, "3437005209", "groupContentControl31", this);
             this.groupContentControl32 = Globals.Factory.CreateGroupContentControl(null, null, "139396910", "groupContentControl32", this);
             this.groupContentControl33 = Globals.Factory.CreateGroupContentControl(null, null, "2936844880", "groupContentControl33", this);
-            this.groupContentControl36 = Globals.Factory.CreateGroupContentControl(null, null, "492462714", "groupContentControl36", this);
             this.groupContentControl37 = Globals.Factory.CreateGroupContentControl(null, null, "1092900948", "groupContentControl37", this);
             this.groupContentControl38 = Globals.Factory.CreateGroupContentControl(null, null, "2263790892", "groupContentControl38", this);
-            this.groupContentControl39 = Globals.Factory.CreateGroupContentControl(null, null, "3499445186", "groupContentControl39", this);
             this.groupContentControl41 = Globals.Factory.CreateGroupContentControl(null, null, "3073917628", "groupContentControl41", this);
             this.groupContentControl42 = Globals.Factory.CreateGroupContentControl(null, null, "1796717618", "groupContentControl42", this);
-            this.groupContentControl43 = Globals.Factory.CreateGroupContentControl(null, null, "1056360733", "groupContentControl43", this);
             this.groupContentControl44 = Globals.Factory.CreateGroupContentControl(null, null, "3511241898", "groupContentControl44", this);
             this.groupContentControl46 = Globals.Factory.CreateGroupContentControl(null, null, "2192331384", "groupContentControl46", this);
             this.groupContentControl48 = Globals.Factory.CreateGroupContentControl(null, null, "3837781453", "groupContentControl48", this);
@@ -1579,6 +1576,19 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl109 = Globals.Factory.CreateGroupContentControl(null, null, "2687632255", "groupContentControl109", this);
             this.groupContentControl112 = Globals.Factory.CreateGroupContentControl(null, null, "3224161535", "groupContentControl112", this);
             this.rtcTenderFormatTable = Globals.Factory.CreateRichTextContentControl(null, null, "2593276671", "rtcTenderFormatTable", this);
+            this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
+            this.richTextContentControl173 = Globals.Factory.CreateRichTextContentControl(null, null, "2623178283", "richTextContentControl173", this);
+            this.richTextContentControl174 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl174", this);
+            this.richTextContentControl175 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl175", this);
+            this.rtcECopy = Globals.Factory.CreateRichTextContentControl(null, null, "497237523", "rtcECopy", this);
+            this.groupContentControl113 = Globals.Factory.CreateGroupContentControl(null, null, "1966314105", "groupContentControl113", this);
+            this.groupContentControl114 = Globals.Factory.CreateGroupContentControl(null, null, "1650333994", "groupContentControl114", this);
+            this.groupContentControl115 = Globals.Factory.CreateGroupContentControl(null, null, "2588808580", "groupContentControl115", this);
+            this.groupContentControl116 = Globals.Factory.CreateGroupContentControl(null, null, "1665969483", "groupContentControl116", this);
+            this.groupContentControl117 = Globals.Factory.CreateGroupContentControl(null, null, "1273366586", "groupContentControl117", this);
+            this.groupContentControl118 = Globals.Factory.CreateGroupContentControl(null, null, "676397359", "groupContentControl118", this);
+            this.groupContentControl119 = Globals.Factory.CreateGroupContentControl(null, null, "1756477932", "groupContentControl119", this);
+            this.groupContentControl120 = Globals.Factory.CreateGroupContentControl(null, null, "2701261970", "groupContentControl120", this);
         }
         
         /// 
@@ -1687,14 +1697,6 @@ namespace NZTA_Contract_Generator {
             // rtcTargetPriceAmount
             // 
             this.rtcTargetPriceAmount.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl30
-            // 
-            this.richTextContentControl30.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // richTextContentControl31
-            // 
-            this.richTextContentControl31.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // richTextContentControl34
             // 
@@ -1911,10 +1913,6 @@ namespace NZTA_Contract_Generator {
             // richTextContentControl138
             // 
             this.richTextContentControl138.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // DocumentFormatForm
-            // 
-            this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcCPS_GeoTestingSum
             // 
@@ -2296,10 +2294,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcPricing_TargetPrice.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // rtcElectronicCopy
-            // 
-            this.rtcElectronicCopy.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl171
             // 
             this.richTextContentControl171.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2307,10 +2301,6 @@ namespace NZTA_Contract_Generator {
             // richTextContentControl172
             // 
             this.richTextContentControl172.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // rtcECopy
-            // 
-            this.rtcECopy.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // rtcSectionG
             // 
@@ -2448,18 +2438,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl28.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl29
-            // 
-            this.groupContentControl29.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl30
-            // 
-            this.groupContentControl30.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl31
-            // 
-            this.groupContentControl31.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl32
             // 
             this.groupContentControl32.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2467,10 +2445,6 @@ namespace NZTA_Contract_Generator {
             // groupContentControl33
             // 
             this.groupContentControl33.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl36
-            // 
-            this.groupContentControl36.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // groupContentControl37
             // 
@@ -2480,10 +2454,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl38.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl39
-            // 
-            this.groupContentControl39.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl41
             // 
             this.groupContentControl41.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2491,10 +2461,6 @@ namespace NZTA_Contract_Generator {
             // groupContentControl42
             // 
             this.groupContentControl42.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
-            // groupContentControl43
-            // 
-            this.groupContentControl43.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
             // groupContentControl44
             // 
@@ -2744,6 +2710,58 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcTenderFormatTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // DocumentFormatForm
+            // 
+            this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl173
+            // 
+            this.richTextContentControl173.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl174
+            // 
+            this.richTextContentControl174.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // richTextContentControl175
+            // 
+            this.richTextContentControl175.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // rtcECopy
+            // 
+            this.rtcECopy.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl113
+            // 
+            this.groupContentControl113.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl114
+            // 
+            this.groupContentControl114.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl115
+            // 
+            this.groupContentControl115.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl116
+            // 
+            this.groupContentControl116.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl117
+            // 
+            this.groupContentControl117.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl118
+            // 
+            this.groupContentControl118.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl119
+            // 
+            this.groupContentControl119.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // groupContentControl120
+            // 
+            this.groupContentControl120.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2760,6 +2778,19 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.groupContentControl120.Dispose();
+            this.groupContentControl119.Dispose();
+            this.groupContentControl118.Dispose();
+            this.groupContentControl117.Dispose();
+            this.groupContentControl116.Dispose();
+            this.groupContentControl115.Dispose();
+            this.groupContentControl114.Dispose();
+            this.groupContentControl113.Dispose();
+            this.rtcECopy.Dispose();
+            this.richTextContentControl175.Dispose();
+            this.richTextContentControl174.Dispose();
+            this.richTextContentControl173.Dispose();
+            this.DocumentFormatForm.Dispose();
             this.rtcTenderFormatTable.Dispose();
             this.groupContentControl112.Dispose();
             this.groupContentControl109.Dispose();
@@ -2822,18 +2853,12 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl48.Dispose();
             this.groupContentControl46.Dispose();
             this.groupContentControl44.Dispose();
-            this.groupContentControl43.Dispose();
             this.groupContentControl42.Dispose();
             this.groupContentControl41.Dispose();
-            this.groupContentControl39.Dispose();
             this.groupContentControl38.Dispose();
             this.groupContentControl37.Dispose();
-            this.groupContentControl36.Dispose();
             this.groupContentControl33.Dispose();
             this.groupContentControl32.Dispose();
-            this.groupContentControl31.Dispose();
-            this.groupContentControl30.Dispose();
-            this.groupContentControl29.Dispose();
             this.groupContentControl28.Dispose();
             this.groupContentControl27.Dispose();
             this.groupContentControl26.Dispose();
@@ -2868,10 +2893,8 @@ namespace NZTA_Contract_Generator {
             this.rtcIndividualClaus2.Dispose();
             this.rtcIndividualClaus1.Dispose();
             this.rtcSectionG.Dispose();
-            this.rtcECopy.Dispose();
             this.richTextContentControl172.Dispose();
             this.richTextContentControl171.Dispose();
-            this.rtcElectronicCopy.Dispose();
             this.rtcPricing_TargetPrice.Dispose();
             this.rtcPricing_BrooksLaw.Dispose();
             this.bmTimeResourceRow.Dispose();
@@ -2967,7 +2990,6 @@ namespace NZTA_Contract_Generator {
             this.rtcCPS_ASS_Sum.Dispose();
             this.rtcAdditionalServicesSchedule_Sum.Dispose();
             this.rtcCPS_GeoTestingSum.Dispose();
-            this.DocumentFormatForm.Dispose();
             this.richTextContentControl138.Dispose();
             this.richTextContentControl137.Dispose();
             this.richTextContentControl136.Dispose();
@@ -3022,8 +3044,6 @@ namespace NZTA_Contract_Generator {
             this.rtcPrelettingPeriod.Dispose();
             this.rtcEvaluationPeriod.Dispose();
             this.richTextContentControl34.Dispose();
-            this.richTextContentControl31.Dispose();
-            this.richTextContentControl30.Dispose();
             this.rtcTargetPriceAmount.Dispose();
             this.rtcEnquiryHours.Dispose();
             this.rtcEnquiryDays.Dispose();

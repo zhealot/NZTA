@@ -134,7 +134,7 @@ namespace NZTA_Contract_Generator
                 {
                     rg.Delete();
                     //in case rg is not deleted successfully 
-                    rg.SetRange(rg.Start + 1, rg.Start + 1);
+                    //rg.SetRange(rg.Start + 1, rg.Start + 1);
                 }
                 catch(Exception ex)
                 {
@@ -142,46 +142,21 @@ namespace NZTA_Contract_Generator
                 }
                 rg.Find.Execute();
             }
-
+            Util.Help.guidanceNote("Guidance notes removed.");
             Globals.ThisDocument.Application.ScreenUpdating = true;
         }
 
         private void Finalize_Click(object sender, RibbonControlEventArgs e)
         //update all page ref fields code; make sure key page is on odd page & has a blank page afterwards
         {
-            //Globals.ThisDocument.Application.ScreenUpdating = false;
-            //List<Microsoft.Office.Tools.Word.RichTextContentControl> lsRTC = new List<Microsoft.Office.Tools.Word.RichTextContentControl>();
-            //lsRTC.Add(Globals.ThisDocument.RTC_SectionA);
-            //lsRTC.Add(Globals.ThisDocument.RTC_SectionB);
-            //lsRTC.Add(Globals.ThisDocument.RTC_SectionC);
-            //lsRTC.Add(Globals.ThisDocument.RTC_SectionD);
-            //lsRTC.Add(Globals.ThisDocument.RTC_SectionE);
+            Globals.ThisDocument.Application.ScreenUpdating = false;
+            foreach (Field fld in Globals.ThisDocument.Fields)
+            {
+                if (fld.Type == WdFieldType.wdFieldPageRef)
+                    fld.Update();
+            }
 
-            //foreach (var rtc in lsRTC)
-            //{
-            //    var rg = rtc.Range;
-            //    if (rg.Information[WdInformation.wdActiveEndPageNumber] % 2 == 0)
-            //    {
-            //        bool blLockContent = rtc.LockContents;
-            //        bool blLockCC = rtc.LockContentControl;
-            //        rtc.LockContentControl = false;
-            //        rtc.LockContents = false;
-            //        rg.SetRange(rg.Start - 1, rg.Start - 1);
-            //        rg.InsertBefore(" "); //### unable to insert page break from rg.Start-1, so insert a blank before CC then insert page break from there
-            //        rg = rtc.Range;
-            //        rg.SetRange(rg.Start - 1, rg.Start - 1);
-            //        rg.InsertBreak(WdBreakType.wdPageBreak);
-            //        rg.InsertBreak(WdBreakType.wdPageBreak);
-            //    }
-            //}
-
-            //foreach (Field fld in Globals.ThisDocument.Fields)
-            //{
-            //    if (fld.Type == WdFieldType.wdFieldPageRef)
-            //        fld.Update();                    
-            //}
-
-            //Globals.ThisDocument.Application.ScreenUpdating=true;
+            Globals.ThisDocument.Application.ScreenUpdating = true;
         }
     }
 }

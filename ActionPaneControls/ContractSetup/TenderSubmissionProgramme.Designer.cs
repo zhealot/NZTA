@@ -506,7 +506,7 @@
             this.otherDetails.Name = "otherDetails";
             this.otherDetails.Size = new System.Drawing.Size(130, 20);
             this.otherDetails.TabIndex = 2;
-            this.otherDetails.Validating += new System.ComponentModel.CancelEventHandler(this.otherDetails_Validating);
+            this.otherDetails.TextChanged += new System.EventHandler(this.otherDetails_TextChanged);
             // 
             // anotherMeansYes
             // 

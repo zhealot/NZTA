@@ -52,31 +52,9 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             bool YesChkd = anotherMeansYes.Checked;
             contract.anotherMeansYes = YesChkd;
             contract.anotherMeansNo = !YesChkd;
-            contract.otherDetails = otherDetails.Text;
-            if (sender is RadioButton )
-            {
-                if (((RadioButton)sender).Name == "anotherMeansNo")
-                {
-                    otherDetails.Text = "";
-                }
-                else if(((RadioButton)sender).Name== "anotherMeansYes" && YesChkd)
-                {
-                    otherDetails.Focus();
-                }
-            }
-            //if (sender is TextBox && YesChkd)
-            //{
-            //    if (string.IsNullOrEmpty(otherDetails.Text))
-            //    {
-            //        Util.Help.guidanceNote("Please enter content for other electronic copies.");
-            //    }
-            //    else
-            //    {
-            //        Util.ContentControls.setText("E-Copy", " and " + contract.otherDetails);
-            //        contract.otherDetails = otherDetails.Text;
-            //        Globals.ThisDocument.rtcECopy.Range.Select();
-            //    }
-            //}
+            contract.otherDetails = YesChkd == true ? otherDetails.Text : "Email";
+            otherDetails.Enabled = YesChkd;
+            Util.ContentControls.setText("E-Copy", contract.otherDetails);
         }
 
         private void Evaluation_Date_Changed(object sender, EventArgs e)
@@ -264,18 +242,10 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.Help.guidanceNote("Typically 4-5 weeks after close of tender");
         }
 
-        private void otherDetails_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+       private void otherDetails_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(otherDetails.Text) && anotherMeansYes.Checked)
-            {
-                //MessageBox.Show("please");
-                //if (otherDetails.Focused) return;
-                otherDetails.Focus();
-                e.Cancel = true;
-            }
-            else {
-                contract.otherDetails = otherDetails.Text;
-            }
+            Util.ContentControls.setText("E-Copy", otherDetails.Text);
+            contract.otherDetails = otherDetails.Text;
         }
     }
 }

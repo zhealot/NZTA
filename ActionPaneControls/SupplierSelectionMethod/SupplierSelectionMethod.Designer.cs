@@ -451,7 +451,7 @@
             // 
             // helpPQMPDA
             // 
-            this.helpPQMPDA.Location = new System.Drawing.Point(129, 40);
+            this.helpPQMPDA.Location = new System.Drawing.Point(96, 40);
             this.helpPQMPDA.Name = "helpPQMPDA";
             this.helpPQMPDA.Size = new System.Drawing.Size(23, 22);
             this.helpPQMPDA.TabIndex = 45;
@@ -461,7 +461,7 @@
             // 
             // helpPQM
             // 
-            this.helpPQM.Location = new System.Drawing.Point(95, 17);
+            this.helpPQM.Location = new System.Drawing.Point(62, 17);
             this.helpPQM.Name = "helpPQM";
             this.helpPQM.Size = new System.Drawing.Size(23, 22);
             this.helpPQM.TabIndex = 45;
@@ -510,10 +510,10 @@
             this.rbPQMPDA.AutoSize = true;
             this.rbPQMPDA.Location = new System.Drawing.Point(6, 43);
             this.rbPQMPDA.Name = "rbPQMPDA";
-            this.rbPQMPDA.Size = new System.Drawing.Size(117, 17);
+            this.rbPQMPDA.Size = new System.Drawing.Size(83, 17);
             this.rbPQMPDA.TabIndex = 1;
             this.rbPQMPDA.TabStop = true;
-            this.rbPQMPDA.Text = "PQM Simple + PDA";
+            this.rbPQMPDA.Text = "PQM + PDA";
             this.rbPQMPDA.UseVisualStyleBackColor = true;
             this.rbPQMPDA.CheckedChanged += new System.EventHandler(this.rbPQMPDA_CheckedChanged);
             // 
@@ -522,10 +522,10 @@
             this.rbPQM.AutoSize = true;
             this.rbPQM.Location = new System.Drawing.Point(6, 20);
             this.rbPQM.Name = "rbPQM";
-            this.rbPQM.Size = new System.Drawing.Size(83, 17);
+            this.rbPQM.Size = new System.Drawing.Size(49, 17);
             this.rbPQM.TabIndex = 0;
             this.rbPQM.TabStop = true;
-            this.rbPQM.Text = "PQM Simple";
+            this.rbPQM.Text = "PQM";
             this.rbPQM.UseVisualStyleBackColor = true;
             this.rbPQM.CheckedChanged += new System.EventHandler(this.rbPQM_CheckedChanged);
             // 
