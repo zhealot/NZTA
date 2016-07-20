@@ -575,8 +575,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.Bookmark DocumentFormatForm;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl173;
-        
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl174;
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl richTextContentControl175;
@@ -980,7 +978,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl112.BeginInit();
             this.rtcTenderFormatTable.BeginInit();
             this.DocumentFormatForm.BeginInit();
-            this.richTextContentControl173.BeginInit();
             this.richTextContentControl174.BeginInit();
             this.richTextContentControl175.BeginInit();
             this.rtcECopy.BeginInit();
@@ -1010,7 +1007,6 @@ namespace NZTA_Contract_Generator {
             this.rtcECopy.EndInit();
             this.richTextContentControl175.EndInit();
             this.richTextContentControl174.EndInit();
-            this.richTextContentControl173.EndInit();
             this.DocumentFormatForm.EndInit();
             this.rtcTenderFormatTable.EndInit();
             this.groupContentControl112.EndInit();
@@ -1577,7 +1573,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl112 = Globals.Factory.CreateGroupContentControl(null, null, "3224161535", "groupContentControl112", this);
             this.rtcTenderFormatTable = Globals.Factory.CreateRichTextContentControl(null, null, "2593276671", "rtcTenderFormatTable", this);
             this.DocumentFormatForm = Globals.Factory.CreateBookmark(null, null, "DocumentFormatForm", "DocumentFormatForm", this);
-            this.richTextContentControl173 = Globals.Factory.CreateRichTextContentControl(null, null, "2623178283", "richTextContentControl173", this);
             this.richTextContentControl174 = Globals.Factory.CreateRichTextContentControl(null, null, "520352158", "richTextContentControl174", this);
             this.richTextContentControl175 = Globals.Factory.CreateRichTextContentControl(null, null, "3000989983", "richTextContentControl175", this);
             this.rtcECopy = Globals.Factory.CreateRichTextContentControl(null, null, "497237523", "rtcECopy", this);
@@ -2714,10 +2709,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.DocumentFormatForm.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // richTextContentControl173
-            // 
-            this.richTextContentControl173.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // richTextContentControl174
             // 
             this.richTextContentControl174.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2789,7 +2780,6 @@ namespace NZTA_Contract_Generator {
             this.rtcECopy.Dispose();
             this.richTextContentControl175.Dispose();
             this.richTextContentControl174.Dispose();
-            this.richTextContentControl173.Dispose();
             this.DocumentFormatForm.Dispose();
             this.rtcTenderFormatTable.Dispose();
             this.groupContentControl112.Dispose();

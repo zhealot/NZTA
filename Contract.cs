@@ -48,7 +48,7 @@ namespace NZTA_Contract_Generator
 
             //Tender Submission Programme
             elecNo = true;
-            anotherMeansNo = true;
+            //anotherMeansNo = true;
             PresentationsRequired_Yes = true;
             PrelettingMeetings_Yes = true;
             
@@ -195,9 +195,12 @@ namespace NZTA_Contract_Generator
 
         public Boolean elecYes { get; set; }
         public Boolean elecNo { get; set; }
-        public Boolean anotherMeansYes { get; set; }
+        public Boolean eleEmail { get; set; }
+        public Boolean eleUSB { get; set; }
+        public Boolean eleDVD { get; set; }
+        //public Boolean anotherMeansYes { get; set; }
         public Boolean anotherMeansNo { get; set; }
-        public String otherDetails { get; set; }
+        //public String otherDetails { get; set; }
 
         public String Evaluation_Start { get; set; }
         public String Evaluation_End { get; set; }

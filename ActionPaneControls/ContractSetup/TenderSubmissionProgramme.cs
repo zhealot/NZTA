@@ -35,7 +35,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             contract.elecYes = YesChkd;
             gbElecForm.Enabled = YesChkd;
 
-            Globals.ThisDocument.rtcElectronicInformation.LockContents = false;
+            //Globals.ThisDocument.rtcElectronicInformation.LockContents = false;
             var Rg = Globals.ThisDocument.rtcElectronicInformation.Range;
             object style = YesChkd ? Globals.ThisDocument.rtcLevel2Style.Range.get_Style() : "Normal";
             Rg.Collapse();
@@ -44,18 +44,18 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Rg.SetRange(Rg.Start - 1, Rg.End + 2);
             Rg.Font.Hidden = YesChkd ? 0 : 1;
             if (YesChkd) Rg.Select();
-            Globals.ThisDocument.rtcElectronicInformation.LockContents = true;
+            //Globals.ThisDocument.rtcElectronicInformation.LockContents = true;
         }
 
-        private void anotherMeans_Changed(object sender, EventArgs e)
-        {
-            bool YesChkd = anotherMeansYes.Checked;
-            contract.anotherMeansYes = YesChkd;
-            contract.anotherMeansNo = !YesChkd;
-            contract.otherDetails = YesChkd == true ? otherDetails.Text : "Email";
-            otherDetails.Enabled = YesChkd;
-            Util.ContentControls.setText("E-Copy", contract.otherDetails);
-        }
+        //private void anotherMeans_Changed(object sender, EventArgs e)
+        //{
+        //    bool YesChkd = anotherMeansYes.Checked;
+        //    contract.anotherMeansYes = YesChkd;
+        //    contract.anotherMeansNo = !YesChkd;
+        //    contract.otherDetails = YesChkd == true ? otherDetails.Text : "Email";
+        //    otherDetails.Enabled = YesChkd;
+        //    Util.ContentControls.setText("E-Copy", contract.otherDetails);
+        //}
 
         private void Evaluation_Date_Changed(object sender, EventArgs e)
         {
@@ -242,10 +242,38 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
             Util.Help.guidanceNote("Typically 4-5 weeks after close of tender");
         }
 
-       private void otherDetails_TextChanged(object sender, EventArgs e)
+        private void ElecFormatChanged(object sender, EventArgs e)
         {
-            Util.ContentControls.setText("E-Copy", otherDetails.Text);
-            contract.otherDetails = otherDetails.Text;
+            if (elecYes.Checked)
+            {
+                if (eleEmail.Checked)
+                {
+                    Globals.ThisDocument.rtcECopy.Range.Text = "Email";
+                    contract.eleEmail = true;
+                    contract.eleUSB = false;
+                    contract.eleDVD = false;
+                }
+                if (eleUSB.Checked)
+                {
+                    Globals.ThisDocument.rtcECopy.Range.Text = "USB";
+                    contract.eleEmail = false;
+                    contract.eleUSB = true;
+                    contract.eleDVD = false;
+                }
+                if (eleDVD.Checked)
+                {
+                    Globals.ThisDocument.rtcECopy.Range.Text = "DVD";
+                    contract.eleEmail = false;
+                    contract.eleUSB = false;
+                    contract.eleDVD = true;
+                }
+            }
         }
+
+        //private void otherDetails_TextChanged(object sender, EventArgs e)
+        // {
+        //     Util.ContentControls.setText("E-Copy", otherDetails.Text);
+        //     contract.otherDetails = otherDetails.Text;
+        // }
     }
 }

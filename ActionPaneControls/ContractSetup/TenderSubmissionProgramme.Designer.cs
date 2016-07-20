@@ -70,10 +70,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.gbElecForm = new System.Windows.Forms.GroupBox();
-            this.otherDetails = new System.Windows.Forms.TextBox();
-            this.anotherMeansYes = new System.Windows.Forms.RadioButton();
-            this.anotherMeansNo = new System.Windows.Forms.RadioButton();
-            this.label36 = new System.Windows.Forms.Label();
+            this.eleDVD = new System.Windows.Forms.RadioButton();
+            this.eleUSB = new System.Windows.Forms.RadioButton();
+            this.eleEmail = new System.Windows.Forms.RadioButton();
             this.elecNo = new System.Windows.Forms.RadioButton();
             this.elecYes = new System.Windows.Forms.RadioButton();
             this.label35 = new System.Windows.Forms.Label();
@@ -258,7 +257,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 566);
+            this.label5.Location = new System.Drawing.Point(3, 550);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 13);
             this.label5.TabIndex = 56;
@@ -267,7 +266,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 587);
+            this.label6.Location = new System.Drawing.Point(3, 571);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 57;
@@ -275,7 +274,7 @@
             // 
             // Evaluation_Start
             // 
-            this.Evaluation_Start.Location = new System.Drawing.Point(3, 603);
+            this.Evaluation_Start.Location = new System.Drawing.Point(3, 587);
             this.Evaluation_Start.Name = "Evaluation_Start";
             this.Evaluation_Start.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_Start.TabIndex = 4;
@@ -283,7 +282,7 @@
             // 
             // Evaluation_End
             // 
-            this.Evaluation_End.Location = new System.Drawing.Point(3, 642);
+            this.Evaluation_End.Location = new System.Drawing.Point(3, 626);
             this.Evaluation_End.Name = "Evaluation_End";
             this.Evaluation_End.Size = new System.Drawing.Size(200, 20);
             this.Evaluation_End.TabIndex = 5;
@@ -292,7 +291,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 626);
+            this.label10.Location = new System.Drawing.Point(3, 610);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 59;
@@ -301,7 +300,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 669);
+            this.label14.Location = new System.Drawing.Point(3, 653);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 13);
             this.label14.TabIndex = 61;
@@ -309,7 +308,7 @@
             // 
             // Evaluation_Other
             // 
-            this.Evaluation_Other.Location = new System.Drawing.Point(97, 666);
+            this.Evaluation_Other.Location = new System.Drawing.Point(97, 650);
             this.Evaluation_Other.Name = "Evaluation_Other";
             this.Evaluation_Other.Size = new System.Drawing.Size(173, 20);
             this.Evaluation_Other.TabIndex = 6;
@@ -317,7 +316,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 664);
+            this.button1.Location = new System.Drawing.Point(62, 648);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 63;
@@ -402,7 +401,7 @@
             // 
             // TargetDate
             // 
-            this.TargetDate.Location = new System.Drawing.Point(3, 920);
+            this.TargetDate.Location = new System.Drawing.Point(3, 904);
             this.TargetDate.Name = "TargetDate";
             this.TargetDate.Size = new System.Drawing.Size(200, 20);
             this.TargetDate.TabIndex = 7;
@@ -411,7 +410,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 904);
+            this.label19.Location = new System.Drawing.Point(3, 888);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(146, 13);
             this.label19.TabIndex = 73;
@@ -425,7 +424,7 @@
             this.gbPrelettingDate.Controls.Add(this.label17);
             this.gbPrelettingDate.Controls.Add(this.PrelettingFromDate);
             this.gbPrelettingDate.Controls.Add(this.label18);
-            this.gbPrelettingDate.Location = new System.Drawing.Point(6, 765);
+            this.gbPrelettingDate.Location = new System.Drawing.Point(6, 749);
             this.gbPrelettingDate.Name = "gbPrelettingDate";
             this.gbPrelettingDate.Size = new System.Drawing.Size(257, 125);
             this.gbPrelettingDate.TabIndex = 75;
@@ -460,7 +459,7 @@
             this.groupBox2.Controls.Add(this.PresentationsRequired_Yes);
             this.groupBox2.Controls.Add(this.help1);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(2, 232);
+            this.groupBox2.Location = new System.Drawing.Point(2, 214);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(276, 258);
             this.groupBox2.TabIndex = 1;
@@ -468,7 +467,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 919);
+            this.button3.Location = new System.Drawing.Point(209, 903);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(23, 23);
             this.button3.TabIndex = 77;
@@ -484,63 +483,57 @@
             this.groupBox5.Controls.Add(this.label35);
             this.groupBox5.Location = new System.Drawing.Point(6, 70);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(276, 156);
+            this.groupBox5.Size = new System.Drawing.Size(276, 153);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             // 
             // gbElecForm
             // 
-            this.gbElecForm.Controls.Add(this.otherDetails);
-            this.gbElecForm.Controls.Add(this.anotherMeansYes);
-            this.gbElecForm.Controls.Add(this.anotherMeansNo);
-            this.gbElecForm.Controls.Add(this.label36);
-            this.gbElecForm.Location = new System.Drawing.Point(5, 46);
+            this.gbElecForm.Controls.Add(this.eleDVD);
+            this.gbElecForm.Controls.Add(this.eleUSB);
+            this.gbElecForm.Controls.Add(this.eleEmail);
+            this.gbElecForm.Location = new System.Drawing.Point(5, 52);
             this.gbElecForm.Name = "gbElecForm";
-            this.gbElecForm.Size = new System.Drawing.Size(264, 104);
+            this.gbElecForm.Size = new System.Drawing.Size(267, 90);
             this.gbElecForm.TabIndex = 90;
             this.gbElecForm.TabStop = false;
+            this.gbElecForm.Text = "Format of tender submission:";
             // 
-            // otherDetails
+            // eleDVD
             // 
-            this.otherDetails.Location = new System.Drawing.Point(126, 80);
-            this.otherDetails.Name = "otherDetails";
-            this.otherDetails.Size = new System.Drawing.Size(130, 20);
-            this.otherDetails.TabIndex = 2;
-            this.otherDetails.TextChanged += new System.EventHandler(this.otherDetails_TextChanged);
+            this.eleDVD.AutoSize = true;
+            this.eleDVD.Location = new System.Drawing.Point(8, 67);
+            this.eleDVD.Name = "eleDVD";
+            this.eleDVD.Size = new System.Drawing.Size(48, 17);
+            this.eleDVD.TabIndex = 0;
+            this.eleDVD.TabStop = true;
+            this.eleDVD.Text = "DVD";
+            this.eleDVD.UseVisualStyleBackColor = true;
+            this.eleDVD.CheckedChanged += new System.EventHandler(this.ElecFormatChanged);
             // 
-            // anotherMeansYes
+            // eleUSB
             // 
-            this.anotherMeansYes.AutoSize = true;
-            this.anotherMeansYes.Location = new System.Drawing.Point(5, 81);
-            this.anotherMeansYes.Name = "anotherMeansYes";
-            this.anotherMeansYes.Size = new System.Drawing.Size(115, 17);
-            this.anotherMeansYes.TabIndex = 1;
-            this.anotherMeansYes.TabStop = true;
-            this.anotherMeansYes.Text = "Yes (email or other)";
-            this.anotherMeansYes.UseVisualStyleBackColor = true;
-            this.anotherMeansYes.CheckedChanged += new System.EventHandler(this.anotherMeans_Changed);
+            this.eleUSB.AutoSize = true;
+            this.eleUSB.Location = new System.Drawing.Point(8, 44);
+            this.eleUSB.Name = "eleUSB";
+            this.eleUSB.Size = new System.Drawing.Size(47, 17);
+            this.eleUSB.TabIndex = 0;
+            this.eleUSB.TabStop = true;
+            this.eleUSB.Text = "USB";
+            this.eleUSB.UseVisualStyleBackColor = true;
+            this.eleUSB.CheckedChanged += new System.EventHandler(this.ElecFormatChanged);
             // 
-            // anotherMeansNo
+            // eleEamil
             // 
-            this.anotherMeansNo.AutoSize = true;
-            this.anotherMeansNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anotherMeansNo.Location = new System.Drawing.Point(5, 50);
-            this.anotherMeansNo.Name = "anotherMeansNo";
-            this.anotherMeansNo.Size = new System.Drawing.Size(39, 17);
-            this.anotherMeansNo.TabIndex = 0;
-            this.anotherMeansNo.TabStop = true;
-            this.anotherMeansNo.Text = "No";
-            this.anotherMeansNo.UseVisualStyleBackColor = true;
-            this.anotherMeansNo.CheckedChanged += new System.EventHandler(this.anotherMeans_Changed);
-            // 
-            // label36
-            // 
-            this.label36.Location = new System.Drawing.Point(2, 13);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(254, 34);
-            this.label36.TabIndex = 75;
-            this.label36.Text = "As well as by email, will you provide another means for electronic copies to be o" +
-    "btained? ";
+            this.eleEmail.AutoSize = true;
+            this.eleEmail.Location = new System.Drawing.Point(8, 21);
+            this.eleEmail.Name = "eleEmail";
+            this.eleEmail.Size = new System.Drawing.Size(50, 17);
+            this.eleEmail.TabIndex = 0;
+            this.eleEmail.TabStop = true;
+            this.eleEmail.Text = "Email";
+            this.eleEmail.UseVisualStyleBackColor = true;
+            this.eleEmail.CheckedChanged += new System.EventHandler(this.ElecFormatChanged);
             // 
             // elecNo
             // 
@@ -580,7 +573,7 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.PrelettingMeetings_Yes);
             this.groupBox3.Controls.Add(this.PrelettingMeetings_No);
-            this.groupBox3.Location = new System.Drawing.Point(6, 706);
+            this.groupBox3.Location = new System.Drawing.Point(6, 690);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(227, 53);
             this.groupBox3.TabIndex = 94;
@@ -589,7 +582,7 @@
             // 
             // InterviewCity
             // 
-            this.InterviewCity.Location = new System.Drawing.Point(140, 496);
+            this.InterviewCity.Location = new System.Drawing.Point(140, 480);
             this.InterviewCity.Name = "InterviewCity";
             this.InterviewCity.Size = new System.Drawing.Size(137, 20);
             this.InterviewCity.TabIndex = 2;
@@ -598,7 +591,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 499);
+            this.label2.Location = new System.Drawing.Point(4, 483);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 95;
@@ -606,7 +599,7 @@
             // 
             // InterviewNotice
             // 
-            this.InterviewNotice.Location = new System.Drawing.Point(168, 522);
+            this.InterviewNotice.Location = new System.Drawing.Point(168, 506);
             this.InterviewNotice.Name = "InterviewNotice";
             this.InterviewNotice.Size = new System.Drawing.Size(109, 20);
             this.InterviewNotice.TabIndex = 3;
@@ -615,7 +608,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 524);
+            this.label15.Location = new System.Drawing.Point(4, 508);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 13);
             this.label15.TabIndex = 97;
@@ -645,7 +638,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "TenderSubmissionProgramme";
-            this.Size = new System.Drawing.Size(300, 943);
+            this.Size = new System.Drawing.Size(300, 927);
             this.gbPrelettingDate.ResumeLayout(false);
             this.gbPrelettingDate.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -706,10 +699,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox gbElecForm;
-        private System.Windows.Forms.TextBox otherDetails;
-        private System.Windows.Forms.RadioButton anotherMeansYes;
-        private System.Windows.Forms.RadioButton anotherMeansNo;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.RadioButton elecNo;
         private System.Windows.Forms.RadioButton elecYes;
         private System.Windows.Forms.Label label35;
@@ -718,5 +707,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown InterviewNotice;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RadioButton eleDVD;
+        private System.Windows.Forms.RadioButton eleUSB;
+        private System.Windows.Forms.RadioButton eleEmail;
     }
 }
