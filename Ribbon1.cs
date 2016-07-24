@@ -164,8 +164,7 @@ namespace NZTA_Contract_Generator
                             Table tb = Globals.ThisDocument.rtcGeotechScheduledItems.Range.Tables[1];
                             for (int i = 1; i <= tb.Rows.Count; i++)
                             {
-                                string CellNumber = tb.Cell(i, 1).Range.Text;
-                                CellNumber = CellNumber.Replace("\r\a", "");
+                                string CellNumber = tb.Cell(i, 1).Range.Text.Replace("\r\a", "");
                                 int intCell;
                                 if (int.TryParse(CellNumber.Replace(".", ""), out intCell))
                                 {
@@ -173,24 +172,40 @@ namespace NZTA_Contract_Generator
                                     tb.Cell(i, 1).Range.Text = CellNumber;
                                 }
                             }
-                            
                         }
-
                     }
                 }
-
             }
             //adjust numbering for Additional service schedule
-
-
-            //update all fields
-            foreach (Field fld in Globals.ThisDocument.Fields)
+            if (Globals.ThisDocument.Bookmarks.Exists("bmAdditionaServicesNum"))
             {
-                if (fld.Type == WdFieldType.wdFieldPageRef)
-                    fld.Update();
+                string ASNum = Globals.ThisDocument.Bookmarks["bmAdditionaServicesNum"].Range.ListFormat.ListString;
+                int iASNum;
+                if(int.TryParse(ASNum,out iASNum))
+                {
+                    if (Globals.ThisDocument.Bookmarks.Exists("bmAdditionalServiceScheduleTable"))
+                    {
+                        if (Globals.ThisDocument.Bookmarks["bmAdditionalServiceScheduleTable"].Range.Tables.Count == 1)
+                        {
+                            Table tb = Globals.ThisDocument.Bookmarks["bmAdditionalServiceScheduleTable"].Range.Tables[1];
+                            for(int i = 1; i <= tb.Rows.Count; i++)
+                            {
+                                string CellNumber = tb.Cell(i, 1).Range.Text.Replace("\r\a", "");
+                                int intCell;
+                                if (int.TryParse(CellNumber.Replace(".", ""),out intCell))
+                                {
+                                    CellNumber = iASNum.ToString() + CellNumber.Substring(CellNumber.IndexOf('.'));
+                                    tb.Cell(i, 1).Range.Text = CellNumber;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-
+            //update all fields
+            Globals.ThisDocument.Fields.Update();
             Globals.ThisDocument.Application.ScreenUpdating = true;
+            Util.Help.guidanceNote("All fields updated and page number adjusted.");
         }
     }
 }

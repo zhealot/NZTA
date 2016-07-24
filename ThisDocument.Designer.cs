@@ -595,6 +595,10 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl120;
         
+        internal Microsoft.Office.Tools.Word.Bookmark bmAdditionaServicesNum;
+        
+        internal Microsoft.Office.Tools.Word.Bookmark bmAdditionalServiceScheduleTable;
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
@@ -986,6 +990,8 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl118.BeginInit();
             this.groupContentControl119.BeginInit();
             this.groupContentControl120.BeginInit();
+            this.bmAdditionaServicesNum.BeginInit();
+            this.bmAdditionalServiceScheduleTable.BeginInit();
         }
         
         /// 
@@ -993,6 +999,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
+            this.bmAdditionalServiceScheduleTable.EndInit();
+            this.bmAdditionaServicesNum.EndInit();
             this.groupContentControl120.EndInit();
             this.groupContentControl119.EndInit();
             this.groupContentControl118.EndInit();
@@ -1579,6 +1587,8 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl118 = Globals.Factory.CreateGroupContentControl(null, null, "676397359", "groupContentControl118", this);
             this.groupContentControl119 = Globals.Factory.CreateGroupContentControl(null, null, "1756477932", "groupContentControl119", this);
             this.groupContentControl120 = Globals.Factory.CreateGroupContentControl(null, null, "2701261970", "groupContentControl120", this);
+            this.bmAdditionaServicesNum = Globals.Factory.CreateBookmark(null, null, "bmAdditionaServicesNum", "bmAdditionaServicesNum", this);
+            this.bmAdditionalServiceScheduleTable = Globals.Factory.CreateBookmark(null, null, "bmAdditionalServiceScheduleTable", "bmAdditionalServiceScheduleTable", this);
         }
         
         /// 
@@ -2744,6 +2754,14 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl120.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
+            // bmAdditionaServicesNum
+            // 
+            this.bmAdditionaServicesNum.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
+            // bmAdditionalServiceScheduleTable
+            // 
+            this.bmAdditionalServiceScheduleTable.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
+            // 
             // ThisDocument
             // 
         }
@@ -2760,6 +2778,8 @@ namespace NZTA_Contract_Generator {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
+            this.bmAdditionalServiceScheduleTable.Dispose();
+            this.bmAdditionaServicesNum.Dispose();
             this.groupContentControl120.Dispose();
             this.groupContentControl119.Dispose();
             this.groupContentControl118.Dispose();
