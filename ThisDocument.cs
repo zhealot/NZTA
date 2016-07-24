@@ -21,11 +21,9 @@ namespace NZTA_Contract_Generator
         
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
-            //turn off Paragraph Marks
-            if (Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll )
-            {
-                Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll = false;
-            }
+            //turn off Paragraph Marks and not show hidden text
+            Globals.ThisDocument.ActiveWindow.ActivePane.View.ShowAll = false;
+            Globals.ThisDocument.ActiveWindow.View.ShowHiddenText = false;
 
             //See if we have saved state
             contract = Util.XML.loadFromXML();

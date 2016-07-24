@@ -86,17 +86,18 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 38);
+            this.label2.Location = new System.Drawing.Point(8, 526);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 55);
             this.label2.TabIndex = 3;
             this.label2.Text = "How many copies of the information below do you require - Envelope No 1: Proposal" +
     " excluding Price?";
+            this.label2.Visible = false;
             // 
             // CopyOfEnvelope
             // 
-            this.CopyOfEnvelope.Location = new System.Drawing.Point(175, 51);
+            this.CopyOfEnvelope.Location = new System.Drawing.Point(175, 539);
             this.CopyOfEnvelope.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CopyOfEnvelope.Name = "CopyOfEnvelope";
             this.CopyOfEnvelope.Size = new System.Drawing.Size(48, 20);
@@ -106,11 +107,12 @@
             0,
             0,
             0});
+            this.CopyOfEnvelope.Visible = false;
             this.CopyOfEnvelope.ValueChanged += new System.EventHandler(this.CopyOfEnvelope_ValueChanged);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(8, 114);
+            this.label3.Location = new System.Drawing.Point(8, 43);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 42);
@@ -120,7 +122,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(8, 166);
+            this.label4.Location = new System.Drawing.Point(8, 95);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 42);
@@ -129,7 +131,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(124, 179);
+            this.label5.Location = new System.Drawing.Point(124, 108);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 30);
@@ -138,7 +140,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(161, 179);
+            this.label6.Location = new System.Drawing.Point(161, 108);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 16);
@@ -147,7 +149,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(182, 179);
+            this.label7.Location = new System.Drawing.Point(182, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 30);
@@ -156,7 +158,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(8, 218);
+            this.label8.Location = new System.Drawing.Point(8, 147);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 23);
@@ -165,7 +167,7 @@
             // 
             // CoverLetter_Page
             // 
-            this.CoverLetter_Page.Location = new System.Drawing.Point(137, 216);
+            this.CoverLetter_Page.Location = new System.Drawing.Point(137, 145);
             this.CoverLetter_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CoverLetter_Page.Name = "CoverLetter_Page";
             this.CoverLetter_Page.Size = new System.Drawing.Size(24, 20);
@@ -175,7 +177,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(8, 245);
+            this.label9.Location = new System.Drawing.Point(8, 174);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 31);
@@ -184,7 +186,7 @@
             // 
             // Index_Page
             // 
-            this.Index_Page.Location = new System.Drawing.Point(137, 243);
+            this.Index_Page.Location = new System.Drawing.Point(137, 172);
             this.Index_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Index_Page.Name = "Index_Page";
             this.Index_Page.Size = new System.Drawing.Size(24, 20);
@@ -195,7 +197,7 @@
             // Index_A3_Check
             // 
             this.Index_A3_Check.AutoSize = true;
-            this.Index_A3_Check.Location = new System.Drawing.Point(164, 243);
+            this.Index_A3_Check.Location = new System.Drawing.Point(164, 172);
             this.Index_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Index_A3_Check.Name = "Index_A3_Check";
             this.Index_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -206,7 +208,7 @@
             // Index_Double_Check
             // 
             this.Index_Double_Check.AutoSize = true;
-            this.Index_Double_Check.Location = new System.Drawing.Point(184, 243);
+            this.Index_Double_Check.Location = new System.Drawing.Point(184, 172);
             this.Index_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Index_Double_Check.Name = "Index_Double_Check";
             this.Index_Double_Check.Size = new System.Drawing.Size(15, 14);
@@ -216,7 +218,7 @@
             // 
             // NonPrice_Page
             // 
-            this.NonPrice_Page.Location = new System.Drawing.Point(137, 276);
+            this.NonPrice_Page.Location = new System.Drawing.Point(137, 205);
             this.NonPrice_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NonPrice_Page.Name = "NonPrice_Page";
             this.NonPrice_Page.Size = new System.Drawing.Size(24, 20);
@@ -227,7 +229,7 @@
             // NonPrice_A3_Check
             // 
             this.NonPrice_A3_Check.AutoSize = true;
-            this.NonPrice_A3_Check.Location = new System.Drawing.Point(164, 276);
+            this.NonPrice_A3_Check.Location = new System.Drawing.Point(164, 205);
             this.NonPrice_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NonPrice_A3_Check.Name = "NonPrice_A3_Check";
             this.NonPrice_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -238,7 +240,7 @@
             // NonPrice_Double_Check
             // 
             this.NonPrice_Double_Check.AutoSize = true;
-            this.NonPrice_Double_Check.Location = new System.Drawing.Point(184, 276);
+            this.NonPrice_Double_Check.Location = new System.Drawing.Point(184, 205);
             this.NonPrice_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.NonPrice_Double_Check.Name = "NonPrice_Double_Check";
             this.NonPrice_Double_Check.Size = new System.Drawing.Size(15, 14);
@@ -248,7 +250,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(8, 276);
+            this.label10.Location = new System.Drawing.Point(8, 205);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(125, 31);
@@ -257,7 +259,7 @@
             // 
             // Outline_Page
             // 
-            this.Outline_Page.Location = new System.Drawing.Point(136, 386);
+            this.Outline_Page.Location = new System.Drawing.Point(136, 315);
             this.Outline_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Outline_Page.Name = "Outline_Page";
             this.Outline_Page.Size = new System.Drawing.Size(24, 20);
@@ -268,7 +270,7 @@
             // Outline_Double_Check
             // 
             this.Outline_Double_Check.AutoSize = true;
-            this.Outline_Double_Check.Location = new System.Drawing.Point(185, 386);
+            this.Outline_Double_Check.Location = new System.Drawing.Point(185, 315);
             this.Outline_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Outline_Double_Check.Name = "Outline_Double_Check";
             this.Outline_Double_Check.Size = new System.Drawing.Size(15, 14);
@@ -278,7 +280,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(8, 354);
+            this.label12.Location = new System.Drawing.Point(8, 283);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(216, 17);
@@ -287,7 +289,7 @@
             // 
             // Outline_Check
             // 
-            this.Outline_Check.Location = new System.Drawing.Point(10, 374);
+            this.Outline_Check.Location = new System.Drawing.Point(10, 303);
             this.Outline_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Outline_Check.Name = "Outline_Check";
             this.Outline_Check.Size = new System.Drawing.Size(94, 44);
@@ -298,7 +300,7 @@
             // 
             // Project_Page
             // 
-            this.Project_Page.Location = new System.Drawing.Point(136, 448);
+            this.Project_Page.Location = new System.Drawing.Point(136, 377);
             this.Project_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Project_Page.Name = "Project_Page";
             this.Project_Page.Size = new System.Drawing.Size(24, 20);
@@ -309,7 +311,7 @@
             // Project_A3_Check
             // 
             this.Project_A3_Check.AutoSize = true;
-            this.Project_A3_Check.Location = new System.Drawing.Point(164, 448);
+            this.Project_A3_Check.Location = new System.Drawing.Point(164, 377);
             this.Project_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Project_A3_Check.Name = "Project_A3_Check";
             this.Project_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -319,7 +321,7 @@
             // 
             // CV_Page
             // 
-            this.CV_Page.Location = new System.Drawing.Point(136, 498);
+            this.CV_Page.Location = new System.Drawing.Point(136, 427);
             this.CV_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CV_Page.Name = "CV_Page";
             this.CV_Page.Size = new System.Drawing.Size(24, 20);
@@ -330,7 +332,7 @@
             // CV_A3_Check
             // 
             this.CV_A3_Check.AutoSize = true;
-            this.CV_A3_Check.Location = new System.Drawing.Point(164, 498);
+            this.CV_A3_Check.Location = new System.Drawing.Point(164, 427);
             this.CV_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CV_A3_Check.Name = "CV_A3_Check";
             this.CV_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -340,7 +342,7 @@
             // 
             // CV_Check
             // 
-            this.CV_Check.Location = new System.Drawing.Point(10, 498);
+            this.CV_Check.Location = new System.Drawing.Point(10, 427);
             this.CV_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CV_Check.Name = "CV_Check";
             this.CV_Check.Size = new System.Drawing.Size(94, 22);
@@ -351,7 +353,7 @@
             // 
             // TimeResource_Page
             // 
-            this.TimeResource_Page.Location = new System.Drawing.Point(136, 532);
+            this.TimeResource_Page.Location = new System.Drawing.Point(136, 461);
             this.TimeResource_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TimeResource_Page.Name = "TimeResource_Page";
             this.TimeResource_Page.Size = new System.Drawing.Size(24, 20);
@@ -362,7 +364,7 @@
             // TimeResource_A3_Check
             // 
             this.TimeResource_A3_Check.AutoSize = true;
-            this.TimeResource_A3_Check.Location = new System.Drawing.Point(164, 535);
+            this.TimeResource_A3_Check.Location = new System.Drawing.Point(164, 464);
             this.TimeResource_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TimeResource_A3_Check.Name = "TimeResource_A3_Check";
             this.TimeResource_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -372,7 +374,7 @@
             // 
             // TimeResource_Check
             // 
-            this.TimeResource_Check.Location = new System.Drawing.Point(10, 525);
+            this.TimeResource_Check.Location = new System.Drawing.Point(10, 454);
             this.TimeResource_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TimeResource_Check.Name = "TimeResource_Check";
             this.TimeResource_Check.Size = new System.Drawing.Size(123, 35);
@@ -383,7 +385,7 @@
             // 
             // Project_Check
             // 
-            this.Project_Check.Location = new System.Drawing.Point(10, 423);
+            this.Project_Check.Location = new System.Drawing.Point(10, 352);
             this.Project_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Project_Check.Name = "Project_Check";
             this.Project_Check.Size = new System.Drawing.Size(123, 69);
@@ -394,7 +396,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(7, 317);
+            this.label11.Location = new System.Drawing.Point(7, 246);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 23);
@@ -403,7 +405,7 @@
             // 
             // Personnel_Page
             // 
-            this.Personnel_Page.Location = new System.Drawing.Point(136, 315);
+            this.Personnel_Page.Location = new System.Drawing.Point(136, 244);
             this.Personnel_Page.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Personnel_Page.Name = "Personnel_Page";
             this.Personnel_Page.Size = new System.Drawing.Size(24, 20);
@@ -414,7 +416,7 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(211, 532);
+            this.button1.Location = new System.Drawing.Point(211, 461);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 23);
             this.button1.TabIndex = 8;
@@ -425,7 +427,7 @@
             // btnAdd
             // 
             this.btnAdd.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAdd.Location = new System.Drawing.Point(164, 558);
+            this.btnAdd.Location = new System.Drawing.Point(164, 487);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(49, 23);
             this.btnAdd.TabIndex = 23;
@@ -435,7 +437,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(8, 563);
+            this.label13.Location = new System.Drawing.Point(8, 492);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(75, 15);
@@ -444,7 +446,7 @@
             // 
             // RowsCount
             // 
-            this.RowsCount.Location = new System.Drawing.Point(84, 561);
+            this.RowsCount.Location = new System.Drawing.Point(84, 490);
             this.RowsCount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.RowsCount.Name = "RowsCount";
             this.RowsCount.Size = new System.Drawing.Size(60, 20);
@@ -453,7 +455,7 @@
             // Outline_A3_Check
             // 
             this.Outline_A3_Check.AutoSize = true;
-            this.Outline_A3_Check.Location = new System.Drawing.Point(164, 386);
+            this.Outline_A3_Check.Location = new System.Drawing.Point(164, 315);
             this.Outline_A3_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Outline_A3_Check.Name = "Outline_A3_Check";
             this.Outline_A3_Check.Size = new System.Drawing.Size(15, 14);
@@ -464,7 +466,7 @@
             // CV_Double_Check
             // 
             this.CV_Double_Check.AutoSize = true;
-            this.CV_Double_Check.Location = new System.Drawing.Point(184, 498);
+            this.CV_Double_Check.Location = new System.Drawing.Point(184, 427);
             this.CV_Double_Check.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CV_Double_Check.Name = "CV_Double_Check";
             this.CV_Double_Check.Size = new System.Drawing.Size(15, 14);

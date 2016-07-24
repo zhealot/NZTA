@@ -150,6 +150,40 @@ namespace NZTA_Contract_Generator
         //update all page ref fields code; make sure key page is on odd page & has a blank page afterwards
         {
             Globals.ThisDocument.Application.ScreenUpdating = false;
+            //adjust numbering for Geo testing schedule 
+            if(Globals.ThisDocument.contract.geoYes && Globals.ThisDocument.contract.scheduledItems)
+            {
+                if (Globals.ThisDocument.Bookmarks.Exists("bm10GeoInPricingTable"))
+                {
+                    string GeoNum = Globals.ThisDocument.Bookmarks["bm10GeoInPricingTable"].Range.ListFormat.ListString;
+                    int iGeoNum;
+                    if (int.TryParse(GeoNum, out iGeoNum))
+                    {
+                        if (Globals.ThisDocument.rtcGeotechScheduledItems.Range.Tables.Count == 1)
+                        {
+                            Table tb = Globals.ThisDocument.rtcGeotechScheduledItems.Range.Tables[1];
+                            for (int i = 1; i <= tb.Rows.Count; i++)
+                            {
+                                string CellNumber = tb.Cell(i, 1).Range.Text;
+                                CellNumber = CellNumber.Replace("\r\a", "");
+                                int intCell;
+                                if (int.TryParse(CellNumber.Replace(".", ""), out intCell))
+                                {
+                                    CellNumber = iGeoNum.ToString() + CellNumber.Substring(CellNumber.IndexOf('.'));
+                                    tb.Cell(i, 1).Range.Text = CellNumber;
+                                }
+                            }
+                            
+                        }
+
+                    }
+                }
+
+            }
+            //adjust numbering for Additional service schedule
+
+
+            //update all fields
             foreach (Field fld in Globals.ThisDocument.Fields)
             {
                 if (fld.Type == WdFieldType.wdFieldPageRef)

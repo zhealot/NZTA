@@ -25,7 +25,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.ContractSetup
         {
             contract.CopyOfEnvelope = ((NumericUpDown)sender).Value;
             Util.ContentControls.setText(((NumericUpDown)sender).Name, Util.ContentControls.DecimalToWords(CopyOfEnvelope.Value));
-            Globals.ThisDocument.rtcCopyOfEnvelope.Range.Select();
+            //Globals.ThisDocument.rtcCopyOfEnvelope.Range.Select();
         }
 
         private void CoverLetter_Page_TextChanged(object sender, EventArgs e)

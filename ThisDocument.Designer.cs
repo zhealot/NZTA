@@ -385,8 +385,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.RichTextContentControl rtcHourlyRateItem2;
         
-        internal Microsoft.Office.Tools.Word.RichTextContentControl rtcCopyOfEnvelope;
-        
         internal Microsoft.Office.Tools.Word.Bookmark bmASSEnd;
         
         internal Microsoft.Office.Tools.Word.Bookmark bmKeyPersonnel;
@@ -883,7 +881,6 @@ namespace NZTA_Contract_Generator {
             this.rtcPresentationStreet.BeginInit();
             this.rtcBaseEstimateTenderForm.BeginInit();
             this.rtcHourlyRateItem2.BeginInit();
-            this.rtcCopyOfEnvelope.BeginInit();
             this.bmASSEnd.BeginInit();
             this.bmKeyPersonnel.BeginInit();
             this.bmTenderEvaluationTeam.BeginInit();
@@ -1101,7 +1098,6 @@ namespace NZTA_Contract_Generator {
             this.bmTenderEvaluationTeam.EndInit();
             this.bmKeyPersonnel.EndInit();
             this.bmASSEnd.EndInit();
-            this.rtcCopyOfEnvelope.EndInit();
             this.rtcHourlyRateItem2.EndInit();
             this.rtcBaseEstimateTenderForm.EndInit();
             this.rtcPresentationStreet.EndInit();
@@ -1478,7 +1474,6 @@ namespace NZTA_Contract_Generator {
             this.rtcPresentationStreet = Globals.Factory.CreateRichTextContentControl(null, null, "1419989610", "rtcPresentationStreet", this);
             this.rtcBaseEstimateTenderForm = Globals.Factory.CreateRichTextContentControl(null, null, "2667127502", "rtcBaseEstimateTenderForm", this);
             this.rtcHourlyRateItem2 = Globals.Factory.CreateRichTextContentControl(null, null, "1185715648", "rtcHourlyRateItem2", this);
-            this.rtcCopyOfEnvelope = Globals.Factory.CreateRichTextContentControl(null, null, "3226706940", "rtcCopyOfEnvelope", this);
             this.bmASSEnd = Globals.Factory.CreateBookmark(null, null, "bmASSEnd", "bmASSEnd", this);
             this.bmKeyPersonnel = Globals.Factory.CreateBookmark(null, null, "bmKeyPersonnel", "bmKeyPersonnel", this);
             this.bmTenderEvaluationTeam = Globals.Factory.CreateBookmark(null, null, "bmTenderEvaluationTeam", "bmTenderEvaluationTeam", this);
@@ -2329,10 +2324,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.rtcHourlyRateItem2.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // rtcCopyOfEnvelope
-            // 
-            this.rtcCopyOfEnvelope.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // bmASSEnd
             // 
             this.bmASSEnd.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2874,7 +2865,6 @@ namespace NZTA_Contract_Generator {
             this.bmTenderEvaluationTeam.Dispose();
             this.bmKeyPersonnel.Dispose();
             this.bmASSEnd.Dispose();
-            this.rtcCopyOfEnvelope.Dispose();
             this.rtcHourlyRateItem2.Dispose();
             this.rtcBaseEstimateTenderForm.Dispose();
             this.rtcPresentationStreet.Dispose();
