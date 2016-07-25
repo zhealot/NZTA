@@ -204,6 +204,10 @@ namespace NZTA_Contract_Generator
             }
             //update all fields
             Globals.ThisDocument.Fields.Update();
+            foreach(TableOfContents toc in Globals.ThisDocument.TablesOfContents)
+            {
+                toc.Update();
+            }
             Globals.ThisDocument.Application.ScreenUpdating = true;
             Util.Help.guidanceNote("All fields updated and page number adjusted.");
         }
