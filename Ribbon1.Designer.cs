@@ -49,7 +49,6 @@
             this.CGTAB.SuspendLayout();
             this.DisplayOptionsGroup.SuspendLayout();
             this.ExportGroup.SuspendLayout();
-            this.SuspendLayout();
             // 
             // tab1
             // 
@@ -157,7 +156,6 @@
             this.DisplayOptionsGroup.PerformLayout();
             this.ExportGroup.ResumeLayout(false);
             this.ExportGroup.PerformLayout();
-            this.ResumeLayout(false);
 
         }
 

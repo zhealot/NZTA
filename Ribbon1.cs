@@ -37,31 +37,33 @@ namespace NZTA_Contract_Generator
             var doc = Globals.ThisDocument;
             doc.Application.ScreenUpdating = false;
             doc.Application.Templates.LoadBuildingBlocks();
-            //after calling LoadBuildingBlocks(), Blocks.dotx will be 1st in Templates
             foreach(Template tmpl in doc.Application.Templates)
             {
-                if(tmpl.Name.ToLower().Contains("building blocks"))
+                if(tmpl.Name.ToLower().Contains("built-in building blocks"))
                 {
                     var  Draft = "DRAFT 1";
                     try
                     {
                         BuildingBlock wm = tmpl.BuildingBlockEntries.Item(Draft);
-                        Range rg = doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
-                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
-                        wm.Insert(rg, true);
-                        rg = doc.Sections[2].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
-                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
-                        wm.Insert(rg, true);
-                        rg = doc.Sections[3].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
-                        wm.Insert(rg, true);
+                        for (int i = 1; i < doc.Sections.Count; i++)
+                        {
+                            foreach (WdHeaderFooterIndex hfi in Enum.GetValues(typeof(WdHeaderFooterIndex)))
+                            {
+                                if (doc.Sections[i].Headers[hfi].Exists)
+                                {
+                                    var rg = doc.Sections[i].Headers[hfi].Range;
+                                    rg.Collapse(WdCollapseDirection.wdCollapseStart); 
+                                    wm.Insert(rg,RichText:true);
+                                }
+                            }
+                        }
                         break;
                     }
                     catch (Exception ex)
                     {
                         Util.Help.guidanceNote("Failed to add watermark to document");
                         System.Diagnostics.Debug.WriteLine(ex.Message);
-                        break;
+                        continue;
                     }
                 }
             }
@@ -84,28 +86,36 @@ namespace NZTA_Contract_Generator
                     Util.Help.guidanceNote("Sorry, failed to export PDF");
                 }
             }
+            //delete bookmarks in headers across document
+            for (int i = 1; i < doc.Sections.Count; i++)
+            {
+                foreach (WdHeaderFooterIndex hfi in Enum.GetValues(typeof(WdHeaderFooterIndex)))
+                {
+                    if (doc.Sections[i].Headers[hfi].Exists)
+                    {
+                        try
+                        {
+                            //doc.Sections[i].Headers[hfi].Range.Select();
+                            Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekCurrentPageHeader;
+                            foreach (Shape sp in doc.Sections[i].Headers[hfi].Shapes)
+                            {
+                                if (sp.AlternativeText == "DRAFT")
+                                {
+                                    sp.Delete();
+                                    Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekMainDocument;
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.Message);
+                            continue;
+                        }
+                    }
+                }
+            }
 
-            //delete inserted watermark
-            //for (int i = 1; i < 4 && i <= doc.Sections.Count; i++)
-            //{
-            //    foreach (WdHeaderFooterIndex j in Enum.GetValues(typeof(WdHeaderFooterIndex)))
-            //    {
-            //        if (doc.Sections[i].Headers[j].Exists)
-            //        {
-            //            foreach(Shape sp in doc.Sections[i].Headers[j].Shapes)
-            //            {
-            //                if (sp.AlternativeText == "DRAFT")
-            //                {
-            //                    sp.Delete();
-            //                }
-            //            }
-            //        }
-
-            //    }
-            //}
-            doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Shapes[1].Delete();
-            doc.Sections[2].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Shapes[1].Delete();
-            doc.Sections[3].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Shapes[1].Delete();
+            Globals.ThisDocument.Application.ActiveWindow.View.Type = WdViewType.wdOutlineView;
             doc.Application.ScreenUpdating = true;
         }
 
