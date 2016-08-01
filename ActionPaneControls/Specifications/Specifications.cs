@@ -43,7 +43,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             var bm8Bridges = Globals.ThisDocument.bm8BridegInPricingTable;
             var bm9Highways = Globals.ThisDocument.bm9HighwayInPricingTable;
             var bm10Geo = Globals.ThisDocument.bm10GeoInPricingTable;
-            Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
+            Cursor.Current = Cursors.WaitCursor;
             try
             {
                 bm8Bridges.Rows[1].Cells[1].Range.SetListLevel(BridgeChkd ? (short)1 : (short)2);
@@ -94,7 +94,7 @@ namespace NZTA_Contract_Generator.ActionPaneControls.Specifications
             Globals.ThisDocument.rtcSubTotal12.Range.Text = sub.ToString();
             Globals.ThisDocument.rtcTotal.Range.Text = sub.ToString();
             Globals.ThisDocument.rtcSectionG.Range.Font.Hidden = (OtherSpecification.Checked || BridgesOther.Checked || StateHighway.Checked) ? 0 : 1;
-            Cursor.Current = System.Windows.Forms.Cursors.Default;
+            Cursor.Current = Cursors.Default;
             Globals.ThisDocument.rtcSectionG.Range.Select();
         }
 

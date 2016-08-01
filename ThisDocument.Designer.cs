@@ -435,8 +435,6 @@ namespace NZTA_Contract_Generator {
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl28;
         
-        internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl32;
-        
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl33;
         
         internal Microsoft.Office.Tools.Word.GroupContentControl groupContentControl37;
@@ -910,7 +908,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl26.BeginInit();
             this.groupContentControl27.BeginInit();
             this.groupContentControl28.BeginInit();
-            this.groupContentControl32.BeginInit();
             this.groupContentControl33.BeginInit();
             this.groupContentControl37.BeginInit();
             this.groupContentControl38.BeginInit();
@@ -1080,7 +1077,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl38.EndInit();
             this.groupContentControl37.EndInit();
             this.groupContentControl33.EndInit();
-            this.groupContentControl32.EndInit();
             this.groupContentControl28.EndInit();
             this.groupContentControl27.EndInit();
             this.groupContentControl26.EndInit();
@@ -1507,7 +1503,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl26 = Globals.Factory.CreateGroupContentControl(null, null, "3999671241", "groupContentControl26", this);
             this.groupContentControl27 = Globals.Factory.CreateGroupContentControl(null, null, "3563190372", "groupContentControl27", this);
             this.groupContentControl28 = Globals.Factory.CreateGroupContentControl(null, null, "2505931553", "groupContentControl28", this);
-            this.groupContentControl32 = Globals.Factory.CreateGroupContentControl(null, null, "139396910", "groupContentControl32", this);
             this.groupContentControl33 = Globals.Factory.CreateGroupContentControl(null, null, "2936844880", "groupContentControl33", this);
             this.groupContentControl37 = Globals.Factory.CreateGroupContentControl(null, null, "1092900948", "groupContentControl37", this);
             this.groupContentControl38 = Globals.Factory.CreateGroupContentControl(null, null, "2263790892", "groupContentControl38", this);
@@ -2434,10 +2429,6 @@ namespace NZTA_Contract_Generator {
             // 
             this.groupContentControl28.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
             // 
-            // groupContentControl32
-            // 
-            this.groupContentControl32.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
-            // 
             // groupContentControl33
             // 
             this.groupContentControl33.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never;
@@ -2859,7 +2850,6 @@ namespace NZTA_Contract_Generator {
             this.groupContentControl38.Dispose();
             this.groupContentControl37.Dispose();
             this.groupContentControl33.Dispose();
-            this.groupContentControl32.Dispose();
             this.groupContentControl28.Dispose();
             this.groupContentControl27.Dispose();
             this.groupContentControl26.Dispose();

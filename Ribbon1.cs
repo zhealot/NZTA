@@ -38,25 +38,39 @@ namespace NZTA_Contract_Generator
             doc.Application.ScreenUpdating = false;
             doc.Application.Templates.LoadBuildingBlocks();
             //after calling LoadBuildingBlocks(), Blocks.dotx will be 1st in Templates
-            var tmpl = doc.Application.Templates[1];   
-            Range rg = doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
-            object Draft = "DRAFT 1";
-            try
+            foreach(Template tmpl in doc.Application.Templates)
             {
-               tmpl.BuildingBlockEntries.Item(ref Draft).Insert(rg, true);
+                if(tmpl.Name.ToLower().Contains("building blocks"))
+                {
+                    var  Draft = "DRAFT 1";
+                    try
+                    {
+                        BuildingBlock wm = tmpl.BuildingBlockEntries.Item(Draft);
+                        Range rg = doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
+                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
+                        wm.Insert(rg, true);
+                        rg = doc.Sections[2].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Range;
+                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
+                        wm.Insert(rg, true);
+                        rg = doc.Sections[3].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range;
+                        rg.Collapse(WdCollapseDirection.wdCollapseStart);
+                        wm.Insert(rg, true);
+                        break;
+                    }
+                    catch (Exception ex)
+                    {
+                        Util.Help.guidanceNote("Failed to add watermark to document");
+                        System.Diagnostics.Debug.WriteLine(ex.Message);
+                        break;
+                    }
+                }
             }
-            catch(Exception ex)
-            {
-                Util.Help.guidanceNote("Failed to add watermark to document");
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-            }
-
             //export as PDF
             System.Windows.Forms.SaveFileDialog sd = new System.Windows.Forms.SaveFileDialog();
             sd.FileName = sd.InitialDirectory + doc.contract.Contract_Name + "_" + doc.contract.Contract_Number;
             if (sd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                object missing = System.Type.Missing;
+                object missing = Type.Missing;
                 try
                 {
                     Globals.ThisDocument.ExportAsFixedFormat(outputFileName: sd.FileName, exportFormat: WdExportFormat.wdExportFormatPDF,
@@ -72,13 +86,26 @@ namespace NZTA_Contract_Generator
             }
 
             //delete inserted watermark
-            foreach( Shape sp in doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Shapes)
-            {
-                if (sp.AlternativeText == "DRAFT")
-                {
-                    sp.Delete();
-                }
-            }
+            //for (int i = 1; i < 4 && i <= doc.Sections.Count; i++)
+            //{
+            //    foreach (WdHeaderFooterIndex j in Enum.GetValues(typeof(WdHeaderFooterIndex)))
+            //    {
+            //        if (doc.Sections[i].Headers[j].Exists)
+            //        {
+            //            foreach(Shape sp in doc.Sections[i].Headers[j].Shapes)
+            //            {
+            //                if (sp.AlternativeText == "DRAFT")
+            //                {
+            //                    sp.Delete();
+            //                }
+            //            }
+            //        }
+
+            //    }
+            //}
+            doc.Sections[1].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Shapes[1].Delete();
+            doc.Sections[2].Headers[WdHeaderFooterIndex.wdHeaderFooterFirstPage].Shapes[1].Delete();
+            doc.Sections[3].Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Shapes[1].Delete();
             doc.Application.ScreenUpdating = true;
         }
 
