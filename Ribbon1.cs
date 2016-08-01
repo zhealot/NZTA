@@ -95,16 +95,27 @@ namespace NZTA_Contract_Generator
                     {
                         try
                         {
-                            //doc.Sections[i].Headers[hfi].Range.Select();
-                            Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekCurrentPageHeader;
-                            foreach (Shape sp in doc.Sections[i].Headers[hfi].Shapes)
+                            var rg = doc.Sections[i].Headers[hfi].Range;
+                            rg.Select();
+                            //Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekCurrentPageHeader;
+                            foreach(Shape sp in rg.ShapeRange)
                             {
                                 if (sp.AlternativeText == "DRAFT")
                                 {
                                     sp.Delete();
-                                    Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekMainDocument;
+                                    //Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekMainDocument;
                                 }
                             }
+                            //doc.Sections[i].Headers[hfi].Range.Select();
+                            //Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekCurrentPageHeader;
+                            //foreach (Shape sp in doc.Sections[i].Headers[hfi].Shapes)
+                            //{
+                            //    if (sp.AlternativeText == "DRAFT")
+                            //    {
+                            //        sp.Delete();
+                            //        Globals.ThisDocument.Application.ActiveWindow.ActivePane.View.SeekView = WdSeekView.wdSeekMainDocument;
+                            //    }
+                            //}
                         }
                         catch (Exception ex)
                         {
@@ -114,8 +125,11 @@ namespace NZTA_Contract_Generator
                     }
                 }
             }
-
-            Globals.ThisDocument.Application.ActiveWindow.View.Type = WdViewType.wdOutlineView;
+            if (Globals.ThisDocument.ActiveWindow.Panes.Count > 1)
+            {
+                Globals.ThisDocument.ActiveWindow.Panes[2].Close();
+            }
+            Globals.ThisDocument.Application.ActiveWindow.View.Type = WdViewType.wdPrintView;
             doc.Application.ScreenUpdating = true;
         }
 
